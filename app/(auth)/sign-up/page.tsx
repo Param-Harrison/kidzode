@@ -5,13 +5,28 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Loader2, Mail, Lock, User, CheckCircle } from 'lucide-react';
 import { Logo } from '@/components/logo';
+import { useRequireAuth } from '@/hooks/useRequireAuth';
 
 export default function SignUpPage() {
   const router = useRouter();
+  const { isLoading: authLoading, isAuthenticated } = useRequireAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
   const [accountType, setAccountType] = useState<'parent' | 'teacher'>('parent');
+
+  // If already authenticated, the hook will handle redirect
+  if (authLoading) {
+    return (
+      <div className="bg-card border-2 border-border shadow-neo rounded-xl p-8 text-center">
+        <Loader2 className="w-8 h-8 animate-spin mx-auto" />
+      </div>
+    );
+  }
+
+  if (isAuthenticated) {
+    return null; // Will be redirected by hook
+  }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();

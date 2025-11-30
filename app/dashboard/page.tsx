@@ -1,18 +1,12 @@
-import { redirect } from 'next/navigation';
 import { getUser } from '@/lib/db/queries';
+import { DashboardOverview } from '@/components/dashboard/overview';
 
 export default async function DashboardPage() {
   const user = await getUser();
 
   if (!user) {
-    redirect('/sign-in');
+    return null;
   }
 
-  if (user.userType === 'parent') {
-    redirect('/dashboard/parent');
-  } else if (user.userType === 'teacher') {
-    redirect('/dashboard/teacher');
-  } else {
-    redirect('/learn');
-  }
+  return <DashboardOverview user={user} />;
 }
