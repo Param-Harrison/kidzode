@@ -5,6 +5,7 @@ import { RandomBgHero } from "@/components/random-bg-hero"
 import { BouncyShapes } from "@/components/bouncy-shapes"
 import { CourseCard } from "@/components/course-card"
 import { CheckCircle, XCircle, Code, Zap, Trophy } from "lucide-react"
+import { Footer } from "@/components/footer"
 
 const courses = [
   {
@@ -283,13 +284,7 @@ export default function Home() {
         </section>
       </main>
       
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t-2 border-border">
-        <div className="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-2 items-center justify-between">
-          <p className="text-xs text-muted-foreground">
-            &copy; 2024 Kidsemy. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
