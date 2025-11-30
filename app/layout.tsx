@@ -13,7 +13,7 @@ const epilogue = Epilogue({
 });
 
 export const metadata: Metadata = {
-  title: 'Kidsemy - Python for Kids',
+  title: 'Kidzode - Python for Kids',
   description: 'Master Python with fun, interactive lessons.'
 };
 

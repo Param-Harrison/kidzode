@@ -61,7 +61,7 @@ export async function sendVerificationEmail(
   // await resend.emails.send({
   //   from: process.env.RESEND_FROM_EMAIL,
   //   to: email,
-  //   subject: 'Verify your Kidsemy account',
+  //   subject: 'Verify your Kidzode account',
   //   html: `<p>Click <a href="${verificationUrl}">here</a> to verify your email.</p>`
   // });
 }

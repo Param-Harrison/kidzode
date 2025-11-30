@@ -1,20 +1,36 @@
-version: '3.8'
 
 services:
+  app:
+    build: .
+    container_name: kidzode-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - POSTGRES_URL=postgresql://kidzode:kidzode_dev_password@postgres:5432/kidzode
+      - BASE_URL=http://localhost:3000
+      - AUTH_SECRET=development_secret_key_change_in_production
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+
   postgres:
     image: postgres:16-alpine
-    container_name: kidsemy-postgres
+    container_name: kidzode-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: kidsemy
-      POSTGRES_PASSWORD: kidsemy_dev_password
-      POSTGRES_DB: kidsemy
+      POSTGRES_USER: kidzode
+      POSTGRES_PASSWORD: kidzode_dev_password
+      POSTGRES_DB: kidzode
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U kidsemy"]
+      test: ["CMD-SHELL", "pg_isready -U kidzode -d kidzode"]
       interval: 10s
       timeout: 5s
       retries: 5

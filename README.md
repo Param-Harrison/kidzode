@@ -1,71 +1,113 @@
-# Kidsemy
+```
+# Kidzode
 
 This is a kids learning platform built with Next.js, PostgreSQL, and Stripe.
 
-## Getting Started
+## 🛠️ Development Workflow
 
-### Prerequisites
+We use a `Makefile` to simplify common development tasks.
 
-- Node.js 18+ and pnpm
-- Docker and Docker Compose
+### Quick Start
 
-### Setup
+1. **Setup Project** (Install dependencies, start DB, migrate, seed):
+   ```bash
+   make setup
+   ```
 
-1. **Clone the repository**
+2. **Start Development Server** (Local App + Docker DB):
+   ```bash
+   make dev-local
+   ```
+   Or run everything in Docker:
+   ```bash
+   make dev
+   ```
 
-```bash
-git clone <repo-url>
-cd kidsemy
-```
+3. **Stop Containers**:
+   ```bash
+   make stop
+   ```
 
-2. **Install dependencies**
+### 🧪 Test Accounts (Seeded)
 
-```bash
-pnpm install
-```
+The `make setup` command seeds the database with the following accounts:
 
-3. **Start the database**
+| Role | Email | Password | Notes |
+|------|-------|----------|-------|
+| **Parent** | `parent@test.com` | `parent123` | Has 2 children: Alice (PIN: 1234), Bob (No PIN) |
+| **Teacher** | `teacher@test.com` | `teacher123` | Has 1 classroom: Grade 5 Python (Code: `ABC123`) |
+| **Student** | - | - | Use Class Code `ABC123` to login as Charlie (PIN: 5678) or Diana |
 
-```bash
-docker-compose up -d
-```
+### 📧 Email Verification
 
-4. **Set up environment variables**
+In **development mode**, emails are **auto-verified** upon signup, so you don't need to check logs or click links.
+Verification tokens are still logged to the console for debugging purposes.
+
+### 1. Prerequisites
+
+- Node.js 18+
+- npm
+- Docker & Docker Compose
+
+### 2. Environment Variables
+
+Copy `.env.example` to `.env`:
 
 ```bash
 cp .env.example .env
-# Edit .env and add your Stripe and Resend API keys
 ```
 
-5. **Run database migrations**
+Update `POSTGRES_URL` for Docker:
+```env
+POSTGRES_URL=postgresql://kidzode:kidzode_dev_password@localhost:5432/kidzode
+```
+
+### 3. Database Setup
+
+Start the PostgreSQL database using Docker Compose:
 
 ```bash
-pnpm db:migrate
+docker compose up -d
 ```
 
-6. **Seed the database (optional)**
+Run migrations:
 
 ```bash
-pnpm db:seed
+npm run db:migrate
 ```
 
-7. **Start the development server**
+Seed the database (optional):
 
 ```bash
-pnpm dev
+npm run db:seed
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+### 4. Run Development Server
 
-## Database Management
+```bash
+npm run dev
+```
 
-- **Start database**: `docker-compose up -d`
-- **Stop database**: `docker-compose down`
-- **View logs**: `docker-compose logs -f postgres`
-- **Reset database**: `docker-compose down -v` (removes all data)
-- **Generate migrations**: `pnpm db:generate`
-- **Run migrations**: `pnpm db:migrate`
-- **Open Drizzle Studio**: `pnpm db:studio`
+Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+### 5. Database Management
+
+- **Generate Migrations:** `npm run db:generate`
+- **Run Migrations:** `npm run db:migrate`
+- **Drizzle Studio:** `npm run db:studio` (GUI for database)
+
+### 🐳 Docker Commands
+
+- `make dev`: Runs App and Postgres in Docker containers.
+- `make dev-local`: Runs Postgres in Docker, App locally (faster HMR).
+- `make db-shell`: Opens a psql shell inside the database container.
+- `make clean`: Stops containers and removes volumes (resets DB).
+- `make stop`: Stops all running Docker containers.
+- `make logs-db`: View database logs.
+- `make db-migrate`: Run database migrations.
+- `make db-generate`: Generate new database migrations.
+- `make db-seed`: Seed the database with test data.
+- `make db-studio`: Open Drizzle Studio for database inspection.
 
 ## Tech Stack
 
@@ -79,7 +121,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ## Project Structure
 
 ```
-kidsemy/
+kidzode/
 ├── app/                    # Next.js app directory
 │   ├── (auth)/            # Authentication pages
 │   ├── (dashboard)/       # Dashboard pages
@@ -103,4 +145,4 @@ kidsemy/
 
 ## License
 
-MIT
+Private Project

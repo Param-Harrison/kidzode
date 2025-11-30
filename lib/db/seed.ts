@@ -43,7 +43,7 @@ async function seed() {
     userId: child1User.id,
     parentAccountId: parentAccount.id,
     displayName: 'Alice',
-    pin: await hashPassword('1234'),
+    pin: '1234',
   });
 
   const [child2User] = await db
@@ -112,7 +112,7 @@ async function seed() {
     .values({
       userId: student1User.id,
       displayName: 'Charlie',
-      pin: await hashPassword('5678'),
+      pin: '5678',
     })
     .returning();
 

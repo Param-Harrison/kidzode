@@ -19,17 +19,19 @@ export function Navbar() {
           <Link href="/#about" className="text-sm font-medium transition-colors">
             About
           </Link>
-          <Link href="/#pricing" className="text-sm font-medium transition-colors">
+          <Link href="/pricing" className="text-sm font-medium transition-colors">
             Pricing
           </Link>
         </nav>
 
         {/* Right Actions */}
         <div className="flex items-center gap-2 flex-1 justify-end">
-          <Button variant="ghost" size="sm" className="hidden md:inline-flex">
-            Login
-          </Button>
-          <Link href="/courses">
+          <Link href="/sign-in">
+            <Button variant="ghost" size="sm" className="hidden md:inline-flex">
+              Login
+            </Button>
+          </Link>
+          <Link href="/sign-up">
             <Button variant="neo" size="sm">
               Get Started
             </Button>

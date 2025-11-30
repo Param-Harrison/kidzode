@@ -44,6 +44,20 @@ export async function POST(request: NextRequest) {
     const verificationToken = await createEmailVerificationToken(user.id);
     await sendVerificationEmail(email, verificationToken);
 
+    // In development, auto-verify email for convenience
+    if (process.env.NODE_ENV === 'development') {
+      const { db } = await import('@/lib/db/drizzle');
+      const { users } = await import('@/lib/db/schema');
+      const { eq } = await import('drizzle-orm');
+      
+      await db
+        .update(users)
+        .set({ emailVerified: true })
+        .where(eq(users.id, user.id));
+        
+      user.emailVerified = true;
+    }
+
     // Log activity
     await logActivity(
       user.id,
