@@ -16,10 +16,22 @@ interface PythonEditorProps {
   guide: string
   tests?: Array<{ in: string | string[]; out: string | any[] }>
   onCodeChange?: (code: string) => void
+  onComplete?: () => void
   bookId: string
+  lessonId?: string
+  progress?: 'not_started' | 'in_progress' | 'completed'
 }
 
-export function PythonEditor({ initialCode, guide, tests = [], onCodeChange, bookId }: PythonEditorProps) {
+export function PythonEditor({ 
+  initialCode, 
+  guide, 
+  tests = [], 
+  onCodeChange, 
+  onComplete,
+  bookId,
+  lessonId,
+  progress 
+}: PythonEditorProps) {
   const [code, setCode] = useState(initialCode)
   const [testResults, setTestResults] = useState<TestResult[]>([])
   const { status, output, runCode, runTests, clearOutput, awaitingInput, handleInput } = usePyodide()
@@ -41,6 +53,12 @@ export function PythonEditor({ initialCode, guide, tests = [], onCodeChange, boo
       setTestResults(results)
       if (onCodeChange) {
         onCodeChange(code)
+      }
+      
+      // If all tests pass, mark lesson as complete
+      const allPassed = results.every(r => r.passed)
+      if (allPassed && onComplete && progress !== 'completed') {
+        onComplete()
       }
     }
   }

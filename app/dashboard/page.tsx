@@ -1,12 +1,20 @@
 import { getUser } from '@/lib/db/queries';
-import { DashboardOverview } from '@/components/dashboard/overview';
+import { redirect } from 'next/navigation';
 
 export default async function DashboardPage() {
   const user = await getUser();
 
   if (!user) {
-    return null;
+    redirect('/sign-in');
   }
 
-  return <DashboardOverview user={user} />;
+  // Redirect to role-specific dashboard
+  if (user.userType === 'parent') {
+    redirect('/dashboard/parent');
+  } else if (user.userType === 'teacher') {
+    redirect('/dashboard/teacher');
+  }
+
+  // Default redirect
+  redirect('/dashboard/parent');
 }

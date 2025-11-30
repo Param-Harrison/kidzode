@@ -56,7 +56,12 @@ export const accounts = pgTable('accounts', {
   stripeSubscriptionId: text('stripe_subscription_id').unique(),
   stripeProductId: text('stripe_product_id'),
   subscriptionStatus: varchar('subscription_status', { length: 20 }), // 'active' | 'canceled' | 'past_due' | null
-  subscriptionType: varchar('subscription_type', { length: 20 }), // 'monthly' | 'lifetime' | 'free'
+  subscriptionType: varchar('subscription_type', { length: 20 }), // 'monthly' | 'yearly' | 'lifetime' | 'free'
+  subscriptionTier: varchar('subscription_tier', { length: 20 }), // 'individual' | 'family' | 'homeschool' | null
+  studentLimit: integer('student_limit'), // 1 for individual, 4 for family, null for homeschool (metered)
+  studentCount: integer('student_count').default(0), // Current number of students
+  meteredUnits: integer('metered_units'), // For homeschool: Math.ceil(studentCount / 10)
+  currentPeriodEnd: timestamp('current_period_end'), // Next billing date
   priceLocale: varchar('price_locale', { length: 10 }), // 'US' | 'IN' | 'GB' etc. for future adaptive pricing
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
@@ -273,6 +278,7 @@ export enum SubscriptionStatus {
 
 export enum SubscriptionType {
   MONTHLY = 'monthly',
+  YEARLY = 'yearly',
   LIFETIME = 'lifetime',
   FREE = 'free',
 }

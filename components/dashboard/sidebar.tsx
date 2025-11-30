@@ -23,28 +23,10 @@ export function Sidebar({ userType }: SidebarProps) {
 
   const links = [
     {
-      href: '/dashboard',
-      label: 'Overview',
-      icon: LayoutDashboard,
-      roles: ['parent', 'teacher'],
-    },
-    {
-      href: '/dashboard/students',
-      label: 'My Children',
-      icon: Users,
-      roles: ['parent'],
-    },
-    {
       href: '/dashboard/classrooms',
       label: 'Classrooms',
       icon: GraduationCap,
       roles: ['teacher'],
-    },
-    {
-      href: '/dashboard/progress',
-      label: 'Progress',
-      icon: BookOpen,
-      roles: ['parent', 'teacher'],
     },
     {
       href: '/dashboard/billing',

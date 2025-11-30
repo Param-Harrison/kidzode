@@ -1,139 +1,255 @@
 import { Check } from 'lucide-react';
 import Link from 'next/link';
+import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
+import { Button } from '@/components/ui/button';
+
+const pricingPlans = [
+  {
+    name: 'Individual',
+    description: 'Perfect for single learners',
+    studentLimit: '1 student',
+    tiers: [
+      {
+        type: 'Monthly',
+        price: 7,
+        period: '/month',
+        href: '/sign-up?tier=individual&billing=monthly',
+      },
+      {
+        type: 'Yearly',
+        price: 69,
+        period: '/year',
+        savings: 'Save $15',
+        href: '/sign-up?tier=individual&billing=yearly',
+      },
+      {
+        type: 'Lifetime',
+        price: 99,
+        period: 'one-time',
+        href: '/sign-up?tier=individual&billing=lifetime',
+        badge: 'Best Value',
+      },
+    ],
+    features: [
+      'Unlimited access to all courses',
+      'Progress tracking & reports',
+      'Certificates of completion',
+      'Email support',
+    ],
+  },
+  {
+    name: 'Family',
+    description: 'Great for families',
+    studentLimit: 'Up to 4 kids',
+    popular: true,
+    tiers: [
+      {
+        type: 'Monthly',
+        price: 12,
+        period: '/month',
+        href: '/sign-up?tier=family&billing=monthly',
+      },
+      {
+        type: 'Yearly',
+        price: 119,
+        period: '/year',
+        savings: 'Save $25',
+        href: '/sign-up?tier=family&billing=yearly',
+      },
+      {
+        type: 'Lifetime',
+        price: 149,
+        period: 'one-time',
+        href: '/sign-up?tier=family&billing=lifetime',
+        badge: 'Best Value',
+      },
+    ],
+    features: [
+      'Everything in Individual',
+      'Up to 4 student accounts',
+      'Family dashboard',
+      'Priority support',
+    ],
+  },
+  {
+    name: 'Homeschool',
+    description: 'For small classrooms',
+    studentLimit: 'Per 10 students',
+    tiers: [
+      {
+        type: 'Monthly',
+        price: 25,
+        period: '/month/10 students',
+        href: '/sign-up?tier=homeschool&billing=monthly',
+      },
+      {
+        type: 'Yearly',
+        price: 249,
+        period: '/year/10 students',
+        savings: 'Save $51',
+        href: '/sign-up?tier=homeschool&billing=yearly',
+      },
+      {
+        type: 'Lifetime',
+        price: 399,
+        period: 'one-time/10 students',
+        href: '/sign-up?tier=homeschool&billing=lifetime',
+        badge: 'Best Value',
+      },
+    ],
+    features: [
+      'Everything in Family',
+      'Metered billing (every 10 students)',
+      'Classroom management tools',
+      'Bulk student enrollment',
+      'Advanced analytics',
+    ],
+  },
+];
 
 export default function PricingPage() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-6xl">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-black font-lexend mb-4">
-          Simple, Transparent Pricing
-        </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Start for free, then choose the plan that works best for your family.
-        </p>
-      </div>
+    <div className="flex flex-col min-h-screen font-epilogue">
+      <Navbar />
+      <main className="flex-1">
+        {/* Header */}
+        <section className="py-16 md:py-24 border-b-2 border-black bg-primary">
+          <div className="container max-w-6xl mx-auto px-4 md:px-6">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-black uppercase font-lexend mb-6">
+                Simple, Transparent Pricing
+              </h1>
+              <p className="text-xl md:text-2xl font-bold max-w-3xl mx-auto">
+                Choose the plan that fits your needs. All plans include full access to our courses.
+              </p>
+            </div>
+          </div>
+        </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-        {/* Free Tier */}
-        <div className="bg-card border-2 border-border rounded-xl p-8 shadow-neo hover:-translate-y-1 transition-transform">
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold font-lexend">Free Tier</h3>
-            <p className="text-muted-foreground">Perfect for trying it out</p>
-          </div>
-          <div className="mb-6">
-            <span className="text-4xl font-black">$0</span>
-            <span className="text-muted-foreground">/forever</span>
-          </div>
-          <ul className="space-y-3 mb-8">
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-              <span>First 6 lessons of Beginners Course</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-              <span>Basic progress tracking</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-              <span>Access to community forum</span>
-            </li>
-          </ul>
-          <Link
-            href="/sign-up"
-            className="block w-full py-3 px-4 bg-background text-foreground font-bold text-center rounded-lg border-2 border-border hover:bg-muted transition-colors"
+        {/* Pricing Cards */}
+        {pricingPlans.map((plan, planIndex) => (
+          <section
+            key={plan.name}
+            className={`py-16 md:py-24 border-b-2 border-black ${
+              planIndex % 2 === 0 ? 'bg-white' : 'bg-yellow-50'
+            }`}
           >
-            Get Started
-          </Link>
-        </div>
+            <div className="container max-w-6xl mx-auto px-4 md:px-6">
+              {/* Plan Header */}
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-3 mb-4">
+                  <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend">
+                    {plan.name}
+                  </h2>
+                  {plan.popular && (
+                    <span className="bg-black text-white px-4 py-2 text-sm font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+                      MOST POPULAR
+                    </span>
+                  )}
+                </div>
+                <p className="text-xl font-bold text-muted-foreground">
+                  {plan.description} • {plan.studentLimit}
+                </p>
+              </div>
 
-        {/* Monthly Plan */}
-        <div className="bg-primary/10 border-2 border-primary rounded-xl p-8 shadow-[4px_4px_0px_0px_var(--primary)] hover:-translate-y-1 transition-transform relative">
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold border-2 border-black shadow-[2px_2px_0px_0px_#000]">
-            Most Popular
-          </div>
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold font-lexend">Monthly</h3>
-            <p className="text-muted-foreground">Flexible learning</p>
-          </div>
-          <div className="mb-6">
-            <span className="text-4xl font-black">$6</span>
-            <span className="text-muted-foreground">/month</span>
-          </div>
-          <ul className="space-y-3 mb-8">
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-              <span className="font-bold">Unlimited access to all courses</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-              <span>Add up to 5 children</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-              <span>Detailed progress reports</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-              <span>Certificates of completion</span>
-            </li>
-          </ul>
-          <Link
-            href="/sign-up?plan=monthly"
-            className="block w-full py-3 px-4 bg-primary text-primary-foreground font-bold text-center rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_#000] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#000] active:translate-y-[2px] active:shadow-none transition-all"
-          >
-            Subscribe Now
-          </Link>
-        </div>
+              {/* Pricing Tiers */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                {plan.tiers.map((tier) => (
+                  <div
+                    key={tier.type}
+                    className={`bg-white border-4 border-black p-8 flex flex-col items-center relative overflow-hidden transform hover:-translate-y-2 transition-all duration-300 ${
+                      tier.badge
+                        ? 'shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+                        : 'shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
+                    }`}
+                  >
+                    {tier.badge && (
+                      <div className="absolute top-0 right-0 bg-primary text-black text-xs font-bold px-3 py-1 border-2 border-black">
+                        {tier.badge}
+                      </div>
+                    )}
+                    {tier.savings && (
+                      <div className="absolute top-0 left-0 bg-green-400 text-black text-xs font-bold px-3 py-1 border-2 border-black">
+                        {tier.savings}
+                      </div>
+                    )}
 
-        {/* Lifetime Plan */}
-        <div className="bg-card border-2 border-border rounded-xl p-8 shadow-neo hover:-translate-y-1 transition-transform">
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold font-lexend">Lifetime</h3>
-            <p className="text-muted-foreground">One-time payment</p>
-          </div>
-          <div className="mb-6">
-            <span className="text-4xl font-black">$99</span>
-            <span className="text-muted-foreground">/once</span>
-          </div>
-          <ul className="space-y-3 mb-8">
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-              <span className="font-bold">Everything in Monthly</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-              <span>Pay once, own forever</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-              <span>Future course updates included</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-              <span>Priority support</span>
-            </li>
-          </ul>
-          <Link
-            href="/sign-up?plan=lifetime"
-            className="block w-full py-3 px-4 bg-secondary text-secondary-foreground font-bold text-center rounded-lg border-2 border-border shadow-[2px_2px_0px_0px_#000] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#000] active:translate-y-[2px] active:shadow-none transition-all"
-          >
-            Get Lifetime Access
-          </Link>
-        </div>
-      </div>
+                    <h3 className="text-2xl font-black uppercase mb-2 mt-4">{tier.type}</h3>
+                    <div className="text-5xl font-black mb-2">${tier.price}</div>
+                    <p className="text-sm font-bold mb-6 opacity-80">{tier.period}</p>
 
-      <div className="mt-16 p-8 bg-muted rounded-xl border-2 border-border text-center">
-        <h3 className="text-2xl font-bold font-lexend mb-4">Are you a Teacher?</h3>
-        <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-          We offer special pricing for classrooms and schools. Manage multiple students, track progress, and get bulk discounts.
-        </p>
-        <Link
-          href="/sign-up?type=teacher"
-          className="inline-block py-3 px-6 bg-accent text-accent-foreground font-bold rounded-lg border-2 border-border shadow-[2px_2px_0px_0px_#000] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#000] active:translate-y-[2px] active:shadow-none transition-all"
-        >
-          View Teacher Plans
-        </Link>
-      </div>
+                    <ul className="text-left space-y-3 mb-8 text-sm font-medium w-full">
+                      {plan.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link href={tier.href} className="w-full mt-auto">
+                      <Button
+                        variant="neo"
+                        className={`w-full py-3 text-sm font-bold ${
+                          tier.badge
+                            ? 'bg-black text-white'
+                            : 'bg-primary text-black'
+                        }`}
+                      >
+                        Get Started
+                      </Button>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+
+              {/* Plan Features */}
+              {plan.name === 'Homeschool' && (
+                <div className="mt-12 max-w-3xl mx-auto">
+                  <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="text-xl font-black mb-3">📊 Metered Billing Explained</h4>
+                    <p className="font-medium mb-2">
+                      You're charged for every 10 students in your classroom.
+                    </p>
+                    <ul className="space-y-2 text-sm font-medium">
+                      <li className="flex items-center gap-2">
+                        <span className="font-bold">Example:</span> 20 students = 2 units = ${plan.tiers[0].price * 2}/month
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="font-bold">Example:</span> 30 students = 3 units = ${plan.tiers[0].price * 3}/month
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
+        ))}
+
+        {/* FAQ / Info Section */}
+        <section className="py-16 md:py-24 bg-black text-white">
+          <div className="container max-w-4xl mx-auto px-4 md:px-6 text-center">
+            <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6">
+              Questions about pricing?
+            </h2>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">
+              All plans include unlimited access to courses, progress tracking, and certificates.
+              <br />
+              Cancel anytime. No hidden fees.
+            </p>
+            <Link href="/courses">
+              <Button
+                variant="neo"
+                className="h-14 px-10 text-lg font-bold bg-primary text-black shadow-[4px_4px_0px_0px_#fff] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
+              >
+                Start Learning Now - It's Free!
+              </Button>
+            </Link>
+          </div>
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 }

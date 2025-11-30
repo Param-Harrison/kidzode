@@ -69,6 +69,7 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
           <div className="grid gap-4">
             {book.lessons.map((lesson: any, index: number) => (
               <Link key={lesson.id} href={`/courses/${bookId}/lessons/${lesson.id}`}>
+
                 <div className="group flex items-center justify-between p-4 border-4 border-black rounded-lg hover:bg-green-200 transition-colors shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none bg-card">
                   <div className="flex items-center gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white border-2 border-black font-bold group-hover:bg-white transition-colors">
