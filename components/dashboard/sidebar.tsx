@@ -65,10 +65,10 @@ export function Sidebar({ userType }: SidebarProps) {
   return (
     <aside className="w-64 bg-card border-r-2 border-border hidden md:flex flex-col h-screen sticky top-0">
       <div className="p-6 border-b-2 border-border">
-        <Link href="/dashboard" className="flex items-center gap-2">
+        <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-primary rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_#000]" />
           <Logo size="default" />
-        </Link>
+        </div>
       </div>
 
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
