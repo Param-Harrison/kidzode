@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gdenes355/python-frontend/main/bookSchema.json",
+  "name": "Python Basics",
+  "id": "basic-python-book",
+  "children": [
+    {
+      "id": "lesson-01-hello",
+      "name": "Lesson 1: Hello World",
+      "guide": "lesson01.md",
+      "py": "lesson01.py",
+      "tests": [
+        {
+          "in": "",
+          "out": "Hello, World!"
+        }
+      ]
+    },
+    {
+      "id": "lesson-02-variables",
+      "name": "Lesson 2: Variables and Data Types",
+      "guide": "lesson02.md",
+      "py": "lesson02.py",
+      "tests": [
+        {
+          "in": "Alice",
+          "out": ".*Hello, Alice"
+        }
+      ]
+    },
+    {
+      "id": "lesson-03-numbers",
+      "name": "Lesson 3: Numbers and Math",
+      "guide": "lesson03.md",
+      "py": "lesson03.py",
+      "tests": [
+        {
+          "in": ["5", "3"],
+          "out": ".*8"
+        }
+      ]
+    },
+    {
+      "id": "lesson-04-strings",
+      "name": "Lesson 4: Working with Strings",
+      "guide": "lesson04.md",
+      "py": "lesson04.py",
+      "isExample": true
+    },
+    {
+      "id": "lesson-05-conditionals",
+      "name": "Lesson 5: If Statements",
+      "guide": "lesson05.md",
+      "py": "lesson05.py",
+      "tests": [
+        {
+          "in": "18",
+          "out": ".*adult"
+        },
+        {
+          "in": "15",
+          "out": ".*minor"
+        }
+      ]
+    }
+  ]
+}
