@@ -1,0 +1,479 @@
+{
+  "$schema": "../../schemas/book-schema.json",
+  "name": "Pixel Heroes",
+  "id": "pixel-heroes",
+  "projects": [
+    {
+      "id": "rainbow-name",
+      "name": "Rainbow Name",
+      "description": "Learn to print colorful text and use variables!",
+      "badge": "🌈",
+      "lessons": [
+        {
+          "id": "rainbow-name-simple",
+          "name": "Your Name in Giant Rainbow Letters",
+          "guide": "rainbow_name_simple.md",
+          "py": "rainbow_name_simple.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "H E L L O.*JACK.*AMAZING"
+            }
+          ]
+        },
+        {
+          "id": "rainbow-name-variable",
+          "name": "Put Your Name on a Magic Name Tag",
+          "guide": "rainbow_name_variable.md",
+          "py": "rainbow_name_variable.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "Hello.*Rose.*amazing.*Rose"
+            }
+          ]
+        },
+        {
+          "id": "rainbow-name-stars",
+          "name": "Add Sparkling Stars Around Your Name",
+          "guide": "rainbow_name_stars.md",
+          "py": "rainbow_name_stars.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "\\*.*Hello.*Jack.*STAR.*\\*"
+            }
+          ]
+        },
+        {
+          "id": "rainbow-name-challenge",
+          "name": "Add Your Friend's Name Challenge",
+          "guide": "rainbow_name_challenge.md",
+          "py": "rainbow_name_challenge.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "\\*.*Hello.*Rose.*Hello.*Jack.*AMAZING.*\\*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "talking-robot",
+      "name": "Talking Robot",
+      "description": "Build a robot that can talk and remember things!",
+      "badge": "🤖",
+      "lessons": [
+        {
+          "id": "robot-hello",
+          "name": "Build Your First Talking Robot",
+          "guide": "robot_hello.md",
+          "py": "robot_hello.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "friendly robot.*Beep boop.*Nice to meet you"
+            }
+          ]
+        },
+        {
+          "id": "robot-ask-name",
+          "name": "Teach Your Robot to Ask Questions",
+          "guide": "robot_ask_name.md",
+          "py": "robot_ask_name.py",
+          "tests": [
+            {
+              "in": "Jack",
+              "out": "friendly robot.*What.*name.*Nice to meet you"
+            }
+          ]
+        },
+        {
+          "id": "robot-remember-name",
+          "name": "Teach Your Robot to Remember Your Name",
+          "guide": "robot_remember_name.md",
+          "py": "robot_remember_name.py",
+          "tests": [
+            {
+              "in": "Rose",
+              "out": "Hello.*Rose.*remember.*Rose.*Goodbye.*Rose"
+            }
+          ]
+        },
+        {
+          "id": "robot-conversation-challenge",
+          "name": "Robot Conversation Challenge",
+          "guide": "robot_conversation_challenge.md",
+          "py": "robot_conversation_challenge.py",
+          "tests": [
+            {
+              "in": ["Jack", "10"],
+              "out": "Super Robot.*name.*Hello.*Jack"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magic-8-ball",
+      "name": "Magic 8-Ball",
+      "description": "Create a fortune-telling game!",
+      "badge": "🎱",
+      "lessons": [
+        {
+          "id": "magic8-simple",
+          "name": "Your First Magic 8-Ball",
+          "guide": "magic8_simple.md",
+          "py": "magic8_simple.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "Magic 8-Ball says"
+            }
+          ]
+        },
+        {
+          "id": "magic8-question",
+          "name": "Ask the Magic 8-Ball a Question",
+          "guide": "magic8_question.md",
+          "py": "magic8_question.py",
+          "tests": [
+            {
+              "in": "Will I have a good day?",
+              "out": "Magic 8-Ball says"
+            }
+          ]
+        },
+        {
+          "id": "magic8-more-fortunes",
+          "name": "Add More Fortunes to Your Magic 8-Ball",
+          "guide": "magic8_more_fortunes.md",
+          "py": "magic8_more_fortunes.py",
+          "tests": [
+            {
+              "in": "Will it rain tomorrow?",
+              "out": "Magic 8-Ball says"
+            }
+          ]
+        },
+        {
+          "id": "magic8-challenge",
+          "name": "Fortune Categories Challenge",
+          "guide": "magic8_challenge.md",
+          "py": "magic8_challenge.py",
+          "tests": [
+            {
+              "in": ["yes", "Will I win?"],
+              "out": "Magic 8-Ball says"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turtle-art",
+      "name": "Turtle Art",
+      "description": "Draw shapes and houses with code!",
+      "badge": "🐢",
+      "lessons": [
+        {
+          "id": "turtle-square",
+          "name": "Draw a Perfect Square with Turtle",
+          "guide": "turtle_square.md",
+          "py": "turtle_square.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "turtle"
+            }
+          ]
+        },
+        {
+          "id": "turtle-roof",
+          "name": "Add a Triangle Roof",
+          "guide": "turtle_roof.md",
+          "py": "turtle_roof.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "turtle"
+            }
+          ]
+        },
+        {
+          "id": "turtle-door",
+          "name": "Add a Door to Your House",
+          "guide": "turtle_door.md",
+          "py": "turtle_door.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "turtle"
+            }
+          ]
+        },
+        {
+          "id": "turtle-windows",
+          "name": "Add Windows Using a Loop",
+          "guide": "turtle_windows.md",
+          "py": "turtle_windows.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "turtle"
+            }
+          ]
+        },
+        {
+          "id": "turtle-house-challenge",
+          "name": "Dream House Garden Challenge",
+          "guide": "turtle_house_challenge.md",
+          "py": "turtle_house_challenge.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "turtle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rocket-countdown",
+      "name": "Rocket Countdown",
+      "description": "Launch a rocket with loops!",
+      "badge": "🚀",
+      "lessons": [
+        {
+          "id": "countdown-simple",
+          "name": "Rocket Launch Countdown",
+          "guide": "countdown_simple.md",
+          "py": "countdown_simple.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "10.*9.*8.*BLAST OFF"
+            }
+          ]
+        },
+        {
+          "id": "countdown-rocket",
+          "name": "Add Rocket to Your Countdown",
+          "guide": "countdown_rocket.md",
+          "py": "countdown_rocket.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "T-minus.*BLAST OFF"
+            }
+          ]
+        },
+        {
+          "id": "countdown-effects",
+          "name": "Add Sound Effects to Your Rocket",
+          "guide": "countdown_effects.md",
+          "py": "countdown_effects.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "RUMBLE.*WHOOOOSH.*BLAST OFF"
+            }
+          ]
+        },
+        {
+          "id": "countdown-challenge",
+          "name": "Custom Countdown Challenge",
+          "guide": "countdown_challenge.md",
+          "py": "countdown_challenge.py",
+          "tests": [
+            {
+              "in": "5",
+              "out": "5.*4.*3.*2.*1.*BLAST OFF"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "superhero-generator",
+      "name": "Superhero Generator",
+      "description": "Create your own superhero identity!",
+      "badge": "🦸",
+      "lessons": [
+        {
+          "id": "superhero-name",
+          "name": "Generate Your Superhero Name",
+          "guide": "superhero_name.md",
+          "py": "superhero_name.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "SUPERHERO NAME GENERATOR.*superhero name is"
+            }
+          ]
+        },
+        {
+          "id": "superhero-power",
+          "name": "Add a Superpower",
+          "guide": "superhero_power.md",
+          "py": "superhero_power.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "Name:.*Power:"
+            }
+          ]
+        },
+        {
+          "id": "superhero-logo",
+          "name": "Create a Superhero Logo",
+          "guide": "superhero_logo.md",
+          "py": "superhero_logo.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "HERO!.*Name:.*Power:"
+            }
+          ]
+        },
+        {
+          "id": "superhero-challenge",
+          "name": "Complete Superhero Profile Challenge",
+          "guide": "superhero_challenge.md",
+          "py": "superhero_challenge.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "SUPERHERO PROFILE.*Name:.*Power:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "times-table-fireworks",
+      "name": "Times Table Fireworks",
+      "description": "Master math with explosive fun!",
+      "badge": "🎆",
+      "lessons": [
+        {
+          "id": "timestable-simple",
+          "name": "Times-Table Victory Fireworks",
+          "guide": "timestable_simple.md",
+          "py": "timestable_simple.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "5 x 1 = 5.*5 x 10 = 50"
+            }
+          ]
+        },
+        {
+          "id": "timestable-fireworks",
+          "name": "Add Victory Fireworks",
+          "guide": "timestable_fireworks.md",
+          "py": "timestable_fireworks.py",
+          "tests": [
+            {
+              "in": "",
+              "out": "5 x.*CORRECT.*VICTORY"
+            }
+          ]
+        },
+        {
+          "id": "timestable-choice",
+          "name": "Choose Your Times Table",
+          "guide": "timestable_choice.md",
+          "py": "timestable_choice.py",
+          "tests": [
+            {
+              "in": "7",
+              "out": "7 x 1 = 7.*7 x 10 = 70"
+            }
+          ]
+        },
+        {
+          "id": "timestable-challenge",
+          "name": "Multiple Times Tables Challenge",
+          "guide": "timestable_challenge.md",
+          "py": "timestable_challenge.py",
+          "tests": [
+            {
+              "in": ["2", "3", "4"],
+              "out": "3 x.*4 x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adventure-story",
+      "name": "Adventure Story",
+      "description": "Write an interactive story with choices!",
+      "badge": "🗺️",
+      "lessons": [
+        {
+          "id": "adventure-simple",
+          "name": "Your First Adventure Story",
+          "guide": "adventure_simple.md",
+          "py": "adventure_simple.py",
+          "tests": [
+            {
+              "in": "left",
+              "out": "chose the left path.*treasure"
+            }
+          ]
+        },
+        {
+          "id": "adventure-second-choice",
+          "name": "Add a Second Choice",
+          "guide": "adventure_second_choice.md",
+          "py": "adventure_second_choice.py",
+          "tests": [
+            {
+              "in": ["left", "open"],
+              "out": "opened the door.*treasure"
+            }
+          ]
+        },
+        {
+          "id": "adventure-endings",
+          "name": "Add Different Story Endings",
+          "guide": "adventure_endings.md",
+          "py": "adventure_endings.py",
+          "tests": [
+            {
+              "in": "enter",
+              "out": "enter.*UP or DOWN"
+            }
+          ]
+        },
+        {
+          "id": "adventure-character",
+          "name": "Add Your Character Name",
+          "guide": "adventure_character.md",
+          "py": "adventure_character.py",
+          "tests": [
+            {
+              "in": ["Jack", "enter"],
+              "out": "Jack.*enter.*cave"
+            }
+          ]
+        },
+        {
+          "id": "adventure-challenge",
+          "name": "Create Your Own Adventure Challenge",
+          "guide": "adventure_challenge.md",
+          "py": "adventure_challenge.py",
+          "tests": [
+            {
+              "in": "Rose",
+              "out": "Rose.*THE END"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

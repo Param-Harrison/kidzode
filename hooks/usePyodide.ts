@@ -22,69 +22,60 @@ export function usePyodide() {
   const [output, setOutput] = useState<ConsoleOutput[]>([])
   const [inputCallback, setInputCallback] = useState<((value: string) => void) | null>(null)
   const pyodideRef = useRef<any>(null)
-  const loadingRef = useRef(false)
 
   // Initialize Pyodide
   useEffect(() => {
-    if (loadingRef.current) return
-    loadingRef.current = true
-
     const loadPyodide = async () => {
       try {
-        // Load Pyodide script dynamically
-        const script = document.createElement('script')
-        script.src = 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js'
-        script.async = true
-        
-        script.onload = async () => {
-          try {
-            // @ts-ignore
-            const pyodide = await window.loadPyodide({
-              indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/',
-            })
-            
-            // Setup stdout/stderr capture
-            pyodide.setStdout({
-              batched: (text: string) => {
-                setOutput(prev => [...prev, {
-                  type: 'stdout',
-                  content: text,
-                  timestamp: Date.now()
-                }])
-              }
-            })
-            
-            pyodide.setStderr({
-              batched: (text: string) => {
-                setOutput(prev => [...prev, {
-                  type: 'stderr',
-                  content: text,
-                  timestamp: Date.now()
-                }])
-              }
-            })
-            
-            pyodideRef.current = pyodide
-            setStatus('ready')
-          } catch (error) {
-            console.error('Failed to initialize Pyodide:', error)
-            setStatus('error')
+        // @ts-ignore
+        const pyodide = await (window as any).loadPyodide({
+          indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/',
+        })
+
+        // Setup stdout/stderr capture
+        pyodide.setStdout({
+          batched: (text: string) => {
+            setOutput(prev => [...prev, {
+              type: 'stdout',
+              content: text,
+              timestamp: Date.now()
+            }])
           }
-        }
-        
-        script.onerror = () => {
-          console.error('Failed to load Pyodide script')
-          setStatus('error')
-        }
-        
-        document.head.appendChild(script)
+        })
+
+        pyodide.setStderr({
+          batched: (text: string) => {
+            setOutput(prev => [...prev, {
+              type: 'stderr',
+              content: text,
+              timestamp: Date.now()
+            }])
+          }
+        })
+
+        pyodideRef.current = pyodide
+        setStatus('ready')
       } catch (error) {
-        console.error('Failed to load Pyodide:', error)
+        console.error('Failed to initialize Pyodide:', error)
         setStatus('error')
       }
     }
 
-    loadPyodide()
+    // Load Pyodide script
+    const script = document.createElement('script')
+    script.src = 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js'
+    script.async = true
+
+    script.onload = () => {
+      loadPyodide()
+    }
+
+    script.onerror = () => {
+      console.error('Failed to load Pyodide script')
+      setStatus('error')
+    }
+
+    document.head.appendChild(script)
   }, [])
 
   const clearOutput = useCallback(() => {

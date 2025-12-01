@@ -51,7 +51,7 @@ export default function Home() {
                   Master Python
                 </span>
               </h1>
-              
+
               <p className="text-xl md:text-2xl font-bold max-w-2xl leading-relaxed">
                 Interactive lessons. Real coding. Instant feedback. <br />
                 Watch your kid build amazing projects!
@@ -200,7 +200,7 @@ export default function Home() {
                 <div className="inline-block bg-white border-4 border-black shadow-[6px_6px_0px_0px_#000] transform rotate-3 mb-6">
                   <div className="p-8">
                     <div className="text-6xl mb-4">👨‍💻</div>
-                    <div className="text-4xl font-black">500+</div>
+                    <div className="text-4xl font-black">6000+</div>
                     <div className="text-xl font-bold">Young Coders</div>
                   </div>
                 </div>
@@ -212,57 +212,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section id="pricing" className="py-16 md:py-24 border-b-2 border-black bg-primary">
-          <div className="container max-w-6xl mx-auto px-4 md:px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6">
-                Simple Pricing
-              </h2>
-              <p className="text-xl font-medium text-primary-foreground max-w-2xl mx-auto">
-                Invest in your child's future. No hidden fees, cancel anytime.
-              </p>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-8 w-full max-w-4xl mx-auto justify-center">
-              <div className="flex-1 bg-white border-4 border-black p-8 flex flex-col items-center relative overflow-hidden transform hover:-translate-y-2 transition-all duration-300 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                <h3 className="text-2xl font-black uppercase mb-2">Monthly</h3>
-                <div className="text-5xl font-black mb-2">$5</div>
-                <p className="text-sm font-bold mb-6 opacity-80">per month</p>
-                <ul className="text-left space-y-3 mb-8 text-sm font-medium w-full">
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" /> Access to All Courses</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" /> New Lessons Added Monthly</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" /> Progress Tracking</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" /> Cancel Anytime</li>
-                </ul>
-                <Link href="/courses">
-                  <Button variant="neo" className="w-full bg-black text-white py-3 text-sm font-bold">
-                    Start Free Trial
-                  </Button>
-                </Link>
-              </div>
-
-              <div className="flex-1 bg-black text-white border-4 border-black p-8 flex flex-col items-center relative overflow-hidden transform hover:-translate-y-2 transition-all duration-300 shadow-[6px_6px_0px_0px_rgba(255,255,255,1)]">
-                <div className="absolute top-0 right-0 bg-primary text-black text-xs font-bold px-3 py-1 border-2 border-black">BEST VALUE</div>
-                <h3 className="text-2xl font-black uppercase mb-2">Lifetime</h3>
-                <div className="text-5xl font-black mb-2">$99</div>
-                <p className="text-sm font-bold mb-6 opacity-80">one-time payment</p>
-                <ul className="text-left space-y-3 mb-8 text-sm font-medium w-full">
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /> All Courses Forever</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /> Future Courses Included</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /> Priority Support</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /> Certificate of Completion</li>
-                </ul>
-                <Link href="/courses">
-                  <Button variant="neo" className="w-full bg-primary text-black py-3 text-sm font-bold">
-                    Lock Lifetime Access
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
+  
         {/* CTA Section */}
         <section className="bg-black text-white py-16 md:py-24 border-b-2 border-black">
           <div className="container max-w-4xl mx-auto px-4 md:px-6 text-center">

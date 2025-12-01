@@ -2,13 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Loader2, Mail, Lock } from 'lucide-react';
 import { Logo } from '@/components/logo';
 import { useRequireAuth } from '@/hooks/useRequireAuth';
 
 export default function SignInPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { isLoading: authLoading, isAuthenticated } = useRequireAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -48,13 +49,19 @@ export default function SignInPage() {
         throw new Error(data.error || 'Failed to sign in');
       }
 
-      // Redirect based on user type
-      if (data.user.userType === 'parent') {
-        router.push('/dashboard/parent');
-      } else if (data.user.userType === 'teacher') {
-        router.push('/dashboard/teacher');
+      // Check if there's a redirect URL (for lesson access)
+      const redirectUrl = searchParams.get('redirect');
+      if (redirectUrl) {
+        router.push(redirectUrl);
       } else {
-        router.push('/dashboard');
+        // Redirect based on user type
+        if (data.user.userType === 'parent') {
+          router.push('/dashboard/parent');
+        } else if (data.user.userType === 'teacher') {
+          router.push('/dashboard/teacher');
+        } else {
+          router.push('/dashboard');
+        }
       }
     } catch (err: any) {
       setError(err.message);

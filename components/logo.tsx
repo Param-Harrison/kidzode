@@ -16,7 +16,7 @@ export function Logo({ className = "", size = "default" }: { className?: string;
   return (
     <Link href="/" className={`flex items-center space-x-2 ${className}`}>
       <span className={`${sizes[size]} font-black uppercase tracking-tight`}>
-        Kidz<span className="text-red-500">ode</span>
+        Kid<span className="text-red-500">zode</span>
       </span>
     </Link>
   )

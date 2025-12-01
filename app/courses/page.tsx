@@ -4,26 +4,29 @@ import { Footer } from "@/components/footer"
 
 const courses = [
   {
-    title: "Coding Fundamentals",
-    subtitle: "Start your journey here! Learn the fundamentals of Python programming with fun, interactive examples.",
-    tags: ["Beginner", "5 Lessons", "Interactive"],
-    color: "secondary" as const,
-    slug: "basic",
-  },
-  {
-    title: "Level Up Skills",
-    subtitle: "Take your skills to the next level! Dive into data structures, functions, and more advanced concepts.",
-    tags: ["Intermediate", "5 Lessons", "Hands-on"],
-    color: "accent" as const,
-    slug: "intermediate",
-  },
-  {
-    title: "Master Coder",
-    subtitle: "Become a Python master! Explore object-oriented programming and advanced programming concepts.",
-    tags: ["Advanced", "5 Lessons", "Projects"],
+    title: "Pixel Heroes",
+    subtitle: "Watch your child build their first talking robot and magic fortune teller. They'll learn to break problems into small steps and think systematically.",
+    tags: ["Ages 8-10", "Beginner", "12 Real Projects", "Logical Thinking Foundation"],
     color: "primary" as const,
-    slug: "advanced",
+    slug: "pixel-heroes",
+    badge: "Rainbow Star Badge"
   },
+  {
+    title: "Code Ninjas",
+    subtitle: "Your child masters problem-solving by building quiz creators and weather apps. They develop analytical skills that help in math and science class.",
+    tags: ["Ages 9-11", "Intermediate", "12 Building Projects", "Analytical Brain Development"],
+    color: "secondary" as const,
+    slug: "code-ninjas",
+    badge: "Ninja Headband"
+  },
+  {
+    title: "Future Builders",
+    subtitle: "Kids create real tools like study timers and habit trackers. They learn life skills in discipline, planning, and turning ideas into reality.",
+    tags: ["Ages 11-13", "Advanced", "12 Advanced Tools", "Life Skills Through Code"],
+    color: "accent" as const,
+    slug: "future-builders",
+    badge: "Glowing Crown"
+  }
 ]
 
 export default function CoursesPage() {
@@ -33,13 +36,13 @@ export default function CoursesPage() {
       <main className="flex-1 container max-w-6xl mx-auto py-12 px-4 md:px-6">
         <div className="flex flex-col space-y-8">
           <div className="flex flex-col space-y-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight uppercase font-lexend">Python Curriculum</h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Choose your path and start building amazing projects!
+            <h1 className="text-4xl md:text-5xl font-black tracking-tight uppercase font-lexend">Watch Your Kid Forget Games & Think Like an Engineer</h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Through coding projects, kids develop logical thinking, analytical problem-solving skills, and learn life lessons that stick with them forever.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 pt-8">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
             {courses.map((course) => (
               <CourseCard key={course.slug} {...course} />
             ))}

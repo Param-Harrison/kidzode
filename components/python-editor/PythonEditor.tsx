@@ -36,6 +36,17 @@ export function PythonEditor({
   const [testResults, setTestResults] = useState<TestResult[]>([])
   const { status, output, runCode, runTests, clearOutput, awaitingInput, handleInput } = usePyodide()
 
+  const [isVertical, setIsVertical] = useState(false)
+
+  useEffect(() => {
+    const checkSize = () => {
+      setIsVertical(window.innerWidth < 1024) // lg breakpoint
+    }
+    checkSize()
+    window.addEventListener('resize', checkSize)
+    return () => window.removeEventListener('resize', checkSize)
+  }, [])
+
   useEffect(() => {
     setCode(initialCode)
   }, [initialCode])
@@ -75,7 +86,7 @@ export function PythonEditor({
   return (
     <div className="flex flex-col h-screen">
       {/* Single unified toolbar */}
-      <div className="flex items-center justify-between p-3 border-b-2 border-black bg-card">
+      <div className="flex items-center justify-between p-3 border-b border-border bg-card">
         <div className="flex items-center gap-3">
           <Link href={`/courses/${bookId}`}>
             <Button variant="ghost" size="sm" className="gap-2">
@@ -106,7 +117,7 @@ export function PythonEditor({
               disabled={isLoading || isRunning}
               variant="default"
               size="sm"
-              className="gap-2 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+              className="gap-2 shadow-sm"
             >
               <CheckCircle className="h-4 w-4" />
               Test
@@ -118,7 +129,7 @@ export function PythonEditor({
             disabled={isLoading || isRunning}
             variant="outline"
             size="sm"
-            className="gap-2 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+            className="gap-2 shadow-sm"
           >
             <RotateCcw className="h-4 w-4" />
             Reset
@@ -135,9 +146,9 @@ export function PythonEditor({
 
       {/* Resizable panels */}
       <div className="flex-1 overflow-hidden">
-        <PanelGroup direction="horizontal">
+        <PanelGroup direction={isVertical ? "vertical" : "horizontal"}>
           {/* Left: Guide */}
-          <Panel defaultSize={30} minSize={20}>
+          <Panel defaultSize={isVertical ? 40 : 50} minSize={20}>
             <div className="h-full overflow-y-auto border-r-2 border-black">
               {testResults.length > 0 && (
                 <div className="border-b-2 border-black">

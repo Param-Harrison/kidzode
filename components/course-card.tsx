@@ -35,7 +35,7 @@ export function CourseCard({ title, subtitle, tags, color = "accent", slug }: Co
           ))}
         </div>
         <Link href={`/courses/${slug}`} className="w-full mt-auto">
-          <Button variant="neo" className="w-full py-6 text-lg h-auto font-bold bg-primary text-black">
+          <Button variant="neo" className="w-full py-4 text-lg h-auto font-bold bg-primary text-black">
             Start Learning
           </Button>
         </Link>

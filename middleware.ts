@@ -2,15 +2,22 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { signToken, verifyToken } from '@/lib/auth/session';
 
-const protectedRoutes = '/dashboard';
+const protectedRoutes = ['/dashboard'];
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const sessionCookie = request.cookies.get('session');
-  const isProtectedRoute = pathname.startsWith(protectedRoutes);
+
+  // Check if this is a lesson route that needs protection
+  const isLessonRoute = /^\/courses\/[^\/]+\/lessons\/[^\/]+/.test(pathname);
+  const isProtectedRoute = protectedRoutes.some(route => pathname.startsWith(route)) || isLessonRoute;
 
   if (isProtectedRoute && !sessionCookie) {
-    return NextResponse.redirect(new URL('/sign-in', request.url));
+    // For lesson routes, include the original URL as redirect parameter
+    const signInUrl = isLessonRoute
+      ? `/sign-in?redirect=${encodeURIComponent(request.url)}`
+      : '/sign-in';
+    return NextResponse.redirect(new URL(signInUrl, request.url));
   }
 
   let res = NextResponse.next();
