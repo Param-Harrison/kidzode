@@ -12,8 +12,15 @@
     {
       "idx": 1,
       "version": "7",
+      "when": 1733145000000,
+      "tag": "0001_kidzode_schema",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
       "when": 1764519298206,
-      "tag": "0001_magical_redwing",
+      "tag": "0002_magical_redwing",
       "breakpoints": true
     }
   ]

@@ -9,7 +9,7 @@ import Link from "next/link"
 
 interface BookData {
   name: string
-  projects: Array<{
+  projects?: Array<{
     id: string
     name: string
     description: string
@@ -20,6 +20,13 @@ interface BookData {
       py: string
       tests?: Array<{ in: string | string[]; out: string | any[] }>
     }>
+  }>
+  children?: Array<{
+    id: string
+    name: string
+    guide: string
+    py: string
+    tests?: Array<{ in: string | string[]; out: string | any[] }>
   }>
 }
 
@@ -40,6 +47,8 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
   const [error, setError] = useState<string | null>(null)
   const [progress, setProgress] = useState<LessonProgress | null>(null)
   const [studentId, setStudentId] = useState<number | null>(null)
+  const [prevLesson, setPrevLesson] = useState<{ id: string; name: string } | null>(null)
+  const [nextLesson, setNextLesson] = useState<{ id: string; name: string } | null>(null)
 
   // Load student ID from user
   useEffect(() => {
@@ -64,8 +73,8 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
         
         // Find the lesson
         let lesson = null
-        let prevLesson = null
-        let nextLesson = null
+        let prevLessonData = null
+        let nextLessonData = null
         
         if (bookData.projects) {
           const allLessons: any[] = []
@@ -74,25 +83,25 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
           const currentIndex = allLessons.findIndex(l => l.id === lessonId)
           if (currentIndex !== -1) {
             lesson = allLessons[currentIndex]
-            if (currentIndex > 0) prevLesson = allLessons[currentIndex - 1]
-            if (currentIndex < allLessons.length - 1) nextLesson = allLessons[currentIndex + 1]
+            if (currentIndex > 0) prevLessonData = allLessons[currentIndex - 1]
+            if (currentIndex < allLessons.length - 1) nextLessonData = allLessons[currentIndex + 1]
           }
         } else if (bookData.children) {
           const currentIndex = bookData.children.findIndex((l: any) => l.id === lessonId)
           if (currentIndex !== -1) {
             lesson = bookData.children[currentIndex]
-            if (currentIndex > 0) prevLesson = bookData.children[currentIndex - 1]
-            if (currentIndex < bookData.children.length - 1) nextLesson = bookData.children[currentIndex + 1]
+            if (currentIndex > 0) prevLessonData = bookData.children[currentIndex - 1]
+            if (currentIndex < bookData.children.length - 1) nextLessonData = bookData.children[currentIndex + 1]
           }
         }
         
         if (!lesson) {
           throw new Error('Lesson not found')
         }
-        
-        if (!lesson) {
-          throw new Error('Lesson not found')
-        }
+
+        // Set prev/next lesson state
+        setPrevLesson(prevLessonData ? { id: prevLessonData.id, name: prevLessonData.name } : null)
+        setNextLesson(nextLessonData ? { id: nextLessonData.id, name: nextLessonData.name } : null)
 
         // Load guide
         const guideRes = await fetch(`/courses/${bookId}/${lesson.guide}`)
@@ -199,6 +208,31 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
         <div className="text-center">
           <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-primary" />
           <p className="text-lg font-medium">Loading lesson...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // Redirect to login if not authenticated
+  if (!user) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-background p-4">
+        <div className="max-w-md w-full bg-card border-2 border-border rounded-lg p-8 text-center shadow-neo">
+          <AlertCircle className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+          <h2 className="text-2xl font-bold mb-2">Login Required</h2>
+          <p className="text-muted-foreground mb-6">You need to be logged in to access lessons.</p>
+          <div className="flex gap-3 justify-center">
+            <Link href={`/sign-in?redirect=/courses/${bookId}/lessons/${lessonId}`}>
+              <Button variant="neo">
+                Sign In
+              </Button>
+            </Link>
+            <Link href={`/courses/${bookId}`}>
+              <Button variant="outline">
+                Back to Course
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     )

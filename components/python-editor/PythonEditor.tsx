@@ -102,6 +102,7 @@ export function PythonEditor({
     <div className="flex flex-col h-screen">
       {/* Single unified toolbar */}
       <div className="flex items-center justify-between p-3 border-b border-border bg-card">
+        {/* Left side: Back and Navigation */}
         <div className="flex items-center gap-3">
           <Link href={`/courses/${bookId}`}>
             <Button variant="ghost" size="sm" className="gap-2">
@@ -109,7 +110,7 @@ export function PythonEditor({
             </Button>
           </Link>
           
-          <div className="h-6 w-px bg-border" />
+          {(prevLesson || nextLesson) && <div className="h-6 w-px bg-border" />}
 
           {prevLesson && (
             <Link href={`/courses/${bookId}/lessons/${prevLesson.id}`}>
@@ -126,9 +127,10 @@ export function PythonEditor({
               </Button>
             </Link>
           )}
-          
-          <div className="h-6 w-px bg-border" />
-          
+        </div>
+        
+        {/* Right side: Run, Test, Reset */}
+        <div className="flex items-center gap-3">
           <Button
             onClick={handleRun}
             disabled={isLoading || isRunning}
@@ -180,8 +182,12 @@ export function PythonEditor({
       {/* Resizable panels */}
       <div className="flex-1 overflow-hidden">
         <PanelGroup direction={isVertical ? "vertical" : "horizontal"}>
-          {/* Left: Guide */}
-          <Panel defaultSize={isVertical ? 40 : 50} minSize={20}>
+          {/* Left: Guide - 40% on desktop, full width on mobile */}
+          <Panel 
+            defaultSize={isVertical ? 45 : 40} 
+            minSize={isVertical ? 30 : 25}
+            maxSize={isVertical ? 70 : 50}
+          >
             <div className="h-full overflow-y-auto border-r-2 border-black">
               {testResults.length > 0 && (
                 <div className="border-b-2 border-black">
@@ -192,13 +198,19 @@ export function PythonEditor({
             </div>
           </Panel>
 
-          <PanelResizeHandle className="w-2 bg-border hover:bg-secondary transition-colors" />
+          <PanelResizeHandle className={`${isVertical ? 'h-2' : 'w-2'} bg-border hover:bg-secondary transition-colors`} />
 
-          {/* Right: Editor + Console */}
-          <Panel defaultSize={70} minSize={30}>
+          {/* Right: Editor + Console - 60% on desktop */}
+          <Panel 
+            defaultSize={isVertical ? 55 : 60} 
+            minSize={isVertical ? 30 : 40}
+          >
             <PanelGroup direction="vertical">
-              {/* Code Editor */}
-              <Panel defaultSize={60} minSize={30}>
+              {/* Code Editor - larger on desktop */}
+              <Panel 
+                defaultSize={isVertical ? 50 : 65} 
+                minSize={30}
+              >
                 <Editor
                   height="100%"
                   defaultLanguage="python"
@@ -207,7 +219,7 @@ export function PythonEditor({
                   theme="vs-dark"
                   options={{
                     minimap: { enabled: false },
-                    fontSize: 14,
+                    fontSize: isVertical ? 13 : 14,
                     lineNumbers: "on",
                     roundedSelection: false,
                     scrollBeyondLastLine: false,
@@ -219,8 +231,11 @@ export function PythonEditor({
 
               <PanelResizeHandle className="h-2 bg-border hover:bg-secondary transition-colors" />
 
-              {/* Console */}
-              <Panel defaultSize={40} minSize={20}>
+              {/* Console - smaller on desktop */}
+              <Panel 
+                defaultSize={isVertical ? 50 : 35} 
+                minSize={20}
+              >
                 <Console
                   output={output}
                   awaitingInput={awaitingInput}

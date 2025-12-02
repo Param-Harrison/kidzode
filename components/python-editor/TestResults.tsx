@@ -52,8 +52,26 @@ export function TestResults({ results, isRunning }: TestResultsProps) {
                 <XCircle className="h-5 w-5 text-red-600" />
               )}
               <span className="font-bold text-base">Test {index + 1}</span>
-              {result.passed && <span className="text-green-600 font-medium text-sm ml-auto">Great job! 🌟</span>}
+              {result.passed && <span className="text-green-600 font-medium text-sm ml-auto">✓ Passed</span>}
             </div>
+            
+            {/* Show details for passing tests too */}
+            {result.passed && (
+              <div className="ml-7 text-sm space-y-2 bg-green-50 p-3 rounded border border-green-100">
+                {result.actual && (
+                  <div className="text-gray-700">
+                    <span className="font-bold block text-sm text-green-700 mb-2">✨ What your code printed:</span>
+                    <div className="font-mono bg-white px-3 py-2 rounded border border-green-200 text-sm leading-relaxed whitespace-pre-wrap">
+                      {result.actual}
+                    </div>
+                  </div>
+                )}
+                <div className="text-sm text-green-700 font-medium mt-3 flex items-center gap-2">
+                  <span className="text-2xl">🎉</span>
+                  <span>Perfect! This is exactly what we wanted to see!</span>
+                </div>
+              </div>
+            )}
             
             {!result.passed && (
               <div className="ml-7 text-sm space-y-2 bg-red-50 p-3 rounded border border-red-100">
@@ -65,7 +83,7 @@ export function TestResults({ results, isRunning }: TestResultsProps) {
                 {result.expected && (
                   <div className="text-gray-700">
                     <span className="font-bold block text-xs uppercase tracking-wider text-gray-500 mb-1">We expected to see:</span>
-                    <div className="font-mono bg-white px-2 py-1 rounded border border-gray-200 inline-block">
+                    <div className="font-mono bg-white px-2 py-1 rounded border border-gray-200 inline-block whitespace-pre-wrap">
                       {result.expected}
                     </div>
                   </div>
@@ -73,7 +91,7 @@ export function TestResults({ results, isRunning }: TestResultsProps) {
                 {result.actual && (
                   <div className="text-gray-700">
                     <span className="font-bold block text-xs uppercase tracking-wider text-gray-500 mb-1">But we saw:</span>
-                    <div className="font-mono bg-white px-2 py-1 rounded border border-gray-200 inline-block">
+                    <div className="font-mono bg-white px-2 py-1 rounded border border-gray-200 inline-block whitespace-pre-wrap">
                       {result.actual}
                     </div>
                   </div>

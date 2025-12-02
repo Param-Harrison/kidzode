@@ -32,10 +32,6 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
               </div>
             </div>
 
-import { CourseLessonsList } from "@/components/CourseLessonsList"
-
-// ...
-
             <div className="space-y-12">
               <CourseLessonsList bookId={bookId} book={book} />
             </div>

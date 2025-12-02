@@ -32,6 +32,28 @@ export function usePyodide() {
     // Check if Pyodide is already loaded globally
     if ((window as any).__pyodide) {
       pyodideRef.current = (window as any).__pyodide
+      
+      // Re-attach stdout/stderr for this component instance
+      pyodideRef.current.setStdout({
+        batched: (text: string) => {
+          setOutput(prev => [...prev, {
+            type: 'stdout',
+            content: text,
+            timestamp: Date.now()
+          }])
+        }
+      })
+
+      pyodideRef.current.setStderr({
+        batched: (text: string) => {
+          setOutput(prev => [...prev, {
+            type: 'stderr',
+            content: text,
+            timestamp: Date.now()
+          }])
+        }
+      })
+      
       setStatus('ready')
       return
     }
