@@ -17,19 +17,30 @@ export interface TestResult {
   error?: string
 }
 
+// Package cache to avoid reloading
+const packageCache = new Set<string>()
+
 export function usePyodide() {
   const [status, setStatus] = useState<PyodideStatus>('loading')
   const [output, setOutput] = useState<ConsoleOutput[]>([])
-  const [inputCallback, setInputCallback] = useState<((value: string) => void) | null>(null)
+  const [awaitingInput, setAwaitingInput] = useState(false)
   const pyodideRef = useRef<any>(null)
+  const inputResolveRef = useRef<((value: string) => void) | null>(null)
 
-  // Initialize Pyodide
+  // Initialize Pyodide once globally
   useEffect(() => {
+    // Check if Pyodide is already loaded globally
+    if ((window as any).__pyodide) {
+      pyodideRef.current = (window as any).__pyodide
+      setStatus('ready')
+      return
+    }
+
     const loadPyodide = async () => {
       try {
-        // @ts-ignore
+        // Load Pyodide from CDN
         const pyodide = await (window as any).loadPyodide({
-          indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/',
+          indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.29.0/full/',
         })
 
         // Setup stdout/stderr capture
@@ -53,6 +64,48 @@ export function usePyodide() {
           }
         })
 
+        // Setup proper input handling
+        await pyodide.runPythonAsync(`
+import sys
+from js import Object
+
+# Create a proper input handler that works with browser
+class BrowserInput:
+    def __init__(self):
+        self.queue = []
+        self.waiting = False
+    
+    def set_queue(self, inputs):
+        self.queue = list(inputs) if inputs else []
+    
+    def __call__(self, prompt=''):
+        if prompt:
+            print(prompt, end='', flush=True)
+        
+        if self.queue:
+            value = str(self.queue.pop(0))
+            print(value, flush=True)
+            return value
+        
+        # Use window.prompt for interactive input
+        from js import prompt as js_prompt
+        value = js_prompt(prompt)
+        
+        # If user cancels, return empty string or raise EOFError? 
+        # Standard input() raises EOFError on EOF, but empty string is safer for simple scripts.
+        if value is None:
+            return ""
+            
+        print(value, flush=True)
+        return str(value)
+
+# Install the input handler
+_browser_input = BrowserInput()
+sys.modules['builtins'].input = _browser_input
+        `)
+
+        // Store globally to reuse
+        ;(window as any).__pyodide = pyodide
         pyodideRef.current = pyodide
         setStatus('ready')
       } catch (error) {
@@ -61,25 +114,70 @@ export function usePyodide() {
       }
     }
 
-    // Load Pyodide script
-    const script = document.createElement('script')
-    script.src = 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js'
-    script.async = true
-
-    script.onload = () => {
-      loadPyodide()
+    // Check if script is already loaded
+    if (document.querySelector('script[src*="pyodide.js"]')) {
+      // Script exists, wait for it to load
+      const checkLoaded = setInterval(() => {
+        if ((window as any).loadPyodide) {
+          clearInterval(checkLoaded)
+          loadPyodide()
+        }
+      }, 100)
+    } else {
+      // Load script
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/pyodide/v0.29.0/full/pyodide.js'
+      script.async = true
+      script.onload = () => loadPyodide()
+      script.onerror = () => {
+        console.error('Failed to load Pyodide script')
+        setStatus('error')
+      }
+      document.head.appendChild(script)
     }
-
-    script.onerror = () => {
-      console.error('Failed to load Pyodide script')
-      setStatus('error')
-    }
-
-    document.head.appendChild(script)
   }, [])
 
   const clearOutput = useCallback(() => {
     setOutput([])
+  }, [])
+
+  // Load packages with caching
+  const loadPackages = useCallback(async (packages: string[]) => {
+    if (!pyodideRef.current) return
+
+    const toLoad = packages.filter(pkg => !packageCache.has(pkg))
+    if (toLoad.length === 0) return
+
+    try {
+      await pyodideRef.current.loadPackage(toLoad)
+      toLoad.forEach(pkg => packageCache.add(pkg))
+    } catch (error) {
+      console.error('Failed to load packages:', error)
+      throw error
+    }
+  }, [])
+
+  // Detect required packages from code
+  const detectPackages = useCallback((code: string): string[] => {
+    const packages: string[] = []
+    
+    // Common package imports
+    const importPatterns = [
+      { pattern: /import\s+numpy|from\s+numpy/m, package: 'numpy' },
+      { pattern: /import\s+pandas|from\s+pandas/m, package: 'pandas' },
+      { pattern: /import\s+matplotlib|from\s+matplotlib/m, package: 'matplotlib' },
+      { pattern: /import\s+scipy|from\s+scipy/m, package: 'scipy' },
+      { pattern: /import\s+scikit-learn|from\s+sklearn/m, package: 'scikit-learn' },
+      { pattern: /import\s+sympy|from\s+sympy/m, package: 'sympy' },
+    ]
+
+    importPatterns.forEach(({ pattern, package: pkg }) => {
+      if (pattern.test(code)) {
+        packages.push(pkg)
+      }
+    })
+
+    return packages
   }, [])
 
   const runCode = useCallback(async (code: string): Promise<{ success: boolean; error?: string }> => {
@@ -91,6 +189,18 @@ export function usePyodide() {
     clearOutput()
 
     try {
+      // Detect and load required packages
+      const requiredPackages = detectPackages(code)
+      if (requiredPackages.length > 0) {
+        setOutput(prev => [...prev, {
+          type: 'stdout',
+          content: `Loading packages: ${requiredPackages.join(', ')}...\n`,
+          timestamp: Date.now()
+        }])
+        await loadPackages(requiredPackages)
+      }
+
+      // Run the code
       await pyodideRef.current.runPythonAsync(code)
       setStatus('ready')
       return { success: true }
@@ -103,7 +213,7 @@ export function usePyodide() {
       setStatus('ready')
       return { success: false, error: error.message }
     }
-  }, [status, clearOutput])
+  }, [status, clearOutput, detectPackages, loadPackages])
 
   const runTests = useCallback(async (
     code: string,
@@ -119,33 +229,25 @@ export function usePyodide() {
       try {
         clearOutput()
         
-        // Prepare input
-        const inputs = Array.isArray(test.in) ? test.in : [test.in]
-        const inputQueue = [...inputs]
+        // Detect and load required packages
+        const requiredPackages = detectPackages(code)
+        if (requiredPackages.length > 0) {
+          await loadPackages(requiredPackages)
+        }
+
+        // Prepare input queue
+        const inputs = Array.isArray(test.in) ? test.in : (test.in ? [test.in] : [])
         
-        // Override input function for testing
+        // Setup input queue and capture output
         await pyodideRef.current.runPythonAsync(`
 import sys
 from io import StringIO
 
-input_queue = ${JSON.stringify(inputQueue)}
-input_index = 0
-
-def mock_input(prompt=''):
-    global input_index
-    if prompt:
-        print(prompt, end='')
-    if input_index < len(input_queue):
-        value = str(input_queue[input_index])
-        input_index += 1
-        print(value)
-        return value
-    return ''
-
-sys.modules['builtins'].input = mock_input
+# Set input queue
+_browser_input.set_queue(${JSON.stringify(inputs)})
 
 # Capture output
-old_stdout = sys.stdout
+_old_stdout = sys.stdout
 sys.stdout = StringIO()
         `)
 
@@ -154,20 +256,29 @@ sys.stdout = StringIO()
         
         // Get output
         const output = await pyodideRef.current.runPythonAsync(`
-import sys
 result = sys.stdout.getvalue()
-sys.stdout = old_stdout
+sys.stdout = _old_stdout
 result
         `)
 
-        // Check output
+        // Check output against expected pattern
         const expected = typeof test.out === 'string' ? test.out : JSON.stringify(test.out)
         const actual = output.trim()
         
-        // Simple pattern matching (supports .* wildcard)
-        const pattern = expected.replace(/\.\*/g, '.*')
-        const regex = new RegExp(pattern, 'i')
-        const passed = regex.test(actual)
+        // Use regex matching with proper escaping
+        let passed = false
+        try {
+          // Escape special regex characters except .* which we want to keep as wildcard
+          const escapedPattern = expected
+            .replace(/[\\^$*+?.()|[\]{}]/g, '\\$&')  // Escape special chars
+            .replace(/\\\.\\\*/g, '.*')              // Restore .* as wildcard
+          
+          const regex = new RegExp(escapedPattern, 'is')  // i=case insensitive, s=dotall
+          passed = regex.test(actual)
+        } catch (regexError) {
+          // If regex fails, fall back to simple includes check
+          passed = actual.includes(expected.replace(/\.\*/g, ''))
+        }
 
         results.push({
           passed,
@@ -177,19 +288,22 @@ result
       } catch (error: any) {
         results.push({
           passed: false,
+          expected: typeof test.out === 'string' ? test.out : JSON.stringify(test.out),
           error: error.message,
         })
       }
     }
 
     return results
-  }, [status, clearOutput])
+  }, [status, clearOutput, detectPackages, loadPackages])
 
   const handleInput = useCallback((value: string) => {
-    if (inputCallback) {
-      inputCallback(value)
+    if (inputResolveRef.current) {
+      inputResolveRef.current(value)
+      inputResolveRef.current = null
+      setAwaitingInput(false)
     }
-  }, [inputCallback])
+  }, [])
 
   return {
     status,
@@ -197,7 +311,7 @@ result
     runCode,
     runTests,
     clearOutput,
-    awaitingInput: inputCallback !== null,
+    awaitingInput,
     handleInput,
   }
 }

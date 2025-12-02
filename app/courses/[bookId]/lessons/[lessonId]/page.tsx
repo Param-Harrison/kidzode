@@ -64,14 +64,30 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
         
         // Find the lesson
         let lesson = null
+        let prevLesson = null
+        let nextLesson = null
+        
         if (bookData.projects) {
-          for (const project of bookData.projects) {
-            const found = project.lessons.find(l => l.id === lessonId)
-            if (found) {
-              lesson = found
-              break
-            }
+          const allLessons: any[] = []
+          bookData.projects.forEach(p => allLessons.push(...p.lessons))
+          
+          const currentIndex = allLessons.findIndex(l => l.id === lessonId)
+          if (currentIndex !== -1) {
+            lesson = allLessons[currentIndex]
+            if (currentIndex > 0) prevLesson = allLessons[currentIndex - 1]
+            if (currentIndex < allLessons.length - 1) nextLesson = allLessons[currentIndex + 1]
           }
+        } else if (bookData.children) {
+          const currentIndex = bookData.children.findIndex((l: any) => l.id === lessonId)
+          if (currentIndex !== -1) {
+            lesson = bookData.children[currentIndex]
+            if (currentIndex > 0) prevLesson = bookData.children[currentIndex - 1]
+            if (currentIndex < bookData.children.length - 1) nextLesson = bookData.children[currentIndex + 1]
+          }
+        }
+        
+        if (!lesson) {
+          throw new Error('Lesson not found')
         }
         
         if (!lesson) {
@@ -220,6 +236,8 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
       bookId={bookId}
       lessonId={lessonId}
       progress={progress?.status}
+      prevLesson={prevLesson ? { id: prevLesson.id, name: prevLesson.name } : undefined}
+      nextLesson={nextLesson ? { id: nextLesson.id, name: nextLesson.name } : undefined}
     />
   )
 }

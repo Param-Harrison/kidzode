@@ -10,6 +10,7 @@ import { GuideViewer } from "./GuideViewer"
 import { TestResults } from "./TestResults"
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels"
 import Link from "next/link"
+import confetti from "canvas-confetti"
 
 interface PythonEditorProps {
   initialCode: string
@@ -20,6 +21,8 @@ interface PythonEditorProps {
   bookId: string
   lessonId?: string
   progress?: 'not_started' | 'in_progress' | 'completed'
+  prevLesson?: { id: string; name: string }
+  nextLesson?: { id: string; name: string }
 }
 
 export function PythonEditor({ 
@@ -30,8 +33,11 @@ export function PythonEditor({
   onComplete,
   bookId,
   lessonId,
-  progress 
+  progress,
+  prevLesson,
+  nextLesson
 }: PythonEditorProps) {
+  // ... existing state ...
   const [code, setCode] = useState(initialCode)
   const [testResults, setTestResults] = useState<TestResult[]>([])
   const { status, output, runCode, runTests, clearOutput, awaitingInput, handleInput } = usePyodide()
@@ -68,8 +74,17 @@ export function PythonEditor({
       
       // If all tests pass, mark lesson as complete
       const allPassed = results.every(r => r.passed)
-      if (allPassed && onComplete && progress !== 'completed') {
-        onComplete()
+      if (allPassed) {
+        // Trigger confetti!
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        })
+        
+        if (onComplete && progress !== 'completed') {
+          onComplete()
+        }
       }
     }
   }
@@ -93,6 +108,24 @@ export function PythonEditor({
               <ArrowLeft className="h-4 w-4" /> Back
             </Button>
           </Link>
+          
+          <div className="h-6 w-px bg-border" />
+
+          {prevLesson && (
+            <Link href={`/courses/${bookId}/lessons/${prevLesson.id}`}>
+              <Button variant="outline" size="sm" className="gap-2">
+                ← Prev
+              </Button>
+            </Link>
+          )}
+
+          {nextLesson && (
+            <Link href={`/courses/${bookId}/lessons/${nextLesson.id}`}>
+              <Button variant="outline" size="sm" className="gap-2">
+                Next →
+              </Button>
+            </Link>
+          )}
           
           <div className="h-6 w-px bg-border" />
           

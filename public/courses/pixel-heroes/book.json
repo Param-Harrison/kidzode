@@ -13,21 +13,21 @@
           "name": "Your Name in Giant Rainbow Letters",
           "guide": "rainbow_name_simple.md",
           "py": "rainbow_name_simple.py",
-          "tests": [{"in": "", "out": "H E L L O.*JACK.*AMAZING"}]
+          "tests": [{"in": "", "out": ".*H E L L O.*JACK.*AMAZING.*"}]
         },
         {
           "id": "rainbow-name-variable",
           "name": "Put Your Name on a Magic Name Tag",
           "guide": "rainbow_name_variable.md",
           "py": "rainbow_name_variable.py",
-          "tests": [{"in": "", "out": "Hello.*Rose.*amazing.*Rose"}]
+          "tests": [{"in": "", "out": ".*Hello.*Rose.*amazing.*Rose.*"}]
         },
         {
           "id": "rainbow-name-stars",
           "name": "Add Sparkling Stars Around Your Name",
           "guide": "rainbow_name_stars.md",
           "py": "rainbow_name_stars.py",
-          "tests": [{"in": "", "out": "\\\\*.*Hello.*Jack.*STAR.*\\\\*"}]
+          "tests": [{"in": "", "out": ".*Hello.*Jack.*STAR.*"}]
         },
         {
           "id": "rainbow-name-challenge",

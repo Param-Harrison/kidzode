@@ -6,30 +6,7 @@ import { BouncyShapes } from "@/components/bouncy-shapes"
 import { CourseCard } from "@/components/course-card"
 import { CheckCircle, XCircle, Code, Zap, Trophy } from "lucide-react"
 import { Footer } from "@/components/footer"
-
-const courses = [
-  {
-    title: "Coding Fundamentals",
-    subtitle: "Start your journey here! Learn the fundamentals of Python programming with fun, interactive examples.",
-    tags: ["Beginner", "5 Lessons", "Interactive"],
-    color: "secondary" as const,
-    slug: "basic",
-  },
-  {
-    title: "Level Up Skills",
-    subtitle: "Take your skills to the next level! Dive into data structures, functions, and more advanced concepts.",
-    tags: ["Intermediate", "5 Lessons", "Hands-on"],
-    color: "accent" as const,
-    slug: "intermediate",
-  },
-  {
-    title: "Master Coder",
-    subtitle: "Become a Python master! Explore object-oriented programming and advanced programming concepts.",
-    tags: ["Advanced", "5 Lessons", "Projects"],
-    color: "primary" as const,
-    slug: "advanced",
-  },
-]
+import { courses } from "@/lib/courses-data"
 
 export default function Home() {
   return (
@@ -148,10 +125,10 @@ export default function Home() {
           <div className="container max-w-6xl mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6">
-                Start Your Journey
+                Choose Your Adventure
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Three courses. One goal: Make your kid a confident coder.
+                Three exciting learning paths. From first steps to advanced projects - perfect for every skill level.
               </p>
             </div>
 

@@ -16,7 +16,9 @@ setup:
 # Start development environment (App + DB in Docker)
 dev:
 	@echo "🐳 Starting development environment in Docker..."
-	@docker compose up --build
+	@echo "🔨 Building Docker images..."
+	@docker compose build
+	@docker compose up
 
 # Start local development (App local + DB Docker)
 dev-local:
