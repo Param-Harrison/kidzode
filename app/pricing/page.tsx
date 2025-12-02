@@ -208,7 +208,7 @@ export default function PricingPage() {
               {plan.name === 'Homeschool' && (
                 <div className="mt-12 max-w-3xl mx-auto">
                   <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                    <h4 className="text-xl font-black mb-3">📊 Metered Billing Explained</h4>
+                    <h4 className="text-xl font-black mb-3">Metered Billing Explained</h4>
                     <p className="font-medium mb-2">
                       You're charged for every 10 students in your classroom.
                     </p>
