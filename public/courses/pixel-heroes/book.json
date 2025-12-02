@@ -7,403 +7,342 @@
       "id": "rainbow-name",
       "name": "Rainbow Name",
       "description": "Learn to print colorful text and use variables!",
-      "badge": "🌈",
       "lessons": [
         {
           "id": "rainbow-name-simple",
           "name": "Your Name in Giant Rainbow Letters",
           "guide": "rainbow_name_simple.md",
           "py": "rainbow_name_simple.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "H E L L O.*JACK.*AMAZING"
-            }
-          ]
+          "tests": [{"in": "", "out": "H E L L O.*JACK.*AMAZING"}]
         },
         {
           "id": "rainbow-name-variable",
           "name": "Put Your Name on a Magic Name Tag",
           "guide": "rainbow_name_variable.md",
           "py": "rainbow_name_variable.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "Hello.*Rose.*amazing.*Rose"
-            }
-          ]
+          "tests": [{"in": "", "out": "Hello.*Rose.*amazing.*Rose"}]
         },
         {
           "id": "rainbow-name-stars",
           "name": "Add Sparkling Stars Around Your Name",
           "guide": "rainbow_name_stars.md",
           "py": "rainbow_name_stars.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "\\*.*Hello.*Jack.*STAR.*\\*"
-            }
-          ]
+          "tests": [{"in": "", "out": "\\\\*.*Hello.*Jack.*STAR.*\\\\*"}]
         },
         {
           "id": "rainbow-name-challenge",
           "name": "Add Your Friend's Name Challenge",
           "guide": "rainbow_name_challenge.md",
           "py": "rainbow_name_challenge.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "\\*.*Hello.*Rose.*Hello.*Jack.*AMAZING.*\\*"
-            }
-          ]
+          "tests": [{"in": "", "out": "Rose.*Jack"}]
         }
       ]
     },
     {
       "id": "talking-robot",
       "name": "Talking Robot",
-      "description": "Build a robot that can talk and remember things!",
-      "badge": "🤖",
+      "description": "Build a robot that remembers your name!",
       "lessons": [
         {
           "id": "robot-hello",
-          "name": "Build Your First Talking Robot",
+          "name": "Make a Robot Say Hello",
           "guide": "robot_hello.md",
           "py": "robot_hello.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "friendly robot.*Beep boop.*Nice to meet you"
-            }
-          ]
+          "tests": [{"in": "", "out": "BEEP BOOP.*Hello"}]
         },
         {
           "id": "robot-ask-name",
-          "name": "Teach Your Robot to Ask Questions",
+          "name": "Robot Asks Your Name",
           "guide": "robot_ask_name.md",
           "py": "robot_ask_name.py",
-          "tests": [
-            {
-              "in": "Jack",
-              "out": "friendly robot.*What.*name.*Nice to meet you"
-            }
-          ]
+          "tests": [{"in": "Jack", "out": "name.*Jack"}]
         },
         {
           "id": "robot-remember-name",
-          "name": "Teach Your Robot to Remember Your Name",
+          "name": "Robot Remembers Your Name",
           "guide": "robot_remember_name.md",
           "py": "robot_remember_name.py",
-          "tests": [
-            {
-              "in": "Rose",
-              "out": "Hello.*Rose.*remember.*Rose.*Goodbye.*Rose"
-            }
-          ]
+          "tests": [{"in": "Rose", "out": "Rose.*Rose"}]
         },
         {
           "id": "robot-conversation-challenge",
-          "name": "Robot Conversation Challenge",
+          "name": "Full Robot Conversation Challenge",
           "guide": "robot_conversation_challenge.md",
           "py": "robot_conversation_challenge.py",
-          "tests": [
-            {
-              "in": ["Jack", "10"],
-              "out": "Super Robot.*name.*Hello.*Jack"
-            }
-          ]
+          "tests": [{"in": ["Jack", "10", "blue"], "out": "Jack.*10.*blue"}]
+        }
+      ]
+    },
+    {
+      "id": "string-indexing",
+      "name": "String Indexing",
+      "description": "Learn to grab individual letters from words!",
+      "lessons": [
+        {
+          "id": "string-indexing",
+          "name": "Letters in Words",
+          "guide": "string_indexing.md",
+          "py": "string_indexing.py",
+          "tests": [{"in": "", "out": "Initials"}]
         }
       ]
     },
     {
       "id": "magic-8-ball",
       "name": "Magic 8-Ball",
-      "description": "Create a fortune-telling game!",
-      "badge": "🎱",
+      "description": "Create a fortune teller that gives random answers!",
       "lessons": [
         {
           "id": "magic8-simple",
-          "name": "Your First Magic 8-Ball",
+          "name": "Simple Magic 8-Ball",
           "guide": "magic8_simple.md",
           "py": "magic8_simple.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "Magic 8-Ball says"
-            }
-          ]
+          "tests": [{"in": "", "out": "Magic 8-Ball says"}]
         },
         {
           "id": "magic8-question",
           "name": "Ask the Magic 8-Ball a Question",
           "guide": "magic8_question.md",
           "py": "magic8_question.py",
-          "tests": [
-            {
-              "in": "Will I have a good day?",
-              "out": "Magic 8-Ball says"
-            }
-          ]
+          "tests": [{"in": "Will it rain?", "out": "Magic 8-Ball says"}]
         },
         {
           "id": "magic8-more-fortunes",
-          "name": "Add More Fortunes to Your Magic 8-Ball",
+          "name": "Add More Fortunes",
           "guide": "magic8_more_fortunes.md",
           "py": "magic8_more_fortunes.py",
-          "tests": [
-            {
-              "in": "Will it rain tomorrow?",
-              "out": "Magic 8-Ball says"
-            }
-          ]
+          "tests": [{"in": "Will it rain tomorrow?", "out": "Magic 8-Ball says"}]
         },
         {
           "id": "magic8-challenge",
           "name": "Fortune Categories Challenge",
           "guide": "magic8_challenge.md",
           "py": "magic8_challenge.py",
-          "tests": [
-            {
-              "in": ["yes", "Will I win?"],
-              "out": "Magic 8-Ball says"
-            }
-          ]
+          "tests": [{"in": ["yes", "Will I win?"], "out": "Magic 8-Ball says"}]
         }
       ]
     },
     {
-      "id": "turtle-art",
-      "name": "Turtle Art",
-      "description": "Draw shapes and houses with code!",
-      "badge": "🐢",
+      "id": "loop-basics",
+      "name": "Loop Basics",
+      "description": "Learn to make Python repeat actions automatically!",
+      "lessons": [
+        {
+          "id": "loop-repeat",
+          "name": "Repeat Yourself with Loops",
+          "guide": "loop_repeat.md",
+          "py": "loop_repeat.py",
+          "tests": [{"in": "", "out": "Hello.*Hello.*Hello"}]
+        },
+        {
+          "id": "loop-count",
+          "name": "Count with Python",
+          "guide": "loop_count.md",
+          "py": "loop_count.py",
+          "tests": [{"in": "", "out": "1.*2.*3.*BLAST OFF"}]
+        }
+      ]
+    },
+    {
+      "id": "list-operations",
+      "name": "List Operations",
+      "description": "Master list superpowers - add, remove, and modify!",
+      "lessons": [
+        {
+          "id": "list-operations",
+          "name": "List Superpowers",
+          "guide": "list_operations.md",
+          "py": "list_operations.py",
+          "tests": [{"in": "", "out": "append.*remove"}]
+        }
+      ]
+    },
+    {
+      "id": "turtle-house",
+      "name": "Turtle Dream House",
+      "description": "Draw your dream house with turtle graphics!",
       "lessons": [
         {
           "id": "turtle-square",
           "name": "Draw a Perfect Square with Turtle",
           "guide": "turtle_square.md",
           "py": "turtle_square.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "turtle"
-            }
-          ]
+          "tests": [{"in": "", "out": "turtle"}]
         },
         {
           "id": "turtle-roof",
           "name": "Add a Triangle Roof",
           "guide": "turtle_roof.md",
           "py": "turtle_roof.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "turtle"
-            }
-          ]
+          "tests": [{"in": "", "out": "turtle"}]
         },
         {
           "id": "turtle-door",
           "name": "Add a Door to Your House",
           "guide": "turtle_door.md",
           "py": "turtle_door.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "turtle"
-            }
-          ]
+          "tests": [{"in": "", "out": "turtle"}]
         },
         {
           "id": "turtle-windows",
           "name": "Add Windows Using a Loop",
           "guide": "turtle_windows.md",
           "py": "turtle_windows.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "turtle"
-            }
-          ]
+          "tests": [{"in": "", "out": "turtle"}]
         },
         {
           "id": "turtle-house-challenge",
           "name": "Dream House Garden Challenge",
           "guide": "turtle_house_challenge.md",
           "py": "turtle_house_challenge.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "turtle"
-            }
-          ]
+          "tests": [{"in": "", "out": "turtle"}]
+        }
+      ]
+    },
+    {
+      "id": "debugging",
+      "name": "Debugging Skills",
+      "description": "Learn to find and fix errors like a code detective!",
+      "lessons": [
+        {
+          "id": "debug-detective",
+          "name": "Be a Code Detective",
+          "guide": "debug_detective.md",
+          "py": "debug_detective.py",
+          "tests": [{"in": "", "out": "DEBUG"}]
         }
       ]
     },
     {
       "id": "rocket-countdown",
-      "name": "Rocket Countdown",
-      "description": "Launch a rocket with loops!",
-      "badge": "🚀",
+      "name": "Rocket Launch Countdown",
+      "description": "Create an exciting countdown to blast off!",
       "lessons": [
         {
           "id": "countdown-simple",
           "name": "Rocket Launch Countdown",
           "guide": "countdown_simple.md",
           "py": "countdown_simple.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "10.*9.*8.*BLAST OFF"
-            }
-          ]
+          "tests": [{"in": "", "out": "10.*9.*8.*BLAST OFF"}]
         },
         {
           "id": "countdown-rocket",
           "name": "Add Rocket to Your Countdown",
           "guide": "countdown_rocket.md",
           "py": "countdown_rocket.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "T-minus.*BLAST OFF"
-            }
-          ]
+          "tests": [{"in": "", "out": "T-minus.*BLAST OFF"}]
         },
         {
           "id": "countdown-effects",
           "name": "Add Sound Effects to Your Rocket",
           "guide": "countdown_effects.md",
           "py": "countdown_effects.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "RUMBLE.*WHOOOOSH.*BLAST OFF"
-            }
-          ]
+          "tests": [{"in": "", "out": "RUMBLE.*WHOOOOSH.*BLAST OFF"}]
         },
         {
           "id": "countdown-challenge",
           "name": "Custom Countdown Challenge",
           "guide": "countdown_challenge.md",
           "py": "countdown_challenge.py",
-          "tests": [
-            {
-              "in": "5",
-              "out": "5.*4.*3.*2.*1.*BLAST OFF"
-            }
-          ]
+          "tests": [{"in": "5", "out": "5.*4.*3.*2.*1.*BLAST OFF"}]
+        }
+      ]
+    },
+    {
+      "id": "input-validation",
+      "name": "Input Validation",
+      "description": "Make programs that handle mistakes gracefully!",
+      "lessons": [
+        {
+          "id": "input-validation",
+          "name": "Handle Mistakes Like a Pro",
+          "guide": "input_validation.md",
+          "py": "input_validation.py",
+          "tests": [{"in": "25", "out": "25 years old"}]
         }
       ]
     },
     {
       "id": "superhero-generator",
       "name": "Superhero Generator",
-      "description": "Create your own superhero identity!",
-      "badge": "🦸",
+      "description": "Generate random superhero names and powers!",
       "lessons": [
         {
           "id": "superhero-name",
           "name": "Generate Your Superhero Name",
           "guide": "superhero_name.md",
           "py": "superhero_name.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "SUPERHERO NAME GENERATOR.*superhero name is"
-            }
-          ]
+          "tests": [{"in": "", "out": "SUPERHERO NAME GENERATOR.*superhero name is"}]
         },
         {
           "id": "superhero-power",
           "name": "Add a Superpower",
           "guide": "superhero_power.md",
           "py": "superhero_power.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "Name:.*Power:"
-            }
-          ]
+          "tests": [{"in": "", "out": "Name:.*Power:"}]
         },
         {
           "id": "superhero-logo",
           "name": "Create a Superhero Logo",
           "guide": "superhero_logo.md",
           "py": "superhero_logo.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "HERO!.*Name:.*Power:"
-            }
-          ]
+          "tests": [{"in": "", "out": "HERO!.*Name:.*Power:"}]
         },
         {
           "id": "superhero-challenge",
           "name": "Complete Superhero Profile Challenge",
           "guide": "superhero_challenge.md",
           "py": "superhero_challenge.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "SUPERHERO PROFILE.*Name:.*Power:"
-            }
-          ]
+          "tests": [{"in": "", "out": "SUPERHERO PROFILE.*Name:.*Power:"}]
         }
       ]
     },
     {
-      "id": "times-table-fireworks",
-      "name": "Times Table Fireworks",
-      "description": "Master math with explosive fun!",
-      "badge": "🎆",
+      "id": "times-table",
+      "name": "Times-Table Victory",
+      "description": "Make learning math fun with victory fireworks!",
       "lessons": [
         {
           "id": "timestable-simple",
           "name": "Times-Table Victory Fireworks",
           "guide": "timestable_simple.md",
           "py": "timestable_simple.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "5 x 1 = 5.*5 x 10 = 50"
-            }
-          ]
+          "tests": [{"in": "", "out": "5 x 1 = 5.*5 x 10 = 50"}]
         },
         {
           "id": "timestable-fireworks",
           "name": "Add Victory Fireworks",
           "guide": "timestable_fireworks.md",
           "py": "timestable_fireworks.py",
-          "tests": [
-            {
-              "in": "",
-              "out": "5 x.*CORRECT.*VICTORY"
-            }
-          ]
+          "tests": [{"in": "", "out": "5 x.*CORRECT.*VICTORY"}]
         },
         {
           "id": "timestable-choice",
           "name": "Choose Your Times Table",
           "guide": "timestable_choice.md",
           "py": "timestable_choice.py",
-          "tests": [
-            {
-              "in": "7",
-              "out": "7 x 1 = 7.*7 x 10 = 70"
-            }
-          ]
+          "tests": [{"in": "7", "out": "7 x 1 = 7.*7 x 10 = 70"}]
         },
         {
           "id": "timestable-challenge",
           "name": "Multiple Times Tables Challenge",
           "guide": "timestable_challenge.md",
           "py": "timestable_challenge.py",
-          "tests": [
-            {
-              "in": ["2", "3", "4"],
-              "out": "3 x.*4 x"
-            }
-          ]
+          "tests": [{"in": ["2", "3", "4"], "out": "3 x.*4 x"}]
+        }
+      ]
+    },
+    {
+      "id": "loop-practice",
+      "name": "Loop Practice",
+      "description": "Master loops with fun challenges!",
+      "lessons": [
+        {
+          "id": "practice-loops",
+          "name": "Loop Master Challenge",
+          "guide": "practice_loops.md",
+          "py": "practice_loops.py",
+          "tests": [{"in": "5", "out": "BLAST OFF"}]
         }
       ]
     },
@@ -411,67 +350,279 @@
       "id": "adventure-story",
       "name": "Adventure Story",
       "description": "Write an interactive story with choices!",
-      "badge": "🗺️",
       "lessons": [
         {
           "id": "adventure-simple",
           "name": "Your First Adventure Story",
           "guide": "adventure_simple.md",
           "py": "adventure_simple.py",
-          "tests": [
-            {
-              "in": "left",
-              "out": "chose the left path.*treasure"
-            }
-          ]
+          "tests": [{"in": "left", "out": "chose the left path.*treasure"}]
         },
         {
           "id": "adventure-second-choice",
           "name": "Add a Second Choice",
           "guide": "adventure_second_choice.md",
           "py": "adventure_second_choice.py",
-          "tests": [
-            {
-              "in": ["left", "open"],
-              "out": "opened the door.*treasure"
-            }
-          ]
+          "tests": [{"in": ["left", "open"], "out": "opened the door.*treasure"}]
         },
         {
           "id": "adventure-endings",
           "name": "Add Different Story Endings",
           "guide": "adventure_endings.md",
           "py": "adventure_endings.py",
-          "tests": [
-            {
-              "in": "enter",
-              "out": "enter.*UP or DOWN"
-            }
-          ]
+          "tests": [{"in": "enter", "out": "enter.*UP or DOWN"}]
         },
         {
           "id": "adventure-character",
           "name": "Add Your Character Name",
           "guide": "adventure_character.md",
           "py": "adventure_character.py",
-          "tests": [
-            {
-              "in": ["Jack", "enter"],
-              "out": "Jack.*enter.*cave"
-            }
-          ]
+          "tests": [{"in": ["Jack", "enter"], "out": "Jack.*enter.*cave"}]
         },
         {
           "id": "adventure-challenge",
           "name": "Create Your Own Adventure Challenge",
           "guide": "adventure_challenge.md",
           "py": "adventure_challenge.py",
-          "tests": [
-            {
-              "in": "Rose",
-              "out": "Rose.*THE END"
-            }
-          ]
+          "tests": [{"in": "Rose", "out": "Rose.*THE END"}]
+        }
+      ]
+    },
+    {
+      "id": "boolean-logic",
+      "name": "Boolean Logic",
+      "description": "Learn to combine conditions with and, or, not!",
+      "lessons": [
+        {
+          "id": "boolean-logic",
+          "name": "True or False",
+          "guide": "boolean_logic.md",
+          "py": "boolean_logic.py",
+          "tests": [{"in": "", "out": "roller coaster"}]
+        }
+      ]
+    },
+    {
+      "id": "string-methods",
+      "name": "String Methods",
+      "description": "Make text matching smarter with string methods!",
+      "lessons": [
+        {
+          "id": "string-methods",
+          "name": "Smart Text Matching",
+          "guide": "string_methods.md",
+          "py": "string_methods.py",
+          "tests": [{"in": "hello", "out": "Hi there"}]
+        }
+      ]
+    },
+    {
+      "id": "condition-practice",
+      "name": "Condition Practice",
+      "description": "Master complex conditional logic!",
+      "lessons": [
+        {
+          "id": "practice-conditions",
+          "name": "Condition Expert Challenge",
+          "guide": "practice_conditions.md",
+          "py": "practice_conditions.py",
+          "tests": [{"in": "95", "out": "Grade: A"}]
+        }
+      ]
+    },
+    {
+      "id": "password-creator",
+      "name": "Password Creator",
+      "description": "Build an unbreakable password generator!",
+      "lessons": [
+        {
+          "id": "password-letters",
+          "name": "Create Random Letter Passwords",
+          "guide": "password_letters.md",
+          "py": "password_letters.py",
+          "tests": [{"in": "", "out": "PASSWORD GENERATOR.*password is"}]
+        },
+        {
+          "id": "password-numbers",
+          "name": "Add Numbers to Your Password",
+          "guide": "password_numbers.md",
+          "py": "password_numbers.py",
+          "tests": [{"in": "", "out": "STRONG PASSWORD.*Length.*8"}]
+        },
+        {
+          "id": "password-special",
+          "name": "Add Special Characters",
+          "guide": "password_special.md",
+          "py": "password_special.py",
+          "tests": [{"in": "", "out": "UNBREAKABLE PASSWORD.*Length.*10"}]
+        },
+        {
+          "id": "password-challenge",
+          "name": "Custom Password Length Challenge",
+          "guide": "password_challenge.md",
+          "py": "password_challenge.py",
+          "tests": [{"in": "12", "out": "12-character password"}]
+        }
+      ]
+    },
+    {
+      "id": "string-practice",
+      "name": "String Practice",
+      "description": "Master string manipulation with challenges!",
+      "lessons": [
+        {
+          "id": "practice-strings",
+          "name": "String Wizard Challenge",
+          "guide": "practice_strings.md",
+          "py": "practice_strings.py",
+          "tests": [{"in": "hello", "out": "olleh"}]
+        }
+      ]
+    },
+    {
+      "id": "rock-paper-scissors",
+      "name": "Rock-Paper-Scissors",
+      "description": "Create a championship game!",
+      "lessons": [
+        {
+          "id": "rps-computer",
+          "name": "Computer Makes a Choice",
+          "guide": "rps_computer.md",
+          "py": "rps_computer.py",
+          "tests": [{"in": "", "out": "Computer chose"}]
+        },
+        {
+          "id": "rps-player",
+          "name": "Player Makes a Choice",
+          "guide": "rps_player.md",
+          "py": "rps_player.py",
+          "tests": [{"in": "rock", "out": "You chose.*rock.*Computer chose"}]
+        },
+        {
+          "id": "rps-winner",
+          "name": "Determine the Winner",
+          "guide": "rps_winner.md",
+          "py": "rps_winner.py",
+          "tests": [{"in": "rock", "out": "You chose.*Computer chose"}]
+        },
+        {
+          "id": "rps-score",
+          "name": "Keep Score",
+          "guide": "rps_score.md",
+          "py": "rps_score.py",
+          "tests": [{"in": "paper", "out": "SCORE.*You:.*Computer:"}]
+        },
+        {
+          "id": "rps-challenge",
+          "name": "Best of 5 Championship Challenge",
+          "guide": "rps_challenge.md",
+          "py": "rps_challenge.py",
+          "tests": [{"in": ["rock", "paper", "scissors", "rock", "paper"], "out": "FINAL RESULTS.*CHAMPION"}]
+        }
+      ]
+    },
+    {
+      "id": "while-loops",
+      "name": "While Loops",
+      "description": "Make programs that keep running until you want to stop!",
+      "lessons": [
+        {
+          "id": "while-loops",
+          "name": "Keep Playing with While Loops",
+          "guide": "while_loops.md",
+          "py": "while_loops.py",
+          "tests": [{"in": ["7", "no"], "out": "Thanks for playing"}]
+        }
+      ]
+    },
+    {
+      "id": "hangman",
+      "name": "Hangman Game",
+      "description": "Build the classic word guessing game!",
+      "lessons": [
+        {
+          "id": "hangman-guess",
+          "name": "Guess a Letter in Hangman",
+          "guide": "hangman_guess.md",
+          "py": "hangman_guess.py",
+          "tests": [{"in": "p", "out": "Guess a letter"}]
+        },
+        {
+          "id": "hangman-check",
+          "name": "Show Correct or Wrong Feedback",
+          "guide": "hangman_check.md",
+          "py": "hangman_check.py",
+          "tests": [{"in": "c", "out": "CORRECT"}]
+        },
+        {
+          "id": "hangman-blanks",
+          "name": "Show Blanks and Reveal Letters",
+          "guide": "hangman_blanks.md",
+          "py": "hangman_blanks.py",
+          "tests": [{"in": "g", "out": "The word:"}]
+        },
+        {
+          "id": "hangman-counter",
+          "name": "Count Wrong Guesses",
+          "guide": "hangman_counter.md",
+          "py": "hangman_counter.py",
+          "tests": [{"in": "x", "out": "Wrong guesses"}]
+        },
+        {
+          "id": "hangman-turtle",
+          "name": "Draw Hangman Stages",
+          "guide": "hangman_turtle.md",
+          "py": "hangman_turtle.py",
+          "tests": [{"in": "c", "out": "------"}]
+        },
+        {
+          "id": "hangman-challenge",
+          "name": "Word Categories Challenge",
+          "guide": "hangman_challenge.md",
+          "py": "hangman_challenge.py",
+          "tests": [{"in": "animals", "out": "chosen a.*word"}]
+        }
+      ]
+    },
+    {
+      "id": "chatbot",
+      "name": "Personal Chatbot",
+      "description": "Create an AI friend that understands you!",
+      "lessons": [
+        {
+          "id": "chatbot-greetings",
+          "name": "Chatbot Responds to Greetings",
+          "guide": "chatbot_greetings.md",
+          "py": "chatbot_greetings.py",
+          "tests": [{"in": "hello", "out": "Hello"}]
+        },
+        {
+          "id": "chatbot-name",
+          "name": "Chatbot Remembers Your Name",
+          "guide": "chatbot_name.md",
+          "py": "chatbot_name.py",
+          "tests": [{"in": ["Jack", "hello"], "out": "Jack"}]
+        },
+        {
+          "id": "chatbot-questions",
+          "name": "Chatbot Answers Questions",
+          "guide": "chatbot_questions.md",
+          "py": "chatbot_questions.py",
+          "tests": [{"in": ["Rose", "how are you"], "out": "great"}]
+        },
+        {
+          "id": "chatbot-jokes",
+          "name": "Chatbot Tells Random Jokes",
+          "guide": "chatbot_jokes.md",
+          "py": "chatbot_jokes.py",
+          "tests": [{"in": ["Jack", "joke"], "out": "Bot:"}]
+        },
+        {
+          "id": "chatbot-challenge",
+          "name": "Mood Detection Challenge",
+          "guide": "chatbot_challenge.md",
+          "py": "chatbot_challenge.py",
+          "tests": [{"in": ["Rose", "I'm sad"], "out": "sorry.*sad"}]
         }
       ]
     }

@@ -39,10 +39,6 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
                       <div className="bg-primary text-primary-foreground px-4 py-1.5 border-2 border-black font-bold text-sm rounded-full shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                         Project {projectIndex + 1}
                       </div>
-                      <div className="bg-yellow-100 px-3 py-1.5 border-2 border-black font-bold text-sm rounded-full shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1.5">
-                        <Trophy className="h-4 w-4" />
-                        {project.badge}
-                      </div>
                     </div>
                     <div>
                       <h2 className="text-2xl font-bold">{project.name}</h2>

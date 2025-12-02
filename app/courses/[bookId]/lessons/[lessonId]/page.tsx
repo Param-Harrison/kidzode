@@ -13,7 +13,6 @@ interface BookData {
     id: string
     name: string
     description: string
-    badge: string
     lessons: Array<{
       id: string
       name: string

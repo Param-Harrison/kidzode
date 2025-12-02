@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Course name"
+    },
+    "id": {
+      "type": "string",
+      "description": "Course ID"
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Project ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "Project name"
+          },
+          "description": {
+            "type": "string",
+            "description": "Project description"
+          },
+          "badge": {
+            "type": "string",
+            "description": "Optional badge for project (for future Reddit-style rewards)"
+          },
+          "lessons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Lesson ID"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "Lesson name"
+                },
+                "guide": {
+                  "type": "string",
+                  "description": "Markdown guide file"
+                },
+                "py": {
+                  "type": "string",
+                  "description": "Python code file"
+                },
+                "tests": {
+                  "type": "array",
+                  "description": "Test cases for the lesson",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "in": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "description": "Single input string"
+                          },
+                          {
+                            "type": "array",
+                            "description": "Multiple inputs as array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        ]
+                      },
+                      "out": {
+                        "type": "string",
+                        "description": "Expected output pattern (supports regex)"
+                      }
+                    },
+                    "required": ["in", "out"]
+                  }
+                }
+              },
+              "required": ["id", "name", "guide", "py"]
+            }
+          }
+        },
+        "required": ["id", "name", "description", "lessons"]
+      }
+    }
+  },
+  "required": ["name", "id", "projects"]
+}
