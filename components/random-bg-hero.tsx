@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 
 const backgrounds = [
-  "bg-yellow-300"
+  "bg-primary"
 ]
 
 export function RandomBgHero({ children }: { children: React.ReactNode }) {

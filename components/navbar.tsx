@@ -44,7 +44,7 @@ export function Navbar() {
             href="/courses"
             className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
               isActive('/courses')
-                ? 'bg-primary text-primary-foreground'
+                ? 'bg-primary text-primary-foreground border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
                 : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'
             }`}
           >
@@ -54,7 +54,7 @@ export function Navbar() {
             href="/pricing"
             className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
               isActive('/pricing')
-                ? 'bg-primary text-primary-foreground'
+                ? 'bg-primary text-primary-foreground border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
                 : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'
             }`}
           >
@@ -68,11 +68,13 @@ export function Navbar() {
             <>
               {/* Dashboard link */}
               <Link href="/dashboard" className="hidden md:block">
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="sm"
-                  className={`font-semibold ${
-                    isActive('/dashboard') ? 'bg-muted' : ''
+                  className={`font-semibold rounded-lg transition-all duration-200 ${
+                    isActive('/dashboard')
+                      ? 'bg-primary text-primary-foreground border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
+                      : 'hover:bg-muted/50'
                   }`}
                 >
                   Dashboard
@@ -91,11 +93,11 @@ export function Navbar() {
                 </div>
                 
                 <form action="/api/auth/signout" method="POST">
-                  <Button 
+                  <Button
                     type="submit"
-                    variant="ghost" 
+                    variant="ghost"
                     size="sm"
-                    className="text-muted-foreground hover:text-destructive"
+                    className="text-muted-foreground hover:text-destructive rounded-lg transition-all duration-200 hover:bg-muted/50"
                   >
                     <LogOut className="w-4 h-4" />
                     <span className="ml-2 hidden sm:inline">Sign Out</span>
