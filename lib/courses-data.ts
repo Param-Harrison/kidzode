@@ -5,7 +5,8 @@ export const courses = [
     tags: ["Ages 8-10", "Beginner", "12 Real Projects", "Logical Thinking Foundation"],
     color: "primary" as const,
     slug: "pixel-heroes",
-    badge: "Rainbow Star Badge"
+    badge: "Rainbow Star Badge",
+    isPublished: true,
   },
   {
     title: "Code Ninjas",
@@ -13,7 +14,8 @@ export const courses = [
     tags: ["Ages 9-11", "Intermediate", "12 Building Projects", "Analytical Brain Development"],
     color: "secondary" as const,
     slug: "code-ninjas",
-    badge: "Ninja Headband"
+    badge: "Ninja Headband",
+    isPublished: false,
   },
   {
     title: "Future Builders",
@@ -21,6 +23,7 @@ export const courses = [
     tags: ["Ages 11-13", "Advanced", "12 Advanced Tools", "Life Skills Through Code"],
     color: "accent" as const,
     slug: "future-builders",
-    badge: "Glowing Crown"
+    badge: "Glowing Crown",
+    isPublished: false,
   }
 ]

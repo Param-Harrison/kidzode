@@ -17,7 +17,7 @@ export function Navbar() {
 
   if (isLoading) {
     return (
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background">
         <div className="container max-w-7xl mx-auto flex h-20 items-center px-6">
           <div className="flex-1">
             <Logo size="default" />
@@ -31,7 +31,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background">
       <div className="container max-w-7xl mx-auto flex h-20 items-center px-6">
         {/* Logo */}
         <div className="flex-1">

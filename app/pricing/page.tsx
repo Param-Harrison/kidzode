@@ -72,40 +72,6 @@ const pricingPlans = [
       'Priority support',
     ],
   },
-  {
-    name: 'Homeschool',
-    description: 'For small classrooms',
-    studentLimit: 'Per 10 students',
-    tiers: [
-      {
-        type: 'Monthly',
-        price: 25,
-        period: '/month/10 students',
-        href: '/sign-up?tier=homeschool&billing=monthly',
-      },
-      {
-        type: 'Yearly',
-        price: 249,
-        period: '/year/10 students',
-        savings: 'Save $51',
-        href: '/sign-up?tier=homeschool&billing=yearly',
-      },
-      {
-        type: 'Lifetime',
-        price: 399,
-        period: 'one-time/10 students',
-        href: '/sign-up?tier=homeschool&billing=lifetime',
-        badge: 'Best Value',
-      },
-    ],
-    features: [
-      'Everything in Family',
-      'Metered billing (every 10 students)',
-      'Classroom management tools',
-      'Bulk student enrollment',
-      'Advanced analytics',
-    ],
-  },
 ];
 
 export default function PricingPage() {
@@ -226,6 +192,82 @@ export default function PricingPage() {
             </div>
           </section>
         ))}
+
+        {/* Schools & Districts Section */}
+        <section className="py-16 md:py-24 border-b-2 border-black bg-primary">
+          <div className="container max-w-6xl mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6">
+                Schools & Districts
+              </h2>
+              <p className="text-xl md:text-2xl font-bold max-w-3xl mx-auto mb-8">
+                Custom pricing solutions for educational institutions. Volume discounts available.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white border-4 border-black p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <h3 className="text-2xl font-black uppercase mb-6">What's Included</h3>
+                <ul className="space-y-3 text-sm font-medium">
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>Unlimited student accounts</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>Teacher dashboard with progress tracking</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>Curriculum alignment tools</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>Professional development for teachers</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>Dedicated account manager</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>Priority technical support</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>Custom reporting and analytics</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>SSO integration available</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-white border-4 border-black p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-black uppercase mb-6">Request a Quote</h3>
+                  <p className="font-medium mb-6">
+                    Get custom pricing based on your school or district's specific needs. We offer flexible solutions for institutions of all sizes.
+                  </p>
+                  <div className="space-y-3 text-sm font-medium mb-8">
+                    <p>• Volume discounts for larger districts</p>
+                    <p>• Flexible billing options</p>
+                    <p>• Free pilot programs available</p>
+                    <p>• Grant writing assistance</p>
+                  </div>
+                </div>
+                
+                <Button
+                  variant="neo"
+                  className="w-full py-3 text-sm font-bold bg-green-400 text-black border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
+                >
+                  Request a Quote
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* FAQ / Info Section */}
         <section className="py-16 md:py-24 bg-black text-white">

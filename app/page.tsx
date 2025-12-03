@@ -177,7 +177,7 @@ export default function Home() {
                 <div className="inline-block bg-white border-4 border-black shadow-[6px_6px_0px_0px_#000] transform rotate-3 mb-6">
                   <div className="p-8">
                     <div className="text-6xl mb-4">👨‍💻</div>
-                    <div className="text-4xl font-black">6000+</div>
+                    <div className="text-4xl font-black">1240+</div>
                     <div className="text-xl font-bold">Young Coders</div>
                   </div>
                 </div>

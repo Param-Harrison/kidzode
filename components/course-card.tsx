@@ -7,10 +7,11 @@ interface CourseCardProps {
   subtitle: string
   tags: string[]
   color?: "primary" | "secondary" | "accent"
-  slug: string
+  slug: string,
+  isPublished: boolean
 }
 
-export function CourseCard({ title, subtitle, tags, color = "accent", slug }: CourseCardProps) {
+export function CourseCard({ title, subtitle, tags, color = "accent", slug, isPublished }: CourseCardProps) {
   const bgColors = {
     primary: "bg-primary",
     secondary: "bg-secondary",
@@ -36,7 +37,7 @@ export function CourseCard({ title, subtitle, tags, color = "accent", slug }: Co
         </div>
         <Link href={`/courses/${slug}`} className="w-full mt-auto">
           <Button variant="neo" className="w-full py-4 text-lg h-auto font-bold bg-primary text-black">
-            Start Learning
+            {isPublished ? "Start Learning": "Join the waitlist"}
           </Button>
         </Link>
       </div>
