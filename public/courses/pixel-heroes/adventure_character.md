@@ -1,10 +1,6 @@
 # Add Character Name
 
-Make the story use YOUR name!
-
-## What to Do
-1. Press Run
-2. Enter your name and make choices!
+Make the story use YOUR name! Press Run, enter your name, and watch it appear throughout the adventure!
 
 ```python
 print("=== THE HERO'S QUEST ===")
@@ -48,16 +44,6 @@ else:
     print("MAGICAL VICTORY!")
 ```
 
-## Remember
-- Variables make stories personal
-- Use f-strings: `f"{hero_name} does something"`
-- Name appears everywhere you use the variable
+**The magic:** Variables make stories personal! Use f-strings like `f"{hero_name} does something"` and the name appears everywhere you use the variable. Don't forget the `f` before the quotes!
 
-## Try This
-Ask for a friend's name too!
-
-## If Stuck
-- Use `{hero_name}` inside f-strings
-- Don't forget the `f` before quotes
-
-You did it! ⭐
+Try asking for a friend's name too - make it a team adventure!

@@ -1,11 +1,6 @@
 # Challenge: Fortune Categories
 
-Make three lists: yes, no, and maybe fortunes!
-
-## What to Do
-1. Create three lists
-2. Ask what type they want
-3. Pick from the right list!
+Challenge time! Make three lists: one for yes answers, one for no, and one for maybe. Then let the user choose which type they want!
 
 ```python
 import random
@@ -28,16 +23,6 @@ print("The Magic 8-Ball says...")
 # Add your code here!
 ```
 
-## Remember
-- Use `if/elif/else` to choose
-- `==` checks if equal
-- Type exactly "yes", "no", or "maybe"
+**The trick:** Use `if/elif/else` to check what the user typed. If they type "yes", pick from `yes_fortunes`. If "no", pick from `no_fortunes`. Remember: `==` checks if things are equal!
 
-## Try This
-Add a "funny" category!
-
-## If Stuck
-- Check your `if` statements
-- Make sure all lists exist
-
-**CHALLENGE COMPLETE!** 🎉
+Want to make it harder? Add a "funny" category with silly answers!

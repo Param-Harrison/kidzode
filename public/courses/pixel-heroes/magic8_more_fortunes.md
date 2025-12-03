@@ -1,10 +1,6 @@
 # Add More Fortunes
 
-Make your Magic 8-Ball have more answers!
-
-## What to Do
-1. Press Run
-2. Run it many times to see different answers!
+Give your Magic 8-Ball more answers! Press Run, then run it many times to see all the different answers.
 
 ```python
 import random
@@ -29,16 +25,6 @@ print("The Magic 8-Ball says...")
 print(answer)
 ```
 
-## Remember
-- Lists can have many items
-- Put each on its own line
-- Add commas between items
+**Tip:** Lists can have as many items as you want! Put each on its own line and add commas between them. This makes it easier to read and add more.
 
-## Try This
-Add your own fortunes!
-
-## If Stuck
-- Check commas between items
-- Put quotes around each fortune
-
-You did it! ⭐
+Add your own fortunes - make them funny, serious, or silly!

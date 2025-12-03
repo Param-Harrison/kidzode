@@ -1,18 +1,14 @@
 # Handle User Mistakes
 
-Make programs that don't crash when users type wrong things!
+Sometimes people type the wrong thing. Let's make our programs handle mistakes nicely instead of crashing!
 
-## The Problem
-
-This crashes if you type "hello":
+**The Problem:** This crashes if someone types "hello" instead of a number:
 ```python
 age = input("How old are you? ")
 age_number = int(age)  # CRASH!
 ```
 
-## The Solution
-
-Check first!
+**The Solution:** Check first, then convert!
 
 ```python
 age = input("How old are you? ")
@@ -25,16 +21,6 @@ else:
     print("Oops! Please enter a number!")
 ```
 
-## Remember
-- `.isdigit()` checks if text is numbers only
-- Check before converting with `int()`
-- Give helpful error messages
+**How it works:** `.isdigit()` checks if the text is only numbers. If yes, we convert it. If no, we show a friendly message instead of crashing!
 
-## Try This
-Make a number guessing game that checks input!
-
-## If Stuck
-- Always check with `.isdigit()` first
-- Be friendly in error messages
-
-You did it! ⭐
+Try making a number guessing game that checks if the input is a number before guessing!

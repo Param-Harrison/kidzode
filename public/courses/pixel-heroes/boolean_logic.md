@@ -1,10 +1,6 @@
 # Combine Conditions
 
-Check multiple things at once!
-
-## What to Do
-1. Press Run
-2. See how `and`, `or`, and `not` work!
+Want to check multiple things at once? Use `and`, `or`, and `not`! Press Run to see how they work.
 
 ```python
 # AND - both must be true
@@ -34,16 +30,6 @@ else:
     print("Let's play inside!")
 ```
 
-## Remember
-- `and` = BOTH must be true
-- `or` = AT LEAST ONE must be true
-- `not` = the OPPOSITE
+**The rules:** `and` means BOTH must be true. `or` means AT LEAST ONE must be true. `not` means the OPPOSITE (true becomes false, false becomes true).
 
-## Try This
-Make a game entrance checker!
-
-## If Stuck
-- Use `and` and `or` (words, not symbols!)
-- Use parentheses for complex logic
-
-You did it! ⭐
+Try making a game entrance checker - check age AND ticket, or maybe VIP status!

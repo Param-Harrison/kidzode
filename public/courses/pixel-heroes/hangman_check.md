@@ -1,10 +1,6 @@
 # Show Feedback
 
-Add helpful feedback messages for guesses!
-
-## What to Do
-1. Press Run
-2. Try correct and wrong guesses!
+Add helpful feedback messages to make your game more fun! Press Run and try correct and wrong guesses - see the feedback!
 
 ```python
 print("=== HANGMAN GAME ===")
@@ -28,16 +24,6 @@ else:
     print("Try again!")
 ```
 
-## Remember
-- Good feedback makes games fun
-- Print multiple messages for clarity
-- "CORRECT!" and "WRONG!" are easy to see
+**Why it matters:** Good feedback makes games fun! Print multiple messages for clarity. "CORRECT!" and "WRONG!" are easy to see and understand.
 
-## Try This
-Add encouraging messages like "Keep going!"
-
-## If Stuck
-- Add more `print()` statements
-- Try letters in "coding" (c, o, d, i, n, g)
-
-You did it! ⭐
+Try adding encouraging messages like "Keep going!" or "You're doing great!" - make it more fun!

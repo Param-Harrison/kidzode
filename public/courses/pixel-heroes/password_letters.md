@@ -1,10 +1,6 @@
 # Random Letter Passwords
 
-Generate a password with 6 random letters!
-
-## What to Do
-1. Press Run
-2. Run again for a different password!
+Create a password generator that makes random passwords! Press Run, then run it again - you'll get a different password each time!
 
 ```python
 import random
@@ -24,17 +20,6 @@ print()
 print(f"Your password is: {password}")
 ```
 
-## Remember
-- `letters` has all letters (uppercase and lowercase)
-- `random.choice(letters)` picks one random letter
-- Start with empty password: `password = ""`
-- Each loop adds one letter
+**The trick:** Start with an empty password `password = ""`. Each time through the loop, pick a random letter and add it to the password. `random.choice(letters)` picks one random letter from all the letters.
 
-## Try This
-Change `range(6)` to `range(8)` for 8 letters!
-
-## If Stuck
-- Make sure `import random` is at top
-- Check the number in `range(6)`
-
-You did it! ⭐
+Try changing `range(6)` to `range(8)` for 8 letters, or `range(12)` for a super long password!

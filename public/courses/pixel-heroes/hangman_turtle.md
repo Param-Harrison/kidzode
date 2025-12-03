@@ -1,10 +1,6 @@
 # Draw Hangman Stages
 
-Display hangman stages using ASCII art!
-
-## What to Do
-1. Press Run
-2. Make wrong guesses to see the stages!
+Display hangman stages using ASCII art! Press Run and make wrong guesses - watch the hangman drawing appear!
 
 ```python
 print("=== HANGMAN GAME ===")
@@ -114,16 +110,6 @@ else:
         print(f"The word was: {secret_word}")
 ```
 
-## Remember
-- `stages` is a list of ASCII art strings
-- `stages[wrong_guesses]` shows the current stage
-- Stage 0 is empty, stage 6 is complete
+**The magic:** `stages` is a list of ASCII art strings. `stages[wrong_guesses]` shows the current stage. Stage 0 is empty, stage 6 is complete!
 
-## Try This
-Design your own hangman stages!
-
-## If Stuck
-- Make sure you have `print(stages[wrong_guesses])`
-- Check that `wrong_guesses` doesn't exceed 6
-
-You did it! ⭐
+Try designing your own hangman stages - make them fun or scary!

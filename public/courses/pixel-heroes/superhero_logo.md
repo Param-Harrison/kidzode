@@ -1,10 +1,6 @@
 # Create a Logo
 
-Add an ASCII art logo to your superhero!
-
-## What to Do
-1. Press Run
-2. See the logo and profile!
+Add an ASCII art logo to your superhero! Press Run and see the logo and complete profile!
 
 ```python
 import random
@@ -45,16 +41,6 @@ print()
 print(f"Beware villains! {superhero_name} {power}!")
 ```
 
-## Remember
-- Triple quotes `"""` make multi-line text
-- ASCII art uses keyboard characters
-- Design your own logo!
+**The trick:** Triple quotes `"""` make multi-line text - perfect for ASCII art! ASCII art uses keyboard characters to make pictures. Design your own logo!
 
-## Try This
-Use different characters like `#`, `*`, `=`, or `+`!
-
-## If Stuck
-- Use THREE quotes: `"""`
-- Keep same number of characters per line
-
-You did it! ⭐
+Try using different characters like `#`, `*`, `=`, or `+` - make it unique!

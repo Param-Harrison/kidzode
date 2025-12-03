@@ -16,16 +16,22 @@ interface BookData {
     lessons: Array<{
       id: string
       name: string
+      type?: 'lesson' | 'challenge'
       guide: string
       py: string
+      hints?: string
+      answer?: string
       tests?: Array<{ in: string | string[]; out: string | any[] }>
     }>
   }>
   children?: Array<{
     id: string
     name: string
+    type?: 'lesson' | 'challenge'
     guide: string
     py: string
+    hints?: string
+    answer?: string
     tests?: Array<{ in: string | string[]; out: string | any[] }>
   }>
 }
@@ -44,6 +50,9 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
   const [code, setCode] = useState("")
   const [starterCode, setStarterCode] = useState("") // Original starter code from .py file
   const [tests, setTests] = useState<Array<{ in: string | string[]; out: string | any[] }>>([])
+  const [hints, setHints] = useState<string>("")
+  const [answer, setAnswer] = useState<string>("")
+  const [lessonType, setLessonType] = useState<'lesson' | 'challenge' | undefined>(undefined)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [progress, setProgress] = useState<LessonProgress | null>(null)
@@ -148,6 +157,38 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
 
         setCode(savedCode)
         setTests(lesson.tests || [])
+        setLessonType(lesson.type)
+
+        // Load hints if available
+        if (lesson.hints) {
+          try {
+            const hintsRes = await fetch(`/courses/${bookId}/${lesson.hints}`)
+            if (hintsRes.ok) {
+              const hintsText = await hintsRes.text()
+              setHints(hintsText)
+            }
+          } catch (err) {
+            console.error('Failed to load hints:', err)
+          }
+        } else {
+          setHints("")
+        }
+
+        // Load answer if available
+        if (lesson.answer) {
+          try {
+            const answerRes = await fetch(`/courses/${bookId}/${lesson.answer}`)
+            if (answerRes.ok) {
+              const answerText = await answerRes.text()
+              setAnswer(answerText)
+            }
+          } catch (err) {
+            console.error('Failed to load answer:', err)
+          }
+        } else {
+          setAnswer("")
+        }
+
         setLoading(false)
       } catch (error) {
         console.error("Failed to load lesson:", error)
@@ -276,6 +317,9 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
       starterCode={starterCode}
       guide={guide}
       tests={tests}
+      hints={hints}
+      answer={answer}
+      lessonType={lessonType}
       onCodeChange={handleCodeChange}
       onComplete={handleLessonComplete}
       bookId={bookId}

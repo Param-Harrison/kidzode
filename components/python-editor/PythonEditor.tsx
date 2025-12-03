@@ -8,15 +8,21 @@ import { usePyodide, TestResult } from "@/hooks/usePyodide"
 import { Console } from "./Console"
 import { GuideViewer } from "./GuideViewer"
 import { TestResults } from "./TestResults"
+import { HintsPanel } from "./HintsPanel"
+import { AnswerPanel } from "./AnswerPanel"
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels"
 import Link from "next/link"
 import confetti from "canvas-confetti"
+import { Lightbulb, FileText } from "lucide-react"
 
 interface PythonEditorProps {
   initialCode: string
   starterCode?: string // Original starter code from .py file (for reset)
   guide: string
   tests?: Array<{ in: string | string[]; out: string | any[] }>
+  hints?: string // Hints markdown content
+  answer?: string // Answer markdown content
+  lessonType?: 'lesson' | 'challenge'
   onCodeChange?: (code: string) => void
   onComplete?: () => void
   bookId: string
@@ -31,6 +37,9 @@ export function PythonEditor({
   starterCode: starterCodeProp,
   guide, 
   tests = [], 
+  hints,
+  answer,
+  lessonType,
   onCodeChange, 
   onComplete,
   bookId,
@@ -49,6 +58,29 @@ export function PythonEditor({
   const { status, output, runCode, runTests, clearOutput, awaitingInput, handleInput } = usePyodide()
 
   const [isVertical, setIsVertical] = useState(false)
+
+  // Hints and answer state
+  const [hintsArray, setHintsArray] = useState<string[]>([])
+  const [showHintsPanel, setShowHintsPanel] = useState(false)
+  const [showAnswerPanel, setShowAnswerPanel] = useState(false)
+
+  // Parse hints when they change
+  useEffect(() => {
+    if (hints) {
+      // Split by --- delimiter (with optional whitespace)
+      const parsedHints = hints.split(/---+/).map(h => h.trim()).filter(h => h.length > 0)
+      setHintsArray(parsedHints)
+    } else {
+      setHintsArray([])
+    }
+    // Reset hints panel when hints change
+    setShowHintsPanel(false)
+  }, [hints])
+
+  // Reset answer panel when answer changes
+  useEffect(() => {
+    setShowAnswerPanel(false)
+  }, [answer])
 
   useEffect(() => {
     const checkSize = () => {
@@ -119,6 +151,9 @@ export function PythonEditor({
     setCode(starterCode)
     clearOutput()
     setTestResults([])
+    // Reset hints/answer panels
+    setShowHintsPanel(false)
+    setShowAnswerPanel(false)
   }
 
   const isLoading = status === 'loading'
@@ -155,8 +190,16 @@ export function PythonEditor({
           )}
         </div>
         
-        {/* Right side: Run, Test, Reset */}
+        {/* Right side: Completion Status, Run, Test, Reset, Hints, Answer */}
         <div className="flex items-center gap-3">
+          {/* Completion Status Indicator */}
+          {progress === 'completed' && (
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-green-100 border-2 border-green-600 rounded-lg">
+              <CheckCircle className="h-4 w-4 text-green-600" />
+              <span className="text-xs font-bold text-green-900">Completed</span>
+            </div>
+          )}
+          
           <Button
             onClick={handleRun}
             disabled={isLoading || isRunning}
@@ -182,6 +225,31 @@ export function PythonEditor({
             >
               <CheckCircle className="h-4 w-4" />
               Test
+            </Button>
+          )}
+
+          {/* Hints and Answer buttons - only for challenges */}
+          {lessonType === 'challenge' && hintsArray.length > 0 && (
+            <Button
+              onClick={() => setShowHintsPanel(true)}
+              variant="outline"
+              size="sm"
+              className="gap-2 shadow-sm border-yellow-400 hover:bg-yellow-50"
+            >
+              <Lightbulb className="h-4 w-4" />
+              Hint
+            </Button>
+          )}
+
+          {lessonType === 'challenge' && answer && (
+            <Button
+              onClick={() => setShowAnswerPanel(true)}
+              variant="outline"
+              size="sm"
+              className="gap-2 shadow-sm border-blue-400 hover:bg-blue-50"
+            >
+              <FileText className="h-4 w-4" />
+              Show Answer
             </Button>
           )}
           
@@ -273,6 +341,18 @@ export function PythonEditor({
           </Panel>
         </PanelGroup>
       </div>
+
+      {/* Hints and Answer Panels */}
+      <HintsPanel
+        hints={hintsArray}
+        isOpen={showHintsPanel}
+        onClose={() => setShowHintsPanel(false)}
+      />
+      <AnswerPanel
+        answer={answer || ""}
+        isOpen={showAnswerPanel}
+        onClose={() => setShowAnswerPanel(false)}
+      />
     </div>
   )
 }

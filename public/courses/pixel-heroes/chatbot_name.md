@@ -1,10 +1,6 @@
 # Chatbot Remembers Your Name
 
-Make your chatbot remember and use your name!
-
-## What to Do
-1. Press Run
-2. Tell it your name!
+Make your chatbot remember and use your name! Press Run and tell it your name - watch it use your name in every response!
 
 ```python
 print("=== MY PERSONAL CHATBOT ===")
@@ -31,16 +27,6 @@ else:
     print(f"Bot: I'm listening, {user_name}!")
 ```
 
-## Remember
-- Store name in a variable: `user_name`
-- Use f-strings: `f"Hello, {user_name}!"`
-- Name can be used in every response
+**The trick:** Store the name in a variable `user_name`, then use f-strings like `f"Hello, {user_name}!"` to use it in every response. Don't forget the `f` before the quotes!
 
-## Try This
-Ask for their age too!
-
-## If Stuck
-- Use f-strings with `f""`
-- Check that you stored it in `user_name`
-
-You did it! ⭐
+Try asking for their age too - make your chatbot even smarter!

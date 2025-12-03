@@ -1,10 +1,6 @@
 # Count with Loops
 
-Make Python count numbers!
-
-## What to Do
-1. Press Run
-2. See Python count up and down!
+Loops can count numbers too! Press Run and watch Python count up to 10, then count back down to 1.
 
 ```python
 # Count from 1 to 10
@@ -20,16 +16,6 @@ for number in range(10, 0, -1):
 print("BLAST OFF!")
 ```
 
-## Remember
-- `range(1, 11)` counts 1 to 10
-- `range(10, 0, -1)` counts backwards
-- Use the number inside the loop!
+**How it works:** `range(1, 11)` counts from 1 to 10 (it stops before 11!). `range(10, 0, -1)` counts backwards - the `-1` means go down by 1 each time. You can use the `number` variable inside the loop!
 
-## Try This
-Count by 2s: `range(0, 11, 2)`
-
-## If Stuck
-- `range(1, 11)` stops before 11
-- Use `-1` to count backwards
-
-You did it! ⭐
+Try counting by 2s: `range(0, 11, 2)` - now it counts 0, 2, 4, 6, 8, 10!

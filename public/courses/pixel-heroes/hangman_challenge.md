@@ -1,12 +1,6 @@
 # Challenge: Word Categories
 
-Let players choose a category and get a random word!
-
-## What to Do
-1. Create word lists for different categories
-2. Let the player choose a category
-3. Pick a random word from that category
-4. Play a complete game!
+Challenge time! Let players choose a category and get a random word. Create word lists for different categories, let the player choose, then pick a random word from that category!
 
 ```python
 import random
@@ -65,16 +59,6 @@ else:
     wrong_guesses = wrong_guesses + 1
 ```
 
-## Remember
-- Each category is a separate list
-- `random.choice()` picks a random word
-- `len(secret_word)` tells how many letters
+**The trick:** Each category is a separate list. `random.choice()` picks a random word from the list. `len(secret_word)` tells you how many letters the word has.
 
-## Try This
-Add more categories or a loop to play multiple rounds!
-
-## If Stuck
-- Type exactly: animals, colors, or sports
-- Try each category multiple times
-
-**CHALLENGE COMPLETE!** 🎉
+Want to make it harder? Add more categories or a loop to play multiple rounds - keep the game going!

@@ -1,10 +1,6 @@
 # Computer Makes a Choice
 
-Make the computer choose rock, paper, or scissors randomly!
-
-## What to Do
-1. Press Run
-2. Run many times to see different choices!
+Let's make the computer choose rock, paper, or scissors randomly! Press Run, then run it many times - the computer will choose differently each time!
 
 ```python
 import random
@@ -19,16 +15,6 @@ computer_choice = random.choice(choices)
 print(f"Computer chose: {computer_choice}")
 ```
 
-## Remember
-- List has three options: rock, paper, scissors
-- `random.choice(choices)` picks one randomly
-- Computer might choose differently each time
+**How it works:** The list has three options. `random.choice(choices)` picks one randomly. The computer might choose rock one time, paper the next, scissors after that - it's random!
 
-## Try This
-Add more options like "lizard" and "spock"!
-
-## If Stuck
-- Make sure you have `import random`
-- Keep running to see different choices!
-
-You did it! ⭐
+Try adding more options like "lizard" and "spock" to make it more interesting!

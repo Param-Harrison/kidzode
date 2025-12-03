@@ -1,10 +1,6 @@
 # Add a Superpower
 
-Add a random superpower to your superhero!
-
-## What to Do
-1. Press Run
-2. See name AND power!
+Add a random superpower to your superhero! Press Run and see both the name AND power!
 
 ```python
 import random
@@ -36,16 +32,6 @@ print()
 print(f"{superhero_name} {power}!")
 ```
 
-## Remember
-- You can use many lists
-- Each `random.choice()` picks independently
-- Combinations make each hero unique!
+**The magic:** You can use as many lists as you want! Each `random.choice()` picks independently, so combinations make each hero unique!
 
-## Try This
-Add more powers!
-
-## If Stuck
-- Powers can be full sentences
-- Keep running to see different combos!
-
-You did it! ⭐
+Add more powers - make them creative, funny, or powerful!

@@ -1,10 +1,6 @@
 # Rocket Countdown
 
-Make a countdown from 10 to BLAST OFF!
-
-## What to Do
-1. Press Run
-2. Watch the countdown!
+3... 2... 1... BLAST OFF! Make a rocket countdown! Press Run and watch it count down.
 
 ```python
 # Countdown from 10 to 1
@@ -14,16 +10,6 @@ for number in range(10, 0, -1):
 print("BLAST OFF!")
 ```
 
-## Remember
-- `range(10, 0, -1)` counts from 10 down to 1
-- The `-1` means count backwards
-- Stops at 1 (not 0)
+**How it works:** `range(10, 0, -1)` counts from 10 down to 1. The `-1` means count backwards by 1 each time. It stops at 1 (not 0) - that's why we use `0` as the stop point!
 
-## Try This
-Try `range(5, 0, -1)` for a faster countdown!
-
-## If Stuck
-- Make sure you have `-1` at the end
-- It stops at 1, that's correct!
-
-You did it! ⭐
+Try `range(5, 0, -1)` for a faster countdown, or `range(20, 0, -1)` for a longer one!

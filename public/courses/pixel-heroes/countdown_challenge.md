@@ -1,11 +1,6 @@
 # Challenge: Custom Countdown
 
-Let the user choose the starting number!
-
-## What to Do
-1. Ask for a starting number
-2. Convert it with `int()`
-3. Count down from their number!
+Challenge time! Let the user choose the starting number. Ask for a number, convert it with `int()`, then count down from their number!
 
 ```python
 print("=== CUSTOM ROCKET LAUNCH ===")
@@ -30,16 +25,6 @@ print("ROAR! The rocket is launching!")
 print("Mission success!")
 ```
 
-## Remember
-- `int()` converts text to a number
-- `input()` always gives text
-- Convert to int before using in `range()`
+**Important:** `int()` converts text to a number. `input()` always gives text, so you need to convert it before using it in `range()`. Use `int(start)` to convert, then use `start_number` in `range()`.
 
-## Try This
-Add error checking for wrong input!
-
-## If Stuck
-- Use `int(start)` to convert
-- Use `start_number` in `range()`
-
-**CHALLENGE COMPLETE!** 🎉
+Want to make it harder? Add error checking for wrong input - what if they type "hello" instead of a number?

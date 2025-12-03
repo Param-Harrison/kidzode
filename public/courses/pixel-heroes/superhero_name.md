@@ -1,10 +1,6 @@
 # Generate Superhero Name
 
-Make random superhero names!
-
-## What to Do
-1. Press Run
-2. Run again for different names!
+Create your own superhero name generator! Press Run, then run it again - you'll get different names each time!
 
 ```python
 import random
@@ -25,16 +21,6 @@ print()
 print(f"Your superhero name is: {superhero_name}!")
 ```
 
-## Remember
-- You can have many lists
-- `random.choice()` picks from any list
-- Use `" "` to add a space between words
+**The magic:** You can have as many lists as you want! `random.choice()` picks randomly from any list. Use `" "` (a space in quotes) to add a space between words when combining them.
 
-## Try This
-Add your own words like "Blazing" or "Cosmic"!
-
-## If Stuck
-- Make sure `import random` is at top
-- Check you have `" "` between words
-
-You did it! ⭐
+Add your own words like "Blazing", "Cosmic", "Fire", or "Ice" - make it your own!

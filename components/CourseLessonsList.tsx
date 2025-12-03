@@ -8,7 +8,7 @@ import { useAuth } from "@/hooks/useAuth"
 interface Lesson {
   id: string
   name: string
-  type?: 'concept' | 'build' | 'challenge'
+  type?: 'lesson' | 'challenge' | 'concept' | 'build' // Support both old and new types
   guide: string
   py: string
 }
@@ -96,6 +96,19 @@ export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
                 {lesson.name}
               </div>
               <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider flex items-center gap-1.5">
+                {lesson.type === 'challenge' && (
+                  <>
+                    <Zap className="h-3 w-3" />
+                    Challenge
+                  </>
+                )}
+                {(lesson.type === 'lesson' || !lesson.type) && (
+                  <>
+                    <FileText className="h-3 w-3" />
+                    Lesson
+                  </>
+                )}
+                {/* Legacy types for backward compatibility */}
                 {lesson.type === 'concept' && (
                   <>
                     <Book className="h-3 w-3" />
@@ -106,18 +119,6 @@ export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
                   <>
                     <Hammer className="h-3 w-3" />
                     Build
-                  </>
-                )}
-                {lesson.type === 'challenge' && (
-                  <>
-                    <Zap className="h-3 w-3" />
-                    Challenge
-                  </>
-                )}
-                {!lesson.type && (
-                  <>
-                    <FileText className="h-3 w-3" />
-                    Lesson
                   </>
                 )}
               </div>

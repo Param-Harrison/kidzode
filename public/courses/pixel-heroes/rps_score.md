@@ -1,10 +1,6 @@
 # Keep Score
 
-Add a scoring system to track who's winning!
-
-## What to Do
-1. Press Run
-2. Play and watch the score!
+Add a scoring system to track who's winning! Press Run and play - watch the score update!
 
 ```python
 import random
@@ -54,16 +50,6 @@ print(f"Computer: {computer_score}")
 print(f"Ties: {ties}")
 ```
 
-## Remember
-- Create score variables BEFORE the game: `player_score = 0`
-- When someone wins, add 1: `player_score = player_score + 1`
-- Track player wins, computer wins, and ties
+**How it works:** Create score variables BEFORE the game: `player_score = 0`. When someone wins, add 1: `player_score = player_score + 1`. Track player wins, computer wins, and ties separately!
 
-## Try This
-Run multiple times and see scores add up!
-
-## If Stuck
-- Make sure you have `score = score + 1` in each win condition
-- Score shows at the end of each round
-
-You did it! ⭐
+Run multiple times and see scores add up - who's winning overall?

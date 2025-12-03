@@ -1,10 +1,6 @@
 # Add Rocket
 
-Make your countdown look like a real rocket launch!
-
-## What to Do
-1. Press Run
-2. See the rocket launch!
+Make your countdown look like a real rocket launch! Press Run and watch the countdown!
 
 ```python
 print("=== ROCKET LAUNCH SEQUENCE ===")
@@ -19,16 +15,6 @@ print("BLAST OFF! 🚀")
 print("The rocket is launching!")
 ```
 
-## Remember
-- `print()` with nothing makes a blank line
-- `f"T-minus {number}..."` puts number in text
-- The `f` makes it a format string
+**The trick:** `print()` with nothing makes a blank line - great for spacing! `f"T-minus {number}..."` puts the number in the text. Don't forget the `f` before the quotes - that makes it a format string!
 
-## Try This
-Add more lines after BLAST OFF!
-
-## If Stuck
-- Make sure you have `f` before quotes
-- Check `{number}` is inside the string
-
-You did it! ⭐
+Add more lines after BLAST OFF - describe what happens next!

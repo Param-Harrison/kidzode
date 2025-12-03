@@ -1,10 +1,6 @@
 # Your First Adventure
 
-Make a story where YOU choose what happens!
-
-## What to Do
-1. Press Run
-2. Type "left" or "right" to choose!
+Create your own adventure story where YOU choose what happens! Press Run, then type "left" or "right" to make your choice.
 
 ```python
 print("=== THE MYSTERIOUS FOREST ===")
@@ -27,16 +23,6 @@ else:
     print("YOU WIN!")
 ```
 
-## Remember
-- `if choice == "left":` checks if they typed "left"
-- `else:` handles everything else
-- `==` checks if things are the same
+**How it works:** `if choice == "left":` checks if they typed exactly "left". `else:` handles everything else. `==` checks if two things are the same.
 
-## Try This
-Change the story! Make different paths!
-
-## If Stuck
-- Make sure `if` and `else` have different text
-- Type `"left"` exactly (lowercase)
-
-You did it! ⭐
+Change the story! Make different paths with different endings - be creative!

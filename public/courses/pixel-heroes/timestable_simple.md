@@ -1,10 +1,6 @@
 # Times Table
 
-Print the 5 times table from 1 to 10!
-
-## What to Do
-1. Press Run
-2. See the times table!
+Learn your times tables the fun way! Press Run and see the 5 times table print out automatically.
 
 ```python
 # Print the 5 times table
@@ -16,16 +12,6 @@ for number in range(1, 11):
     print(f"5 x {number} = {answer}")
 ```
 
-## Remember
-- `range(1, 11)` counts from 1 to 10
-- `5 * number` multiplies 5 by the number
-- The loop does all 10 calculations!
+**How it works:** `range(1, 11)` counts from 1 to 10. `5 * number` multiplies 5 by each number. The loop does all 10 calculations automatically - no typing needed!
 
-## Try This
-Change `5` to `7` to see the 7 times table!
-
-## If Stuck
-- Make sure you're multiplying `5 * number`
-- Use `range(1, 11)` not `range(1, 10)`
-
-You did it! ⭐
+Try changing `5` to `7` to see the 7 times table, or `3` for the 3 times table!

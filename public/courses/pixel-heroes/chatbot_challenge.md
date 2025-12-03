@@ -1,11 +1,6 @@
 # Challenge: Mood Detection
 
-Add mood detection to make your chatbot understand feelings!
-
-## What to Do
-1. Detect if user is happy, sad, or excited
-2. Respond with appropriate empathy
-3. Make your chatbot a good friend!
+Challenge time! Add mood detection to make your chatbot understand feelings. Detect if the user is happy, sad, or excited, and respond with empathy!
 
 ```python
 import random
@@ -50,16 +45,6 @@ else:
     print(f"Bot: I'm here for you, {user_name}. Tell me how you're feeling!")
 ```
 
-## Remember
-- `"sad" in user_input` checks if word appears anywhere
-- Check for multiple keywords with `or`
-- Works even if user types "I'm sad"
+**The magic:** `"sad" in user_input` checks if the word appears anywhere in what they typed. Check for multiple keywords with `or`. It works even if they type "I'm sad" - much smarter than exact matches!
 
-## Try This
-Add more emotions or a loop to chat multiple times!
-
-## If Stuck
-- Use `in` not `==`
-- Try typing "I'm sad" or "I feel happy"
-
-**CHALLENGE COMPLETE!** 🎉
+Try adding more emotions or a loop to chat multiple times - make your chatbot a great friend!

@@ -1,10 +1,6 @@
 # Draw a Square
 
-Use Python's turtle to draw a perfect square!
-
-## What to Do
-1. Press Run
-2. Watch the turtle draw!
+Time to draw! Use Python's turtle to draw a perfect square. Press Run and watch the turtle draw!
 
 ```python
 import turtle
@@ -26,19 +22,6 @@ t.left(90)
 turtle.done()
 ```
 
-## Remember
-- `import turtle` gives you drawing powers
-- `turtle.Turtle()` creates a turtle
-- `forward(100)` moves forward 100 steps
-- `left(90)` turns left 90 degrees
-- Square has 4 equal sides
+**How it works:** `import turtle` gives you drawing powers! `turtle.Turtle()` creates a turtle. `forward(100)` moves forward 100 steps. `left(90)` turns left 90 degrees. A square has 4 equal sides, so repeat 4 times!
 
-## Try This
-Change `100` to `150` for a bigger square!
-
-## If Stuck
-- Make sure you have `turtle.done()` at the end
-- Try smaller numbers like `50`
-- Check all `forward()` numbers are the same
-
-You did it! ⭐
+Try changing `100` to `150` for a bigger square, or `50` for a smaller one!

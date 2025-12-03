@@ -1,11 +1,6 @@
 # Ask a Question
 
-Make your Magic 8-Ball ask for a question first!
-
-## What to Do
-1. Press Run
-2. Type your question
-3. Press Enter
+Now make your Magic 8-Ball ask for a question first! Press Run, type your question, then press Enter.
 
 ```python
 import random
@@ -23,15 +18,6 @@ print("The Magic 8-Ball says...")
 print(answer)
 ```
 
-## Remember
-- `input()` lets you type
-- The answer is still random!
+**Fun fact:** Even though you ask a question, the answer is still random! The Magic 8-Ball doesn't really know - it just picks randomly.
 
-## Try This
-Show the question: `print("You asked: " + question)`
-
-## If Stuck
-- Make sure `input()` is there
-- Check `import random` at top
-
-You did it! ⭐
+Try showing the question back: `print("You asked: " + question)`

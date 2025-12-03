@@ -1,10 +1,6 @@
 # Find the Winner
 
-Add logic to determine who wins!
-
-## What to Do
-1. Press Run
-2. Play and see who wins!
+Add logic to determine who wins! Press Run and play - see who wins each round!
 
 ```python
 import random
@@ -37,17 +33,6 @@ else:
     print("COMPUTER WINS! Better luck next time!")
 ```
 
-## Remember
-- Check for tie first
-- Then check each way player can win
-- `and` means BOTH must be true
-- If no win, computer wins!
+**The logic:** Check for a tie first. Then check each way the player can win. `and` means BOTH must be true. If no win conditions match, the computer wins!
 
-## Try This
-Play multiple times with each choice!
-
-## If Stuck
-- Type choice exactly right
-- Check win conditions carefully
-
-You did it! ⭐
+Play multiple times with each choice - see all the different outcomes!

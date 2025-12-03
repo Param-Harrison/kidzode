@@ -1,11 +1,6 @@
 # Robot Remembers Your Name
 
-Make your robot remember and use your name!
-
-## What to Do
-1. Press Run
-2. Type your name when asked
-3. See your name used 3 times!
+Now your robot can remember your name and use it! Press Run, type your name, and watch it use your name three times!
 
 ```python
 print("Hi! I'm a friendly robot!")
@@ -18,16 +13,6 @@ print("I will remember your name, " + name + "!")
 print("Goodbye, " + name + "! Come back soon!")
 ```
 
-## Remember
-- `name = input(...)` asks AND saves the answer
-- Use `name` to get it back
-- Use `+` to glue text together
+**The trick:** `name = input(...)` asks a question AND saves your answer! Then you can use `name` anywhere and Python remembers what you typed. Use `+` to glue text together.
 
-## Try This
-Add another line using your name!
-
-## If Stuck
-- Make sure `name = input(...)` comes first
-- Use `+ name +` to insert it
-
-You did it! ⭐
+Try adding another line that uses your name - make your robot say something fun!

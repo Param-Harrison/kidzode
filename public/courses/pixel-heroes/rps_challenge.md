@@ -1,11 +1,6 @@
 # Challenge: Best of 5 Game
 
-Play 5 rounds and declare a champion!
-
-## What to Do
-1. Play 5 rounds
-2. Keep score across all rounds
-3. Declare the final champion!
+Challenge time! Play 5 rounds and declare a champion. Keep score across all rounds, then compare final scores to find the winner!
 
 ```python
 import random
@@ -67,16 +62,6 @@ else:
     print("IT'S A TIE! PLAY AGAIN!")
 ```
 
-## Remember
-- `for round_num in range(1, 6):` plays 5 rounds
-- Scores accumulate across all rounds
-- Compare final scores to find champion
+**The trick:** `for round_num in range(1, 6):` plays 5 rounds. Scores accumulate across all rounds. Compare final scores to find the champion. Make sure score variables are OUTSIDE the loop!
 
-## Try This
-Change to best of 7 or best of 10!
-
-## If Stuck
-- Make sure `for` loop is around the game
-- Score variables must be OUTSIDE the loop
-
-**CHALLENGE COMPLETE!** 🎉
+Try changing to best of 7 or best of 10 - make it longer!

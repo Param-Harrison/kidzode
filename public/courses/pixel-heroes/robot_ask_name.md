@@ -1,11 +1,6 @@
 # Robot Asks Questions
 
-Make your robot ask a question!
-
-## What to Do
-1. Press Run
-2. Type your name when asked
-3. Press Enter
+Now let's make your robot ask questions! Press Run, then type your name when it asks.
 
 ```python
 print("Hi! I'm a friendly robot!")
@@ -16,16 +11,6 @@ input("What's your name? ")
 print("Nice to meet you! Bye for now!")
 ```
 
-## Remember
-- `input()` shows text and waits for you to type
-- Put the question inside quotes
-- Press Enter after typing
+**How it works:** `input()` shows text and waits for you to type something. Put your question inside quotes, and don't forget to press Enter after typing!
 
-## Try This
-Change the question!
-
-## If Stuck
-- Use `input()` not `print()`
-- Put question in quotes
-
-You did it! ⭐
+Try changing the question - ask about favorite color, age, or anything you want!

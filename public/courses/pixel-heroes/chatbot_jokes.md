@@ -1,10 +1,6 @@
 # Chatbot Tells Random Jokes
 
-Add joke-telling abilities with random selection!
-
-## What to Do
-1. Press Run
-2. Ask for a joke!
+Add joke-telling abilities to your chatbot! Press Run and ask for a joke - you'll get a different one each time!
 
 ```python
 import random
@@ -47,16 +43,6 @@ else:
     print("Bot: Try saying 'tell me a joke' or 'hello'!")
 ```
 
-## Remember
-- Store jokes in a list
-- `random.choice(jokes)` picks a random joke
-- Different joke each time!
+**How it works:** Store jokes in a list, then `random.choice(jokes)` picks a random one. You'll get a different joke each time you ask!
 
-## Try This
-Add your own jokes to the list!
-
-## If Stuck
-- Type "tell me a joke" or "joke"
-- Add more to the `jokes` list
-
-You did it! ⭐
+Add your own jokes to the list - make them funny, silly, or punny!

@@ -1,9 +1,8 @@
 # Condition Practice Challenges
 
-Practice complex conditions with 5 challenges!
+Practice using conditions with these 5 challenges!
 
-## Challenge 1: Grade Calculator
-
+**Challenge 1: Grade Calculator**
 ```python
 score = int(input("Enter score (0-100): "))
 
@@ -19,8 +18,7 @@ else:
     print("Grade: F - Study harder!")
 ```
 
-## Challenge 2: Age Category
-
+**Challenge 2: Age Category**
 ```python
 age = int(input("Enter age: "))
 
@@ -36,8 +34,7 @@ else:
     print("You're a senior!")
 ```
 
-## Challenge 3: Login System
-
+**Challenge 3: Login System**
 ```python
 username = input("Username: ").strip().lower()
 password = input("Password: ")
@@ -50,8 +47,7 @@ else:
     print("Invalid login!")
 ```
 
-## Challenge 4: Weather Advisor
-
+**Challenge 4: Weather Advisor**
 ```python
 temp = int(input("Temperature (F): "))
 raining = input("Is it raining? (yes/no): ").lower()
@@ -68,8 +64,7 @@ else:
     print("Nice day for a walk!")
 ```
 
-## Challenge 5: Game Difficulty
-
+**Challenge 5: Game Difficulty**
 ```python
 level = int(input("Player level (1-100): "))
 has_powerup = input("Has powerup? (yes/no): ").lower()
@@ -84,9 +79,4 @@ else:
     print("Difficulty: MEDIUM")
 ```
 
-## Remember
-- `and` = ALL must be true
-- `or` = AT LEAST ONE must be true
-- Use `elif` for choices
-
-You did it! ⭐
+**Tips:** `and` means ALL must be true. `or` means AT LEAST ONE must be true. Use `elif` for multiple choices!

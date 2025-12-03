@@ -1,10 +1,6 @@
 # Add a Door
 
-Add a door to your house without drawing extra lines!
-
-## What to Do
-1. Press Run
-2. See the door appear!
+Add a door to your house without drawing extra lines! Press Run and see the door appear!
 
 ```python
 import turtle
@@ -44,17 +40,6 @@ t.forward(40)
 turtle.done()
 ```
 
-## Remember
-- `penup()` lifts the pen - moves without drawing
-- `pendown()` puts the pen down to draw
-- `goto(x, y)` moves to exact coordinates
+**Superpowers:** `penup()` lifts the pen - moves without drawing! `pendown()` puts the pen down to draw. `goto(x, y)` moves to exact coordinates. Use `penup()` BEFORE `goto()`, then `pendown()` AFTER!
 
-## Try This
-Try `goto(70, 0)` to put door on the right side!
-
-## If Stuck
-- Use `penup()` BEFORE `goto()`
-- Use `pendown()` AFTER `goto()`
-- Try different numbers in `goto(x, y)`
-
-You did it! ⭐
+Try `goto(70, 0)` to put the door on the right side - experiment with different positions!

@@ -1,10 +1,6 @@
 # Chatbot Answers Questions
 
-Add question-answering abilities to your chatbot!
-
-## What to Do
-1. Press Run
-2. Ask it questions!
+Make your chatbot answer questions! Press Run and ask it different questions - see how many it can answer!
 
 ```python
 print("=== MY PERSONAL CHATBOT ===")
@@ -36,16 +32,6 @@ else:
     print("Bot: I'm not sure how to answer that yet. Try asking something else!")
 ```
 
-## Remember
-- Each `elif` checks for a different question
-- Questions should be exact matches
-- Add as many questions as you want
+**The trick:** Each `elif` checks for a different question. Questions need to be exact matches (case-sensitive), so type them exactly. You can add as many questions as you want!
 
-## Try This
-Add more questions!
-
-## If Stuck
-- Type the question exactly
-- Add more `elif` blocks
-
-You did it! ⭐
+Add more questions - make your chatbot super smart!

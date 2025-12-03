@@ -1,10 +1,6 @@
 # Add and Remove from Lists
 
-Change lists by adding and removing items!
-
-## What to Do
-1. Press Run
-2. See lists change!
+Lists can grow and shrink! Start with an empty list, add items, then remove them. Press Run to see it in action!
 
 ```python
 # Start with an empty list
@@ -27,16 +23,6 @@ my_list.remove("banana")
 print(f"After removing: {my_list}")
 ```
 
-## Remember
-- `.append(item)` adds to the end
-- `.remove(item)` removes the item
-- `len(list)` tells how many items
+**Superpowers:** `.append(item)` adds to the end of the list. `.remove(item)` removes it. `len(list)` tells you how many items are in the list!
 
-## Try This
-Build your own shopping list!
-
-## If Stuck
-- Use `.append()` with parentheses
-- Make sure item exists before removing
-
-You did it! ⭐
+Try building your own shopping list - add things you need, then remove them as you "buy" them!

@@ -1,10 +1,6 @@
 # Choose Your Times Table
 
-Let the user choose which times table to see!
-
-## What to Do
-1. Press Run
-2. Type a number like 7 or 9!
+Let the user choose which times table to practice! Press Run and type a number like 7 or 9 - see that times table!
 
 ```python
 print("=== TIMES TABLE PRACTICE ===")
@@ -26,16 +22,6 @@ print()
 print(f"Great job practicing your {table_number}s!")
 ```
 
-## Remember
-- `int(table)` converts text to a number
-- Use the user's number in multiplication
-- Same loop works for any table!
+**How it works:** `int(table)` converts text to a number. Use the user's number in multiplication. The same loop works for any table - just change the number!
 
-## Try This
-Try 12 for the hardest, or 2 for easy!
-
-## If Stuck
-- Use `int(table)` to convert
-- Multiply by `table_number`
-
-You did it! ⭐
+Try 12 for the hardest, or 2 for easy - practice what you need!

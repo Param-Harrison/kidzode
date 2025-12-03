@@ -1,13 +1,12 @@
 # Challenge: Create Your Own Adventure
 
-Write your own adventure story with at least 3 choices!
+Challenge time! Write your own adventure story with at least 3 choices and 4 different endings!
 
-## What to Do
 Create a story with:
-1. A character name (ask the user)
-2. At least 3 different choices
-3. At least 4 different endings
-4. Use the character's name throughout
+- A character name (ask the user)
+- At least 3 different choices
+- At least 4 different endings
+- Use the character's name throughout
 
 ```python
 print("=== YOUR ADVENTURE TITLE HERE ===")
@@ -49,18 +48,6 @@ print()
 print("THE END!")
 ```
 
-## Remember
-- Plan your story before coding
-- Each choice should lead somewhere interesting
-- Mix happy and sad endings
-- Test all paths!
+**Tips:** Plan your story before coding! Each choice should lead somewhere interesting. Mix happy and sad endings. Test all paths to make sure they work!
 
-## Try This
-Add more choices or create a mystery story!
-
-## If Stuck
-- Start simple with 2 choices
-- Draw your story on paper first
-- Check indentation for nested ifs
-
-**CHALLENGE COMPLETE!** 🎉
+Want to make it harder? Add more choices or create a mystery story with clues!

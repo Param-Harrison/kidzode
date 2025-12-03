@@ -1,10 +1,8 @@
 # Show Blanks and Reveal Letters
 
-Display the word with blanks and revealed letters!
+Now let's make Hangman show blanks for letters we haven't guessed yet, and reveal the ones we have!
 
-## What to Do
-1. Press Run
-2. Guess letters and watch them appear!
+Press Run and guess a letter. Watch how it shows `_` for unguessed letters and reveals the correct ones!
 
 ```python
 print("=== HANGMAN GAME ===")
@@ -37,17 +35,6 @@ else:
     print(f"WRONG! '{guess}' is not in the word.")
 ```
 
-## Remember
-- `for letter in secret_word:` loops through each letter
-- `if letter in guessed_letters:` checks if we've guessed it
-- `end=" "` makes print stay on the same line
-- Blanks (_) show unguessed letters!
+**The magic:** `for letter in secret_word:` goes through each letter. If we've guessed it, we show the letter. Otherwise, we show `_`. The `end=" "` keeps everything on the same line!
 
-## Try This
-Change `guessed_letters = "ae"` to see multiple letters!
-
-## If Stuck
-- Check your `guessed_letters` string
-- Make sure you have `end=" "`
-
-You did it! ⭐
+Try changing `guessed_letters = "ae"` to see multiple letters revealed at once!

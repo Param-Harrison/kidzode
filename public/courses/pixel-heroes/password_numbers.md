@@ -1,10 +1,6 @@
 # Add Numbers
 
-Create a password with 6 letters AND 2 numbers!
-
-## What to Do
-1. Press Run
-2. Get a stronger password!
+Make your password stronger by adding numbers! Press Run and get a password with 6 letters AND 2 numbers!
 
 ```python
 import random
@@ -29,16 +25,6 @@ print(f"Your password is: {password}")
 print(f"Length: {len(password)} characters")
 ```
 
-## Remember
-- `numbers = "0123456789"` has all digits
-- Use TWO loops - one for letters, one for numbers
-- `len(password)` tells how long it is
+**The trick:** `numbers = "0123456789"` has all the digits. Use TWO loops - one for letters, one for numbers. `len(password)` tells you how long it is. Numbers go at the end - that's normal!
 
-## Try This
-Change to 8 letters and 4 numbers!
-
-## If Stuck
-- Make sure you have the second `for` loop
-- Numbers go at the end, that's normal!
-
-You did it! ⭐
+Try changing to 8 letters and 4 numbers - make it even stronger!

@@ -1,10 +1,6 @@
 # Count Wrong Guesses
 
-Track wrong guesses and show how many chances are left!
-
-## What to Do
-1. Press Run
-2. Make wrong guesses and watch the counter!
+Track wrong guesses and show how many chances are left! Press Run and make wrong guesses - watch the counter go up!
 
 ```python
 print("=== HANGMAN GAME ===")
@@ -47,17 +43,6 @@ else:
         print(f"The word was: {secret_word}")
 ```
 
-## Remember
-- `wrong_guesses = 0` starts at zero
-- `max_wrong = 6` sets the limit
-- Add 1 for each mistake
-- When `wrong_guesses >= max_wrong`, game ends!
+**How it works:** `wrong_guesses = 0` starts at zero. `max_wrong = 6` sets the limit. Add 1 for each mistake. When `wrong_guesses >= max_wrong`, the game ends!
 
-## Try This
-Change `max_wrong` to 3 for harder, or 10 for easier!
-
-## If Stuck
-- Make sure you have `wrong_guesses = wrong_guesses + 1`
-- Check the `if wrong_guesses >= max_wrong:` condition
-
-You did it! ⭐
+Try changing `max_wrong` to 3 for harder, or 10 for easier - adjust the difficulty!

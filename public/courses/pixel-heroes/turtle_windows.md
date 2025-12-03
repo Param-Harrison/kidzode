@@ -1,10 +1,6 @@
 # Add Windows Using a Loop
 
-Draw 2 windows using a loop - write code once, draw twice!
-
-## What to Do
-1. Press Run
-2. Watch both windows appear!
+Draw 2 windows using a loop - write code once, draw twice! Press Run and watch both windows appear!
 
 ```python
 import turtle
@@ -56,18 +52,6 @@ for position in window_positions:
 turtle.done()
 ```
 
-## Remember
-- `for position in window_positions:` repeats for each window
-- `position[0]` is x, `position[1]` is y
-- `range(4)` repeats 4 times (perfect for square!)
-- `setheading(0)` points turtle to the right
+**The magic:** `for position in window_positions:` repeats for each window. `position[0]` is x, `position[1]` is y. `range(4)` repeats 4 times (perfect for a square!). `setheading(0)` points the turtle to the right.
 
-## Try This
-Add a third window! Add `(45, 60)` to the list!
-
-## If Stuck
-- Check numbers in `window_positions`
-- Inner loop must use `range(4)`
-- Use `penup()` before each `goto()`
-
-You did it! ⭐
+Try adding a third window - add `(45, 60)` to the list!

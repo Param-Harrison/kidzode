@@ -1,10 +1,6 @@
 # Player Makes a Choice
 
-Let both the player AND computer make choices!
-
-## What to Do
-1. Press Run
-2. Type "rock", "paper", or "scissors"!
+Let both the player AND computer make choices! Press Run and type "rock", "paper", or "scissors" - see what the computer picks!
 
 ```python
 import random
@@ -24,16 +20,6 @@ print(f"You chose: {player_choice}")
 print(f"Computer chose: {computer_choice}")
 ```
 
-## Remember
-- Player uses `input()` to choose
-- Computer uses `random.choice()` to choose
-- Both choices stored in variables
+**How it works:** The player uses `input()` to choose. The computer uses `random.choice()` to choose randomly. Both choices are stored in variables so you can use them later!
 
-## Try This
-Try typing different choices!
-
-## If Stuck
-- Type exactly: rock, paper, or scissors
-- Both choices print at the end
-
-You did it! ⭐
+Try typing different choices - see what happens each time!

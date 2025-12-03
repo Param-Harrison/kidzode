@@ -1,10 +1,6 @@
 # Add a Second Choice
 
-Add a second decision to make the story longer!
-
-## What to Do
-1. Press Run
-2. Make TWO choices!
+Make your story longer by adding a second decision! Press Run and make TWO choices to see where your adventure leads!
 
 ```python
 print("=== THE MYSTERIOUS FOREST ===")
@@ -41,16 +37,6 @@ else:
     print("YOU WIN!")
 ```
 
-## Remember
-- You can put `if/else` INSIDE another `if/else`
-- This is called "nesting"
-- Indentation shows which choice belongs where
+**The trick:** You can put `if/else` INSIDE another `if/else` - this is called "nesting"! The indentation shows which choice belongs where. The inner `if` must be indented (4 spaces), and the second choice only happens if you go left first.
 
-## Try This
-Add a second choice to the right path too!
-
-## If Stuck
-- Inner `if` must be indented (4 spaces)
-- Second choice only happens if you go left first
-
-You did it! ⭐
+Try adding a second choice to the right path too - make both paths interesting!

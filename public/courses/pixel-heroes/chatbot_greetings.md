@@ -1,10 +1,6 @@
 # Chatbot Responds to Greetings
 
-Create a chatbot that responds to different greetings!
-
-## What to Do
-1. Press Run
-2. Try different greetings!
+Create a chatbot that responds to different greetings! Press Run and try typing different greetings like "hello", "hi", "hey", or "goodbye".
 
 ```python
 print("=== MY PERSONAL CHATBOT ===")
@@ -27,17 +23,6 @@ else:
     print("Bot: I'm not sure how to respond to that yet!")
 ```
 
-## Remember
-- `elif` means "else if" - checks another condition
-- Can have as many `elif` as needed
-- Bot matches exact text (case-sensitive!)
-- `else` handles anything else
+**How it works:** `elif` means "else if" - it checks another condition. You can have as many `elif` as you need! The bot matches exact text (case-sensitive), so "Hello" and "hello" are different. `else` handles anything that doesn't match.
 
-## Try This
-Add more greetings like "good morning"!
-
-## If Stuck
-- Type exactly: hello, hi, hey, or goodbye
-- Case matters! "Hello" and "hello" are different
-
-You did it! ⭐
+Add more greetings like "good morning", "good evening", or "what's up" - make your chatbot smarter!

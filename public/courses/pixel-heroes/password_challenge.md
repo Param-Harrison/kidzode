@@ -1,11 +1,6 @@
 # Challenge: Custom Password Length
 
-Let the user choose how long their password should be!
-
-## What to Do
-1. Ask for password length
-2. Generate a password with that many characters
-3. Mix letters, numbers, and special characters!
+Challenge time! Let the user choose how long their password should be. Ask for the length, then generate a password with that many characters, mixing letters, numbers, and special characters!
 
 ```python
 import random
@@ -33,16 +28,6 @@ print()
 print("Copy this password and keep it safe!")
 ```
 
-## Remember
-- `all_chars` combines ALL character types
-- This mixes everything together
-- Longer passwords = more secure!
+**The trick:** `all_chars` combines ALL character types in one string. This mixes everything together automatically! Longer passwords = more secure!
 
-## Try This
-Add a minimum length check (must be at least 8)!
-
-## If Stuck
-- Use `int(length)` to convert
-- Using `all_chars` mixes everything automatically!
-
-**CHALLENGE COMPLETE!** 🎉
+Want to make it harder? Add a minimum length check (must be at least 8) - what if they type 3?

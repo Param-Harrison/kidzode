@@ -1,10 +1,8 @@
 # Make a Magic 8-Ball
 
-Create a fortune teller that gives random answers!
+Create your own fortune teller! Ask it questions and get random answers.
 
-## What to Do
-1. Press Run
-2. Run it again - get different fortunes!
+Press Run, then run it again - you'll get different fortunes each time!
 
 ```python
 import random
@@ -19,16 +17,6 @@ print("The Magic 8-Ball says...")
 print(answer)
 ```
 
-## Remember
-- `import random` gives random powers
-- Lists use `[]` and commas
-- `random.choice()` picks randomly
+**How it works:** `import random` gives you random powers! The list `fortunes` holds all the possible answers, and `random.choice()` picks one randomly.
 
-## Try This
-Add your own fortune!
-
-## If Stuck
-- Put `import random` at the top
-- Use `[]` for lists
-
-You did it! ⭐
+Add your own fortunes to the list - make them silly, serious, or fun!

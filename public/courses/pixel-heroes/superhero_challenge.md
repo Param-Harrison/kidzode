@@ -1,11 +1,6 @@
 # Challenge: Complete Superhero Profile
 
-Add a weakness to make a complete profile!
-
-## What to Do
-1. Add a weaknesses list
-2. Pick a random weakness
-3. Show the complete profile!
+Challenge time! Add a weakness to make a complete profile. Add a weaknesses list, pick a random weakness, then show the complete profile!
 
 ```python
 import random
@@ -54,16 +49,6 @@ print()
 print(f"{superhero_name} is here to save the day!")
 ```
 
-## Remember
-- Every superhero has a weakness!
-- You can have many lists
-- Each `random.choice()` is independent
+**The secret:** Every superhero has a weakness! You can have as many lists as you want. Each `random.choice()` is independent, so combinations stay random.
 
-## Try This
-Add a sidekick or catchphrase!
-
-## If Stuck
-- Create the `weaknesses` list
-- Use `weakness = random.choice(weaknesses)`
-
-**CHALLENGE COMPLETE!** 🎉
+Want to make it harder? Add a sidekick or catchphrase - make it complete!

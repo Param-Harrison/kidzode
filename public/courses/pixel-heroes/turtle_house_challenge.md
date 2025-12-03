@@ -1,12 +1,11 @@
 # Challenge: Dream House Garden
 
-Add a garden with flowers and a sun to make your dream house complete!
+Challenge time! Add a garden with flowers and a sun to make your dream house complete!
 
-## What to Do
 Add these features:
-1. Draw a sun in the sky (circle + lines for rays)
-2. Draw 3-5 flowers in the garden (circles work great!)
-3. BONUS: Add a fence or pathway!
+- Draw a sun in the sky (circle + lines for rays)
+- Draw 3-5 flowers in the garden (circles work great!)
+- BONUS: Add a fence or pathway!
 
 ```python
 import turtle
@@ -64,16 +63,6 @@ for position in window_positions:
 turtle.done()
 ```
 
-## Remember
-- `circle(radius)` draws a circle
-- Use loops to draw multiple flowers
-- `goto(x, y)` with negative numbers goes left or down
+**Tips:** `circle(radius)` draws a circle. Use loops to draw multiple flowers. `goto(x, y)` with negative numbers goes left or down. Try `goto(-150, 150)` for the sun, and use smaller numbers like `circle(8)` for flowers!
 
-## Try This
-Change house colors with `t.color("blue")`!
-
-## If Stuck
-- Try `goto(-150, 150)` for sun
-- Use smaller numbers like `circle(8)` for flowers
-
-**CHALLENGE COMPLETE!** 🎉
+Want to make it colorful? Change house colors with `t.color("blue")` - make it your own!

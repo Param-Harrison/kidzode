@@ -1,10 +1,6 @@
 # Add Special Characters
 
-Create passwords with letters, numbers, AND special characters!
-
-## What to Do
-1. Press Run
-2. Get an unbreakable password!
+Make your password unbreakable! Add special characters like `!@#$` to make it super strong. Press Run and get an unbreakable password!
 
 ```python
 import random
@@ -37,16 +33,6 @@ print()
 print("This password is SUPER STRONG!")
 ```
 
-## Remember
-- Special characters like `!@#$` make passwords stronger
-- Use THREE loops - one for each type
-- More variety = harder to crack!
+**The secret:** Special characters like `!@#$` make passwords stronger! Use THREE loops - one for each type. More variety = harder to crack!
 
-## Try This
-Add more special characters like `+-=_`!
-
-## If Stuck
-- Make sure you have the third loop
-- Change what's in the `special` string
-
-You did it! ⭐
+Try adding more special characters like `+-=_` - make it even stronger!

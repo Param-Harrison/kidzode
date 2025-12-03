@@ -1,9 +1,8 @@
 # String Practice Challenges
 
-Practice string operations with 5 challenges!
+Ready to practice strings? Try these 5 challenges!
 
-## Challenge 1: Reverse a Name
-
+**Challenge 1: Reverse a Name**
 ```python
 name = input("Enter your name: ")
 reversed_name = ""
@@ -14,8 +13,7 @@ for letter in name:
 print(f"Reversed: {reversed_name}")
 ```
 
-## Challenge 2: Count Vowels
-
+**Challenge 2: Count Vowels**
 ```python
 text = input("Enter text: ").lower()
 vowels = "aeiou"
@@ -28,8 +26,7 @@ for letter in text:
 print(f"Vowels: {count}")
 ```
 
-## Challenge 3: Title Case
-
+**Challenge 3: Title Case**
 ```python
 sentence = input("Enter sentence: ")
 words = sentence.split()
@@ -43,8 +40,7 @@ result = " ".join(title_words)
 print(f"Title case: {result}")
 ```
 
-## Challenge 4: Remove Spaces
-
+**Challenge 4: Remove Spaces**
 ```python
 text = input("Enter text with spaces: ")
 no_spaces = ""
@@ -56,17 +52,11 @@ for char in text:
 print(f"No spaces: {no_spaces}")
 ```
 
-## Challenge 5: Pig Latin
-
+**Challenge 5: Pig Latin**
 ```python
 word = input("Enter a word: ").lower()
 pig_latin = word[1:] + word[0] + "ay"
 print(f"Pig Latin: {pig_latin}")
 ```
 
-## Remember
-- `word[1:]` gets all except first letter
-- `.split()` splits into words
-- Use `in` to check if letter in string
-
-You did it! ⭐
+**Tips:** `word[1:]` gets all letters except the first. `.split()` splits text into words. Use `in` to check if a letter is in a string!

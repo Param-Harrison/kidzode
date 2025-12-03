@@ -1,11 +1,8 @@
 # Challenge: Robot Asks Two Questions
 
-Make your robot ask TWO questions!
+Challenge time! Make your robot ask TWO questions - one for name, one for age.
 
-## What to Do
-1. Add a question for age
-2. Save it in a variable
-3. Use both name and age!
+Add a second question for age, save it in a variable, then use both name and age in your messages!
 
 ```python
 print("Hi! I'm Super Robot!")
@@ -21,16 +18,6 @@ print("Hello, " + name + "! It's nice to meet you!")
 # HINT: print("Wow, " + age + " is a great age, " + name + "!")
 ```
 
-## Remember
-- You can make many variables
-- Each needs a different name
-- Use `+` to glue them together
+**Tip:** You can make as many variables as you want! Just give each one a different name. Use `+` to glue text together.
 
-## Try This
-Add a third question!
-
-## If Stuck
-- Create `age` variable with `input()`
-- Use `+ age +` in your print
-
-**CHALLENGE COMPLETE!** 🎉
+Want to make it harder? Add a third question!

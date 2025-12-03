@@ -1,10 +1,6 @@
 # Add Fireworks
 
-Add celebrations after each answer!
-
-## What to Do
-1. Press Run
-2. See the fireworks!
+Add celebrations after each answer to make learning fun! Press Run and see the fireworks!
 
 ```python
 # Print the 5 times table with fireworks!
@@ -19,15 +15,6 @@ print()
 print("YOU DID IT! VICTORY!")
 ```
 
-## Remember
-- Add text after the answer to make it fun
-- Celebrations make learning enjoyable!
+**Fun fact:** Add text after the answer to make it fun! Celebrations make learning enjoyable - who doesn't love fireworks?
 
-## Try This
-Try "AWESOME!" or "PERFECT!" or "AMAZING!"
-
-## If Stuck
-- Make sure text comes after `{answer}`
-- Try different emojis like ⭐ or 🎉
-
-You did it! ⭐
+Try "AWESOME!", "PERFECT!", or "AMAZING!" - use different emojis like ⭐ or 🎉!

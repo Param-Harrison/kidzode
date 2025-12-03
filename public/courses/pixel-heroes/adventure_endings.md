@@ -1,10 +1,6 @@
 # Add Different Endings
 
-Create multiple endings - some good, some bad!
-
-## What to Do
-1. Press Run
-2. Try different choices to see all endings!
+Create multiple endings - some good, some bad! Press Run and try different choices to see all the endings!
 
 ```python
 print("=== THE ENCHANTED CASTLE ===")
@@ -40,16 +36,6 @@ else:
     print("MAGICAL ENDING!")
 ```
 
-## Remember
-- Not all endings have to be wins!
-- Different endings make stories interesting
-- Players will try again to see all endings
+**Fun fact:** Not all endings have to be wins! Different endings make stories interesting - players will try again to see all endings. Mix happy, sad, funny, and scary endings!
 
-## Try This
-Add a fourth ending!
-
-## If Stuck
-- Make sure each path has unique text
-- Try all combinations to test
-
-You did it! ⭐
+Try adding a fourth ending - maybe a secret ending that's super hard to find!

@@ -1,39 +1,34 @@
 # Find and Fix Errors
 
-Learn to read error messages and fix bugs!
+Made a mistake? Don't worry! Python's error messages help you find bugs. Here are common mistakes and how to fix them:
 
-## Common Errors
-
-### Missing Colon
+**Missing Colon:**
 ```python
 for i in range(5)  # Missing :
     print("Hello")
 ```
-**Fix**: Add `:` at the end!
+Add `:` at the end!
 
-### Wrong Indentation
+**Wrong Indentation:**
 ```python
 for i in range(5):
 print("Hello")  # Not indented
 ```
-**Fix**: Add 4 spaces or press Tab!
+Add 4 spaces or press Tab! Indented code goes inside the loop.
 
-### Misspelled Words
+**Misspelled Words:**
 ```python
 pront("Hello")  # Should be "print"
 ```
-**Fix**: Check spelling!
+Check spelling! Python doesn't know what `pront` means.
 
-### Unmatched Quotes
+**Unmatched Quotes:**
 ```python
 print("Hello)  # Missing closing quote
 ```
-**Fix**: Make quotes match!
+Make quotes match! Every `"` needs a closing `"`.
 
-## Debug with Print
-
-Add `print()` to see what's happening:
-
+**Debug Trick:** Add `print()` to see what's happening:
 ```python
 for number in range(1, 6):
     print(f"DEBUG: number is {number}")
@@ -41,13 +36,4 @@ for number in range(1, 6):
     print(f"DEBUG: result is {result}")
 ```
 
-## Remember
-- Read error messages - they help!
-- Check for missing `:` and quotes
-- Use indentation correctly
-- Add `print()` to debug
-
-## Try This
-Fix: `for i in range(5)` (missing `:`)
-
-You did it! ⭐
+Try fixing this: `for i in range(5)` (what's missing?)

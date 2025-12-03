@@ -1,9 +1,8 @@
 # Loop Practice Challenges
 
-Practice loops with 5 challenges!
+Ready to master loops? Try these 5 challenges!
 
-## Challenge 1: Star Pattern
-
+**Challenge 1: Star Pattern**
 ```python
 # Print 5 rows of stars
 for row in range(1, 6):
@@ -12,8 +11,7 @@ for row in range(1, 6):
     print()
 ```
 
-## Challenge 2: Sum Numbers
-
+**Challenge 2: Sum Numbers**
 ```python
 # Add up all numbers from 1 to 100
 total = 0
@@ -23,8 +21,7 @@ for number in range(1, 101):
 print(f"Sum of 1-100: {total}")
 ```
 
-## Challenge 3: Even or Odd
-
+**Challenge 3: Even or Odd**
 ```python
 # Print numbers 1-20, label each
 for number in range(1, 21):
@@ -34,8 +31,7 @@ for number in range(1, 21):
         print(f"{number} is ODD")
 ```
 
-## Challenge 4: Multiplication Grid
-
+**Challenge 4: Multiplication Grid**
 ```python
 # Print a 5x5 grid
 for row in range(1, 6):
@@ -45,8 +41,7 @@ for row in range(1, 6):
     print()
 ```
 
-## Challenge 5: Countdown Timer
-
+**Challenge 5: Countdown Timer**
 ```python
 start = input("Countdown from: ")
 if start.isdigit():
@@ -55,9 +50,4 @@ if start.isdigit():
     print("BLAST OFF!")
 ```
 
-## Remember
-- Nested loops = loop inside loop
-- `%` gets the remainder
-- Use `end=""` to print without new line
-
-You did it! ⭐
+**Tips:** Nested loops = loop inside loop! `%` gets the remainder (great for checking even/odd). Use `end=""` to print without a new line!

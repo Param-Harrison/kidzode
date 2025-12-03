@@ -1,11 +1,6 @@
 # Challenge: Multiple Times Tables
 
-Show multiple times tables chosen by the user!
-
-## What to Do
-1. Ask how many tables
-2. For each, ask which number
-3. Print each table!
+Challenge time! Show multiple times tables chosen by the user. Ask how many tables they want, then for each one ask which number, and print each table!
 
 ```python
 print("=== MULTIPLE TIMES TABLES ===")
@@ -36,17 +31,6 @@ for table_num in range(how_many):
 print("All done! Great practice!")
 ```
 
-## Remember
-- Loops can be inside loops (nested loops!)
-- `table_num + 1` makes numbering start at 1
-- Outer loop repeats, inner loop does 1-10
+**The trick:** Loops can be inside loops (nested loops)! The outer loop repeats the whole table process. The inner loop does 1-10. `table_num + 1` makes numbering start at 1 (friendly numbers).
 
-## Try This
-Add fireworks back to each answer!
-
-## If Stuck
-- Outer loop repeats the whole table
-- Inner loop does 1-10
-- Use `table_num + 1` for friendly numbers
-
-**CHALLENGE COMPLETE!** 🎉
+Want to make it more fun? Add fireworks back to each answer - celebrate every correct answer!

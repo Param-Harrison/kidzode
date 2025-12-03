@@ -1,10 +1,6 @@
 # Make a Robot Talk
 
-Make a robot that talks!
-
-## What to Do
-1. Press Run
-2. See your robot talk!
+Let's build a robot that can talk! Press Run and watch it come to life.
 
 ```python
 # Comments start with # - Python ignores them
@@ -13,15 +9,6 @@ print("Hello! I am a friendly robot!")
 print("Beep boop! Nice to meet you!")
 ```
 
-## Remember
-- Comments start with `#`
-- Each `print()` makes the robot say something new
+See those lines starting with `#`? Those are comments - Python ignores them, but they help us understand the code!
 
-## Try This
-Change what the robot says!
-
-## If Stuck
-- Press the Run button
-- Put all text in quotes
-
-You did it! ⭐
+Each `print()` makes your robot say something new. Try changing what the robot says - make it funny or friendly!
