@@ -1,14 +1,15 @@
 "use client"
 
 import { TestResult } from "@/hooks/usePyodide"
-import { CheckCircle, XCircle } from "lucide-react"
+import { CheckCircle, XCircle, Star } from "lucide-react"
 
 interface TestResultsProps {
   results: TestResult[]
   isRunning: boolean
+  starRating?: number
 }
 
-export function TestResults({ results, isRunning }: TestResultsProps) {
+export function TestResults({ results, isRunning, starRating = 0 }: TestResultsProps) {
   if (results.length === 0) {
     return null
   }
@@ -17,21 +18,55 @@ export function TestResults({ results, isRunning }: TestResultsProps) {
   const totalCount = results.length
   const allPassed = passedCount === totalCount
 
+  // Star rating messages
+  const starMessages = {
+    3: "Amazing! Perfect code!",
+    2: "Good job! Small improvements needed",
+    1: "Keep trying! You're learning!",
+    0: "Don't give up! Fix the errors and try again!"
+  }
+
   return (
-    <div className={`border-2 border-black p-4 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all ${allPassed ? 'bg-green-100' : 'bg-red-50'}`}>
+    <div className={`border-2 border-black p-4 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all ${
+      starRating === 3 ? 'bg-green-100' : 
+      starRating === 2 ? 'bg-yellow-100' : 
+      starRating === 1 ? 'bg-orange-100' : 
+      'bg-red-50'
+    }`}>
+      {/* Star Rating Display */}
+      {starRating > 0 && (
+        <div className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-black">
+          <div className="flex items-center gap-1">
+            {[1, 2, 3].map((star) => (
+              <Star
+                key={star}
+                className={`h-6 w-6 ${
+                  star <= starRating
+                    ? 'text-yellow-400 fill-current'
+                    : 'text-gray-300'
+                }`}
+              />
+            ))}
+          </div>
+          <span className="font-bold text-lg text-black ml-2">
+            {starMessages[starRating as keyof typeof starMessages]}
+          </span>
+        </div>
+      )}
+      
       <div className="flex items-center gap-2 mb-4">
         {allPassed ? (
           <div className="flex items-center gap-2">
             <CheckCircle className="h-6 w-6 text-green-600" />
             <span className="font-bold text-lg text-green-800">
-              Amazing! All {totalCount} tests passed! 🎉
+              All {totalCount} tests passed! 🎉
             </span>
           </div>
         ) : (
           <div className="flex items-center gap-2">
             <XCircle className="h-6 w-6 text-red-600" />
             <span className="font-bold text-lg text-red-800">
-              Keep going! {passedCount}/{totalCount} passed
+              {passedCount}/{totalCount} tests passed
             </span>
           </div>
         )}

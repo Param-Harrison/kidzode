@@ -13,7 +13,8 @@ powers = [
 ]
 
 # YOUR TURN! Add a weaknesses list
-# HINT: weaknesses = ["water", "loud noises", "chocolate", ...]
+# HINT: Create a list like: weaknesses = ["water", "loud noises", "chocolate", "homework"]
+# Your code here:
 
 # Pick one from each list
 adj = random.choice(adjectives)
@@ -21,6 +22,7 @@ noun = random.choice(nouns)
 power = random.choice(powers)
 # YOUR TURN! Pick a random weakness
 # HINT: weakness = random.choice(weaknesses)
+# Your code here:
 
 # Create the superhero
 superhero_name = adj + " " + noun
@@ -40,5 +42,7 @@ print(f"Name: {superhero_name}")
 print(f"Power: {power}")
 # YOUR TURN! Print the weakness
 # HINT: print(f"Weakness: {weakness}")
+# Your code here:
+
 print()
 print(f"{superhero_name} is here to save the day!")

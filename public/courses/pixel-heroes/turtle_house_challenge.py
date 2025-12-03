@@ -43,10 +43,12 @@ for position in window_positions:
 # YOUR TURN! Add a sun
 # HINT: t.goto(-150, 150) to move to top left
 # HINT: t.circle(20) draws a circle!
+# Your code here:
 
 # YOUR TURN! Add flowers
 # HINT: Use a loop with flower positions like windows
 # HINT: t.circle(10) makes a small flower
+# Your code here:
 
 # BONUS: Add a fence or path!
 

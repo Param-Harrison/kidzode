@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { BookOpen, Book, Hammer, Zap, FileText, CheckCircle } from "lucide-react"
+import { BookOpen, Book, Hammer, Zap, FileText, CheckCircle, Star, Heart } from "lucide-react"
 import { useAuth } from "@/hooks/useAuth"
 
 interface Lesson {
@@ -31,25 +31,33 @@ interface CourseLessonsListProps {
   book: BookData
 }
 
+interface LessonProgress {
+  status: 'not_started' | 'in_progress' | 'completed'
+  rating?: number
+  bookmarked?: boolean
+}
+
 export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
   const { user } = useAuth()
-  const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set())
+  const [lessonProgress, setLessonProgress] = useState<Map<string, LessonProgress>>(new Map())
 
   useEffect(() => {
     const loadProgress = async () => {
-      const completed = new Set<string>()
+      const progressMap = new Map<string, LessonProgress>()
 
       // Check API if user is logged in
       if (user && user.userType === 'student') {
         try {
-          const res = await fetch(`/api/progress?studentId=${user.id}&courseId=${bookId}`)
+          const res = await fetch(`/api/progress/bulk?studentId=${user.id}&courseId=${bookId}`)
           if (res.ok) {
             const data = await res.json()
             if (data.progress) {
               data.progress.forEach((p: any) => {
-                if (p.status === 'completed') {
-                  completed.add(p.lessonId)
-                }
+                progressMap.set(p.lessonId, {
+                  status: p.status,
+                  rating: p.rating,
+                  bookmarked: p.bookmarked || false,
+                })
               })
             }
           }
@@ -58,7 +66,7 @@ export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
         }
       }
 
-      setCompletedLessons(completed)
+      setLessonProgress(progressMap)
     }
 
     loadProgress()
@@ -66,7 +74,6 @@ export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
     // Listen for lesson completion events
     const handleLessonCompleted = (event: CustomEvent) => {
       const { lessonId } = event.detail
-      setCompletedLessons(prev => new Set([...prev, lessonId]))
       // Also reload from API to ensure consistency
       loadProgress()
     }
@@ -79,17 +86,41 @@ export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
   }, [bookId, book, user])
 
   const renderLessonCard = (lesson: Lesson, index: number) => {
-    const isCompleted = completedLessons.has(lesson.id)
+    const progress = lessonProgress.get(lesson.id)
+    const isCompleted = progress?.status === 'completed'
+    const rating = progress?.rating
+    const isBookmarked = progress?.bookmarked || false
 
     return (
       <Link key={lesson.id} href={`/courses/${bookId}/lessons/${lesson.id}`}>
-        <div className={`group h-full flex flex-col justify-between p-5 border-2 border-black rounded-xl transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none bg-card ${isCompleted ? 'bg-green-50 hover:bg-green-100' : 'hover:bg-blue-50'}`}>
+        <div className={`group h-full flex flex-col justify-between p-4 sm:p-5 border-2 border-black rounded-xl transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none bg-card ${isCompleted ? 'bg-green-50 hover:bg-green-100' : 'hover:bg-blue-50'}`}>
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div className={`flex h-8 w-8 items-center justify-center rounded-full border-2 border-black font-bold text-sm transition-colors ${isCompleted ? 'bg-green-400 text-white' : 'bg-muted group-hover:bg-white'}`}>
                 {isCompleted ? <CheckCircle className="h-5 w-5" /> : index + 1}
               </div>
-              <BookOpen className={`h-5 w-5 transition-colors ${isCompleted ? 'text-green-600' : 'text-muted-foreground group-hover:text-black'}`} />
+              <div className="flex items-center gap-2">
+                {/* Star Rating */}
+                {rating !== undefined && rating > 0 && (
+                  <div className="flex items-center gap-0.5">
+                    {[1, 2, 3].map((star) => (
+                      <Star
+                        key={star}
+                        className={`h-4 w-4 ${
+                          star <= rating
+                            ? 'fill-yellow-400 text-yellow-400'
+                            : 'text-gray-300'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                )}
+                {/* Bookmark */}
+                {isBookmarked && (
+                  <Heart className="h-4 w-4 fill-red-500 text-red-500" />
+                )}
+                <BookOpen className={`h-5 w-5 transition-colors ${isCompleted ? 'text-green-600' : 'text-muted-foreground group-hover:text-black'}`} />
+              </div>
             </div>
             <div>
               <div className="font-bold text-lg leading-tight group-hover:text-primary transition-colors mb-1">
@@ -146,7 +177,7 @@ export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
               </div>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {project.lessons.map((lesson, lessonIndex) => renderLessonCard(lesson, lessonIndex))}
             </div>
           </div>
@@ -157,21 +188,47 @@ export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
 
   return (
     <div className="space-y-4">
-      {book.children?.map((lesson, index) => (
-        <Link key={lesson.id} href={`/courses/${bookId}/lessons/${lesson.id}`}>
-          <div className={`group flex items-center justify-between p-4 border-2 border-black rounded-lg transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none bg-card ${completedLessons.has(lesson.id) ? 'bg-green-50 hover:bg-green-100' : 'hover:bg-blue-50'}`}>
-            <div className="flex items-center gap-4">
-              <div className={`flex h-10 w-10 items-center justify-center rounded-full border-2 border-black font-bold transition-colors ${completedLessons.has(lesson.id) ? 'bg-green-400 text-white' : 'bg-white group-hover:bg-white'}`}>
-                {completedLessons.has(lesson.id) ? <CheckCircle className="h-6 w-6" /> : index + 1}
+      {book.children?.map((lesson, index) => {
+        const progress = lessonProgress.get(lesson.id)
+        const isCompleted = progress?.status === 'completed'
+        const rating = progress?.rating
+        const isBookmarked = progress?.bookmarked || false
+
+        return (
+          <Link key={lesson.id} href={`/courses/${bookId}/lessons/${lesson.id}`}>
+            <div className={`group flex items-center justify-between p-4 border-2 border-black rounded-lg transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none bg-card ${isCompleted ? 'bg-green-50 hover:bg-green-100' : 'hover:bg-blue-50'}`}>
+              <div className="flex items-center gap-4">
+                <div className={`flex h-10 w-10 items-center justify-center rounded-full border-2 border-black font-bold transition-colors ${isCompleted ? 'bg-green-400 text-white' : 'bg-white group-hover:bg-white'}`}>
+                  {isCompleted ? <CheckCircle className="h-6 w-6" /> : index + 1}
+                </div>
+                <div className="font-medium group-hover:text-black">{lesson.name}</div>
               </div>
-              <div className="font-medium group-hover:text-black">{lesson.name}</div>
+              <div className="flex items-center gap-2">
+                {/* Star Rating */}
+                {rating !== undefined && rating > 0 && (
+                  <div className="flex items-center gap-0.5">
+                    {[1, 2, 3].map((star) => (
+                      <Star
+                        key={star}
+                        className={`h-4 w-4 ${
+                          star <= rating
+                            ? 'fill-yellow-400 text-yellow-400'
+                            : 'text-gray-300'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                )}
+                {/* Bookmark */}
+                {isBookmarked && (
+                  <Heart className="h-4 w-4 fill-red-500 text-red-500" />
+                )}
+                <BookOpen className={`h-5 w-5 ${isCompleted ? 'text-green-600' : 'text-muted-foreground group-hover:text-black'}`} />
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <BookOpen className={`h-5 w-5 ${completedLessons.has(lesson.id) ? 'text-green-600' : 'text-muted-foreground group-hover:text-black'}`} />
-            </div>
-          </div>
-        </Link>
-      ))}
+          </Link>
+        )
+      })}
     </div>
   )
 }

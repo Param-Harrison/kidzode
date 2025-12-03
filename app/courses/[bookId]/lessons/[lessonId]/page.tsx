@@ -5,6 +5,8 @@ import { PythonEditor } from "@/components/python-editor/PythonEditor"
 import { useAuth } from "@/hooks/useAuth"
 import { Loader2, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { RatingStars } from "@/components/RatingStars"
+import { BookmarkButton } from "@/components/BookmarkButton"
 import Link from "next/link"
 
 interface BookData {
@@ -59,6 +61,9 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
   const [studentId, setStudentId] = useState<number | null>(null)
   const [prevLesson, setPrevLesson] = useState<{ id: string; name: string } | null>(null)
   const [nextLesson, setNextLesson] = useState<{ id: string; name: string } | null>(null)
+  const [userRating, setUserRating] = useState<number | undefined>(undefined)
+  const [averageRating, setAverageRating] = useState<number | undefined>(undefined)
+  const [isBookmarked, setIsBookmarked] = useState<boolean>(false)
 
   // Load student ID from user
   useEffect(() => {
@@ -159,6 +164,32 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
         setTests(lesson.tests || [])
         setLessonType(lesson.type)
 
+        // Load user rating and bookmark status
+        if (studentId) {
+          try {
+            // Load rating
+            const ratingRes = await fetch(`/api/ratings?studentId=${studentId}&lessonId=${lessonId}`)
+            if (ratingRes.ok) {
+              const ratingData = await ratingRes.json()
+              if (ratingData.rating) {
+                setUserRating(ratingData.rating)
+              }
+              if (ratingData.averageRating) {
+                setAverageRating(ratingData.averageRating)
+              }
+            }
+
+            // Load bookmark
+            const bookmarkRes = await fetch(`/api/bookmarks?studentId=${studentId}&lessonId=${lessonId}`)
+            if (bookmarkRes.ok) {
+              const bookmarkData = await bookmarkRes.json()
+              setIsBookmarked(bookmarkData.bookmarked || false)
+            }
+          } catch (err) {
+            console.error('Failed to load rating/bookmark:', err)
+          }
+        }
+
         // Load hints if available
         if (lesson.hints) {
           try {
@@ -224,10 +255,11 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
     }
   }
 
-  const handleLessonComplete = async () => {
+  const handleLessonComplete = async (starRating?: number, testResults?: any) => {
     if (!studentId) return
 
     try {
+      // Save progress
       const response = await fetch('/api/progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -242,12 +274,32 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
       
       if (response.ok) {
         setProgress({ status: 'completed', data: { code } })
-        // Trigger a small delay to ensure state updates, then refresh progress
-        setTimeout(() => {
-          // This will help UI refresh when navigating back
-          window.dispatchEvent(new CustomEvent('lesson-completed', { detail: { lessonId } }))
-        }, 100)
       }
+
+      // Save rating if provided (from test results)
+      if (starRating !== undefined && starRating > 0) {
+        try {
+          await fetch('/api/ratings', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              studentId,
+              lessonId,
+              courseId: bookId,
+              rating: starRating,
+              testResults: testResults
+            })
+          })
+        } catch (err) {
+          console.error('Failed to save rating:', err)
+        }
+      }
+
+      // Trigger a small delay to ensure state updates, then refresh progress
+      setTimeout(() => {
+        // This will help UI refresh when navigating back
+        window.dispatchEvent(new CustomEvent('lesson-completed', { detail: { lessonId } }))
+      }, 100)
     } catch (err) {
       console.error('Failed to mark lesson as complete:', err)
     }
@@ -327,6 +379,7 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
       progress={progress?.status}
       prevLesson={prevLesson ? { id: prevLesson.id, name: prevLesson.name } : undefined}
       nextLesson={nextLesson ? { id: nextLesson.id, name: nextLesson.name } : undefined}
+      initialBookmarked={isBookmarked}
     />
   )
 }

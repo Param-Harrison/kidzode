@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { CodeHighlighter } from '@/components/code-highlighter'
+import { VoiceOver } from '@/components/VoiceOver'
 import 'katex/dist/katex.min.css'
 
 interface GuideViewerProps {
@@ -13,7 +14,12 @@ interface GuideViewerProps {
 
 export function GuideViewer({ content }: GuideViewerProps) {
   return (
-    <div className="h-full overflow-y-auto p-6 bg-card border-r border-border">
+    <div className="h-full overflow-y-auto p-4 sm:p-6 bg-card border-r-2 border-black">
+      {/* Voice Over Button */}
+      <div className="flex justify-end mb-4">
+        <VoiceOver content={content} />
+      </div>
+      
       <div className="max-w-none space-y-4 prose prose-slate dark:prose-invert">
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}

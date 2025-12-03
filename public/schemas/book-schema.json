@@ -71,6 +71,11 @@
                   "items": {
                     "type": "object",
                     "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": ["compilation", "output", "input", "variable", "text", "variables"],
+                        "description": "Test type: compilation, output, input, variable, text, or variables"
+                      },
                       "in": {
                         "oneOf": [
                           {
@@ -89,9 +94,34 @@
                       "out": {
                         "type": "string",
                         "description": "Expected output pattern (supports regex)"
+                      },
+                      "requiredVariables": {
+                        "type": "array",
+                        "description": "List of required variable names (for variables type)",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "requiredInputs": {
+                        "type": "number",
+                        "description": "Number of required input() calls (for input type)"
+                      },
+                      "requiredText": {
+                        "type": "array",
+                        "description": "List of required text patterns in code (for text type)",
+                        "items": {
+                          "type": "string"
+                        }
                       }
                     },
-                    "required": ["in", "out"]
+                    "anyOf": [
+                      {
+                        "required": ["type", "in", "out"]
+                      },
+                      {
+                        "required": ["type"]
+                      }
+                    ]
                   }
                 }
               },

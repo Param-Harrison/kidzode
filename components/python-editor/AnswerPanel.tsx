@@ -44,8 +44,8 @@ export function AnswerPanel({ answer, isOpen, onClose }: AnswerPanelProps) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-blue-50 w-full max-w-2xl max-h-[80vh] p-6 rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-in fade-in duration-200 p-2 sm:p-4">
+      <div className="bg-blue-50 w-full max-w-2xl max-h-[90vh] sm:max-h-[80vh] p-4 sm:p-6 rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between mb-4 pb-3 border-b-2 border-black">
           <div className="flex items-center gap-2">
@@ -53,10 +53,10 @@ export function AnswerPanel({ answer, isOpen, onClose }: AnswerPanelProps) {
             <h2 className="text-xl font-bold text-black">Complete Answer</h2>
           </div>
           <Button
-            variant="ghost"
+            variant="outline"
             size="sm"
             onClick={onClose}
-            className="h-8 w-8 p-0 border-2 border-black hover:bg-blue-100"
+            className="h-8 w-8 p-0 border-2 border-black bg-white hover:bg-blue-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none font-bold"
           >
             <X className="h-4 w-4" />
           </Button>
@@ -71,10 +71,10 @@ export function AnswerPanel({ answer, isOpen, onClose }: AnswerPanelProps) {
               <p className="text-sm text-yellow-900">Understanding how it works is more important than just copying the answer.</p>
             </div>
             <Button
-              variant="ghost"
+              variant="outline"
               size="sm"
               onClick={() => setShowWarning(false)}
-              className="h-6 w-6 p-0 border-2 border-black hover:bg-yellow-300"
+              className="h-6 w-6 p-0 border-2 border-black bg-white hover:bg-yellow-300 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none font-bold"
             >
               <X className="h-3 w-3" />
             </Button>
@@ -144,11 +144,11 @@ export function AnswerPanel({ answer, isOpen, onClose }: AnswerPanelProps) {
         </div>
 
         {/* Footer with buttons */}
-        <div className="flex items-center justify-between gap-3 pt-3 border-t-2 border-black">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-3 pt-3 border-t-2 border-black">
           <Button
             onClick={handleCopy}
             disabled={!codeToCopy}
-            className="bg-blue-400 hover:bg-blue-500 text-black border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none"
+            className="bg-blue-400 hover:bg-blue-500 text-black border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none"
           >
             {copied ? (
               <>
@@ -164,7 +164,7 @@ export function AnswerPanel({ answer, isOpen, onClose }: AnswerPanelProps) {
           </Button>
           <Button
             onClick={onClose}
-            className="bg-white hover:bg-blue-100 text-black border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            className="bg-white hover:bg-blue-100 text-black border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
           >
             Close
           </Button>

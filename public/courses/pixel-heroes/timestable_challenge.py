@@ -16,10 +16,11 @@ for table_num in range(how_many):
     print()
     print(f"=== {table_number} TIMES TABLE ===")
     
-    # Print the times table
-    for number in range(1, 11):
-        answer = table_number * number
-        print(f"{table_number} x {number} = {answer}")
+    # YOUR TURN! Print the times table
+    # HINT: Use a for loop from 1 to 10
+    # HINT: Calculate answer = table_number * number
+    # HINT: Print in format: print(f"{table_number} x {number} = {answer}")
+    # Your code here:
     
     print()
 

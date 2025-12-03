@@ -34,8 +34,8 @@ export function HintsPanel({ hints, isOpen, onClose }: HintsPanelProps) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-yellow-50 w-full max-w-2xl max-h-[80vh] p-6 rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-in fade-in duration-200 p-2 sm:p-4">
+      <div className="bg-yellow-50 w-full max-w-2xl max-h-[90vh] sm:max-h-[80vh] p-4 sm:p-6 rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between mb-4 pb-3 border-b-2 border-black">
           <div className="flex items-center gap-2">
@@ -43,10 +43,10 @@ export function HintsPanel({ hints, isOpen, onClose }: HintsPanelProps) {
             <h2 className="text-xl font-bold text-black">Hint {hintNumber} of {totalHints}</h2>
           </div>
           <Button
-            variant="ghost"
+            variant="outline"
             size="sm"
             onClick={onClose}
-            className="h-8 w-8 p-0 border-2 border-black hover:bg-yellow-100"
+            className="h-8 w-8 p-0 border-2 border-black bg-white hover:bg-yellow-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none font-bold"
           >
             <X className="h-4 w-4" />
           </Button>
@@ -115,11 +115,11 @@ export function HintsPanel({ hints, isOpen, onClose }: HintsPanelProps) {
         </div>
 
         {/* Footer with buttons */}
-        <div className="flex items-center justify-between gap-3 pt-3 border-t-2 border-black">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-3 pt-3 border-t-2 border-black">
           <Button
             onClick={handleReset}
             variant="outline"
-            className="border-2 border-black bg-white hover:bg-yellow-100 font-bold"
+            className="border-2 border-black bg-white hover:bg-yellow-100 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none font-bold disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none"
             disabled={currentHintIndex === 0}
           >
             Reset Hints
@@ -128,14 +128,14 @@ export function HintsPanel({ hints, isOpen, onClose }: HintsPanelProps) {
             <Button
               onClick={onClose}
               variant="outline"
-              className="border-2 border-black bg-white hover:bg-yellow-100 font-bold"
+              className="border-2 border-black bg-white hover:bg-yellow-100 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none font-bold"
             >
               Close
             </Button>
             <Button
               onClick={handleNextHint}
               disabled={!hasMoreHints}
-              className="bg-yellow-400 hover:bg-yellow-500 text-black border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none"
+              className="bg-yellow-400 hover:bg-yellow-500 text-black border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none"
             >
               Next Hint
               <ChevronRight className="ml-2 h-4 w-4" />

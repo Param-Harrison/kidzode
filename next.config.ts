@@ -6,9 +6,7 @@ if (typeof global.localStorage !== 'undefined') {
 }
 
 const nextConfig: NextConfig = {
-  experimental: {
-    nodeMiddleware: true
-  }
+  // Removed deprecated nodeMiddleware experimental option
 };
 
 export default nextConfig;

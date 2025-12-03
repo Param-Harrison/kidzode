@@ -37,7 +37,12 @@
           "py": "rainbow_name_challenge.py",
           "hints": "rainbow_name_challenge_hints.md",
           "answer": "rainbow_name_challenge_answer.md",
-          "tests": [{"in": "", "out": "Hello.*AMAZING"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "text", "requiredText": ["Hello", "AMAZING"]},
+            {"type": "variables", "requiredVariables": ["my_name", "friend_name"]},
+            {"type": "output", "in": "", "out": "Hello.*AMAZING"}
+          ]
         }
       ]
     },
@@ -75,7 +80,13 @@
           "py": "robot_conversation_challenge.py",
           "hints": "robot_conversation_challenge_hints.md",
           "answer": "robot_conversation_challenge_answer.md",
-          "tests": [{"in": ["Jack", "10"], "out": "Hello.*Jack"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "input", "requiredInputs": 2},
+            {"type": "variables", "requiredVariables": ["name", "age"]},
+            {"type": "text", "requiredText": ["Hello", "age"]},
+            {"type": "output", "in": ["Jack", "10"], "out": "Hello.*Jack"}
+          ]
         }
       ]
     },
@@ -127,7 +138,13 @@
           "py": "magic8_challenge.py",
           "hints": "magic8_challenge_hints.md",
           "answer": "magic8_challenge_answer.md",
-          "tests": [{"in": ["yes", "Will I win?"], "out": "Magic 8-Ball says"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "variables", "requiredVariables": ["yes_fortunes", "no_fortunes", "maybe_fortunes"]},
+            {"type": "input", "requiredInputs": 2},
+            {"type": "text", "requiredText": ["Magic 8-Ball says"]},
+            {"type": "output", "in": ["yes", "Will I win?"], "out": "Magic 8-Ball says"}
+          ]
         }
       ]
     },
@@ -207,7 +224,11 @@
           "py": "turtle_house_challenge.py",
           "hints": "turtle_house_challenge_hints.md",
           "answer": "turtle_house_challenge_answer.md",
-          "tests": [{"in": "", "out": "turtle"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "text", "requiredText": ["turtle", "circle"]},
+            {"type": "output", "in": "", "out": "turtle"}
+          ]
         }
       ]
     },
@@ -259,7 +280,13 @@
           "py": "countdown_challenge.py",
           "hints": "countdown_challenge_hints.md",
           "answer": "countdown_challenge_answer.md",
-          "tests": [{"in": "5", "out": "BLAST OFF"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "input", "requiredInputs": 1},
+            {"type": "text", "requiredText": ["int", "range"]},
+            {"type": "text", "requiredText": ["BLAST OFF"]},
+            {"type": "output", "in": "5", "out": "BLAST OFF"}
+          ]
         }
       ]
     },
@@ -311,7 +338,12 @@
           "py": "superhero_challenge.py",
           "hints": "superhero_challenge_hints.md",
           "answer": "superhero_challenge_answer.md",
-          "tests": [{"in": "", "out": "Name.*Power"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "variables", "requiredVariables": ["weaknesses"]},
+            {"type": "text", "requiredText": ["Name", "Power", "Weakness"]},
+            {"type": "output", "in": "", "out": "Name.*Power"}
+          ]
         }
       ]
     },
@@ -349,7 +381,13 @@
           "py": "timestable_challenge.py",
           "hints": "timestable_challenge_hints.md",
           "answer": "timestable_challenge_answer.md",
-          "tests": [{"in": ["2", "3", "4"], "out": "x"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "input", "requiredInputs": 2},
+            {"type": "text", "requiredText": ["int", "range"]},
+            {"type": "text", "requiredText": ["TIMES TABLE"]},
+            {"type": "output", "in": ["2", "3", "4"], "out": "x"}
+          ]
         }
       ]
     },
@@ -408,7 +446,13 @@
           "py": "adventure_challenge.py",
           "hints": "adventure_challenge_hints.md",
           "answer": "adventure_challenge_answer.md",
-          "tests": [{"in": "Rose", "out": "THE END"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "input", "requiredInputs": 1},
+            {"type": "variables", "requiredVariables": ["hero_name"]},
+            {"type": "text", "requiredText": ["if", "else"]},
+            {"type": "output", "in": "Rose", "out": "THE END"}
+          ]
         }
       ]
     },
@@ -488,7 +532,13 @@
           "py": "password_challenge.py",
           "hints": "password_challenge_hints.md",
           "answer": "password_challenge_answer.md",
-          "tests": [{"in": "12", "out": "password"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "input", "requiredInputs": 1},
+            {"type": "text", "requiredText": ["int", "range"]},
+            {"type": "text", "requiredText": ["random.choice", "all_chars"]},
+            {"type": "output", "in": "12", "out": "password"}
+          ]
         }
       ]
     },
@@ -547,7 +597,13 @@
           "py": "rps_challenge.py",
           "hints": "rps_challenge_hints.md",
           "answer": "rps_challenge_answer.md",
-          "tests": [{"in": ["rock", "paper", "scissors", "rock", "paper"], "out": "CHAMPION"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "variables", "requiredVariables": ["player_score", "computer_score"]},
+            {"type": "text", "requiredText": ["range", "if", "elif"]},
+            {"type": "text", "requiredText": ["CHAMPION"]},
+            {"type": "output", "in": ["rock", "paper", "scissors", "rock", "paper"], "out": "CHAMPION"}
+          ]
         }
       ]
     },
@@ -613,7 +669,13 @@
           "py": "hangman_challenge.py",
           "hints": "hangman_challenge_hints.md",
           "answer": "hangman_challenge_answer.md",
-          "tests": [{"in": "animals", "out": "word"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "variables", "requiredVariables": ["animals", "colors", "sports"]},
+            {"type": "input", "requiredInputs": 1},
+            {"type": "text", "requiredText": ["if", "elif", "random.choice"]},
+            {"type": "output", "in": "animals", "out": "word"}
+          ]
         }
       ]
     },
@@ -658,7 +720,13 @@
           "py": "chatbot_challenge.py",
           "hints": "chatbot_challenge_hints.md",
           "answer": "chatbot_challenge_answer.md",
-          "tests": [{"in": ["Rose", "I'm sad"], "out": "sorry"}]
+          "tests": [
+            {"type": "compilation", "in": "", "out": ""},
+            {"type": "input", "requiredInputs": 2},
+            {"type": "variables", "requiredVariables": ["user_name", "user_input"]},
+            {"type": "text", "requiredText": ["if", "in", "elif"]},
+            {"type": "output", "in": ["Rose", "I'm sad"], "out": "sorry"}
+          ]
         }
       ]
     }

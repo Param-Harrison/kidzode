@@ -12,9 +12,20 @@ export interface ConsoleOutput {
 
 export interface TestResult {
   passed: boolean
+  type?: 'compilation' | 'text' | 'input' | 'variables' | 'output' | 'logic'
   expected?: string
   actual?: string
   error?: string
+  message?: string
+}
+
+export interface TestConfig {
+  type?: 'compilation' | 'text' | 'input' | 'variables' | 'output' | 'logic'
+  in?: string | string[]
+  out?: string | any[]
+  requiredText?: string[]
+  requiredInputs?: number
+  requiredVariables?: string[]
 }
 
 // Package cache to avoid reloading
@@ -239,84 +250,211 @@ sys.modules['builtins'].input = _browser_input
 
   const runTests = useCallback(async (
     code: string,
-    tests: Array<{ in: string | string[]; out: string | any[] }>
-  ): Promise<TestResult[]> => {
+    tests: Array<TestConfig>
+  ): Promise<{ results: TestResult[]; starRating: number }> => {
     if (!pyodideRef.current || status !== 'ready') {
-      return []
+      return { results: [], starRating: 0 }
     }
 
     const results: TestResult[] = []
+    const testType = tests[0]?.type || 'output' // Default to output if no type specified
 
+    // Test 1: Compilation Test (always run first)
+    let compilationPassed = false
+    try {
+      clearOutput()
+      const requiredPackages = detectPackages(code)
+      if (requiredPackages.length > 0) {
+        await loadPackages(requiredPackages)
+      }
+      // Try to compile/parse the code
+      await pyodideRef.current.runPythonAsync(code)
+      compilationPassed = true
+      results.push({
+        type: 'compilation',
+        passed: true,
+        message: 'Code compiles successfully!'
+      })
+    } catch (error: any) {
+      compilationPassed = false
+      results.push({
+        type: 'compilation',
+        passed: false,
+        error: error.message,
+        message: 'Code has syntax errors'
+      })
+    }
+
+    // If compilation fails, return early with 0 stars
+    if (!compilationPassed) {
+      return { results, starRating: 0 }
+    }
+
+    // Test 2: Text Test (check for required strings)
     for (const test of tests) {
-      try {
-        clearOutput()
+      if (test.type === 'text' && test.requiredText) {
+        const codeLower = code.toLowerCase()
+        const missingTexts: string[] = []
+        const foundTexts: string[] = []
         
-        // Detect and load required packages
-        const requiredPackages = detectPackages(code)
-        if (requiredPackages.length > 0) {
-          await loadPackages(requiredPackages)
+        for (const requiredText of test.requiredText) {
+          if (codeLower.includes(requiredText.toLowerCase())) {
+            foundTexts.push(requiredText)
+          } else {
+            missingTexts.push(requiredText)
+          }
         }
-
-        // Prepare input queue
-        const inputs = Array.isArray(test.in) ? test.in : (test.in ? [test.in] : [])
         
-        // Setup input queue and capture output
-        await pyodideRef.current.runPythonAsync(`
-import sys
-from io import StringIO
-
-# Set input queue
-_browser_input.set_queue(${JSON.stringify(inputs)})
-
-# Capture output
-_old_stdout = sys.stdout
-sys.stdout = StringIO()
-        `)
-
-        // Run the code
-        await pyodideRef.current.runPythonAsync(code)
-        
-        // Get output
-        const output = await pyodideRef.current.runPythonAsync(`
-result = sys.stdout.getvalue()
-sys.stdout = _old_stdout
-result
-        `)
-
-        // Check output against expected pattern
-        const expected = typeof test.out === 'string' ? test.out : JSON.stringify(test.out)
-        const actual = output.trim()
-        
-        // Use regex matching with proper escaping
-        let passed = false
-        try {
-          // Escape special regex characters except .* which we want to keep as wildcard
-          const escapedPattern = expected
-            .replace(/[\\^$*+?.()|[\]{}]/g, '\\$&')  // Escape special chars
-            .replace(/\\\.\\\*/g, '.*')              // Restore .* as wildcard
-          
-          const regex = new RegExp(escapedPattern, 'is')  // i=case insensitive, s=dotall
-          passed = regex.test(actual)
-        } catch (regexError) {
-          // If regex fails, fall back to simple includes check
-          passed = actual.includes(expected.replace(/\.\*/g, ''))
-        }
-
         results.push({
-          passed,
-          expected,
-          actual,
-        })
-      } catch (error: any) {
-        results.push({
-          passed: false,
-          expected: typeof test.out === 'string' ? test.out : JSON.stringify(test.out),
-          error: error.message,
+          type: 'text',
+          passed: missingTexts.length === 0,
+          message: missingTexts.length === 0 
+            ? `Found all required text: ${foundTexts.join(', ')}`
+            : `Missing: ${missingTexts.join(', ')}`,
+          expected: test.requiredText.join(', '),
+          actual: foundTexts.join(', ')
         })
       }
     }
 
-    return results
+    // Test 3: Input Test (check for input() calls)
+    for (const test of tests) {
+      if (test.type === 'input' && test.requiredInputs !== undefined) {
+        const inputMatches = code.match(/input\s*\(/g)
+        const inputCount = inputMatches ? inputMatches.length : 0
+        const passed = inputCount >= test.requiredInputs
+        
+        results.push({
+          type: 'input',
+          passed,
+          message: passed
+            ? `Found ${inputCount} input() call(s)`
+            : `Need at least ${test.requiredInputs} input() call(s), found ${inputCount}`,
+          expected: `${test.requiredInputs} input() call(s)`,
+          actual: `${inputCount} input() call(s)`
+        })
+      }
+    }
+
+    // Test 4: Variables Test (check for required variables)
+    for (const test of tests) {
+      if (test.type === 'variables' && test.requiredVariables) {
+        const codeLower = code.toLowerCase()
+        const missingVars: string[] = []
+        const foundVars: string[] = []
+        
+        for (const varName of test.requiredVariables) {
+          // Check for variable assignment (varName = ...)
+          const varPattern = new RegExp(`\\b${varName}\\s*=`, 'i')
+          if (varPattern.test(code)) {
+            foundVars.push(varName)
+          } else {
+            missingVars.push(varName)
+          }
+        }
+        
+        results.push({
+          type: 'variables',
+          passed: missingVars.length === 0,
+          message: missingVars.length === 0
+            ? `Found all required variables: ${foundVars.join(', ')}`
+            : `Missing variables: ${missingVars.join(', ')}`,
+          expected: test.requiredVariables.join(', '),
+          actual: foundVars.join(', ')
+        })
+      }
+    }
+
+    // Test 5: Output Test (run code and check output pattern)
+    for (const test of tests) {
+      if ((test.type === 'output' || test.type === 'logic' || !test.type) && test.out) {
+        try {
+          clearOutput()
+          
+          const requiredPackages = detectPackages(code)
+          if (requiredPackages.length > 0) {
+            await loadPackages(requiredPackages)
+          }
+
+          const inputs = Array.isArray(test.in) ? test.in : (test.in ? [test.in] : [])
+          
+          await pyodideRef.current.runPythonAsync(`
+import sys
+from io import StringIO
+
+_browser_input.set_queue(${JSON.stringify(inputs)})
+
+_old_stdout = sys.stdout
+sys.stdout = StringIO()
+          `)
+
+          await pyodideRef.current.runPythonAsync(code)
+          
+          const output = await pyodideRef.current.runPythonAsync(`
+result = sys.stdout.getvalue()
+sys.stdout = _old_stdout
+result
+          `)
+
+          const expected = typeof test.out === 'string' ? test.out : JSON.stringify(test.out)
+          const actual = output.trim()
+          
+          let passed = false
+          try {
+            const escapedPattern = expected
+              .replace(/[\\^$*+?.()|[\]{}]/g, '\\$&')
+              .replace(/\\\.\\\*/g, '.*')
+            
+            const regex = new RegExp(escapedPattern, 'is')
+            passed = regex.test(actual)
+          } catch (regexError) {
+            passed = actual.includes(expected.replace(/\.\*/g, ''))
+          }
+
+          results.push({
+            type: test.type || 'output',
+            passed,
+            expected,
+            actual,
+            message: passed ? 'Output matches expected pattern!' : 'Output does not match expected pattern'
+          })
+        } catch (error: any) {
+          results.push({
+            type: test.type || 'output',
+            passed: false,
+            expected: typeof test.out === 'string' ? test.out : JSON.stringify(test.out),
+            error: error.message,
+            message: 'Error running code'
+          })
+        }
+      }
+    }
+
+    // Calculate star rating based on results
+    // 3 stars: All tests pass perfectly
+    // 2 stars: No blocking errors, but some improvements possible (e.g., missing optional text, minor issues)
+    // 1 star: Major improvements needed (e.g., missing required variables, wrong output pattern)
+    // 0 stars: Code doesn't compile or critical failures
+    
+    const criticalTests = results.filter(r => r.type === 'compilation' || r.type === 'variables' || r.type === 'output')
+    const optionalTests = results.filter(r => r.type === 'text' || r.type === 'input')
+    
+    const criticalPassed = criticalTests.every(r => r.passed)
+    const optionalPassed = optionalTests.length > 0 ? optionalTests.every(r => r.passed) : true
+    const allPassed = results.every(r => r.passed)
+    
+    let starRating = 0
+    if (!criticalPassed) {
+      starRating = 0 // Code doesn't compile or critical failures
+    } else if (allPassed) {
+      starRating = 3 // All tests pass perfectly
+    } else if (criticalPassed && optionalTests.length > 0 && optionalTests.some(r => r.passed)) {
+      starRating = 2 // No blocking errors, but some improvements possible
+    } else {
+      starRating = 1 // Major improvements needed
+    }
+
+    return { results, starRating }
   }, [status, clearOutput, detectPackages, loadPackages])
 
   const handleInput = useCallback((value: string) => {

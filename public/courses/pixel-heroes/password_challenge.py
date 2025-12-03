@@ -10,14 +10,17 @@ print()
 length = input("How long should your password be? (8-20): ")
 password_length = int(length)
 
-# Generate password
-password = ""
-
-for i in range(password_length):
-    password = password + random.choice(all_chars)
+# YOUR TURN! Generate password
+# HINT: Start with empty string: password = ""
+# HINT: Use a for loop to add random characters
+# HINT: Inside loop: password = password + random.choice(all_chars)
+# Your code here:
 
 print()
 print(f"Your {password_length}-character password is:")
-print(password)
+# YOUR TURN! Print the password
+# HINT: print(password)
+# Your code here:
+
 print()
 print("Copy this password and keep it safe!")

@@ -31,13 +31,12 @@ guessed_letters = ""
 wrong_guesses = 0
 max_wrong = 6
 
-# Show the word with blanks
-print("Word: ", end="")
-for letter in secret_word:
-    if letter in guessed_letters:
-        print(letter, end=" ")
-    else:
-        print("_", end=" ")
+# YOUR TURN! Show the word with blanks
+# HINT: Use a for loop to go through each letter in secret_word
+# HINT: If letter in guessed_letters: print the letter
+# HINT: Else: print "_"
+# HINT: Use end=" " to print on same line
+# Your code here:
 
 print()
 print(f"Wrong guesses: {wrong_guesses}/{max_wrong}")
@@ -46,9 +45,7 @@ print()
 # Ask for a guess
 guess = input("Guess a letter: ")
 
-# Check if correct
-if guess in secret_word:
-    print(f"CORRECT! '{guess}' is in the word!")
-else:
-    print(f"WRONG! '{guess}' is not in the word.")
-    wrong_guesses = wrong_guesses + 1
+# YOUR TURN! Check if correct and update game state
+# HINT: If guess in secret_word: print correct message, add to guessed_letters
+# HINT: Else: print wrong message, wrong_guesses = wrong_guesses + 1
+# Your code here:

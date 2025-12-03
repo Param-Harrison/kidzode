@@ -19,22 +19,14 @@ print()
 # Get user input
 user_input = input("You: ")
 
-# Mood detection using keyword checking
-if "sad" in user_input or "unhappy" in user_input:
-    print(f"Bot: I'm sorry you're feeling sad, {user_name}.")
-    print("Bot: Want to hear a joke to cheer you up?")
-elif "happy" in user_input or "great" in user_input or "good" in user_input:
-    print(f"Bot: That's wonderful, {user_name}! I'm happy you're happy!")
-elif "excited" in user_input or "amazing" in user_input:
-    print(f"Bot: Wow! Your excitement is contagious, {user_name}!")
-elif "angry" in user_input or "mad" in user_input:
-    print(f"Bot: I understand you're upset, {user_name}. Want to talk about it?")
-elif user_input == "tell me a joke" or user_input == "joke":
-    joke = random.choice(jokes)
-    print(f"Bot: {joke}")
-elif user_input == "hello":
-    print(f"Bot: Hello, {user_name}! How are you feeling today?")
-elif user_input == "goodbye":
-    print(f"Bot: Goodbye, {user_name}! Hope you feel better!")
-else:
-    print(f"Bot: I'm here for you, {user_name}. Tell me how you're feeling!")
+# YOUR TURN! Mood detection using keyword checking
+# HINT: Use if/elif/else to check for keywords in user_input
+# HINT: Check for "sad" or "unhappy": print comforting message
+# HINT: Check for "happy" or "great" or "good": print positive message
+# HINT: Check for "excited" or "amazing": print excited message
+# HINT: Check for "angry" or "mad": print understanding message
+# HINT: Check if user_input == "tell me a joke" or "joke": print random joke
+# HINT: Check if user_input == "hello": print greeting
+# HINT: Check if user_input == "goodbye": print farewell
+# HINT: Else: print default message
+# Your code here:

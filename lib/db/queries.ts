@@ -7,6 +7,9 @@ import {
   classrooms,
   classroomStudents,
   progress,
+  ratings,
+  bookmarks,
+  feedback,
   activityLogs,
   oauthAccounts,
   UserType,
@@ -428,6 +431,168 @@ export async function getCompletedLessonsCount(
 }
 
 // ============================================================================
+// RATINGS
+// ============================================================================
+
+export async function saveRating(
+  studentId: number,
+  courseId: string,
+  lessonId: string,
+  rating: number,
+  testResults?: any
+) {
+  // Check if rating exists
+  const existing = await db
+    .select()
+    .from(ratings)
+    .where(
+      and(
+        eq(ratings.studentId, studentId),
+        eq(ratings.courseId, courseId),
+        eq(ratings.lessonId, lessonId)
+      )
+    )
+    .limit(1);
+
+  if (existing.length > 0) {
+    // Update existing
+    const [updated] = await db
+      .update(ratings)
+      .set({
+        rating,
+        testResults,
+      })
+      .where(eq(ratings.id, existing[0].id))
+      .returning();
+
+    return updated;
+  } else {
+    // Insert new
+    const [newRating] = await db
+      .insert(ratings)
+      .values({
+        studentId,
+        courseId,
+        lessonId,
+        rating,
+        testResults,
+      })
+      .returning();
+
+    return newRating;
+  }
+}
+
+export async function getRating(studentId: number, lessonId: string) {
+  const result = await db
+    .select()
+    .from(ratings)
+    .where(
+      and(
+        eq(ratings.studentId, studentId),
+        eq(ratings.lessonId, lessonId)
+      )
+    )
+    .limit(1);
+
+  return result[0] || null;
+}
+
+export async function getAverageRating(lessonId: string) {
+  const result = await db
+    .select({
+      avgRating: sql<number>`AVG(${ratings.rating})`,
+      count: sql<number>`COUNT(*)`,
+    })
+    .from(ratings)
+    .where(eq(ratings.lessonId, lessonId));
+
+  return result[0]?.avgRating ? Number(result[0].avgRating) : null;
+}
+
+// ============================================================================
+// BOOKMARKS
+// ============================================================================
+
+export async function toggleBookmark(
+  studentId: number,
+  courseId: string,
+  lessonId: string,
+  bookmarked: boolean
+) {
+  if (bookmarked) {
+    // Check if already bookmarked
+    const existing = await db
+      .select()
+      .from(bookmarks)
+      .where(
+        and(
+          eq(bookmarks.studentId, studentId),
+          eq(bookmarks.courseId, courseId),
+          eq(bookmarks.lessonId, lessonId)
+        )
+      )
+      .limit(1);
+
+    if (existing.length === 0) {
+      // Insert new bookmark
+      const [newBookmark] = await db
+        .insert(bookmarks)
+        .values({
+          studentId,
+          courseId,
+          lessonId,
+        })
+        .returning();
+
+      return newBookmark;
+    }
+    return existing[0];
+  } else {
+    // Delete bookmark
+    await db
+      .delete(bookmarks)
+      .where(
+        and(
+          eq(bookmarks.studentId, studentId),
+          eq(bookmarks.courseId, courseId),
+          eq(bookmarks.lessonId, lessonId)
+        )
+      );
+
+    return null;
+  }
+}
+
+export async function getBookmark(studentId: number, lessonId: string) {
+  const result = await db
+    .select()
+    .from(bookmarks)
+    .where(
+      and(
+        eq(bookmarks.studentId, studentId),
+        eq(bookmarks.lessonId, lessonId)
+      )
+    )
+    .limit(1);
+
+  return result[0] || null;
+}
+
+export async function getStudentBookmarks(studentId: number, courseId?: string) {
+  const conditions = [eq(bookmarks.studentId, studentId)];
+  if (courseId) {
+    conditions.push(eq(bookmarks.courseId, courseId));
+  }
+
+  return await db
+    .select()
+    .from(bookmarks)
+    .where(and(...conditions))
+    .orderBy(desc(bookmarks.createdAt));
+}
+
+// ============================================================================
 // SUBSCRIPTION MANAGEMENT
 // ============================================================================
 
@@ -439,6 +604,75 @@ export async function getAccountByStripeCustomerId(customerId: string) {
     .limit(1);
 
   return result.length > 0 ? result[0] : null;
+}
+
+// ============================================================================
+// FEEDBACK
+// ============================================================================
+
+export async function saveFeedback(
+  studentId: number,
+  courseId: string,
+  lessonId: string,
+  thumbsUp: boolean,
+  comment?: string
+) {
+  // Check if feedback already exists
+  const existing = await db
+    .select()
+    .from(feedback)
+    .where(
+      and(
+        eq(feedback.studentId, studentId),
+        eq(feedback.courseId, courseId),
+        eq(feedback.lessonId, lessonId)
+      )
+    )
+    .limit(1);
+
+  if (existing.length > 0) {
+    // Update existing feedback
+    const [updated] = await db
+      .update(feedback)
+      .set({
+        thumbsUp,
+        comment: comment || null,
+        updatedAt: new Date(),
+      })
+      .where(eq(feedback.id, existing[0].id))
+      .returning();
+
+    return updated;
+  } else {
+    // Insert new feedback
+    const [newFeedback] = await db
+      .insert(feedback)
+      .values({
+        studentId,
+        courseId,
+        lessonId,
+        thumbsUp,
+        comment: comment || null,
+      })
+      .returning();
+
+    return newFeedback;
+  }
+}
+
+export async function getFeedback(studentId: number, lessonId: string) {
+  const result = await db
+    .select()
+    .from(feedback)
+    .where(
+      and(
+        eq(feedback.studentId, studentId),
+        eq(feedback.lessonId, lessonId)
+      )
+    )
+    .limit(1);
+
+  return result[0] || null;
 }
 
 export async function updateAccountSubscription(

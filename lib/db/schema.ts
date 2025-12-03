@@ -8,6 +8,7 @@ import {
   boolean,
   date,
   jsonb,
+  unique,
 } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 
@@ -126,9 +127,46 @@ export const progress = pgTable('progress', {
   lessonId: varchar('lesson_id', { length: 100 }).notNull(),
   status: varchar('status', { length: 20 }).notNull(), // 'not_started' | 'in_progress' | 'completed'
   completedAt: timestamp('completed_at'),
-  data: jsonb('data'), // Detailed progress data (e.g., test results, code submissions)
+  data: jsonb('data'), // Detailed progress data (e.g., test results, code submissions, star rating)
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 });
+
+export const ratings = pgTable('ratings', {
+  id: serial('id').primaryKey(),
+  studentId: integer('student_id')
+    .notNull()
+    .references(() => students.id, { onDelete: 'cascade' }),
+  courseId: varchar('course_id', { length: 100 }).notNull(),
+  lessonId: varchar('lesson_id', { length: 100 }).notNull(),
+  rating: integer('rating').notNull(), // 1-3 stars based on test results
+  testResults: jsonb('test_results'), // Store detailed test results
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+});
+
+export const bookmarks = pgTable('bookmarks', {
+  id: serial('id').primaryKey(),
+  studentId: integer('student_id')
+    .notNull()
+    .references(() => students.id, { onDelete: 'cascade' }),
+  courseId: varchar('course_id', { length: 100 }).notNull(),
+  lessonId: varchar('lesson_id', { length: 100 }).notNull(),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+});
+
+export const feedback = pgTable('feedback', {
+  id: serial('id').primaryKey(),
+  studentId: integer('student_id')
+    .notNull()
+    .references(() => students.id, { onDelete: 'cascade' }),
+  courseId: varchar('course_id', { length: 100 }).notNull(),
+  lessonId: varchar('lesson_id', { length: 100 }).notNull(),
+  thumbsUp: boolean('thumbs_up').notNull(), // true for thumbs up, false for thumbs down
+  comment: text('comment'), // Optional text feedback
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+}, (table) => ({
+  uniqueFeedback: unique().on(table.studentId, table.courseId, table.lessonId),
+}));
 
 // ============================================================================
 // ACTIVITY LOGS
