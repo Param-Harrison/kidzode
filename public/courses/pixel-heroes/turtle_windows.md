@@ -1,19 +1,10 @@
 # Add Windows Using a Loop
 
-Perfect, Teleporting Turtle! Your house has a door!
-But it's dark inside! Houses need windows!
-Instead of drawing each window separately, let's use a loop to save time!
+Draw 2 windows using a loop - write code once, draw twice!
 
-## 🎯 Today's Mission
-Draw 2 windows using a loop - write the code once, draw twice!
-
-## 📚 Before You Start
-You know how to use `penup()`, `goto()`, and `pendown()` to move without drawing.
-
-## Let's Do It!
-1. Read the code - see the `for` loop drawing 2 windows!
-2. Press the green **Run** button
-3. Watch both windows appear!
+## What to Do
+1. Press Run
+2. Watch both windows appear!
 
 ```python
 import turtle
@@ -65,25 +56,18 @@ for position in window_positions:
 turtle.done()
 ```
 
-## ✨ Magic Moment
-Two windows appear automatically - the loop drew them both!
+## Remember
+- `for position in window_positions:` repeats for each window
+- `position[0]` is x, `position[1]` is y
+- `range(4)` repeats 4 times (perfect for square!)
+- `setheading(0)` points turtle to the right
 
-## 💡 Important Things to Remember
-- `for position in window_positions:` repeats for each window location
-- `position[0]` is the x coordinate, `position[1]` is the y coordinate
-- `range(4)` repeats 4 times (perfect for a square!)
-- `setheading(0)` points the turtle to the right (0 degrees)
-- Loops save you from writing the same code over and over!
+## Try This
+Add a third window! Add `(45, 60)` to the list!
 
-## 🎨 Try This Next!
-Add a third window! Add `(45, 60)` to the `window_positions` list!
+## If Stuck
+- Check numbers in `window_positions`
+- Inner loop must use `range(4)`
+- Use `penup()` before each `goto()`
 
-## 🤔 Stuck? Check This!
-- **Windows in wrong place?** Check the numbers in `window_positions`
-- **Windows not squares?** Make sure the inner loop uses `range(4)`
-- **Lines connecting windows?** Make sure you have `penup()` before each `goto()`
-
-## 🌟 Show Your Parents!
-"Look! I used a loop to draw multiple windows - loops make coding faster!"
-
-You just unlocked the **Loop Master** superpower! ⭐
+You did it! ⭐

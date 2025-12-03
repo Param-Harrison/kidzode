@@ -1,8 +1,3 @@
-print("=== CONDITION EXPERT CHALLENGES ===")
-print()
-
-# Challenge 1: Grade Calculator
-print("Challenge 1: Grade Calculator")
 score = int(input("Enter score (0-100): "))
 
 if score >= 90:
@@ -16,10 +11,6 @@ elif score >= 60:
 else:
     print("Grade: F - Study harder!")
 
-print()
-
-# Challenge 2: Age Category
-print("Challenge 2: Age Category")
 age = int(input("Enter age: "))
 
 if age < 3:
@@ -33,10 +24,6 @@ elif age < 65:
 else:
     print("You're a senior!")
 
-print()
-
-# Challenge 3: Login System
-print("Challenge 3: Login System")
 username = input("Username: ").strip().lower()
 password = input("Password: ")
 
@@ -46,3 +33,29 @@ elif username == "user" and password == "pass456":
     print("Welcome, User!")
 else:
     print("Invalid login!")
+
+temp = int(input("Temperature (F): "))
+raining = input("Is it raining? (yes/no): ").lower()
+
+if temp > 80 and raining == "no":
+    print("Perfect beach day!")
+elif temp > 80 and raining == "yes":
+    print("Stay inside with AC!")
+elif temp < 32:
+    print("Bundle up! It's freezing!")
+elif raining == "yes":
+    print("Bring an umbrella!")
+else:
+    print("Nice day for a walk!")
+
+level = int(input("Player level (1-100): "))
+has_powerup = input("Has powerup? (yes/no): ").lower()
+
+if level < 10 and has_powerup == "no":
+    print("Difficulty: VERY HARD")
+elif level < 10 or has_powerup == "no":
+    print("Difficulty: HARD")
+elif level >= 50 and has_powerup == "yes":
+    print("Difficulty: EASY")
+else:
+    print("Difficulty: MEDIUM")

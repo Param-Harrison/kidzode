@@ -1,19 +1,10 @@
-# Add Different Story Endings
+# Add Different Endings
 
-Perfect, Branching Story Master! Your story has choices!
-But every great story needs different ENDINGS!
-Can you create multiple endings - some good, some bad?
+Create multiple endings - some good, some bad!
 
-## 🎯 Today's Mission
-Add different endings to your story - not everyone wins!
-
-## 📚 Before You Start
-You know how to create nested choices with `if/else`.
-
-## Let's Do It!
-1. Read the code - see the different endings!
-2. Press the green **Run** button
-3. Try different choices to see all the endings!
+## What to Do
+1. Press Run
+2. Try different choices to see all endings!
 
 ```python
 print("=== THE ENCHANTED CASTLE ===")
@@ -49,24 +40,16 @@ else:
     print("MAGICAL ENDING!")
 ```
 
-## ✨ Magic Moment
-Your story has three different endings - happy, magical, and game over!
-
-## 💡 Important Things to Remember
+## Remember
 - Not all endings have to be wins!
-- Different endings make the story more interesting
-- Players will want to try again to see all endings
-- This is how real video games work!
+- Different endings make stories interesting
+- Players will try again to see all endings
 
-## 🎨 Try This Next!
-Add a fourth ending! What if you go up AND find something scary?
+## Try This
+Add a fourth ending!
 
-## 🤔 Stuck? Check This!
-- **All endings the same?** Make sure each path has unique text
-- **Want more endings?** Add more choices with more `if/else` blocks
-- **Testing?** Try all combinations: enter+up, enter+down, walk around
+## If Stuck
+- Make sure each path has unique text
+- Try all combinations to test
 
-## 🌟 Show Your Parents!
-"Look! My story has multiple endings - you have to play it multiple times!"
-
-You just unlocked the **Multiple Endings Creator** superpower! ⭐
+You did it! ⭐

@@ -1,11 +1,10 @@
 import random
 
-# Create a list of possible fortunes
+# List of fortunes
 fortunes = ["Yes, definitely!", "No way!", "Maybe later!"]
 
-# Pick one fortune randomly
+# Pick one randomly
 answer = random.choice(fortunes)
 
-# Show the fortune
 print("The Magic 8-Ball says...")
 print(answer)

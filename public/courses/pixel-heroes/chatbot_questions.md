@@ -1,19 +1,10 @@
 # Chatbot Answers Questions
 
-Perfect, Personal Assistant Creator! Your bot remembers names!
-But chatbots should answer QUESTIONS too!
-Can you make it respond to common questions?
-
-## 🎯 Today's Mission
 Add question-answering abilities to your chatbot!
 
-## 📚 Before You Start
-You know how to use multiple `elif` statements.
-
-## Let's Do It!
-1. Read the code - see all the questions it can answer!
-2. Press the green **Run** button
-3. Ask it questions!
+## What to Do
+1. Press Run
+2. Ask it questions!
 
 ```python
 print("=== MY PERSONAL CHATBOT ===")
@@ -45,24 +36,16 @@ else:
     print("Bot: I'm not sure how to answer that yet. Try asking something else!")
 ```
 
-## ✨ Magic Moment
-Your chatbot can now answer lots of different questions!
-
-## 💡 Important Things to Remember
+## Remember
 - Each `elif` checks for a different question
-- Questions should be exact matches (for now)
-- You can add as many questions as you want
-- The `else` handles unknown questions gracefully
+- Questions should be exact matches
+- Add as many questions as you want
 
-## 🎨 Try This Next!
-Add more questions like "what is your favorite color" or "where do you live"!
+## Try This
+Add more questions!
 
-## 🤔 Stuck? Check This!
-- **Bot doesn't understand?** Make sure you type the question exactly
-- **Want more questions?** Just add more `elif` blocks!
-- **Tired of exact matching?** We'll improve this in the next lesson!
+## If Stuck
+- Type the question exactly
+- Add more `elif` blocks
 
-## 🌟 Show Your Parents!
-"Look! My chatbot can answer questions now - it's getting smarter!"
-
-You just unlocked the **Question Answering Bot** superpower! ⭐
+You did it! ⭐

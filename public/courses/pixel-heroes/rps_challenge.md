@@ -1,16 +1,8 @@
-# Best of 5 Championship Challenge
+# Challenge: Best of 5 Game
 
-Amazing, Score Keeper! Your game tracks scores!
-But one round isn't enough! Let's play BEST OF 5!
-Can you make the game play 5 rounds and declare a champion?
+Play 5 rounds and declare a champion!
 
-## 🎯 Today's Mission
-Create a best-of-5 championship with a final winner!
-
-## 📚 Before You Start
-You know how to keep score and use loops.
-
-## Your Challenge!
+## What to Do
 1. Play 5 rounds
 2. Keep score across all rounds
 3. Declare the final champion!
@@ -75,29 +67,16 @@ else:
     print("IT'S A TIE! PLAY AGAIN!")
 ```
 
-## ✨ Magic Moment
-A complete 5-round championship with a final winner!
+## Remember
+- `for round_num in range(1, 6):` plays 5 rounds
+- Scores accumulate across all rounds
+- Compare final scores to find champion
 
-## 💡 Important Things to Remember
-- `for round_num in range(1, 6):` plays 5 rounds (1, 2, 3, 4, 5)
-- The scores accumulate across all rounds
-- We compare final scores to determine the champion
-- This is like a real tournament!
+## Try This
+Change to best of 7 or best of 10!
 
-## 🎨 Try This Next!
-- Change to best of 7 or best of 10
-- Add a "play again" option at the end
-- Show win percentage
-- Add a hall of fame for champions
+## If Stuck
+- Make sure `for` loop is around the game
+- Score variables must be OUTSIDE the loop
 
-## 🤔 Stuck? Check This!
-- **Only 1 round?** Make sure you have the `for` loop around the game
-- **Scores not adding up?** Check that score variables are OUTSIDE the loop
-- **Want best of 3?** Use `range(1, 4)` instead
-
-## 🌟 Show Your Parents!
-"Look! I made a complete Rock-Paper-Scissors championship game!"
-
-You just unlocked the **Championship Game Creator** superpower! ⭐
-
-**CHALLENGE COMPLETE!** You've finished Project 10! 🎉
+**CHALLENGE COMPLETE!** 🎉

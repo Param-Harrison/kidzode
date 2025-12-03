@@ -1,4 +1,3 @@
-# Change Jack to YOUR name
 name = "Jack"
 
 print("* * * * * * * * * *")

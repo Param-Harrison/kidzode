@@ -1,19 +1,10 @@
 # Count Wrong Guesses
 
-Perfect, Visual Game Designer! Your word display works!
-But Hangman has a limit - too many wrong guesses and you lose!
-Can you count wrong guesses and warn the player?
-
-## 🎯 Today's Mission
 Track wrong guesses and show how many chances are left!
 
-## 📚 Before You Start
-You know how to use variables to track numbers.
-
-## Let's Do It!
-1. Read the code - see the wrong guess counter!
-2. Press the green **Run** button
-3. Make wrong guesses and watch the counter!
+## What to Do
+1. Press Run
+2. Make wrong guesses and watch the counter!
 
 ```python
 print("=== HANGMAN GAME ===")
@@ -56,24 +47,17 @@ else:
         print(f"The word was: {secret_word}")
 ```
 
-## ✨ Magic Moment
-The game now tracks mistakes and can end when you run out of chances!
+## Remember
+- `wrong_guesses = 0` starts at zero
+- `max_wrong = 6` sets the limit
+- Add 1 for each mistake
+- When `wrong_guesses >= max_wrong`, game ends!
 
-## 💡 Important Things to Remember
-- `wrong_guesses = 0` starts the counter at zero
-- `max_wrong = 6` sets the limit (traditional Hangman)
-- We add 1 to wrong guesses for each mistake
-- When `wrong_guesses >= max_wrong`, the game ends!
+## Try This
+Change `max_wrong` to 3 for harder, or 10 for easier!
 
-## 🎨 Try This Next!
-Change `max_wrong` to 3 for a harder game, or 10 for an easier game!
+## If Stuck
+- Make sure you have `wrong_guesses = wrong_guesses + 1`
+- Check the `if wrong_guesses >= max_wrong:` condition
 
-## 🤔 Stuck? Check This!
-- **Counter not increasing?** Make sure you have `wrong_guesses = wrong_guesses + 1`
-- **Game never ends?** Check the `if wrong_guesses >= max_wrong:` condition
-- **Want to test losing?** Guess letters not in "hero" like x, z, q
-
-## 🌟 Show Your Parents!
-"Look! My Hangman counts wrong guesses and can end the game!"
-
-You just unlocked the **Game Rules Enforcer** superpower! ⭐
+You did it! ⭐

@@ -1,19 +1,10 @@
-# Add a Door to Your House
+# Add a Door
 
-Excellent, House Builder! Your house has walls and a roof!
-But how do you get inside? Every house needs a door!
-Let's add one using a special turtle trick!
-
-## 🎯 Today's Mission
 Add a door to your house without drawing extra lines!
 
-## 📚 Before You Start
-You know how to draw squares and triangles with the turtle.
-
-## Let's Do It!
-1. Read the code - notice `penup()` and `pendown()`!
-2. Press the green **Run** button
-3. See the door appear!
+## What to Do
+1. Press Run
+2. See the door appear!
 
 ```python
 import turtle
@@ -53,24 +44,17 @@ t.forward(40)
 turtle.done()
 ```
 
-## ✨ Magic Moment
-A door appears on your house without any extra lines!
+## Remember
+- `penup()` lifts the pen - moves without drawing
+- `pendown()` puts the pen down to draw
+- `goto(x, y)` moves to exact coordinates
 
-## 💡 Important Things to Remember
-- `penup()` lifts the pen so the turtle moves without drawing
-- `pendown()` puts the pen down to start drawing again
-- `goto(x, y)` moves the turtle to exact coordinates
-- This lets you draw in different places without connecting lines!
+## Try This
+Try `goto(70, 0)` to put door on the right side!
 
-## 🎨 Try This Next!
-Try `goto(70, 0)` to put the door on the right side instead!
+## If Stuck
+- Use `penup()` BEFORE `goto()`
+- Use `pendown()` AFTER `goto()`
+- Try different numbers in `goto(x, y)`
 
-## 🤔 Stuck? Check This!
-- **Line to the door?** Make sure you have `penup()` BEFORE `goto()`
-- **No door?** Check that you have `pendown()` AFTER `goto()`
-- **Door in wrong place?** Try different numbers in `goto(x, y)`
-
-## 🌟 Show Your Parents!
-"Look! I learned how to move the turtle without drawing - like lifting a real pen!"
-
-You just unlocked the **Teleporting Turtle** superpower! ⭐
+You did it! ⭐

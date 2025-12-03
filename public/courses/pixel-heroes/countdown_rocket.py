@@ -6,5 +6,5 @@ for number in range(10, 0, -1):
     print(f"T-minus {number}...")
 
 print()
-print("BLAST OFF!")
+print("BLAST OFF! 🚀")
 print("The rocket is launching!")

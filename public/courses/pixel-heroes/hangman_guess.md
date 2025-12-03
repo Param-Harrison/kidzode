@@ -1,16 +1,10 @@
-# Guess a Letter in Hangman
+# Guess a Letter
 
-Welcome, Championship Game Creator! You've built amazing games!
-Now let's create the classic word game - HANGMAN!
-Can you check if a letter is in a secret word?
-
-## 🎯 Today's Mission
 Check if a guessed letter is in the secret word!
 
-## Let's Do It!
-1. Read the code - see how we check for letters!
-2. Press the green **Run** button
-3. Guess a letter!
+## What to Do
+1. Press Run
+2. Guess a letter!
 
 ```python
 print("=== HANGMAN GAME ===")
@@ -29,24 +23,16 @@ else:
     print(f"Sorry! The letter '{guess}' is not in the word.")
 ```
 
-## ✨ Magic Moment
-Python can check if a letter is in a word!
-
-## 💡 Important Things to Remember
+## Remember
 - `in` checks if something is inside something else
-- `if guess in secret_word:` checks if the letter is in the word
+- `if guess in secret_word:` checks if letter is in word
 - This works with any string!
-- This is the foundation of Hangman!
 
-## 🎨 Try This Next!
-Change `secret_word` to your favorite word and test it!
+## Try This
+Change `secret_word` to your favorite word!
 
-## 🤔 Stuck? Check This!
-- **Always says yes?** Make sure your guess is actually in the word
-- **Case sensitive?** "A" and "a" are different - use lowercase
-- **Want to see the word?** That's cheating! But you can `print(secret_word)` for testing
+## If Stuck
+- Use lowercase letters
+- Make sure your guess is in the word
 
-## 🌟 Show Your Parents!
-"Look! I'm building Hangman - it can check if letters are in words!"
-
-You just unlocked the **Word Game Builder** superpower! ⭐
+You did it! ⭐

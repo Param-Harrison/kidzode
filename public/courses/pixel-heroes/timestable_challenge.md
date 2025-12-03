@@ -1,19 +1,11 @@
-# Multiple Times Tables Challenge
+# Challenge: Multiple Times Tables
 
-Perfect, Custom Math Teacher! You can practice any table!
-But what if you want to see MULTIPLE tables at once?
-Can you show several times tables in one program?
+Show multiple times tables chosen by the user!
 
-## 🎯 Today's Mission
-Print multiple times tables chosen by the user!
-
-## 📚 Before You Start
-You know how to use loops and get user input with `int()`.
-
-## Your Challenge!
-1. Ask how many tables the user wants to see
-2. For each table, ask which number
-3. Print each complete times table!
+## What to Do
+1. Ask how many tables
+2. For each, ask which number
+3. Print each table!
 
 ```python
 print("=== MULTIPLE TIMES TABLES ===")
@@ -44,29 +36,17 @@ for table_num in range(how_many):
 print("All done! Great practice!")
 ```
 
-## ✨ Magic Moment
-You can see as many times tables as you want in one go!
+## Remember
+- Loops can be inside loops (nested loops!)
+- `table_num + 1` makes numbering start at 1
+- Outer loop repeats, inner loop does 1-10
 
-## 💡 Important Things to Remember
-- You can have loops INSIDE loops (nested loops!)
-- `table_num + 1` makes the numbering start at 1 instead of 0
-- Each table prints completely before asking for the next one
-- This is like having a personal math tutor!
+## Try This
+Add fireworks back to each answer!
 
-## 🎨 Try This Next!
-- Add fireworks back to each answer
-- Let the user choose how many rows (not just 1-10)
-- Add a quiz mode that asks questions!
-- Save the tables to review later
+## If Stuck
+- Outer loop repeats the whole table
+- Inner loop does 1-10
+- Use `table_num + 1` for friendly numbers
 
-## 🤔 Stuck? Check This!
-- **Confused by nested loops?** The outer loop repeats the whole table, inner loop does 1-10
-- **Numbering starts at 0?** Use `table_num + 1` to show human-friendly numbers
-- **Want to test?** Try entering 2, then 3 and 7 to see both tables
-
-## 🌟 Show Your Parents!
-"Look! I made a complete times table practice tool - I can see as many as I want!"
-
-You just unlocked the **Math Master** superpower! ⭐
-
-**CHALLENGE COMPLETE!** You've finished Project 7! 🎉
+**CHALLENGE COMPLETE!** 🎉

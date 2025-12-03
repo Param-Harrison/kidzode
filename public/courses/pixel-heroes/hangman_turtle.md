@@ -1,19 +1,10 @@
 # Draw Hangman Stages
 
-Amazing, Game Rules Enforcer! Your game tracks mistakes!
-Traditional Hangman draws a stick figure for each wrong guess!
-Can you show different stages as the player makes mistakes?
-
-## 🎯 Today's Mission
 Display hangman stages using ASCII art!
 
-## 📚 Before You Start
-You know how to count wrong guesses and use multi-line strings.
-
-## Let's Do It!
-1. Read the code - see the ASCII art stages!
-2. Press the green **Run** button
-3. Make wrong guesses to see the stages!
+## What to Do
+1. Press Run
+2. Make wrong guesses to see the stages!
 
 ```python
 print("=== HANGMAN GAME ===")
@@ -123,24 +114,16 @@ else:
         print(f"The word was: {secret_word}")
 ```
 
-## ✨ Magic Moment
-The hangman figure appears piece by piece with each wrong guess!
-
-## 💡 Important Things to Remember
+## Remember
 - `stages` is a list of ASCII art strings
 - `stages[wrong_guesses]` shows the current stage
 - Stage 0 is empty, stage 6 is complete
-- This makes the game visual and exciting!
 
-## 🎨 Try This Next!
-Design your own hangman stages with different ASCII art!
+## Try This
+Design your own hangman stages!
 
-## 🤔 Stuck? Check This!
-- **Stages not showing?** Make sure you have `print(stages[wrong_guesses])`
-- **Error: list index out of range?** Check that `wrong_guesses` doesn't exceed 6
-- **Want simpler stages?** You can use fewer stages
+## If Stuck
+- Make sure you have `print(stages[wrong_guesses])`
+- Check that `wrong_guesses` doesn't exceed 6
 
-## 🌟 Show Your Parents!
-"Look! My Hangman draws the figure just like the real game!"
-
-You just unlocked the **ASCII Artist** superpower! ⭐
+You did it! ⭐

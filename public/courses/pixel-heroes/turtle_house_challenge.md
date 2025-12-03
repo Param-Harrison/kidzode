@@ -1,17 +1,9 @@
-# Dream House Garden Challenge
+# Challenge: Dream House Garden
 
-You're a Loop Master now! Your house is complete with windows!
-But every dream house needs a beautiful garden!
-Can you add flowers, a sun, and maybe even a fence?
-
-## 🎯 Today's Mission
 Add a garden with flowers and a sun to make your dream house complete!
 
-## 📚 Before You Start
-You know how to use loops, `goto()`, and draw different shapes with turtle.
-
-## Your Challenge!
-Add these features to your house:
+## What to Do
+Add these features:
 1. Draw a sun in the sky (circle + lines for rays)
 2. Draw 3-5 flowers in the garden (circles work great!)
 3. BONUS: Add a fence or pathway!
@@ -72,29 +64,16 @@ for position in window_positions:
 turtle.done()
 ```
 
-## ✨ Magic Moment
-Your complete dream house with a beautiful garden!
-
-## 💡 Important Things to Remember
-- `circle(radius)` draws a circle - bigger radius = bigger circle
-- You can use loops to draw multiple flowers easily
+## Remember
+- `circle(radius)` draws a circle
+- Use loops to draw multiple flowers
 - `goto(x, y)` with negative numbers goes left or down
-- Be creative - there's no wrong way to make YOUR dream house!
 
-## 🎨 Try This Next!
-- Change house colors with `t.color("blue")`
-- Add a chimney on the roof
-- Draw a tree next to the house
-- Add your name under the house!
+## Try This
+Change house colors with `t.color("blue")`!
 
-## 🤔 Stuck? Check This!
-- **Sun not visible?** Try `goto(-150, 150)` to move it to top-left
-- **Flowers too big?** Use smaller numbers like `circle(8)`
-- **Want sun rays?** Draw short lines from the sun center in different directions
+## If Stuck
+- Try `goto(-150, 150)` for sun
+- Use smaller numbers like `circle(8)` for flowers
 
-## 🌟 Show Your Parents!
-"Look! I designed my complete dream house with a garden using Python!"
-
-You just unlocked the **Dream House Architect** superpower! ⭐
-
-**CHALLENGE COMPLETE!** You've finished Project 4! 🎉
+**CHALLENGE COMPLETE!** 🎉

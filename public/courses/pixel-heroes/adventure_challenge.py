@@ -18,5 +18,20 @@ print(f"Welcome to the adventure, {hero_name}!")
 # - f-strings to use {hero_name}
 # - Different endings (good, bad, funny, scary!)
 
+# Example structure:
+# choice1 = input("First choice? ")
+# if choice1 == "option1":
+#     choice2 = input("Second choice? ")
+#     if choice2 == "option1":
+#         print("Ending 1")
+#     else:
+#         print("Ending 2")
+# else:
+#     choice3 = input("Third choice? ")
+#     if choice3 == "option1":
+#         print("Ending 3")
+#     else:
+#         print("Ending 4")
+
 print()
 print("THE END!")

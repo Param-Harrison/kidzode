@@ -1,16 +1,10 @@
-# Draw a Perfect Square with Turtle
+# Draw a Square
 
-Welcome back, Pixel Hero! You've mastered text and random fortunes!
-Now it's time to learn DRAWING with code!
-Can you make a turtle draw a perfect square on the screen?
-
-## 🎯 Today's Mission
 Use Python's turtle to draw a perfect square!
 
-## Let's Do It!
-1. Read the code below
-2. Press the green **Run** button
-3. Watch the turtle draw!
+## What to Do
+1. Press Run
+2. Watch the turtle draw!
 
 ```python
 import turtle
@@ -32,26 +26,19 @@ t.left(90)
 turtle.done()
 ```
 
-## ✨ Magic Moment
-A perfect square appears on your screen, drawn by a turtle!
-
-## 💡 Important Things to Remember
+## Remember
 - `import turtle` gives you drawing powers
-- `turtle.Turtle()` creates a turtle that can draw
-- `forward(100)` moves the turtle forward 100 steps
-- `left(90)` turns the turtle left 90 degrees
-- A square has 4 equal sides and 4 right angles (90 degrees)
+- `turtle.Turtle()` creates a turtle
+- `forward(100)` moves forward 100 steps
+- `left(90)` turns left 90 degrees
+- Square has 4 equal sides
 
-## 🎨 Try This Next!
-Change `100` to `150` to make a bigger square!
+## Try This
+Change `100` to `150` for a bigger square!
 
-## 🤔 Stuck? Check This!
-- **Nothing appears?** Make sure you have `turtle.done()` at the end
-- **Turtle goes off screen?** Try smaller numbers like `50`
-- **Not a square?** Check that all `forward()` numbers are the same
-- **Error: turtle not found?** Make sure `import turtle` is at the top
+## If Stuck
+- Make sure you have `turtle.done()` at the end
+- Try smaller numbers like `50`
+- Check all `forward()` numbers are the same
 
-## 🌟 Show Your Parents!
-"Look! I made a turtle draw a perfect square using code!"
-
-You just unlocked the **Turtle Artist** superpower! ⭐
+You did it! ⭐

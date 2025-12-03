@@ -1,16 +1,10 @@
-# Your First Adventure Story
+# Your First Adventure
 
-Welcome, Math Master! You've conquered times tables!
-Now let's create something EPIC - your own adventure story!
-Can you make a story where YOU choose what happens?
+Make a story where YOU choose what happens!
 
-## 🎯 Today's Mission
-Create a simple story with two different paths!
-
-## Let's Do It!
-1. Read the story - see the two choices!
-2. Press the green **Run** button
-3. Type "left" or "right" to choose your path!
+## What to Do
+1. Press Run
+2. Type "left" or "right" to choose!
 
 ```python
 print("=== THE MYSTERIOUS FOREST ===")
@@ -33,24 +27,16 @@ else:
     print("YOU WIN!")
 ```
 
-## ✨ Magic Moment
-The story changes based on YOUR choice!
-
-## 💡 Important Things to Remember
+## Remember
 - `if choice == "left":` checks if they typed "left"
-- `else:` handles everything that's NOT "left"
-- The `==` (two equals) checks if things are the same
-- Different choices lead to different stories!
+- `else:` handles everything else
+- `==` checks if things are the same
 
-## 🎨 Try This Next!
-Change the story! Make the left path scary and the right path funny!
+## Try This
+Change the story! Make different paths!
 
-## 🤔 Stuck? Check This!
-- **Both paths the same?** Make sure the `if` and `else` have different text
-- **Error?** Check that you typed `"left"` exactly (lowercase)
-- **Want more choices?** We'll learn that in the next lesson!
+## If Stuck
+- Make sure `if` and `else` have different text
+- Type `"left"` exactly (lowercase)
 
-## 🌟 Show Your Parents!
-"Look! I made an interactive story that changes based on my choices!"
-
-You just unlocked the **Story Writer** superpower! ⭐
+You did it! ⭐

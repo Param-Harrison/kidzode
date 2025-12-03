@@ -1,25 +1,17 @@
-print("=== SMART TEXT MATCHING ===")
-print()
+user_input = input("Say hello: ")
 
-# Demonstrate string methods
+# Convert to lowercase first!
+user_input_lower = user_input.lower()
+
+if user_input_lower == "hello":
+    print("Hi there!")
+else:
+    print("I don't understand")
+
 text = "  Hello World  "
 
-print("Original:", f"'{text}'")
-print("Lower:", text.lower())
-print("Upper:", text.upper())
-print("Strip:", text.strip())
-print("Combined:", text.strip().lower())
-print("Replace:", text.replace("World", "Python"))
-
-print()
-
-# Smart input matching
-user_input = input("Say hello: ")
-user_input_clean = user_input.strip().lower()
-
-if user_input_clean == "hello":
-    print("Hi there!")
-elif user_input_clean == "hi":
-    print("Hey!")
-else:
-    print("Nice to meet you!")
+print(text.lower())  # "  hello world  "
+print(text.upper())  # "  HELLO WORLD  "
+print(text.strip())  # "Hello World"
+print(text.strip().lower())  # "hello world"
+print(text.replace("World", "Python"))  # "  Hello Python  "

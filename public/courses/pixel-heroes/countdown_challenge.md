@@ -1,20 +1,11 @@
-# Custom Countdown Challenge
+# Challenge: Custom Countdown
 
-You're a Sound Effects Master! Your rocket launch is amazing!
-But what if you want to launch from different numbers?
-Can you let the user choose where to start the countdown?
+Let the user choose the starting number!
 
-## 🎯 Today's Mission
-Let the user choose the starting number for the countdown!
-
-## 📚 Before You Start
-You know how to use `input()` and `range()` for countdowns.
-
-## Your Challenge!
-1. Ask the user for a starting number
-2. Convert it to an integer with `int()`
-3. Count down from their number to 1
-4. BLAST OFF!
+## What to Do
+1. Ask for a starting number
+2. Convert it with `int()`
+3. Count down from their number!
 
 ```python
 print("=== CUSTOM ROCKET LAUNCH ===")
@@ -39,28 +30,16 @@ print("ROAR! The rocket is launching!")
 print("Mission success!")
 ```
 
-## ✨ Magic Moment
-The countdown starts from ANY number the user chooses!
-
-## 💡 Important Things to Remember
+## Remember
 - `int()` converts text to a number
-- `input()` always gives you text, even if the user types a number
-- You MUST convert to int before using in `range()`
-- The user can choose 5, 10, 20, or even 100!
+- `input()` always gives text
+- Convert to int before using in `range()`
 
-## 🎨 Try This Next!
-- Add error checking (what if they type "hello"?)
-- Add a minimum countdown (must be at least 3)
-- Let them choose the countdown speed!
+## Try This
+Add error checking for wrong input!
 
-## 🤔 Stuck? Check This!
-- **Error: invalid literal?** Make sure you're using `int(start)`
-- **Counting wrong?** Check that you're using `start_number` in `range()`
-- **Want to test?** Try entering 5, then 15, then 3!
+## If Stuck
+- Use `int(start)` to convert
+- Use `start_number` in `range()`
 
-## 🌟 Show Your Parents!
-"Look! I made a customizable rocket launch - you can choose any starting number!"
-
-You just unlocked the **Custom Launch Director** superpower! ⭐
-
-**CHALLENGE COMPLETE!** You've finished Project 5! 🎉
+**CHALLENGE COMPLETE!** 🎉

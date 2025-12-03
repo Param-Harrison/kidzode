@@ -1,19 +1,10 @@
-# Determine the Winner
+# Find the Winner
 
-Perfect, Two-Player Game Creator! Both players can choose!
-But who WINS? We need to figure that out!
-Can you add the rules to determine the winner?
+Add logic to determine who wins!
 
-## 🎯 Today's Mission
-Add logic to determine who wins the game!
-
-## 📚 Before You Start
-You know the rules: Rock beats Scissors, Scissors beats Paper, Paper beats Rock!
-
-## Let's Do It!
-1. Read the code - see all the winning conditions!
-2. Press the green **Run** button
-3. Play and see who wins!
+## What to Do
+1. Press Run
+2. Play and see who wins!
 
 ```python
 import random
@@ -46,24 +37,17 @@ else:
     print("COMPUTER WINS! Better luck next time!")
 ```
 
-## ✨ Magic Moment
-The game now declares a winner based on the rules!
+## Remember
+- Check for tie first
+- Then check each way player can win
+- `and` means BOTH must be true
+- If no win, computer wins!
 
-## 💡 Important Things to Remember
-- We check for a tie first: `if player_choice == computer_choice`
-- Then we check each way the player can win
-- `and` means BOTH conditions must be true
-- If none of the win conditions match, the computer wins!
+## Try This
+Play multiple times with each choice!
 
-## 🎨 Try This Next!
-Play multiple times and try to win with each choice (rock, paper, scissors)!
+## If Stuck
+- Type choice exactly right
+- Check win conditions carefully
 
-## 🤔 Stuck? Check This!
-- **Always ties?** Make sure you're typing the choice exactly right
-- **Computer always wins?** Check your win conditions carefully
-- **Confused by logic?** Draw out the rules on paper first!
-
-## 🌟 Show Your Parents!
-"Look! I made a complete Rock-Paper-Scissors game with all the rules!"
-
-You just unlocked the **Game Logic Master** superpower! ⭐
+You did it! ⭐

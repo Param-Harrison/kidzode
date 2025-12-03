@@ -1,19 +1,10 @@
-# Condition Expert Challenge!
+# Condition Practice Challenges
 
-Excellent, Adventure Story Creator! You can use if/elif/else!
-But can you handle COMPLEX conditions?
-Time to become a Condition Expert!
+Practice complex conditions with 5 challenges!
 
-## 🎯 Today's Mission
-Master complex conditional logic with 5 challenges!
-
-## 📚 Before You Start
-You know `if/elif/else`, `and`, `or`, and boolean logic.
-
-## Challenge 1: Grade Calculator ⭐
+## Challenge 1: Grade Calculator
 
 ```python
-print("=== CHALLENGE 1: GRADES ===")
 score = int(input("Enter score (0-100): "))
 
 if score >= 90:
@@ -28,10 +19,9 @@ else:
     print("Grade: F - Study harder!")
 ```
 
-## Challenge 2: Age Category ⭐⭐
+## Challenge 2: Age Category
 
 ```python
-print("\n=== CHALLENGE 2: AGE CATEGORY ===")
 age = int(input("Enter age: "))
 
 if age < 3:
@@ -46,10 +36,9 @@ else:
     print("You're a senior!")
 ```
 
-## Challenge 3: Login System ⭐⭐
+## Challenge 3: Login System
 
 ```python
-print("\n=== CHALLENGE 3: LOGIN ===")
 username = input("Username: ").strip().lower()
 password = input("Password: ")
 
@@ -61,10 +50,9 @@ else:
     print("Invalid login!")
 ```
 
-## Challenge 4: Weather Advisor ⭐⭐⭐
+## Challenge 4: Weather Advisor
 
 ```python
-print("\n=== CHALLENGE 4: WEATHER ===")
 temp = int(input("Temperature (F): "))
 raining = input("Is it raining? (yes/no): ").lower()
 
@@ -80,10 +68,9 @@ else:
     print("Nice day for a walk!")
 ```
 
-## Challenge 5: Game Difficulty ⭐⭐⭐
+## Challenge 5: Game Difficulty
 
 ```python
-print("\n=== CHALLENGE 5: DIFFICULTY ===")
 level = int(input("Player level (1-100): "))
 has_powerup = input("Has powerup? (yes/no): ").lower()
 
@@ -97,35 +84,9 @@ else:
     print("Difficulty: MEDIUM")
 ```
 
-## 🔮 Try to Predict!
-```python
-age = 15
-if age >= 13 and age < 20:
-    print("Teenager")
-```
-Will it print? Answer: YES!
+## Remember
+- `and` = ALL must be true
+- `or` = AT LEAST ONE must be true
+- Use `elif` for choices
 
-## 📝 Self-Check Quiz
-1. What's the difference between `and` and `or`?
-2. When do you use `elif` vs multiple `if`?
-3. What happens if no conditions are true?
-
-<details>
-<summary>Click for Answers</summary>
-
-1. `and` needs ALL true, `or` needs AT LEAST ONE true
-2. `elif` for mutually exclusive choices, multiple `if` for independent checks
-3. The `else` block runs (if there is one)
-</details>
-
-## 🚀 Level Up Challenge!
-Make a restaurant recommendation system:
-- Check budget (cheap/medium/expensive)
-- Check cuisine preference
-- Check dietary restrictions
-- Recommend a restaurant!
-
-## 🌟 Show Your Parents!
-"Look! I can write complex decision-making programs!"
-
-You just unlocked the **Condition Expert** superpower! ⭐⭐⭐
+You did it! ⭐

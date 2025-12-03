@@ -1,20 +1,12 @@
-# Add Your Friend's Name Challenge
+# Challenge: Add Your Friend's Name
 
-You're becoming a real Pixel Hero master!
-You can make your own name look amazing with stars and patterns.
-But can you make it work for TWO people at once?
+Greet TWO people with stars!
 
-## 🎯 Today's Mission
-Make the program greet both you AND your friend with stars!
-
-## 📚 Before You Start
-You know how to create variables and use them in `print()` statements.
-
-## Let's Do It!
+## What to Do
 1. Change Rose to YOUR name
 2. Change Jack to your FRIEND'S name
-3. Press the green **Run** button
-4. See both names appear!
+3. Press Run
+4. See both names!
 
 ```python
 my_name = "Rose"
@@ -27,28 +19,19 @@ print("You are both AMAZING!")
 print("* * * * * * * * * *")
 ```
 
-## ✨ Magic Moment
-Both names appear with stars around them!
+## Remember
+- You can make many variables
+- Each needs a different name
+- Use underscores `_` not spaces
 
-## 💡 Important Things to Remember
-- You can create as many variables as you need
-- Each variable needs a different name (like `my_name` and `friend_name`)
-- Variable names can have underscores (`_`) but no spaces
-- You can use multiple variables in the same program
+## Try This
+- Add a third person
+- Add more star lines
+- Try `+` or `=` instead
 
-## 🎨 Try This Next!
-- Add a third person: `other_friend = "Emma"`
-- Add more star lines to make a bigger box
-- Try using different symbols like `+` or `=`
+## If Stuck
+- Make both variables at the top
+- Change both names
+- Use the right variable names
 
-## 🤔 Stuck? Check This!
-- **Error: name is not defined?** Make sure you created both variables at the top
-- **Names look the same?** Check that you changed both `"Rose"` and `"Jack"` to different names
-- **Weird output?** Make sure you're using the right variable names in your `print()` statements
-
-## 🌟 Show Your Parents!
-"Look! I can make a program that remembers multiple people's names and uses them all!"
-
-You just unlocked the **Multi-Memory Master** superpower! ⭐
-
-**CHALLENGE COMPLETE!** You've finished Project 1! 🎉
+**CHALLENGE COMPLETE!** 🎉

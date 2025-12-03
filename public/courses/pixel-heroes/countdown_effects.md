@@ -1,19 +1,10 @@
-# Add Sound Effects to Your Rocket
+# Add Sound Effects
 
-Awesome, Rocket Scientist! Your launch sequence looks great!
-But real rockets make NOISE! Let's add sound effects!
-Can you make your countdown even more dramatic?
+Add sound effects to make your rocket more exciting!
 
-## 🎯 Today's Mission
-Add sound effect text to make your rocket launch more exciting!
-
-## 📚 Before You Start
-You know how to use f-strings to format text with variables.
-
-## Let's Do It!
-1. Read the code - see the sound effects!
-2. Press the green **Run** button
-3. Feel the excitement!
+## What to Do
+1. Press Run
+2. Hear the sounds!
 
 ```python
 print("=== ROCKET LAUNCH SEQUENCE ===")
@@ -31,24 +22,15 @@ print("BOOM! Stage 1 separation!")
 print("ZOOM! Entering orbit!")
 ```
 
-## ✨ Magic Moment
-Your rocket launch has sound effects - you can almost hear it!
+## Remember
+- Sound effects make code fun!
+- Add as many `print()` lines as you want
 
-## 💡 Important Things to Remember
-- Sound effect words make code more fun and exciting
-- You can add as many `print()` statements as you want
-- Creative text makes your programs more interesting
-- Real programmers add fun details like this!
+## Try This
+Create your own sounds like "VROOM!" or "KABOOM!"
 
-## 🎨 Try This Next!
-Create your own sound effects! Try "VROOM!" or "KABOOM!" or "WHOMP!"
+## If Stuck
+- Add more `print()` lines
+- Change words to anything you like!
 
-## 🤔 Stuck? Check This!
-- **Too many lines?** That's okay! More is more fun!
-- **Want fewer effects?** Remove some `print()` lines
-- **Want different sounds?** Change the words to anything you like!
-
-## 🌟 Show Your Parents!
-"Look! My rocket launch has sound effects - it's so exciting!"
-
-You just unlocked the **Sound Effects Master** superpower! ⭐
+You did it! ⭐

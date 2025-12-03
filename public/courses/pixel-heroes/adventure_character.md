@@ -1,19 +1,10 @@
-# Add Your Character Name
+# Add Character Name
 
-Awesome, Multiple Endings Creator! Your story is exciting!
-But wouldn't it be cooler if the story used YOUR name?
-Can you make the story personal with a character name?
+Make the story use YOUR name!
 
-## 🎯 Today's Mission
-Add a character name that appears throughout the story!
-
-## 📚 Before You Start
-You know how to use variables and nested `if/else` statements.
-
-## Let's Do It!
-1. Read the code - see the name being used!
-2. Press the green **Run** button
-3. Enter your name and make choices!
+## What to Do
+1. Press Run
+2. Enter your name and make choices!
 
 ```python
 print("=== THE HERO'S QUEST ===")
@@ -57,24 +48,16 @@ else:
     print("MAGICAL VICTORY!")
 ```
 
-## ✨ Magic Moment
-The story feels personal - it's about YOU!
+## Remember
+- Variables make stories personal
+- Use f-strings: `f"{hero_name} does something"`
+- Name appears everywhere you use the variable
 
-## 💡 Important Things to Remember
-- Variables make stories more personal
-- Use f-strings to put the name in the story: `f"{hero_name} does something"`
-- The name appears everywhere you use the variable
-- This is how real video games remember your character!
+## Try This
+Ask for a friend's name too!
 
-## 🎨 Try This Next!
-Ask for a friend's name too and add them to the story!
+## If Stuck
+- Use `{hero_name}` inside f-strings
+- Don't forget the `f` before quotes
 
-## 🤔 Stuck? Check This!
-- **Name not showing?** Make sure you're using `{hero_name}` inside f-strings
-- **Forgot the f?** f-strings need `f` before the opening quote
-- **Want more personalization?** Ask for their favorite color or animal!
-
-## 🌟 Show Your Parents!
-"Look! My story uses my name - it's like I'm really in the adventure!"
-
-You just unlocked the **Personal Story Creator** superpower! ⭐
+You did it! ⭐

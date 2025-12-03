@@ -1,19 +1,11 @@
-# Add Sparkling Stars Around Your Name
+# Add Stars Around Your Name
 
-Awesome work, Pixel Hero! You've mastered the memory box!
-Now let's make your name even MORE spectacular!
-The Star Master wants you to add sparkling stars around your name!
+Make your name look cool with stars!
 
-## 🎯 Today's Mission
-Add stars above and below your name to make it look super cool!
-
-## 📚 Before You Start
-You know how to store your name in a variable and use `print()` to show it.
-
-## Let's Do It!
+## What to Do
 1. Change Jack to YOUR name
-2. Press the green **Run** button
-3. See the stars appear!
+2. Press Run
+3. See the stars!
 
 ```python
 name = "Jack"
@@ -24,24 +16,17 @@ print("You are a STAR!")
 print("* * * * * * * * * *")
 ```
 
-## ✨ Magic Moment
-Your name is now surrounded by sparkling stars above and below!
+## Remember
+- Use `print()` many times for patterns
+- Stars are just `*` characters
+- Add spaces between stars
 
-## 💡 Important Things to Remember
-- You can use `print()` multiple times to create patterns
-- Stars (`*`) are just regular text characters
-- Spaces between stars make them look sparkly
-- The variable `name` works in any `print()` statement
+## Try This
+Change stars to `+ + + +` or `= = = =`
 
-## 🎨 Try This Next!
-Try changing the stars to a different pattern like `+ + + +` or `= = = =`
+## If Stuck
+- Add spaces between `*`
+- Check `name = "Jack"` is at the top
+- Put all text in quotes
 
-## 🤔 Stuck? Check This!
-- **Stars look weird?** Make sure you have spaces between each `*` character
-- **Name doesn't show?** Check that you have the `name = "Jack"` line at the top
-- **Error message?** Make sure all your text is inside quotes
-
-## 🌟 Show Your Parents!
-"Look! I can make patterns with code and combine them with my name!"
-
-You just unlocked the **Pattern Maker** superpower! ⭐
+You did it! ⭐

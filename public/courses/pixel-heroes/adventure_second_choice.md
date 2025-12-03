@@ -1,19 +1,10 @@
 # Add a Second Choice
 
-Excellent, Story Writer! Your first story works great!
-But real adventures have MORE than one choice!
-Can you add a second decision to make the story longer?
+Add a second decision to make the story longer!
 
-## 🎯 Today's Mission
-Add a second choice that happens after the first one!
-
-## 📚 Before You Start
-You know how to use `if/else` to create different story paths.
-
-## Let's Do It!
-1. Read the code - see the second choice!
-2. Press the green **Run** button
-3. Make TWO choices to see how the story unfolds!
+## What to Do
+1. Press Run
+2. Make TWO choices!
 
 ```python
 print("=== THE MYSTERIOUS FOREST ===")
@@ -50,24 +41,16 @@ else:
     print("YOU WIN!")
 ```
 
-## ✨ Magic Moment
-Your story now has multiple layers of choices!
-
-## 💡 Important Things to Remember
+## Remember
 - You can put `if/else` INSIDE another `if/else`
 - This is called "nesting"
-- Each choice leads to more choices!
-- The indentation (spaces) shows which choice belongs where
+- Indentation shows which choice belongs where
 
-## 🎨 Try This Next!
+## Try This
 Add a second choice to the right path too!
 
-## 🤔 Stuck? Check This!
-- **Indentation error?** Make sure the inner `if` is indented (4 spaces)
-- **Second choice not showing?** Check you're inside the first `if` block
-- **Confused?** The second choice only happens if you go left first
+## If Stuck
+- Inner `if` must be indented (4 spaces)
+- Second choice only happens if you go left first
 
-## 🌟 Show Your Parents!
-"Look! My story has choices inside choices - it's getting complex!"
-
-You just unlocked the **Branching Story Master** superpower! ⭐
+You did it! ⭐

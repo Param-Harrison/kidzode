@@ -1,19 +1,10 @@
 # Show Blanks and Reveal Letters
 
-Excellent, Feedback Master! Your feedback is clear!
-But real Hangman shows blanks (_ _ _) and reveals letters!
-Can you show which letters have been guessed?
-
-## 🎯 Today's Mission
 Display the word with blanks and revealed letters!
 
-## 📚 Before You Start
-You know how to loop through strings and use `if` statements.
-
-## Let's Do It!
-1. Read the code - see how we show blanks!
-2. Press the green **Run** button
-3. Guess letters and watch them appear!
+## What to Do
+1. Press Run
+2. Guess letters and watch them appear!
 
 ```python
 print("=== HANGMAN GAME ===")
@@ -46,24 +37,17 @@ else:
     print(f"WRONG! '{guess}' is not in the word.")
 ```
 
-## ✨ Magic Moment
-The word appears with blanks, and guessed letters show up!
-
-## 💡 Important Things to Remember
+## Remember
 - `for letter in secret_word:` loops through each letter
 - `if letter in guessed_letters:` checks if we've guessed it
 - `end=" "` makes print stay on the same line
 - Blanks (_) show unguessed letters!
 
-## 🎨 Try This Next!
-Change `guessed_letters = "ae"` to see multiple letters revealed!
+## Try This
+Change `guessed_letters = "ae"` to see multiple letters!
 
-## 🤔 Stuck? Check This!
-- **Everything showing as blanks?** Check your `guessed_letters` string
-- **No spaces between letters?** Make sure you have `end=" "`
-- **Want to test?** Try adding more letters to `guessed_letters`
+## If Stuck
+- Check your `guessed_letters` string
+- Make sure you have `end=" "`
 
-## 🌟 Show Your Parents!
-"Look! My Hangman shows blanks and reveals letters like the real game!"
-
-You just unlocked the **Visual Game Designer** superpower! ⭐
+You did it! ⭐

@@ -1,19 +1,10 @@
 # Keep Score
 
-Excellent, Game Logic Master! Your game works perfectly!
-But real games keep SCORE! Who's winning overall?
-Can you track wins, losses, and ties?
-
-## 🎯 Today's Mission
 Add a scoring system to track who's winning!
 
-## 📚 Before You Start
-You know how to determine winners and use variables to store information.
-
-## Let's Do It!
-1. Read the code - see the score tracking!
-2. Press the green **Run** button
-3. Play and watch the score!
+## What to Do
+1. Press Run
+2. Play and watch the score!
 
 ```python
 import random
@@ -63,24 +54,16 @@ print(f"Computer: {computer_score}")
 print(f"Ties: {ties}")
 ```
 
-## ✨ Magic Moment
-The game now tracks who's winning!
+## Remember
+- Create score variables BEFORE the game: `player_score = 0`
+- When someone wins, add 1: `player_score = player_score + 1`
+- Track player wins, computer wins, and ties
 
-## 💡 Important Things to Remember
-- We create score variables BEFORE the game: `player_score = 0`
-- When someone wins, we add 1 to their score: `player_score = player_score + 1`
-- We track three things: player wins, computer wins, and ties
-- The score shows at the end of each round!
+## Try This
+Run multiple times and see scores add up!
 
-## 🎨 Try This Next!
-Run the program multiple times and imagine the scores adding up!
+## If Stuck
+- Make sure you have `score = score + 1` in each win condition
+- Score shows at the end of each round
 
-## 🤔 Stuck? Check This!
-- **Score always 0 or 1?** That's normal - each run is one game
-- **Want multiple rounds?** We'll add that in the next lesson!
-- **Score not updating?** Make sure you have `score = score + 1` in each win condition
-
-## 🌟 Show Your Parents!
-"Look! My game keeps score now - just like a real championship!"
-
-You just unlocked the **Score Keeper** superpower! ⭐
+You did it! ⭐

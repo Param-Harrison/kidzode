@@ -1,6 +1,3 @@
-print("=== KEEP PLAYING ===")
-print()
-
 playing = True
 
 while playing:
@@ -13,15 +10,11 @@ while playing:
             print("You got it!")
         else:
             print(f"Nope! It was {secret}")
-    else:
-        print("Please enter a number!")
     
-    # Ask if they want to play again
-    again = input("\nPlay again? (yes/no): ").strip().lower()
+    again = input("Play again? (yes/no): ").strip().lower()
     
     if again != "yes":
         playing = False
         print("Thanks for playing!")
-    print()
 
 print("Game over!")
