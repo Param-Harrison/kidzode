@@ -44,6 +44,11 @@
                   "type": "string",
                   "description": "Lesson name"
                 },
+                "type": {
+                  "type": "string",
+                  "enum": ["lesson", "challenge"],
+                  "description": "Lesson type: 'lesson' for regular lessons, 'challenge' for challenges"
+                },
                 "guide": {
                   "type": "string",
                   "description": "Markdown guide file"
@@ -52,9 +57,17 @@
                   "type": "string",
                   "description": "Python code file"
                 },
+                "hints": {
+                  "type": "string",
+                  "description": "Optional path to hints markdown file (typically for challenges)"
+                },
+                "answer": {
+                  "type": "string",
+                  "description": "Optional path to answer markdown file (typically for challenges)"
+                },
                 "tests": {
                   "type": "array",
-                  "description": "Test cases for the lesson",
+                  "description": "Test cases for the lesson (typically only for challenges)",
                   "items": {
                     "type": "object",
                     "properties": {

@@ -14,6 +14,7 @@ import confetti from "canvas-confetti"
 
 interface PythonEditorProps {
   initialCode: string
+  starterCode?: string // Original starter code from .py file (for reset)
   guide: string
   tests?: Array<{ in: string | string[]; out: string | any[] }>
   onCodeChange?: (code: string) => void
@@ -27,6 +28,7 @@ interface PythonEditorProps {
 
 export function PythonEditor({ 
   initialCode, 
+  starterCode: starterCodeProp,
   guide, 
   tests = [], 
   onCodeChange, 
@@ -37,7 +39,11 @@ export function PythonEditor({
   prevLesson,
   nextLesson
 }: PythonEditorProps) {
-  // ... existing state ...
+  // Use starterCode prop if provided, otherwise fall back to initialCode
+  const actualStarterCode = starterCodeProp || initialCode
+  
+  // Store starter code separately for reset functionality
+  const [starterCode, setStarterCode] = useState(actualStarterCode)
   const [code, setCode] = useState(initialCode)
   const [testResults, setTestResults] = useState<TestResult[]>([])
   const { status, output, runCode, runTests, clearOutput, awaitingInput, handleInput } = usePyodide()
@@ -53,14 +59,33 @@ export function PythonEditor({
     return () => window.removeEventListener('resize', checkSize)
   }, [])
 
+  // Update starter code when prop changes
+  useEffect(() => {
+    if (starterCodeProp) {
+      setStarterCode(starterCodeProp)
+    }
+  }, [starterCodeProp])
+
+  // Update current code when initialCode changes
   useEffect(() => {
     setCode(initialCode)
   }, [initialCode])
 
   const handleRun = async () => {
-    await runCode(code)
+    const result = await runCode(code)
     if (onCodeChange) {
       onCodeChange(code)
+    }
+    
+    // For lessons without tests, mark as complete when code runs successfully
+    if (tests.length === 0 && result.success && onComplete && progress !== 'completed') {
+      // Trigger confetti for successful run!
+      confetti({
+        particleCount: 50,
+        spread: 50,
+        origin: { y: 0.6 }
+      })
+      onComplete()
     }
   }
 
@@ -90,7 +115,8 @@ export function PythonEditor({
   }
 
   const handleReset = () => {
-    setCode(initialCode)
+    // Reset to starter code (original snippet), not initialCode which may have been modified
+    setCode(starterCode)
     clearOutput()
     setTestResults([])
   }

@@ -39,22 +39,7 @@ export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
     const loadProgress = async () => {
       const completed = new Set<string>()
 
-      // 1. Check localStorage first (immediate feedback)
-      // Iterate through all lessons to check localStorage
-      const allLessons: Lesson[] = []
-      if (book.projects) {
-        book.projects.forEach(p => allLessons.push(...p.lessons))
-      } else if (book.children) {
-        allLessons.push(...book.children)
-      }
-
-      allLessons.forEach(lesson => {
-        // Check for local code save - this doesn't mean completed, but it's something
-        // For completion, we might need a specific flag in localStorage if API fails
-        // But for now let's rely on API for "completed" status source of truth
-      })
-
-      // 2. Check API if user is logged in
+      // Check API if user is logged in
       if (user && user.userType === 'student') {
         try {
           const res = await fetch(`/api/progress?studentId=${user.id}&courseId=${bookId}`)
@@ -77,6 +62,20 @@ export function CourseLessonsList({ bookId, book }: CourseLessonsListProps) {
     }
 
     loadProgress()
+    
+    // Listen for lesson completion events
+    const handleLessonCompleted = (event: CustomEvent) => {
+      const { lessonId } = event.detail
+      setCompletedLessons(prev => new Set([...prev, lessonId]))
+      // Also reload from API to ensure consistency
+      loadProgress()
+    }
+    
+    window.addEventListener('lesson-completed', handleLessonCompleted as EventListener)
+    
+    return () => {
+      window.removeEventListener('lesson-completed', handleLessonCompleted as EventListener)
+    }
   }, [bookId, book, user])
 
   const renderLessonCard = (lesson: Lesson, index: number) => {

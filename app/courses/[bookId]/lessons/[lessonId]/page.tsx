@@ -42,6 +42,7 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
   
   const [guide, setGuide] = useState("")
   const [code, setCode] = useState("")
+  const [starterCode, setStarterCode] = useState("") // Original starter code from .py file
   const [tests, setTests] = useState<Array<{ in: string | string[]; out: string | any[] }>>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -113,6 +114,7 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
         const codeRes = await fetch(`/courses/${bookId}/${lesson.py}`)
         if (!codeRes.ok) throw new Error('Failed to load starter code')
         const codeText = await codeRes.text()
+        setStarterCode(codeText) // Store original starter code
 
         // Load progress from API if student ID is available
         let savedCode = codeText
@@ -185,7 +187,7 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
     if (!studentId) return
 
     try {
-      await fetch('/api/progress', {
+      const response = await fetch('/api/progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -196,7 +198,15 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
           data: { code, completedAt: new Date().toISOString() }
         })
       })
-      setProgress({ status: 'completed', data: { code } })
+      
+      if (response.ok) {
+        setProgress({ status: 'completed', data: { code } })
+        // Trigger a small delay to ensure state updates, then refresh progress
+        setTimeout(() => {
+          // This will help UI refresh when navigating back
+          window.dispatchEvent(new CustomEvent('lesson-completed', { detail: { lessonId } }))
+        }, 100)
+      }
     } catch (err) {
       console.error('Failed to mark lesson as complete:', err)
     }
@@ -263,6 +273,7 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
   return (
     <PythonEditor
       initialCode={code}
+      starterCode={starterCode}
       guide={guide}
       tests={tests}
       onCodeChange={handleCodeChange}
