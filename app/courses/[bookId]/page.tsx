@@ -5,7 +5,7 @@ import { ArrowLeft, BookOpen, CheckCircle, Trophy, Book, Hammer, Zap, FileText }
 import { Footer } from "@/components/footer"
 import fs from "fs/promises"
 import path from "path"
-import { CourseLessonsList } from "@/components/CourseLessonsList"
+import { CourseProgressClient } from "./page-client"
 
 export default async function BookPage({ params }: { params: Promise<{ bookId: string }> }) {
   const { bookId } = await params
@@ -32,8 +32,8 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
               </div>
             </div>
 
-            <div className="space-y-12">
-              <CourseLessonsList bookId={bookId} book={book} />
+            <div className="space-y-8">
+              <CourseProgressClient bookId={bookId} book={book} />
             </div>
           </div>
         </main>

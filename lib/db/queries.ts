@@ -219,6 +219,14 @@ export async function getStudentById(studentId: number) {
   });
 }
 
+export async function getStudentByUserId(userId: number) {
+  return await db
+    .select()
+    .from(students)
+    .where(eq(students.userId, userId))
+    .limit(1);
+}
+
 export async function updateStudentPin(studentId: number, pin: string) {
   const hashedPin = await hashPassword(pin);
   await db

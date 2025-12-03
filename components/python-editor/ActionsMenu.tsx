@@ -14,7 +14,7 @@ interface ActionsMenuProps {
   onHint?: () => void
   onAnswer?: () => void
   onFeedback?: () => void
-  bookmarkComponent?: React.ReactNode
+  onBookmarkToggle?: () => void
   isBookmarked?: boolean
   hasHints?: boolean
   hasAnswer?: boolean
@@ -26,7 +26,7 @@ export function ActionsMenu({
   onHint,
   onAnswer,
   onFeedback,
-  onBookmark,
+  onBookmarkToggle,
   isBookmarked,
   hasHints,
   hasAnswer,
@@ -83,9 +83,9 @@ export function ActionsMenu({
             <span>Feedback</span>
           </DropdownMenuItem>
         )}
-        {onBookmark && (
+        {onBookmarkToggle && (
           <DropdownMenuItem
-            onClick={onBookmark}
+            onClick={onBookmarkToggle}
             className={`flex items-center gap-2 cursor-pointer ${
               isBookmarked ? 'focus:bg-red-100' : 'focus:bg-gray-100'
             }`}

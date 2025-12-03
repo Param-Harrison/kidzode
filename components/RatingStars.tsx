@@ -31,11 +31,12 @@ export function RatingStars({ lessonId, bookId, initialRating, averageRating }: 
     setIsSubmitting(true)
 
     try {
+      const studentId = user.studentId || user.id
       const response = await fetch('/api/ratings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          studentId: user.id,
+          studentId,
           lessonId,
           courseId: bookId,
           rating: value

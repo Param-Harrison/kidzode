@@ -30,11 +30,12 @@ export function BookmarkButton({ lessonId, bookId, initialBookmarked }: Bookmark
     setIsSubmitting(true)
 
     try {
+      const studentId = user.studentId || user.id
       const response = await fetch('/api/bookmarks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          studentId: user.id,
+          studentId,
           lessonId,
           courseId: bookId,
           bookmarked: newBookmarked

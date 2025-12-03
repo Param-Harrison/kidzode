@@ -34,7 +34,8 @@ export function FeedbackPanel({
     if (isOpen && user && user.userType === 'student') {
       setIsLoading(true)
       // Load feedback
-      fetch(`/api/feedback?studentId=${user.id}&lessonId=${lessonId}`)
+      const studentId = user.studentId || user.id
+      fetch(`/api/feedback?studentId=${studentId}&lessonId=${lessonId}`)
         .then(res => res.json())
         .then(data => {
           if (data.thumbsUp !== undefined) {
@@ -62,11 +63,12 @@ export function FeedbackPanel({
 
     setIsSubmitting(true)
     try {
+      const studentId = user.studentId || user.id
       const response = await fetch('/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          studentId: user.id,
+          studentId,
           lessonId,
           courseId: bookId,
           thumbsUp: thumbsUp ?? true, // Default to thumbs up if somehow null

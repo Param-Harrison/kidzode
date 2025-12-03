@@ -3,8 +3,8 @@ import { getStudentProgress } from '@/lib/db/queries'
 import { getUser } from '@/lib/db/queries'
 import { canAccessStudent } from '@/lib/auth/authorization'
 import { db } from '@/lib/db/drizzle'
-import { ratings, bookmarks } from '@/lib/db/schema'
-import { eq, and } from 'drizzle-orm'
+import { ratings, bookmarks, progress } from '@/lib/db/schema'
+import { eq, and, desc } from 'drizzle-orm'
 
 export async function GET(request: NextRequest) {
   try {
@@ -97,9 +97,36 @@ export async function GET(request: NextRequest) {
       }
     })
 
+    // Calculate course stats from progress data
+    const completedCount = result.filter((p) => p.status === 'completed').length
+    const inProgressCount = result.filter((p) => p.status === 'in_progress').length
+    
+    // Find last accessed lesson (most recent updatedAt)
+    const lastAccessedProgress = await db
+      .select()
+      .from(progress)
+      .where(
+        and(
+          eq(progress.studentId, parseInt(studentId)),
+          eq(progress.courseId, courseId)
+        )
+      )
+      .orderBy(desc(progress.updatedAt))
+      .limit(1)
+
+    const lastAccessedLessonId = lastAccessedProgress[0]?.lessonId || null
+
+    // Note: total lessons count should be calculated on frontend from book.json
+    // This API returns stats based on lessons with progress/ratings/bookmarks
     return NextResponse.json({
       success: true,
       progress: result,
+      stats: {
+        completed: completedCount,
+        inProgress: inProgressCount,
+        notStarted: result.filter((p) => p.status === 'not_started').length,
+        lastAccessedLessonId,
+      },
     })
   } catch (error) {
     console.error('Get bulk progress error:', error)
