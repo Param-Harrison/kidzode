@@ -1,0 +1,316 @@
+{
+  "$schema": "../../schemas/book-schema.json",
+  "name": "Foundation",
+  "id": "foundation",
+  "projects": [
+    {
+      "id": "countdown-timer",
+      "name": "Countdown Timer",
+      "description": "Build a countdown timer like the ones on phones and microwaves! Learn variables, loops, and make your own rocket launch countdown.",
+      "lessons": [
+        {
+          "id": "countdown-timer-lesson-01",
+          "name": "Lesson 1: Print One Number",
+          "guide": "countdown-timer/lesson01.md",
+          "py": "countdown-timer/lesson01.py"
+        },
+        {
+          "id": "countdown-timer-lesson-02",
+          "name": "Lesson 2: Print Multiple Numbers",
+          "guide": "countdown-timer/lesson02.md",
+          "py": "countdown-timer/lesson02.py"
+        },
+        {
+          "id": "countdown-timer-lesson-03",
+          "name": "Lesson 3: Store a Number",
+          "guide": "countdown-timer/lesson03.md",
+          "py": "countdown-timer/lesson03.py"
+        },
+        {
+          "id": "countdown-timer-lesson-04",
+          "name": "Lesson 4: Print the Variable",
+          "guide": "countdown-timer/lesson04.md",
+          "py": "countdown-timer/lesson04.py"
+        },
+        {
+          "id": "countdown-timer-challenge-01",
+          "name": "Mini-Challenge 1: Your Numbers",
+          "guide": "countdown-timer/challenge01.md",
+          "py": "countdown-timer/challenge01.py",
+          "hints": "countdown-timer/challenge01-hints.md",
+          "answer": "countdown-timer/challenge01-answer.md"
+        },
+        {
+          "id": "countdown-timer-lesson-05",
+          "name": "Lesson 5: Change the Variable",
+          "guide": "countdown-timer/lesson05.md",
+          "py": "countdown-timer/lesson05.py"
+        },
+        {
+          "id": "countdown-timer-lesson-06",
+          "name": "Lesson 6: Introduction to Loops",
+          "guide": "countdown-timer/lesson06.md",
+          "py": "countdown-timer/lesson06.py"
+        },
+        {
+          "id": "countdown-timer-lesson-07",
+          "name": "Lesson 7: Your First For Loop",
+          "guide": "countdown-timer/lesson07.md",
+          "py": "countdown-timer/lesson07.py"
+        },
+        {
+          "id": "countdown-timer-lesson-08",
+          "name": "Lesson 8: Understanding range()",
+          "guide": "countdown-timer/lesson08.md",
+          "py": "countdown-timer/lesson08.py"
+        },
+        {
+          "id": "countdown-timer-challenge-02",
+          "name": "Mini-Challenge 2: Count to Your Age",
+          "guide": "countdown-timer/challenge02.md",
+          "py": "countdown-timer/challenge02.py",
+          "hints": "countdown-timer/challenge02-hints.md",
+          "answer": "countdown-timer/challenge02-answer.md"
+        },
+        {
+          "id": "countdown-timer-lesson-09",
+          "name": "Lesson 9: Count to 10",
+          "guide": "countdown-timer/lesson09.md",
+          "py": "countdown-timer/lesson09.py"
+        },
+        {
+          "id": "countdown-timer-lesson-10",
+          "name": "Lesson 10: Count Backwards",
+          "guide": "countdown-timer/lesson10.md",
+          "py": "countdown-timer/lesson10.py"
+        },
+        {
+          "id": "countdown-timer-lesson-11",
+          "name": "Lesson 11: Countdown from 10",
+          "guide": "countdown-timer/lesson11.md",
+          "py": "countdown-timer/lesson11.py"
+        },
+        {
+          "id": "countdown-timer-lesson-12",
+          "name": "Lesson 12: Add Messages",
+          "guide": "countdown-timer/lesson12.md",
+          "py": "countdown-timer/lesson12.py"
+        },
+        {
+          "id": "countdown-timer-challenge-final",
+          "name": "Final Challenge: Rocket Launch",
+          "guide": "countdown-timer/challenge-final.md",
+          "py": "countdown-timer/challenge-final.py",
+          "hints": "countdown-timer/challenge-final-hints.md",
+          "answer": "countdown-timer/challenge-final-answer.md"
+        }
+      ]
+    },
+    {
+      "id": "name-tag-maker",
+      "name": "Name Tag Maker",
+      "description": "Create name tags and birthday cards! Learn strings, concatenation, and f-strings to make beautiful text designs.",
+      "lessons": [
+        {
+          "id": "name-tag-maker-lesson-01",
+          "name": "Lesson 1: Print Text",
+          "guide": "name-tag-maker/lesson01.md",
+          "py": "name-tag-maker/lesson01.py"
+        },
+        {
+          "id": "name-tag-maker-lesson-02",
+          "name": "Lesson 2: Quotes and Strings",
+          "guide": "name-tag-maker/lesson02.md",
+          "py": "name-tag-maker/lesson02.py"
+        },
+        {
+          "id": "name-tag-maker-lesson-03",
+          "name": "Lesson 3: Store Text in a Variable",
+          "guide": "name-tag-maker/lesson03.md",
+          "py": "name-tag-maker/lesson03.py"
+        },
+        {
+          "id": "name-tag-maker-lesson-04",
+          "name": "Lesson 4: Print Your Name",
+          "guide": "name-tag-maker/lesson04.md",
+          "py": "name-tag-maker/lesson04.py"
+        },
+        {
+          "id": "name-tag-maker-challenge-01",
+          "name": "Mini-Challenge 1: Print Name and Age",
+          "guide": "name-tag-maker/challenge01.md",
+          "py": "name-tag-maker/challenge01.py",
+          "hints": "name-tag-maker/challenge01-hints.md",
+          "answer": "name-tag-maker/challenge01-answer.md"
+        },
+        {
+          "id": "name-tag-maker-lesson-05",
+          "name": "Lesson 5: Multiple String Variables",
+          "guide": "name-tag-maker/lesson05.md",
+          "py": "name-tag-maker/lesson05.py"
+        },
+        {
+          "id": "name-tag-maker-lesson-06",
+          "name": "Lesson 6: Combine Strings with +",
+          "guide": "name-tag-maker/lesson06.md",
+          "py": "name-tag-maker/lesson06.py"
+        },
+        {
+          "id": "name-tag-maker-lesson-07",
+          "name": "Lesson 7: Add Spaces and Symbols",
+          "guide": "name-tag-maker/lesson07.md",
+          "py": "name-tag-maker/lesson07.py"
+        },
+        {
+          "id": "name-tag-maker-challenge-02",
+          "name": "Mini-Challenge 2: Simple Name Tag",
+          "guide": "name-tag-maker/challenge02.md",
+          "py": "name-tag-maker/challenge02.py",
+          "hints": "name-tag-maker/challenge02-hints.md",
+          "answer": "name-tag-maker/challenge02-answer.md"
+        },
+        {
+          "id": "name-tag-maker-lesson-08",
+          "name": "Lesson 8: String Repetition with *",
+          "guide": "name-tag-maker/lesson08.md",
+          "py": "name-tag-maker/lesson08.py"
+        },
+        {
+          "id": "name-tag-maker-lesson-09",
+          "name": "Lesson 9: Make Borders",
+          "guide": "name-tag-maker/lesson09.md",
+          "py": "name-tag-maker/lesson09.py"
+        },
+        {
+          "id": "name-tag-maker-lesson-10",
+          "name": "Lesson 10: F-Strings Introduction",
+          "guide": "name-tag-maker/lesson10.md",
+          "py": "name-tag-maker/lesson10.py"
+        },
+        {
+          "id": "name-tag-maker-lesson-11",
+          "name": "Lesson 11: Format Name Tag with F-Strings",
+          "guide": "name-tag-maker/lesson11.md",
+          "py": "name-tag-maker/lesson11.py"
+        },
+        {
+          "id": "name-tag-maker-challenge-final",
+          "name": "Final Challenge: Birthday Card",
+          "guide": "name-tag-maker/challenge-final.md",
+          "py": "name-tag-maker/challenge-final.py",
+          "hints": "name-tag-maker/challenge-final-hints.md",
+          "answer": "name-tag-maker/challenge-final-answer.md"
+        }
+      ]
+    },
+    {
+      "id": "calculator",
+      "name": "Calculator",
+      "description": "Build a calculator app like the one on your phone! Learn math operations, decimals, and create a real tip calculator.",
+      "lessons": [
+        {
+          "id": "calculator-lesson-01",
+          "name": "Lesson 1: Print a Number",
+          "guide": "calculator/lesson01.md",
+          "py": "calculator/lesson01.py"
+        },
+        {
+          "id": "calculator-lesson-02",
+          "name": "Lesson 2: Add Two Numbers",
+          "guide": "calculator/lesson02.md",
+          "py": "calculator/lesson02.py"
+        },
+        {
+          "id": "calculator-lesson-03",
+          "name": "Lesson 3: Store Numbers in Variables",
+          "guide": "calculator/lesson03.md",
+          "py": "calculator/lesson03.py"
+        },
+        {
+          "id": "calculator-lesson-04",
+          "name": "Lesson 4: Add Variables",
+          "guide": "calculator/lesson04.md",
+          "py": "calculator/lesson04.py"
+        },
+        {
+          "id": "calculator-challenge-01",
+          "name": "Mini-Challenge 1: Add Ages",
+          "guide": "calculator/challenge01.md",
+          "py": "calculator/challenge01.py",
+          "hints": "calculator/challenge01-hints.md",
+          "answer": "calculator/challenge01-answer.md"
+        },
+        {
+          "id": "calculator-lesson-05",
+          "name": "Lesson 5: Subtraction",
+          "guide": "calculator/lesson05.md",
+          "py": "calculator/lesson05.py"
+        },
+        {
+          "id": "calculator-lesson-06",
+          "name": "Lesson 6: Multiplication",
+          "guide": "calculator/lesson06.md",
+          "py": "calculator/lesson06.py"
+        },
+        {
+          "id": "calculator-lesson-07",
+          "name": "Lesson 7: Division",
+          "guide": "calculator/lesson07.md",
+          "py": "calculator/lesson07.py"
+        },
+        {
+          "id": "calculator-lesson-08",
+          "name": "Lesson 8: All Operations Together",
+          "guide": "calculator/lesson08.md",
+          "py": "calculator/lesson08.py"
+        },
+        {
+          "id": "calculator-challenge-02",
+          "name": "Mini-Challenge 2: Calculate (10 + 5) × 2",
+          "guide": "calculator/challenge02.md",
+          "py": "calculator/challenge02.py",
+          "hints": "calculator/challenge02-hints.md",
+          "answer": "calculator/challenge02-answer.md"
+        },
+        {
+          "id": "calculator-lesson-09",
+          "name": "Lesson 9: Decimals (Floats)",
+          "guide": "calculator/lesson09.md",
+          "py": "calculator/lesson09.py"
+        },
+        {
+          "id": "calculator-lesson-10",
+          "name": "Lesson 10: Money Calculations",
+          "guide": "calculator/lesson10.md",
+          "py": "calculator/lesson10.py"
+        },
+        {
+          "id": "calculator-lesson-11",
+          "name": "Lesson 11: Store Results in Variables",
+          "guide": "calculator/lesson11.md",
+          "py": "calculator/lesson11.py"
+        },
+        {
+          "id": "calculator-lesson-12",
+          "name": "Lesson 12: Multiple Calculations",
+          "guide": "calculator/lesson12.md",
+          "py": "calculator/lesson12.py"
+        },
+        {
+          "id": "calculator-lesson-13",
+          "name": "Lesson 13: Print Results Nicely",
+          "guide": "calculator/lesson13.md",
+          "py": "calculator/lesson13.py"
+        },
+        {
+          "id": "calculator-challenge-final",
+          "name": "Final Challenge: Tip Calculator",
+          "guide": "calculator/challenge-final.md",
+          "py": "calculator/challenge-final.py",
+          "hints": "calculator/challenge-final-hints.md",
+          "answer": "calculator/challenge-final-answer.md"
+        }
+      ]
+    }
+  ]
+}
