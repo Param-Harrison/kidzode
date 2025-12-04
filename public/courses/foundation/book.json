@@ -693,6 +693,121 @@
           "answer": "shopping-list/challenge-final-answer.md"
         }
       ]
+    },
+    {
+      "id": "text-analyzer",
+      "name": "Text Analyzer",
+      "description": "Become a data detective! Count words, find secret messages, and analyze text like a pro.",
+      "lessons": [
+        {
+          "id": "text-analyzer-lesson-01",
+          "name": "Lesson 1: Count Characters",
+          "guide": "text-analyzer/lesson01.md",
+          "py": "text-analyzer/lesson01.py"
+        },
+        {
+          "id": "text-analyzer-lesson-02",
+          "name": "Lesson 2: Analyze Variables",
+          "guide": "text-analyzer/lesson02.md",
+          "py": "text-analyzer/lesson02.py"
+        },
+        {
+          "id": "text-analyzer-lesson-03",
+          "name": "Lesson 3: String Methods",
+          "guide": "text-analyzer/lesson03.md",
+          "py": "text-analyzer/lesson03.py"
+        },
+        {
+          "id": "text-analyzer-lesson-04",
+          "name": "Lesson 4: Fix Capitalization",
+          "guide": "text-analyzer/lesson04.md",
+          "py": "text-analyzer/lesson04.py"
+        },
+        {
+          "id": "text-analyzer-challenge-01",
+          "name": "Mini-Challenge 1: Name Fixer",
+          "guide": "text-analyzer/challenge01.md",
+          "py": "text-analyzer/challenge01.py",
+          "hints": "text-analyzer/challenge01-hints.md",
+          "answer": "text-analyzer/challenge01-answer.md"
+        },
+        {
+          "id": "text-analyzer-lesson-05",
+          "name": "Lesson 5: Split into Words",
+          "guide": "text-analyzer/lesson05.md",
+          "py": "text-analyzer/lesson05.py"
+        },
+        {
+          "id": "text-analyzer-lesson-06",
+          "name": "Lesson 6: Count Words",
+          "guide": "text-analyzer/lesson06.md",
+          "py": "text-analyzer/lesson06.py"
+        },
+        {
+          "id": "text-analyzer-lesson-07",
+          "name": "Lesson 7: Loop Through Words",
+          "guide": "text-analyzer/lesson07.md",
+          "py": "text-analyzer/lesson07.py"
+        },
+        {
+          "id": "text-analyzer-lesson-08",
+          "name": "Lesson 8: Find a Word",
+          "guide": "text-analyzer/lesson08.md",
+          "py": "text-analyzer/lesson08.py"
+        },
+        {
+          "id": "text-analyzer-lesson-09",
+          "name": "Lesson 9: Count Specific Words",
+          "guide": "text-analyzer/lesson09.md",
+          "py": "text-analyzer/lesson09.py"
+        },
+        {
+          "id": "text-analyzer-challenge-02",
+          "name": "Mini-Challenge 2: Word Counter",
+          "guide": "text-analyzer/challenge02.md",
+          "py": "text-analyzer/challenge02.py",
+          "hints": "text-analyzer/challenge02-hints.md",
+          "answer": "text-analyzer/challenge02-answer.md"
+        },
+        {
+          "id": "text-analyzer-lesson-10",
+          "name": "Lesson 10: Clean Up Spaces",
+          "guide": "text-analyzer/lesson10.md",
+          "py": "text-analyzer/lesson10.py"
+        },
+        {
+          "id": "text-analyzer-lesson-11",
+          "name": "Lesson 11: Combine Methods",
+          "guide": "text-analyzer/lesson11.md",
+          "py": "text-analyzer/lesson11.py"
+        },
+        {
+          "id": "text-analyzer-lesson-12",
+          "name": "Lesson 12: Replace Words",
+          "guide": "text-analyzer/lesson12.md",
+          "py": "text-analyzer/lesson12.py"
+        },
+        {
+          "id": "text-analyzer-lesson-13",
+          "name": "Lesson 13: Print Statistics",
+          "guide": "text-analyzer/lesson13.md",
+          "py": "text-analyzer/lesson13.py"
+        },
+        {
+          "id": "text-analyzer-lesson-14",
+          "name": "Lesson 14: Advanced Analysis",
+          "guide": "text-analyzer/lesson14.md",
+          "py": "text-analyzer/lesson14.py"
+        },
+        {
+          "id": "text-analyzer-challenge-final",
+          "name": "Final Challenge: Text Dashboard",
+          "guide": "text-analyzer/challenge-final.md",
+          "py": "text-analyzer/challenge-final.py",
+          "hints": "text-analyzer/challenge-final-hints.md",
+          "answer": "text-analyzer/challenge-final-answer.md"
+        }
+      ]
     }
   ]
 }

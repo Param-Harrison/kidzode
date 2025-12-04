@@ -1,0 +1,374 @@
+{
+  "id": "problem-solving",
+  "title": "Level 2: Problem Solving",
+  "description": "Use your coding superpowers to solve real-world problems! Build tools, calculators, and smart programs.",
+  "projects": [
+    {
+      "id": "password-generator",
+      "name": "Password Generator",
+      "description": "Keep your secrets safe! Build a tool to generate strong, uncrackable passwords.",
+      "lessons": [
+        {
+          "id": "password-generator-lesson-01",
+          "name": "Lesson 1: List of Letters",
+          "guide": "password-generator/lesson01.md",
+          "py": "password-generator/lesson01.py"
+        },
+        {
+          "id": "password-generator-lesson-02",
+          "name": "Lesson 2: Pick Random Letter",
+          "guide": "password-generator/lesson02.md",
+          "py": "password-generator/lesson02.py"
+        },
+        {
+          "id": "password-generator-lesson-03",
+          "name": "Lesson 3: Pick Multiple Letters",
+          "guide": "password-generator/lesson03.md",
+          "py": "password-generator/lesson03.py"
+        },
+        {
+          "id": "password-generator-lesson-04",
+          "name": "Lesson 4: Build the Password",
+          "guide": "password-generator/lesson04.md",
+          "py": "password-generator/lesson04.py"
+        },
+        {
+          "id": "password-generator-challenge-01",
+          "name": "Mini-Challenge 1: 5-Letter Code",
+          "guide": "password-generator/challenge01.md",
+          "py": "password-generator/challenge01.py",
+          "hints": "password-generator/challenge01-hints.md",
+          "answer": "password-generator/challenge01-answer.md"
+        },
+        {
+          "id": "password-generator-lesson-05",
+          "name": "Lesson 5: Add Numbers",
+          "guide": "password-generator/lesson05.md",
+          "py": "password-generator/lesson05.py"
+        },
+        {
+          "id": "password-generator-lesson-06",
+          "name": "Lesson 6: Mix Letters and Numbers",
+          "guide": "password-generator/lesson06.md",
+          "py": "password-generator/lesson06.py"
+        },
+        {
+          "id": "password-generator-lesson-07",
+          "name": "Lesson 7: Stronger Password",
+          "guide": "password-generator/lesson07.md",
+          "py": "password-generator/lesson07.py"
+        },
+        {
+          "id": "password-generator-challenge-02",
+          "name": "Mini-Challenge 2: Alphanumeric Code",
+          "guide": "password-generator/challenge02.md",
+          "py": "password-generator/challenge02.py",
+          "hints": "password-generator/challenge02-hints.md",
+          "answer": "password-generator/challenge02-answer.md"
+        },
+        {
+          "id": "password-generator-lesson-08",
+          "name": "Lesson 8: Add Symbols",
+          "guide": "password-generator/lesson08.md",
+          "py": "password-generator/lesson08.py"
+        },
+        {
+          "id": "password-generator-lesson-09",
+          "name": "Lesson 9: Custom Length",
+          "guide": "password-generator/lesson09.md",
+          "py": "password-generator/lesson09.py"
+        },
+        {
+          "id": "password-generator-lesson-10",
+          "name": "Lesson 10: User Input (Simulation)",
+          "guide": "password-generator/lesson10.md",
+          "py": "password-generator/lesson10.py"
+        },
+        {
+          "id": "password-generator-challenge-03",
+          "name": "Mini-Challenge 3: Secure Password",
+          "guide": "password-generator/challenge03.md",
+          "py": "password-generator/challenge03.py",
+          "hints": "password-generator/challenge03-hints.md",
+          "answer": "password-generator/challenge03-answer.md"
+        },
+        {
+          "id": "password-generator-lesson-11",
+          "name": "Lesson 11: Introduction to Functions",
+          "guide": "password-generator/lesson11.md",
+          "py": "password-generator/lesson11.py"
+        },
+        {
+          "id": "password-generator-lesson-12",
+          "name": "Lesson 12: Password Function",
+          "guide": "password-generator/lesson12.md",
+          "py": "password-generator/lesson12.py"
+        },
+        {
+          "id": "password-generator-lesson-13",
+          "name": "Lesson 13: Check Strength Function",
+          "guide": "password-generator/lesson13.md",
+          "py": "password-generator/lesson13.py"
+        },
+        {
+          "id": "password-generator-challenge-final",
+          "name": "Final Challenge: Password Strength Checker",
+          "guide": "password-generator/challenge-final.md",
+          "py": "password-generator/challenge-final.py",
+          "hints": "password-generator/challenge-final-hints.md",
+          "answer": "password-generator/challenge-final-answer.md"
+        }
+      ]
+    },
+    {
+      "id": "grade-calculator",
+      "name": "Grade Calculator",
+      "description": "What's your GPA? Build a smart calculator to track your grades and calculate averages.",
+      "lessons": [
+        {
+          "id": "grade-calculator-lesson-01",
+          "name": "Lesson 1: Adding Numbers",
+          "guide": "grade-calculator/lesson01.md",
+          "py": "grade-calculator/lesson01.py"
+        },
+        {
+          "id": "grade-calculator-lesson-02",
+          "name": "Lesson 2: Calculate Average",
+          "guide": "grade-calculator/lesson02.md",
+          "py": "grade-calculator/lesson02.py"
+        },
+        {
+          "id": "grade-calculator-lesson-03",
+          "name": "Lesson 3: List of Grades",
+          "guide": "grade-calculator/lesson03.md",
+          "py": "grade-calculator/lesson03.py"
+        },
+        {
+          "id": "grade-calculator-lesson-04",
+          "name": "Lesson 4: Sum with Loop",
+          "guide": "grade-calculator/lesson04.md",
+          "py": "grade-calculator/lesson04.py"
+        },
+        {
+          "id": "grade-calculator-lesson-05",
+          "name": "Lesson 5: Calculate Average (The Hard Way)",
+          "guide": "grade-calculator/lesson05.md",
+          "py": "grade-calculator/lesson05.py"
+        },
+        {
+          "id": "grade-calculator-challenge-01",
+          "name": "Mini-Challenge 1: Test Scores",
+          "guide": "grade-calculator/challenge01.md",
+          "py": "grade-calculator/challenge01.py",
+          "hints": "grade-calculator/challenge01-hints.md",
+          "answer": "grade-calculator/challenge01-answer.md"
+        },
+        {
+          "id": "grade-calculator-lesson-06",
+          "name": "Lesson 6: The Sum Shortcut",
+          "guide": "grade-calculator/lesson06.md",
+          "py": "grade-calculator/lesson06.py"
+        },
+        {
+          "id": "grade-calculator-lesson-07",
+          "name": "Lesson 7: The Count Shortcut",
+          "guide": "grade-calculator/lesson07.md",
+          "py": "grade-calculator/lesson07.py"
+        },
+        {
+          "id": "grade-calculator-lesson-08",
+          "name": "Lesson 8: The Ultimate Formula",
+          "guide": "grade-calculator/lesson08.md",
+          "py": "grade-calculator/lesson08.py"
+        },
+        {
+          "id": "grade-calculator-lesson-09",
+          "name": "Lesson 9: Pass or Fail?",
+          "guide": "grade-calculator/lesson09.md",
+          "py": "grade-calculator/lesson09.py"
+        },
+        {
+          "id": "grade-calculator-lesson-10",
+          "name": "Lesson 10: Letter Grades",
+          "guide": "grade-calculator/lesson10.md",
+          "py": "grade-calculator/lesson10.py"
+        },
+        {
+          "id": "grade-calculator-challenge-02",
+          "name": "Mini-Challenge 2: Grade Converter",
+          "guide": "grade-calculator/challenge02.md",
+          "py": "grade-calculator/challenge02.py",
+          "hints": "grade-calculator/challenge02-hints.md",
+          "answer": "grade-calculator/challenge02-answer.md"
+        },
+        {
+          "id": "grade-calculator-lesson-11",
+          "name": "Lesson 11: Average Function",
+          "guide": "grade-calculator/lesson11.md",
+          "py": "grade-calculator/lesson11.py"
+        },
+        {
+          "id": "grade-calculator-lesson-12",
+          "name": "Lesson 12: Weighted Grades",
+          "guide": "grade-calculator/lesson12.md",
+          "py": "grade-calculator/lesson12.py"
+        },
+        {
+          "id": "grade-calculator-lesson-13",
+          "name": "Lesson 13: Weighted Average Code",
+          "guide": "grade-calculator/lesson13.md",
+          "py": "grade-calculator/lesson13.py"
+        },
+        {
+          "id": "grade-calculator-lesson-14",
+          "name": "Lesson 14: Report Card Function",
+          "guide": "grade-calculator/lesson14.md",
+          "py": "grade-calculator/lesson14.py"
+        },
+        {
+          "id": "grade-calculator-challenge-final",
+          "name": "Final Challenge: Report Card Generator",
+          "guide": "grade-calculator/challenge-final.md",
+          "py": "grade-calculator/challenge-final.py",
+          "hints": "grade-calculator/challenge-final-hints.md",
+          "answer": "grade-calculator/challenge-final-answer.md"
+        }
+      ]
+    },
+    {
+      "id": "quiz-game",
+      "name": "Quiz Game",
+      "description": "Test your knowledge! Build your own trivia game with multiple choice questions and score tracking.",
+      "lessons": [
+        {
+          "id": "quiz-game-lesson-01",
+          "name": "Lesson 1: What is a Dictionary?",
+          "guide": "quiz-game/lesson01.md",
+          "py": "quiz-game/lesson01.py"
+        },
+        {
+          "id": "quiz-game-lesson-02",
+          "name": "Lesson 2: Create a Dictionary",
+          "guide": "quiz-game/lesson02.md",
+          "py": "quiz-game/lesson02.py"
+        },
+        {
+          "id": "quiz-game-lesson-03",
+          "name": "Lesson 3: Get Values",
+          "guide": "quiz-game/lesson03.md",
+          "py": "quiz-game/lesson03.py"
+        },
+        {
+          "id": "quiz-game-lesson-04",
+          "name": "Lesson 4: Question and Answer",
+          "guide": "quiz-game/lesson04.md",
+          "py": "quiz-game/lesson04.py"
+        },
+        {
+          "id": "quiz-game-lesson-05",
+          "name": "Lesson 5: Check Answer",
+          "guide": "quiz-game/lesson05.md",
+          "py": "quiz-game/lesson05.py"
+        },
+        {
+          "id": "quiz-game-challenge-01",
+          "name": "Mini-Challenge 1: 3 Questions",
+          "guide": "quiz-game/challenge01.md",
+          "py": "quiz-game/challenge01.py",
+          "hints": "quiz-game/challenge01-hints.md",
+          "answer": "quiz-game/challenge01-answer.md"
+        },
+        {
+          "id": "quiz-game-lesson-06",
+          "name": "Lesson 6: List of Dictionaries",
+          "guide": "quiz-game/lesson06.md",
+          "py": "quiz-game/lesson06.py"
+        },
+        {
+          "id": "quiz-game-lesson-07",
+          "name": "Lesson 7: Loop Through Questions",
+          "guide": "quiz-game/lesson07.md",
+          "py": "quiz-game/lesson07.py"
+        },
+        {
+          "id": "quiz-game-lesson-08",
+          "name": "Lesson 8: Ask and Answer",
+          "guide": "quiz-game/lesson08.md",
+          "py": "quiz-game/lesson08.py"
+        },
+        {
+          "id": "quiz-game-challenge-02",
+          "name": "Mini-Challenge 2: 5 Question Quiz",
+          "guide": "quiz-game/challenge02.md",
+          "py": "quiz-game/challenge02.py",
+          "hints": "quiz-game/challenge02-hints.md",
+          "answer": "quiz-game/challenge02-answer.md"
+        },
+        {
+          "id": "quiz-game-lesson-09",
+          "name": "Lesson 9: Keep Score",
+          "guide": "quiz-game/lesson09.md",
+          "py": "quiz-game/lesson09.py"
+        },
+        {
+          "id": "quiz-game-lesson-10",
+          "name": "Lesson 10: User Input (Simulation)",
+          "guide": "quiz-game/lesson10.md",
+          "py": "quiz-game/lesson10.py"
+        },
+        {
+          "id": "quiz-game-lesson-11",
+          "name": "Lesson 11: Multiple Choice",
+          "guide": "quiz-game/lesson11.md",
+          "py": "quiz-game/lesson11.py"
+        },
+        {
+          "id": "quiz-game-lesson-12",
+          "name": "Lesson 12: Print Options Nicely",
+          "guide": "quiz-game/lesson12.md",
+          "py": "quiz-game/lesson12.py"
+        },
+        {
+          "id": "quiz-game-challenge-03",
+          "name": "Mini-Challenge 3: Multiple Choice Quiz",
+          "guide": "quiz-game/challenge03.md",
+          "py": "quiz-game/challenge03.py",
+          "hints": "quiz-game/challenge03-hints.md",
+          "answer": "quiz-game/challenge03-answer.md"
+        },
+        {
+          "id": "quiz-game-lesson-13",
+          "name": "Lesson 13: Categories",
+          "guide": "quiz-game/lesson13.md",
+          "py": "quiz-game/lesson13.py"
+        },
+        {
+          "id": "quiz-game-lesson-14",
+          "name": "Lesson 14: Filter by Category",
+          "guide": "quiz-game/lesson14.md",
+          "py": "quiz-game/lesson14.py"
+        },
+        {
+          "id": "quiz-game-lesson-15",
+          "name": "Lesson 15: Calculate Percentage",
+          "guide": "quiz-game/lesson15.md",
+          "py": "quiz-game/lesson15.py"
+        },
+        {
+          "id": "quiz-game-lesson-16",
+          "name": "Lesson 16: Nice Results",
+          "guide": "quiz-game/lesson16.md",
+          "py": "quiz-game/lesson16.py"
+        },
+        {
+          "id": "quiz-game-challenge-final",
+          "name": "Final Challenge: Build Your Own Quiz",
+          "guide": "quiz-game/challenge-final.md",
+          "py": "quiz-game/challenge-final.py",
+          "hints": "quiz-game/challenge-final-hints.md",
+          "answer": "quiz-game/challenge-final-answer.md"
+        }
+      ]
+    }
+  ]
+}
