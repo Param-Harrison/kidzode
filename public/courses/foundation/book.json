@@ -311,6 +311,388 @@
           "answer": "calculator/challenge-final-answer.md"
         }
       ]
+    },
+    {
+      "id": "random-picker",
+      "name": "Random Picker",
+      "description": "Can't decide? Let Python decide for you! Build a random food picker, magic 8-ball, and team generator.",
+      "lessons": [
+        {
+          "id": "random-picker-lesson-01",
+          "name": "Lesson 1: What is a List?",
+          "guide": "random-picker/lesson01.md",
+          "py": "random-picker/lesson01.py"
+        },
+        {
+          "id": "random-picker-lesson-02",
+          "name": "Lesson 2: Create a List",
+          "guide": "random-picker/lesson02.md",
+          "py": "random-picker/lesson02.py"
+        },
+        {
+          "id": "random-picker-lesson-03",
+          "name": "Lesson 3: Access List Items",
+          "guide": "random-picker/lesson03.md",
+          "py": "random-picker/lesson03.py"
+        },
+        {
+          "id": "random-picker-lesson-04",
+          "name": "Lesson 4: Print All Items",
+          "guide": "random-picker/lesson04.md",
+          "py": "random-picker/lesson04.py"
+        },
+        {
+          "id": "random-picker-challenge-01",
+          "name": "Mini-Challenge 1: Favorite Foods",
+          "guide": "random-picker/challenge01.md",
+          "py": "random-picker/challenge01.py",
+          "hints": "random-picker/challenge01-hints.md",
+          "answer": "random-picker/challenge01-answer.md"
+        },
+        {
+          "id": "random-picker-lesson-05",
+          "name": "Lesson 5: Import Random Module",
+          "guide": "random-picker/lesson05.md",
+          "py": "random-picker/lesson05.py"
+        },
+        {
+          "id": "random-picker-lesson-06",
+          "name": "Lesson 6: Random Choice",
+          "guide": "random-picker/lesson06.md",
+          "py": "random-picker/lesson06.py"
+        },
+        {
+          "id": "random-picker-lesson-07",
+          "name": "Lesson 7: Pick Random Item",
+          "guide": "random-picker/lesson07.md",
+          "py": "random-picker/lesson07.py"
+        },
+        {
+          "id": "random-picker-lesson-08",
+          "name": "Lesson 8: Multiple Lists",
+          "guide": "random-picker/lesson08.md",
+          "py": "random-picker/lesson08.py"
+        },
+        {
+          "id": "random-picker-challenge-02",
+          "name": "Mini-Challenge 2: Random Food Picker",
+          "guide": "random-picker/challenge02.md",
+          "py": "random-picker/challenge02.py",
+          "hints": "random-picker/challenge02-hints.md",
+          "answer": "random-picker/challenge02-answer.md"
+        },
+        {
+          "id": "random-picker-lesson-09",
+          "name": "Lesson 9: Introduction to If/Else",
+          "guide": "random-picker/lesson09.md",
+          "py": "random-picker/lesson09.py"
+        },
+        {
+          "id": "random-picker-lesson-10",
+          "name": "Lesson 10: Use If with Random Choice",
+          "guide": "random-picker/lesson10.md",
+          "py": "random-picker/lesson10.py"
+        },
+        {
+          "id": "random-picker-lesson-11",
+          "name": "Lesson 11: Make Decisions with Code",
+          "guide": "random-picker/lesson11.md",
+          "py": "random-picker/lesson11.py"
+        },
+        {
+          "id": "random-picker-challenge-final",
+          "name": "Final Challenge: Team Generator",
+          "guide": "random-picker/challenge-final.md",
+          "py": "random-picker/challenge-final.py",
+          "hints": "random-picker/challenge-final-hints.md",
+          "answer": "random-picker/challenge-final-answer.md"
+        }
+      ]
+    },
+    {
+      "id": "pattern-maker",
+      "name": "Pattern Maker",
+      "description": "Draw with code! Create stars, squares, triangles, and pyramids using loops and symbols.",
+      "lessons": [
+        {
+          "id": "pattern-maker-lesson-01",
+          "name": "Lesson 1: Print a Symbol",
+          "guide": "pattern-maker/lesson01.md",
+          "py": "pattern-maker/lesson01.py"
+        },
+        {
+          "id": "pattern-maker-lesson-02",
+          "name": "Lesson 2: Repeat Symbols",
+          "guide": "pattern-maker/lesson02.md",
+          "py": "pattern-maker/lesson02.py"
+        },
+        {
+          "id": "pattern-maker-lesson-03",
+          "name": "Lesson 3: Variables for Patterns",
+          "guide": "pattern-maker/lesson03.md",
+          "py": "pattern-maker/lesson03.py"
+        },
+        {
+          "id": "pattern-maker-lesson-04",
+          "name": "Lesson 4: Square Pattern",
+          "guide": "pattern-maker/lesson04.md",
+          "py": "pattern-maker/lesson04.py"
+        },
+        {
+          "id": "pattern-maker-challenge-01",
+          "name": "Mini-Challenge 1: Border Maker",
+          "guide": "pattern-maker/challenge01.md",
+          "py": "pattern-maker/challenge01.py",
+          "hints": "pattern-maker/challenge01-hints.md",
+          "answer": "pattern-maker/challenge01-answer.md"
+        },
+        {
+          "id": "pattern-maker-lesson-05",
+          "name": "Lesson 5: Rectangle Pattern",
+          "guide": "pattern-maker/lesson05.md",
+          "py": "pattern-maker/lesson05.py"
+        },
+        {
+          "id": "pattern-maker-lesson-06",
+          "name": "Lesson 6: Growing Pattern (Triangle)",
+          "guide": "pattern-maker/lesson06.md",
+          "py": "pattern-maker/lesson06.py"
+        },
+        {
+          "id": "pattern-maker-lesson-07",
+          "name": "Lesson 7: Loop Variable Power",
+          "guide": "pattern-maker/lesson07.md",
+          "py": "pattern-maker/lesson07.py"
+        },
+        {
+          "id": "pattern-maker-lesson-08",
+          "name": "Lesson 8: Inverted Triangle",
+          "guide": "pattern-maker/lesson08.md",
+          "py": "pattern-maker/lesson08.py"
+        },
+        {
+          "id": "pattern-maker-challenge-02",
+          "name": "Mini-Challenge 2: Staircase Pattern",
+          "guide": "pattern-maker/challenge02.md",
+          "py": "pattern-maker/challenge02.py",
+          "hints": "pattern-maker/challenge02-hints.md",
+          "answer": "pattern-maker/challenge02-answer.md"
+        },
+        {
+          "id": "pattern-maker-lesson-09",
+          "name": "Lesson 9: Nested Loops",
+          "guide": "pattern-maker/lesson09.md",
+          "py": "pattern-maker/lesson09.py"
+        },
+        {
+          "id": "pattern-maker-lesson-10",
+          "name": "Lesson 10: Building a Grid",
+          "guide": "pattern-maker/lesson10.md",
+          "py": "pattern-maker/lesson10.py"
+        },
+        {
+          "id": "pattern-maker-challenge-final",
+          "name": "Final Challenge: Pyramid Pattern",
+          "guide": "pattern-maker/challenge-final.md",
+          "py": "pattern-maker/challenge-final.py",
+          "hints": "pattern-maker/challenge-final-hints.md",
+          "answer": "pattern-maker/challenge-final-answer.md"
+        }
+      ]
+    },
+    {
+      "id": "times-table-quiz",
+      "name": "Times Table Quiz",
+      "description": "Master multiplication! Build a tool to generate times tables and a quiz game to test your math skills.",
+      "lessons": [
+        {
+          "id": "times-table-quiz-lesson-01",
+          "name": "Lesson 1: Basic Multiplication",
+          "guide": "times-table-quiz/lesson01.md",
+          "py": "times-table-quiz/lesson01.py"
+        },
+        {
+          "id": "times-table-quiz-lesson-02",
+          "name": "Lesson 2: The Loop",
+          "guide": "times-table-quiz/lesson02.md",
+          "py": "times-table-quiz/lesson02.py"
+        },
+        {
+          "id": "times-table-quiz-lesson-03",
+          "name": "Lesson 3: Multiply in Loop",
+          "guide": "times-table-quiz/lesson03.md",
+          "py": "times-table-quiz/lesson03.py"
+        },
+        {
+          "id": "times-table-quiz-lesson-04",
+          "name": "Lesson 4: The Full Table",
+          "guide": "times-table-quiz/lesson04.md",
+          "py": "times-table-quiz/lesson04.py"
+        },
+        {
+          "id": "times-table-quiz-challenge-01",
+          "name": "Mini-Challenge 1: Your Favorite Number",
+          "guide": "times-table-quiz/challenge01.md",
+          "py": "times-table-quiz/challenge01.py",
+          "hints": "times-table-quiz/challenge01-hints.md",
+          "answer": "times-table-quiz/challenge01-answer.md"
+        },
+        {
+          "id": "times-table-quiz-lesson-05",
+          "name": "Lesson 5: Variable for Table",
+          "guide": "times-table-quiz/lesson05.md",
+          "py": "times-table-quiz/lesson05.py"
+        },
+        {
+          "id": "times-table-quiz-lesson-06",
+          "name": "Lesson 6: Any Number Table",
+          "guide": "times-table-quiz/lesson06.md",
+          "py": "times-table-quiz/lesson06.py"
+        },
+        {
+          "id": "times-table-quiz-lesson-07",
+          "name": "Lesson 7: Check Answers",
+          "guide": "times-table-quiz/lesson07.md",
+          "py": "times-table-quiz/lesson07.py"
+        },
+        {
+          "id": "times-table-quiz-lesson-08",
+          "name": "Lesson 8: Right or Wrong?",
+          "guide": "times-table-quiz/lesson08.md",
+          "py": "times-table-quiz/lesson08.py"
+        },
+        {
+          "id": "times-table-quiz-challenge-02",
+          "name": "Mini-Challenge 2: Math Checker",
+          "guide": "times-table-quiz/challenge02.md",
+          "py": "times-table-quiz/challenge02.py",
+          "hints": "times-table-quiz/challenge02-hints.md",
+          "answer": "times-table-quiz/challenge02-answer.md"
+        },
+        {
+          "id": "times-table-quiz-lesson-09",
+          "name": "Lesson 9: Quiz Setup",
+          "guide": "times-table-quiz/lesson09.md",
+          "py": "times-table-quiz/lesson09.py"
+        },
+        {
+          "id": "times-table-quiz-lesson-10",
+          "name": "Lesson 10: Your Answers",
+          "guide": "times-table-quiz/lesson10.md",
+          "py": "times-table-quiz/lesson10.py"
+        },
+        {
+          "id": "times-table-quiz-lesson-11",
+          "name": "Lesson 11: The Grader",
+          "guide": "times-table-quiz/lesson11.md",
+          "py": "times-table-quiz/lesson11.py"
+        },
+        {
+          "id": "times-table-quiz-lesson-12",
+          "name": "Lesson 12: The Score",
+          "guide": "times-table-quiz/lesson12.md",
+          "py": "times-table-quiz/lesson12.py"
+        },
+        {
+          "id": "times-table-quiz-challenge-final",
+          "name": "Final Challenge: Build Your Own Quiz",
+          "guide": "times-table-quiz/challenge-final.md",
+          "py": "times-table-quiz/challenge-final.py",
+          "hints": "times-table-quiz/challenge-final-hints.md",
+          "answer": "times-table-quiz/challenge-final-answer.md"
+        }
+      ]
+    },
+    {
+      "id": "shopping-list",
+      "name": "Shopping List",
+      "description": "Never forget the milk again! Learn to add, remove, and organize items in your own digital shopping list.",
+      "lessons": [
+        {
+          "id": "shopping-list-lesson-01",
+          "name": "Lesson 1: The Empty List",
+          "guide": "shopping-list/lesson01.md",
+          "py": "shopping-list/lesson01.py"
+        },
+        {
+          "id": "shopping-list-lesson-02",
+          "name": "Lesson 2: Making a List",
+          "guide": "shopping-list/lesson02.md",
+          "py": "shopping-list/lesson02.py"
+        },
+        {
+          "id": "shopping-list-lesson-03",
+          "name": "Lesson 3: Check the List",
+          "guide": "shopping-list/lesson03.md",
+          "py": "shopping-list/lesson03.py"
+        },
+        {
+          "id": "shopping-list-lesson-04",
+          "name": "Lesson 4: Read Item by Item",
+          "guide": "shopping-list/lesson04.md",
+          "py": "shopping-list/lesson04.py"
+        },
+        {
+          "id": "shopping-list-challenge-01",
+          "name": "Mini-Challenge 1: My Needs",
+          "guide": "shopping-list/challenge01.md",
+          "py": "shopping-list/challenge01.py",
+          "hints": "shopping-list/challenge01-hints.md",
+          "answer": "shopping-list/challenge01-answer.md"
+        },
+        {
+          "id": "shopping-list-lesson-05",
+          "name": "Lesson 5: Add Item",
+          "guide": "shopping-list/lesson05.md",
+          "py": "shopping-list/lesson05.py"
+        },
+        {
+          "id": "shopping-list-lesson-06",
+          "name": "Lesson 6: Add Multiple Items",
+          "guide": "shopping-list/lesson06.md",
+          "py": "shopping-list/lesson06.py"
+        },
+        {
+          "id": "shopping-list-lesson-07",
+          "name": "Lesson 7: Remove Item",
+          "guide": "shopping-list/lesson07.md",
+          "py": "shopping-list/lesson07.py"
+        },
+        {
+          "id": "shopping-list-challenge-02",
+          "name": "Mini-Challenge 2: Smart Shopper",
+          "guide": "shopping-list/challenge02.md",
+          "py": "shopping-list/challenge02.py",
+          "hints": "shopping-list/challenge02-hints.md",
+          "answer": "shopping-list/challenge02-answer.md"
+        },
+        {
+          "id": "shopping-list-lesson-08",
+          "name": "Lesson 8: How Many Items?",
+          "guide": "shopping-list/lesson08.md",
+          "py": "shopping-list/lesson08.py"
+        },
+        {
+          "id": "shopping-list-lesson-09",
+          "name": "Lesson 9: Is it on the List?",
+          "guide": "shopping-list/lesson09.md",
+          "py": "shopping-list/lesson09.py"
+        },
+        {
+          "id": "shopping-list-lesson-10",
+          "name": "Lesson 10: Pretty Print",
+          "guide": "shopping-list/lesson10.md",
+          "py": "shopping-list/lesson10.py"
+        },
+        {
+          "id": "shopping-list-challenge-final",
+          "name": "Final Challenge: Organized Shopper",
+          "guide": "shopping-list/challenge-final.md",
+          "py": "shopping-list/challenge-final.py",
+          "hints": "shopping-list/challenge-final-hints.md",
+          "answer": "shopping-list/challenge-final-answer.md"
+        }
+      ]
     }
   ]
 }
