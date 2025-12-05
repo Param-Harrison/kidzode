@@ -10,31 +10,31 @@
       "lessons": [
         {
           "id": "password-generator-lesson-01",
-          "name": "Lesson 1: List of Letters",
+          "name": "List of Letters",
           "guide": "password-generator/lesson01.md",
           "py": "password-generator/lesson01.py"
         },
         {
           "id": "password-generator-lesson-02",
-          "name": "Lesson 2: Pick Random Letter",
+          "name": "Pick Random Letter",
           "guide": "password-generator/lesson02.md",
           "py": "password-generator/lesson02.py"
         },
         {
           "id": "password-generator-lesson-03",
-          "name": "Lesson 3: Pick Multiple Letters",
+          "name": "Pick Multiple Letters",
           "guide": "password-generator/lesson03.md",
           "py": "password-generator/lesson03.py"
         },
         {
           "id": "password-generator-lesson-04",
-          "name": "Lesson 4: Build the Password",
+          "name": "Build the Password",
           "guide": "password-generator/lesson04.md",
           "py": "password-generator/lesson04.py"
         },
         {
           "id": "password-generator-challenge-01",
-          "name": "Mini-Challenge 1: 5-Letter Code",
+          "name": "5-Letter Code",
           "guide": "password-generator/challenge01.md",
           "py": "password-generator/challenge01.py",
           "hints": "password-generator/challenge01-hints.md",
@@ -42,25 +42,25 @@
         },
         {
           "id": "password-generator-lesson-05",
-          "name": "Lesson 5: Add Numbers",
+          "name": "Add Numbers",
           "guide": "password-generator/lesson05.md",
           "py": "password-generator/lesson05.py"
         },
         {
           "id": "password-generator-lesson-06",
-          "name": "Lesson 6: Mix Letters and Numbers",
+          "name": "Mix Letters and Numbers",
           "guide": "password-generator/lesson06.md",
           "py": "password-generator/lesson06.py"
         },
         {
           "id": "password-generator-lesson-07",
-          "name": "Lesson 7: Stronger Password",
+          "name": "Stronger Password",
           "guide": "password-generator/lesson07.md",
           "py": "password-generator/lesson07.py"
         },
         {
           "id": "password-generator-challenge-02",
-          "name": "Mini-Challenge 2: Alphanumeric Code",
+          "name": "Alphanumeric Code",
           "guide": "password-generator/challenge02.md",
           "py": "password-generator/challenge02.py",
           "hints": "password-generator/challenge02-hints.md",
@@ -68,25 +68,25 @@
         },
         {
           "id": "password-generator-lesson-08",
-          "name": "Lesson 8: Add Symbols",
+          "name": "Add Symbols",
           "guide": "password-generator/lesson08.md",
           "py": "password-generator/lesson08.py"
         },
         {
           "id": "password-generator-lesson-09",
-          "name": "Lesson 9: Custom Length",
+          "name": "Custom Length",
           "guide": "password-generator/lesson09.md",
           "py": "password-generator/lesson09.py"
         },
         {
           "id": "password-generator-lesson-10",
-          "name": "Lesson 10: User Input (Simulation)",
+          "name": "User Input (Simulation)",
           "guide": "password-generator/lesson10.md",
           "py": "password-generator/lesson10.py"
         },
         {
           "id": "password-generator-challenge-03",
-          "name": "Mini-Challenge 3: Secure Password",
+          "name": "Secure Password",
           "guide": "password-generator/challenge03.md",
           "py": "password-generator/challenge03.py",
           "hints": "password-generator/challenge03-hints.md",
@@ -94,25 +94,25 @@
         },
         {
           "id": "password-generator-lesson-11",
-          "name": "Lesson 11: Introduction to Functions",
+          "name": "Introduction to Functions",
           "guide": "password-generator/lesson11.md",
           "py": "password-generator/lesson11.py"
         },
         {
           "id": "password-generator-lesson-12",
-          "name": "Lesson 12: Password Function",
+          "name": "Password Function",
           "guide": "password-generator/lesson12.md",
           "py": "password-generator/lesson12.py"
         },
         {
           "id": "password-generator-lesson-13",
-          "name": "Lesson 13: Check Strength Function",
+          "name": "Check Strength Function",
           "guide": "password-generator/lesson13.md",
           "py": "password-generator/lesson13.py"
         },
         {
           "id": "password-generator-challenge-final",
-          "name": "Final Challenge: Password Strength Checker",
+          "name": "Password Strength Checker",
           "guide": "password-generator/challenge-final.md",
           "py": "password-generator/challenge-final.py",
           "hints": "password-generator/challenge-final-hints.md",
@@ -127,37 +127,37 @@
       "lessons": [
         {
           "id": "grade-calculator-lesson-01",
-          "name": "Lesson 1: Adding Numbers",
+          "name": "Adding Numbers",
           "guide": "grade-calculator/lesson01.md",
           "py": "grade-calculator/lesson01.py"
         },
         {
           "id": "grade-calculator-lesson-02",
-          "name": "Lesson 2: Calculate Average",
+          "name": "Calculate Average",
           "guide": "grade-calculator/lesson02.md",
           "py": "grade-calculator/lesson02.py"
         },
         {
           "id": "grade-calculator-lesson-03",
-          "name": "Lesson 3: List of Grades",
+          "name": "List of Grades",
           "guide": "grade-calculator/lesson03.md",
           "py": "grade-calculator/lesson03.py"
         },
         {
           "id": "grade-calculator-lesson-04",
-          "name": "Lesson 4: Sum with Loop",
+          "name": "Sum with Loop",
           "guide": "grade-calculator/lesson04.md",
           "py": "grade-calculator/lesson04.py"
         },
         {
           "id": "grade-calculator-lesson-05",
-          "name": "Lesson 5: Calculate Average (The Hard Way)",
+          "name": "Calculate Average (The Hard Way)",
           "guide": "grade-calculator/lesson05.md",
           "py": "grade-calculator/lesson05.py"
         },
         {
           "id": "grade-calculator-challenge-01",
-          "name": "Mini-Challenge 1: Test Scores",
+          "name": "Test Scores",
           "guide": "grade-calculator/challenge01.md",
           "py": "grade-calculator/challenge01.py",
           "hints": "grade-calculator/challenge01-hints.md",
@@ -165,37 +165,37 @@
         },
         {
           "id": "grade-calculator-lesson-06",
-          "name": "Lesson 6: The Sum Shortcut",
+          "name": "The Sum Shortcut",
           "guide": "grade-calculator/lesson06.md",
           "py": "grade-calculator/lesson06.py"
         },
         {
           "id": "grade-calculator-lesson-07",
-          "name": "Lesson 7: The Count Shortcut",
+          "name": "The Count Shortcut",
           "guide": "grade-calculator/lesson07.md",
           "py": "grade-calculator/lesson07.py"
         },
         {
           "id": "grade-calculator-lesson-08",
-          "name": "Lesson 8: The Ultimate Formula",
+          "name": "The Ultimate Formula",
           "guide": "grade-calculator/lesson08.md",
           "py": "grade-calculator/lesson08.py"
         },
         {
           "id": "grade-calculator-lesson-09",
-          "name": "Lesson 9: Pass or Fail?",
+          "name": "Pass or Fail?",
           "guide": "grade-calculator/lesson09.md",
           "py": "grade-calculator/lesson09.py"
         },
         {
           "id": "grade-calculator-lesson-10",
-          "name": "Lesson 10: Letter Grades",
+          "name": "Letter Grades",
           "guide": "grade-calculator/lesson10.md",
           "py": "grade-calculator/lesson10.py"
         },
         {
           "id": "grade-calculator-challenge-02",
-          "name": "Mini-Challenge 2: Grade Converter",
+          "name": "Grade Converter",
           "guide": "grade-calculator/challenge02.md",
           "py": "grade-calculator/challenge02.py",
           "hints": "grade-calculator/challenge02-hints.md",
@@ -203,31 +203,31 @@
         },
         {
           "id": "grade-calculator-lesson-11",
-          "name": "Lesson 11: Average Function",
+          "name": "Average Function",
           "guide": "grade-calculator/lesson11.md",
           "py": "grade-calculator/lesson11.py"
         },
         {
           "id": "grade-calculator-lesson-12",
-          "name": "Lesson 12: Weighted Grades",
+          "name": "Weighted Grades",
           "guide": "grade-calculator/lesson12.md",
           "py": "grade-calculator/lesson12.py"
         },
         {
           "id": "grade-calculator-lesson-13",
-          "name": "Lesson 13: Weighted Average Code",
+          "name": "Weighted Average Code",
           "guide": "grade-calculator/lesson13.md",
           "py": "grade-calculator/lesson13.py"
         },
         {
           "id": "grade-calculator-lesson-14",
-          "name": "Lesson 14: Report Card Function",
+          "name": "Report Card Function",
           "guide": "grade-calculator/lesson14.md",
           "py": "grade-calculator/lesson14.py"
         },
         {
           "id": "grade-calculator-challenge-final",
-          "name": "Final Challenge: Report Card Generator",
+          "name": "Report Card Generator",
           "guide": "grade-calculator/challenge-final.md",
           "py": "grade-calculator/challenge-final.py",
           "hints": "grade-calculator/challenge-final-hints.md",
@@ -242,37 +242,37 @@
       "lessons": [
         {
           "id": "quiz-game-lesson-01",
-          "name": "Lesson 1: What is a Dictionary?",
+          "name": "What is a Dictionary?",
           "guide": "quiz-game/lesson01.md",
           "py": "quiz-game/lesson01.py"
         },
         {
           "id": "quiz-game-lesson-02",
-          "name": "Lesson 2: Create a Dictionary",
+          "name": "Create a Dictionary",
           "guide": "quiz-game/lesson02.md",
           "py": "quiz-game/lesson02.py"
         },
         {
           "id": "quiz-game-lesson-03",
-          "name": "Lesson 3: Get Values",
+          "name": "Get Values",
           "guide": "quiz-game/lesson03.md",
           "py": "quiz-game/lesson03.py"
         },
         {
           "id": "quiz-game-lesson-04",
-          "name": "Lesson 4: Question and Answer",
+          "name": "Question and Answer",
           "guide": "quiz-game/lesson04.md",
           "py": "quiz-game/lesson04.py"
         },
         {
           "id": "quiz-game-lesson-05",
-          "name": "Lesson 5: Check Answer",
+          "name": "Check Answer",
           "guide": "quiz-game/lesson05.md",
           "py": "quiz-game/lesson05.py"
         },
         {
           "id": "quiz-game-challenge-01",
-          "name": "Mini-Challenge 1: 3 Questions",
+          "name": "3 Questions",
           "guide": "quiz-game/challenge01.md",
           "py": "quiz-game/challenge01.py",
           "hints": "quiz-game/challenge01-hints.md",
@@ -280,25 +280,25 @@
         },
         {
           "id": "quiz-game-lesson-06",
-          "name": "Lesson 6: List of Dictionaries",
+          "name": "List of Dictionaries",
           "guide": "quiz-game/lesson06.md",
           "py": "quiz-game/lesson06.py"
         },
         {
           "id": "quiz-game-lesson-07",
-          "name": "Lesson 7: Loop Through Questions",
+          "name": "Loop Through Questions",
           "guide": "quiz-game/lesson07.md",
           "py": "quiz-game/lesson07.py"
         },
         {
           "id": "quiz-game-lesson-08",
-          "name": "Lesson 8: Ask and Answer",
+          "name": "Ask and Answer",
           "guide": "quiz-game/lesson08.md",
           "py": "quiz-game/lesson08.py"
         },
         {
           "id": "quiz-game-challenge-02",
-          "name": "Mini-Challenge 2: 5 Question Quiz",
+          "name": "5 Question Quiz",
           "guide": "quiz-game/challenge02.md",
           "py": "quiz-game/challenge02.py",
           "hints": "quiz-game/challenge02-hints.md",
@@ -306,31 +306,31 @@
         },
         {
           "id": "quiz-game-lesson-09",
-          "name": "Lesson 9: Keep Score",
+          "name": "Keep Score",
           "guide": "quiz-game/lesson09.md",
           "py": "quiz-game/lesson09.py"
         },
         {
           "id": "quiz-game-lesson-10",
-          "name": "Lesson 10: User Input (Simulation)",
+          "name": "User Input (Simulation)",
           "guide": "quiz-game/lesson10.md",
           "py": "quiz-game/lesson10.py"
         },
         {
           "id": "quiz-game-lesson-11",
-          "name": "Lesson 11: Multiple Choice",
+          "name": "Multiple Choice",
           "guide": "quiz-game/lesson11.md",
           "py": "quiz-game/lesson11.py"
         },
         {
           "id": "quiz-game-lesson-12",
-          "name": "Lesson 12: Print Options Nicely",
+          "name": "Print Options Nicely",
           "guide": "quiz-game/lesson12.md",
           "py": "quiz-game/lesson12.py"
         },
         {
           "id": "quiz-game-challenge-03",
-          "name": "Mini-Challenge 3: Multiple Choice Quiz",
+          "name": "Multiple Choice Quiz",
           "guide": "quiz-game/challenge03.md",
           "py": "quiz-game/challenge03.py",
           "hints": "quiz-game/challenge03-hints.md",
@@ -338,31 +338,31 @@
         },
         {
           "id": "quiz-game-lesson-13",
-          "name": "Lesson 13: Categories",
+          "name": "Categories",
           "guide": "quiz-game/lesson13.md",
           "py": "quiz-game/lesson13.py"
         },
         {
           "id": "quiz-game-lesson-14",
-          "name": "Lesson 14: Filter by Category",
+          "name": "Filter by Category",
           "guide": "quiz-game/lesson14.md",
           "py": "quiz-game/lesson14.py"
         },
         {
           "id": "quiz-game-lesson-15",
-          "name": "Lesson 15: Calculate Percentage",
+          "name": "Calculate Percentage",
           "guide": "quiz-game/lesson15.md",
           "py": "quiz-game/lesson15.py"
         },
         {
           "id": "quiz-game-lesson-16",
-          "name": "Lesson 16: Nice Results",
+          "name": "Nice Results",
           "guide": "quiz-game/lesson16.md",
           "py": "quiz-game/lesson16.py"
         },
         {
           "id": "quiz-game-challenge-final",
-          "name": "Final Challenge: Build Your Own Quiz",
+          "name": "Build Your Own Quiz",
           "guide": "quiz-game/challenge-final.md",
           "py": "quiz-game/challenge-final.py",
           "hints": "quiz-game/challenge-final-hints.md",
@@ -377,37 +377,37 @@
       "lessons": [
         {
           "id": "contact-book-lesson-01",
-          "name": "Lesson 1: One Contact",
+          "name": "One Contact",
           "guide": "contact-book/lesson01.md",
           "py": "contact-book/lesson01.py"
         },
         {
           "id": "contact-book-lesson-02",
-          "name": "Lesson 2: More Info",
+          "name": "More Info",
           "guide": "contact-book/lesson02.md",
           "py": "contact-book/lesson02.py"
         },
         {
           "id": "contact-book-lesson-03",
-          "name": "Lesson 3: Get Info",
+          "name": "Get Info",
           "guide": "contact-book/lesson03.md",
           "py": "contact-book/lesson03.py"
         },
         {
           "id": "contact-book-lesson-04",
-          "name": "Lesson 4: List of Contacts",
+          "name": "List of Contacts",
           "guide": "contact-book/lesson04.md",
           "py": "contact-book/lesson04.py"
         },
         {
           "id": "contact-book-lesson-05",
-          "name": "Lesson 5: Print All Contacts",
+          "name": "Print All Contacts",
           "guide": "contact-book/lesson05.md",
           "py": "contact-book/lesson05.py"
         },
         {
           "id": "contact-book-challenge-01",
-          "name": "Mini-Challenge 1: My Squad",
+          "name": "My Squad",
           "guide": "contact-book/challenge01.md",
           "py": "contact-book/challenge01.py",
           "hints": "contact-book/challenge01-hints.md",
@@ -415,25 +415,25 @@
         },
         {
           "id": "contact-book-lesson-06",
-          "name": "Lesson 6: Add New Contact",
+          "name": "Add New Contact",
           "guide": "contact-book/lesson06.md",
           "py": "contact-book/lesson06.py"
         },
         {
           "id": "contact-book-lesson-07",
-          "name": "Lesson 7: Find Contact",
+          "name": "Find Contact",
           "guide": "contact-book/lesson07.md",
           "py": "contact-book/lesson07.py"
         },
         {
           "id": "contact-book-lesson-08",
-          "name": "Lesson 8: Interactive Search",
+          "name": "Interactive Search",
           "guide": "contact-book/lesson08.md",
           "py": "contact-book/lesson08.py"
         },
         {
           "id": "contact-book-challenge-02",
-          "name": "Mini-Challenge 2: Contact Finder",
+          "name": "Contact Finder",
           "guide": "contact-book/challenge02.md",
           "py": "contact-book/challenge02.py",
           "hints": "contact-book/challenge02-hints.md",
@@ -441,43 +441,43 @@
         },
         {
           "id": "contact-book-lesson-09",
-          "name": "Lesson 9: Update Contact",
+          "name": "Update Contact",
           "guide": "contact-book/lesson09.md",
           "py": "contact-book/lesson09.py"
         },
         {
           "id": "contact-book-lesson-10",
-          "name": "Lesson 10: Delete Contact",
+          "name": "Delete Contact",
           "guide": "contact-book/lesson10.md",
           "py": "contact-book/lesson10.py"
         },
         {
           "id": "contact-book-lesson-11",
-          "name": "Lesson 11: Partial Search",
+          "name": "Partial Search",
           "guide": "contact-book/lesson11.md",
           "py": "contact-book/lesson11.py"
         },
         {
           "id": "contact-book-lesson-12",
-          "name": "Lesson 12: Sort Contacts",
+          "name": "Sort Contacts",
           "guide": "contact-book/lesson12.md",
           "py": "contact-book/lesson12.py"
         },
         {
           "id": "contact-book-lesson-13",
-          "name": "Lesson 13: Count Contacts",
+          "name": "Count Contacts",
           "guide": "contact-book/lesson13.md",
           "py": "contact-book/lesson13.py"
         },
         {
           "id": "contact-book-lesson-14",
-          "name": "Lesson 14: Contact Card",
+          "name": "Contact Card",
           "guide": "contact-book/lesson14.md",
           "py": "contact-book/lesson14.py"
         },
         {
           "id": "contact-book-challenge-final",
-          "name": "Final Challenge: Organized Contacts",
+          "name": "Organized Contacts",
           "guide": "contact-book/challenge-final.md",
           "py": "contact-book/challenge-final.py",
           "hints": "contact-book/challenge-final-hints.md",
@@ -492,31 +492,31 @@
       "lessons": [
         {
           "id": "expense-tracker-lesson-01",
-          "name": "Lesson 1: Track Your Money",
+          "name": "Track Your Money",
           "guide": "expense-tracker/lesson01.md",
           "py": "expense-tracker/lesson01.py"
         },
         {
           "id": "expense-tracker-lesson-02",
-          "name": "Lesson 2: List of Expenses",
+          "name": "List of Expenses",
           "guide": "expense-tracker/lesson02.md",
           "py": "expense-tracker/lesson02.py"
         },
         {
           "id": "expense-tracker-lesson-03",
-          "name": "Lesson 3: Add Expense",
+          "name": "Add Expense",
           "guide": "expense-tracker/lesson03.md",
           "py": "expense-tracker/lesson03.py"
         },
         {
           "id": "expense-tracker-lesson-04",
-          "name": "Lesson 4: Calculate Total",
+          "name": "Calculate Total",
           "guide": "expense-tracker/lesson04.md",
           "py": "expense-tracker/lesson04.py"
         },
         {
           "id": "expense-tracker-challenge-01",
-          "name": "Mini-Challenge 1: Spending Spree",
+          "name": "Spending Spree",
           "guide": "expense-tracker/challenge01.md",
           "py": "expense-tracker/challenge01.py",
           "hints": "expense-tracker/challenge01-hints.md",
@@ -524,25 +524,25 @@
         },
         {
           "id": "expense-tracker-lesson-05",
-          "name": "Lesson 5: Filter by Category",
+          "name": "Filter by Category",
           "guide": "expense-tracker/lesson05.md",
           "py": "expense-tracker/lesson05.py"
         },
         {
           "id": "expense-tracker-lesson-06",
-          "name": "Lesson 6: List Comprehension",
+          "name": "List Comprehension",
           "guide": "expense-tracker/lesson06.md",
           "py": "expense-tracker/lesson06.py"
         },
         {
           "id": "expense-tracker-lesson-07",
-          "name": "Lesson 7: Filter with List Comprehension",
+          "name": "Filter with List Comprehension",
           "guide": "expense-tracker/lesson07.md",
           "py": "expense-tracker/lesson07.py"
         },
         {
           "id": "expense-tracker-challenge-02",
-          "name": "Mini-Challenge 2: Food Finder",
+          "name": "Food Finder",
           "guide": "expense-tracker/challenge02.md",
           "py": "expense-tracker/challenge02.py",
           "hints": "expense-tracker/challenge02-hints.md",
@@ -550,25 +550,25 @@
         },
         {
           "id": "expense-tracker-lesson-08",
-          "name": "Lesson 8: Category Totals",
+          "name": "Category Totals",
           "guide": "expense-tracker/lesson08.md",
           "py": "expense-tracker/lesson08.py"
         },
         {
           "id": "expense-tracker-lesson-09",
-          "name": "Lesson 9: Budget Limit",
+          "name": "Budget Limit",
           "guide": "expense-tracker/lesson09.md",
           "py": "expense-tracker/lesson09.py"
         },
         {
           "id": "expense-tracker-lesson-10",
-          "name": "Lesson 10: Remaining Budget",
+          "name": "Remaining Budget",
           "guide": "expense-tracker/lesson10.md",
           "py": "expense-tracker/lesson10.py"
         },
         {
           "id": "expense-tracker-challenge-03",
-          "name": "Mini-Challenge 3: Budget Check",
+          "name": "Budget Check",
           "guide": "expense-tracker/challenge03.md",
           "py": "expense-tracker/challenge03.py",
           "hints": "expense-tracker/challenge03-hints.md",
@@ -576,37 +576,37 @@
         },
         {
           "id": "expense-tracker-lesson-11",
-          "name": "Lesson 11: Percentage Used",
+          "name": "Percentage Used",
           "guide": "expense-tracker/lesson11.md",
           "py": "expense-tracker/lesson11.py"
         },
         {
           "id": "expense-tracker-lesson-12",
-          "name": "Lesson 12: Biggest Expense",
+          "name": "Biggest Expense",
           "guide": "expense-tracker/lesson12.md",
           "py": "expense-tracker/lesson12.py"
         },
         {
           "id": "expense-tracker-lesson-13",
-          "name": "Lesson 13: Monthly View",
+          "name": "Monthly View",
           "guide": "expense-tracker/lesson13.md",
           "py": "expense-tracker/lesson13.py"
         },
         {
           "id": "expense-tracker-lesson-14",
-          "name": "Lesson 14: Budget Alerts",
+          "name": "Budget Alerts",
           "guide": "expense-tracker/lesson14.md",
           "py": "expense-tracker/lesson14.py"
         },
         {
           "id": "expense-tracker-lesson-15",
-          "name": "Lesson 15: Spending Advice",
+          "name": "Spending Advice",
           "guide": "expense-tracker/lesson15.md",
           "py": "expense-tracker/lesson15.py"
         },
         {
           "id": "expense-tracker-challenge-final",
-          "name": "Final Challenge: Smart Budget Advisor",
+          "name": "Smart Budget Advisor",
           "guide": "expense-tracker/challenge-final.md",
           "py": "expense-tracker/challenge-final.py",
           "hints": "expense-tracker/challenge-final-hints.md",
@@ -621,31 +621,31 @@
       "lessons": [
         {
           "id": "habit-tracker-lesson-01",
-          "name": "Lesson 1: Track a Habit",
+          "name": "Track a Habit",
           "guide": "habit-tracker/lesson01.md",
           "py": "habit-tracker/lesson01.py"
         },
         {
           "id": "habit-tracker-lesson-02",
-          "name": "Lesson 2: Mark as Complete",
+          "name": "Mark as Complete",
           "guide": "habit-tracker/lesson02.md",
           "py": "habit-tracker/lesson02.py"
         },
         {
           "id": "habit-tracker-lesson-03",
-          "name": "Lesson 3: Multiple Habits",
+          "name": "Multiple Habits",
           "guide": "habit-tracker/lesson03.md",
           "py": "habit-tracker/lesson03.py"
         },
         {
           "id": "habit-tracker-lesson-04",
-          "name": "Lesson 4: Count Completed",
+          "name": "Count Completed",
           "guide": "habit-tracker/lesson04.md",
           "py": "habit-tracker/lesson04.py"
         },
         {
           "id": "habit-tracker-challenge-01",
-          "name": "Mini-Challenge 1: Daily Report",
+          "name": "Daily Report",
           "guide": "habit-tracker/challenge01.md",
           "py": "habit-tracker/challenge01.py",
           "hints": "habit-tracker/challenge01-hints.md",
@@ -653,25 +653,25 @@
         },
         {
           "id": "habit-tracker-lesson-05",
-          "name": "Lesson 5: What is a Streak?",
+          "name": "What is a Streak?",
           "guide": "habit-tracker/lesson05.md",
           "py": "habit-tracker/lesson05.py"
         },
         {
           "id": "habit-tracker-lesson-06",
-          "name": "Lesson 6: Count Streak",
+          "name": "Count Streak",
           "guide": "habit-tracker/lesson06.md",
           "py": "habit-tracker/lesson06.py"
         },
         {
           "id": "habit-tracker-lesson-07",
-          "name": "Lesson 7: Reset Streak",
+          "name": "Reset Streak",
           "guide": "habit-tracker/lesson07.md",
           "py": "habit-tracker/lesson07.py"
         },
         {
           "id": "habit-tracker-challenge-02",
-          "name": "Mini-Challenge 2: Streak Calculator",
+          "name": "Streak Calculator",
           "guide": "habit-tracker/challenge02.md",
           "py": "habit-tracker/challenge02.py",
           "hints": "habit-tracker/challenge02-hints.md",
@@ -679,49 +679,49 @@
         },
         {
           "id": "habit-tracker-lesson-08",
-          "name": "Lesson 8: Weekly View",
+          "name": "Weekly View",
           "guide": "habit-tracker/lesson08.md",
           "py": "habit-tracker/lesson08.py"
         },
         {
           "id": "habit-tracker-lesson-09",
-          "name": "Lesson 9: Completion Rate",
+          "name": "Completion Rate",
           "guide": "habit-tracker/lesson09.md",
           "py": "habit-tracker/lesson09.py"
         },
         {
           "id": "habit-tracker-lesson-10",
-          "name": "Lesson 10: Percentage Complete",
+          "name": "Percentage Complete",
           "guide": "habit-tracker/lesson10.md",
           "py": "habit-tracker/lesson10.py"
         },
         {
           "id": "habit-tracker-lesson-11",
-          "name": "Lesson 11: Best Streak",
+          "name": "Best Streak",
           "guide": "habit-tracker/lesson11.md",
           "py": "habit-tracker/lesson11.py"
         },
         {
           "id": "habit-tracker-lesson-12",
-          "name": "Lesson 12: Current vs Best",
+          "name": "Current vs Best",
           "guide": "habit-tracker/lesson12.md",
           "py": "habit-tracker/lesson12.py"
         },
         {
           "id": "habit-tracker-lesson-13",
-          "name": "Lesson 13: Habit Stats",
+          "name": "Habit Stats",
           "guide": "habit-tracker/lesson13.md",
           "py": "habit-tracker/lesson13.py"
         },
         {
           "id": "habit-tracker-lesson-14",
-          "name": "Lesson 14: Visual Progress",
+          "name": "Visual Progress",
           "guide": "habit-tracker/lesson14.md",
           "py": "habit-tracker/lesson14.py"
         },
         {
           "id": "habit-tracker-challenge-final",
-          "name": "Final Challenge: Habit Master",
+          "name": "Habit Master",
           "guide": "habit-tracker/challenge-final.md",
           "py": "habit-tracker/challenge-final.py",
           "hints": "habit-tracker/challenge-final-hints.md",
@@ -736,31 +736,31 @@
       "lessons": [
         {
           "id": "text-formatter-lesson-01",
-          "name": "Lesson 1: Shout It Out!",
+          "name": "Shout It Out!",
           "guide": "text-formatter/lesson01.md",
           "py": "text-formatter/lesson01.py"
         },
         {
           "id": "text-formatter-lesson-02",
-          "name": "Lesson 2: Whisper Mode",
+          "name": "Whisper Mode",
           "guide": "text-formatter/lesson02.md",
           "py": "text-formatter/lesson02.py"
         },
         {
           "id": "text-formatter-lesson-03",
-          "name": "Lesson 3: Title Case",
+          "name": "Title Case",
           "guide": "text-formatter/lesson03.md",
           "py": "text-formatter/lesson03.py"
         },
         {
           "id": "text-formatter-lesson-04",
-          "name": "Lesson 4: Capitalize",
+          "name": "Capitalize",
           "guide": "text-formatter/lesson04.md",
           "py": "text-formatter/lesson04.py"
         },
         {
           "id": "text-formatter-challenge-01",
-          "name": "Mini-Challenge 1: Style Switcher",
+          "name": "Style Switcher",
           "guide": "text-formatter/challenge01.md",
           "py": "text-formatter/challenge01.py",
           "hints": "text-formatter/challenge01-hints.md",
@@ -768,31 +768,31 @@
         },
         {
           "id": "text-formatter-lesson-05",
-          "name": "Lesson 5: Clean Up Spaces",
+          "name": "Clean Up Spaces",
           "guide": "text-formatter/lesson05.md",
           "py": "text-formatter/lesson05.py"
         },
         {
           "id": "text-formatter-lesson-06",
-          "name": "Lesson 6: Replace Words",
+          "name": "Replace Words",
           "guide": "text-formatter/lesson06.md",
           "py": "text-formatter/lesson06.py"
         },
         {
           "id": "text-formatter-lesson-07",
-          "name": "Lesson 7: Replace All",
+          "name": "Replace All",
           "guide": "text-formatter/lesson07.md",
           "py": "text-formatter/lesson07.py"
         },
         {
           "id": "text-formatter-lesson-08",
-          "name": "Lesson 8: Find and Replace Tool",
+          "name": "Find and Replace Tool",
           "guide": "text-formatter/lesson08.md",
           "py": "text-formatter/lesson08.py"
         },
         {
           "id": "text-formatter-challenge-02",
-          "name": "Mini-Challenge 2: Secret Code",
+          "name": "Secret Code",
           "guide": "text-formatter/challenge02.md",
           "py": "text-formatter/challenge02.py",
           "hints": "text-formatter/challenge02-hints.md",
@@ -800,43 +800,43 @@
         },
         {
           "id": "text-formatter-lesson-09",
-          "name": "Lesson 9: Split Text",
+          "name": "Split Text",
           "guide": "text-formatter/lesson09.md",
           "py": "text-formatter/lesson09.py"
         },
         {
           "id": "text-formatter-lesson-10",
-          "name": "Lesson 10: Join Text",
+          "name": "Join Text",
           "guide": "text-formatter/lesson10.md",
           "py": "text-formatter/lesson10.py"
         },
         {
           "id": "text-formatter-lesson-11",
-          "name": "Lesson 11: Reverse Text",
+          "name": "Reverse Text",
           "guide": "text-formatter/lesson11.md",
           "py": "text-formatter/lesson11.py"
         },
         {
           "id": "text-formatter-lesson-12",
-          "name": "Lesson 12: Count Words",
+          "name": "Count Words",
           "guide": "text-formatter/lesson12.md",
           "py": "text-formatter/lesson12.py"
         },
         {
           "id": "text-formatter-lesson-13",
-          "name": "Lesson 13: Remove Duplicates",
+          "name": "Remove Duplicates",
           "guide": "text-formatter/lesson13.md",
           "py": "text-formatter/lesson13.py"
         },
         {
           "id": "text-formatter-lesson-14",
-          "name": "Lesson 14: Formatting Function",
+          "name": "Formatting Function",
           "guide": "text-formatter/lesson14.md",
           "py": "text-formatter/lesson14.py"
         },
         {
           "id": "text-formatter-challenge-final",
-          "name": "Final Challenge: Markdown Maker",
+          "name": "Markdown Maker",
           "guide": "text-formatter/challenge-final.md",
           "py": "text-formatter/challenge-final.py",
           "hints": "text-formatter/challenge-final-hints.md",
@@ -851,31 +851,31 @@
       "lessons": [
         {
           "id": "simple-game-engine-lesson-01",
-          "name": "Lesson 1: What is a Class?",
+          "name": "What is a Class?",
           "guide": "simple-game-engine/lesson01.md",
           "py": "simple-game-engine/lesson01.py"
         },
         {
           "id": "simple-game-engine-lesson-02",
-          "name": "Lesson 2: Add Properties",
+          "name": "Add Properties",
           "guide": "simple-game-engine/lesson02.md",
           "py": "simple-game-engine/lesson02.py"
         },
         {
           "id": "simple-game-engine-lesson-03",
-          "name": "Lesson 3: More Properties",
+          "name": "More Properties",
           "guide": "simple-game-engine/lesson03.md",
           "py": "simple-game-engine/lesson03.py"
         },
         {
           "id": "simple-game-engine-lesson-04",
-          "name": "Lesson 4: Access Properties",
+          "name": "Access Properties",
           "guide": "simple-game-engine/lesson04.md",
           "py": "simple-game-engine/lesson04.py"
         },
         {
           "id": "simple-game-engine-challenge-01",
-          "name": "Mini-Challenge 1: Character Creator",
+          "name": "Character Creator",
           "guide": "simple-game-engine/challenge01.md",
           "py": "simple-game-engine/challenge01.py",
           "hints": "simple-game-engine/challenge01-hints.md",
@@ -883,25 +883,25 @@
         },
         {
           "id": "simple-game-engine-lesson-05",
-          "name": "Lesson 5: Add Methods",
+          "name": "Add Methods",
           "guide": "simple-game-engine/lesson05.md",
           "py": "simple-game-engine/lesson05.py"
         },
         {
           "id": "simple-game-engine-lesson-06",
-          "name": "Lesson 6: Call Methods",
+          "name": "Call Methods",
           "guide": "simple-game-engine/lesson06.md",
           "py": "simple-game-engine/lesson06.py"
         },
         {
           "id": "simple-game-engine-lesson-07",
-          "name": "Lesson 7: Player Class",
+          "name": "Player Class",
           "guide": "simple-game-engine/lesson07.md",
           "py": "simple-game-engine/lesson07.py"
         },
         {
           "id": "simple-game-engine-challenge-02",
-          "name": "Mini-Challenge 2: Attack!",
+          "name": "Attack!",
           "guide": "simple-game-engine/challenge02.md",
           "py": "simple-game-engine/challenge02.py",
           "hints": "simple-game-engine/challenge02-hints.md",
@@ -909,25 +909,25 @@
         },
         {
           "id": "simple-game-engine-lesson-08",
-          "name": "Lesson 8: Take Damage",
+          "name": "Take Damage",
           "guide": "simple-game-engine/lesson08.md",
           "py": "simple-game-engine/lesson08.py"
         },
         {
           "id": "simple-game-engine-lesson-09",
-          "name": "Lesson 9: Heal Method",
+          "name": "Heal Method",
           "guide": "simple-game-engine/lesson09.md",
           "py": "simple-game-engine/lesson09.py"
         },
         {
           "id": "simple-game-engine-lesson-10",
-          "name": "Lesson 10: Multiple Players",
+          "name": "Multiple Players",
           "guide": "simple-game-engine/lesson10.md",
           "py": "simple-game-engine/lesson10.py"
         },
         {
           "id": "simple-game-engine-challenge-03",
-          "name": "Mini-Challenge 3: Battle!",
+          "name": "Battle!",
           "guide": "simple-game-engine/challenge03.md",
           "py": "simple-game-engine/challenge03.py",
           "hints": "simple-game-engine/challenge03-hints.md",
@@ -935,37 +935,37 @@
         },
         {
           "id": "simple-game-engine-lesson-11",
-          "name": "Lesson 11: Game Loop",
+          "name": "Game Loop",
           "guide": "simple-game-engine/lesson11.md",
           "py": "simple-game-engine/lesson11.py"
         },
         {
           "id": "simple-game-engine-lesson-12",
-          "name": "Lesson 12: Turn-Based Actions",
+          "name": "Turn-Based Actions",
           "guide": "simple-game-engine/lesson12.md",
           "py": "simple-game-engine/lesson12.py"
         },
         {
           "id": "simple-game-engine-lesson-13",
-          "name": "Lesson 13: Win or Lose",
+          "name": "Win or Lose",
           "guide": "simple-game-engine/lesson13.md",
           "py": "simple-game-engine/lesson13.py"
         },
         {
           "id": "simple-game-engine-lesson-14",
-          "name": "Lesson 14: Game State",
+          "name": "Game State",
           "guide": "simple-game-engine/lesson14.md",
           "py": "simple-game-engine/lesson14.py"
         },
         {
           "id": "simple-game-engine-lesson-15",
-          "name": "Lesson 15: Reset Game",
+          "name": "Reset Game",
           "guide": "simple-game-engine/lesson15.md",
           "py": "simple-game-engine/lesson15.py"
         },
         {
           "id": "simple-game-engine-challenge-final",
-          "name": "Final Challenge: Boss Battle",
+          "name": "Boss Battle",
           "guide": "simple-game-engine/challenge-final.md",
           "py": "simple-game-engine/challenge-final.py",
           "hints": "simple-game-engine/challenge-final-hints.md",
@@ -980,37 +980,37 @@
       "lessons": [
         {
           "id": "data-visualizer-lesson-01",
-          "name": "Lesson 1: Find the Max",
+          "name": "Find the Max",
           "guide": "data-visualizer/lesson01.md",
           "py": "data-visualizer/lesson01.py"
         },
         {
           "id": "data-visualizer-lesson-02",
-          "name": "Lesson 2: Find the Min",
+          "name": "Find the Min",
           "guide": "data-visualizer/lesson02.md",
           "py": "data-visualizer/lesson02.py"
         },
         {
           "id": "data-visualizer-lesson-03",
-          "name": "Lesson 3: Calculate Average",
+          "name": "Calculate Average",
           "guide": "data-visualizer/lesson03.md",
           "py": "data-visualizer/lesson03.py"
         },
         {
           "id": "data-visualizer-lesson-04",
-          "name": "Lesson 4: Calculate Range",
+          "name": "Calculate Range",
           "guide": "data-visualizer/lesson04.md",
           "py": "data-visualizer/lesson04.py"
         },
         {
           "id": "data-visualizer-lesson-05",
-          "name": "Lesson 5: Sort Data",
+          "name": "Sort Data",
           "guide": "data-visualizer/lesson05.md",
           "py": "data-visualizer/lesson05.py"
         },
         {
           "id": "data-visualizer-challenge-01",
-          "name": "Mini-Challenge 1: Score Analyzer",
+          "name": "Score Analyzer",
           "guide": "data-visualizer/challenge01.md",
           "py": "data-visualizer/challenge01.py",
           "hints": "data-visualizer/challenge01-hints.md",
@@ -1018,25 +1018,25 @@
         },
         {
           "id": "data-visualizer-lesson-06",
-          "name": "Lesson 6: Find the Median",
+          "name": "Find the Median",
           "guide": "data-visualizer/lesson06.md",
           "py": "data-visualizer/lesson06.py"
         },
         {
           "id": "data-visualizer-lesson-07",
-          "name": "Lesson 7: Find the Mode",
+          "name": "Find the Mode",
           "guide": "data-visualizer/lesson07.md",
           "py": "data-visualizer/lesson07.py"
         },
         {
           "id": "data-visualizer-lesson-08",
-          "name": "Lesson 8: Bar Charts",
+          "name": "Bar Charts",
           "guide": "data-visualizer/lesson08.md",
           "py": "data-visualizer/lesson08.py"
         },
         {
           "id": "data-visualizer-challenge-02",
-          "name": "Mini-Challenge 2: Star Graph",
+          "name": "Star Graph",
           "guide": "data-visualizer/challenge02.md",
           "py": "data-visualizer/challenge02.py",
           "hints": "data-visualizer/challenge02-hints.md",
@@ -1044,37 +1044,37 @@
         },
         {
           "id": "data-visualizer-lesson-09",
-          "name": "Lesson 9: Scaling Data",
+          "name": "Scaling Data",
           "guide": "data-visualizer/lesson09.md",
           "py": "data-visualizer/lesson09.py"
         },
         {
           "id": "data-visualizer-lesson-10",
-          "name": "Lesson 10: Scaled Bar Chart",
+          "name": "Scaled Bar Chart",
           "guide": "data-visualizer/lesson10.md",
           "py": "data-visualizer/lesson10.py"
         },
         {
           "id": "data-visualizer-lesson-11",
-          "name": "Lesson 11: Compare Data",
+          "name": "Compare Data",
           "guide": "data-visualizer/lesson11.md",
           "py": "data-visualizer/lesson11.py"
         },
         {
           "id": "data-visualizer-lesson-12",
-          "name": "Lesson 12: Percentages",
+          "name": "Percentages",
           "guide": "data-visualizer/lesson12.md",
           "py": "data-visualizer/lesson12.py"
         },
         {
           "id": "data-visualizer-lesson-13",
-          "name": "Lesson 13: Growth Indicator",
+          "name": "Growth Indicator",
           "guide": "data-visualizer/lesson13.md",
           "py": "data-visualizer/lesson13.py"
         },
         {
           "id": "data-visualizer-challenge-final",
-          "name": "Final Challenge: Data Dashboard",
+          "name": "Data Dashboard",
           "guide": "data-visualizer/challenge-final.md",
           "py": "data-visualizer/challenge-final.py",
           "hints": "data-visualizer/challenge-final-hints.md",
