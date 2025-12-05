@@ -1,19 +1,19 @@
 # Solution
 
 ```python
-q = {
+quiz_data = {
     "question": "What is the fastest animal?",
     "options": ["A: Turtle", "B: Cheetah", "C: Snail"],
     "answer": "B"
 }
 
-print(q["question"])
-for opt in q["options"]:
+print(quiz_data["question"])
+for opt in quiz_data["options"]:
     print(opt)
 
 user_input = "B" # Pretend user typed B
 
-if user_input == q["answer"]:
+if user_input == quiz_data["answer"]:
     print("Correct!")
 else:
     print("Wrong!")

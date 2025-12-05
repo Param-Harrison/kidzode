@@ -4,12 +4,12 @@ For a quiz, we need a Question and an Answer.
 Perfect for a dictionary!
 
 ```python
-qa = {
+quiz_item = {
     "question": "What is the capital of France?",
     "answer": "Paris"
 }
 
-print(qa["question"])
+print(quiz_item["question"])
 ```
 
 You'll see:

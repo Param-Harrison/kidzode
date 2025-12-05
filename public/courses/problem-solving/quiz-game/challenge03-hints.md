@@ -1,13 +1,13 @@
 # Hints
 
 ## 🟢 Hint 1
-Dict: `q = {"q": "...", "opts": ["A...", "B..."], "a": "A"}`
+Dict: `quiz_data = {"question": "...", "options": ["A...", "B..."], "answer": "A"}`
 
 ## 🟡 Hint 2
-Print Q: `print(q["q"])`
+Print Q: `print(quiz_data["question"])`
 
 ## 🟠 Hint 3
-Loop Opts: `for o in q["opts"]: print(o)`
+Loop Opts: `for o in quiz_data["options"]: print(o)`
 
 ## 🔴 Hint 4
-Check: `if user_input == q["a"]:`
+Check: `if user_input == quiz_data["answer"]:`
