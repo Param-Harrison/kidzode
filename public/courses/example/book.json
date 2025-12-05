@@ -13,7 +13,8 @@
           "in": "",
           "out": "Hello, World!"
         }
-      ]
+      ],
+      "type": "lesson"
     },
     {
       "id": "lesson-02-variables",
@@ -25,7 +26,8 @@
           "in": "Alice",
           "out": ".*Hello, Alice"
         }
-      ]
+      ],
+      "type": "lesson"
     },
     {
       "id": "lesson-03-numbers",
@@ -34,17 +36,22 @@
       "py": "lesson03.py",
       "tests": [
         {
-          "in": ["5", "3"],
+          "in": [
+            "5",
+            "3"
+          ],
           "out": ".*8"
         }
-      ]
+      ],
+      "type": "lesson"
     },
     {
       "id": "lesson-04-strings",
       "name": "Lesson 4: Working with Strings",
       "guide": "lesson04.md",
       "py": "lesson04.py",
-      "isExample": true
+      "isExample": true,
+      "type": "lesson"
     },
     {
       "id": "lesson-05-conditionals",
@@ -60,7 +67,8 @@
           "in": "15",
           "out": ".*minor"
         }
-      ]
+      ],
+      "type": "lesson"
     }
   ]
 }
