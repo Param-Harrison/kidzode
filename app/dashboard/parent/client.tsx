@@ -11,7 +11,7 @@ type Student = {
   hasPin: boolean;
 };
 
-export function ParentDashboardClient({ students }: { students: Student[] }) {
+export function ParentDashboardClient({ classCode, students }: { classCode: string; students: Student[] }) {
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
 
   return (
@@ -29,6 +29,22 @@ export function ParentDashboardClient({ students }: { students: Student[] }) {
           Add Child
         </button>
       </div>
+
+      {classCode && (
+        <div className="bg-secondary/10 border-2 border-secondary rounded-xl p-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="text-sm font-bold text-secondary-foreground mb-1">Family Code</h3>
+              <p className="text-xs text-muted-foreground mb-3">
+                Share this code with your children to log in
+              </p>
+              <div className="inline-flex items-center gap-3 bg-background px-4 py-3 rounded-lg border-2 border-border">
+                <span className="text-3xl font-mono font-black tracking-widest">{classCode}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {students.map((student) => (

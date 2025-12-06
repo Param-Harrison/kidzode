@@ -16,6 +16,7 @@ export default async function ParentDashboardPage() {
 
   return (
     <ParentDashboardClient
+      classCode={account.classCode || ''}
       students={students.map((s) => ({
         id: s.id,
         displayName: s.displayName,

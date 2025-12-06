@@ -185,14 +185,14 @@ export async function createStudent(
       .returning();
 
     // Create student record
-    const hashedPin = pin ? await hashPassword(pin) : null;
+    // PIN should already be hashed before calling this function
     const [student] = await tx
       .insert(students)
       .values({
         userId: user.id,
         parentAccountId,
         displayName,
-        pin: hashedPin,
+        pin: pin || null,
       })
       .returning();
 

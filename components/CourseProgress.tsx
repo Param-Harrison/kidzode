@@ -114,7 +114,7 @@ export function CourseProgress({
             <Link href={`/courses/${bookId}/lessons`}>
               <Button
                 size="lg"
-                className="w-full md:w-auto border-4 border-black bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-6 px-8 rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+                className="w-full md:w-auto border-4 border-black bg-green-500 hover:bg-green-600 text-black font-bold text-lg py-6 px-8 rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
               >
                 Start Learning
                 <Play className="ml-2 h-5 w-5" />

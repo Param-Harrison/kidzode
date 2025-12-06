@@ -2,9 +2,15 @@ import { db } from './drizzle';
 import { users, accounts, students, classrooms, classroomStudents } from './schema';
 import { hashPassword } from '@/lib/auth/session';
 import { UserType, AccountType } from './schema';
+import { sql } from 'drizzle-orm';
 
 async function seed() {
   console.log('🌱 Seeding database...');
+
+  // Clear existing data
+  console.log('🧹 Clearing existing data...');
+  await db.execute(sql`TRUNCATE TABLE users, accounts, students, classrooms, classroom_students, progress, ratings, bookmarks, feedback, activity_logs, oauth_accounts RESTART IDENTITY CASCADE`);
+  console.log('✅ Database cleared');
 
   // Create a parent user with account
   const parentPasswordHash = await hashPassword('parent123');
@@ -25,10 +31,12 @@ async function seed() {
       ownerId: parentUser.id,
       accountType: AccountType.INDIVIDUAL,
       subscriptionType: 'free',
+      classCode: 'FAM123', // Family Code for parent
     })
     .returning();
 
   console.log('✅ Created parent user: parent@test.com / parent123');
+  console.log(`   Family Code: FAM123`);
 
   // Create children for the parent
   const [child1User] = await db
@@ -39,11 +47,12 @@ async function seed() {
     })
     .returning();
 
+  const alicePin = await hashPassword('1234');
   await db.insert(students).values({
     userId: child1User.id,
     parentAccountId: parentAccount.id,
     displayName: 'Alice',
-    pin: '1234',
+    pin: alicePin,
   });
 
   const [child2User] = await db
@@ -54,13 +63,15 @@ async function seed() {
     })
     .returning();
 
+  const bobPin = await hashPassword('5678');
   await db.insert(students).values({
     userId: child2User.id,
     parentAccountId: parentAccount.id,
     displayName: 'Bob',
+    pin: bobPin,
   });
 
-  console.log('✅ Created 2 children: Alice (PIN: 1234), Bob (no PIN)');
+  console.log('✅ Created 2 children: Alice (PIN: 1234), Bob (PIN: 5678)');
 
   // Create a teacher user with account
   const teacherPasswordHash = await hashPassword('teacher123');
@@ -107,12 +118,13 @@ async function seed() {
     })
     .returning();
 
+  const charliePin = await hashPassword('5678');
   const [student1] = await db
     .insert(students)
     .values({
       userId: student1User.id,
       displayName: 'Charlie',
-      pin: '5678',
+      pin: charliePin,
     })
     .returning();
 
@@ -130,11 +142,13 @@ async function seed() {
     })
     .returning();
 
+  const dianaPin = await hashPassword('9012');
   const [student2] = await db
     .insert(students)
     .values({
       userId: student2User.id,
       displayName: 'Diana',
+      pin: dianaPin,
     })
     .returning();
 
@@ -144,11 +158,12 @@ async function seed() {
     isActive: true,
   });
 
-  console.log('✅ Added 2 students to classroom: Charlie (PIN: 5678), Diana (no PIN)');
+  console.log('✅ Added 2 students to classroom: Charlie (PIN: 5678), Diana (PIN: 9012)');
 
   console.log('\n🎉 Seed completed successfully!');
   console.log('\n📝 Test Accounts:');
   console.log('   Parent: parent@test.com / parent123');
+  console.log('   Family Code: FAM123');
   console.log('   Teacher: teacher@test.com / teacher123');
   console.log('   Classroom Code: ABC123');
 }

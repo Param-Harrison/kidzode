@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { validateClassCode } from '@/lib/auth/class-code';
-import { getStudentsInClassroom } from '@/lib/db/queries';
+import { validateClassCode, validateClassOrFamilyCode } from '@/lib/auth/class-code';
+import { getStudentsInClassroom, getStudentsByParentAccount } from '@/lib/db/queries';
 import { validateStudentPin } from '@/lib/auth/class-code';
 import { getStudentById, logActivity } from '@/lib/db/queries';
 import { setSession } from '@/lib/auth/session';
@@ -13,30 +13,50 @@ export async function POST(request: NextRequest) {
 
     // Step 1: Validate class code and return students
     if (classCode && !studentId) {
-      const classroom = await validateClassCode(classCode);
-      if (!classroom) {
+      const result = await validateClassOrFamilyCode(classCode);
+      
+      if (!result) {
         return NextResponse.json(
-          { error: 'Invalid class code' },
+          { error: 'Invalid class or family code' },
           { status: 404 }
         );
       }
 
-      // Get students in classroom
-      const classroomStudents = await getStudentsInClassroom(classroom.id);
-      const students = classroomStudents.map((cs) => ({
-        id: cs.student.id,
-        displayName: cs.student.displayName,
-        avatarUrl: cs.student.avatarUrl,
-        hasPin: !!cs.student.pin,
-      }));
+      let studentsList: any[] = [];
+      let contextName = '';
+
+      if (result.type === 'classroom') {
+        // Get students in classroom
+        const classroomStudents = await getStudentsInClassroom(result.data.id);
+        studentsList = classroomStudents.map((cs) => ({
+          id: cs.student.id,
+          displayName: cs.student.displayName,
+          avatarUrl: cs.student.avatarUrl,
+          hasPin: !!cs.student.pin,
+        }));
+        contextName = result.data.name;
+      } else {
+         // Family Code (Parent Account)
+         // We need to fetch students by parent account ID
+         const students = await getStudentsByParentAccount(result.data.id);
+         studentsList = students.map((s) => ({
+           id: s.id,
+           displayName: s.displayName,
+           avatarUrl: s.avatarUrl,
+           hasPin: !!s.pin,
+         }));
+         // For family, we can use a generic name or maybe fetch parent's name if needed, but "Family Login" is fine
+         contextName = 'Family Login';
+      }
 
       return NextResponse.json({
         success: true,
         classroom: {
-          id: classroom.id,
-          name: classroom.name,
+          id: result.data.id,
+          name: contextName,
+          type: result.type // Optional: pass type back to client if needed
         },
-        students,
+        students: studentsList,
       });
     }
 

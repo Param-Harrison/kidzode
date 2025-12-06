@@ -58,6 +58,7 @@ export const accounts = pgTable('accounts', {
   stripeProductId: text('stripe_product_id'),
   subscriptionStatus: varchar('subscription_status', { length: 20 }), // 'active' | 'canceled' | 'past_due' | null
   subscriptionType: varchar('subscription_type', { length: 20 }), // 'monthly' | 'yearly' | 'lifetime' | 'free'
+  classCode: varchar('class_code', { length: 6 }).unique(), // Family Code for parents
   subscriptionTier: varchar('subscription_tier', { length: 20 }), // 'individual' | 'family' | 'homeschool' | null
   studentLimit: integer('student_limit'), // 1 for individual, 4 for family, null for homeschool (metered)
   studentCount: integer('student_count').default(0), // Current number of students
@@ -74,16 +75,13 @@ export const accounts = pgTable('accounts', {
 
 export const students = pgTable('students', {
   id: serial('id').primaryKey(),
-  userId: integer('user_id')
-    .notNull()
-    .references(() => users.id, { onDelete: 'cascade' }),
-  parentAccountId: integer('parent_account_id').references(() => accounts.id, {
-    onDelete: 'set null',
-  }),
+  userId: integer('user_id').references(() => users.id),
+  parentAccountId: integer('parent_account_id').references(() => accounts.id),
   displayName: varchar('display_name', { length: 100 }).notNull(),
-  avatarUrl: text('avatar_url'),
-  pin: varchar('pin', { length: 4 }), // Optional 4-digit PIN, hashed
-  createdAt: timestamp('created_at').notNull().defaultNow(),
+  avatarUrl: varchar('avatar_url', { length: 500 }),
+  pin: varchar('pin', { length: 60 }), // Bcrypt hashes are 60 characters
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 // ============================================================================

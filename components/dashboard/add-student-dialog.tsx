@@ -76,19 +76,20 @@ export function AddStudentDialog({
 
           <div>
             <label className="block text-sm font-bold mb-1" htmlFor="pin">
-              PIN (Optional)
+              PIN (Required)
             </label>
             <input
               id="pin"
               name="pin"
               type="text"
+              required
               maxLength={4}
               pattern="\d{4}"
               className="w-full px-4 py-2 rounded-lg border-2 border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
               placeholder="1234"
             />
             <p className="text-xs text-muted-foreground mt-1">
-              4-digit PIN for secure login
+              4-digit PIN for secure login (required)
             </p>
           </div>
 

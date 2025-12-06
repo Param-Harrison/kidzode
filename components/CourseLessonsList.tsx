@@ -219,7 +219,7 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <div className="font-bold text-lg leading-tight group-hover:text-primary transition-colors">
+                <div className="font-bold text-lg leading-tight transition-colors">
                   {lesson.name}
                 </div>
                 {/* Status Badge */}

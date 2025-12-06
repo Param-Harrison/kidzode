@@ -1,5 +1,5 @@
 import { db } from '@/lib/db/drizzle';
-import { classrooms, students } from '@/lib/db/schema';
+import { classrooms, students, accounts } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { comparePasswords } from './session';
 
@@ -38,6 +38,30 @@ export async function validateClassCode(classCode: string) {
   }
 
   return classroom;
+}
+
+/**
+ * Validate either a classroom code or a family code (parent account)
+ */
+export async function validateClassOrFamilyCode(code: string) {
+  // 1. Check Classrooms
+  const classroom = await validateClassCode(code);
+  if (classroom) {
+    return { type: 'classroom' as const, data: classroom };
+  }
+
+  // 2. Check Accounts (Family Code)
+  const accountResult = await db
+    .select()
+    .from(accounts)
+    .where(eq(accounts.classCode, code.toUpperCase()))
+    .limit(1);
+
+  if (accountResult.length > 0) {
+    return { type: 'family' as const, data: accountResult[0] };
+  }
+
+  return null;
 }
 
 /**

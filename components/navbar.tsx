@@ -33,37 +33,26 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background">
       <div className="container max-w-7xl mx-auto flex h-20 items-center px-6">
-        {/* Logo */}
-        <div className="flex-1">
+        {/* Left Side: Logo + Nav */}
+        <div className="flex items-center gap-6 flex-1">
           <Logo size="default" />
         </div>
 
-        {/* Center Navigation */}
-        <nav className="hidden md:flex items-center gap-1 flex-1 justify-center">
-          <Link
-            href="/courses"
-            className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
-              isActive('/courses')
-                ? 'bg-primary text-primary-foreground border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
-                : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'
-            }`}
-          >
-            Courses
-          </Link>
-          <Link
-            href="/pricing"
-            className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
-              isActive('/pricing')
-                ? 'bg-primary text-primary-foreground border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
-                : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'
-            }`}
-          >
-            Pricing
-          </Link>
-        </nav>
-
         {/* Right Actions */}
         <div className="flex items-center gap-3 flex-1 justify-end">
+          <nav className="hidden md:flex items-center gap-1">
+            <Link
+              href="/courses"
+              className={`px-4 py-2 text-sm font-bold uppercase tracking-wide rounded-none border-2 border-transparent hover:border-black hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 ${
+                isActive('/courses')
+                  ? 'bg-primary text-black border-2 border-black shadow-[4px_4px_0px_0px_#000]'
+                  : 'text-black/70 hover:text-black hover:bg-primary/20'
+              }`}
+            >
+              Courses
+            </Link>
+          </nav>
+          
           {isAuthenticated && user ? (
             <>
               {/* Dashboard link */}
