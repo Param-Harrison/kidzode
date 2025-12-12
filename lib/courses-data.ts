@@ -7,6 +7,9 @@ export const courses = [
     slug: "foundation",
     badge: "🏗️ Foundation Certificate",
     isPublished: true,
+    price: "Free",
+    duration: "4 Weeks",
+    displayText: "PY"
   },
   {
     title: "Problem Solving",
@@ -16,6 +19,9 @@ export const courses = [
     slug: "problem-solving",
     badge: "🧩 Problem Solver Certificate",
     isPublished: true,
+    price: "Free",
+    duration: "6 Weeks",
+    displayText: "PS"
   },
   {
     title: "Real Applications",
@@ -25,5 +31,8 @@ export const courses = [
     slug: "real-applications",
     badge: "🚀 Application Developer Certificate",
     isPublished: true,
+    price: "Free",
+    duration: "8 Weeks",
+    displayText: "APP"
   }
 ]

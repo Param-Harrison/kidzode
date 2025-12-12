@@ -1,217 +1,219 @@
 import { Navbar } from "@/components/navbar"
-import { Button } from "@/components/ui/button"
+import { NeoButton } from "@/components/ui/neobrutalism/neo-button"
+import { NeoCard } from "@/components/ui/neobrutalism/neo-card"
+import { TechGrid } from "@/components/ui/neobrutalism/tech-grid"
+import { ContentCard } from "@/components/ui/neobrutalism/content-card"
 import Link from "next/link"
-import { RandomBgHero } from "@/components/random-bg-hero"
-import { BouncyShapes } from "@/components/bouncy-shapes"
-import { CourseCard } from "@/components/course-card"
-import { CheckCircle, XCircle, Code, Zap, Trophy } from "lucide-react"
+import { CheckCircle, XCircle, Zap, Terminal, ShieldAlert, ArrowRight } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { courses } from "@/lib/courses-data"
 
 export default function Home() {
   return (
-    <div className="flex flex-col font-epilogue">
+    <main className="min-h-screen flex flex-col bg-background font-epilogue">
       <Navbar />
-      <main className="flex-1">
-        {/* Hero Section - Hook */}
-        <RandomBgHero>
-          <BouncyShapes minShapes={4} maxShapes={6} />
-          <div className="container max-w-6xl mx-auto px-4 md:px-6 relative z-10">
-            <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center py-8 md:py-12">
-              <div className="inline-block bg-white px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_#000] transform -rotate-2">
-                <span className="font-bold uppercase tracking-wider text-sm">Kids Love Coding!</span>
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase font-lexend leading-tight max-w-4xl">
-                Your Child Can <br />
-                <span className="bg-primary px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_#000] inline-block transform rotate-1 mt-2">
-                  Master Python
-                </span>
-              </h1>
+      
+      {/* Updated Hero Section */}
+      <div className="border-b-[3px] border-black relative overflow-hidden bg-primary min-h-[auto] py-8 md:py-0 md:min-h-[90vh] flex flex-col items-center justify-center">
+        <TechGrid />
 
-              <p className="text-xl md:text-2xl font-bold max-w-2xl leading-relaxed">
-                Interactive lessons. Real coding. Instant feedback. <br />
-                Watch your kid build amazing projects!
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <Link href="/courses">
-                  <Button variant="neo" className="h-12 px-8 text-base font-bold bg-primary text-primary-foreground">
-                    Start Learning Free
-                  </Button>
-                </Link>
-              </div>
-            </div>
+        <div className="container mx-auto px-4 py-4 md:py-20 flex flex-col items-center text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 border-[3px] border-black shadow-[5px_5px_0px_0px_#000] mb-8 font-bold uppercase tracking-wider transform -rotate-2">
+            <ShieldAlert className="w-5 h-5" />
+            Warning: High Intensity Coding Fun
           </div>
-        </RandomBgHero>
+          
+          <h1 className="text-4xl md:text-7xl font-black uppercase font-lexend mb-8 leading-none tracking-tighter">
+             Your Child Can <br />
+            <span className="bg-accent px-2 box-decoration-clone shadow-[5px_5px_0px_0px_#000] border-[3px] border-black text-black block mt-2 w-fit mx-auto transform -rotate-1">Master Python.</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl font-bold font-epilogue max-w-4xl mb-12 leading-relaxed opacity-90 text-muted-foreground">
+            The era of boring tutorials is over.<br/>
+            We teach kids to build real games, apps, and projects that excite them.
+          </p>
 
-        {/* Problem Section */}
-        <section className="py-16 md:py-24 border-b-2 border-black bg-gray-50">
-          <div className="container max-w-6xl mx-auto px-4 md:px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6">
-                Most Coding Courses <br />
-                <span className="text-destructive">Bore Kids to Death</span>
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                They're either too complicated or too simple. Kids lose interest fast.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(239,68,68,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-                <XCircle className="w-12 h-12 text-red-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Too Much Theory</h3>
-                <p className="text-muted-foreground">Endless videos with no hands-on practice</p>
-              </div>
-
-              <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(239,68,68,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-                <XCircle className="w-12 h-12 text-red-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2">No Real Projects</h3>
-                <p className="text-muted-foreground">Boring examples that don't excite kids</p>
-              </div>
-
-              <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(239,68,68,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-                <XCircle className="w-12 h-12 text-red-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Zero Feedback</h3>
-                <p className="text-muted-foreground">Kids don't know if they're doing it right</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Solution Section */}
-        <section className="py-16 md:py-24 border-b-2 border-black">
-          <div className="container max-w-6xl mx-auto px-4 md:px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6">
-                The <span className="text-primary">Kidzode</span> Way
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Learn by doing. Build real projects. Get instant feedback.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(34,197,94,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4 border-4 border-black">
-                  <Code className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Interactive Editor</h3>
-                <p className="text-muted-foreground">Write code, run it instantly, see results immediately</p>
-              </div>
-
-              <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(34,197,94,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4 border-4 border-black">
-                  <Zap className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Instant Feedback</h3>
-                <p className="text-muted-foreground">Automated tests show exactly what works and what doesn't</p>
-              </div>
-
-              <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(34,197,94,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4 border-4 border-black">
-                  <Trophy className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Fun Projects</h3>
-                <p className="text-muted-foreground">Build games, tools, and apps kids actually want to make</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Courses Section */}
-        <section className="py-16 md:py-24 border-b-2 border-black bg-yellow-50">
-          <div className="container max-w-6xl mx-auto px-4 md:px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6">
-                Choose Your Adventure
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Three exciting learning paths. From first steps to advanced projects - perfect for every skill level.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {courses.map((course) => (
-                <CourseCard key={course.slug} {...course} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section id="about" className="py-16 md:py-24 border-b-2 border-black bg-white">
-          <div className="container max-w-6xl mx-auto px-4 md:px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6">
-                Built for Kids
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                We believe every child can learn to code - they just need the right approach.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-              <div className="space-y-6">
-                <div className="bg-primary border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-                  <h3 className="text-2xl font-black uppercase mb-4">Learn Through Play</h3>
-                  <p className="font-medium">
-                    Kids learn best when they're having fun. Our lessons use games, stories, and challenges that keep them engaged while building real coding skills.
-                  </p>
-                </div>
-                <div className="bg-primary border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-                  <h3 className="text-2xl font-black uppercase mb-4">Build Real Projects</h3>
-                  <p className="font-medium">
-                    From day one, kids create actual working programs - games, animations, and tools they can share with friends and family.
-                  </p>
-                </div>
-                <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-                  <h3 className="text-2xl font-black uppercase mb-4">Instant Feedback</h3>
-                  <p className="font-medium">
-                    No more wondering if they got it right. Our system provides immediate feedback and gentle hints to keep frustration away.
-                  </p>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="inline-block bg-white border-4 border-black shadow-[6px_6px_0px_0px_#000] transform rotate-3 mb-6">
-                  <div className="p-8">
-                    <div className="text-6xl mb-4">👨‍💻</div>
-                    <div className="text-4xl font-black">1240+</div>
-                    <div className="text-xl font-bold">Young Coders</div>
-                  </div>
-                </div>
-                <p className="text-lg font-medium">
-                  Parents rate us <span className="bg-primary px-2 py-1 border-2 border-black transform rotate-1">4.9/5</span> for engaging content and visible progress!
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-  
-        {/* CTA Section */}
-        <section className="bg-black text-white py-16 md:py-24 border-b-2 border-black">
-          <div className="container max-w-4xl mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6">
-              Ready to See Your Kid Code?
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join hundreds of kids already learning Python the fun way.
-            </p>
-            <Link href="/courses">
-              <Button
-                variant="neo"
-                className="h-14 px-10 text-lg font-bold bg-primary text-black shadow-[4px_4px_0px_0px_#fff] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
-              >
-                Start Learning Now - It's Free!
-              </Button>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full max-w-2xl justify-center">
+             <Link href="/courses">
+              <NeoButton className="w-full sm:w-auto bg-accent text-black hover:bg-accent px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl h-auto shadow-[5px_5px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] flex items-center justify-center gap-3 border-[3px] border-black">
+                <Terminal className="w-5 h-5 sm:w-6 sm:h-6" />
+                Start Learning Free
+              </NeoButton>
+             </Link>
+             <Link href="/courses">
+              <NeoButton className="w-full sm:w-auto bg-white text-black hover:bg-gray-100 px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl h-auto shadow-[5px_5px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] flex items-center justify-center gap-2 border-[3px] border-black">
+                View Courses
+              </NeoButton>
             </Link>
           </div>
-        </section>
-      </main>
-      
+          
+          <p className="mt-8 text-sm font-bold opacity-60 uppercase tracking-widest">
+            Trusted by 1,240+ parents and kids worldwide
+          </p>
+        </div>
+      </div>
+
+      {/* Philosophy Section */}
+      <section className="py-16 md:py-32 border-b-[3px] border-black bg-white">
+        <div className="container mx-auto px-4">
+             <div className="text-center mb-12 md:mb-20">
+                <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-4 md:mb-6">The Future Belongs to Builders</h2>
+                <p className="text-lg md:text-2xl font-bold max-w-3xl mx-auto leading-relaxed">
+                    Coding is commoditizing basics. The value is now in <span className="bg-primary px-1 border border-black">Creativity</span>, <span className="bg-secondary px-1 border border-black">Problem Solving</span>, and <span className="bg-accent px-1 border border-black">Building Real Stuff</span>.
+                    <br className="hidden md:block"/> Don't just watch. Code.
+                </p>
+             </div>
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 className="text-4xl md:text-6xl font-black uppercase font-lexend mb-8 leading-tight">
+                        Escape the <br/> <span className="underline decoration-wavy decoration-red-500">Content Trap</span>
+                    </h2>
+                    <p className="text-xl font-medium leading-relaxed mb-6">
+                        Kids can't learn coding by watching 10-minute videos. They can't master programming without building real projects.
+                    </p>
+                    <p className="text-xl font-medium leading-relaxed mb-6">
+                        We are a platform for <strong>young creators</strong> who are tired of boring tutorials. We build, we play, and we ship.
+                    </p>
+                    <p className="text-xl font-bold">
+                        Ready to build something amazing?
+                    </p>
+                </div>
+                <div className="grid gap-6">
+                    <NeoCard className="bg-gray-100 border-[3px] border-black border-dashed opacity-80 hover:opacity-100 transition-all">
+                        <h3 className="text-xl font-black uppercase mb-2 flex items-center gap-2">
+                             <XCircle className="w-6 h-6 text-red-500" /> The Content Trap
+                        </h3>
+                        <p className="font-medium">Passive watching. Tutorial hell. "Learning" by copying code.</p>
+                    </NeoCard>
+                    <NeoCard className="bg-primary border-[3px] border-black md:scale-105 shadow-[8px_8px_0px_0px_#000]">
+                         <h3 className="text-xl font-black uppercase mb-2 flex items-center gap-2">
+                             <CheckCircle className="w-6 h-6" /> The Kidzode Way
+                        </h3>
+                        <p className="font-bold">Active building. Real projects. Instant feedback & fun challenges.</p>
+                    </NeoCard>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      {/* Courses Section */}
+      <section id="courses" className="py-24 border-b-[3px] border-black">
+        <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+          <div>
+            <div className="inline-block bg-accent px-3 py-1 border-[3px] border-black font-bold mb-4 shadow-[5px_5px_0px_0px_#000]">
+                LEVEL UP FAST
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black uppercase font-lexend mb-4">
+              Coding Adventures
+            </h2>
+            <p className="text-xl font-medium text-muted-foreground max-w-xl">
+              Three exciting paths. From first steps to amazing projects. Zero boredom.
+            </p>
+          </div>
+           <Link href="/courses">
+            <NeoButton neoVariant="outline" className="px-8 py-4 text-lg h-auto">View All Courses <ArrowRight className="ml-2 w-5 h-5" /></NeoButton>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {courses.map((course) => (
+            <ContentCard 
+                key={course.slug} 
+                {...course} 
+                basePath="/courses" 
+            />
+          ))}
+        </div>
+       </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="w-full px-6 lg:px-8 py-24 bg-secondary border-b-[3px] border-black relative overflow-hidden">
+        <TechGrid />
+        <div className="max-w-7xl mx-auto relative z-10">
+             <div className="max-w-3xl mb-12">
+                 <div className="flex items-center gap-3 mb-4">
+                    <Zap className="h-8 w-8 text-yellow-500 fill-yellow-500" />
+                    <span className="font-bold tracking-wide uppercase">Why Kids Love Kidzode</span>
+                 </div>
+                 <h2 className="text-4xl font-black tracking-tight sm:text-5xl mb-6 font-lexend uppercase">
+                   Built for Young Minds
+                 </h2>
+                 <p className="text-xl leading-8 opacity-90 mb-10 font-bold">
+                   We make coding fun, interactive, and rewarding.
+                 </p>
+           </div>
+           
+           <div className="grid md:grid-cols-3 gap-6 mb-12">
+               <NeoCard className="bg-white border-[3px] shadow-[5px_5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all">
+                 <div className="flex gap-4 items-start">
+                    <div className="bg-black text-white p-3 text-center min-w-[80px] border-[2px] border-black">
+                     <div className="text-xs font-bold uppercase opacity-80">INTERACTIVE</div>
+                     <div className="text-lg font-black">CODE</div>
+                   </div>
+                   <div>
+                      <h3 className="text-lg font-black uppercase mb-1 leading-tight">Write Real Code</h3>
+                      <p className="text-sm font-medium text-muted-foreground">Type, run, and see results instantly. No boring videos.</p>
+                   </div>
+                 </div>
+               </NeoCard>
+               
+               <NeoCard className="bg-white border-[3px] shadow-[5px_5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all">
+                 <div className="flex gap-4 items-start">
+                    <div className="bg-black text-white p-3 text-center min-w-[80px] border-[2px] border-black">
+                     <div className="text-xs font-bold uppercase opacity-80">PROJECTS</div>
+                     <div className="text-lg font-black">BUILD</div>
+                   </div>
+                   <div>
+                      <h3 className="text-lg font-black uppercase mb-1 leading-tight">Create Cool Stuff</h3>
+                      <p className="text-sm font-medium text-muted-foreground">Games, apps, and animations kids actually want to make.</p>
+                   </div>
+                 </div>
+               </NeoCard>
+               
+               <NeoCard className="bg-white border-[3px] shadow-[5px_5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all">
+                 <div className="flex gap-4 items-start">
+                    <div className="bg-black text-white p-3 text-center min-w-[80px] border-[2px] border-black">
+                     <div className="text-xs font-bold uppercase opacity-80">FEEDBACK</div>
+                     <div className="text-lg font-black">INSTANT</div>
+                   </div>
+                   <div>
+                      <h3 className="text-lg font-black uppercase mb-1 leading-tight">Know You're Right</h3>
+                      <p className="text-sm font-medium text-muted-foreground">Get immediate feedback and gentle hints when stuck.</p>
+                   </div>
+                 </div>
+               </NeoCard>
+           </div>
+           
+           <div className="flex justify-center">
+              <Link href="/courses">
+                <NeoButton size="lg" className="px-12 py-6 text-xl h-auto">    
+                    Start Your Coding Adventure <ArrowRight className="ml-2 w-5 h-5" />
+                </NeoButton>
+              </Link>
+           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-primary border-b-[3px] border-black py-24">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-6xl font-black uppercase font-lexend mb-8">
+            Ready to See Your Kid Code?
+          </h2>
+          <p className="text-xl md:text-2xl font-bold mb-12 max-w-3xl mx-auto">
+            Join 1,240+ kids already building amazing projects with Kidzode.
+          </p>
+          <Link href="/courses">
+            <NeoButton neoVariant="secondary" size="lg" className="text-lg px-12 py-8 h-auto shadow-[5px_5px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
+              Start Learning Now - It's Free!
+            </NeoButton>
+          </Link>
+        </div>
+      </section>
+
       <Footer />
-    </div>
+    </main>
   )
 }

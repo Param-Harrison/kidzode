@@ -66,33 +66,33 @@
 
 :root {
   --radius: 0rem; /* Sharp corners */
-  --background: oklch(0.97 0.01 300); /* #F9F5F6 */
-  --foreground: oklch(0 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0 0 0);
-  --primary: oklch(0.65 0.15 25); /* #F875AA Orange */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.45 0.08 150); /* #628141 Green */
-  --secondary-foreground: oklch(1 0 0);
+  --background: oklch(1 0 0); /* White */
+  --foreground: oklch(0 0 0); /* Black */
+  --card: oklch(1 0 0); /* White */
+  --card-foreground: oklch(0 0 0); /* Black */
+  --popover: oklch(1 0 0); /* White */
+  --popover-foreground: oklch(0 0 0); /* Black */
+  --primary: oklch(0.80 0.08 120); /* #BBCB64 - Greenish Yellow */
+  --primary-foreground: oklch(0 0 0); /* Black */
+  --secondary: oklch(0.85 0.15 180); /* #6AECE1 - Cyan */
+  --secondary-foreground: oklch(0 0 0); /* Black */
   --muted: oklch(0.95 0 0);
   --muted-foreground: oklch(0.4 0 0);
-  --accent: oklch(0.75 0.08 180); /* #87BAC3 Light Blue */
-  --accent-foreground: oklch(0 0 0);
+  --accent: oklch(0.97 0.02 20); /* #FDEDED - Light Pink */
+  --accent-foreground: oklch(0 0 0); /* Black */
   --destructive: oklch(0.6 0.2 20);
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(0 0 0);
   --input: oklch(0 0 0);
   --ring: oklch(0 0 0);
-  --chart-1: oklch(0.65 0.15 25); /* #F875AA Orange */
-  --chart-2: oklch(0.45 0.08 150); /* #628141 Green */
-  --chart-3: oklch(0.75 0.08 180); /* #87BAC3 Light Blue */
-  --chart-4: oklch(0.85 0.05 70); /* #EBD5AB Beige */
-  --chart-5: oklch(0.55 0.10 280); /* Additional complementary color */
+  --chart-1: oklch(0.80 0.08 120); /* #BBCB64 - Greenish Yellow */
+  --chart-2: oklch(0.85 0.15 180); /* #6AECE1 - Cyan */
+  --chart-3: oklch(0.97 0.02 20); /* #FDEDED - Light Pink */
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary: oklch(0.80 0.08 120); /* #BBCB64 - Greenish Yellow */
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
@@ -107,26 +107,26 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.75 0.12 25); /* #F875AA Orange (lighter for dark mode) */
-  --primary-foreground: oklch(0.145 0 0);
-  --secondary: oklch(0.65 0.08 150); /* #628141 Green (lighter for dark mode) */
-  --secondary-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.80 0.08 120); /* #BBCB64 - Greenish Yellow */
+  --primary-foreground: oklch(0.145 0 0); /* Dark background for contrast */
+  --secondary: oklch(0.85 0.15 180); /* #6AECE1 - Cyan */
+  --secondary-foreground: oklch(0.145 0 0); /* Dark background for contrast */
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.65 0.06 180); /* #87BAC3 Light Blue (darker for dark mode) */
-  --accent-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.97 0.02 20); /* #FDEDED - Light Pink */
+  --accent-foreground: oklch(0.145 0 0); /* Dark background for contrast */
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.75 0.12 25); /* #F875AA Orange (lighter for dark mode) */
-  --chart-2: oklch(0.65 0.08 150); /* #628141 Green (lighter for dark mode) */
-  --chart-3: oklch(0.65 0.06 180); /* #87BAC3 Light Blue (darker for dark mode) */
+  --chart-1: oklch(0.80 0.08 120); /* #BBCB64 - Greenish Yellow */
+  --chart-2: oklch(0.85 0.15 180); /* #6AECE1 - Cyan */
+  --chart-3: oklch(0.97 0.02 20); /* #FDEDED - Light Pink */
   --chart-4: oklch(0.85 0.05 70); /* #EBD5AB Beige */
   --chart-5: oklch(0.65 0.10 280); /* Additional complementary color */
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.75 0.15 35); /* #E67E22 Orange (lighter for dark mode) */
+  --sidebar-primary: oklch(0.80 0.08 120); /* #BBCB64 - Greenish Yellow */
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);

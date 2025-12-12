@@ -19,10 +19,17 @@ export function CourseCard({ title, subtitle, tags, color = "accent", slug, isPu
   }
 
   return (
-    <Card className="flex flex-col gap-0 p-0 overflow-hidden h-full border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:scale-[1.02] hover:border-primary transition-all duration-200">
+    <Card className="flex flex-col gap-0 p-0 overflow-hidden h-full border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:scale-[1.02] transition-all duration-200">
       <div className={`relative h-48 w-full border-b-2 border-black ${bgColors[color]} flex items-center justify-center p-6`}>
-        <div className="text-6xl font-black opacity-20 uppercase tracking-tighter text-center font-lexend">
-          {title.substring(0, 2)}
+        <div className="text-center">
+          <div className="text-6xl font-black opacity-20 uppercase tracking-tighter font-lexend">
+            {title.substring(0, 2)}
+          </div>
+          <div className="text-sm font-bold mt-2">
+            {title.toLowerCase().includes('beginner') ? 'Beginners' :
+             title.toLowerCase().includes('intermediate') ? 'Intermediate' :
+             title.toLowerCase().includes('advanced') ? 'Advanced' : ''}
+          </div>
         </div>
       </div>
       <div className="p-6 flex flex-col gap-4 flex-grow bg-white">

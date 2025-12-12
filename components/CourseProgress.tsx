@@ -27,7 +27,7 @@ export function CourseProgress({
   const isCompleted = completionPercentage === 100
 
   return (
-    <div className="bg-gradient-to-br from-accent/20 to-chart-5/20 border-4 border-black rounded-xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+    <div className="bg-accent/20 border-4 border-black rounded-xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6">
         {/* Left: Progress Info */}
         <div className="flex-1">
@@ -58,7 +58,7 @@ export function CourseProgress({
             </div>
             <div className="w-full h-6 bg-card border-2 border-black rounded-full overflow-hidden shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
               <div
-                className="h-full bg-gradient-to-r from-secondary to-secondary/80 transition-all duration-500"
+                className="h-full bg-secondary transition-all duration-500"
                 style={{ width: `${completionPercentage}%` }}
               />
             </div>

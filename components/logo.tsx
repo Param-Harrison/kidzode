@@ -15,26 +15,28 @@ export function Logo({ className = "", size = "default" }: { className?: string;
 
   return (
     <Link href="/" className={`flex items-center space-x-2 ${className}`}>
-      <span
+      <div
         className={`
           ${sizes[size]}
           font-black
           uppercase
           tracking-tight
-          bg-primary
-          text-primary-foreground
-          px-3 py-1
+          px-4 py-2
           border-2 border-black
-          shadow-[2px_2px_0px_0px_#000]
-          hover:shadow-[4px_4px_0px_0px_#000]
+          shadow-[3px_3px_0px_0px_#73AF6F]
+          hover:shadow-[5px_5px_0px_0px_#5A0E24]
           hover:translate-x-[-2px]
           hover:translate-y-[-2px]
-          transition-all duration-150
+          transition-all duration-200
           inline-block
+          relative
+          overflow-hidden
         `}
+        style={{ backgroundColor: '#050E3C', color: '#FFFFFF' }}
       >
-        Kid<span className="text-secondary">zode</span>
-      </span>
+        <span className="relative z-10">Kid</span>
+        <span className="relative z-10" style={{ color: '#FF5555' }}>zode</span>
+      </div>
     </Link>
   )
 }
