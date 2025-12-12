@@ -23,8 +23,8 @@ export function Logo({ className = "", size = "default" }: { className?: string;
           tracking-tight
           px-4 py-2
           border-2 border-black
-          shadow-[3px_3px_0px_0px_#73AF6F]
-          hover:shadow-[5px_5px_0px_0px_#5A0E24]
+          shadow-[3px_3px_0px_0px_#FF5555]
+          hover:shadow-[5px_5px_0px_0px_#FF5555]
           hover:translate-x-[-2px]
           hover:translate-y-[-2px]
           transition-all duration-200
@@ -32,7 +32,7 @@ export function Logo({ className = "", size = "default" }: { className?: string;
           relative
           overflow-hidden
         `}
-        style={{ backgroundColor: '#050E3C', color: '#FFFFFF' }}
+        style={{ backgroundColor: '#5A0E24', color: '#FFFFFF' }}
       >
         <span className="relative z-10">Kid</span>
         <span className="relative z-10" style={{ color: '#FF5555' }}>zode</span>
