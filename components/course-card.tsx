@@ -36,7 +36,7 @@ export function CourseCard({ title, subtitle, tags, color = "accent", slug, isPu
           ))}
         </div>
         <Link href={`/courses/${slug}`} className="w-full mt-auto">
-          <Button variant="neo" className="w-full py-4 text-lg h-auto font-bold bg-primary text-black hover:bg-black hover:text-white transition-colors">
+          <Button variant="neo" className="w-full py-4 text-lg h-auto font-bold bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-colors">
             {isPublished ? "Start Learning": "Join the waitlist"}
           </Button>
         </Link>

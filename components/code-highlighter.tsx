@@ -9,28 +9,28 @@ export function CodeHighlighter({ code, language = 'python', inline = false, cla
   // Neo-brutalism color scheme - bold, high contrast, playful
   const colors = {
     python: {
-      background: 'bg-yellow-300 border-black',
-      header: 'bg-black text-yellow-300',
+      background: 'bg-accent border-black',
+      header: 'bg-black text-accent',
       code: 'text-black'
     },
     javascript: {
-      background: 'bg-cyan-300 border-black',
-      header: 'bg-black text-cyan-300',
+      background: 'bg-chart-4 border-black',
+      header: 'bg-black text-chart-4',
       code: 'text-black'
     },
     typescript: {
-      background: 'bg-blue-300 border-black',
-      header: 'bg-black text-blue-300',
+      background: 'bg-primary border-black',
+      header: 'bg-black text-primary',
       code: 'text-black'
     },
     bash: {
-      background: 'bg-green-300 border-black',
-      header: 'bg-black text-green-300',
+      background: 'bg-secondary border-black',
+      header: 'bg-black text-secondary',
       code: 'text-black'
     },
     default: {
-      background: 'bg-purple-300 border-black',
-      header: 'bg-black text-purple-300',
+      background: 'bg-chart-5 border-black',
+      header: 'bg-black text-chart-5',
       code: 'text-black'
     }
   }

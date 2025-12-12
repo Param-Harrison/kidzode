@@ -127,7 +127,7 @@ export function VoiceOver({ content }: VoiceOverProps) {
             onClick={handlePause}
             variant="outline"
             size="sm"
-            className="border-2 border-black bg-yellow-100 hover:bg-yellow-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none font-bold"
+            className="border-2 border-black bg-accent hover:bg-accent/80 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none font-bold"
             title="Pause reading"
           >
             <Pause className="h-4 w-4" />
@@ -136,7 +136,7 @@ export function VoiceOver({ content }: VoiceOverProps) {
             onClick={handleStop}
             variant="outline"
             size="sm"
-            className="border-2 border-black bg-white hover:bg-gray-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none font-bold"
+            className="border-2 border-black bg-card hover:bg-card/80 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none font-bold"
             title="Stop reading"
           >
             <VolumeX className="h-4 w-4" />
@@ -147,7 +147,7 @@ export function VoiceOver({ content }: VoiceOverProps) {
           onClick={handlePlay}
           variant="outline"
           size="sm"
-          className="border-2 border-black bg-yellow-100 hover:bg-yellow-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none font-bold"
+          className="border-2 border-black bg-accent hover:bg-accent/80 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none font-bold"
           title="Listen to lesson"
         >
           <Volume2 className="h-4 w-4" />

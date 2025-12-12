@@ -5,10 +5,10 @@ services:
     container_name: kidzode-app
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3005:3000"
     environment:
-      - POSTGRES_URL=postgresql://kidzode:kidzode_dev_password@postgres:5432/kidzode
-      - BASE_URL=http://localhost:3000
+      - POSTGRES_URL=postgresql://kidzode:kidzode_dev_password@postgres:5434/kidzode
+      - BASE_URL=http://localhost:3005
       - AUTH_SECRET=development_secret_key_change_in_production
     volumes:
       - .:/app
@@ -26,7 +26,7 @@ services:
       POSTGRES_PASSWORD: kidzode_dev_password
       POSTGRES_DB: kidzode
     ports:
-      - "5432:5432"
+      - "5434:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:

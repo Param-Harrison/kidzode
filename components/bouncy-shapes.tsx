@@ -15,10 +15,11 @@ interface Shape {
 }
 
 const COLORS = [
-  "#FFDB58", // Primary (Yellow)
-  "#FFB6C1", // Secondary (Pink)
-  "#0099FF", // Accent (Blue)
-  "#FFFFFF", // White
+  "#F875AA", // Primary (Orange)
+  "#628141", // Secondary (Green)
+  "#87BAC3", // Accent (Light Blue)
+  "#EBD5AB", // Beige
+  "#A78BFA", // Additional complementary color
 ];
 
 interface BouncyShapesProps {

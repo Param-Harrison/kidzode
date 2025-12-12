@@ -21,7 +21,8 @@ export function Logo({ className = "", size = "default" }: { className?: string;
           font-black
           uppercase
           tracking-tight
-          bg-yellow-300
+          bg-primary
+          text-primary-foreground
           px-3 py-1
           border-2 border-black
           shadow-[2px_2px_0px_0px_#000]
@@ -32,7 +33,7 @@ export function Logo({ className = "", size = "default" }: { className?: string;
           inline-block
         `}
       >
-        Kid<span className="text-red-500">zode</span>
+        Kid<span className="text-secondary">zode</span>
       </span>
     </Link>
   )

@@ -24,7 +24,7 @@ export default function Home() {
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase font-lexend leading-tight max-w-4xl">
                 Your Child Can <br />
-                <span className="bg-yellow-300 px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_#000] inline-block transform rotate-1 mt-2">
+                <span className="bg-primary px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_#000] inline-block transform rotate-1 mt-2">
                   Master Python
                 </span>
               </h1>
@@ -36,7 +36,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Link href="/courses">
-                  <Button variant="neo" className="h-12 px-8 text-base font-bold bg-yellow-300 text-black">
+                  <Button variant="neo" className="h-12 px-8 text-base font-bold bg-primary text-primary-foreground">
                     Start Learning Free
                   </Button>
                 </Link>
