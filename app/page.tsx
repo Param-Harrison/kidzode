@@ -35,7 +35,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full max-w-2xl justify-center">
              <Link href="/courses">
-              <NeoButton className="w-full sm:w-auto bg-accent text-black hover:bg-accent px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl h-auto shadow-[5px_5px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] flex items-center justify-center gap-3 border-[3px] border-black">
+              <NeoButton className="w-full sm:w-auto bg-secondary text-black hover:bg-accent px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl h-auto shadow-[5px_5px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] flex items-center justify-center gap-3 border-[3px] border-black">
                 <Terminal className="w-5 h-5 sm:w-6 sm:h-6" />
                 Start Learning Free
               </NeoButton>
