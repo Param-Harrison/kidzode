@@ -20,7 +20,6 @@ export function StudentHeader({ student }: StudentHeaderProps) {
     <header className="h-20 bg-card border-b-2 border-border sticky top-0 z-10">
       <div className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
         <Link href="/learn" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-primary rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_#000]" />
           <Logo size="lg" />
         </Link>
 
