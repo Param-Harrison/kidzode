@@ -1,33 +1,46 @@
-import { redirect } from 'next/navigation';
-import { getUser, getStudentById } from '@/lib/db/queries';
-import { StudentHeader } from '@/components/learn/student-header';
-import { verifyToken } from '@/lib/auth/session';
-import { cookies } from 'next/headers';
+"use client";
 
-export default async function LearnLayout({
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { db, User } from '@/lib/local-storage';
+import { StudentHeader } from '@/components/learn/student-header';
+
+export default function LearnLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const sessionCookie = (await cookies()).get('session');
-  if (!sessionCookie) redirect('/student-login');
+  const router = useRouter();
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const session = await verifyToken(sessionCookie.value);
-  if (!session || !session.studentId) {
-    // If user is logged in but not as a student, redirect to dashboard
-    if (session?.user) redirect('/dashboard');
-    redirect('/student-login');
+  useEffect(() => {
+    const currentUser = db.users.getCurrent();
+    
+    if (!currentUser) {
+      router.push('/login');
+    } else if (currentUser.userType !== 'student') {
+      // If user is logged in but not as a student, redirect to dashboard
+      // Or maybe just let them learn as well? For now, implementing strict check as per original logic
+      router.push('/dashboard');
+    } else {
+      setUser(currentUser);
+    }
+    setIsLoading(false);
+  }, [router]);
+
+  if (isLoading) {
+    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
   }
 
-  const student = await getStudentById(session.studentId);
-  if (!student) redirect('/student-login');
+  if (!user) return null;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <StudentHeader
         student={{
-          displayName: student.displayName,
-          avatarUrl: student.avatarUrl,
+          displayName: user.name,
+          avatarUrl: null, // Avatar support can be added later
         }}
       />
       <main className="flex-1 p-6">

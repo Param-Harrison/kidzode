@@ -18,8 +18,6 @@ export function TechGrid({ className, gridSize = 50 }: TechGridProps) {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let width = canvas.width;
-    let height = canvas.height;
     let animationFrameId: number;
     let mouseX = -100;
     let mouseY = -100;
@@ -31,10 +29,18 @@ export function TechGrid({ className, gridSize = 50 }: TechGridProps) {
     const resize = () => {
       const parent = canvas.parentElement;
       if (parent) {
-        canvas.width = parent.clientWidth;
-        canvas.height = parent.clientHeight;
-        width = canvas.width;
-        height = canvas.height;
+        const dpr = window.devicePixelRatio || 1;
+        const rect = parent.getBoundingClientRect();
+        
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        
+        // CSS style width/height match the parent
+        canvas.style.width = `${rect.width}px`;
+        canvas.style.height = `${rect.height}px`;
+
+        // Scale context
+        ctx.scale(dpr, dpr);
       }
     };
 
@@ -49,6 +55,17 @@ export function TechGrid({ className, gridSize = 50 }: TechGridProps) {
     resize();
 
     const drawGrid = (time: number) => {
+      // Use logical width/height for drawing calculations
+      const parent = canvas.parentElement;
+      if (!parent) return;
+      
+      const width = parent.clientWidth;
+      const height = parent.clientHeight;
+      
+      // Clear the canvas using the scaled dimensions logic is tricky if we use scale()
+      // Because clearRect also uses scaled units.
+      // So width/height here being clientWidth/clientHeight is correct because we scaled ctx.
+      
       ctx.clearRect(0, 0, width, height);
       
       // 1. Draw Static Grid
@@ -73,7 +90,7 @@ export function TechGrid({ className, gridSize = 50 }: TechGridProps) {
       const cellX = Math.floor(mouseX / gridSize) * gridSize;
       const cellY = Math.floor(mouseY / gridSize) * gridSize;
 
-      if (mouseX > 0 && mouseY > 0) {
+      if (mouseX > 0 && mouseY > 0 && mouseX < width && mouseY < height) {
           ctx.fillStyle = "rgba(0, 0, 0, 0.03)";
           ctx.fillRect(cellX, cellY, gridSize, gridSize);
           

@@ -1,12 +1,10 @@
-import { getUser } from '@/lib/db/queries';
-import { DashboardBilling } from '@/components/dashboard/billing';
+"use client";
 
-export default async function DashboardBillingPage() {
-  const user = await getUser();
-
-  if (!user) {
-    return null;
-  }
-
-  return <DashboardBilling user={user} />;
+export default function BillingPage() {
+  return (
+    <div className="p-8 text-center">
+      <h1 className="text-2xl font-bold">Billing</h1>
+      <p>This feature is not available in local mode.</p>
+    </div>
+  );
 }

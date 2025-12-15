@@ -86,43 +86,48 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
         })
       })
 
-      // Check API if user is logged in
+      // Use local db if user is logged in
       if (user && user.userType === 'student') {
         try {
-          const studentId = user.studentId || user.id
+          const studentId = user.id
           console.log('Loading progress for course:', bookId, 'student:', studentId)
-          const res = await fetch(`/api/progress/bulk?studentId=${studentId}&courseId=${bookId}`)
-          if (res.ok) {
-            const data = await res.json()
-            if (data.progress) {
-              // Update progress map with API data
-              data.progress.forEach((p: any) => {
+          
+          const { db } = require('@/lib/local-storage');
+          const allProgress = db.progress.get(studentId, bookId);
+
+          if (allProgress) {
+             let completedCount = 0;
+             let inProgressCount = 0;
+
+             allProgress.forEach((p: any) => {
                 progressMap.set(p.lessonId, {
                   status: p.status,
-                  rating: p.rating,
-                  bookmarked: p.bookmarked || false,
+                  rating: p.rating, // May not exist in local db yet
+                  bookmarked: p.bookmarked || false, // May not exist
                 })
-              })
-            }
-            
-            // Notify parent component of stats
-            if (data.stats && memoizedOnProgressLoaded) {
-              const completed = data.stats.completed || 0
-              const inProgress = data.stats.inProgress || 0
-              const completionPercentage = totalLessons > 0 ? Math.round((completed / totalLessons) * 100) : 0
-              
-              console.log('Progress stats loaded:', { completed, inProgress, completionPercentage, totalLessons })
-              
-              memoizedOnProgressLoaded({
-                total: totalLessons,
-                completed,
-                inProgress,
-                completionPercentage,
-                lastAccessedLessonId: data.stats.lastAccessedLessonId,
-              })
-            }
-          } else {
-            console.error('Failed to load progress:', res.status, res.statusText)
+                if (p.status === 'completed') completedCount++;
+                if (p.status === 'in_progress') inProgressCount++;
+             })
+
+              // Notify parent component of stats
+              if (memoizedOnProgressLoaded) {
+                const completionPercentage = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0
+                
+                // Find last accessed
+                const lastActivity = allProgress.sort((a: any, b: any) => 
+                   (new Date(b.completedAt || 0).getTime() - new Date(a.completedAt || 0).getTime())
+                )[0];
+
+                console.log('Progress stats loaded:', { completed: completedCount, inProgress: inProgressCount, completionPercentage, totalLessons })
+                
+                memoizedOnProgressLoaded({
+                  total: totalLessons,
+                  completed: completedCount,
+                  inProgress: inProgressCount,
+                  completionPercentage,
+                  lastAccessedLessonId: lastActivity?.lessonId,
+                })
+              }
           }
         } catch (error) {
           console.error("Failed to load progress", error)

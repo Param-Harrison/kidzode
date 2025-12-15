@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 
 export function Navbar() {
-  const { user, isLoading, isAuthenticated } = useAuth()
+  const { user, isLoading, isAuthenticated, logout } = useAuth()
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -51,7 +51,7 @@ export function Navbar() {
           </a>
         </div>
 
-        {/* Desktop Auth */}
+      {/* Desktop Auth */}
         <div className="hidden md:flex items-center gap-4">
           {isAuthenticated && user ? (
             <>
@@ -73,21 +73,19 @@ export function Navbar() {
                   </span>
                 </div>
                 
-                <form action="/api/auth/signout" method="POST">
-                  <NeoButton neoVariant="ghost" size="sm" type="submit">
-                    <LogOut className="w-4 h-4" />
-                  </NeoButton>
-                </form>
+                <NeoButton neoVariant="ghost" size="sm" onClick={logout}>
+                  <LogOut className="w-4 h-4" />
+                </NeoButton>
               </div>
             </>
           ) : (
             <>
-              <Link href="/sign-in">
+              <Link href="/login">
                 <NeoButton neoVariant="outline" size="sm">
                   Sign In
                 </NeoButton>
               </Link>
-              <Link href="/sign-up">
+              <Link href="/login">
                 <NeoButton neoVariant="secondary" size="sm">
                   Get Started
                 </NeoButton>
@@ -96,7 +94,7 @@ export function Navbar() {
           )}
         </div>
 
-        {/* Mobile Menu Toggle */}
+    {/* Mobile Menu Toggle */}
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -104,7 +102,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden border-t-2 border-black bg-background p-4 flex flex-col gap-4 absolute w-full left-0 shadow-[0px_4px_0px_0px_#000]">
+        <div className="md:hidden border-t-2 border-black bg-background p-4 flex flex-col gap-4 absolute w-full left-0 top-16 shadow-[0px_4px_0px_0px_var(--shadow-color)] z-50">
           <Link href="/courses" className="font-bold text-lg" onClick={() => setIsOpen(false)}>
             Courses
           </Link>
@@ -119,18 +117,16 @@ export function Navbar() {
               <Link href="/dashboard" className="font-bold text-lg" onClick={() => setIsOpen(false)}>
                 Dashboard
               </Link>
-              <form action="/api/auth/signout" method="POST" onSubmit={() => setIsOpen(false)}>
-                <NeoButton neoVariant="outline" className="w-full" type="submit">
-                  Sign Out
-                </NeoButton>
-              </form>
+              <NeoButton neoVariant="outline" className="w-full" onClick={() => { logout(); setIsOpen(false); }}>
+                Sign Out
+              </NeoButton>
             </>
           ) : (
             <>
-              <Link href="/sign-in" className="font-bold text-lg" onClick={() => setIsOpen(false)}>
+              <Link href="/login" className="font-bold text-lg" onClick={() => setIsOpen(false)}>
                 Sign In
               </Link>
-              <Link href="/sign-up" onClick={() => setIsOpen(false)}>
+              <Link href="/login" onClick={() => setIsOpen(false)}>
                 <NeoButton neoVariant="secondary" className="w-full">
                   Get Started
                 </NeoButton>

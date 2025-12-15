@@ -11,7 +11,11 @@ type StudentHeaderProps = {
   };
 };
 
+import { useAuth } from '@/hooks/useAuth';
+
 export function StudentHeader({ student }: StudentHeaderProps) {
+  const { logout } = useAuth();
+  
   return (
     <header className="h-20 bg-card border-b-2 border-border sticky top-0 z-10">
       <div className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
@@ -36,15 +40,13 @@ export function StudentHeader({ student }: StudentHeaderProps) {
             <span className="font-bold font-lexend">{student.displayName}</span>
           </div>
 
-          <form action="/api/auth/signout" method="POST">
-            <button
-              type="submit"
-              className="p-2 text-muted-foreground hover:text-destructive transition-colors"
-              title="Sign Out"
-            >
-              <LogOut className="w-6 h-6" />
-            </button>
-          </form>
+          <button
+            onClick={logout}
+            className="p-2 text-muted-foreground hover:text-destructive transition-colors"
+            title="Sign Out"
+          >
+            <LogOut className="w-6 h-6" />
+          </button>
         </div>
       </div>
     </header>

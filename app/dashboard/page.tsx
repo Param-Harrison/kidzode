@@ -1,20 +1,27 @@
-import { getUser } from '@/lib/db/queries';
-import { redirect } from 'next/navigation';
+"use client";
 
-export default async function DashboardPage() {
-  const user = await getUser();
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { db } from '@/lib/local-storage';
 
-  if (!user) {
-    redirect('/sign-in');
-  }
+export default function DashboardPage() {
+  const router = useRouter();
 
-  // Redirect to role-specific dashboard
-  if (user.userType === 'parent') {
-    redirect('/dashboard/parent');
-  } else if (user.userType === 'teacher') {
-    redirect('/dashboard/teacher');
-  }
+  useEffect(() => {
+    const user = db.users.getCurrent();
+    if (!user) {
+      router.push('/login');
+      return;
+    }
 
-  // Default redirect
-  redirect('/dashboard/parent');
+    if (user.userType === 'parent') {
+      router.push('/dashboard/parent');
+    } else if (user.userType === 'teacher') {
+      router.push('/dashboard/teacher');
+    } else {
+      router.push('/dashboard/parent');
+    }
+  }, [router]);
+
+  return <div className="p-8 text-center">Redirecting to your dashboard...</div>;
 }

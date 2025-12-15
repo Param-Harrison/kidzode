@@ -23,7 +23,7 @@ export default function CoursesPage() {
         </section>
 
         {/* Courses Grid */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container max-w-6xl mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {courses.map((course) => (

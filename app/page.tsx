@@ -41,20 +41,20 @@ export default function Home() {
               </NeoButton>
              </Link>
              <Link href="/courses">
-              <NeoButton className="w-full sm:w-auto bg-white text-black hover:bg-gray-100 px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl h-auto shadow-[5px_5px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] flex items-center justify-center gap-2 border-[3px] border-black">
+              <NeoButton className="w-full sm:w-auto bg-card text-card-foreground hover:bg-muted px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl h-auto shadow-[5px_5px_0px_0px_var(--shadow-color)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] flex items-center justify-center gap-2 border-[3px] border-black">
                 View Courses
               </NeoButton>
             </Link>
           </div>
           
           <p className="mt-8 text-sm font-bold opacity-60 uppercase tracking-widest">
-            Trusted by 1,240+ parents and kids worldwide
+            Trusted by parents and kids worldwide
           </p>
         </div>
       </div>
 
       {/* Philosophy Section */}
-      <section className="py-16 md:py-32 border-b-[3px] border-black bg-white">
+      <section className="py-16 md:py-32 border-b-[3px] border-black bg-card">
         <div className="container mx-auto px-4">
              <div className="text-center mb-12 md:mb-20">
                 <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-4 md:mb-6">The Future Belongs to Builders</h2>
@@ -79,9 +79,9 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="grid gap-6">
-                    <NeoCard className="bg-gray-100 border-[3px] border-black border-dashed opacity-80 hover:opacity-100 transition-all">
+                    <NeoCard className="bg-muted border-[3px] border-black border-dashed opacity-80 hover:opacity-100 transition-all">
                         <h3 className="text-xl font-black uppercase mb-2 flex items-center gap-2">
-                             <XCircle className="w-6 h-6 text-red-500" /> The Content Trap
+                             <XCircle className="w-6 h-6 text-destructive" /> The Content Trap
                         </h3>
                         <p className="font-medium">Passive watching. Tutorial hell. "Learning" by copying code.</p>
                     </NeoCard>
@@ -146,10 +146,9 @@ export default function Home() {
            </div>
            
            <div className="grid md:grid-cols-3 gap-6 mb-12">
-               <NeoCard className="bg-white border-[3px] shadow-[5px_5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all">
+               <NeoCard className="bg-card border-[3px] shadow-[5px_5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all">
                  <div className="flex gap-4 items-start">
-                    <div className="bg-black text-white p-3 text-center min-w-[80px] border-[2px] border-black">
-                     <div className="text-xs font-bold uppercase opacity-80">INTERACTIVE</div>
+                    <div className="bg-foreground text-background p-3 text-center min-w-[80px] border-[2px] border-black">
                      <div className="text-lg font-black">CODE</div>
                    </div>
                    <div>
@@ -159,10 +158,9 @@ export default function Home() {
                  </div>
                </NeoCard>
                
-               <NeoCard className="bg-white border-[3px] shadow-[5px_5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all">
+               <NeoCard className="bg-card border-[3px] shadow-[5px_5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all">
                  <div className="flex gap-4 items-start">
-                    <div className="bg-black text-white p-3 text-center min-w-[80px] border-[2px] border-black">
-                     <div className="text-xs font-bold uppercase opacity-80">PROJECTS</div>
+                    <div className="bg-foreground text-background p-3 text-center min-w-[80px] border-[2px] border-black">
                      <div className="text-lg font-black">BUILD</div>
                    </div>
                    <div>
@@ -172,11 +170,10 @@ export default function Home() {
                  </div>
                </NeoCard>
                
-               <NeoCard className="bg-white border-[3px] shadow-[5px_5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all">
+               <NeoCard className="bg-card border-[3px] shadow-[5px_5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all">
                  <div className="flex gap-4 items-start">
-                    <div className="bg-black text-white p-3 text-center min-w-[80px] border-[2px] border-black">
-                     <div className="text-xs font-bold uppercase opacity-80">FEEDBACK</div>
-                     <div className="text-lg font-black">INSTANT</div>
+                    <div className="bg-foreground text-background p-3 text-center min-w-[130px] border-[2px] border-black">
+                     <div className="text-lg font-black">FEEDBACK</div>
                    </div>
                    <div>
                       <h3 className="text-lg font-black uppercase mb-1 leading-tight">Know You're Right</h3>
@@ -203,7 +200,7 @@ export default function Home() {
             Ready to See Your Kid Code?
           </h2>
           <p className="text-xl md:text-2xl font-bold mb-12 max-w-3xl mx-auto">
-            Join 1,240+ kids already building amazing projects with Kidzode.
+            Join kids globally already building amazing projects with Kidzode.
           </p>
           <Link href="/courses">
             <NeoButton neoVariant="secondary" size="lg" className="text-lg px-12 py-8 h-auto shadow-[5px_5px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">

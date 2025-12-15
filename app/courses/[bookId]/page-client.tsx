@@ -90,44 +90,32 @@ export function CourseProgressClient({ bookId, book }: CourseProgressClientProps
   const loadCourseStats = useCallback(async () => {
     if (user && user.userType === 'student') {
       try {
-        const studentId = user.studentId || user.id
+        const studentId = user.id
         console.log('Loading course stats for:', bookId, 'student:', studentId)
-        const res = await fetch(`/api/progress/bulk?studentId=${studentId}&courseId=${bookId}`)
-        if (res.ok) {
-          const data = await res.json()
-          if (data.stats) {
-            const completed = data.stats.completed || 0
-            const inProgress = data.stats.inProgress || 0
-            const completionPercentage = totalLessons > 0 ? Math.round((completed / totalLessons) * 100) : 0
-            
-            console.log('Course stats loaded:', { completed, inProgress, completionPercentage, totalLessons })
-            
-            setCourseStats({
-              total: totalLessons,
-              completed,
-              inProgress,
-              completionPercentage,
-              lastAccessedLessonId: data.stats.lastAccessedLessonId,
-              lastAccessedLessonName: getLessonName(data.stats.lastAccessedLessonId),
-            })
-          } else {
-            // No progress yet, set defaults
-            setCourseStats({
-              total: totalLessons,
-              completed: 0,
-              inProgress: 0,
-              completionPercentage: 0,
-            })
-          }
-        } else {
-          console.error('Failed to load course stats:', res.status, res.statusText)
-          setCourseStats({
-            total: totalLessons,
-            completed: 0,
-            inProgress: 0,
-            completionPercentage: 0,
-          })
-        }
+        
+        // Use local db
+        const { db } = require('@/lib/local-storage');
+        const completed = db.progress.getCompletedCount(studentId, bookId);
+        // Find in-progress (naive count for now)
+        const allProgress = db.progress.get(studentId, bookId);
+        const inProgress = allProgress.filter((p: any) => p.status === 'in_progress').length;
+        
+        // Find last accessed
+        const lastActivity = allProgress.sort((a: any, b: any) => 
+           (new Date(b.completedAt || 0).getTime() - new Date(a.completedAt || 0).getTime())
+        )[0];
+
+        const completionPercentage = totalLessons > 0 ? Math.round((completed / totalLessons) * 100) : 0
+        
+        setCourseStats({
+          total: totalLessons,
+          completed,
+          inProgress,
+          completionPercentage,
+          lastAccessedLessonId: lastActivity?.lessonId,
+          lastAccessedLessonName: getLessonName(lastActivity?.lessonId),
+        })
+
       } catch (err) {
         console.error('Failed to load course stats:', err)
         setCourseStats({

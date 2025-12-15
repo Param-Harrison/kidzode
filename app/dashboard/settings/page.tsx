@@ -1,12 +1,10 @@
-import { getUser } from '@/lib/db/queries';
-import { DashboardSettings } from '@/components/dashboard/settings';
+"use client";
 
-export default async function DashboardSettingsPage() {
-  const user = await getUser();
-
-  if (!user) {
-    return null;
-  }
-
-  return <DashboardSettings user={user} />;
+export default function SettingsPage() {
+  return (
+    <div className="p-8 text-center">
+      <h1 className="text-2xl font-bold">Settings</h1>
+      <p>Settings are limited in local mode.</p>
+    </div>
+  );
 }

@@ -9,7 +9,7 @@ export const NeoCard = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "border-[3px] border-black bg-card text-card-foreground shadow-[5px_5px_0px_0px_#000] p-6 rounded-none",
+        "border-[3px] border-black bg-card text-card-foreground shadow-[5px_5px_0px_0px_var(--shadow-color)] p-6 rounded-none",
         className
       )}
       {...props}

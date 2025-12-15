@@ -1,41 +1,27 @@
 import { useState, useEffect } from 'react';
+import { db, User } from '@/lib/local-storage';
 
 export function useAuth() {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    async function checkAuth() {
-      try {
-        const response = await fetch('/api/auth/me', {
-          method: 'GET',
-          credentials: 'include', // Important for cookies
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-          setUser(data.user);
-          setIsAuthenticated(!!data.user);
-        } else {
-          setUser(null);
-          setIsAuthenticated(false);
-        }
-      } catch (error) {
-        console.error('Auth check error:', error);
-        setUser(null);
-        setIsAuthenticated(false);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    checkAuth();
+    // Simulate initial check delay if needed, or just run immediately
+    const currentUser = db.users.getCurrent();
+    setUser(currentUser);
+    setIsAuthenticated(!!currentUser);
+    setIsLoading(false);
   }, []);
 
   return {
     user,
     isLoading,
-    isAuthenticated
+    isAuthenticated,
+    logout: () => {
+       db.users.logout();
+       setUser(null);
+       setIsAuthenticated(false);
+    }
   };
 }

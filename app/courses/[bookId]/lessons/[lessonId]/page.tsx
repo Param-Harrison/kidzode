@@ -65,15 +65,11 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
   const [averageRating, setAverageRating] = useState<number | undefined>(undefined)
   const [isBookmarked, setIsBookmarked] = useState<boolean>(false)
 
-  // Load student ID from user (now includes studentId from session)
+  // Load student ID from user
   useEffect(() => {
     if (user && user.userType === 'student') {
-      // Use studentId from user object (set by /api/auth/me)
-      // Fallback to user.id if studentId is not available (for backwards compatibility)
-      const id = user.studentId || user.id
-      if (id) {
-        setStudentId(id)
-      }
+      // In local mode, user.id is the studentId
+      setStudentId(user.id)
     }
   }, [user])
 
@@ -135,81 +131,38 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
         const codeText = await codeRes.text()
         setStarterCode(codeText) // Store original starter code
 
-        // Load progress from API if student ID is available
-        // Use studentId state, or fallback to user.studentId/user.id
-        const currentStudentId = studentId || (user && user.userType === 'student' ? (user.studentId || user.id) : null)
+        // Load progress from Local Storage
+        const currentStudentId = studentId || (user && user.userType === 'student' ? user.id : null)
         let savedCode = codeText
+        
         if (currentStudentId) {
-          try {
-            const progressRes = await fetch(`/api/progress?studentId=${currentStudentId}&courseId=${bookId}`)
-            if (progressRes.ok) {
-              const progressData = await progressRes.json()
-              const lessonProgress = progressData.progress?.find((p: any) => p.lessonId === lessonId)
-              if (lessonProgress) {
-                setProgress({
-                  status: lessonProgress.status,
-                  data: lessonProgress.data
-                })
-                if (lessonProgress.data?.code) {
-                  savedCode = lessonProgress.data.code
-                }
-              } else {
-                // Lesson not started yet - mark as in_progress when accessed
-                // This tracks the last accessed lesson
-                fetch('/api/progress', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({
-                    studentId: currentStudentId,
-                    courseId: bookId,
-                    lessonId,
-                    status: 'in_progress',
-                    data: { code: codeText }
+            // Using db from local-storage
+             // We need to dynamically import db or move it outside of useEffect to avoid issues if not included
+             // But since we are inside client component, we can assume db is importaed.
+             // However, db is sync.
+             // We need to import db at top of file.
+             const { db } = require('@/lib/local-storage'); 
+             const allProgress = db.progress.get(currentStudentId, bookId);
+             const lessonProgress = allProgress.find((p: any) => p.lessonId === lessonId);
+
+             if (lessonProgress) {
+                  setProgress({
+                    status: lessonProgress.status,
+                    data: lessonProgress.data
                   })
-                }).catch(err => console.error('Failed to track lesson access:', err))
-              }
-            }
-          } catch (err) {
-            console.error('Failed to load progress:', err)
-            // Fall back to localStorage
-            const localCode = localStorage.getItem(`code-${bookId}-${lessonId}`)
-            if (localCode) savedCode = localCode
-          }
-        } else {
-          // Fall back to localStorage if no student ID
-          const localCode = localStorage.getItem(`code-${bookId}-${lessonId}`)
-          if (localCode) savedCode = localCode
+                  if (lessonProgress.data?.code) {
+                    savedCode = lessonProgress.data.code
+                  }
+             }
         }
+        
+        // Fallback to simple localStorage if no progress record but code exists (legacy)
+        const localCode = localStorage.getItem(`code-${bookId}-${lessonId}`)
+        if (localCode && (!progress || !progress.data?.code)) savedCode = localCode
 
         setCode(savedCode)
         setTests(lesson.tests || [])
         setLessonType(lesson.type)
-
-        // Load user rating and bookmark status
-        if (currentStudentId) {
-          try {
-            // Load rating
-            const ratingRes = await fetch(`/api/ratings?studentId=${currentStudentId}&lessonId=${lessonId}`)
-            if (ratingRes.ok) {
-              const ratingData = await ratingRes.json()
-              if (ratingData.rating) {
-                setUserRating(ratingData.rating)
-              }
-              if (ratingData.averageRating) {
-                setAverageRating(ratingData.averageRating)
-              }
-            }
-
-            // Load bookmark
-            const bookmarkRes = await fetch(`/api/bookmarks?studentId=${currentStudentId}&lessonId=${lessonId}`)
-            if (bookmarkRes.ok) {
-              const bookmarkData = await bookmarkRes.json()
-              setIsBookmarked(bookmarkData.bookmarked || false)
-            }
-          } catch (err) {
-            console.error('Failed to load rating/bookmark:', err)
-          }
-        }
 
         // Load hints if available
         if (lesson.hints) {
@@ -256,145 +209,37 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
     // Save code to localStorage as backup
     localStorage.setItem(`code-${bookId}-${lessonId}`, newCode)
 
-    // Save to API if student ID is available
-    // Use studentId state, or fallback to user.studentId/user.id
-    const currentStudentId = studentId || (user && user.userType === 'student' ? (user.studentId || user.id) : null)
+    // Save to API (now local db) if student ID is available
+    const currentStudentId = studentId || (user && user.userType === 'student' ? user.id : null)
     if (currentStudentId) {
-      try {
-        await fetch('/api/progress', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            studentId: currentStudentId,
-            courseId: bookId,
-            lessonId,
-            status: 'in_progress',
-            data: { code: newCode }
-          })
-        })
-      } catch (err) {
-        console.error('Failed to save progress:', err)
-      }
+       const { db } = require('@/lib/local-storage');
+       db.progress.save(currentStudentId, bookId, lessonId, 'in_progress', { code: newCode });
     }
   }
 
   const handleLessonComplete = async (starRating?: number, testResults?: any) => {
     // Validate user is authenticated and is a student
-    if (!user || !user.id || user.userType !== 'student') {
-      console.error('Cannot save progress: User is not authenticated or not a student', { 
-        user,
-        hasUser: !!user,
-        userId: user?.id,
-        userType: user?.userType
-      })
+    if (!user || user.userType !== 'student') {
+      console.error('Cannot save progress: User is not authenticated or not a student')
       return
     }
 
-    // Get studentId from user object (includes studentId from session via /api/auth/me)
-    // Fallback to studentId state if user object doesn't have it yet
-    let currentStudentId: number | null = null
-    
-    // Prefer studentId from user object (set by /api/auth/me from session)
-    currentStudentId = user.studentId || null
-    
-    // Fallback to state if user object doesn't have studentId
-    if (!currentStudentId) {
-      currentStudentId = studentId
-    }
-    
-    // If still no studentId, try to fetch it directly from /api/auth/me
-    if (!currentStudentId) {
-      try {
-        console.log('StudentId not found, fetching from /api/auth/me...', { userId: user.id })
-        const response = await fetch('/api/auth/me', {
-          credentials: 'include'
-        })
-        if (response.ok) {
-          const data = await response.json()
-          console.log('/api/auth/me response:', data)
-          if (data.user && data.user.studentId) {
-            currentStudentId = data.user.studentId
-            console.log('Retrieved studentId from /api/auth/me:', currentStudentId)
-            // Update local state for future use
-            if (currentStudentId) {
-              setStudentId(currentStudentId)
-            }
-          } else if (data.user && data.user.userType === 'student') {
-            // If still no studentId but user is a student, use userId as fallback
-            // This handles the case where studentId lookup failed but we know it's a student
-            console.warn('studentId not found in /api/auth/me response, using userId as fallback:', data.user.id)
-            currentStudentId = data.user.id
-          }
-        } else {
-          console.error('/api/auth/me failed:', response.status, response.statusText)
-        }
-      } catch (err) {
-        console.error('Failed to fetch studentId from /api/auth/me:', err)
-      }
-    }
-    
-    if (!currentStudentId) {
-      console.error('Cannot save progress: studentId is not available after all attempts', { 
-        user, 
-        studentId, 
-        userStudentId: user?.studentId,
-        userId: user?.id,
-        userType: user?.userType,
-        userKeys: user ? Object.keys(user) : []
-      })
-      return
-    }
+    const currentStudentId = user.id
 
     try {
       console.log('Saving lesson completion:', { studentId: currentStudentId, courseId: bookId, lessonId, starRating })
       
-      // Save progress
-      const response = await fetch('/api/progress', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          studentId: currentStudentId,
-          courseId: bookId,
-          lessonId,
-          status: 'completed',
-          data: { code, completedAt: new Date().toISOString() }
-        })
-      })
+      // Save progress locally
+      const { db } = require('@/lib/local-storage');
+      db.progress.save(currentStudentId, bookId, lessonId, 'completed', { code, completedAt: new Date().toISOString() });
       
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        throw new Error(`Failed to save progress: ${response.status} ${errorData.error || response.statusText}`)
-      }
-
-      const responseData = await response.json()
-      console.log('Progress saved successfully:', responseData)
-      
-      // Update local state only after successful API response
+      // Update local state
       setProgress({ status: 'completed', data: { code } })
 
-      // Save rating if provided (from test results)
+      // Stub for ratings - maybe implement in local storage if needed later, but skip for now
       if (starRating !== undefined && starRating > 0) {
-        try {
-          const ratingResponse = await fetch('/api/ratings', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              studentId: currentStudentId,
-              lessonId,
-              courseId: bookId,
-              rating: starRating,
-              testResults: testResults
-            })
-          })
-          
-          if (!ratingResponse.ok) {
-            console.error('Failed to save rating:', ratingResponse.status, ratingResponse.statusText)
-          } else {
-            console.log('Rating saved successfully')
-          }
-        } catch (err) {
-          console.error('Failed to save rating:', err)
-        }
+        // Implement rating save slightly if desired, or just log
+        console.log('Rating saved (mock):', starRating);
       }
 
       // Trigger event to refresh progress on course page
@@ -403,7 +248,6 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
       }, 100)
     } catch (err) {
       console.error('Failed to mark lesson as complete:', err)
-      // Don't update local state if API call failed
     }
   }
 

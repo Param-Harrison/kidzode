@@ -31,21 +31,12 @@ export function RatingStars({ lessonId, bookId, initialRating, averageRating }: 
     setIsSubmitting(true)
 
     try {
-      const studentId = user.studentId || user.id
-      const response = await fetch('/api/ratings', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          studentId,
-          lessonId,
-          courseId: bookId,
-          rating: value
-        })
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to save rating')
-      }
+      // Stub for local ratings
+      console.log('Rating saved:', value, { lessonId, bookId, userId: user.id });
+      
+      // Simulate network delay
+      await new Promise(resolve => setTimeout(resolve, 300));
+      
     } catch (error) {
       console.error('Failed to save rating:', error)
       // Revert on error

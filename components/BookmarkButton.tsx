@@ -30,21 +30,12 @@ export function BookmarkButton({ lessonId, bookId, initialBookmarked }: Bookmark
     setIsSubmitting(true)
 
     try {
-      const studentId = user.studentId || user.id
-      const response = await fetch('/api/bookmarks', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          studentId,
-          lessonId,
-          courseId: bookId,
-          bookmarked: newBookmarked
-        })
-      })
+      // Stub for local bookmarks - could implement in db.bookmarks.save() later
+      console.log('Bookmark toggled:', newBookmarked, { lessonId, bookId, userId: user.id });
+      
+      // Simulate network delay
+      await new Promise(resolve => setTimeout(resolve, 300));
 
-      if (!response.ok) {
-        throw new Error('Failed to toggle bookmark')
-      }
     } catch (error) {
       console.error('Failed to toggle bookmark:', error)
       // Revert on error

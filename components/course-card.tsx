@@ -32,12 +32,12 @@ export function CourseCard({ title, subtitle, tags, color = "accent", slug, isPu
           </div>
         </div>
       </div>
-      <div className="p-6 flex flex-col gap-4 flex-grow bg-white">
+      <div className="p-6 flex flex-col gap-4 flex-grow bg-background">
         <h3 className="text-2xl font-bold font-lexend uppercase leading-tight">{title}</h3>
         <p className="text-muted-foreground font-medium line-clamp-3 flex-grow">{subtitle}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {tags.slice(0, 3).map((tag) => (
-            <span key={tag} className="border-2 border-black px-2 py-1 text-xs font-bold bg-white text-black shadow-[2px_2px_0px_0px_#000]">
+            <span key={tag} className="border-2 border-black px-2 py-1 text-xs font-bold bg-background text-foreground shadow-[2px_2px_0px_0px_var(--shadow-color)]">
               {tag}
             </span>
           ))}

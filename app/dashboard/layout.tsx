@@ -1,23 +1,36 @@
-import { redirect } from 'next/navigation';
-import { getUser } from '@/lib/db/queries';
+"use client";
+
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { db, User } from '@/lib/local-storage';
 import { Sidebar } from '@/components/dashboard/sidebar';
 import { Header } from '@/components/dashboard/header';
 
-export default async function DashboardLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const user = await getUser();
+  const router = useRouter();
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-  if (!user) {
-    redirect('/sign-in');
+  useEffect(() => {
+    const currentUser = db.users.getCurrent();
+    
+    if (!currentUser) {
+      router.push('/login');
+    } else {
+      setUser(currentUser);
+    }
+    setIsLoading(false);
+  }, [router]);
+
+  if (isLoading) {
+    return <div className="flex min-h-screen items-center justify-center">Loading...</div>;
   }
 
-  // Students have their own layout/interface
-  if (user.userType === 'student') {
-    redirect('/learn');
-  }
+  if (!user) return null;
 
   return (
     <div className="flex min-h-screen bg-background">

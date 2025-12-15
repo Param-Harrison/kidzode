@@ -31,27 +31,22 @@ export function FeedbackPanel({
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-    if (isOpen && user && user.userType === 'student') {
-      setIsLoading(true)
-      // Load feedback
-      const studentId = user.studentId || user.id
-      fetch(`/api/feedback?studentId=${studentId}&lessonId=${lessonId}`)
-        .then(res => res.json())
-        .then(data => {
-          if (data.thumbsUp !== undefined) {
-            setThumbsUp(data.thumbsUp)
-          }
-          if (data.comment) {
-            setComment(data.comment)
-            setShowCommentBox(true)
-          }
-          setIsLoading(false)
-        })
-        .catch(err => {
-          console.error('Failed to load feedback:', err)
-          setIsLoading(false)
-        })
+    // In local mode, we don't have stored feedback yet, or could use local storage key
+    const loadFeedback = async () => {
+       if (isOpen && user && user.userType === 'student') {
+        setIsLoading(true)
+        try {
+           // Stub load
+           console.log('Loading feedback stub for', lessonId);
+           // Could read from localStorage if implemented
+        } catch (err) {
+            console.error(err);
+        } finally {
+            setIsLoading(false)
+        }
+       }
     }
+    loadFeedback()
   }, [isOpen, lessonId, user])
 
   const handleThumbsClick = (value: boolean) => {
@@ -63,22 +58,18 @@ export function FeedbackPanel({
 
     setIsSubmitting(true)
     try {
-      const studentId = user.studentId || user.id
-      const response = await fetch('/api/feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      const studentId = user.id
+      // Stub save
+      console.log('Feedback submitted:', {
           studentId,
           lessonId,
           courseId: bookId,
-          thumbsUp: thumbsUp ?? true, // Default to thumbs up if somehow null
+          thumbsUp: thumbsUp ?? true, 
           comment: comment.trim() || undefined,
-        }),
       })
 
-      if (!response.ok) {
-        throw new Error('Failed to submit feedback')
-      }
+      // Simulate delay
+      await new Promise(resolve => setTimeout(resolve, 500));
 
       // Close panel after successful submission
       setTimeout(() => {

@@ -1,28 +1,41 @@
-import { getAccountForUser, getStudentsByParentAccount, getUser } from '@/lib/db/queries';
-import { redirect } from 'next/navigation';
+"use client";
+
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { db } from '@/lib/local-storage';
 import { ParentDashboardClient } from './client';
 
-export default async function ParentDashboardPage() {
-  const user = await getUser();
-  if (!user) redirect('/sign-in');
+export default function ParentDashboardPage() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
-  const account = await getAccountForUser(user.id);
-  if (!account) {
-    // Should not happen if user creation flow is correct
-    return <div>Account not found</div>;
-  }
+  useEffect(() => {
+    const user = db.users.getCurrent();
+    if (!user) {
+      router.push('/login');
+    } else {
+      setLoading(false);
+    }
+  }, [router]);
 
-  const students = await getStudentsByParentAccount(account.id);
+  if (loading) return null;
+
+  // Mock students for now - since everything is local, maybe we don't need sub-students?
+  // Or we can just show the current user as a student?
+  // For the purpose of this refactor, let's keep it simple.
+  const mockStudents = [
+    {
+      id: 1,
+      displayName: "My Student",
+      avatarUrl: null,
+      hasPin: false,
+    }
+  ];
 
   return (
     <ParentDashboardClient
-      classCode={account.classCode || ''}
-      students={students.map((s) => ({
-        id: s.id,
-        displayName: s.displayName,
-        avatarUrl: s.avatarUrl,
-        hasPin: !!s.pin,
-      }))}
+      classCode={'DEMO-CODE'}
+      students={mockStudents}
     />
   );
 }
