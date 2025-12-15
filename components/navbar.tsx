@@ -41,14 +41,20 @@ export function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/courses" className="font-bold hover:underline decoration-2 underline-offset-4">
+          <Link href="/courses" className={`font-bold transition-all decoration-2 underline-offset-4 ${
+            isActive("/courses") 
+              ? "underline decoration-[#D34E4E]" 
+              : "hover:underline decoration-black"
+          }`}>
             Courses
           </Link>
-          <a href="https://skool.com/kidzode" target="_blank" rel="noopener noreferrer">
-            <NeoButton neoVariant="primary" size="sm">
-              Community
-            </NeoButton>
-          </a>
+          <Link href="https://skool.com/kidzode" target="_blank" rel="noopener noreferrer" className={`font-bold transition-all decoration-2 underline-offset-4 ${
+            isActive("/community") 
+              ? "underline decoration-[#D34E4E]" 
+              : "hover:underline decoration-black"
+          }`}>
+            Community
+          </Link>
         </div>
 
       {/* Desktop Auth */}
@@ -106,11 +112,9 @@ export function Navbar() {
           <Link href="/courses" className="font-bold text-lg" onClick={() => setIsOpen(false)}>
             Courses
           </Link>
-          <a href="https://skool.com/kidzode" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
-            <NeoButton neoVariant="primary" className="w-full">
-              Community
-            </NeoButton>
-          </a>
+          <Link href="https://skool.com/kidzode" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+            Community
+          </Link>
           
           {isAuthenticated && user ? (
             <>

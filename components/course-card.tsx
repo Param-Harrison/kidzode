@@ -1,17 +1,31 @@
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { NeoCard } from "@/components/ui/neobrutalism/neo-card"
+import { NeoButton } from "@/components/ui/neobrutalism/neo-button"
 import Link from "next/link"
+import { Clock } from "lucide-react"
 
 interface CourseCardProps {
   title: string
   subtitle: string
   tags: string[]
   color?: "primary" | "secondary" | "accent"
-  slug: string,
+  slug: string
   isPublished: boolean
+  price?: string
+  duration?: string
+  displayText?: string
 }
 
-export function CourseCard({ title, subtitle, tags, color = "accent", slug, isPublished }: CourseCardProps) {
+export function CourseCard({ 
+  title, 
+  subtitle, 
+  tags, 
+  color = "accent", 
+  slug, 
+  isPublished,
+  price,
+  duration,
+  displayText 
+}: CourseCardProps) {
   const bgColors = {
     primary: "bg-primary",
     secondary: "bg-secondary",
@@ -19,35 +33,61 @@ export function CourseCard({ title, subtitle, tags, color = "accent", slug, isPu
   }
 
   return (
-    <Card className="flex flex-col gap-0 p-0 overflow-hidden h-full border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:scale-[1.02] transition-all duration-200">
-      <div className={`relative h-48 w-full border-b-2 border-black ${bgColors[color]} flex items-center justify-center p-6`}>
-        <div className="text-center">
-          <div className="text-6xl font-black opacity-20 uppercase tracking-tighter font-lexend">
-            {title.substring(0, 2)}
-          </div>
-          <div className="text-sm font-bold mt-2">
-            {title.toLowerCase().includes('beginner') ? 'Beginners' :
-             title.toLowerCase().includes('intermediate') ? 'Intermediate' :
-             title.toLowerCase().includes('advanced') ? 'Advanced' : ''}
-          </div>
+    <NeoCard className="flex flex-col gap-4 p-0 overflow-hidden h-full">
+      <div className={`relative h-48 w-full border-b-[3px] border-black ${bgColors[color]} flex flex-col items-center justify-center p-6 text-center overflow-hidden`}>
+        
+        {/* Abstract shape or initialization */}
+        <div className="transform -rotate-6 border-[3px] border-black bg-white px-4 py-2 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] absolute select-none">
+            <span className="text-5xl font-black uppercase tracking-tighter block text-black">
+                {displayText || title.substring(0, 2)}
+            </span>
         </div>
+        
+        {(price || duration) && (
+            <div className="absolute top-4 right-4 flex flex-col items-end gap-2 z-10">
+                {price && (
+                     <div className="bg-black text-white px-3 py-1 font-bold text-sm border-[3px] border-white shadow-[3px_3px_0px_0px_rgba(255,255,255,0.5)]">
+                        {price}
+                    </div>
+                )}
+            </div>
+        )}
       </div>
-      <div className="p-6 flex flex-col gap-4 flex-grow bg-background">
+
+      <div className="p-6 flex flex-col gap-4 flex-grow bg-white">
         <h3 className="text-2xl font-bold font-lexend uppercase leading-tight">{title}</h3>
-        <p className="text-muted-foreground font-medium line-clamp-3 flex-grow">{subtitle}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+        
+        {duration && (
+            <div className="flex items-center gap-2 text-sm font-bold text-black/80 mb-4">
+                <Clock className="w-4 h-4" />
+                <span className="mt-1">{duration}</span>
+            </div>
+        )}
+
+        <p className="text-muted-foreground font-medium line-clamp-3 mb-4">{subtitle}</p>
+        
+        <div className="flex flex-wrap gap-2 mb-auto">
           {tags.slice(0, 3).map((tag) => (
-            <span key={tag} className="border-2 border-black px-2 py-1 text-xs font-bold bg-background text-foreground shadow-[2px_2px_0px_0px_var(--shadow-color)]">
+            <span key={tag} className="border-[3px] border-black px-2 py-1 text-xs font-bold bg-white text-black shadow-[3px_3px_0px_0px_#000]">
               {tag}
             </span>
           ))}
         </div>
-        <Link href={`/courses/${slug}`} className="w-full mt-auto">
-          <Button variant="neo" className="w-full py-4 text-lg h-auto font-bold bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-colors">
-            {isPublished ? "Start Learning": "Join the waitlist"}
-          </Button>
+
+        <Link href={`/courses/${slug}`} className="w-full mt-6">
+          <NeoButton 
+            className="w-full py-4 text-lg h-auto group"
+            neoVariant={isPublished ? "primary" : "outline"}
+          >
+            {isPublished ? (
+              <>
+                Start Learning
+                <span className="inline-block transition-transform group-hover:translate-x-1 ml-2">→</span>
+              </>
+            ) : "Join the waitlist"}
+          </NeoButton>
         </Link>
       </div>
-    </Card>
+    </NeoCard>
   )
 }

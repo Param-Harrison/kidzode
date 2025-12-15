@@ -8,8 +8,8 @@ export const courses = [
     badge: "🏗️ Foundation Certificate",
     isPublished: true,
     price: "Free",
-    duration: "4 Weeks",
-    displayText: "PY"
+    duration: "Self Paced",
+    displayText: "Start"
   },
   {
     title: "Problem Solving",
@@ -20,8 +20,8 @@ export const courses = [
     badge: "🧩 Problem Solver Certificate",
     isPublished: true,
     price: "Free",
-    duration: "6 Weeks",
-    displayText: "PS"
+    duration: "Self Paced",
+    displayText: "Solve"
   },
   {
     title: "Real Applications",
@@ -32,7 +32,7 @@ export const courses = [
     badge: "🚀 Application Developer Certificate",
     isPublished: true,
     price: "Free",
-    duration: "8 Weeks",
-    displayText: "APP"
+    duration: "Self Paced",
+    displayText: "Conquer"
   }
 ]
