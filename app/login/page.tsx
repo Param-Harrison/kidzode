@@ -17,7 +17,7 @@ export default function LoginPage() {
       if (user.userType === 'student') {
         router.push('/learn');
       } else {
-        router.push('/dashboard');
+        router.push('/learn');
       }
     }
   };

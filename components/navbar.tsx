@@ -61,13 +61,6 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           {isAuthenticated && user ? (
             <>
-              {/* Dashboard link */}
-              <Link href="/dashboard">
-                <NeoButton neoVariant="outline" size="sm">
-                  Dashboard
-                </NeoButton>
-              </Link>
-
               {/* User menu */}
               <div className="flex items-center gap-2 pl-3 border-l-2 border-black">
                 <div className="flex items-center gap-2 px-3 py-1.5 border-2 border-black bg-muted">
@@ -118,9 +111,6 @@ export function Navbar() {
           
           {isAuthenticated && user ? (
             <>
-              <Link href="/dashboard" className="font-bold text-lg" onClick={() => setIsOpen(false)}>
-                Dashboard
-              </Link>
               <NeoButton neoVariant="outline" className="w-full" onClick={() => { logout(); setIsOpen(false); }}>
                 Sign Out
               </NeoButton>

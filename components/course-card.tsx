@@ -2,6 +2,7 @@ import { NeoCard } from "@/components/ui/neobrutalism/neo-card"
 import { NeoButton } from "@/components/ui/neobrutalism/neo-button"
 import Link from "next/link"
 import { Clock } from "lucide-react"
+import { CourseProgress } from "./course-progress"
 
 interface CourseCardProps {
   title: string
@@ -13,6 +14,7 @@ interface CourseCardProps {
   price?: string
   duration?: string
   displayText?: string
+  totalLessons?: number
 }
 
 export function CourseCard({ 
@@ -24,7 +26,8 @@ export function CourseCard({
   isPublished,
   price,
   duration,
-  displayText 
+  displayText,
+  totalLessons
 }: CourseCardProps) {
   const bgColors = {
     primary: "bg-primary",
@@ -73,6 +76,10 @@ export function CourseCard({
             </span>
           ))}
         </div>
+
+        {totalLessons && (
+          <CourseProgress courseId={slug} totalLessons={totalLessons} />
+        )}
 
         <Link href={`/courses/${slug}`} className="w-full mt-6">
           <NeoButton 

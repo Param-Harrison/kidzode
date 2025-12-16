@@ -9,7 +9,8 @@ export const courses = [
     isPublished: true,
     price: "Free",
     duration: "Self Paced",
-    displayText: "Start"
+    displayText: "Start",
+    totalLessons: 95
   },
   {
     title: "Problem Solving",
@@ -21,7 +22,8 @@ export const courses = [
     isPublished: true,
     price: "Free",
     duration: "Self Paced",
-    displayText: "Solve"
+    displayText: "Solve",
+    totalLessons: 120
   },
   {
     title: "Real Applications",
@@ -33,6 +35,7 @@ export const courses = [
     isPublished: true,
     price: "Free",
     duration: "Self Paced",
-    displayText: "Conquer"
+    displayText: "Conquer",
+    totalLessons: 150
   }
 ]
