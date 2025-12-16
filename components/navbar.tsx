@@ -62,19 +62,21 @@ export function Navbar() {
           {isAuthenticated && user ? (
             <>
               {/* User menu */}
-              <div className="flex items-center gap-2 pl-3 border-l-2 border-black">
-                <div className="flex items-center gap-2 px-3 py-1.5 border-2 border-black bg-muted">
-                  <div className="w-7 h-7 bg-primary flex items-center justify-center">
-                    <User className="w-4 h-4 text-primary-foreground" />
+              <div className="flex items-center gap-4 pl-3 border-l-2 border-black">
+                <div className="flex items-center gap-3 bg-muted/50 px-4 py-2 rounded-full border-2 border-black">
+                  <div className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center border-2 border-black">
+                    <User className="w-4 h-4 text-secondary-foreground" />
                   </div>
-                  <span className="text-sm font-medium max-w-[120px] truncate">
-                    {user.name || user.email}
-                  </span>
+                  <span className="font-bold font-lexend">{user.name || user.email}</span>
                 </div>
                 
-                <NeoButton neoVariant="ghost" size="sm" onClick={logout}>
-                  <LogOut className="w-4 h-4" />
-                </NeoButton>
+                <button
+                  onClick={logout}
+                  className="p-2 text-muted-foreground hover:text-destructive transition-colors"
+                  title="Sign Out"
+                >
+                  <LogOut className="w-6 h-6" />
+                </button>
               </div>
             </>
           ) : (
