@@ -2,13 +2,15 @@
 
 import { useEffect, useState, useMemo, useCallback } from "react"
 import Link from "next/link"
-import { BookOpen, Book, Hammer, Zap, FileText, CheckCircle, Star, Heart, Clock } from "lucide-react"
+import { Trophy } from "lucide-react" // Optimized imports
 import { useAuth } from "@/hooks/useAuth"
+import { GameMapNode } from "@/components/ui/game-map-node"
 
 interface Lesson {
   id: string
   name: string
-  type?: 'lesson' | 'challenge' | 'concept' | 'build' // Support both old and new types
+  type?: 'lesson' | 'challenge' | 'concept' | 'build'
+  description?: string
   guide: string
   py: string
 }
@@ -35,6 +37,7 @@ interface CourseLessonsListProps {
     inProgress: number
     completionPercentage: number
     lastAccessedLessonId?: string | null
+    nextLessonId?: string | null
   }) => void
 }
 
@@ -67,6 +70,7 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
     inProgress: number
     completionPercentage: number
     lastAccessedLessonId?: string | null
+    nextLessonId?: string | null
   }) => {
     if (onProgressLoaded) {
       onProgressLoaded(stats)
@@ -100,13 +104,14 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
              let inProgressCount = 0;
 
              allProgress.forEach((p: any) => {
+                const status = p.status?.toLowerCase() as 'completed' | 'in_progress' | 'not_started';
                 progressMap.set(p.lessonId, {
-                  status: p.status,
-                  rating: p.rating, // May not exist in local db yet
-                  bookmarked: p.bookmarked || false, // May not exist
+                  status: status || 'not_started',
+                  rating: p.rating, 
+                  bookmarked: p.bookmarked || false,
                 })
-                if (p.status === 'completed') completedCount++;
-                if (p.status === 'in_progress') inProgressCount++;
+                if (status === 'completed') completedCount++;
+                if (status === 'in_progress') inProgressCount++;
              })
 
               // Notify parent component of stats
@@ -118,7 +123,17 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
                    (new Date(b.completedAt || 0).getTime() - new Date(a.completedAt || 0).getTime())
                 )[0];
 
-                console.log('Progress stats loaded:', { completed: completedCount, inProgress: inProgressCount, completionPercentage, totalLessons })
+                // Find Next Lesson (first not completed)
+                let nextLessonId = allLessonsList[0]?.id;
+                for (const lesson of allLessonsList) {
+                    const p = progressMap.get(lesson.id);
+                    if (p?.status !== 'completed') {
+                        nextLessonId = lesson.id;
+                        break;
+                    }
+                }
+
+                console.log('Progress stats loaded:', { completed: completedCount, inProgress: inProgressCount, completionPercentage, totalLessons, nextLessonId })
                 
                 memoizedOnProgressLoaded({
                   total: totalLessons,
@@ -126,6 +141,7 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
                   inProgress: inProgressCount,
                   completionPercentage,
                   lastAccessedLessonId: lastActivity?.lessonId,
+                  nextLessonId,
                 })
               }
           }
@@ -164,218 +180,95 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
     }
   }, [bookId, user, totalLessons, allLessonsList, memoizedOnProgressLoaded])
 
-  const renderLessonCard = (lesson: Lesson, index: number) => {
-    const progress = lessonProgress.get(lesson.id)
-    const isCompleted = progress?.status === 'completed'
-    const isInProgress = progress?.status === 'in_progress'
-    const rating = progress?.rating
-    const isBookmarked = progress?.bookmarked || false
-
-    return (
-      <Link key={lesson.id} href={`/courses/${bookId}/lessons/${lesson.id}`}>
-        <div className={`group h-full flex flex-col justify-between p-4 sm:p-5 border-2 rounded-xl transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none ${
-          isCompleted 
-            ? 'bg-green-100 hover:bg-green-200 border-green-500' 
-            : isInProgress 
-            ? 'bg-yellow-50 hover:bg-yellow-100 border-yellow-400'
-            : 'bg-card hover:bg-blue-50 border-black'
-        }`}>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <div className={`flex h-8 w-8 items-center justify-center rounded-full border-2 font-bold text-sm transition-colors ${
-                isCompleted 
-                  ? 'bg-green-500 border-green-600 text-white' 
-                  : isInProgress
-                  ? 'bg-yellow-400 border-yellow-500 text-white'
-                  : 'bg-muted border-black group-hover:bg-white'
-              }`}>
-                {isCompleted ? <CheckCircle className="h-5 w-5" /> : isInProgress ? <Clock className="h-4 w-4" /> : index + 1}
-              </div>
-              <div className="flex items-center gap-2">
-                {/* Star Rating - Larger and more prominent */}
-                {rating !== undefined && rating > 0 && (
-                  <div className="flex items-center gap-0.5 bg-yellow-50 px-2 py-1 rounded-lg border border-yellow-300">
-                    {[1, 2, 3].map((star) => (
-                      <Star
-                        key={star}
-                        className={`h-5 w-5 ${
-                          star <= rating
-                            ? 'fill-yellow-400 text-yellow-400'
-                            : 'text-gray-300'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                )}
-                {/* Bookmark - Larger and more visible */}
-                {isBookmarked && (
-                  <div className="bg-red-50 px-2 py-1 rounded-lg border border-red-300">
-                    <Heart className="h-5 w-5 fill-red-500 text-red-500" />
-                  </div>
-                )}
-                <BookOpen className={`h-5 w-5 transition-colors ${
-                  isCompleted 
-                    ? 'text-green-600' 
-                    : isInProgress
-                    ? 'text-yellow-600'
-                    : 'text-muted-foreground group-hover:text-black'
-                }`} />
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <div className="font-bold text-lg leading-tight transition-colors">
-                  {lesson.name}
-                </div>
-                {/* Status Badge */}
-                {isCompleted && (
-                  <span className="px-2 py-0.5 bg-green-500 text-white text-xs font-bold rounded border border-green-600">
-                    Completed
-                  </span>
-                )}
-                {isInProgress && (
-                  <span className="px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded border border-yellow-500">
-                    In Progress
-                  </span>
-                )}
-              </div>
-              <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider flex items-center gap-1.5">
-                {lesson.type === 'challenge' && (
-                  <>
-                    <Zap className="h-3 w-3" />
-                    Challenge
-                  </>
-                )}
-                {(lesson.type === 'lesson' || !lesson.type) && (
-                  <>
-                    <FileText className="h-3 w-3" />
-                    Lesson
-                  </>
-                )}
-                {/* Legacy types for backward compatibility */}
-                {lesson.type === 'concept' && (
-                  <>
-                    <Book className="h-3 w-3" />
-                    Concept
-                  </>
-                )}
-                {lesson.type === 'build' && (
-                  <>
-                    <Hammer className="h-3 w-3" />
-                    Build
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </Link>
-    )
+  const calculateStatus = (lessonId: string, globalIndex: number, isProjectStart: boolean): 'locked' | 'active' | 'completed' => {
+    const progress = lessonProgress.get(lessonId)
+    if (progress?.status === 'completed') return 'completed'
+    if (progress?.status === 'in_progress') return 'active'
+    
+    // Always unlock the first lesson of a project
+    if (isProjectStart) return 'active'
+    
+    // Check if previous lesson is completed
+    if (globalIndex > 0) {
+      const prevLesson = allLessonsList[globalIndex - 1]
+      const prevProgress = lessonProgress.get(prevLesson.id)
+      if (prevProgress?.status === 'completed') return 'active'
+    }
+    
+    return 'locked'
   }
+
+  const getGlobalIndex = (lessonId: string) => allLessonsList.findIndex(l => l.id === lessonId)
 
   if (book.projects) {
     return (
-      <div className="space-y-12">
+      <div className="space-y-24 py-12 relative">
         {book.projects.map((project, projectIndex) => (
-          <div key={project.id} className="space-y-6">
-            <div className="flex flex-col md:flex-row md:items-center gap-4 border-b-2 border-black pb-4">
-              <div className="flex items-center gap-4">
-                <div className="bg-primary text-primary-foreground px-4 py-1.5 border-2 border-black font-bold text-sm rounded-full shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  Project {projectIndex + 1}
-                </div>
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold">{project.name}</h2>
-                <p className="text-muted-foreground">{project.description}</p>
-              </div>
+          <div key={project.id} className="relative">
+            {/* Zone Marker / Header */}
+            <div className="flex justify-center mb-16 sticky top-24 z-[30]">
+               <div className="bg-blue-200 border-[3px] border-black px-10 py-5 rounded-[2rem] shadow-[8px_8px_0px_0px_#000] text-center max-w-3xl mx-auto backdrop-blur-sm transition-transform hover:scale-[1.02]">
+                  <h2 className="text-2xl md:text-4xl font-black font-lexend uppercase tracking-tight mb-2 text-black">{project.name}</h2>
+                  <p className="text-base md:text-lg font-bold text-slate-700 leading-relaxed">{project.description}</p>
+               </div>
             </div>
 
-            <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {project.lessons.map((lesson, lessonIndex) => renderLessonCard(lesson, lessonIndex))}
+            <div className="max-w-4xl mx-auto px-4">
+              {project.lessons.map((lesson, lessonIndex) => {
+                 const globalIndex = getGlobalIndex(lesson.id)
+                 const isProjectStart = lessonIndex === 0
+                 const status = calculateStatus(lesson.id, globalIndex, isProjectStart)
+                 const isLast = globalIndex === allLessonsList.length - 1
+
+                 return (
+                   <GameMapNode
+                     key={lesson.id}
+                     lesson={lesson}
+                     index={globalIndex}
+                     status={status}
+                     position={globalIndex % 2 === 0 ? 'left' : 'right'}
+                     bookId={bookId}
+                     isLast={isLast}
+                   />
+                 )
+              })}
             </div>
           </div>
         ))}
+        
+        {/* Completion Trophy / End Marker */}
+        <div className="flex flex-col items-center justify-center mt-12 pb-12">
+            <div className="w-24 h-24 bg-yellow-400 rounded-full border-[3px] border-black flex items-center justify-center shadow-[6px_6px_0px_0px_#000] mb-4">
+                 <Trophy className="w-12 h-12 text-black" />
+            </div>
+            <div className="bg-white px-6 py-2 border-[3px] border-black font-black uppercase text-xl shadow-[4px_4px_0px_0px_#000]">
+                Course Clear!
+            </div>
+        </div>
       </div>
     )
   }
 
+  // Fallback for flat children list (not projects)
   return (
-    <div className="space-y-4">
-      {book.children?.map((lesson, index) => {
-        const progress = lessonProgress.get(lesson.id)
-        const isCompleted = progress?.status === 'completed'
-        const isInProgress = progress?.status === 'in_progress'
-        const rating = progress?.rating
-        const isBookmarked = progress?.bookmarked || false
+      <div className="max-w-3xl mx-auto py-8">
+         {book.children?.map((lesson, index) => {
+             const globalIndex = getGlobalIndex(lesson.id)
+             const status = calculateStatus(lesson.id, globalIndex, index === 0)
+             const isLast = globalIndex === allLessonsList.length - 1
 
-        return (
-          <Link key={lesson.id} href={`/courses/${bookId}/lessons/${lesson.id}`}>
-            <div className={`group flex items-center justify-between p-4 border-2 rounded-lg transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none ${
-              isCompleted 
-                ? 'bg-green-100 hover:bg-green-200 border-green-500' 
-                : isInProgress 
-                ? 'bg-yellow-50 hover:bg-yellow-100 border-yellow-400'
-                : 'bg-card hover:bg-blue-50 border-black'
-            }`}>
-              <div className="flex items-center gap-4">
-                <div className={`flex h-10 w-10 items-center justify-center rounded-full border-2 font-bold transition-colors ${
-                  isCompleted 
-                    ? 'bg-green-500 border-green-600 text-white' 
-                    : isInProgress
-                    ? 'bg-yellow-400 border-yellow-500 text-white'
-                    : 'bg-white border-black group-hover:bg-white'
-                }`}>
-                  {isCompleted ? <CheckCircle className="h-6 w-6" /> : isInProgress ? <Clock className="h-5 w-5" /> : index + 1}
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="font-medium group-hover:text-black">{lesson.name}</div>
-                  {/* Status Badge */}
-                  {isCompleted && (
-                    <span className="px-2 py-0.5 bg-green-500 text-white text-xs font-bold rounded border border-green-600">
-                      Completed
-                    </span>
-                  )}
-                  {isInProgress && (
-                    <span className="px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded border border-yellow-500">
-                      In Progress
-                    </span>
-                  )}
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                {/* Star Rating - Larger */}
-                {rating !== undefined && rating > 0 && (
-                  <div className="flex items-center gap-0.5 bg-yellow-50 px-2 py-1 rounded-lg border border-yellow-300">
-                    {[1, 2, 3].map((star) => (
-                      <Star
-                        key={star}
-                        className={`h-5 w-5 ${
-                          star <= rating
-                            ? 'fill-yellow-400 text-yellow-400'
-                            : 'text-gray-300'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                )}
-                {/* Bookmark - Larger */}
-                {isBookmarked && (
-                  <div className="bg-red-50 px-2 py-1 rounded-lg border border-red-300">
-                    <Heart className="h-5 w-5 fill-red-500 text-red-500" />
-                  </div>
-                )}
-                <BookOpen className={`h-5 w-5 ${
-                  isCompleted 
-                    ? 'text-green-600' 
-                    : isInProgress
-                    ? 'text-yellow-600'
-                    : 'text-muted-foreground group-hover:text-black'
-                }`} />
-              </div>
-            </div>
-          </Link>
-        )
-      })}
-    </div>
+             return (
+               <GameMapNode
+                 key={lesson.id}
+                 lesson={lesson}
+                 index={globalIndex}
+                 status={status}
+                 position={globalIndex % 2 === 0 ? 'left' : 'right'}
+                 bookId={bookId}
+                 isLast={isLast}
+               />
+             )
+         })}
+      </div>
   )
 }

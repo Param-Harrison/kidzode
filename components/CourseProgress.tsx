@@ -12,6 +12,7 @@ interface CourseProgressProps {
   completionPercentage: number
   lastAccessedLessonId?: string | null
   lastAccessedLessonName?: string | null
+  nextLessonId?: string | null
 }
 
 export function CourseProgress({
@@ -22,9 +23,16 @@ export function CourseProgress({
   completionPercentage,
   lastAccessedLessonId,
   lastAccessedLessonName,
+  nextLessonId,
 }: CourseProgressProps) {
   const hasStarted = completedLessons > 0 || inProgressLessons > 0
   const isCompleted = completionPercentage === 100
+  
+  // Determine target lesson: next available, or last accessed, or default to lessons list if unknown
+  const targetLessonId = nextLessonId || lastAccessedLessonId;
+  const targetLink = targetLessonId 
+    ? `/courses/${bookId}/lessons/${targetLessonId}` 
+    : `/courses/${bookId}/lessons`; // Fallback to list if we really can't find one (shouldn't happen with nextLessonId logic)
 
   return (
     <div className="bg-accent/20 border-4 border-black rounded-xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
@@ -90,34 +98,14 @@ export function CourseProgress({
 
         {/* Right: Action Button */}
         <div className="flex-shrink-0">
-          {hasStarted && !isCompleted && lastAccessedLessonId ? (
-            <Link href={`/courses/${bookId}/lessons/${lastAccessedLessonId}`}>
+          {!isCompleted && (
+            <Link href={targetLink}>
               <Button
                 size="lg"
                 className="w-full md:w-auto border-4 border-black bg-primary hover:bg-primary/80 text-primary-foreground font-bold text-lg py-6 px-8 rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
               >
-                Resume Learning
+                {hasStarted ? "Resume Learning" : "Start Learning"}
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          ) : hasStarted && !isCompleted ? (
-            <Link href={`/courses/${bookId}/lessons`}>
-              <Button
-                size="lg"
-                className="w-full md:w-auto border-4 border-black bg-primary hover:bg-primary/80 text-primary-foreground font-bold text-lg py-6 px-8 rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
-              >
-                Continue Learning
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          ) : (
-            <Link href={`/courses/${bookId}/lessons`}>
-              <Button
-                size="lg"
-                className="w-full md:w-auto border-4 border-black bg-secondary hover:bg-secondary/80 text-secondary-foreground font-bold text-lg py-6 px-8 rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
-              >
-                Start Learning
-                <Play className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           )}
