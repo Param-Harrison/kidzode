@@ -18,11 +18,14 @@ KidzCode is a Python learning platform with 3 progressive levels, 27 projects, a
 
 ## Course Structure for Implementation
 
-| Level       | Age Range | Projects | Focus Area                   | Key Concepts                            |
-| ----------- | --------- | -------- | ---------------------------- | --------------------------------------- |
-| **Level 1** | 8-10      | 8        | Python fundamentals          | Variables, loops, basic data structures |
-| **Level 2** | 9-11      | 9        | Algorithms & data structures | Functions, OOP, problem-solving         |
-| **Level 3** | 11-13     | 10       | Production patterns          | Modules, testing, advanced concepts     |
+| Course | Title | Projects | Focus Area | Key Concepts |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | Foundation | 8 | Basics | Variables, Loops, functions |
+| **2** | Engineer | 8 | Systems | Problem Solving, Tools |
+| **3** | Data Scientist | 8 | Analysis | Dictionary, JSON, Logic |
+| **4** | API Architect | 8 | Backend | Server Logic, DBs, Auth |
+| **5** | App Master | 8 | OOP | Classes, State, Inheritance |
+| **6** | Game Dev | TBD | Graphics | Pygame Zero, Physics |
 
 ---
 
@@ -206,21 +209,19 @@ print(f"User name: {name}")
 
 ### File Organization
 
+### File Organization
+
 ```
-public/courses/[level]/[project]/
-├── lesson01.md
-├── lesson01.py
-├── lesson02.md
-├── lesson02.py
-├── ...
-├── challenge01.md
-├── challenge01.py
-├── challenge01-answer.md
-├── challenge01-hints.md
-├── challenge-final.md
-├── challenge-final.py
-├── challenge-final-answer.md
-└── challenge-final-hints.md
+public/courses/[course-slug]/
+├── book.json             # The Manifest (Lessons, Challenges, Metadata)
+├── [project-slug]/       # Project Folder
+│   ├── lesson01.md       # Guide
+│   ├── lesson01.py       # Code
+│   ├── ...
+│   ├── challenge01.md
+│   ├── challenge01.py
+│   ├── challenge01-hints.md
+│   └── challenge01-answer.md
 ```
 
 ### Lesson Structure

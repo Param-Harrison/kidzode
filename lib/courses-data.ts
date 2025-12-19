@@ -10,7 +10,8 @@ export const courses = [
     price: "",
     duration: "Self Paced",
     displayText: "Start",
-    totalLessons: 48
+    totalLessons: 48,
+    highlights: ["Logic Fundamentals", "Python Basics", "Game Mechanics", "Final Project"]
   },
   {
     title: "Think like an Engineer",
@@ -23,7 +24,8 @@ export const courses = [
     price: "",
     duration: "Self Paced",
     displayText: "Build",
-    totalLessons: 48
+    totalLessons: 48,
+    highlights: ["System Design", "Data Handling", "Problem Solving", "Real Tools"]
   },
   {
     title: "Think like a Data Scientist",
@@ -36,7 +38,8 @@ export const courses = [
     price: "",
     duration: "Self Paced",
     displayText: "Analyze",
-    totalLessons: 48
+    totalLessons: 48,
+    highlights: ["Data Analysis", "Chatbots", "Smart Apps", "Visualizations"]
   },
   {
     title: "The API Architect",
@@ -49,7 +52,8 @@ export const courses = [
     price: "",
     duration: "Self Paced",
     displayText: "Backend",
-    totalLessons: 48
+    totalLessons: 48,
+    highlights: ["Server Logic", "Databases", "API Design", "Authentication"]
   },
   {
     title: "The App Master",
@@ -62,7 +66,8 @@ export const courses = [
     price: "",
     duration: "Self Paced",
     displayText: "Architect",
-    totalLessons: 48
+    totalLessons: 48,
+    highlights: ["OOP Principles", "Game Engines", "Complex Systems", "Software Arch"]
   }
 ]
 

@@ -10,6 +10,19 @@ Kidzode is an interactive learning platform designed for kids to bridge the gap 
 - **Fast & Reliable**: Main-thread Pyodide execution for instant coding feedback.
 - **Premium Design**: A bold, high-contrast Neo-Brutalist UI that keeps kids engaged.
 
+## 📚 Curriculum Structure
+Our curriculum is divided into 6 Courses, taking students from "Hello World" to "Game Developer".
+
+### Completed Courses (Available Now)
+- **Course 1: Foundation (Basics)** - 8 Projects (Variables, Loops, Logic)
+- **Course 2: Think Like an Engineer** - 8 Projects (Systems, Data, Tools)
+- **Course 3: Data Scientist** - 8 Projects (Data Analysis, Chatbots)
+- **Course 4: API Architect** - 8 Projects (Backend Logic, Databases)
+- **Course 5: The App Master** - 8 Projects (OOP, Game Engines, Systems)
+
+### Upcoming
+- **Course 6: The Game Developer** - Graphics & Physics with Pygame Zero
+
 ## 🛠️ Development Workflow
 We use a `Makefile` to simplify common development tasks.
 

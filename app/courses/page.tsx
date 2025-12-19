@@ -42,8 +42,13 @@ export default function CoursesPage() {
                  {/* Course Visual */}
                  <div className="md:w-2/5 border-b-[3px] md:border-b-0 md:border-r-[3px] border-foreground min-h-[240px] md:min-h-auto bg-primary/10 flex items-center justify-center p-8 relative overflow-hidden">
                      <TechGrid /> 
-                     <div className="relative z-10 p-6 bg-background border-[3px] border-foreground shadow-[4px_4px_0px_0px_currentColor] rotate-3 group-hover:rotate-0 transition-transform duration-500">
-                        <Terminal className="w-12 h-12 text-primary" />
+                     <div className="relative z-10 p-4 bg-background border-[3px] border-foreground shadow-[4px_4px_0px_0px_currentColor] rotate-3 group-hover:rotate-0 transition-transform duration-500 text-center">
+                        <div className="text-4xl mb-2">
+                           {course.badge.split(' ')[0]}
+                        </div>
+                        <div className="text-xs font-black uppercase tracking-widest leading-tight">
+                            {course.badge.split(' ').slice(1).join(' ')}
+                        </div>
                      </div>
                  </div>
 
@@ -62,29 +67,19 @@ export default function CoursesPage() {
                     </p>
 
                     <div className="grid grid-cols-2 gap-4 mb-8">
-                       <div className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-primary filled-current" />
-                          <span className="font-bold text-sm">Logic Fundamentals</span>
-                       </div>
-                       <div className="flex items-center gap-3">
-                           <CheckCircle className="w-5 h-5 text-primary filled-current" />
-                           <span className="font-bold text-sm">Python Basics</span>
-                       </div>
-                        <div className="flex items-center gap-3">
-                           <CheckCircle className="w-5 h-5 text-primary filled-current" />
-                           <span className="font-bold text-sm">Game Mechanics</span>
-                       </div>
-                        <div className="flex items-center gap-3">
-                           <CheckCircle className="w-5 h-5 text-primary filled-current" />
-                           <span className="font-bold text-sm">Final Project</span>
-                       </div>
+                       {course.highlights.map((highlight, i) => (
+                         <div key={i} className="flex items-center gap-3">
+                            <CheckCircle className="w-5 h-5 text-primary filled-current" />
+                            <span className="font-bold text-sm">{highlight}</span>
+                         </div>
+                       ))}
                     </div>
 
                     <div className="mt-auto pt-6 border-t-[3px] border-muted">
                         <Link href={`/courses/${course.slug}`} className="w-full">
                           <NeoButton className="w-full bg-secondary text-foreground px-8 py-6 text-lg h-auto shadow-[6px_6px_0px_0px_currentColor] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] flex items-center justify-center gap-3 border-[3px] border-foreground transition-all">
                               <Terminal className="w-5 h-5" />
-                              Start Learning Path
+                              {course.displayText}
                            </NeoButton>
                         </Link>
                     </div>
