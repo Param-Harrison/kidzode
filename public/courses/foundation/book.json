@@ -37,6 +37,24 @@
           "hints": "my-first-code/challenge01-hints.md",
           "answer": "my-first-code/challenge01-answer.md",
           "type": "challenge"
+        },
+        {
+          "id": "fc-01-05",
+          "name": "CHALLENGE 2: Math Whiz",
+          "guide": "my-first-code/challenge02.md",
+          "py": "my-first-code/challenge02.py",
+          "hints": "my-first-code/challenge02-hints.md",
+          "answer": "my-first-code/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-01-06",
+          "name": "CHALLENGE 3: Personal Assistant",
+          "guide": "my-first-code/challenge03.md",
+          "py": "my-first-code/challenge03.py",
+          "hints": "my-first-code/challenge03-hints.md",
+          "answer": "my-first-code/challenge03-answer.md",
+          "type": "challenge"
         }
       ]
     },
@@ -73,6 +91,24 @@
           "py": "name-tag-maker/challenge01.py",
           "hints": "name-tag-maker/challenge01-hints.md",
           "answer": "name-tag-maker/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-02-05",
+          "name": "CHALLENGE 2: Logo Designer",
+          "guide": "name-tag-maker/challenge02.md",
+          "py": "name-tag-maker/challenge02.py",
+          "hints": "name-tag-maker/challenge02-hints.md",
+          "answer": "name-tag-maker/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-02-06",
+          "name": "CHALLENGE 3: Digital Greeting",
+          "guide": "name-tag-maker/challenge03.md",
+          "py": "name-tag-maker/challenge03.py",
+          "hints": "name-tag-maker/challenge03-hints.md",
+          "answer": "name-tag-maker/challenge03-answer.md",
           "type": "challenge"
         }
       ]
@@ -111,6 +147,24 @@
           "hints": "age-calculator/challenge01-hints.md",
           "answer": "age-calculator/challenge01-answer.md",
           "type": "challenge"
+        },
+        {
+          "id": "fc-03-05",
+          "name": "CHALLENGE 2: Birthday Countdown",
+          "guide": "age-calculator/challenge02.md",
+          "py": "age-calculator/challenge02.py",
+          "hints": "age-calculator/challenge02-hints.md",
+          "answer": "age-calculator/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-03-06",
+          "name": "CHALLENGE 3: Life in Months",
+          "guide": "age-calculator/challenge03.md",
+          "py": "age-calculator/challenge03.py",
+          "hints": "age-calculator/challenge03-hints.md",
+          "answer": "age-calculator/challenge03-answer.md",
+          "type": "challenge"
         }
       ]
     },
@@ -147,6 +201,24 @@
           "py": "magic-8-ball/challenge01.py",
           "hints": "magic-8-ball/challenge01-hints.md",
           "answer": "magic-8-ball/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-04-05",
+          "name": "CHALLENGE 2: Color Picker",
+          "guide": "magic-8-ball/challenge02.md",
+          "py": "magic-8-ball/challenge02.py",
+          "hints": "magic-8-ball/challenge02-hints.md",
+          "answer": "magic-8-ball/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-04-06",
+          "name": "CHALLENGE 3: Adventure Decider",
+          "guide": "magic-8-ball/challenge03.md",
+          "py": "magic-8-ball/challenge03.py",
+          "hints": "magic-8-ball/challenge03-hints.md",
+          "answer": "magic-8-ball/challenge03-answer.md",
           "type": "challenge"
         }
       ]
@@ -185,6 +257,24 @@
           "hints": "emoji-art/challenge01-hints.md",
           "answer": "emoji-art/challenge01-answer.md",
           "type": "challenge"
+        },
+        {
+          "id": "fc-05-05",
+          "name": "CHALLENGE 2: Emoji Border",
+          "guide": "emoji-art/challenge02.md",
+          "py": "emoji-art/challenge02.py",
+          "hints": "emoji-art/challenge02-hints.md",
+          "answer": "emoji-art/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-05-06",
+          "name": "CHALLENGE 3: Multi-Shape Art",
+          "guide": "emoji-art/challenge03.md",
+          "py": "emoji-art/challenge03.py",
+          "hints": "emoji-art/challenge03-hints.md",
+          "answer": "emoji-art/challenge03-answer.md",
+          "type": "challenge"
         }
       ]
     },
@@ -221,6 +311,24 @@
           "py": "superhero-generator/challenge01.py",
           "hints": "superhero-generator/challenge01-hints.md",
           "answer": "superhero-generator/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-06-05",
+          "name": "CHALLENGE 2: Power Up!",
+          "guide": "superhero-generator/challenge02.md",
+          "py": "superhero-generator/challenge02.py",
+          "hints": "superhero-generator/challenge02-hints.md",
+          "answer": "superhero-generator/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-06-06",
+          "name": "CHALLENGE 3: Hero Team",
+          "guide": "superhero-generator/challenge03.md",
+          "py": "superhero-generator/challenge03.py",
+          "hints": "superhero-generator/challenge03-hints.md",
+          "answer": "superhero-generator/challenge03-answer.md",
           "type": "challenge"
         }
       ]
@@ -259,6 +367,24 @@
           "hints": "shopping-list/challenge01-hints.md",
           "answer": "shopping-list/challenge01-answer.md",
           "type": "challenge"
+        },
+        {
+          "id": "fc-07-05",
+          "name": "CHALLENGE 2: Wish List",
+          "guide": "shopping-list/challenge02.md",
+          "py": "shopping-list/challenge02.py",
+          "hints": "shopping-list/challenge02-hints.md",
+          "answer": "shopping-list/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-07-06",
+          "name": "CHALLENGE 3: Item Search",
+          "guide": "shopping-list/challenge03.md",
+          "py": "shopping-list/challenge03.py",
+          "hints": "shopping-list/challenge03-hints.md",
+          "answer": "shopping-list/challenge03-answer.md",
+          "type": "challenge"
         }
       ]
     },
@@ -295,6 +421,24 @@
           "py": "rocket-countdown/challenge01.py",
           "hints": "rocket-countdown/challenge01-hints.md",
           "answer": "rocket-countdown/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-08-05",
+          "name": "CHALLENGE 2: Alarm Clock",
+          "guide": "rocket-countdown/challenge02.md",
+          "py": "rocket-countdown/challenge02.py",
+          "hints": "rocket-countdown/challenge02-hints.md",
+          "answer": "rocket-countdown/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "fc-08-06",
+          "name": "CHALLENGE 3: Race Timer",
+          "guide": "rocket-countdown/challenge03.md",
+          "py": "rocket-countdown/challenge03.py",
+          "hints": "rocket-countdown/challenge03-hints.md",
+          "answer": "rocket-countdown/challenge03-answer.md",
           "type": "challenge"
         }
       ]

@@ -43,7 +43,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-6 flex-1 ml-10">
           <Link href="/courses" className={`font-bold transition-all decoration-2 underline-offset-4 ${
             isActive("/courses") 
-              ? "underline decoration-[#D34E4E]" 
+              ? "underline decoration-foreground" 
               : "hover:underline decoration-foreground"
           }`}>
             Courses

@@ -1,2 +1,0 @@
-cart = []
-print(cart)

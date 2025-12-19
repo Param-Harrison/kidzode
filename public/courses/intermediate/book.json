@@ -1,0 +1,454 @@
+{
+  "$schema": "../../schemas/book-schema.json",
+  "name": "Intermediate - Think like an Engineer",
+  "id": "intermediate",
+  "projects": [
+    {
+      "id": "password-generator",
+      "name": "Password Generator",
+      "description": "Engineers need strong security! Build a tool that creates complex, random passwords to keep accounts safe.",
+      "lessons": [
+        {
+          "id": "ie-01-01",
+          "name": "The Character Bank",
+          "guide": "password-generator/lesson01.md",
+          "py": "password-generator/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-01-02",
+          "name": "Looping a Password",
+          "guide": "password-generator/lesson02.md",
+          "py": "password-generator/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-01-03",
+          "name": "Joining the Pieces",
+          "guide": "password-generator/lesson03.md",
+          "py": "password-generator/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-01-04",
+          "name": "CHALLENGE: Super Secure",
+          "guide": "password-generator/challenge01.md",
+          "py": "password-generator/challenge01.py",
+          "hints": "password-generator/challenge01-hints.md",
+          "answer": "password-generator/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-01-05",
+          "name": "CHALLENGE 2: PIN Code Maker",
+          "guide": "password-generator/challenge02.md",
+          "py": "password-generator/challenge02.py",
+          "hints": "password-generator/challenge02-hints.md",
+          "answer": "password-generator/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-01-06",
+          "name": "CHALLENGE 3: Custom Password",
+          "guide": "password-generator/challenge03.md",
+          "py": "password-generator/challenge03.py",
+          "hints": "password-generator/challenge03-hints.md",
+          "answer": "password-generator/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "secret-encoder",
+      "name": "Secret Message Encoder",
+      "description": "Send secret messages that only your friends can read! Learn how to transform text using secret patterns and codes.",
+      "lessons": [
+        {
+          "id": "ie-02-01",
+          "name": "Character Secrets",
+          "guide": "secret-encoder/lesson01.md",
+          "py": "secret-encoder/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-02-02",
+          "name": "The Simple Shift",
+          "guide": "secret-encoder/lesson02.md",
+          "py": "secret-encoder/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-02-03",
+          "name": "Encoding a Word",
+          "guide": "secret-encoder/lesson03.md",
+          "py": "secret-encoder/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-02-04",
+          "name": "CHALLENGE: Full Secret Agent",
+          "guide": "secret-encoder/challenge01.md",
+          "py": "secret-encoder/challenge01.py",
+          "hints": "secret-encoder/challenge01-hints.md",
+          "answer": "secret-encoder/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-02-05",
+          "name": "CHALLENGE 2: Number Encoder",
+          "guide": "secret-encoder/challenge02.md",
+          "py": "secret-encoder/challenge02.py",
+          "hints": "secret-encoder/challenge02-hints.md",
+          "answer": "secret-encoder/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-02-06",
+          "name": "CHALLENGE 3: Reverse Decoder",
+          "guide": "secret-encoder/challenge03.md",
+          "py": "secret-encoder/challenge03.py",
+          "hints": "secret-encoder/challenge03-hints.md",
+          "answer": "secret-encoder/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "todo-list",
+      "name": "Smart To-Do List",
+      "description": "Never forget a task again! Engineer a smart manager that lets you add, view, and delete items from your daily list.",
+      "lessons": [
+        {
+          "id": "ie-03-01",
+          "name": "Organizing with Functions",
+          "guide": "todo-list/lesson01.md",
+          "py": "todo-list/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-03-02",
+          "name": "The Main Menu",
+          "guide": "todo-list/lesson02.md",
+          "py": "todo-list/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-03-03",
+          "name": "Adding and Removing",
+          "guide": "todo-list/lesson03.md",
+          "py": "todo-list/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-03-04",
+          "name": "CHALLENGE: The Task Master",
+          "guide": "todo-list/challenge01.md",
+          "py": "todo-list/challenge01.py",
+          "hints": "todo-list/challenge01-hints.md",
+          "answer": "todo-list/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-03-05",
+          "name": "CHALLENGE 2: Priority Tasks",
+          "guide": "todo-list/challenge02.md",
+          "py": "todo-list/challenge02.py",
+          "hints": "todo-list/challenge02-hints.md",
+          "answer": "todo-list/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-03-06",
+          "name": "CHALLENGE 3: Task Counter",
+          "guide": "todo-list/challenge03.md",
+          "py": "todo-list/challenge03.py",
+          "hints": "todo-list/challenge03-hints.md",
+          "answer": "todo-list/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "bank-account",
+      "name": "Virtual Bank Account",
+      "description": "Be your own banker! Engineer a system to track deposits, withdrawals, and balances using professional coding patterns.",
+      "lessons": [
+        {
+          "id": "ie-04-01",
+          "name": "The Vault",
+          "guide": "bank-account/lesson01.md",
+          "py": "bank-account/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-04-02",
+          "name": "Deposit & Withdraw",
+          "guide": "bank-account/lesson02.md",
+          "py": "bank-account/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-04-03",
+          "name": "Safety Checks",
+          "guide": "bank-account/lesson03.md",
+          "py": "bank-account/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-04-04",
+          "name": "CHALLENGE: Interest Calculator",
+          "guide": "bank-account/challenge01.md",
+          "py": "bank-account/challenge01.py",
+          "hints": "bank-account/challenge01-hints.md",
+          "answer": "bank-account/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-04-05",
+          "name": "CHALLENGE 2: Transfer Money",
+          "guide": "bank-account/challenge02.md",
+          "py": "bank-account/challenge02.py",
+          "hints": "bank-account/challenge02-hints.md",
+          "answer": "bank-account/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-04-06",
+          "name": "CHALLENGE 3: Daily Limit",
+          "guide": "bank-account/challenge03.md",
+          "py": "bank-account/challenge03.py",
+          "hints": "bank-account/challenge03-hints.md",
+          "answer": "bank-account/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "weather-reporter",
+      "name": "Weather Reporter",
+      "description": "Information is data! Engineer a reporting tool that uses Python Dictionaries to store and look up weather info for different cities.",
+      "lessons": [
+        {
+          "id": "ie-05-01",
+          "name": "The Data Map",
+          "guide": "weather-reporter/lesson01.md",
+          "py": "weather-reporter/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-05-02",
+          "name": "Inside the Dictionary",
+          "guide": "weather-reporter/lesson02.md",
+          "py": "weather-reporter/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-05-03",
+          "name": "City Lookup",
+          "guide": "weather-reporter/lesson03.md",
+          "py": "weather-reporter/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-05-04",
+          "name": "CHALLENGE: Global Weather",
+          "guide": "weather-reporter/challenge01.md",
+          "py": "weather-reporter/challenge01.py",
+          "hints": "weather-reporter/challenge01-hints.md",
+          "answer": "weather-reporter/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-05-05",
+          "name": "CHALLENGE 2: Wind Speed",
+          "guide": "weather-reporter/challenge02.md",
+          "py": "weather-reporter/challenge02.py",
+          "hints": "weather-reporter/challenge02-hints.md",
+          "answer": "weather-reporter/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-05-06",
+          "name": "CHALLENGE 3: Weather Average",
+          "guide": "weather-reporter/challenge03.md",
+          "py": "weather-reporter/challenge03.py",
+          "hints": "weather-reporter/challenge03-hints.md",
+          "answer": "weather-reporter/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "quiz-master",
+      "name": "Quiz Master Pro",
+      "description": "Challenge your friends! Engineer a reusable quiz engine that handles questions, checks answers, and tracks scores automatically.",
+      "lessons": [
+        {
+          "id": "ie-06-01",
+          "name": "The Quiz Bank",
+          "guide": "quiz-master/lesson01.md",
+          "py": "quiz-master/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-06-02",
+          "name": "Reusable Questions",
+          "guide": "quiz-master/lesson02.md",
+          "py": "quiz-master/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-06-03",
+          "name": "Final Scoreboard",
+          "guide": "quiz-master/lesson03.md",
+          "py": "quiz-master/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-06-04",
+          "name": "CHALLENGE: Super Quiz",
+          "guide": "quiz-master/challenge01.md",
+          "py": "quiz-master/challenge01.py",
+          "hints": "quiz-master/challenge01-hints.md",
+          "answer": "quiz-master/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-06-05",
+          "name": "CHALLENGE 2: Hint System",
+          "guide": "quiz-master/challenge02.md",
+          "py": "quiz-master/challenge02.py",
+          "hints": "quiz-master/challenge02-hints.md",
+          "answer": "quiz-master/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-06-06",
+          "name": "CHALLENGE 3: Random Quiz",
+          "guide": "quiz-master/challenge03.md",
+          "py": "quiz-master/challenge03.py",
+          "hints": "quiz-master/challenge03-hints.md",
+          "answer": "quiz-master/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "unit-converter",
+      "name": "Unit Converter",
+      "description": "Engineers need precision! Build a library of conversion functions to transform lengths, weights, and temperatures with perfect accuracy.",
+      "lessons": [
+        {
+          "id": "ie-07-01",
+          "name": "The Conversion Logic",
+          "guide": "unit-converter/lesson01.md",
+          "py": "unit-converter/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-07-02",
+          "name": "Length & Weight",
+          "guide": "unit-converter/lesson02.md",
+          "py": "unit-converter/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-07-03",
+          "name": "Temperature Pro",
+          "guide": "unit-converter/lesson03.md",
+          "py": "unit-converter/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-07-04",
+          "name": "CHALLENGE: Custom Converter",
+          "guide": "unit-converter/challenge01.md",
+          "py": "unit-converter/challenge01.py",
+          "hints": "unit-converter/challenge01-hints.md",
+          "answer": "unit-converter/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-07-05",
+          "name": "CHALLENGE 2: Time Units",
+          "guide": "unit-converter/challenge02.md",
+          "py": "unit-converter/challenge02.py",
+          "hints": "unit-converter/challenge02-hints.md",
+          "answer": "unit-converter/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-07-06",
+          "name": "CHALLENGE 3: Universal Loader",
+          "guide": "unit-converter/challenge03.md",
+          "py": "unit-converter/challenge03.py",
+          "hints": "unit-converter/challenge03-hints.md",
+          "answer": "unit-converter/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "digital-clock",
+      "name": "Digital Clock",
+      "description": "Master time! Engineer a real-world digital clock that updates every second and uses Python's data formatting tools.",
+      "lessons": [
+        {
+          "id": "ie-08-01",
+          "name": "The Perfect Format",
+          "guide": "digital-clock/lesson01.md",
+          "py": "digital-clock/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-08-02",
+          "name": "Live Time",
+          "guide": "digital-clock/lesson02.md",
+          "py": "digital-clock/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-08-03",
+          "name": "Cleaning the Console",
+          "guide": "digital-clock/lesson03.md",
+          "py": "digital-clock/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ie-08-04",
+          "name": "CHALLENGE: Multi-City Clock",
+          "guide": "digital-clock/challenge01.md",
+          "py": "digital-clock/challenge01.py",
+          "hints": "digital-clock/challenge01-hints.md",
+          "answer": "digital-clock/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-08-05",
+          "name": "CHALLENGE 2: Date Display",
+          "guide": "digital-clock/challenge02.md",
+          "py": "digital-clock/challenge02.py",
+          "hints": "digital-clock/challenge02-hints.md",
+          "answer": "digital-clock/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ie-08-06",
+          "name": "CHALLENGE 3: Stopwatch",
+          "guide": "digital-clock/challenge03.md",
+          "py": "digital-clock/challenge03.py",
+          "hints": "digital-clock/challenge03-hints.md",
+          "answer": "digital-clock/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+

@@ -29,6 +29,33 @@
           "guide": "lesson03.md",
           "py": "lesson03.py",
           "type": "lesson"
+        },
+        {
+          "id": "challenge-01",
+          "name": "4. CHALLENGE 1: Calculator",
+          "guide": "challenge01.md",
+          "py": "challenge01.py",
+          "hints": "challenge01-hints.md",
+          "answer": "challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "challenge-02",
+          "name": "5. CHALLENGE 2: Big Numbers",
+          "guide": "challenge02.md",
+          "py": "challenge02.py",
+          "hints": "challenge02-hints.md",
+          "answer": "challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "challenge-03",
+          "name": "6. CHALLENGE 3: Receipt Printer",
+          "guide": "challenge03.md",
+          "py": "challenge03.py",
+          "hints": "challenge03-hints.md",
+          "answer": "challenge03-answer.md",
+          "type": "challenge"
         }
       ]
     }

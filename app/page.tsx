@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       
       {/* Premium Hero Section - High Conversion Copy */}
-      <div className="border-b-[3px] border-foreground relative overflow-hidden bg-primary/10 min-h-[auto] py-20 md:py-32 flex flex-col items-center justify-center">
+      <div className="border-b-[3px] border-foreground relative overflow-hidden bg-primary/40 min-h-[auto] py-20 md:py-32 flex flex-col items-center justify-center">
         <TechGrid />
 
         <div className="container mx-auto px-4 flex flex-col items-center text-center relative z-10">

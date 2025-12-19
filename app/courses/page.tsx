@@ -13,7 +13,7 @@ export default function CoursesPage() {
       <Navbar />
       <main className="flex-1">
         {/* Premium Header with similar punch to Home */}
-    <section className="relative overflow-hidden py-24 md:py-32 border-b-[3px] border-foreground bg-primary/10">
+    <section className="relative overflow-hidden py-24 md:py-32 border-b-[3px] border-foreground bg-primary/70">
       <TechGrid />
       <div className="container max-w-6xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center">

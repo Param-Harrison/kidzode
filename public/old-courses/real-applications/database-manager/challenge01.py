@@ -1,6 +1,0 @@
-# Create your database here!
-db = []
-
-# Insert users...
-
-# Print users...
