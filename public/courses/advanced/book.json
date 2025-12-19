@@ -1,0 +1,447 @@
+{
+  "$schema": "../../schemas/book-schema.json",
+  "name": "Advanced - Think like a Data Scientist",
+  "id": "advanced",
+  "projects": [
+    {
+      "id": "data-detective",
+      "name": "The Data Detective",
+      "description": "Become a digital sleuth! Use Python Lists to store clues, analyze evidence, and solve mysteries using code.",
+      "lessons": [
+        {
+          "id": "ad-01-01",
+          "name": "The Suspect List",
+          "guide": "data-detective/lesson01.md",
+          "py": "data-detective/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-01-02",
+          "name": "Counting Clues",
+          "guide": "data-detective/lesson02.md",
+          "py": "data-detective/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-01-03",
+          "name": "Examining Evidence",
+          "guide": "data-detective/lesson03.md",
+          "py": "data-detective/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-01-04",
+          "name": "CHALLENGE 1: The Final Suspect",
+          "guide": "data-detective/challenge01.md",
+          "py": "data-detective/challenge01.py",
+          "hints": "data-detective/challenge01-hints.md",
+          "answer": "data-detective/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-01-05",
+          "name": "CHALLENGE 2: Case Closed",
+          "guide": "data-detective/challenge02.md",
+          "py": "data-detective/challenge02.py",
+          "hints": "data-detective/challenge02-hints.md",
+          "answer": "data-detective/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-01-06",
+          "name": "CHALLENGE 3: Evidence Logger",
+          "guide": "data-detective/challenge03.md",
+          "py": "data-detective/challenge03.py",
+          "hints": "data-detective/challenge03-hints.md",
+          "answer": "data-detective/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "emoji-mood-tracker",
+      "name": "Emoji Mood Tracker",
+      "description": "Can computers understand feelings? Use data analysis to read emotions from text messages automatically!",
+      "lessons": [
+        {
+          "id": "ad-02-01",
+          "name": "Text is Data",
+          "guide": "emoji-mood-tracker/lesson01.md",
+          "py": "emoji-mood-tracker/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-02-02",
+          "name": "Counting Feelings",
+          "guide": "emoji-mood-tracker/lesson02.md",
+          "py": "emoji-mood-tracker/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-02-03",
+          "name": "The Mood Score",
+          "guide": "emoji-mood-tracker/lesson03.md",
+          "py": "emoji-mood-tracker/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-02-04",
+          "name": "CHALLENGE 1: Word Counter",
+          "guide": "emoji-mood-tracker/challenge01.md",
+          "py": "emoji-mood-tracker/challenge01.py",
+          "hints": "emoji-mood-tracker/challenge01-hints.md",
+          "answer": "emoji-mood-tracker/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-02-05",
+          "name": "CHALLENGE 2: Data Cleaner",
+          "guide": "emoji-mood-tracker/challenge02.md",
+          "py": "emoji-mood-tracker/challenge02.py",
+          "hints": "emoji-mood-tracker/challenge02-hints.md",
+          "answer": "emoji-mood-tracker/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-02-06",
+          "name": "CHALLENGE 3: Sentiment Analyzer",
+          "guide": "emoji-mood-tracker/challenge03.md",
+          "py": "emoji-mood-tracker/challenge03.py",
+          "hints": "emoji-mood-tracker/challenge03-hints.md",
+          "answer": "emoji-mood-tracker/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "planet-encyclopedia",
+      "name": "Planet Encyclopedia",
+      "description": "The universe is huge! Learn how to store complex data about planets using Lists of Dictionaries.",
+      "lessons": [
+        {
+          "id": "ad-03-01",
+          "name": "Better Data",
+          "guide": "planet-encyclopedia/lesson01.md",
+          "py": "planet-encyclopedia/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-03-02",
+          "name": "The Galaxy Database",
+          "guide": "planet-encyclopedia/lesson02.md",
+          "py": "planet-encyclopedia/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-03-03",
+          "name": "Planet Finder",
+          "guide": "planet-encyclopedia/lesson03.md",
+          "py": "planet-encyclopedia/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-03-04",
+          "name": "CHALLENGE 1: Moon Counter",
+          "guide": "planet-encyclopedia/challenge01.md",
+          "py": "planet-encyclopedia/challenge01.py",
+          "hints": "planet-encyclopedia/challenge01-hints.md",
+          "answer": "planet-encyclopedia/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-03-05",
+          "name": "CHALLENGE 2: Space Travel",
+          "guide": "planet-encyclopedia/challenge02.md",
+          "py": "planet-encyclopedia/challenge02.py",
+          "hints": "planet-encyclopedia/challenge02-hints.md",
+          "answer": "planet-encyclopedia/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-03-06",
+          "name": "CHALLENGE 3: Alien Scanner",
+          "guide": "planet-encyclopedia/challenge03.md",
+          "py": "planet-encyclopedia/challenge03.py",
+          "hints": "planet-encyclopedia/challenge03-hints.md",
+          "answer": "planet-encyclopedia/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "high-score-hero",
+      "name": "High Score Hero",
+      "description": "Who is the winner? Use Python's built-in math tools to analyze game scores and find the champion.",
+      "lessons": [
+        {
+          "id": "ad-04-01",
+          "name": "The Scoreboard",
+          "guide": "high-score-hero/lesson01.md",
+          "py": "high-score-hero/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-04-02",
+          "name": "Who Won?",
+          "guide": "high-score-hero/lesson02.md",
+          "py": "high-score-hero/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-04-03",
+          "name": "Team Score",
+          "guide": "high-score-hero/lesson03.md",
+          "py": "high-score-hero/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-04-04",
+          "name": "CHALLENGE 1: Last Place",
+          "guide": "high-score-hero/challenge01.md",
+          "py": "high-score-hero/challenge01.py",
+          "hints": "high-score-hero/challenge01-hints.md",
+          "answer": "high-score-hero/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-04-05",
+          "name": "CHALLENGE 2: Average Score",
+          "guide": "high-score-hero/challenge02.md",
+          "py": "high-score-hero/challenge02.py",
+          "hints": "high-score-hero/challenge02-hints.md",
+          "answer": "high-score-hero/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-04-06",
+          "name": "CHALLENGE 3: Top 3",
+          "guide": "high-score-hero/challenge03.md",
+          "py": "high-score-hero/challenge03.py",
+          "hints": "high-score-hero/challenge03-hints.md",
+          "answer": "high-score-hero/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "inventory-master",
+      "name": "Inventory Master",
+      "description": "Your backpack is full! Use code to filter your items and organize your inventory like a pro RPG player.",
+      "lessons": [
+        {
+          "id": "ad-05-01",
+          "name": "The Inventory",
+          "guide": "inventory-master/lesson01.md",
+          "py": "inventory-master/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-05-02",
+          "name": "Is it there?",
+          "guide": "inventory-master/lesson02.md",
+          "py": "inventory-master/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-05-03",
+          "name": "The Filter",
+          "guide": "inventory-master/lesson03.md",
+          "py": "inventory-master/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-05-04",
+          "name": "CHALLENGE 1: Weapon Rack",
+          "guide": "inventory-master/challenge01.md",
+          "py": "inventory-master/challenge01.py",
+          "hints": "inventory-master/challenge01-hints.md",
+          "answer": "inventory-master/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-05-05",
+          "name": "CHALLENGE 2: Gold Calculator",
+          "guide": "inventory-master/challenge02.md",
+          "py": "inventory-master/challenge02.py",
+          "hints": "inventory-master/challenge02-hints.md",
+          "answer": "inventory-master/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-05-06",
+          "name": "CHALLENGE 3: Trash Compactor",
+          "guide": "inventory-master/challenge03.md",
+          "py": "inventory-master/challenge03.py",
+          "hints": "inventory-master/challenge03-hints.md",
+          "answer": "inventory-master/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "movie-matcher",
+      "name": "Movie Matcher",
+      "description": "What should we watch tonight? Build a smart recommendation engine to pick the perfect movie.",
+      "lessons": [
+        {
+          "id": "ad-06-01",
+          "name": "The Movie Database",
+          "guide": "movie-matcher/lesson01.md",
+          "py": "movie-matcher/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-06-02",
+          "name": "Genre Search",
+          "guide": "movie-matcher/lesson02.md",
+          "py": "movie-matcher/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-06-03",
+          "name": "Smart Recommender",
+          "guide": "movie-matcher/lesson03.md",
+          "py": "movie-matcher/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-06-04",
+          "name": "CHALLENGE 1: Kids Mode",
+          "guide": "movie-matcher/challenge01.md",
+          "py": "movie-matcher/challenge01.py",
+          "hints": "movie-matcher/challenge01-hints.md",
+          "answer": "movie-matcher/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-06-05",
+          "name": "CHALLENGE 2: Short Movie Night",
+          "guide": "movie-matcher/challenge02.md",
+          "py": "movie-matcher/challenge02.py",
+          "hints": "movie-matcher/challenge02-hints.md",
+          "answer": "movie-matcher/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-06-06",
+          "name": "CHALLENGE 3: Random Pick",
+          "guide": "movie-matcher/challenge03.md",
+          "py": "movie-matcher/challenge03.py",
+          "hints": "movie-matcher/challenge03-hints.md",
+          "answer": "movie-matcher/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "versus-mode",
+      "name": "Versus Mode",
+      "description": "It's time to battle! Use code to simulate a fight between two characters by comparing their stats.",
+      "lessons": [
+        {
+          "id": "ad-07-01",
+          "name": "The Arena",
+          "guide": "versus-mode/lesson01.md",
+          "py": "versus-mode/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-07-02",
+          "name": "Fighting Logic",
+          "guide": "versus-mode/lesson02.md",
+          "py": "versus-mode/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-07-03",
+          "name": "Power Up",
+          "guide": "versus-mode/lesson03.md",
+          "py": "versus-mode/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-07-04",
+          "name": "CHALLENGE 1: Health Bar",
+          "guide": "versus-mode/challenge01.md",
+          "py": "versus-mode/challenge01.py",
+          "hints": "versus-mode/challenge01-hints.md",
+          "answer": "versus-mode/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-07-05",
+          "name": "CHALLENGE 2: Critical Hit",
+          "guide": "versus-mode/challenge02.md",
+          "py": "versus-mode/challenge02.py",
+          "hints": "versus-mode/challenge02-hints.md",
+          "answer": "versus-mode/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-07-06",
+          "name": "CHALLENGE 3: Battle Loop",
+          "guide": "versus-mode/challenge03.md",
+          "py": "versus-mode/challenge03.py",
+          "hints": "versus-mode/challenge03-hints.md",
+          "answer": "versus-mode/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "graph-maker",
+      "name": "Graph Maker",
+      "description": "Data is beautiful! Learn how to turn numbers into visual charts using code.",
+      "lessons": [
+        {
+          "id": "ad-08-01",
+          "name": "The Data Set",
+          "guide": "graph-maker/lesson01.md",
+          "py": "graph-maker/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-08-02",
+          "name": "Drawing Bars",
+          "guide": "graph-maker/lesson02.md",
+          "py": "graph-maker/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-08-03",
+          "name": "Full Chart",
+          "guide": "graph-maker/lesson03.md",
+          "py": "graph-maker/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "ad-08-04",
+          "name": "CHALLENGE 1: Labelled Chart",
+          "guide": "graph-maker/challenge01.md",
+          "py": "graph-maker/challenge01.py",
+          "hints": "graph-maker/challenge01-hints.md",
+          "answer": "graph-maker/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-08-05",
+          "name": "CHALLENGE 2: Scaled Graph",
+          "guide": "graph-maker/challenge02.md",
+          "py": "graph-maker/challenge02.py",
+          "hints": "graph-maker/challenge02-hints.md",
+          "answer": "graph-maker/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "ad-08-06",
+          "name": "CHALLENGE 3: Color Chart",
+          "guide": "graph-maker/challenge03.md",
+          "py": "graph-maker/challenge03.py",
+          "hints": "graph-maker/challenge03-hints.md",
+          "answer": "graph-maker/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    }
+  ]
+}
