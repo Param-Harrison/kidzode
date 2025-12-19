@@ -1,22 +1,16 @@
-# Lesson 2: Variables and Data Types
+# What's Your Name? 👋
 
-Learn how to store information in variables!
+Coding is not just about telling the computer what to do, but also asking it questions!
 
-## What you'll learn
-- How to create variables
-- How to get user input
-- How to combine strings
+We use something called `input()` to ask the user a question.
 
-## Instructions
-Write a program that:
-1. Asks the user for their name
-2. Prints "Hello, [name]!" where [name] is what the user entered
+### How it works
+When you run the code:
+1. A small box will pop up at the top of your browser.
+2. Type your name in it.
+3. Hit **Enter**.
 
-## Example
-```python
-name = input("What is your name? ")
-print("Hello, " + name + "!")
-```
-
-## Your Task
-Complete the code to greet the user by name.
+### Your Goal
+1. Run the code.
+2. Enter your name when asked.
+3. See how the computer says hello back to you!

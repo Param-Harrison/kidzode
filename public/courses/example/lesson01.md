@@ -1,18 +1,12 @@
-# Lesson 1: Hello World
+# Hello World! 🚀
 
-Welcome to your first Python lesson! In this lesson, you'll learn how to print text to the screen.
+Welcome to Python! The very first thing we learn in any language is how to say "Hello World".
 
-## What you'll learn
-- How to use the `print()` function
-- What a string is in Python
+In Python, we use the `print()` function to show things on the screen.
 
-## Instructions
-Write a program that prints "Hello, World!" to the screen.
+### Your Goal
+1. Look at the code in the editor.
+2. Click the **Run** button.
+3. See the message "Hello, Kidzode Explorer!" in the terminal.
 
-## Example
-```python
-print("Hello, World!")
-```
-
-## Your Task
-Complete the code on the left to print "Hello, World!"
+Try changing the message to say something else!

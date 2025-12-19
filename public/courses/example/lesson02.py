@@ -1,3 +1,5 @@
-# Get the user's name and greet them
+# Let's talk to the computer!
 name = input("What is your name? ")
-# Write your code here to print a greeting
+
+print("It's nice to meet you, " + name + "!")
+print("You are going to be a great coder!")

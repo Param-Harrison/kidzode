@@ -1,74 +1,36 @@
 {
-  "$schema": "https://raw.githubusercontent.com/gdenes355/python-frontend/main/bookSchema.json",
+  "$schema": "../../schemas/book-schema.json",
   "name": "Python Basics",
-  "id": "basic-python-book",
-  "children": [
+  "id": "python-basics",
+  "projects": [
     {
-      "id": "lesson-01-hello",
-      "name": "Lesson 1: Hello World",
-      "guide": "lesson01.md",
-      "py": "lesson01.py",
-      "tests": [
+      "id": "getting-started",
+      "name": "Getting Started",
+      "description": "Learn the very basics of Python!",
+      "badge": "🚀",
+      "lessons": [
         {
-          "in": "",
-          "out": "Hello, World!"
-        }
-      ],
-      "type": "lesson"
-    },
-    {
-      "id": "lesson-02-variables",
-      "name": "Lesson 2: Variables and Data Types",
-      "guide": "lesson02.md",
-      "py": "lesson02.py",
-      "tests": [
-        {
-          "in": "Alice",
-          "out": ".*Hello, Alice"
-        }
-      ],
-      "type": "lesson"
-    },
-    {
-      "id": "lesson-03-numbers",
-      "name": "Lesson 3: Numbers and Math",
-      "guide": "lesson03.md",
-      "py": "lesson03.py",
-      "tests": [
-        {
-          "in": [
-            "5",
-            "3"
-          ],
-          "out": ".*8"
-        }
-      ],
-      "type": "lesson"
-    },
-    {
-      "id": "lesson-04-strings",
-      "name": "Lesson 4: Working with Strings",
-      "guide": "lesson04.md",
-      "py": "lesson04.py",
-      "isExample": true,
-      "type": "lesson"
-    },
-    {
-      "id": "lesson-05-conditionals",
-      "name": "Lesson 5: If Statements",
-      "guide": "lesson05.md",
-      "py": "lesson05.py",
-      "tests": [
-        {
-          "in": "18",
-          "out": ".*adult"
+          "id": "hello-world",
+          "name": "1. Hello World",
+          "guide": "lesson01.md",
+          "py": "lesson01.py",
+          "type": "lesson"
         },
         {
-          "in": "15",
-          "out": ".*minor"
+          "id": "your-name",
+          "name": "2. Your Name",
+          "guide": "lesson02.md",
+          "py": "lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "math-fun",
+          "name": "3. Math Fun",
+          "guide": "lesson03.md",
+          "py": "lesson03.py",
+          "type": "lesson"
         }
-      ],
-      "type": "lesson"
+      ]
     }
   ]
 }
