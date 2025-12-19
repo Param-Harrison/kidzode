@@ -2,36 +2,111 @@ import { Navbar } from "@/components/navbar"
 import { CourseCard } from "@/components/course-card"
 import { Footer } from "@/components/footer"
 import { courses } from "@/lib/courses-data"
+import { TechGrid } from "@/components/ui/neobrutalism/tech-grid"
+import Link from "next/link"
+import { ArrowRight, CheckCircle, Terminal } from "lucide-react"
+import { NeoButton } from "@/components/ui/neobrutalism/neo-button"
 
 export default function CoursesPage() {
   return (
     <div className="flex flex-col min-h-screen font-epilogue">
       <Navbar />
       <main className="flex-1">
-        {/* Header */}
-        <section className="py-16 md:py-24 border-b-2 border-black bg-primary">
-          <div className="container max-w-6xl mx-auto px-4 md:px-6">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-black uppercase font-lexend mb-6">
-                Watch Your Kid Forget Games & Think Like an Engineer
-              </h1>
-              <p className="text-xl md:text-2xl font-bold max-w-3xl mx-auto">
-                Through coding projects, kids develop logical thinking, analytical problem-solving skills, and learn life lessons that stick with them forever.
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* Premium Header with similar punch to Home */}
+    <section className="relative overflow-hidden py-24 md:py-32 border-b-[3px] border-foreground bg-primary/10">
+      <TechGrid />
+      <div className="container max-w-6xl mx-auto px-4 md:px-6 relative z-10">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-black uppercase font-lexend mb-8 leading-[1.1] tracking-tight">
+            Outcome-Driven <br />
+            <span className="bg-background text-foreground px-4 py-1 inline-block transform -rotate-1 shadow-[5px_5px_0px_0px_currentColor] border-[3px] border-foreground mt-4">Curriculum</span>
+          </h1>
+          <p className="text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed text-muted-foreground">
+            Witness the transition from passive screen-user to <span className="underline decoration-dashed decoration-foreground/30 underline-offset-4">logical engineer</span>. Every lesson is a project, every project is a breakthrough.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        {/* Courses Grid */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container max-w-6xl mx-auto px-4 md:px-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {courses.map((course) => (
-                <CourseCard key={course.slug} {...course} />
-              ))}
-            </div>
+    <div className="container max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-20">
+      <div className="grid gap-12">
+        {courses.map((course) => {
+          // Extract metadata from tags
+          const ageRangeTag = course.tags.find(tag => tag.includes('Ages')) || "Ages 8+";
+          const levelTag = course.tags.find(tag => ['Beginner', 'Intermediate', 'Advanced'].includes(tag)) || "Beginner";
+          
+          return (
+          <div key={course.slug} className="group relative">
+             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-xl opacity-20 group-hover:opacity-40 transition duration-500 blur" />
+             <div className="relative bg-card border-[3px] border-foreground rounded-xl overflow-hidden shadow-[6px_6px_0px_0px_currentColor] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all flex flex-col md:flex-row">
+                 {/* Course Visual */}
+                 <div className="md:w-2/5 border-b-[3px] md:border-b-0 md:border-r-[3px] border-foreground min-h-[240px] md:min-h-auto bg-muted/30 flex items-center justify-center p-8 relative overflow-hidden">
+                     <TechGrid /> 
+                     <div className="relative z-10 p-6 bg-background border-[3px] border-foreground shadow-[4px_4px_0px_0px_currentColor] rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                        <Terminal className="w-12 h-12 text-primary" />
+                     </div>
+                 </div>
+
+                 {/* Content */}
+                 <div className="md:w-3/5 p-8 md:p-10 flex flex-col">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="inline-block px-3 py-1 bg-secondary text-secondary-foreground text-xs font-bold uppercase tracking-widest border-[2px] border-foreground">
+                        {levelTag}
+                      </span>
+                      <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{ageRangeTag}</span>
+                    </div>
+
+                    <h2 className="text-2xl md:text-4xl font-black font-lexend mb-4 leading-tight uppercase">{course.title}</h2>
+                    <p className="text-muted-foreground text-lg font-medium mb-8 leading-relaxed flex-grow">
+                      {course.subtitle}
+                    </p>
+
+                    <div className="grid grid-cols-2 gap-4 mb-8">
+                       <div className="flex items-center gap-3">
+                          <CheckCircle className="w-5 h-5 text-primary filled-current" />
+                          <span className="font-bold text-sm">Logic Fundamentals</span>
+                       </div>
+                       <div className="flex items-center gap-3">
+                           <CheckCircle className="w-5 h-5 text-primary filled-current" />
+                           <span className="font-bold text-sm">Python Basics</span>
+                       </div>
+                        <div className="flex items-center gap-3">
+                           <CheckCircle className="w-5 h-5 text-primary filled-current" />
+                           <span className="font-bold text-sm">Game Mechanics</span>
+                       </div>
+                        <div className="flex items-center gap-3">
+                           <CheckCircle className="w-5 h-5 text-primary filled-current" />
+                           <span className="font-bold text-sm">Final Project</span>
+                       </div>
+                    </div>
+
+                    <div className="mt-auto pt-6 border-t-[3px] border-muted">
+                        <Link href={`/courses/${course.slug}`} className="w-full">
+                           <NeoButton className="w-full bg-primary text-primary-foreground hover:bg-foreground hover:text-background text-lg py-6 h-auto border-[3px] border-foreground shadow-[4px_4px_0px_0px_currentColor] hover:shadow-none transition-all flex items-center justify-center gap-2">
+                             Start Learning Path <ArrowRight className="w-5 h-5" />
+                           </NeoButton>
+                        </Link>
+                    </div>
+                 </div>
+             </div>
           </div>
-        </section>
+        )})}
+      </div>
+    </div>
+    
+     <section className="bg-secondary/10 border-t-[3px] border-foreground py-20 relative overflow-hidden mt-12">
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6 leading-tight">
+            Not sure where to start?
+          </h2>
+          <p className="text-xl font-bold mb-10 max-w-2xl mx-auto leading-relaxed text-muted-foreground">
+             Our adaptive curriculum adjusts to your child's pace. Start with the basics and we'll guide them up toward mastery.
+          </p>
+          <div className="inline-flex gap-4">
+               <NeoButton neoVariant="secondary" className="px-8 py-4 border-[3px] border-foreground shadow-[4px_4px_0px_0px_currentColor]">View Syllabus</NeoButton>
+          </div>
+        </div>
+      </section>
       </main>
       <Footer />
     </div>

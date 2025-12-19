@@ -15,18 +15,17 @@ export default function LearnLayout({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const currentUser = db.users.getCurrent();
-    
-    if (!currentUser) {
-      router.push('/login');
-    } else if (currentUser.userType !== 'student') {
-      // If user is logged in but not as a student, redirect to dashboard
-      // Or maybe just let them learn as well? For now, implementing strict check as per original logic
-      router.push('/dashboard');
-    } else {
-      setUser(currentUser);
+    async function checkUser() {
+      const currentUser = await db.users.getCurrent();
+      
+      if (!currentUser) {
+        router.push('/login');
+      } else {
+        setUser(currentUser);
+      }
+      setIsLoading(false);
     }
-    setIsLoading(false);
+    checkUser();
   }, [router]);
 
   if (isLoading) {

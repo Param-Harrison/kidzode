@@ -22,7 +22,7 @@ export const NeoButton = React.forwardRef<HTMLButtonElement, NeoButtonProps>(
       <Button
         ref={ref}
         className={cn(
-          "border-[3px] border-black shadow-[5px_5px_0px_0px_var(--shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] active:shadow-none font-bold rounded-none",
+          "border-[3px] border-foreground shadow-[5px_5px_0px_0px_currentColor] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] active:shadow-none font-bold rounded-none",
           variants[neoVariant],
           className
         )}

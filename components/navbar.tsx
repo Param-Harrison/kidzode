@@ -33,27 +33,20 @@ export function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b-2 border-black bg-background">
+    <nav className="sticky top-0 z-50 w-full border-b-[2px] border-foreground bg-background">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="text-xl">
           <Logo />
         </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Menu - Elegant Left Alignment */}
+        <div className="hidden md:flex items-center gap-6 flex-1 ml-10">
           <Link href="/courses" className={`font-bold transition-all decoration-2 underline-offset-4 ${
             isActive("/courses") 
               ? "underline decoration-[#D34E4E]" 
-              : "hover:underline decoration-black"
+              : "hover:underline decoration-foreground"
           }`}>
             Courses
-          </Link>
-          <Link href="https://skool.com/kidzode" target="_blank" rel="noopener noreferrer" className={`font-bold transition-all decoration-2 underline-offset-4 ${
-            isActive("/community") 
-              ? "underline decoration-[#D34E4E]" 
-              : "hover:underline decoration-black"
-          }`}>
-            Community
           </Link>
         </div>
 
@@ -62,9 +55,9 @@ export function Navbar() {
           {isAuthenticated && user ? (
             <>
               {/* User menu */}
-              <div className="flex items-center gap-4 pl-3 border-l-2 border-black">
-                <div className="flex items-center gap-3 bg-muted/50 px-4 py-2 rounded-full border-2 border-black">
-                  <div className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center border-2 border-black">
+              <div className="flex items-center gap-4 pl-3">
+                <div className="flex items-center gap-3 bg-muted/50 px-4 py-2 rounded-full border-[2px] border-foreground">
+                  <div className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center border-[2px] border-foreground">
                     <User className="w-4 h-4 text-secondary-foreground" />
                   </div>
                   <span className="font-bold font-lexend">{user.name || user.email}</span>
@@ -103,12 +96,9 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden border-t-2 border-black bg-background p-4 flex flex-col gap-4 absolute w-full left-0 top-16 shadow-[0px_4px_0px_0px_var(--shadow-color)] z-50">
+        <div className="md:hidden border-t-[2px] border-foreground bg-background p-4 flex flex-col gap-4 absolute w-full left-0 top-16 shadow-[0px_4px_0px_0px_currentColor] z-50">
           <Link href="/courses" className="font-bold text-lg" onClick={() => setIsOpen(false)}>
             Courses
-          </Link>
-          <Link href="https://skool.com/kidzode" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
-            Community
           </Link>
           
           {isAuthenticated && user ? (

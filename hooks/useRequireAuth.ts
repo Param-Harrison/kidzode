@@ -10,9 +10,7 @@ export function useRequireAuth(redirectTo?: string) {
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       // User is authenticated, redirect to intended destination
-      const destination = redirectTo || searchParams.get('redirect') ||
-        (user?.userType === 'parent' ? '/dashboard/parent' :
-         user?.userType === 'teacher' ? '/dashboard/teacher' : '/dashboard');
+      const destination = redirectTo || searchParams.get('redirect') || '/learn';
       router.push(destination);
     }
   }, [isLoading, isAuthenticated, user, router, redirectTo, searchParams]);
