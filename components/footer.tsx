@@ -13,9 +13,9 @@ export function Footer() {
           </p>
         </div>
         
-        <div className="flex gap-8 font-bold">
-          <a href="https://twitter.com/kidzode" target="_blank" rel="noopener noreferrer" className="hover:underline decoration-2 underline-offset-4">Twitter</a>
-          <a href="https://linkedin.com/company/kidzode" target="_blank" rel="noopener noreferrer" className="hover:underline decoration-2 underline-offset-4">LinkedIn</a>
+        <div className="flex gap-8 font-bold text-sm">
+          <a href="https://x.com/learnwithparam" target="_blank" rel="noopener noreferrer" className="hover:underline decoration-2 underline-offset-4">X (Twitter)</a>
+          <a href="https://www.linkedin.com/in/paramanantham/" target="_blank" rel="noopener noreferrer" className="hover:underline decoration-2 underline-offset-4">LinkedIn</a>
         </div>
         
         <div className="text-sm font-medium">

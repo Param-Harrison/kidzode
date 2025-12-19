@@ -212,7 +212,7 @@ export default function Home() {
               Learn Now
             </NeoButton>
           </Link>
-          <p className="mt-8 text-[10px] font-bold uppercase tracking-widest opacity-40">No Credit Card Required | Instant Access</p>
+          <p className="mt-8 text-[10px] font-bold uppercase tracking-widest opacity-40">Free Education | Instant Access</p>
         </div>
       </section>
 
