@@ -1,0 +1,447 @@
+{
+  "$schema": "../../schemas/book-schema.json",
+  "name": "The API Architect",
+  "id": "api-architect",
+  "projects": [
+    {
+      "id": "json-maker",
+      "name": "JSON Maker",
+      "description": "Learn the language of the web! Understand how computers talk to each other using JSON data format.",
+      "lessons": [
+        {
+          "id": "api-01-01",
+          "name": "What is JSON?",
+          "guide": "json-maker/lesson01.md",
+          "py": "json-maker/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-01-02",
+          "name": "Key-Value Pairs",
+          "guide": "json-maker/lesson02.md",
+          "py": "json-maker/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-01-03",
+          "name": "Nested Data",
+          "guide": "json-maker/lesson03.md",
+          "py": "json-maker/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-01-04",
+          "name": "CHALLENGE 1: Profile Builder",
+          "guide": "json-maker/challenge01.md",
+          "py": "json-maker/challenge01.py",
+          "hints": "json-maker/challenge01-hints.md",
+          "answer": "json-maker/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-01-05",
+          "name": "CHALLENGE 2: Config File",
+          "guide": "json-maker/challenge02.md",
+          "py": "json-maker/challenge02.py",
+          "hints": "json-maker/challenge02-hints.md",
+          "answer": "json-maker/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-01-06",
+          "name": "CHALLENGE 3: Data Validator",
+          "guide": "json-maker/challenge03.md",
+          "py": "json-maker/challenge03.py",
+          "hints": "json-maker/challenge03-hints.md",
+          "answer": "json-maker/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "login-server",
+      "name": "The Login Server",
+      "description": "Stop hackers! Build a secure authentication system to check usernames and passwords.",
+      "lessons": [
+        {
+          "id": "api-02-01",
+          "name": "The User Database",
+          "guide": "login-server/lesson01.md",
+          "py": "login-server/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-02-02",
+          "name": "Checking Passwords",
+          "guide": "login-server/lesson02.md",
+          "py": "login-server/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-02-03",
+          "name": "Access Granted",
+          "guide": "login-server/lesson03.md",
+          "py": "login-server/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-02-04",
+          "name": "CHALLENGE 1: Sign Up",
+          "guide": "login-server/challenge01.md",
+          "py": "login-server/challenge01.py",
+          "hints": "login-server/challenge01-hints.md",
+          "answer": "login-server/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-02-05",
+          "name": "CHALLENGE 2: Admin Check",
+          "guide": "login-server/challenge02.md",
+          "py": "login-server/challenge02.py",
+          "hints": "login-server/challenge02-hints.md",
+          "answer": "login-server/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-02-06",
+          "name": "CHALLENGE 3: Firewall",
+          "guide": "login-server/challenge03.md",
+          "py": "login-server/challenge03.py",
+          "hints": "login-server/challenge03-hints.md",
+          "answer": "login-server/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "chatbot-api",
+      "name": "Chat Bot API",
+      "description": "Talk to the machine! Build a bot that takes input (Request) and gives intelligent answers (Response).",
+      "lessons": [
+        {
+          "id": "api-03-01",
+          "name": "The Request",
+          "guide": "chatbot-api/lesson01.md",
+          "py": "chatbot-api/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-03-02",
+          "name": "The Response",
+          "guide": "chatbot-api/lesson02.md",
+          "py": "chatbot-api/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-03-03",
+          "name": "Keyword Logic",
+          "guide": "chatbot-api/lesson03.md",
+          "py": "chatbot-api/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-03-04",
+          "name": "CHALLENGE 1: Greeting Bot",
+          "guide": "chatbot-api/challenge01.md",
+          "py": "chatbot-api/challenge01.py",
+          "hints": "chatbot-api/challenge01-hints.md",
+          "answer": "chatbot-api/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-03-05",
+          "name": "CHALLENGE 2: Smart Reply",
+          "guide": "chatbot-api/challenge02.md",
+          "py": "chatbot-api/challenge02.py",
+          "hints": "chatbot-api/challenge02-hints.md",
+          "answer": "chatbot-api/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-03-06",
+          "name": "CHALLENGE 3: Conversationalist",
+          "guide": "chatbot-api/challenge03.md",
+          "py": "chatbot-api/challenge03.py",
+          "hints": "chatbot-api/challenge03-hints.md",
+          "answer": "chatbot-api/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "weather-api",
+      "name": "Weather Station API",
+      "description": "Real data is messy! Learn to navigate complex nested dictionaries to find the weather report you need.",
+      "lessons": [
+        {
+          "id": "api-04-01",
+          "name": "The Complex Dictionary",
+          "guide": "weather-api/lesson01.md",
+          "py": "weather-api/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-04-02",
+          "name": "Accessing Deep Data",
+          "guide": "weather-api/lesson02.md",
+          "py": "weather-api/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-04-03",
+          "name": "Filtering Weather",
+          "guide": "weather-api/lesson03.md",
+          "py": "weather-api/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-04-04",
+          "name": "CHALLENGE 1: Temperature Check",
+          "guide": "weather-api/challenge01.md",
+          "py": "weather-api/challenge01.py",
+          "hints": "weather-api/challenge01-hints.md",
+          "answer": "weather-api/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-04-05",
+          "name": "CHALLENGE 2: City Search",
+          "guide": "weather-api/challenge02.md",
+          "py": "weather-api/challenge02.py",
+          "hints": "weather-api/challenge02-hints.md",
+          "answer": "weather-api/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-04-06",
+          "name": "CHALLENGE 3: Forecast Analyzer",
+          "guide": "weather-api/challenge03.md",
+          "py": "weather-api/challenge03.py",
+          "hints": "weather-api/challenge03-hints.md",
+          "answer": "weather-api/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "ecommerce-store",
+      "name": "E-Commerce Store",
+      "description": "Open for business! Build the backend for an online shop. Add products, update prices, and delete sold-out items.",
+      "lessons": [
+        {
+          "id": "api-05-01",
+          "name": "The Product Database",
+          "guide": "ecommerce-store/lesson01.md",
+          "py": "ecommerce-store/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-05-02",
+          "name": "Adding Items",
+          "guide": "ecommerce-store/lesson02.md",
+          "py": "ecommerce-store/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-05-03",
+          "name": "Updating Stock",
+          "guide": "ecommerce-store/lesson03.md",
+          "py": "ecommerce-store/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-05-04",
+          "name": "CHALLENGE 1: Out of Stock",
+          "guide": "ecommerce-store/challenge01.md",
+          "py": "ecommerce-store/challenge01.py",
+          "hints": "ecommerce-store/challenge01-hints.md",
+          "answer": "ecommerce-store/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-05-05",
+          "name": "CHALLENGE 2: Price Checker",
+          "guide": "ecommerce-store/challenge02.md",
+          "py": "ecommerce-store/challenge02.py",
+          "hints": "ecommerce-store/challenge02-hints.md",
+          "answer": "ecommerce-store/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-05-06",
+          "name": "CHALLENGE 3: Inventory Audit",
+          "guide": "ecommerce-store/challenge03.md",
+          "py": "ecommerce-store/challenge03.py",
+          "hints": "ecommerce-store/challenge03-hints.md",
+          "answer": "ecommerce-store/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "social-feed",
+      "name": "Social Media Feed",
+      "description": "What's trending? Build the algorithm that powers your feed. Sort posts by popularity and filter out spam.",
+      "lessons": [
+        {
+          "id": "api-06-01",
+          "name": "The Feed Data",
+          "guide": "social-feed/lesson01.md",
+          "py": "social-feed/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-06-02",
+          "name": "Sorting by Likes",
+          "guide": "social-feed/lesson02.md",
+          "py": "social-feed/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-06-03",
+          "name": "Filtering by Topic",
+          "guide": "social-feed/lesson03.md",
+          "py": "social-feed/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-06-04",
+          "name": "CHALLENGE 1: Newest First",
+          "guide": "social-feed/challenge01.md",
+          "py": "social-feed/challenge01.py",
+          "hints": "social-feed/challenge01-hints.md",
+          "answer": "social-feed/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-06-05",
+          "name": "CHALLENGE 2: Spambot Filter",
+          "guide": "social-feed/challenge02.md",
+          "py": "social-feed/challenge02.py",
+          "hints": "social-feed/challenge02-hints.md",
+          "answer": "social-feed/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-06-06",
+          "name": "CHALLENGE 3: Trending Now",
+          "guide": "social-feed/challenge03.md",
+          "py": "social-feed/challenge03.py",
+          "hints": "social-feed/challenge03-hints.md",
+          "answer": "social-feed/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "search-engine",
+      "name": "Search Engine",
+      "description": "How does Google work? Learn to crawl text, build an index, and find results instantly.",
+      "lessons": [
+        {
+          "id": "api-07-01",
+          "name": "The Word Index",
+          "guide": "search-engine/lesson01.md",
+          "py": "search-engine/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-07-02",
+          "name": "Tokenizing Text",
+          "guide": "search-engine/lesson02.md",
+          "py": "search-engine/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-07-03",
+          "name": "Building an Index",
+          "guide": "search-engine/lesson03.md",
+          "py": "search-engine/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-07-04",
+          "name": "CHALLENGE 1: Case Insensitive",
+          "guide": "search-engine/challenge01.md",
+          "py": "search-engine/challenge01.py",
+          "hints": "search-engine/challenge01-hints.md",
+          "answer": "search-engine/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-07-05",
+          "name": "CHALLENGE 2: Word Counter",
+          "guide": "search-engine/challenge02.md",
+          "py": "search-engine/challenge02.py",
+          "hints": "search-engine/challenge02-hints.md",
+          "answer": "search-engine/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-07-06",
+          "name": "CHALLENGE 3: Relevant Results",
+          "guide": "search-engine/challenge03.md",
+          "py": "search-engine/challenge03.py",
+          "hints": "search-engine/challenge03-hints.md",
+          "answer": "search-engine/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "cloud-database",
+      "name": "Cloud Database",
+      "description": "The Final Exam! Build a complete database system that can Create, Read, Update, and Delete users with unique IDs.",
+      "lessons": [
+        {
+          "id": "api-08-01",
+          "name": "A List of Dictionaries",
+          "guide": "cloud-database/lesson01.md",
+          "py": "cloud-database/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-08-02",
+          "name": "Generating Unique IDs",
+          "guide": "cloud-database/lesson02.md",
+          "py": "cloud-database/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-08-03",
+          "name": "The Update Logic",
+          "guide": "cloud-database/lesson03.md",
+          "py": "cloud-database/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "api-08-04",
+          "name": "CHALLENGE 1: Delete User",
+          "guide": "cloud-database/challenge01.md",
+          "py": "cloud-database/challenge01.py",
+          "hints": "cloud-database/challenge01-hints.md",
+          "answer": "cloud-database/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-08-05",
+          "name": "CHALLENGE 2: Find by ID",
+          "guide": "cloud-database/challenge02.md",
+          "py": "cloud-database/challenge02.py",
+          "hints": "cloud-database/challenge02-hints.md",
+          "answer": "cloud-database/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "api-08-06",
+          "name": "CHALLENGE 3: System Stats",
+          "guide": "cloud-database/challenge03.md",
+          "py": "cloud-database/challenge03.py",
+          "hints": "cloud-database/challenge03-hints.md",
+          "answer": "cloud-database/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    }
+  ]
+}

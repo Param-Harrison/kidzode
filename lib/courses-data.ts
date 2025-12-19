@@ -7,7 +7,7 @@ export const courses = [
     slug: "foundation",
     badge: "🏗️ Foundation Explorer",
     isPublished: true,
-    price: "Free",
+    price: "",
     duration: "Self Paced",
     displayText: "Start",
     totalLessons: 48
@@ -20,7 +20,7 @@ export const courses = [
     slug: "intermediate",
     badge: "🛠️ Junior Engineer",
     isPublished: true,
-    price: "Free",
+    price: "",
     duration: "Self Paced",
     displayText: "Build",
     totalLessons: 48
@@ -33,9 +33,35 @@ export const courses = [
     slug: "advanced",
     badge: "📊 Data Scientist",
     isPublished: true,
-    price: "Free",
+    price: "",
     duration: "Self Paced",
     displayText: "Analyze",
+    totalLessons: 48
+  },
+  {
+    title: "The API Architect",
+    subtitle: "Build the brain behind the app! Learn how servers, databases, and APIs work by building your own backend systems.",
+    tags: ["Ages 13+", "Backend", "8 Projects", "48 Lessons"],
+    color: "primary" as const, // Reusing primary for now, or could vary
+    slug: "api-architect",
+    badge: "☁️ API Architect",
+    isPublished: true,
+    price: "",
+    duration: "Self Paced",
+    displayText: "Backend",
+    totalLessons: 48
+  },
+  {
+    title: "The App Master",
+    subtitle: "Think like a Software Architect! Master Object Oriented Programming (OOP) to build complex game engines and app systems.",
+    tags: ["Ages 13+", "Architecture", "8 Projects", "48 Lessons"],
+    color: "secondary" as const,
+    slug: "app-master",
+    badge: "🏗️ System Architect",
+    isPublished: true,
+    price: "",
+    duration: "Self Paced",
+    displayText: "Architect",
     totalLessons: 48
   }
 ]

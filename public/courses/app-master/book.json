@@ -1,0 +1,62 @@
+{
+  "$schema": "../../schemas/book-schema.json",
+  "name": "The App Master",
+  "id": "app-master",
+  "projects": [
+    {
+      "id": "pet-simulator",
+      "name": "Pet Simulator",
+      "description": "Create your own digital pet! Learn about Classes and Objects by giving your pet life, hunger, and happiness.",
+      "lessons": [
+        {
+          "id": "app-01-01",
+          "name": "The Blueprint (Class)",
+          "guide": "pet-simulator/lesson01.md",
+          "py": "pet-simulator/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "app-01-02",
+          "name": "Birth (The Init)",
+          "guide": "pet-simulator/lesson02.md",
+          "py": "pet-simulator/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "app-01-03",
+          "name": "Actions (Methods)",
+          "guide": "pet-simulator/lesson03.md",
+          "py": "pet-simulator/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "app-01-04",
+          "name": "CHALLENGE 1: Custom Pet",
+          "guide": "pet-simulator/challenge01.md",
+          "py": "pet-simulator/challenge01.py",
+          "hints": "pet-simulator/challenge01-hints.md",
+          "answer": "pet-simulator/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "app-01-05",
+          "name": "CHALLENGE 2: Energy Meter",
+          "guide": "pet-simulator/challenge02.md",
+          "py": "pet-simulator/challenge02.py",
+          "hints": "pet-simulator/challenge02-hints.md",
+          "answer": "pet-simulator/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "app-01-06",
+          "name": "CHALLENGE 3: Game Loop",
+          "guide": "pet-simulator/challenge03.md",
+          "py": "pet-simulator/challenge03.py",
+          "hints": "pet-simulator/challenge03-hints.md",
+          "answer": "pet-simulator/challenge03-answer.md",
+          "type": "challenge"
+        }
+      ]
+    }
+  ]
+}

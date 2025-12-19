@@ -40,7 +40,7 @@ export default function CoursesPage() {
              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-xl opacity-20 group-hover:opacity-40 transition duration-500 blur" />
              <div className="relative bg-card border-[3px] border-foreground rounded-xl overflow-hidden shadow-[6px_6px_0px_0px_currentColor] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all flex flex-col md:flex-row">
                  {/* Course Visual */}
-                 <div className="md:w-2/5 border-b-[3px] md:border-b-0 md:border-r-[3px] border-foreground min-h-[240px] md:min-h-auto bg-muted/30 flex items-center justify-center p-8 relative overflow-hidden">
+                 <div className="md:w-2/5 border-b-[3px] md:border-b-0 md:border-r-[3px] border-foreground min-h-[240px] md:min-h-auto bg-primary/10 flex items-center justify-center p-8 relative overflow-hidden">
                      <TechGrid /> 
                      <div className="relative z-10 p-6 bg-background border-[3px] border-foreground shadow-[4px_4px_0px_0px_currentColor] rotate-3 group-hover:rotate-0 transition-transform duration-500">
                         <Terminal className="w-12 h-12 text-primary" />
@@ -82,8 +82,9 @@ export default function CoursesPage() {
 
                     <div className="mt-auto pt-6 border-t-[3px] border-muted">
                         <Link href={`/courses/${course.slug}`} className="w-full">
-                           <NeoButton className="w-full bg-primary text-primary-foreground hover:bg-foreground hover:text-background text-lg py-6 h-auto border-[3px] border-foreground shadow-[4px_4px_0px_0px_currentColor] hover:shadow-none transition-all flex items-center justify-center gap-2">
-                             Start Learning Path <ArrowRight className="w-5 h-5" />
+                          <NeoButton className="w-full bg-secondary text-foreground px-8 py-6 text-lg h-auto shadow-[6px_6px_0px_0px_currentColor] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] flex items-center justify-center gap-3 border-[3px] border-foreground transition-all">
+                              <Terminal className="w-5 h-5" />
+                              Start Learning Path
                            </NeoButton>
                         </Link>
                     </div>
