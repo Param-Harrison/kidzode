@@ -33,9 +33,7 @@ const PYODIDE_VERSION = "0.29.0"
 export function usePyodide() {
   const [status, setStatus] = useState<PyodideStatus>('loading')
   const [output, setOutput] = useState<ConsoleOutput[]>([])
-  const [awaitingInput, setAwaitingInput] = useState(false)
   const pyodideRef = useRef<any>(null)
-  const inputResolveRef = useRef<((value: string) => void) | null>(null)
 
   // Initialize Pyodide
   useEffect(() => {
