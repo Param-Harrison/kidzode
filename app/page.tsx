@@ -35,9 +35,9 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm justify-center">
              <Link href="/courses" className="w-full">
-              <NeoButton className="w-full bg-secondary text-foreground hover:bg-foreground hover:text-background px-8 py-6 text-lg h-auto shadow-[6px_6px_0px_0px_currentColor] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] flex items-center justify-center gap-3 border-[3px] border-foreground transition-all">
+              <NeoButton className="w-full bg-secondary text-foreground px-8 py-6 text-lg h-auto shadow-[6px_6px_0px_0px_currentColor] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] flex items-center justify-center gap-3 border-[3px] border-foreground transition-all">
                 <Terminal className="w-5 h-5" />
-                Start Free Lesson
+                Start Coding Journey
               </NeoButton>
              </Link>
           </div>
@@ -207,8 +207,9 @@ export default function Home() {
             Join thousands of parents globally who are witnessing their kids build, think, and solve problems with Kidzode.
           </p>
           <Link href="/courses">
-            <NeoButton neoVariant="secondary" size="lg" className="text-xl px-10 py-6 h-auto shadow-[6px_6px_0px_0px_currentColor] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] border-[3px] border-foreground transition-all">
-              Join the Beta - Start Free
+            <NeoButton neoVariant="secondary" size="lg" className="text-xl px-10 py-6 h-auto shadow-[6px_6px_0px_0px_currentColor] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] border-[3px] border-foreground transition-all gap-3">
+              <Terminal className="w-5 h-5" />
+              Learn Now
             </NeoButton>
           </Link>
           <p className="mt-8 text-[10px] font-bold uppercase tracking-widest opacity-40">No Credit Card Required | Instant Access</p>
