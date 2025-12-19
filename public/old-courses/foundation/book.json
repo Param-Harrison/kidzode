@@ -1,0 +1,930 @@
+{
+  "$schema": "../../schemas/book-schema.json",
+  "name": "Foundation",
+  "id": "foundation",
+  "projects": [
+    {
+      "id": "countdown-timer",
+      "name": "Countdown Timer",
+      "description": "Build a countdown timer like the ones on phones and microwaves! Learn variables, loops, and make your own rocket launch countdown.",
+      "lessons": [
+        {
+          "id": "countdown-timer-lesson-01",
+          "name": "Print One Number",
+          "guide": "countdown-timer/lesson01.md",
+          "py": "countdown-timer/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-lesson-02",
+          "name": "Print Multiple Numbers",
+          "guide": "countdown-timer/lesson02.md",
+          "py": "countdown-timer/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-lesson-03",
+          "name": "Store a Number",
+          "guide": "countdown-timer/lesson03.md",
+          "py": "countdown-timer/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-lesson-04",
+          "name": "Print the Variable",
+          "guide": "countdown-timer/lesson04.md",
+          "py": "countdown-timer/lesson04.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-challenge-01",
+          "name": "Your Numbers",
+          "guide": "countdown-timer/challenge01.md",
+          "py": "countdown-timer/challenge01.py",
+          "hints": "countdown-timer/challenge01-hints.md",
+          "answer": "countdown-timer/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "countdown-timer-lesson-05",
+          "name": "Change the Variable",
+          "guide": "countdown-timer/lesson05.md",
+          "py": "countdown-timer/lesson05.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-lesson-06",
+          "name": "Introduction to Loops",
+          "guide": "countdown-timer/lesson06.md",
+          "py": "countdown-timer/lesson06.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-lesson-07",
+          "name": "Your First For Loop",
+          "guide": "countdown-timer/lesson07.md",
+          "py": "countdown-timer/lesson07.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-lesson-08",
+          "name": "Understanding range()",
+          "guide": "countdown-timer/lesson08.md",
+          "py": "countdown-timer/lesson08.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-challenge-02",
+          "name": "Count to Your Age",
+          "guide": "countdown-timer/challenge02.md",
+          "py": "countdown-timer/challenge02.py",
+          "hints": "countdown-timer/challenge02-hints.md",
+          "answer": "countdown-timer/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "countdown-timer-lesson-09",
+          "name": "Count to 10",
+          "guide": "countdown-timer/lesson09.md",
+          "py": "countdown-timer/lesson09.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-lesson-10",
+          "name": "Count Backwards",
+          "guide": "countdown-timer/lesson10.md",
+          "py": "countdown-timer/lesson10.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-lesson-11",
+          "name": "Countdown from 10",
+          "guide": "countdown-timer/lesson11.md",
+          "py": "countdown-timer/lesson11.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-lesson-12",
+          "name": "Add Messages",
+          "guide": "countdown-timer/lesson12.md",
+          "py": "countdown-timer/lesson12.py",
+          "type": "lesson"
+        },
+        {
+          "id": "countdown-timer-challenge-final",
+          "name": "Rocket Launch",
+          "guide": "countdown-timer/challenge-final.md",
+          "py": "countdown-timer/challenge-final.py",
+          "hints": "countdown-timer/challenge-final-hints.md",
+          "answer": "countdown-timer/challenge-final-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "name-tag-maker",
+      "name": "Name Tag Maker",
+      "description": "Create name tags and birthday cards! Learn strings, concatenation, and f-strings to make beautiful text designs.",
+      "lessons": [
+        {
+          "id": "name-tag-maker-lesson-01",
+          "name": "Print Text",
+          "guide": "name-tag-maker/lesson01.md",
+          "py": "name-tag-maker/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-lesson-02",
+          "name": "Quotes and Strings",
+          "guide": "name-tag-maker/lesson02.md",
+          "py": "name-tag-maker/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-lesson-03",
+          "name": "Store Text in a Variable",
+          "guide": "name-tag-maker/lesson03.md",
+          "py": "name-tag-maker/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-lesson-04",
+          "name": "Print Your Name",
+          "guide": "name-tag-maker/lesson04.md",
+          "py": "name-tag-maker/lesson04.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-challenge-01",
+          "name": "Print Name and Age",
+          "guide": "name-tag-maker/challenge01.md",
+          "py": "name-tag-maker/challenge01.py",
+          "hints": "name-tag-maker/challenge01-hints.md",
+          "answer": "name-tag-maker/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "name-tag-maker-lesson-05",
+          "name": "Multiple String Variables",
+          "guide": "name-tag-maker/lesson05.md",
+          "py": "name-tag-maker/lesson05.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-lesson-06",
+          "name": "Combine Strings with +",
+          "guide": "name-tag-maker/lesson06.md",
+          "py": "name-tag-maker/lesson06.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-lesson-07",
+          "name": "Add Spaces and Symbols",
+          "guide": "name-tag-maker/lesson07.md",
+          "py": "name-tag-maker/lesson07.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-challenge-02",
+          "name": "Simple Name Tag",
+          "guide": "name-tag-maker/challenge02.md",
+          "py": "name-tag-maker/challenge02.py",
+          "hints": "name-tag-maker/challenge02-hints.md",
+          "answer": "name-tag-maker/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "name-tag-maker-lesson-08",
+          "name": "String Repetition with *",
+          "guide": "name-tag-maker/lesson08.md",
+          "py": "name-tag-maker/lesson08.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-lesson-09",
+          "name": "Make Borders",
+          "guide": "name-tag-maker/lesson09.md",
+          "py": "name-tag-maker/lesson09.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-lesson-10",
+          "name": "F-Strings Introduction",
+          "guide": "name-tag-maker/lesson10.md",
+          "py": "name-tag-maker/lesson10.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-lesson-11",
+          "name": "Format Name Tag with F-Strings",
+          "guide": "name-tag-maker/lesson11.md",
+          "py": "name-tag-maker/lesson11.py",
+          "type": "lesson"
+        },
+        {
+          "id": "name-tag-maker-challenge-final",
+          "name": "Birthday Card",
+          "guide": "name-tag-maker/challenge-final.md",
+          "py": "name-tag-maker/challenge-final.py",
+          "hints": "name-tag-maker/challenge-final-hints.md",
+          "answer": "name-tag-maker/challenge-final-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "calculator",
+      "name": "Calculator",
+      "description": "Build a calculator app like the one on your phone! Learn math operations, decimals, and create a real tip calculator.",
+      "lessons": [
+        {
+          "id": "calculator-lesson-01",
+          "name": "Print a Number",
+          "guide": "calculator/lesson01.md",
+          "py": "calculator/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-02",
+          "name": "Add Two Numbers",
+          "guide": "calculator/lesson02.md",
+          "py": "calculator/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-03",
+          "name": "Store Numbers in Variables",
+          "guide": "calculator/lesson03.md",
+          "py": "calculator/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-04",
+          "name": "Add Variables",
+          "guide": "calculator/lesson04.md",
+          "py": "calculator/lesson04.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-challenge-01",
+          "name": "Add Ages",
+          "guide": "calculator/challenge01.md",
+          "py": "calculator/challenge01.py",
+          "hints": "calculator/challenge01-hints.md",
+          "answer": "calculator/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "calculator-lesson-05",
+          "name": "Subtraction",
+          "guide": "calculator/lesson05.md",
+          "py": "calculator/lesson05.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-06",
+          "name": "Multiplication",
+          "guide": "calculator/lesson06.md",
+          "py": "calculator/lesson06.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-07",
+          "name": "Division",
+          "guide": "calculator/lesson07.md",
+          "py": "calculator/lesson07.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-08",
+          "name": "All Operations Together",
+          "guide": "calculator/lesson08.md",
+          "py": "calculator/lesson08.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-challenge-02",
+          "name": "Calculate (10 + 5) × 2",
+          "guide": "calculator/challenge02.md",
+          "py": "calculator/challenge02.py",
+          "hints": "calculator/challenge02-hints.md",
+          "answer": "calculator/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "calculator-lesson-09",
+          "name": "Decimals (Floats)",
+          "guide": "calculator/lesson09.md",
+          "py": "calculator/lesson09.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-10",
+          "name": "Money Calculations",
+          "guide": "calculator/lesson10.md",
+          "py": "calculator/lesson10.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-11",
+          "name": "Store Results in Variables",
+          "guide": "calculator/lesson11.md",
+          "py": "calculator/lesson11.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-12",
+          "name": "Multiple Calculations",
+          "guide": "calculator/lesson12.md",
+          "py": "calculator/lesson12.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-lesson-13",
+          "name": "Print Results Nicely",
+          "guide": "calculator/lesson13.md",
+          "py": "calculator/lesson13.py",
+          "type": "lesson"
+        },
+        {
+          "id": "calculator-challenge-final",
+          "name": "Tip Calculator",
+          "guide": "calculator/challenge-final.md",
+          "py": "calculator/challenge-final.py",
+          "hints": "calculator/challenge-final-hints.md",
+          "answer": "calculator/challenge-final-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "random-picker",
+      "name": "Random Picker",
+      "description": "Can't decide? Let Python decide for you! Build a random food picker, magic 8-ball, and team generator.",
+      "lessons": [
+        {
+          "id": "random-picker-lesson-01",
+          "name": "What is a List?",
+          "guide": "random-picker/lesson01.md",
+          "py": "random-picker/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-lesson-02",
+          "name": "Create a List",
+          "guide": "random-picker/lesson02.md",
+          "py": "random-picker/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-lesson-03",
+          "name": "Access List Items",
+          "guide": "random-picker/lesson03.md",
+          "py": "random-picker/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-lesson-04",
+          "name": "Print All Items",
+          "guide": "random-picker/lesson04.md",
+          "py": "random-picker/lesson04.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-challenge-01",
+          "name": "Favorite Foods",
+          "guide": "random-picker/challenge01.md",
+          "py": "random-picker/challenge01.py",
+          "hints": "random-picker/challenge01-hints.md",
+          "answer": "random-picker/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "random-picker-lesson-05",
+          "name": "Import Random Module",
+          "guide": "random-picker/lesson05.md",
+          "py": "random-picker/lesson05.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-lesson-06",
+          "name": "Random Choice",
+          "guide": "random-picker/lesson06.md",
+          "py": "random-picker/lesson06.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-lesson-07",
+          "name": "Pick Random Item",
+          "guide": "random-picker/lesson07.md",
+          "py": "random-picker/lesson07.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-lesson-08",
+          "name": "Multiple Lists",
+          "guide": "random-picker/lesson08.md",
+          "py": "random-picker/lesson08.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-challenge-02",
+          "name": "Random Food Picker",
+          "guide": "random-picker/challenge02.md",
+          "py": "random-picker/challenge02.py",
+          "hints": "random-picker/challenge02-hints.md",
+          "answer": "random-picker/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "random-picker-lesson-09",
+          "name": "Introduction to If/Else",
+          "guide": "random-picker/lesson09.md",
+          "py": "random-picker/lesson09.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-lesson-10",
+          "name": "Use If with Random Choice",
+          "guide": "random-picker/lesson10.md",
+          "py": "random-picker/lesson10.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-lesson-11",
+          "name": "Make Decisions with Code",
+          "guide": "random-picker/lesson11.md",
+          "py": "random-picker/lesson11.py",
+          "type": "lesson"
+        },
+        {
+          "id": "random-picker-challenge-final",
+          "name": "Team Generator",
+          "guide": "random-picker/challenge-final.md",
+          "py": "random-picker/challenge-final.py",
+          "hints": "random-picker/challenge-final-hints.md",
+          "answer": "random-picker/challenge-final-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "pattern-maker",
+      "name": "Pattern Maker",
+      "description": "Draw with code! Create stars, squares, triangles, and pyramids using loops and symbols.",
+      "lessons": [
+        {
+          "id": "pattern-maker-lesson-01",
+          "name": "Print a Symbol",
+          "guide": "pattern-maker/lesson01.md",
+          "py": "pattern-maker/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-lesson-02",
+          "name": "Repeat Symbols",
+          "guide": "pattern-maker/lesson02.md",
+          "py": "pattern-maker/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-lesson-03",
+          "name": "Variables for Patterns",
+          "guide": "pattern-maker/lesson03.md",
+          "py": "pattern-maker/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-lesson-04",
+          "name": "Square Pattern",
+          "guide": "pattern-maker/lesson04.md",
+          "py": "pattern-maker/lesson04.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-challenge-01",
+          "name": "Border Maker",
+          "guide": "pattern-maker/challenge01.md",
+          "py": "pattern-maker/challenge01.py",
+          "hints": "pattern-maker/challenge01-hints.md",
+          "answer": "pattern-maker/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "pattern-maker-lesson-05",
+          "name": "Rectangle Pattern",
+          "guide": "pattern-maker/lesson05.md",
+          "py": "pattern-maker/lesson05.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-lesson-06",
+          "name": "Growing Pattern (Triangle)",
+          "guide": "pattern-maker/lesson06.md",
+          "py": "pattern-maker/lesson06.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-lesson-07",
+          "name": "Loop Variable Power",
+          "guide": "pattern-maker/lesson07.md",
+          "py": "pattern-maker/lesson07.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-lesson-08",
+          "name": "Inverted Triangle",
+          "guide": "pattern-maker/lesson08.md",
+          "py": "pattern-maker/lesson08.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-challenge-02",
+          "name": "Staircase Pattern",
+          "guide": "pattern-maker/challenge02.md",
+          "py": "pattern-maker/challenge02.py",
+          "hints": "pattern-maker/challenge02-hints.md",
+          "answer": "pattern-maker/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "pattern-maker-lesson-09",
+          "name": "Nested Loops",
+          "guide": "pattern-maker/lesson09.md",
+          "py": "pattern-maker/lesson09.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-lesson-10",
+          "name": "Building a Grid",
+          "guide": "pattern-maker/lesson10.md",
+          "py": "pattern-maker/lesson10.py",
+          "type": "lesson"
+        },
+        {
+          "id": "pattern-maker-challenge-final",
+          "name": "Pyramid Pattern",
+          "guide": "pattern-maker/challenge-final.md",
+          "py": "pattern-maker/challenge-final.py",
+          "hints": "pattern-maker/challenge-final-hints.md",
+          "answer": "pattern-maker/challenge-final-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "times-table-quiz",
+      "name": "Times Table Quiz",
+      "description": "Master multiplication! Build a tool to generate times tables and a quiz game to test your math skills.",
+      "lessons": [
+        {
+          "id": "times-table-quiz-lesson-01",
+          "name": "Basic Multiplication",
+          "guide": "times-table-quiz/lesson01.md",
+          "py": "times-table-quiz/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-lesson-02",
+          "name": "The Loop",
+          "guide": "times-table-quiz/lesson02.md",
+          "py": "times-table-quiz/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-lesson-03",
+          "name": "Multiply in Loop",
+          "guide": "times-table-quiz/lesson03.md",
+          "py": "times-table-quiz/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-lesson-04",
+          "name": "The Full Table",
+          "guide": "times-table-quiz/lesson04.md",
+          "py": "times-table-quiz/lesson04.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-challenge-01",
+          "name": "Your Favorite Number",
+          "guide": "times-table-quiz/challenge01.md",
+          "py": "times-table-quiz/challenge01.py",
+          "hints": "times-table-quiz/challenge01-hints.md",
+          "answer": "times-table-quiz/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "times-table-quiz-lesson-05",
+          "name": "Variable for Table",
+          "guide": "times-table-quiz/lesson05.md",
+          "py": "times-table-quiz/lesson05.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-lesson-06",
+          "name": "Any Number Table",
+          "guide": "times-table-quiz/lesson06.md",
+          "py": "times-table-quiz/lesson06.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-lesson-07",
+          "name": "Check Answers",
+          "guide": "times-table-quiz/lesson07.md",
+          "py": "times-table-quiz/lesson07.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-lesson-08",
+          "name": "Right or Wrong?",
+          "guide": "times-table-quiz/lesson08.md",
+          "py": "times-table-quiz/lesson08.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-challenge-02",
+          "name": "Math Checker",
+          "guide": "times-table-quiz/challenge02.md",
+          "py": "times-table-quiz/challenge02.py",
+          "hints": "times-table-quiz/challenge02-hints.md",
+          "answer": "times-table-quiz/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "times-table-quiz-lesson-09",
+          "name": "Quiz Setup",
+          "guide": "times-table-quiz/lesson09.md",
+          "py": "times-table-quiz/lesson09.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-lesson-10",
+          "name": "Your Answers",
+          "guide": "times-table-quiz/lesson10.md",
+          "py": "times-table-quiz/lesson10.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-lesson-11",
+          "name": "The Grader",
+          "guide": "times-table-quiz/lesson11.md",
+          "py": "times-table-quiz/lesson11.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-lesson-12",
+          "name": "The Score",
+          "guide": "times-table-quiz/lesson12.md",
+          "py": "times-table-quiz/lesson12.py",
+          "type": "lesson"
+        },
+        {
+          "id": "times-table-quiz-challenge-final",
+          "name": "Build Your Own Quiz",
+          "guide": "times-table-quiz/challenge-final.md",
+          "py": "times-table-quiz/challenge-final.py",
+          "hints": "times-table-quiz/challenge-final-hints.md",
+          "answer": "times-table-quiz/challenge-final-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "shopping-list",
+      "name": "Shopping List",
+      "description": "Never forget the milk again! Learn to add, remove, and organize items in your own digital shopping list.",
+      "lessons": [
+        {
+          "id": "shopping-list-lesson-01",
+          "name": "The Empty List",
+          "guide": "shopping-list/lesson01.md",
+          "py": "shopping-list/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-lesson-02",
+          "name": "Making a List",
+          "guide": "shopping-list/lesson02.md",
+          "py": "shopping-list/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-lesson-03",
+          "name": "Check the List",
+          "guide": "shopping-list/lesson03.md",
+          "py": "shopping-list/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-lesson-04",
+          "name": "Read Item by Item",
+          "guide": "shopping-list/lesson04.md",
+          "py": "shopping-list/lesson04.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-challenge-01",
+          "name": "My Needs",
+          "guide": "shopping-list/challenge01.md",
+          "py": "shopping-list/challenge01.py",
+          "hints": "shopping-list/challenge01-hints.md",
+          "answer": "shopping-list/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "shopping-list-lesson-05",
+          "name": "Add Item",
+          "guide": "shopping-list/lesson05.md",
+          "py": "shopping-list/lesson05.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-lesson-06",
+          "name": "Add Multiple Items",
+          "guide": "shopping-list/lesson06.md",
+          "py": "shopping-list/lesson06.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-lesson-07",
+          "name": "Remove Item",
+          "guide": "shopping-list/lesson07.md",
+          "py": "shopping-list/lesson07.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-challenge-02",
+          "name": "Smart Shopper",
+          "guide": "shopping-list/challenge02.md",
+          "py": "shopping-list/challenge02.py",
+          "hints": "shopping-list/challenge02-hints.md",
+          "answer": "shopping-list/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "shopping-list-lesson-08",
+          "name": "How Many Items?",
+          "guide": "shopping-list/lesson08.md",
+          "py": "shopping-list/lesson08.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-lesson-09",
+          "name": "Is it on the List?",
+          "guide": "shopping-list/lesson09.md",
+          "py": "shopping-list/lesson09.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-lesson-10",
+          "name": "Pretty Print",
+          "guide": "shopping-list/lesson10.md",
+          "py": "shopping-list/lesson10.py",
+          "type": "lesson"
+        },
+        {
+          "id": "shopping-list-challenge-final",
+          "name": "Organized Shopper",
+          "guide": "shopping-list/challenge-final.md",
+          "py": "shopping-list/challenge-final.py",
+          "hints": "shopping-list/challenge-final-hints.md",
+          "answer": "shopping-list/challenge-final-answer.md",
+          "type": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "text-analyzer",
+      "name": "Text Analyzer",
+      "description": "Become a data detective! Count words, find secret messages, and analyze text like a pro.",
+      "lessons": [
+        {
+          "id": "text-analyzer-lesson-01",
+          "name": "Count Characters",
+          "guide": "text-analyzer/lesson01.md",
+          "py": "text-analyzer/lesson01.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-02",
+          "name": "Analyze Variables",
+          "guide": "text-analyzer/lesson02.md",
+          "py": "text-analyzer/lesson02.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-03",
+          "name": "String Methods",
+          "guide": "text-analyzer/lesson03.md",
+          "py": "text-analyzer/lesson03.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-04",
+          "name": "Fix Capitalization",
+          "guide": "text-analyzer/lesson04.md",
+          "py": "text-analyzer/lesson04.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-challenge-01",
+          "name": "Name Fixer",
+          "guide": "text-analyzer/challenge01.md",
+          "py": "text-analyzer/challenge01.py",
+          "hints": "text-analyzer/challenge01-hints.md",
+          "answer": "text-analyzer/challenge01-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "text-analyzer-lesson-05",
+          "name": "Split into Words",
+          "guide": "text-analyzer/lesson05.md",
+          "py": "text-analyzer/lesson05.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-06",
+          "name": "Count Words",
+          "guide": "text-analyzer/lesson06.md",
+          "py": "text-analyzer/lesson06.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-07",
+          "name": "Loop Through Words",
+          "guide": "text-analyzer/lesson07.md",
+          "py": "text-analyzer/lesson07.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-08",
+          "name": "Find a Word",
+          "guide": "text-analyzer/lesson08.md",
+          "py": "text-analyzer/lesson08.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-09",
+          "name": "Count Specific Words",
+          "guide": "text-analyzer/lesson09.md",
+          "py": "text-analyzer/lesson09.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-challenge-02",
+          "name": "Word Counter",
+          "guide": "text-analyzer/challenge02.md",
+          "py": "text-analyzer/challenge02.py",
+          "hints": "text-analyzer/challenge02-hints.md",
+          "answer": "text-analyzer/challenge02-answer.md",
+          "type": "challenge"
+        },
+        {
+          "id": "text-analyzer-lesson-10",
+          "name": "Clean Up Spaces",
+          "guide": "text-analyzer/lesson10.md",
+          "py": "text-analyzer/lesson10.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-11",
+          "name": "Combine Methods",
+          "guide": "text-analyzer/lesson11.md",
+          "py": "text-analyzer/lesson11.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-12",
+          "name": "Replace Words",
+          "guide": "text-analyzer/lesson12.md",
+          "py": "text-analyzer/lesson12.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-13",
+          "name": "Print Statistics",
+          "guide": "text-analyzer/lesson13.md",
+          "py": "text-analyzer/lesson13.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-lesson-14",
+          "name": "Advanced Analysis",
+          "guide": "text-analyzer/lesson14.md",
+          "py": "text-analyzer/lesson14.py",
+          "type": "lesson"
+        },
+        {
+          "id": "text-analyzer-challenge-final",
+          "name": "Text Dashboard",
+          "guide": "text-analyzer/challenge-final.md",
+          "py": "text-analyzer/challenge-final.py",
+          "hints": "text-analyzer/challenge-final-hints.md",
+          "answer": "text-analyzer/challenge-final-answer.md",
+          "type": "challenge"
+        }
+      ]
+    }
+  ]
+}

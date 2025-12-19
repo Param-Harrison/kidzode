@@ -1,20 +1,10 @@
-# Making a List
+# Checking the Count 🔢
 
-Let's write down what we need!
+Sometimes we need to know how many items are in our list. We use the `len()` command (which is short for "length").
 
-```python
-cart = ["Apples", "Bread", "Milk"]
-print(cart)
-```
+### Instructions:
+1. Run the code.
+2. The computer will tell you how many items are in your list.
 
-You'll see:
-```
-['Apples', 'Bread', 'Milk']
-```
-
-Three items ready to buy!
-
-**Remember:** Use quotes `""` for text and commas `,` between items.
-
-## Try This!
-Add "Cookies" to the list!
+### Achievement:
+You've learned how to measure the size of your data! 📏

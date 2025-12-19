@@ -1,21 +1,11 @@
-# Solution
+### One way to solve it:
 
 ```python
-wants = ["Video Game", "Pizza", "Skateboard", "Comic Book", "Chocolate"]
+friends = []
+friends.append("Leo")
+friends.append("Maya")
+friends.append("Zoe")
 
-print("My Wishlist:")
-for item in wants:
-    print(f"* {item}")
+for name in friends:
+    print(f"You are invited to my party, {name}!")
 ```
-
-Output:
-```
-My Wishlist:
-* Video Game
-* Pizza
-* Skateboard
-* Comic Book
-* Chocolate
-```
-
-Hope you get them all! 🎁

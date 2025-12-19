@@ -1,41 +1,42 @@
 export const courses = [
   {
-    title: "Foundation",
-    subtitle: "Master Python fundamentals through 8 real-world projects. Learn variables, loops, functions, and data structures while building tools kids actually use.",
-    tags: ["Ages 8-10", "Beginner", "8 Projects", "~95 Lessons"],
+    title: "Foundation (Basics)",
+    subtitle: "Launch your coding journey! Master the basics of Python by building 8 fun projects like Magic 8-Ball and Rocket Launchers.",
+    tags: ["Ages 7-10", "Beginner", "8 Projects", "~40 Lessons"],
     color: "primary" as const,
     slug: "foundation",
-    badge: "🏗️ Foundation Certificate",
+    badge: "🏗️ Foundation Explorer",
     isPublished: true,
     price: "Free",
     duration: "Self Paced",
-    displayText: "Start",
-    totalLessons: 95
+    displayText: "Start Journey",
+    totalLessons: 40
   },
   {
-    title: "Problem Solving",
-    subtitle: "Build 9 practical apps while mastering algorithms, data structures, and object-oriented programming. Create password generators, quiz games, and more.",
-    tags: ["Ages 9-11", "Intermediate", "9 Projects", "~120 Lessons"],
+    title: "Intermediate - Think like an Engineer",
+    subtitle: "Build real tools and games! Learn how to design systems, handle data, and solve problems like a software engineer.",
+    tags: ["Ages 10-12", "Intermediate", "8 Projects", "~50 Lessons"],
     color: "secondary" as const,
-    slug: "problem-solving",
-    badge: "🧩 Problem Solver Certificate",
+    slug: "intermediate",
+    badge: "🛠️ Junior Engineer",
     isPublished: true,
     price: "Free",
     duration: "Self Paced",
-    displayText: "Solve",
-    totalLessons: 120
+    displayText: "Start Engineering",
+    totalLessons: 50
   },
   {
-    title: "Real Applications",
-    subtitle: "Create 10 production-grade tools using advanced Python patterns. Build databases, testing frameworks, and mini web frameworks like the pros.",
-    tags: ["Ages 11-13", "Advanced", "10 Projects", "~150 Lessons"],
+    title: "Advanced - Think like a Data Scientist",
+    subtitle: "Unlock the power of data! Use Python to analyze trends, create chatbots, and build smart applications.",
+    tags: ["Ages 12+", "Advanced", "8 Projects", "~60 Lessons"],
     color: "accent" as const,
-    slug: "real-applications",
-    badge: "🚀 Application Developer Certificate",
+    slug: "advanced",
+    badge: "📊 Data Scientist",
     isPublished: true,
     price: "Free",
     duration: "Self Paced",
-    displayText: "Conquer",
-    totalLessons: 150
+    displayText: "Analyze Data",
+    totalLessons: 60
   }
 ]
+

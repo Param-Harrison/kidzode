@@ -1,22 +1,11 @@
-# The Empty List
+# Adding to the List 🛒
 
-Every shopping trip starts with an empty piece of paper!
+We know how to create a list, but how do we add more items to it while the program is running? We use `.append()`.
 
-In Python, an empty list looks like this: `[]`.
+### Instructions:
+1. Run the code.
+2. We start with an empty list `[]`.
+3. We add three toys to the list using `.append()`.
 
-```python
-cart = []
-print(cart)
-```
-
-You'll see:
-```
-[]
-```
-
-It's waiting for you to add yummy food!
-
-**How it works:** `[]` means "a list with nothing in it".
-
-## Try This!
-Create an empty list called `backpack`!
+### Achievement:
+You've learned how to grow your data dynamically! 🌱

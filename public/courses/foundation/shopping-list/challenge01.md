@@ -1,19 +1,10 @@
-# Mini-Challenge 1: My Needs
+# CHALLENGE: Party Invitations 🥳
 
-Make a list of 5 things you really want!
+Can you create a list of friends to invite to your party?
 
-1. Create a list called `wants`
-2. Add 5 items (Toys? Candy? Games?)
-3. Print the list using a loop with a star `*`
+### Your Task:
+1. Create a list called `friends`.
+2. Use `.append()` to add 3 friends.
+3. Use a loop to print "You are invited, [Name]!" for each friend.
 
-```python
-# Write your code here!
-
-```
-
-Output should look like:
-```
-* Video Game
-* Pizza
-...
-```
+Party time!

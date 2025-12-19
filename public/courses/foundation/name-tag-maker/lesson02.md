@@ -1,23 +1,10 @@
-# Quotes and Strings
+# The Name Variable 🏷️
 
-You can use single quotes `'` or double quotes `"` for strings!
+Now let's put your actual name inside the tag using a variable.
 
-Both work the same:
-- `"Hello"` - double quotes
-- `'Hello'` - single quotes
+### Instructions:
+1. Change `my_name` to your own name.
+2. Run the code to see your name appear inside the tag!
 
-```python
-print("Hello")
-print('World')
-```
-
-You'll see:
-```
-Hello
-World
-```
-
-Both work! Use whichever you like!
-
-**When to use each:** Use single quotes when your text has double quotes inside:
-`print('She said "Hi!"')`
+### Achievement:
+You've personalized your name tag! 👤

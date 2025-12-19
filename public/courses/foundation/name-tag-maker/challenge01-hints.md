@@ -1,23 +1,14 @@
-# Hints for Challenge 1
+# Hints for Super Name Tag Challenge
 
 ## 🟢 Hint 1
-You need TWO variables - one for name (text) and one for age (number)!
+Create your variables first:
+```python
+name = "Alex"
+color = "Green"
+```
 
 ## 🟡 Hint 2
+You can print them together using commas:
 ```python
-name = "..."
-age = ...
-print(...)
-print(...)
+print("***", name, "(" + color + ")", "***")
 ```
-
-## 🟠 Hint 3
-```python
-name = "Jack"
-age = 10
-print(name)
-print(age)
-```
-
-## 🔴 Hint 4
-That's the answer! Use YOUR name and age!

@@ -1,5 +1,9 @@
-cart = ["Apples", "Bread", "Milk"]
+foods = ["Pizza", "Burgers", "Tacos"]
 
-print("--- MY SHOPPING LIST ---")
-print(cart)
-print("------------------------")
+print("Menu:")
+
+# Loop through the list
+for food in foods:
+    print("- " + food)
+
+print("Yum!")

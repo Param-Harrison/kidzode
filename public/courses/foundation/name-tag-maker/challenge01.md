@@ -1,18 +1,11 @@
-# Mini-Challenge 1: Print Name and Age
+# CHALLENGE: Super Name Tag 🏆
 
-Practice string variables!
+Can you create a "Super" name tag that includes your name and your favorite color?
 
-## 🎯 Your Mission
+### Your Task:
+1. Create a variable `name`.
+2. Create a variable `color`.
+3. Print a tag that looks like this:
+   `*** ALEX (Blue) ***`
 
-1. Store your name in a variable
-2. Store your age in a variable  
-3. Print both!
-
-## 💪 Example Output
-```
-Jack
-10
-```
-
-## 🆘 Need Help?
-Click "Show Hints"!
+Good luck!

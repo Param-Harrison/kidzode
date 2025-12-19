@@ -1,17 +1,20 @@
-# Hints
+# Hints for Party Invitations Challenge
 
 ## 🟢 Hint 1
-Create the list: `wants = ["Toy", "Candy", ...]`
+Create an empty list:
+```python
+friends = []
+```
 
 ## 🟡 Hint 2
-Use a loop: `for item in wants:`
+Add names using `.append()`:
+```python
+friends.append("Sam")
+```
 
 ## 🟠 Hint 3
-Print with a star: `print(f"* {item}")`
-
-## 🔴 Hint 4
+Loop through the list:
 ```python
-wants = ["Toy", "Candy", "Game", "Book", "Bike"]
-for item in wants:
-    print(f"* {item}")
+for f in friends:
+    print(f"Invited: {f}")
 ```

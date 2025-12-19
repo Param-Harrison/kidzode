@@ -1,21 +1,10 @@
-# Print Text
+# Design Your Tag 🎨
 
-Let's print words instead of numbers!
+Let's start by printing a simple border for our name tag.
 
-Text in programming is called a **string**. Put text in quotes: `"like this"`
+### Instructions:
+1. Run the code to see a border made of stars.
+2. The `print` command will show each line one by one.
 
-```python
-print("Hello")
-```
-
-You'll see:
-```
-Hello
-```
-
-You printed text! This is how you make computers talk!
-
-**How it works:** Quotes `"` tell Python "this is text, not code"
-
-## Try This!
-Print your name: `print("Your Name")`
+### Achievement:
+You've started designing your first project! 🌟
