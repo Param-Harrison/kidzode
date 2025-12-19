@@ -275,7 +275,7 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
           <h2 className="text-2xl font-bold mb-2">Login Required</h2>
           <p className="text-muted-foreground mb-6">You need to be logged in to access lessons.</p>
           <div className="flex gap-3 justify-center">
-            <Link href={`/sign-in?redirect=/courses/${bookId}/lessons/${lessonId}`}>
+            <Link href={`/login?redirect=/courses/${bookId}/lessons/${lessonId}`}>
               <Button variant="neo">
                 Sign In
               </Button>
@@ -302,7 +302,7 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
             Lessons are only accessible to students. Please log in as a student to continue.
           </p>
           <div className="flex gap-3 justify-center">
-            <Link href={`/student-login?redirect=/courses/${bookId}/lessons/${lessonId}`}>
+            <Link href={`/login?redirect=/courses/${bookId}/lessons/${lessonId}`}>
               <Button variant="neo">
                 Student Login
               </Button>

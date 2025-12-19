@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { db } from '@/lib/local-storage';
 import { NeoButton } from "@/components/ui/neobrutalism/neo-button";
 import { Terminal } from "lucide-react";
@@ -9,16 +9,15 @@ import { Terminal } from "lucide-react";
 export default function LoginPage() {
   const [name, setName] = useState('');
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get('redirect');
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (name.trim()) {
       const user = db.users.login(name);
-      if (user.userType === 'student') {
-        router.push('/learn');
-      } else {
-        router.push('/learn');
-      }
+      const targetPath = redirect || '/learn';
+      router.push(targetPath);
     }
   };
 
