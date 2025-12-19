@@ -12,10 +12,10 @@ export default function LoginPage() {
   const searchParams = useSearchParams();
   const redirect = searchParams.get('redirect');
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (name.trim()) {
-      const user = db.users.login(name);
+      const user = await db.users.login(name);
       const targetPath = redirect || '/learn';
       router.push(targetPath);
     }

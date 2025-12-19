@@ -7,11 +7,13 @@ export function useAuth() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Simulate initial check delay if needed, or just run immediately
-    const currentUser = db.users.getCurrent();
-    setUser(currentUser);
-    setIsAuthenticated(!!currentUser);
-    setIsLoading(false);
+    async function checkAuth() {
+      const currentUser = await db.users.getCurrent();
+      setUser(currentUser);
+      setIsAuthenticated(!!currentUser);
+      setIsLoading(false);
+    }
+    checkAuth();
   }, []);
 
   return {

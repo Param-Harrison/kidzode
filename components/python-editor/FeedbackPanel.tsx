@@ -5,6 +5,7 @@ import { ThumbsUp, ThumbsDown, X, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@/hooks/useAuth"
 import { Textarea } from "@/components/ui/textarea"
+import { db } from "@/lib/local-storage"
 
 interface FeedbackPanelProps {
   lessonId: string
@@ -31,14 +32,16 @@ export function FeedbackPanel({
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-    // In local mode, we don't have stored feedback yet, or could use local storage key
     const loadFeedback = async () => {
        if (isOpen && user && user.userType === 'student') {
         setIsLoading(true)
         try {
-           // Stub load
-           console.log('Loading feedback stub for', lessonId);
-           // Could read from localStorage if implemented
+           const existing = await db.feedback.get(user.id, bookId, lessonId);
+           if (existing) {
+             setThumbsUp(existing.thumbsUp);
+             setComment(existing.comment || "");
+             setShowCommentBox(!!existing.comment);
+           }
         } catch (err) {
             console.error(err);
         } finally {
@@ -47,7 +50,7 @@ export function FeedbackPanel({
        }
     }
     loadFeedback()
-  }, [isOpen, lessonId, user])
+  }, [isOpen, lessonId, bookId, user])
 
   const handleThumbsClick = (value: boolean) => {
     setThumbsUp(value)
@@ -59,17 +62,7 @@ export function FeedbackPanel({
     setIsSubmitting(true)
     try {
       const studentId = user.id
-      // Stub save
-      console.log('Feedback submitted:', {
-          studentId,
-          lessonId,
-          courseId: bookId,
-          thumbsUp: thumbsUp ?? true, 
-          comment: comment.trim() || undefined,
-      })
-
-      // Simulate delay
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await db.feedback.save(studentId, bookId, lessonId, thumbsUp ?? true, comment.trim());
 
       // Close panel after successful submission
       setTimeout(() => {

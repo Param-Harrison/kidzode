@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Trophy } from "lucide-react" // Optimized imports
 import { useAuth } from "@/hooks/useAuth"
 import { GameMapNode } from "@/components/ui/game-map-node"
+import { db } from "@/lib/local-storage"
 
 interface Lesson {
   id: string
@@ -80,6 +81,9 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
   useEffect(() => {
     const loadProgress = async () => {
       const progressMap = new Map<string, LessonProgress>()
+      let completedCount = 0;
+      let inProgressCount = 0;
+      let lastActivityLessonId = null;
 
       // Initialize all lessons as not_started
       allLessonsList.forEach((lesson) => {
@@ -90,64 +94,73 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
         })
       })
 
-      // Use local db if user is logged in
       if (user && user.userType === 'student') {
         try {
           const studentId = user.id
-          console.log('Loading progress for course:', bookId, 'student:', studentId)
+          console.log(`[Kidzode] Loading progress for course: ${bookId}, student: ${studentId}`)
           
-          const { db } = require('@/lib/local-storage');
-          const allProgress = db.progress.get(studentId, bookId);
+          const allProgress = await db.progress.get(studentId, bookId);
+          console.log(`[Kidzode] Found ${allProgress?.length || 0} progress entries`)
 
-          if (allProgress) {
-             let completedCount = 0;
-             let inProgressCount = 0;
-
+          if (allProgress && allProgress.length > 0) {
              allProgress.forEach((p: any) => {
-                const status = p.status?.toLowerCase() as 'completed' | 'in_progress' | 'not_started';
+                const rawStatus = p.status || 'not_started';
+                const status = rawStatus.toLowerCase() as 'completed' | 'in_progress' | 'not_started';
+                
+                console.log(`[Kidzode] Processing entry: lessonId=${p.lessonId}, status=${status}, raw=${rawStatus}`);
+
                 progressMap.set(p.lessonId, {
-                  status: status || 'not_started',
+                  status: status,
                   rating: p.rating, 
                   bookmarked: p.bookmarked || false,
                 })
-                if (status === 'completed') completedCount++;
-                if (status === 'in_progress') inProgressCount++;
+                
+                if (status === 'completed') {
+                  completedCount++;
+                  console.log(`[Kidzode] Counted +1 completed for ${p.lessonId}`);
+                }
+                else if (status === 'in_progress') inProgressCount++;
              })
 
-              // Notify parent component of stats
-              if (memoizedOnProgressLoaded) {
-                const completionPercentage = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0
-                
-                // Find last accessed
-                const lastActivity = allProgress.sort((a: any, b: any) => 
-                   (new Date(b.completedAt || 0).getTime() - new Date(a.completedAt || 0).getTime())
-                )[0];
-
-                // Find Next Lesson (first not completed)
-                let nextLessonId = allLessonsList[0]?.id;
-                for (const lesson of allLessonsList) {
-                    const p = progressMap.get(lesson.id);
-                    if (p?.status !== 'completed') {
-                        nextLessonId = lesson.id;
-                        break;
-                    }
-                }
-
-                console.log('Progress stats loaded:', { completed: completedCount, inProgress: inProgressCount, completionPercentage, totalLessons, nextLessonId })
-                
-                memoizedOnProgressLoaded({
-                  total: totalLessons,
-                  completed: completedCount,
-                  inProgress: inProgressCount,
-                  completionPercentage,
-                  lastAccessedLessonId: lastActivity?.lessonId,
-                  nextLessonId,
-                })
-              }
+             // Find last accessed
+              const lastActivity = [...allProgress]
+                .filter(p => p.completedAt || p.data?.lastAccessedAt)
+                .sort((a: any, b: any) => {
+                  const dateA = new Date(a.completedAt || a.data?.lastAccessedAt || 0).getTime();
+                  const dateB = new Date(b.completedAt || b.data?.lastAccessedAt || 0).getTime();
+                  return dateB - dateA;
+                })[0];
+              
+              lastActivityLessonId = lastActivity?.lessonId || allProgress[allProgress.length-1].lessonId;
           }
         } catch (error) {
-          console.error("Failed to load progress", error)
+          console.error("[Kidzode] Failed to load progress", error)
         }
+      }
+
+      // Find Next Lesson (first not completed)
+      let nextLessonId = allLessonsList[0]?.id;
+      for (const lesson of allLessonsList) {
+          const p = progressMap.get(lesson.id);
+          if (p?.status !== 'completed') {
+              nextLessonId = lesson.id;
+              break;
+          }
+      }
+
+      // ALWAYS notify parent component of stats, even if counts are 0
+      if (memoizedOnProgressLoaded) {
+        const completionPercentage = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0
+        console.log(`[Kidzode] Reporting stats: ${completedCount}/${totalLessons} (${completionPercentage}%), Next: ${nextLessonId}`)
+        
+        memoizedOnProgressLoaded({
+          total: totalLessons,
+          completed: completedCount,
+          inProgress: inProgressCount,
+          completionPercentage,
+          lastAccessedLessonId: lastActivityLessonId,
+          nextLessonId,
+        })
       }
 
       setLessonProgress(progressMap)

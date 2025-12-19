@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@/hooks/useAuth"
+import { db } from "@/lib/local-storage"
 
 interface BookmarkButtonProps {
   lessonId: string
@@ -17,6 +18,16 @@ export function BookmarkButton({ lessonId, bookId, initialBookmarked }: Bookmark
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {
+    const checkBookmark = async () => {
+      if (user) {
+        const bookmarked = await db.bookmarks.get(user.id, bookId, lessonId);
+        setIsBookmarked(bookmarked);
+      }
+    }
+    checkBookmark();
+  }, [user, bookId, lessonId])
+
+  useEffect(() => {
     if (initialBookmarked !== undefined) {
       setIsBookmarked(initialBookmarked)
     }
@@ -25,21 +36,12 @@ export function BookmarkButton({ lessonId, bookId, initialBookmarked }: Bookmark
   const handleToggle = async () => {
     if (!user || isSubmitting) return
 
-    const newBookmarked = !isBookmarked
-    setIsBookmarked(newBookmarked)
     setIsSubmitting(true)
-
     try {
-      // Stub for local bookmarks - could implement in db.bookmarks.save() later
-      console.log('Bookmark toggled:', newBookmarked, { lessonId, bookId, userId: user.id });
-      
-      // Simulate network delay
-      await new Promise(resolve => setTimeout(resolve, 300));
-
+      const newBookmarked = await db.bookmarks.toggle(user.id, bookId, lessonId);
+      setIsBookmarked(newBookmarked)
     } catch (error) {
       console.error('Failed to toggle bookmark:', error)
-      // Revert on error
-      setIsBookmarked(!newBookmarked)
     } finally {
       setIsSubmitting(false)
     }

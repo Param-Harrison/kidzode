@@ -1,23 +1,7 @@
-"use client";
+import { getDB, kv, User, Progress, UserType } from './db';
 
-export type UserType = "parent" | "teacher" | "student";
-
-export interface User {
-  id: number;
-  name: string;
-  email: string | null;
-  userType: UserType;
-  createdAt: string;
-}
-
-export interface Progress {
-  studentId: number;
-  courseId: string;
-  lessonId: string;
-  status: "COMPLETED" | "IN_PROGRESS" | "NOT_STARTED";
-  data?: any;
-  completedAt: string | null;
-}
+export type { User, Progress, UserType };
+export { kv };
 
 const STORAGE_KEYS = {
   CURRENT_USER: "kidzode_current_user",
@@ -30,17 +14,75 @@ const STORAGE_KEYS = {
 // Mock ID generator
 const generateId = () => Date.now();
 
+let isMigrated = false;
+
+const migrateFromLocalStorage = async () => {
+  if (isMigrated || typeof window === 'undefined') return;
+  
+  const dbInstance = await getDB();
+  if (!dbInstance) return;
+
+  const migratedKey = 'kidzode_indexeddb_migrated';
+  const alreadyMigrated = localStorage.getItem(migratedKey);
+  if (alreadyMigrated) {
+    isMigrated = true;
+    return;
+  }
+
+  console.log('[Kidzode] Starting migration from localStorage to IndexedDB...');
+
+  // Migrate Users
+  const localUsers = JSON.parse(localStorage.getItem(STORAGE_KEYS.USERS) || '[]');
+  for (const user of localUsers) {
+    await dbInstance.put('users', user);
+  }
+
+  // Migrate Current User
+  const localCurrentUser = localStorage.getItem(STORAGE_KEYS.CURRENT_USER);
+  if (localCurrentUser) {
+    await kv.set(STORAGE_KEYS.CURRENT_USER, JSON.parse(localCurrentUser));
+  }
+
+  // Migrate Progress
+  const localProgress = JSON.parse(localStorage.getItem(STORAGE_KEYS.PROGRESS) || '[]');
+  for (const p of localProgress) {
+    // Ensure status is lowercase
+    const status = (p.status || 'not_started').toLowerCase();
+    await dbInstance.put('progress', { ...p, status });
+  }
+
+  // Migrate Bookmarks
+  const localBookmarks = JSON.parse(localStorage.getItem(STORAGE_KEYS.BOOKMARKS) || '[]');
+  for (const b of localBookmarks) {
+    await dbInstance.put('bookmarks', b);
+  }
+
+  // Migrate Feedback
+  const localFeedback = JSON.parse(localStorage.getItem(STORAGE_KEYS.FEEDBACK) || '[]');
+  for (const f of localFeedback) {
+    await dbInstance.put('feedback', f);
+  }
+
+  localStorage.setItem(migratedKey, 'true');
+  isMigrated = true;
+  console.log('[Kidzode] Migration completed successfully!');
+};
+
 export const db = {
   users: {
-    getCurrent: (): User | null => {
-      if (typeof window === "undefined") return null;
-      const stored = localStorage.getItem(STORAGE_KEYS.CURRENT_USER);
-      return stored ? JSON.parse(stored) : null;
+    getCurrent: async (): Promise<User | null> => {
+      await migrateFromLocalStorage();
+      return await kv.get(STORAGE_KEYS.CURRENT_USER);
     },
     
-    login: (name: string): User => {
-      const users = db.users.getAll();
-      let user = users.find(u => u.name.toLowerCase() === name.toLowerCase());
+    login: async (name: string): Promise<User> => {
+      await migrateFromLocalStorage();
+      const dbInstance = await getDB();
+      if (!dbInstance) throw new Error("Database not available");
+
+      // Try to find existing user by name
+      const users = await dbInstance.getAllFromIndex('users', 'by-name', name);
+      let user = users[0];
       
       if (!user) {
         // Create new user if not exists
@@ -51,63 +93,141 @@ export const db = {
           userType: "student", // Default to student for now
           createdAt: new Date().toISOString()
         };
-        users.push(user);
-        localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
+        await dbInstance.put('users', user);
       }
       
-      localStorage.setItem(STORAGE_KEYS.CURRENT_USER, JSON.stringify(user));
+      await kv.set(STORAGE_KEYS.CURRENT_USER, user);
       return user;
     },
 
-    logout: () => {
-      localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
+    logout: async () => {
+      await kv.delete(STORAGE_KEYS.CURRENT_USER);
     },
 
-    getAll: (): User[] => {
-      if (typeof window === "undefined") return [];
-      const stored = localStorage.getItem(STORAGE_KEYS.USERS);
-      return stored ? JSON.parse(stored) : [];
+    getAll: async (): Promise<User[]> => {
+      await migrateFromLocalStorage();
+      const dbInstance = await getDB();
+      if (!dbInstance) return [];
+      return await dbInstance.getAll('users');
     }
   },
 
   progress: {
-    save: (studentId: number, courseId: string, lessonId: string, status: string, data?: any) => {
-      const allProgress: Progress[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.PROGRESS) || "[]");
-      const existingIndex = allProgress.findIndex(p => 
-        p.studentId === studentId && p.courseId === courseId && p.lessonId === lessonId
-      );
+    save: async (studentId: number, courseId: string, lessonId: string, status: string, data?: any) => {
+      await migrateFromLocalStorage();
+      const dbInstance = await getDB();
+      if (!dbInstance) throw new Error("Database not available");
+
+      const key: [number, string, string] = [studentId, courseId, lessonId];
+      const existing = await dbInstance.get('progress', key);
+      
+      const newStatus = status.toLowerCase() as 'completed' | 'in_progress' | 'not_started';
+      
+      // Prevent downgrading from completed to something else
+      let finalStatus = newStatus;
+      if (existing && existing.status === 'completed' && newStatus !== 'completed') {
+        finalStatus = 'completed';
+      }
+
+      const mergedData = {
+        ...(existing?.data || {}),
+        ...(data || {}),
+        lastAccessedAt: new Date().toISOString()
+      };
 
       const newEntry: Progress = {
         studentId,
         courseId,
         lessonId,
-        status: status as any,
-        data,
-        completedAt: status === "COMPLETED" ? new Date().toISOString() : null
+        status: finalStatus,
+        data: mergedData,
+        completedAt: (finalStatus === "completed") 
+          ? (existing?.completedAt || new Date().toISOString()) 
+          : (existing?.completedAt || null)
       };
 
-      if (existingIndex >= 0) {
-        allProgress[existingIndex] = { ...allProgress[existingIndex], ...newEntry };
-      } else {
-        allProgress.push(newEntry);
-      }
-
-      localStorage.setItem(STORAGE_KEYS.PROGRESS, JSON.stringify(allProgress));
+      console.log(`[Kidzode] Saving progress: key=${JSON.stringify(key)}, status=${finalStatus}, previously=${existing?.status || 'none'}`);
+      await dbInstance.put('progress', newEntry);
       return newEntry;
     },
 
-    get: (studentId: number, courseId?: string): Progress[] => {
-      const allProgress: Progress[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.PROGRESS) || "[]");
-      return allProgress.filter(p => 
-        p.studentId === studentId && (!courseId || p.courseId === courseId)
-      );
+    get: async (studentId: number, courseId?: string): Promise<Progress[]> => {
+      await migrateFromLocalStorage();
+      const dbInstance = await getDB();
+      if (!dbInstance) return [];
+
+      console.log(`[Kidzode] Querying progress for student: ${studentId}, course: ${courseId}`);
+
+      if (courseId) {
+        return await dbInstance.getAllFromIndex('progress', 'by-student-course', [studentId, courseId]);
+      } else {
+        return await dbInstance.getAllFromIndex('progress', 'by-student', studentId);
+      }
     },
     
-    getCompletedCount: (studentId: number, courseId: string): number => {
-      const allProgress: Progress[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.PROGRESS) || "[]");
-      return allProgress.filter(p => 
-        p.studentId === studentId && p.courseId === courseId && p.status === "COMPLETED"
-      ).length;
+    getCompletedCount: async (studentId: number, courseId: string): Promise<number> => {
+      await migrateFromLocalStorage();
+      const dbInstance = await getDB();
+      if (!dbInstance) return 0;
+      
+      const allProgress = await dbInstance.getAllFromIndex('progress', 'by-student-course', [studentId, courseId]);
+      return allProgress.filter(p => p.status === "completed").length;
+    }
+  },
+
+  bookmarks: {
+    toggle: async (studentId: number, courseId: string, lessonId: string): Promise<boolean> => {
+      await migrateFromLocalStorage();
+      const dbInstance = await getDB();
+      if (!dbInstance) throw new Error("Database not available");
+
+      const key: [number, string, string] = [studentId, courseId, lessonId];
+      const existing = await dbInstance.get('bookmarks', key);
+
+      if (existing) {
+        await dbInstance.delete('bookmarks', key);
+        return false;
+      } else {
+        await dbInstance.put('bookmarks', {
+          studentId,
+          courseId,
+          lessonId,
+          createdAt: new Date().toISOString()
+        });
+        return true;
+      }
+    },
+
+    get: async (studentId: number, courseId: string, lessonId: string): Promise<boolean> => {
+      await migrateFromLocalStorage();
+      const dbInstance = await getDB();
+      if (!dbInstance) return false;
+      const existing = await dbInstance.get('bookmarks', [studentId, courseId, lessonId]);
+      return !!existing;
+    }
+  },
+
+  feedback: {
+    save: async (studentId: number, courseId: string, lessonId: string, thumbsUp: boolean, comment?: string) => {
+      await migrateFromLocalStorage();
+      const dbInstance = await getDB();
+      if (!dbInstance) throw new Error("Database not available");
+
+      await dbInstance.put('feedback', {
+        studentId,
+        courseId,
+        lessonId,
+        thumbsUp,
+        comment,
+        createdAt: new Date().toISOString()
+      });
+    },
+
+    get: async (studentId: number, courseId: string, lessonId: string) => {
+      await migrateFromLocalStorage();
+      const dbInstance = await getDB();
+      if (!dbInstance) return null;
+      return await dbInstance.get('feedback', [studentId, courseId, lessonId]);
     }
   }
 };

@@ -3,6 +3,7 @@
 import { use, useEffect, useState } from "react"
 import { PythonEditor } from "@/components/python-editor/PythonEditor"
 import { useAuth } from "@/hooks/useAuth"
+import { db, kv } from "@/lib/local-storage"
 import { Loader2, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { RatingStars } from "@/components/RatingStars"
@@ -136,13 +137,7 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
         let savedCode = codeText
         
         if (currentStudentId) {
-            // Using db from local-storage
-             // We need to dynamically import db or move it outside of useEffect to avoid issues if not included
-             // But since we are inside client component, we can assume db is importaed.
-             // However, db is sync.
-             // We need to import db at top of file.
-             const { db } = require('@/lib/local-storage'); 
-             const allProgress = db.progress.get(currentStudentId, bookId);
+             const allProgress = await db.progress.get(currentStudentId, bookId);
              const lessonProgress = allProgress.find((p: any) => p.lessonId === lessonId);
 
              if (lessonProgress) {
@@ -156,8 +151,8 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
              }
         }
         
-        // Fallback to simple localStorage if no progress record but code exists (legacy)
-        const localCode = localStorage.getItem(`code-${bookId}-${lessonId}`)
+        // Fallback to simple KV store (IndexedDB) if no progress record but code exists
+        const localCode = await kv.get(`code-${bookId}-${lessonId}`)
         if (localCode && (!progress || !progress.data?.code)) savedCode = localCode
 
         setCode(savedCode)
@@ -206,14 +201,13 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
   }, [bookId, lessonId, authLoading, studentId])
 
   const handleCodeChange = async (newCode: string) => {
-    // Save code to localStorage as backup
-    localStorage.setItem(`code-${bookId}-${lessonId}`, newCode)
+    // Save code to KV store as backup
+    await kv.set(`code-${bookId}-${lessonId}`, newCode)
 
     // Save to API (now local db) if student ID is available
     const currentStudentId = studentId || (user && user.userType === 'student' ? user.id : null)
     if (currentStudentId) {
-       const { db } = require('@/lib/local-storage');
-       db.progress.save(currentStudentId, bookId, lessonId, 'in_progress', { code: newCode });
+       await db.progress.save(currentStudentId, bookId, lessonId, 'in_progress', { code: newCode });
     }
   }
 
@@ -230,8 +224,7 @@ export default function LessonPage({ params }: { params: Promise<{ bookId: strin
       console.log('Saving lesson completion:', { studentId: currentStudentId, courseId: bookId, lessonId, starRating })
       
       // Save progress locally
-      const { db } = require('@/lib/local-storage');
-      db.progress.save(currentStudentId, bookId, lessonId, 'completed', { code, completedAt: new Date().toISOString() });
+      await db.progress.save(currentStudentId, bookId, lessonId, 'completed', { code, completedAt: new Date().toISOString() });
       
       // Update local state
       setProgress({ status: 'completed', data: { code } })

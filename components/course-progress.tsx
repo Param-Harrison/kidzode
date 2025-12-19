@@ -17,16 +17,19 @@ export function CourseProgress({ courseId, totalLessons }: CourseProgressProps) 
 
   useEffect(() => {
     setIsClient(true);
-    if (user && user.userType === "student") {
-      const completed = db.progress.getCompletedCount(user.id, courseId);
-      setCompletedCount(completed);
-      
-      const percent = totalLessons > 0 
-        ? Math.round((completed / totalLessons) * 100) 
-        : 0;
-      
-      setProgress(percent);
-    }
+    const loadProgress = async () => {
+      if (user && user.userType === "student") {
+        const completed = await db.progress.getCompletedCount(user.id, courseId);
+        setCompletedCount(completed);
+        
+        const percent = totalLessons > 0 
+          ? Math.round((completed / totalLessons) * 100) 
+          : 0;
+        
+        setProgress(percent);
+      }
+    };
+    loadProgress();
   }, [user, courseId, totalLessons]);
 
   if (!isClient || !user || user.userType !== "student" || completedCount === 0) {

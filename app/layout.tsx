@@ -31,7 +31,10 @@ export default function RootLayout({
       lang="en"
       className={`${lexendMega.variable} ${epilogue.variable}`}
     >
-      <body className={`${lexendMega.variable} ${epilogue.variable} min-h-screen bg-background font-epilogue antialiased overflow-x-hidden`}>
+      <body 
+        className={`${lexendMega.variable} ${epilogue.variable} min-h-screen bg-background font-epilogue antialiased overflow-x-hidden`}
+        suppressHydrationWarning={true}
+      >
         {children}
       </body>
     </html>
