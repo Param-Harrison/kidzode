@@ -1,14 +1,20 @@
-### One way to solve it:
+### Solution
 
 ```python
 class Car:
-    def __init__(self, s):
-        self.s = s
-        self.p = 0
-    def drive(self):
-        self.p += self.s
+    def __init__(self, speed):
+        self.speed = speed
+        self.x = 0
+    
+    def move(self):
+        self.x += self.speed
 
-c1 = Car(10)
-c1.drive()
-print(c1.p)
+fast = Car(20)
+slow = Car(5)
+
+fast.move()
+slow.move()
+
+print("Fast Pos:", fast.x)
+print("Slow Pos:", slow.x)
 ```

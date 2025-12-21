@@ -1,10 +1,19 @@
-### One way to solve it:
+### Solution
 
 ```python
-def tick(self):
-    self.timer -= 1
-    if self.timer == 0:
-        self.timer = 3
-        if self.color == "G": self.color = "R"
-        else: self.color = "G"
+class Car:
+    speed = 10
+    def stop(self):
+        self.speed = 0
+
+class Light:
+    color = "Red"
+
+c = Car()
+l = Light()
+
+if l.color == "Red":
+    c.stop()
+
+print("Car Speed:", c.speed)
 ```

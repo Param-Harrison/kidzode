@@ -1,10 +1,14 @@
 # Hints for Fast Cars
 
 ## 🟢 Hint 1
-Pass speed to init.
+Init:
+`self.speed = speed`
 
 ## 🟡 Hint 2
-Use it in `go()`: `self.dist += self.speed`.
+Move:
+`self.x += self.speed`
 
 ## 🟠 Hint 3
-Create with different arguments: `Racer(10)`, `Racer(100)`.
+Setup:
+`c1 = Car(10)`
+`c2 = Car(5)`

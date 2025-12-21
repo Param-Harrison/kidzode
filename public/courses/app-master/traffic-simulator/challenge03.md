@@ -1,13 +1,13 @@
-# CHALLENGE 3: Crash Detection 💥
+# CHALLENGE 3: Crash Detection
 
-Two cars can't be in the same spot!
-Check collisions.
+Did two cars hit each other?
+Check if their positions are equal.
 
 ### Your Task:
-1. Two cars: `c1` at 0, `c2` at 10. `c1` speed 5.
-2. `c1` moves.
-3. Check `if c1.pos == c2.pos`.
-4. If True, print "CRASH!".
+1. `c1` at `x=10`.
+2. `c2` at `x=10`.
+3. Check `if c1.x == c2.x`.
+4. If true, print "CRASH!".
 
-### Achievement:
-You finished The App Master Course! 🎓
+### Practical Use
+Collision Detection is complex geometry math, but fundamentally it just checks if two objects occupy the same space.

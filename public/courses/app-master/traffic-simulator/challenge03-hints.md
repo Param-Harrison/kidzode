@@ -1,10 +1,13 @@
 # Hints for Crash Detection
 
 ## 🟢 Hint 1
-Move: `c1.move()`.
+Position property:
+`c.x`
 
 ## 🟡 Hint 2
-Check: `if c1.pos == c2.pos`.
+Equality:
+`==` checks if they match exactly.
 
 ## 🟠 Hint 3
-Print warning if true.
+Logic:
+You don't need a method, just `if c1.x == c2.x:`.

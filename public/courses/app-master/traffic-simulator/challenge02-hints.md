@@ -1,10 +1,13 @@
 # Hints for Smart Light
 
 ## 🟢 Hint 1
-Decrease first: `self.timer -= 1`.
+Stop method:
+`self.speed = 0`.
 
 ## 🟡 Hint 2
-Check 0.
+Light logic:
+`if light.color == "Red": c.stop()`.
 
 ## 🟠 Hint 3
-Reset inside checking block: `self.timer = 3`.
+Verification:
+Print `c.speed` after the check.

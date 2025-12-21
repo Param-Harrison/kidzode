@@ -1,13 +1,14 @@
-# CHALLENGE 2: Smart Light ⏲️
+# CHALLENGE 2: Smart Light
 
-Lights shouldn't change every second.
-Stay green for 3 seconds.
+The traffic light should control the cars!
+If light is "Red", cars stop (speed becomes 0).
 
 ### Your Task:
-1. `Light` has `timer = 3`.
-2. `tick()` decreases timer.
-3. If `timer == 0`: Change Color AND reset timer to 3.
-4. Loop 5 times calling `tick()`. Print color.
+1. `class Car` with `speed` and `stop()`.
+2. `stop()` sets speed to 0.
+3. `class Light` with color.
+4. If Light is "Red", call `car.stop()`.
+5. Verify car speed is 0.
 
-### Achievement:
-You built a timed system! ⏳
+### Practical Use
+Traffic logic involves objects communicating states. Light -> Car -> Stop.

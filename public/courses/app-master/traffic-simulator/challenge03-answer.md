@@ -1,9 +1,15 @@
-### One way to solve it:
+### Solution
 
 ```python
-c1.move()
-c1.move()
+class Car:
+    def __init__(self, x):
+        self.x = x
 
-if c1.pos == c2.pos:
+c1 = Car(50)
+c2 = Car(50)
+
+if c1.x == c2.x:
     print("CRASH!")
+else:
+    print("Safe.")
 ```

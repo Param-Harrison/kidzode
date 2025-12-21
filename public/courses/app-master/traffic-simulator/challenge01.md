@@ -1,13 +1,14 @@
-# CHALLENGE 1: Fast Cars 🏎️
+# CHALLENGE 1: Fast Cars
 
-Some cars are faster.
-Give them speed!
+Different cars have different speeds.
+Some move faster per tick.
 
 ### Your Task:
-1. `__init__` takes `speed`.
-2. `drive()` increases `pos` by `self.speed`.
-3. Create `slow` (speed 5) and `fast` (speed 20).
-4. Drive both once. Print positions.
+1. `class Car` with `__init__(self, speed)`. `x = 0`.
+2. `move(self)` adds speed to x.
+3. Create fast car (10) and slow car (2).
+4. Move both.
+5. Print positions.
 
-### Achievement:
-You implemented variable velocity! 💨
+### Practical Use
+Racing games balance cars by tweaking these speed parameters.
