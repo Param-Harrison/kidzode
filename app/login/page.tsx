@@ -46,7 +46,7 @@ function LoginForm() {
 
           <NeoButton 
             type="submit" 
-            className="w-full py-4 text-xl font-black uppercase tracking-wider shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
+            className="w-full py-8 text-xl font-black uppercase tracking-wider shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
           >
             Start Coding
           </NeoButton>
