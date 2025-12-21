@@ -25,7 +25,7 @@ export default function Home() {
           
           <h1 className="text-4xl md:text-6xl font-black uppercase font-lexend mb-8 leading-[1.1] tracking-tight max-w-5xl">
             From Playing Games <br />
-            <span className="bg-background px-4 py-1 box-decoration-clone shadow-[6px_6px_0px_0px_currentColor] border-[3px] border-foreground text-foreground inline-block mt-3 transform rotate-1">to Thinking Like an Engineer</span>
+            <span className="bg-background px-4 py-1 box-decoration-clone shadow-[6px_6px_0px_0px_currentColor] border-[3px] border-foreground text-foreground inline-block mt-3 transform rotate-1">to Think Like an Engineer</span>
           </h1>
           
           <p className="text-lg md:text-xl font-medium font-epilogue max-w-3xl mb-10 leading-relaxed text-muted-foreground">
