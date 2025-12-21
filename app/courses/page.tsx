@@ -76,7 +76,7 @@ export default function CoursesPage() {
 
                     <div className="mt-auto pt-6 border-t-[3px] border-muted">
                         <Link href={`/courses/${course.slug}`} className="w-full">
-                          <NeoButton className="w-full bg-secondary text-foreground px-8 py-6 text-lg h-auto shadow-[6px_6px_0px_0px_currentColor] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] flex items-center justify-center gap-3 border-[3px] border-foreground transition-all">
+                          <NeoButton className="w-full bg-secondary text-foreground px-8 py-6 text-lg h-auto shadow-[6px_6px_0px_0px_currentColor] hover:bg-secondary hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] flex items-center justify-center gap-3 border-[3px] border-foreground transition-all">
                               <Terminal className="w-5 h-5" />
                               {course.displayText}
                            </NeoButton>
