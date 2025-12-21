@@ -1,3 +1,6 @@
+## Welcome to Secret Encoder! 🤫
+Want to send hidden messages to your friends? We're going to build a spy tool that turns normal text into secret codes!
+
 # Character Secrets 🤫
 
 Every letter on your keyboard has a secret number! In Python, we can find it using `ord()` and turn it back into a letter using `chr()`.

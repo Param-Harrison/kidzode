@@ -1,3 +1,6 @@
+## Welcome to Password Generator! 🔐
+Security is super important online. We're going to build a tool that creates unhackable secrets to keep your accounts safe!
+
 # The Character Bank 🏦
 
 A good password generator needs a lot of characters to choose from: letters, numbers, and symbols.

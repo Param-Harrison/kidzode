@@ -1,3 +1,6 @@
+## Welcome to Bank System! 💰
+Ready to manage the world's wealth? We're going to build a professional-grade banking engine that handles deposits, withdrawals, and balances in a digital vault!
+
 # Deposit Method 💰
 
 A Bank Account is a class with a `balance`.

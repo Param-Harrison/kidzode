@@ -1,3 +1,6 @@
+## Welcome to Weather Reporter! 🌦️
+Is it sunny or rainy? We're going to build a digital reporter that organizes weather data for cities all over the world!
+
 # The Data Map 🗺️
 
 A **Dictionary** is a way to store data in pairs: a "Key" and a "Value". It's like a real dictionary where you look up a word (the key) to find its definition (the value).

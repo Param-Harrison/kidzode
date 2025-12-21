@@ -1,3 +1,6 @@
+## Welcome to Ecommerce Store! 🛍️
+Ready to launch your own online shop? We're going to build the digital backbone that keeps track of products, prices, and shopping carts!
+
 # The Product Database 📦
 
 Stores have huge databases of products.

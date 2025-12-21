@@ -1,3 +1,6 @@
+## Welcome to Superhero Generator! 🦸‍♂️
+What's your secret identity? We're going to build a tool that generates thousands of awesome superhero names!
+
 # Super Parts 🦸‍♀️
 
 To make a superhero name, we need some super words! We'll use two lists to store different parts of the name.

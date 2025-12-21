@@ -1,3 +1,6 @@
+## Welcome to Planet Encyclopedia! 🪐
+Ready to explore the galaxy? Let's build a digital guidebook that stores everything from the distance of distant stars to the color of alien worlds!
+
 # Better Data 🪐
 
 A list is great for storing names, like `["Mars", "Venus"]`.

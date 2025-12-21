@@ -1,3 +1,6 @@
+## Welcome to Weather API! ☁️
+Is it time for sunglasses or an umbrella? We're going to learn how to handle complex data from real-world weather stations all over the globe!
+
 # The Complex Dictionary ☁️
 
 Real APIs return **Huge Dictionaries** with lists inside them.

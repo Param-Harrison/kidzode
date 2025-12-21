@@ -1,3 +1,6 @@
+## Welcome to Versus Mode! 🏟️
+It's time for the ultimate showdown. Let's build a battle simulator where heroes and monsters clash in a test of stats and strategy!
+
 # The Arena 🏟️
 
 Welcome to the Battle Arena!

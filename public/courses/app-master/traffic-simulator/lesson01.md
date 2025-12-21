@@ -1,3 +1,6 @@
+## Welcome to Traffic Simulator! 🚦
+Honk honk! Let's learn how smart cities manage their busy streets by building a simulator that controls the flow of traffic!
+
 # State Machines 🚦
 
 Objects change their behavior based on "State".

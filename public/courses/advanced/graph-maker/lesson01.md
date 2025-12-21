@@ -1,3 +1,6 @@
+## Welcome to Graph Maker! 📊
+A picture is worth a thousand numbers. Let's learn how to turn boring lists of data into beautiful, colorful charts that tell a story!
+
 # The Data Set 📊
 
 To make a graph, we need numbers.

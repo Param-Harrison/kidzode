@@ -1,3 +1,6 @@
+## Welcome to Cloud Database! ☁️
+Ever wonder where companies like Google or Amazon store their massive amounts of data? Let's learn how to build a scalable storage system in the cloud!
+
 # A List of Dictionaries 📚
 
 This is the most common data structure in the world.

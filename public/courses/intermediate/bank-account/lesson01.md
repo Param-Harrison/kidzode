@@ -1,3 +1,6 @@
+## Welcome to Bank Account! 🏦
+Money management is a major part of adult life. Let's learn how to build a digital vault to keep track of every penny!
+
 # The Vault 💰
 
 In computer science, we often need to keep track of a "Global State"—the current value of something important, like your bank balance.

@@ -1,3 +1,6 @@
+## Welcome to Login Server! 🔐
+Stop right there! Only authorized users can pass. Let's build a secure gatekeeping system that protects user accounts and passwords!
+
 # The User Database 🗄️
 
 Servers need to remember who is allowed in.

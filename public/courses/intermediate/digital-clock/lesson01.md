@@ -1,3 +1,6 @@
+## Welcome to Digital Clock! ⌚
+Time is precious. Let's build a sleek, real-time clock that shows the exact hour, minute, and second on your screen!
+
 # The Perfect Format 🕰️
 
 To make a clock, we need to get the current time from your computer. Python has a secret module called `datetime` that handles everything about dates and times.

@@ -1,3 +1,6 @@
+## Welcome to Kidzode! 👩‍💻
+You're about to start your journey into the world of coding. It's like having a superpower that lets you tell computers exactly what to do!
+
 # Hello World! 🌍
 
 Welcome to your first coding lesson! Today, you're going to make the computer speak.

@@ -1,3 +1,6 @@
+## Welcome to Battle Arena! ⚔️
+Step into the ring! We're going to build a high-stakes combat game where fighters clash and only the strongest (or best coded) survive!
+
 # The Fighter Class ⚔️
 
 A Game is just objects changing each other's state.

@@ -1,3 +1,6 @@
+## Welcome to Inventory Master! 🎒
+Every great adventurer needs a way to manage their loot. Let's build a smart backpack that tracks your items, weapons, and magical potions!
+
 # The Inventory 🎒
 
 You are an adventurer in a fantasy world.

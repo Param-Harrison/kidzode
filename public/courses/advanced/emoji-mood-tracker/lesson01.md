@@ -1,3 +1,6 @@
+## Welcome to Emoji Mood Tracker! 😊
+Ever wondered if you could teach a computer to understand feelings? We're going to build an AI that can read text and detect the mood behind it!
+
 # Text is Data 📜
 
 Welcome to Natural Language Processing (NLP)!
