@@ -31,7 +31,7 @@ export function GameMapNode({ lesson, index, status, position, bookId, isLast }:
       
       {/* Connector Line - Dashed path feel */}
       {!isLast && (
-        <div className="absolute left-1/2 -translate-x-1/2 top-16 bottom-[-110px] w-0 border-l-[4px] border-dashed border-black/30 z-0" />
+        <div className="absolute left-1/2 -translate-x-1/2 top-16 bottom-[-130px] w-0 border-l-[4px] border-dashed border-black/30 z-0" />
       )}
 
       {/* Interactive Hub */}
