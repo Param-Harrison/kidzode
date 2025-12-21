@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { db } from '@/lib/local-storage';
 import { NeoButton } from "@/components/ui/neobrutalism/neo-button";
 import { Terminal } from "lucide-react";
 
-export default function LoginPage() {
+function LoginForm() {
   const [name, setName] = useState('');
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -53,5 +53,21 @@ export default function LoginPage() {
         </form>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="animate-pulse flex flex-col items-center">
+          <div className="bg-gray-200 w-12 h-12 border-[3px] border-black shadow-[4px_4px_0px_0px_#000] mb-6"></div>
+          <div className="bg-gray-200 h-10 w-48 mb-2"></div>
+          <div className="bg-gray-200 h-6 w-64"></div>
+        </div>
+      </div>
+    }>
+      <LoginForm />
+    </Suspense>
   );
 }

@@ -172,10 +172,10 @@ sys.modules['builtins'].input = _input_handler
     }
   }, [status, detectPackages])
 
-  const runTests = useCallback(async (code: string, tests: Array<TestConfig>) => {
+  const runTests = useCallback(async (code: string, tests: Array<TestConfig>): Promise<{ results: TestResult[], starRating: number }> => {
     const { success, error } = await runCode(code)
     return { 
-      results: [{ passed: success, type: 'compilation', message: success ? 'Passed' : error }], 
+      results: [{ passed: success, type: 'compilation', message: success ? 'Passed' : error } as TestResult], 
       starRating: success ? 3 : 0 
     }
   }, [runCode])
