@@ -9,12 +9,12 @@ An **Object** is the real thing built from that blueprint.
 
 ### The Code
 ```python
-class Robot:
-    name = "Bot"
+class Dog:
+    name = "Rex"
 
 # Build one!
-my_bot = Robot()
-print(my_bot.name)
+my_dog = Dog()
+print(my_dog.name)
 ```
 
 ### Your Goal

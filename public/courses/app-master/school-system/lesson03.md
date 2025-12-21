@@ -10,11 +10,11 @@ my_school.rooms[0].add_student("Alice")
 ```
 
 ### Your Goal
-1. `class Garage` with `cars = []`.
-2. `class Car` with `wheels = 4`.
-3. Create Garage. Add Car.
-4. Access the car inside garage: `g.cars[0]`.
-5. Print its wheels.
+1. `class Classroom` with `students = []`.
+2. `class Student` with `grade = 1`.
+3. Create Classroom. Add Student.
+4. Access the student inside classroom: `c.students[0]`.
+5. Print its grade.
 
 ### Practical Use
 `document.body.div.button.click()`. The most common pattern in web development.

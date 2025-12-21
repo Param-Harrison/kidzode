@@ -1,11 +1,18 @@
 # Project: Music Playlist
 # Goal: Tracking Index
 
-queue = ["Song 1", "Song 2", "Song 3"]
-idx = 0
+class Player:
+    def __init__(self):
+        self.queue = ["Song 1", "Song 2", "Song 3"]
+        self.index = 0
 
-print("Now Playing:", queue[idx])
+    def play(self):
+        print("Now Playing:", self.queue[self.index])
 
-# Skip
-idx += 1
-print("Now Playing:", queue[idx])
+    def skip(self):
+        self.index += 1
+
+p = Player()
+p.play()
+p.skip()
+p.play()

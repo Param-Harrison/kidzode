@@ -1,11 +1,11 @@
 # Project: Bank System
 # Goal: Returning Data
 
-class Calculator:
-    def add_tax(self, price):
-        return price + (price * 0.2)
+class Bank:
+    def calculate_interest(self, balance):
+        return balance * 0.1
 
-calc = Calculator()
-final_price = calc.add_tax(100)
+my_bank = Bank()
+interest = my_bank.calculate_interest(1000)
 
-print("Final Price:", final_price)
+print("Interest Earned:", interest)

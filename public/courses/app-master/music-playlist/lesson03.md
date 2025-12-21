@@ -14,9 +14,9 @@ def play_next(self):
 ```
 
 ### Your Goal
-1. `class Radio` with `index = 0`.
-2. `next_song()` adds 1 to index.
-3. Create radio. Print index. Call `next_song`. Print index.
+1. `class Playlist` with `index = 0`.
+2. `skip_song()` adds 1 to index.
+3. Create playlist. Print index. Call `skip_song`. Print index.
 
 ### Practical Use
 This logic powers the "Skip" button.

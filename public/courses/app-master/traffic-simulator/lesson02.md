@@ -16,10 +16,10 @@ class Car:
 ```
 
 ### Your Goal
-1. Define `Rocket` with `y = 0`.
-2. Add `fly()` method: `y` increases by 10.
-3. Call fly twice.
-4. Print `Rocket height: [y]`.
+1. Define `Truck` with `distance = 0`.
+2. Add `drive()` method: `distance` increases by 10.
+3. Call drive twice.
+4. Print `Truck distance: [distance]`.
 
 ### Practical Use
 Every object on your screen has an (x, y) position that updates 60 times a second.

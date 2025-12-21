@@ -5,15 +5,15 @@ We can fix this with `__str__`.
 
 ### The Code
 ```python
-class Card:
-    def __init__(self, rank):
-        self.rank = rank
+class Skill:
+    def __init__(self, name):
+        self.name = name
     
     def __str__(self):
-        return "Card: " + self.rank
+        return "Skill: " + self.name
 
-c = Card("Ace")
-print(c) # Prints "Card: Ace"
+s = Skill("Fireball")
+print(s) # Prints "Skill: Fireball"
 ```
 
 ### Your Goal

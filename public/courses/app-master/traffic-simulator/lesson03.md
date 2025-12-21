@@ -15,10 +15,10 @@ class World:
 ```
 
 ### Your Goal
-1. `class Clock` with `time`.
-2. `class World` with `clocks = []`.
-3. `tick()` loops through clocks and calls `tick()`.
-4. Create world, add 2 clocks, run `world.tick()`.
+1. `class TrafficSignal` with `active_time`.
+2. `class City` with `signals = []`.
+3. `tick()` loops through signals and calls `update()`.
+4. Create city, add 2 signals, run `city.tick()`.
 
 ### Practical Use
 Physics engines run a `tick()` function that updates gravity and collisions for thousands of objects at once.

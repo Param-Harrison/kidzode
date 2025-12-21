@@ -6,19 +6,19 @@ We need a LIST of objects.
 
 ### The Code
 ```python
-army = []
+mobs = []
 for i in range(10):
-    s = Soldier()
-    army.append(s)
+    g = Ghost()
+    mobs.append(g)
 
-print("Army Size:", len(army))
+print("Horde Size:", len(mobs))
 ```
 
 ### Your Goal
-1. Create empty list `swarm`.
-2. Define `Bee`.
-3. Loop 5 times: create Bee, append to `swarm`.
-4. Print length of `swarm`.
+1. Create empty list `monsters`.
+2. Define `Slime`.
+3. Loop 5 times: create Slime, append to `monsters`.
+4. Print length of `monsters`.
 
 ### Practical Use
 The game engine maintains a "Scene Graph" which is just a giant list of all active objects.

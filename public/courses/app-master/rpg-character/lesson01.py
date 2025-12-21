@@ -1,14 +1,14 @@
 # Project: RPG Creator
 # Goal: Independent Objects
 
-class Car:
-    speed = 0
+class Hero:
+    hp = 0
 
-ferrari = Car()
-tractor = Car()
+knight = Hero()
+wizard = Hero()
 
-ferrari.speed = 200
-tractor.speed = 20
+knight.hp = 100
+wizard.hp = 50
 
-print("Ferrari:", ferrari.speed)
-print("Tractor:", tractor.speed)
+print("Knight HP:", knight.hp)
+print("Wizard HP:", wizard.hp)

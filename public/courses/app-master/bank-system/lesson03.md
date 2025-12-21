@@ -14,10 +14,10 @@ def buy(self, cost):
 ```
 
 ### Your Goal
-1. `class Register`.
-2. `scan(price)` returns price * 1.1 (Tax).
-3. Call `total = r.scan(100)`.
-4. Print total (110.0).
+1. `class ATM`.
+2. `get_fee(amount)` returns amount * 0.05 (Service Fee).
+3. Call `fee = a.get_fee(200)`.
+4. Print fee (10.0).
 
 ### Practical Use
 APIs return status codes (200 OK, 404 Error) to let the caller know what happened.

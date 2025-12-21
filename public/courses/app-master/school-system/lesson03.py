@@ -1,14 +1,14 @@
 # Project: School System
 # Goal: Drilling Down
 
-class Engine:
-    hp = 500
+class Teacher:
+    name = "Dr. Smith"
 
-class Car:
+class Classroom:
     def __init__(self):
-        self.engine = Engine()
+        self.teacher = Teacher()
 
-my_car = Car()
+my_room = Classroom()
 
-# Access Engine INSIDE Car
-print("Horsepower:", my_car.engine.hp)
+# Access Teacher INSIDE Classroom
+print("Teacher Name:", my_room.teacher.name)

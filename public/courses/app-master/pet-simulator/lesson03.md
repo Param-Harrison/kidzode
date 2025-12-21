@@ -6,20 +6,20 @@ Crucial: Methods must take `self` as the first argument.
 
 ### The Code
 ```python
-class Bird:
-    def fly(self):
-        print("Flap flap!")
+class Cat:
+    def meow(self):
+        print("Meow meow!")
 
-pidgey = Bird()
-pidgey.fly()
+pidgey = Cat()
+pidgey.meow()
 ```
 
 ### Your Goal
-1. Define `Duck`.
-2. Add method `quack(self)`.
-3. Inside, print "Quack!".
-4. Create `d = Duck()`.
-5. Call `d.quack()`.
+1. Define `Kitten`.
+2. Add method `purr(self)`.
+3. Inside, print "Purrr...".
+4. Create `k = Kitten()`.
+5. Call `k.purr()`.
 
 ### Practical Use
 `player.jump()` or `enemy.attack()` are methods defining what game characters can do.
