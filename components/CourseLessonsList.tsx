@@ -215,18 +215,25 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
 
   if (book.projects) {
     return (
-      <div className="space-y-24 py-12 relative">
+      <div className="space-y-32 py-16 relative">
         {book.projects.map((project, projectIndex) => (
           <div key={project.id} className="relative">
             {/* Zone Marker / Header */}
-            <div className="flex justify-center mb-16 sticky top-24 z-[30]">
-               <div className="bg-blue-200 border-[3px] border-black px-10 py-5 rounded-[2rem] shadow-[8px_8px_0px_0px_#000] text-center max-w-3xl mx-auto backdrop-blur-sm transition-transform hover:scale-[1.02]">
-                  <h2 className="text-2xl md:text-4xl font-black font-lexend uppercase tracking-tight mb-2 text-black">{project.name}</h2>
-                  <p className="text-base md:text-lg font-bold text-slate-700 leading-relaxed">{project.description}</p>
+            <div className="flex justify-center mb-24 sticky top-24 z-[30]">
+               <div className="bg-white border-[3px] border-black px-8 py-6 rounded-[2.5rem] shadow-[8px_8px_0px_0px_#000] text-center max-w-2xl mx-auto backdrop-blur-md transition-all hover:scale-[1.02] hover:shadow-[10px_10px_0px_0px_#000]">
+                  <div className="inline-block bg-blue-100 text-blue-700 text-xs font-black uppercase px-3 py-1 rounded-full border border-blue-200 mb-3">
+                    Project {projectIndex + 1}
+                  </div>
+                  <h2 className="text-3xl md:text-5xl font-black font-lexend uppercase tracking-tight mb-3 text-black leading-tight">
+                    {project.name}
+                  </h2>
+                  <p className="text-sm md:text-base font-bold text-slate-500 leading-relaxed max-w-lg mx-auto italic">
+                    {project.description}
+                  </p>
                </div>
             </div>
 
-            <div className="max-w-4xl mx-auto px-4">
+            <div className="max-w-4xl mx-auto px-4 relative">
               {project.lessons.map((lesson, lessonIndex) => {
                  const globalIndex = getGlobalIndex(lesson.id)
                  const isProjectStart = lessonIndex === 0
@@ -250,13 +257,18 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
         ))}
         
         {/* Completion Trophy / End Marker */}
-        <div className="flex flex-col items-center justify-center mt-12 pb-12">
-            <div className="w-24 h-24 bg-yellow-400 rounded-full border-[3px] border-black flex items-center justify-center shadow-[6px_6px_0px_0px_#000] mb-4">
-                 <Trophy className="w-12 h-12 text-black" />
+        <div className="flex flex-col items-center justify-center mt-20 pb-20">
+            <div className="relative group cursor-default">
+              <div className="absolute inset-0 bg-yellow-400/20 rounded-full blur-2xl animate-pulse group-hover:bg-yellow-400/40 transition-all" />
+              <div className="relative w-28 h-28 bg-yellow-400 rounded-full border-[4px] border-black flex items-center justify-center shadow-[8px_8px_0px_0px_#000] mb-6 transition-transform group-hover:scale-110 group-hover:rotate-12">
+                   <Trophy className="w-14 h-14 text-black" />
+              </div>
             </div>
-            <div className="bg-white px-6 py-2 border-[3px] border-black font-black uppercase text-xl shadow-[4px_4px_0px_0px_#000]">
+            
+            <div className="bg-white px-10 py-4 border-[4px] border-black font-black uppercase text-2xl shadow-[6px_6px_0px_0px_#000] rounded-xl transform -rotate-1">
                 Course Clear!
             </div>
+            <p className="mt-4 font-bold text-slate-400 uppercase tracking-widest text-xs">You've reached the end of the road</p>
         </div>
       </div>
     )
@@ -264,7 +276,7 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
 
   // Fallback for flat children list (not projects)
   return (
-      <div className="max-w-3xl mx-auto py-8">
+      <div className="max-w-3xl mx-auto py-16">
          {book.children?.map((lesson, index) => {
              const globalIndex = getGlobalIndex(lesson.id)
              const status = calculateStatus(lesson.id, globalIndex, index === 0)

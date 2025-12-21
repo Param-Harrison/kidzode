@@ -25,78 +25,97 @@ export function GameMapNode({ lesson, index, status, position, bookId, isLast }:
   
   return (
     <div className={cn(
-      "relative flex items-center w-full mb-16", // More vertical spacing
+      "relative flex items-center w-full mb-20 md:mb-24", 
       isLeft ? "flex-row-reverse" : "flex-row"
     )}>
       
-      {/* Connector Line */}
+      {/* Connector Line - Dashed path feel */}
       {!isLast && (
-        <div className="absolute left-1/2 -translate-x-1/2 top-12 bottom-[-64px] w-2.5 bg-black z-0" />
+        <div className="absolute left-1/2 -translate-x-1/2 top-16 bottom-[-110px] w-0 border-l-[4px] border-dashed border-black/30 z-0" />
       )}
 
-      <div className="flex-1" />
+      {/* Interactive Hub */}
+      <div className="flex-1 hidden md:block" />
       
       {/* Node Circle */}
-      <div className="relative z-10 flex items-center shrink-0 mx-auto">
-        <Link href={status === 'locked' ? '#' : `/courses/${bookId}/lessons/${lesson.id}`} className={status === 'locked' ? 'cursor-default' : 'cursor-pointer'}>
-          <div className={cn(
-            "w-24 h-24 rounded-full border-[4px] border-black flex items-center justify-center transition-all duration-300 relative group bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]", // Added bg-white to ensure it covers line
-            status === 'completed' && "bg-green-500 border-green-600 text-white",
-            status === 'active' && "bg-yellow-400 border-yellow-500 text-black shadow-[0px_0px_20px_rgba(250,204,21,0.5)] scale-110",
-            status === 'locked' && "bg-muted text-muted-foreground"
+      <div className="relative z-10 flex items-center shrink-0 mx-auto group">
+        <Link href={status === 'locked' ? '#' : `/courses/${bookId}/lessons/${lesson.id}`} 
+          className={cn(
+            "relative",
+            status === 'locked' ? 'cursor-default' : 'cursor-pointer'
           )}>
-            {status === 'completed' && <CheckCircle className="w-10 h-10" />}
-            {status === 'active' && <Play className="w-10 h-10 ml-1" />}
-            {status === 'locked' && <Lock className="w-8 h-8 opacity-50" />}
+          
+          {/* Pulsing ring for active lesson */}
+          {status === 'active' && (
+            <div className="absolute inset-0 rounded-full bg-yellow-400/30 animate-ping scale-150" />
+          )}
+
+          <div className={cn(
+            "w-20 h-20 md:w-24 md:h-24 rounded-full border-[3px] border-black flex items-center justify-center transition-all duration-500 relative bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:-translate-y-1",
+            status === 'completed' && "bg-[#9ADE7B] border-black text-black",
+            status === 'active' && "bg-[#FFFACD] border-black text-black scale-110",
+            status === 'locked' && "bg-[#F3F4F6] text-gray-400 border-gray-300 shadow-none"
+          )}>
+            {status === 'completed' && <CheckCircle className="w-8 h-8 md:w-10 md:h-10" />}
+            {status === 'active' && <Play className="w-8 h-8 md:w-10 md:h-10 fill-current" />}
+            {status === 'locked' && <Lock className="w-6 h-6 md:w-8 md:h-8 opacity-40" />}
             
-            <div className="absolute -top-3 -right-3 bg-white border-[3px] border-black rounded-full w-9 h-9 flex items-center justify-center font-black text-sm shadow-sm z-20 text-black">
+            <div className={cn(
+              "absolute -top-1 -right-1 md:-top-3 md:-right-3 border-[2px] border-black rounded-full w-7 h-7 md:w-9 md:h-9 flex items-center justify-center font-black text-xs md:text-sm z-20 transition-colors",
+              status === 'locked' ? "bg-gray-200 text-gray-500 border-gray-300" : "bg-white text-black"
+            )}>
               {index + 1}
             </div>
           </div>
         </Link>
       </div>
 
-      {/* Title Card */}
+      {/* Info Card */}
       <div className={cn(
         "flex-1 flex", 
-        isLeft ? "justify-end pr-12" : "justify-start pl-12" // Increased spacing
+        isLeft ? "justify-end pr-6 md:pr-16" : "justify-start pl-6 md:pl-16"
       )}>
         <Link href={status === 'locked' ? '#' : `/courses/${bookId}/lessons/${lesson.id}`} className={cn(
-            "block w-full max-w-sm transition-all hover:-translate-y-1 active:translate-y-0",
-            status === 'locked' ? 'cursor-default' : 'cursor-pointer'
+            "block w-full max-w-sm transition-all duration-300",
+            status === 'locked' ? 'cursor-default' : 'hover:-translate-y-1 active:scale-[0.98]'
         )}>
           <div className={cn(
-            "border-[3px] px-6 py-5 rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] relative",
-            status === 'completed' && "bg-green-100 border-green-500 hover:bg-green-200",
-            status === 'active' && "bg-yellow-50 border-yellow-400 hover:bg-yellow-100",
-            status === 'locked' && "bg-white border-black opacity-80"
+            "border-[3px] px-5 py-4 md:px-7 md:py-6 rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] relative transition-all",
+            status === 'completed' && "bg-white border-black hover:bg-green-50/50",
+            status === 'active' && "bg-[#FFFACD] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]",
+            status === 'locked' && "bg-white border-gray-200 text-gray-400 shadow-none opacity-60"
           )}>
-            {/* Connector Arm Visualization (Optional) */}
+            {/* Connector Arm with Dot */}
             <div className={cn(
-              "absolute top-1/2 -translate-y-1/2 w-8 h-[3px] bg-black z-[-1]",
-              isLeft ? "-right-8" : "-left-8",
-              (status === 'completed' || status === 'active') ? "bg-black" : "bg-black/50"
+              "absolute top-1/2 -translate-y-1/2 w-6 md:w-16 h-[2px] bg-black/20 z-[-1]",
+              isLeft ? "-right-6 md:-right-16" : "-left-6 md:-left-16",
+              status === 'active' && "bg-black/40 h-[3px]"
             )} />
 
-            <div className="flex flex-col gap-1">
-               <h3 className="font-bold text-xl leading-tight font-lexend">
+            <div className="flex flex-col gap-1.5">
+               <div className="flex items-center gap-2">
+                 <span className={cn(
+                   "text-[9px] md:text-[10px] uppercase font-black px-2 py-0.5 rounded-full border",
+                   status === 'completed' ? "bg-green-100 border-green-200 text-green-700" : 
+                   status === 'active' ? "bg-black text-yellow-300 border-black" : "bg-gray-100 border-gray-200 text-gray-400"
+                 )}>
+                   {lesson.type || 'Lesson'}
+                 </span>
+                 {status === 'completed' && <Star className="w-3 h-3 fill-yellow-400 text-yellow-500" />}
+               </div>
+               
+               <h3 className={cn(
+                 "font-black text-lg md:text-xl leading-tight font-lexend",
+                 status !== 'locked' ? "text-black" : "text-gray-400"
+               )}>
                   {lesson.name}
                </h3>
+               
                {lesson.description && (
-                  <p className="text-sm font-medium opacity-80 leading-relaxed">
+                  <p className="text-xs md:text-sm font-medium opacity-70 leading-relaxed line-clamp-2">
                     {lesson.description}
                   </p>
                )}
-            </div>
-            
-            <div className="mt-3 flex items-center gap-2">
-               <span className={cn(
-                 "text-[10px] uppercase font-black px-2 py-0.5 rounded-md border border-black/10",
-                 status === 'completed' ? "bg-green-200 text-green-800" : 
-                 status === 'active' ? "bg-yellow-200 text-yellow-800" : "bg-gray-100 text-gray-600"
-               )}>
-                 {lesson.type || 'Lesson'}
-               </span>
             </div>
           </div>
         </Link>
