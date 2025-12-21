@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 005
+# ☁️ API ARCHITECT
 # Goal: Setup Inventory
 
 # 1. Create a list of product dictionaries

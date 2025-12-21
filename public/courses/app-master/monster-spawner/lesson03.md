@@ -1,19 +1,24 @@
 # Managing the Horde 📋
 
-We can loop through our object list to make them ALL act.
-Like "All Units Attack!"
+Spawning them is easy. Keeping track is harder.
+We need a LIST of objects.
+`enemies = []`.
 
-### The Logic
+### The Code
 ```python
-for enemy in horde:
-    enemy.roar()
+army = []
+for i in range(10):
+    s = Soldier()
+    army.append(s)
+
+print("Army Size:", len(army))
 ```
 
 ### Your Goal
-1. Define `class Alien` with `make_sound()`.
-2. Spawn 5 aliens into a list.
-3. Loop through the list.
-4. Call `.make_sound()` on each.
+1. Create empty list `swarm`.
+2. Define `Bee`.
+3. Loop 5 times: create Bee, append to `swarm`.
+4. Print length of `swarm`.
 
-### Achievement
-📋 **Commander**: You controlled a fleet of objects!
+### Practical Use
+The game engine maintains a "Scene Graph" which is just a giant list of all active objects.

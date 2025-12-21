@@ -1,15 +1,15 @@
-### One way to solve it:
+### Solution
 
 ```python
 class Pet:
-    def __init__(self):
-        self.energy = 10
+    energy = 80
     
-    def play(self):
-        self.energy -= 5
-        print("Energy:", self.energy)
+    def sleep(self):
+        self.energy += 50
+        if self.energy > 100:
+            self.energy = 100
 
 p = Pet()
-p.play()
-p.play()
+p.sleep()
+print("Energy:", p.energy)
 ```

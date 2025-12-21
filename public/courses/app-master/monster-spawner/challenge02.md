@@ -1,14 +1,13 @@
-# CHALLENGE 2: Strongest Enemy 💪
+# CHALLENGE 2: Strongest Enemy
 
-Who is the Boss?
-Spawn random enemies and find the highest HP.
+Spawn 10 enemies with random power.
+Find the strongest one!
 
 ### Your Task:
-1. Spawn 10 enemies with random HP (1-100).
-2. Save highest hp in variable `max_hp = 0`.
-3. Loop through enemies.
-4. Update `max_hp` if enemy is stronger.
-5. Print "Boss HP:", max_hp.
+1. `class Beast` with random power (1-100).
+2. Create list `cage`. Fill with 10 Beasts.
+3. Loop through `cage` to find max power.
+4. Print the highest power found.
 
-### Achievement:
-You analyzed your object pool! 🏆
+### Practical Use
+Leaderboards and high-score systems work exactly like this.

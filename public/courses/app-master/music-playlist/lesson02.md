@@ -1,24 +1,25 @@
-# The Playlist Class 🎧
+# The Playlist Class 📂
 
-Now we need a Manager.
-A class that holds a LIST of other objects.
+A **Manager Class** controls the list.
+It has methods like `add_song` and `show_songs`.
+It keeps the `songs = []` list hidden inside.
 
-### The Structure
+### The Code
 ```python
-class Playlist:
+class Jukebox:
     def __init__(self):
-        self.songs = [] # The empty list
-    
+        self.songs = []
+
     def add(self, song):
         self.songs.append(song)
 ```
 
 ### Your Goal
-1. Define `class Playlist`.
-2. Add `add_song(self, song)` method.
-3. Create `p = Playlist()`.
-4. Add 2 song objects to it.
-5. Print `p.songs`.
+1. Define `Playlist`. Init `self.catalog = []`.
+2. Add `add_track(title)`. Append title to catalog.
+3. Create playlist `my_mix`.
+4. Add "Track 1" and "Track 2".
+5. Print `my_mix.catalog`.
 
-### Achievement
-🎧 **DJ**: You organized your tracks!
+### Practical Use
+This Pattern (Manager + Data Objects) is the standard structure for almost any application.

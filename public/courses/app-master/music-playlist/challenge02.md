@@ -1,14 +1,13 @@
-# CHALLENGE 2: Remove Song 🗑️
+# CHALLENGE 2: Remove Song
 
-I hate this song!
-Remove a song by title.
+Delete a song by title.
+Loop to find it, then `remove()`.
 
 ### Your Task:
-1. `Playlist` has `remove(self, title)`.
+1. `class Playlist` with `remove(title)`.
 2. Loop through `self.songs`.
-3. If `s.title == title`, remove `s` from list.
-4. Use `self.songs.remove(s)` or create new list.
-5. Add "Bad Song", call remove, print list.
+3. If `song.title == title`: `self.songs.remove(song)`.
+4. Add "A" and "B". Remove "A". Check list.
 
-### Achievement:
-You managed a deletion request! 🚫
+### Practical Use
+Managing playlists requires full CRUD capabilities.

@@ -1,16 +1,13 @@
 # Hints for Activity Log
 
 ## 🟢 Hint 1
-Initialize list:
-```python
-self.logs = []
-```
+Init list:
+`self.history = []` inside `__init__`.
 
 ## 🟡 Hint 2
-Append string:
-```python
-self.logs.append(message)
-```
+Append:
+`self.history.append(msg)`.
 
 ## 🟠 Hint 3
-You can construct the message inside the deposit method too.
+Print:
+`print(my_account.history)`.

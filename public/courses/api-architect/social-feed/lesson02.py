@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 006
+# ☁️ API ARCHITECT
 # Goal: Show Viral Posts
 
 posts = [

@@ -1,13 +1,13 @@
 # Hints for Strongest Enemy
 
 ## 🟢 Hint 1
-Create the list first using a loop.
+Tracking Max:
+`highest = 0`.
 
 ## 🟡 Hint 2
-Then iterate to find max:
-```python
-if troll.hp > highest:
-```
+Comparison:
+`if beast.power > highest: highest = beast.power`.
 
 ## 🟠 Hint 3
-Or combine it in one loop!
+Two Loops:
+Loop 1 creates them. Loop 2 scans them.

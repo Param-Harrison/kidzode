@@ -1,14 +1,14 @@
-# 🏗️ APP MASTER: CASE 006
+# Project: Battle Arena
 # Goal: Damage Logic
 
-class Wall:
-    def __init__(self):
-        self.integrity = 100
+class Robot:
+    hp = 100
     
-    def smash(self):
-        self.integrity -= 50
-        print("CRASH!")
+    def damage(self, amt):
+        self.hp -= amt
+        if self.hp < 0:
+            self.hp = 0
 
-w = Wall()
-w.smash()
-print("Wall HP:", w.integrity)
+r = Robot()
+r.damage(150) # Should stop at 0
+print("HP:", r.hp)

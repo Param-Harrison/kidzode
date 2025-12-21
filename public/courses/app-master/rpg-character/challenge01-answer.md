@@ -1,14 +1,14 @@
-### One way to solve it:
+### Solution
 
 ```python
-class H:
-    def __init__(self, n): self.n = n
-    def __str__(self): return self.n
+class Hero:
+    def __init__(self, name, level):
+        self.name = name
+        self.level = level
 
-p = []
-p.append(H("One"))
-p.append(H("Two"))
+h1 = Hero("Knight", 10)
+h2 = Hero("Mage", 5)
 
-for x in p:
-    print(x)
+print(h1.name, "is Level", h1.level)
+print(h2.name, "is Level", h2.level)
 ```

@@ -1,14 +1,15 @@
-# 🏗️ APP MASTER: CASE 001
-# Goal: The Constructor
+# Project: Pet Simulator
+# Goal: Changing State
 
-class Robot:
-    # 1. Setup function (Double underscore!)
-    def __init__(self, model_name):
-        self.model = model_name
-        self.power = 100
+class Hamster:
+    speed = 10
 
-# 2. Create instance
-bot = Robot("RX-78")
+# Create two DIFFERENT hamsters
+h1 = Hamster()
+h2 = Hamster()
 
-print("System Online:", bot.model)
-print("Power Level:", bot.power)
+# Train h1
+h1.speed = 20
+
+print("H1 Speed:", h1.speed)
+print("H2 Speed:", h2.speed)

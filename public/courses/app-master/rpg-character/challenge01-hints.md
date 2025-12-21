@@ -1,19 +1,17 @@
 # Hints for Hero Party
 
 ## 🟢 Hint 1
-Append like normal:
+Init method:
 ```python
-party.append(Hero("Link"))
+def __init__(self, name, level):
+    self.name = name
+    self.level = level
 ```
 
 ## 🟡 Hint 2
-Loop like normal:
-```python
-for h in party:
-```
+Creating instances:
+`Hero("Name", 15)`
 
 ## 🟠 Hint 3
-Print object:
-```python
-print(h)
-```
+Accessing:
+`print(h1.name, h1.level)`

@@ -1,18 +1,15 @@
-# Hints for Game Loop
+# Hints for Playful Mood
 
 ## 🟢 Hint 1
-Define methods first:
-```python
-def feed(self):
-    self.energy += 5
-```
+Multiple changes:
+You can change as many `self` variables as you want in one method.
 
 ## 🟡 Hint 2
-Check input string:
-```python
-if action == "feed":
-    p.feed()
-```
+Calling:
+`p.play()`
+`p.play()`
+`p.play()`
 
 ## 🟠 Hint 3
-Use `while True:` to keep the game running forever (until stopped).
+Check your math:
+After 3 times, Fun should be 60, Energy 70.

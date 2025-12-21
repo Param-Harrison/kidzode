@@ -1,10 +1,13 @@
 # Hints for Shuffle Mode
 
 ## 🟢 Hint 1
-Import random first.
+Import:
+`import random` at the top.
 
 ## 🟡 Hint 2
-It modifies the list in-place.
+Method:
+`random.shuffle(self.songs)`. It changes the list in-place.
 
 ## 🟠 Hint 3
-`random.shuffle(self.cards)`.
+Verify:
+Run it multiple times. The order should change.

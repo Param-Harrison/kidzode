@@ -1,4 +1,4 @@
-# 🕵️‍♂️ DATA DETECTIVE: CASE 001
+# 🕵️‍♂️ DATA DETECTIVE
 # Goal: Create a list of suspects
 
 # 1. Create a list called 'suspects' using [ ]

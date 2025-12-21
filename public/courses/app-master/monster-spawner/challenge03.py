@@ -1,13 +1,7 @@
 # ---- YOUR CHALLENGE ----
-class Rat:
-    def __init__(self):
-        self.hp = 10
 
-nest = [Rat(), Rat(), Rat()]
-
-print("Casting Fireball... 🔥")
-
-# 1. Damage everyone by 10
-# 2. Check if defeated
+# 1. Setup Aliens
+# 2. The Bomb Loop
+# 3. Verify
 
 # Write your code below!

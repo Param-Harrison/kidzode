@@ -2,15 +2,12 @@
 
 ## 🟢 Hint 1
 Condition:
-```python
-while w1.hp > 0 and w2.hp > 0:
-```
+`while f1.hp > 0 and f2.hp > 0:`
 
 ## 🟡 Hint 2
-Make sure the second fighter only attacks if they are still alive after the first hit.
+Inside loop:
+Call `attack` methods for both sides.
 
 ## 🟠 Hint 3
-Print checks:
-```python
-if w1.hp > 0: print("X Wins")
-```
+Print status:
+Printing `f1.hp` inside the loop helps you see the battle progress.

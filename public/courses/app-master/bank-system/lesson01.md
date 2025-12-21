@@ -1,19 +1,22 @@
 # Deposit Method 💰
 
-Bank accounts need to grow!
-Methods can modify the object's stats.
+A Bank Account is a class with a `balance`.
+To add money, we need a `deposit` method.
+Logic: `self.balance += amount`.
 
-### The Logic
+### The Code
 ```python
-def deposit(self, amount):
-    self.balance = self.balance + amount
+class Account:
+    balance = 0
+    def deposit(self, money):
+        self.balance += money
 ```
 
 ### Your Goal
-1. Define `class Account` with `self.bal = 0`.
-2. Add Method `deposit(self, amt)`.
-3. Inside, add `amt` to `self.bal`.
-4. Create account, deposit 100, print balance.
+1. Define `PiggyBank` with `total = 0`.
+2. Add `add_coin(self, value)`.
+3. Add 5. Add 10.
+4. Print total (15).
 
-### Achievement
-💰 **Banker**: You handled your first transaction!
+### Practical Use
+Every financial app works like this. The logic is encapsulated inside the class to prevent bugs.

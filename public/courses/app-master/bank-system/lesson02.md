@@ -1,24 +1,24 @@
 # Withdraw Logic 💸
 
-We need to take money out.
-But wait! What if you don't have enough?
-We need an **IF** check inside the method.
+Taking money out requires a CHECK.
+Do you have enough money?
+`if amount <= self.balance:`.
 
-### The Logic
+### The Code
 ```python
-def withdraw(self, amt):
-    if self.bal >= amt:
-        self.bal -= amt
+def withdraw(self, amount):
+    if amount <= self.balance:
+        self.balance -= amount
     else:
-        print("Broke!")
+        print("Not enough funds!")
 ```
 
 ### Your Goal
-1. Define `Account` with `self.bal = 50`.
-2. Add `withdraw(self, amount)`.
-3. Check if enough money. If yes, subtract.
-4. Try to withdraw 10.
-5. Try to withdraw 100.
+1. `class ATM` with `cash = 100`.
+2. `take(self, amount)`.
+3. Try to take 50 (Success).
+4. Try to take 200 (Fail, print error).
+5. Print remaining cash.
 
-### Achievement
-💸 **Security Guard**: You prevented theft!
+### Practical Use
+This simple `if` statement prevents you from spending money you don't have.

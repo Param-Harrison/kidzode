@@ -1,21 +1,21 @@
 # Taking Damage 💔
 
-Fighters handle their own damage.
-This encapsulates logic nicely!
+Objects need a way to GET hurt.
+Define `take_damage(self, amount)`.
+Encapsulate the math!
 
-### The Logic
+### The Code
 ```python
 def take_damage(self, amount):
     self.hp -= amount
-    print(self.name, "ouch!")
+    print(self.name, "took", amount, "damage!")
 ```
 
 ### Your Goal
-1. Define `Fighter` with `hp=100`.
-2. Add `hit(self)` method.
-3. It subtracts 10 from HP.
-4. Create `f = Fighter("SubZero")`.
-5. Call `f.hit()` and print HP.
+1. `class Tank` with `hp=50`.
+2. `hit(amount)` subtracts hp.
+3. Create Tank. Call hit(10). Call hit(20).
+4. Print final hp (20).
 
-### Achievement
-💔 **Tank**: You handled incoming attacks!
+### Practical Use
+Why use a method? So we can add logic like "Defense" or "Immunity" later without breaking the rest of the game.

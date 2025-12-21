@@ -1,16 +1,13 @@
 # Hints for Area Damage
 
 ## 🟢 Hint 1
-Loop for each unit:
-```python
-for r in nest:
-```
+Access property:
+`alien.hp`
 
 ## 🟡 Hint 2
-Apply damage:
-```python
-r.hp -= 10
-```
+Subtract:
+`alien.hp -= 5`
 
 ## 🟠 Hint 3
-Check death inside the same loop.
+Verify:
+Check `swarm[0].hp` to see if it worked.

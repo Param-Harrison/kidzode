@@ -1,10 +1,17 @@
 # Hints for School Census
 
 ## 🟢 Hint 1
-Nested data access.
+Nested State:
+School -> Rooms list -> Room Object -> Students list.
 
 ## 🟡 Hint 2
-`t += r.count`.
+Loop logic:
+```python
+total = 0
+for r in self.rooms:
+    total += len(r.students)
+```
 
 ## 🟠 Hint 3
-Return final sum.
+Setup:
+Requires creating multiple room objects and adding them to the school.

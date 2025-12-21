@@ -1,14 +1,14 @@
-# 🏗️ APP MASTER: CASE 008
-# Goal: Movement
+# Project: Traffic Sim
+# Goal: Coordinates
 
-class Rocket:
-    def __init__(self):
-        self.height = 0
+class Player:
+    x = 0
+    y = 0
     
-    def fly(self):
-        self.height += 100
-        print("Altitude:", self.height)
+    def walk(self):
+        self.x += 1
+        print("Position:", self.x, self.y)
 
-r = Rocket()
-r.fly()
-r.fly()
+p = Player()
+p.walk()
+p.walk()

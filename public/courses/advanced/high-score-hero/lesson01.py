@@ -1,4 +1,4 @@
-# 🏆 HIGH SCORE HERO: CASE 004
+# 🏆 HIGH SCORE HERO
 # Goal: Build the scoreboard
 
 # 1. Create a list of 4 numbers

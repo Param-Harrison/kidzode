@@ -1,13 +1,14 @@
-# 🏗️ APP MASTER: CASE 005
-# Goal: Define Song Data
+# Project: Music Playlist
+# Goal: Song Class
 
-class Track:
-    # 1. Setup Init
-    def __init__(self, name, seconds):
-        self.name = name
-        self.len = seconds
+class Song:
+    def __init__(self, title):
+        self.title = title
+        self.likes = 0
+    
+    def like(self):
+        self.likes += 1
 
-# 2. Create one track
-t = Track("Beep Boop", 120)
-
-print("Now Playing:", t.name)
+s = Song("Despacito")
+s.like()
+print(s.title, "has", s.likes, "likes")

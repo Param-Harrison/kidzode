@@ -1,13 +1,13 @@
-# CHALLENGE 2: Overdraft Protection 🛡️
+# CHALLENGE 2: Overdraft Protection
 
-Don't let balance go negative!
-Return `False` if withdraw fails.
+Prevent withdraws if balance goes below 0.
+Return True if success, False if failed.
 
 ### Your Task:
-1. `withdraw(self, amt)` returns True if sucess, False if not.
-2. `acc` starts with 10.
-3. Try to withdraw 20. Code check `if acc.withdraw(20):`
-4. Else, print "Declined".
+1. `class Account` with `bal = 50`.
+2. `withdraw(self, amt)`.
+3. Check `if amt > self.bal`. return False.
+4. Else subtract and return True.
 
-### Achievement:
-You implemented credit checks! 💳
+### Practical Use
+Banks use complex algorithms to decide if they should let you overdraft or not.

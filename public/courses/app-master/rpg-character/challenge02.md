@@ -1,13 +1,13 @@
-# CHALLENGE 2: Level Up ⬆️
+# CHALLENGE 2: Level Up
 
-Heroes get stronger.
-Add a method to increase stats.
+Add a method to increase level.
+`__init__` sets the starting level, but methods change it.
 
 ### Your Task:
-1. `Hero` starts with `lvl = 1`.
-2. Add `train()` method.
-3. `train()` increases `lvl` by 1.
-4. Create hero, print lvl, train, print lvl.
+1. `class Role` with `__init__(self, name)` and `self.level = 1` (default).
+2. method `levelup(self)`: increase level by 1.
+3. Create "Sniper". Call levelup 3 times.
+4. Print final level.
 
-### Achievement:
-You implemented character progression! 🌟
+### Practical Use
+Progression systems rely on internal state management like this.

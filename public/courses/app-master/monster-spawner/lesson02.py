@@ -1,12 +1,12 @@
-# 🏗️ APP MASTER: CASE 003
-# Goal: Random Stats
+# Project: Monster Spawner
+# Goal: Randomness
+
 import random
 
 class Wolf:
     def __init__(self):
-        # 1. Random strength
-        self.strength = random.randint(1, 10)
+        self.damage = random.randint(5, 20)
+        print("Wolf created with damage:", self.damage)
 
-# 2. Spawn and check
-w1 = Wolf()
-print("Wolf Strength:", w1.strength)
+for i in range(3):
+    Wolf()

@@ -1,13 +1,7 @@
 # ---- YOUR CHALLENGE ----
-class Pet:
-    def __init__(self):
-        # 1. Set initial energy
-        pass
 
-    def play(self):
-        # 2. Lower energy
-        # 3. Print status
-        pass
+# 1. Define Pet with energy 80
+# 2. Sleep method (add 50)
+# 3. Cap at 100
 
-# 4. Test it out
 # Write your code below!

@@ -1,14 +1,16 @@
-### One way to solve it:
+### Solution
 
 ```python
-class Bank:
+class System:
     def __init__(self):
         self.history = []
     
-    def save(self, msg):
+    def log(self, msg):
         self.history.append(msg)
 
-b = Bank()
-b.save("Test")
-print(b.history)
+sys = System()
+sys.log("User Login")
+sys.log("Payment Failed")
+
+print(sys.history)
 ```

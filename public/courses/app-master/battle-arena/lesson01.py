@@ -1,13 +1,12 @@
-# 🏗️ APP MASTER: CASE 006
-# Goal: Setup Fighters
+# Project: Battle Arena
+# Goal: Fighter Class
 
-class Player:
-    def __init__(self, tag):
-        self.tag = tag
-        self.score = 0
+class Warrior:
+    def __init__(self, name, hp):
+        self.name = name
+        self.hp = hp
 
-# 1. Create players
-p1 = Player("NoobMaster")
-p2 = Player("ProGamer")
+p1 = Warrior("Thor", 200)
+p2 = Warrior("Hulk", 400)
 
-print(p1.tag, "VS", p2.tag)
+print(p1.name, "vs", p2.name)

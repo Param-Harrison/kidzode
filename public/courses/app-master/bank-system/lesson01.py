@@ -1,17 +1,15 @@
-# 🏗️ APP MASTER: CASE 004
-# Goal: Deposit Money
+# Project: Bank System
+# Goal: Deposit
 
 class Wallet:
-    def __init__(self):
-        self.cash = 0
+    cash = 0
     
-    # 1. Add deposit method
-    def add_money(self, dollars):
-        self.cash += dollars
-        print("Added $", dollars)
+    def gain(self, amount):
+        print("You got paid $", amount)
+        self.cash += amount
 
-w = Wallet()
+my_wallet = Wallet()
+my_wallet.gain(100)
+my_wallet.gain(50)
 
-# 2. Add cash
-w.add_money(50)
-print("Total:", w.cash)
+print("Total Cash:", my_wallet.cash)

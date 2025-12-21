@@ -1,15 +1,7 @@
 # ---- YOUR CHALLENGE ----
-class Ledger:
-    def __init__(self):
-        self.logs = []
-    
-    def add(self, txt):
-        # 1. Append txt to logs
-        pass
 
-# 2. Create Ledger
-# 3. Add "Sales: 100"
-# 4. Add "Expense: 50"
-# 5. Print logs
+# 1. History list
+# 2. Log method
+# 3. Add logs and print
 
 # Write your code below!

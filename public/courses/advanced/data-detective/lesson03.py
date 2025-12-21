@@ -1,4 +1,4 @@
-# 🕵️‍♂️ DATA DETECTIVE: CASE 001
+# 🕵️‍♂️ DATA DETECTIVE
 # Goal: Access specific suspects
 
 suspects = ["The Butler", "The Gardner", "The Chef"]

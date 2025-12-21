@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 003
+# ☁️ API ARCHITECT
 # Goal: Sending Responses
 
 msg = "status"

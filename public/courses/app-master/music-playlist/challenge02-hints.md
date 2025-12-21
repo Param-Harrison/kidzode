@@ -1,10 +1,13 @@
 # Hints for Remove Song
 
 ## 🟢 Hint 1
-Iterate through the list: `for s in self.list:`.
+Find it first:
+Loop and check `if s.title == target:`.
 
 ## 🟡 Hint 2
-Check title: `if s.title == target:`.
+Remove:
+`self.songs.remove(s)`.
 
 ## 🟠 Hint 3
-Perform removal: `self.list.remove(s)`.
+Break:
+After removing, use `break` to stop the loop (otherwise iterating a modified list can crash).

@@ -1,4 +1,4 @@
-# 🕵️‍♂️ DATA DETECTIVE: CASE 001
+# 🕵️‍♂️ DATA DETECTIVE
 # Goal: Count the evidence
 
 # 1. Create a list of 'clues'

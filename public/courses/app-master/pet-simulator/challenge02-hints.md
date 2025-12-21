@@ -1,20 +1,17 @@
-# Hints for Energy Meter
+# Hints for Sleepy Pet
 
 ## 🟢 Hint 1
-Initialize in init:
+Logic:
 ```python
-self.energy = 10
+self.energy += 50
 ```
 
 ## 🟡 Hint 2
-Modify via self:
+Capping:
 ```python
-self.energy -= 5
+if self.energy > 100:
+    self.energy = 100
 ```
 
 ## 🟠 Hint 3
-Call it twice:
-```python
-p.play()
-p.play()
-```
+Start with 80 energy to prove the logic works (80+50 = 130, should clamp to 100).

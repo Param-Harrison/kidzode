@@ -1,12 +1,7 @@
 # ---- YOUR CHALLENGE ----
-class Hero:
-    def __init__(self):
-        self.level = 1
 
-    # 1. Add train method
-
-h = Hero()
-
-# 2. Train and check results
+# 1. Class with Init and Level Up
+# 2. Create instance
+# 3. Level up loop
 
 # Write your code below!

@@ -1,8 +1,11 @@
 # ---- YOUR CHALLENGE ----
 
-# 1. Define class Pet
-# 2. Define __init__ with name/species
-# 3. Create instance
-# 4. Print info
+class Pet:
+    hunger = 50
+    # Add eat method
+
+# 1. Create pet
+# 2. Eat
+# 3. Check hunger
 
 # Write your code below!

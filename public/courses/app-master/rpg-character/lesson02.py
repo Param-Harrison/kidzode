@@ -1,16 +1,13 @@
-# 🏗️ APP MASTER: CASE 002
-# Goal: Unique Stats
+# Project: RPG Creator
+# Goal: Initialization
 
-class Char:
-    def __init__(self, name, strength):
-        self.name = name
-        self.str = strength
+class Player:
+    def __init__(self, username, team):
+        print("New player joined:", username)
+        self.username = username
+        self.team = team
 
-# 1. Create a weak character
-c1 = Char("Goblin", 5)
+p1 = Player("NoobMaster", "Red")
+p2 = Player("ProGamer", "Blue")
 
-# 2. Create a strong character
-c2 = Char("Dragon", 9000)
-
-print(c1.name, "Strength:", c1.str)
-print(c2.name, "Strength:", c2.str)
+print(p1.team)

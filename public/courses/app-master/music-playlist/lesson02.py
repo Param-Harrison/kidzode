@@ -1,16 +1,14 @@
-# 🏗️ APP MASTER: CASE 005
-# Goal: Song Manager
+# Project: Music Playlist
+# Goal: Manager Class
 
-class Album:
-    def __init__(self):
-        # 1. Create storage list
-        self.tracks = []
+class Playlist:
+    songs = []
+    
+    def add(self, song):
+        self.songs.append(song)
+        print("Added:", song)
 
-    def add(self, name):
-        self.tracks.append(name)
-
-my_album = Album()
-my_album.add("Track 1")
-my_album.add("Track 2")
-
-print(my_album.tracks)
+p = Playlist()
+p.add("Song A")
+p.add("Song B")
+print(p.songs)

@@ -1,4 +1,4 @@
-# 😃 EMOJI ANALYZER: CASE 002
+# 😃 EMOJI ANALYZER
 # Goal: Analyze the mood
 
 message = "I am sad today 😢 but tomorrow will be better 😄"

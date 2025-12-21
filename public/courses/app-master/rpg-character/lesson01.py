@@ -1,17 +1,14 @@
-# 🏗️ APP MASTER: CASE 002
+# Project: RPG Creator
 # Goal: Independent Objects
 
-class Clone:
-    def __init__(self):
-        self.msg = "Hello"
+class Car:
+    speed = 0
 
-# 1. Create two clones
-c1 = Clone()
-c2 = Clone()
+ferrari = Car()
+tractor = Car()
 
-# 2. Change one
-c1.msg = "Goodbye"
+ferrari.speed = 200
+tractor.speed = 20
 
-# 3. Prove they are different
-print("Clone 1 says:", c1.msg)
-print("Clone 2 says:", c2.msg)
+print("Ferrari:", ferrari.speed)
+print("Tractor:", tractor.speed)

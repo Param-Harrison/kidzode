@@ -1,21 +1,23 @@
-# The Spawner Loop 👻
+# The Spawner Loop 🔄
 
-In games, we don't write `e1 = Enemy()`, `e2 = Enemy()`...
-We use a **Loop** to spawn them!
+Creating 100 enemies one by one is boring.
+Use a loop!
+`for i in range(100):`
 
-### The Logic
+### The Code
 ```python
-horde = []
-for i in range(10):
-    horde.append(Ghost())
+class Enemy:
+    def __init__(self):
+        print("Enemy Spawned!")
+
+for i in range(3):
+    Enemy()
 ```
 
 ### Your Goal
-1. Define `class Zombie` with `self.hp = 10`.
-2. Create empty `zombies` list.
-3. Loop 5 times.
-4. Append new `Zombie()` to list.
-5. Print "Spawned:", len(zombies).
+1. Define class `Zombie`.
+2. `__init__` should print "Braaaains...".
+3. Use a loop to spawn 5 zombies.
 
-### Achievement
-👻 **Necromancer**: You raised an army!
+### Practical Use
+Level Designers place "Spawner" blocks where enemies pop out automatically.

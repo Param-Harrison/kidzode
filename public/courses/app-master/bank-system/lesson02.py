@@ -1,18 +1,16 @@
-# 🏗️ APP MASTER: CASE 004
-# Goal: Safe Withdraw
+# Project: Bank System
+# Goal: Withdraw
 
-class PiggyBank:
-    def __init__(self):
-        self.coins = 10
+class Safe:
+    gold = 100
     
-    def take(self, num):
-        # 1. Check if we have enough
-        if self.coins >= num:
-            self.coins -= num
-            print("Took", num)
+    def steal(self, amount):
+        if amount > self.gold:
+            print("Safe is empty!")
         else:
-            print("Not enough coins!")
+            self.gold -= amount
+            print("Stole", amount, "gold")
 
-p = PiggyBank()
-p.take(5)  # Should work
-p.take(50) # Should fail
+s = Safe()
+s.steal(200) # Fail
+s.steal(50)  # Works

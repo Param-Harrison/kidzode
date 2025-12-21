@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 001
+# ☁️ API ARCHITECT
 # Goal: Create a JSON Object
 
 # 1. Define a user dictionary

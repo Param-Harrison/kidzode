@@ -1,22 +1,25 @@
-# Multiple Instances 👥
+# Multiple Instances 👯
 
-The power of classes: Code ONE blueprint, build MANY objects.
-Each object is called an **Instance**.
-They act independently!
+The power of OOP is creating MANY objects from ONE class.
+Each object has its own memory.
 
-### The Logic
+### The Code
 ```python
-p1 = Player()
-p2 = Player()
-p1.score = 10 
-# p2.score is still 0!
+class Hero:
+    hp = 100
+
+h1 = Hero()
+h2 = Hero()
+
+h1.hp = 50 
+# h2.hp is still 100! They are separate.
 ```
 
 ### Your Goal
-1. Define `class Hero` with `self.hp = 100`.
-2. Create two heroes: `h1` and `h2`.
-3. Change `h1.hp` to 50.
-4. Print both h1 and h2 HP. See the difference?
+1. Define `Enemy` with `hp=10`.
+2. Create `e1` and `e2`.
+3. Damage `e1` (set hp to 0).
+4. Print both HPs. `e2` should still be alive.
 
-### Achievement
-👥 **Cloner**: You replicated your code logic!
+### Practical Use
+In a game with 100 zombies, damaging one logic shouldn't hurt the others.

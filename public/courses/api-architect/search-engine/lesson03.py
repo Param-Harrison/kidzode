@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 007
+# ☁️ API ARCHITECT
 # Goal: Auto-Index
 
 index = {}

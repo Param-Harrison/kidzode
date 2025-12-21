@@ -1,4 +1,4 @@
-# ⚔️ VERSUS MODE: CASE 007
+# ⚔️ VERSUS MODE
 # Goal: Check if a hit lands
 
 p1 = {"name": "Hero", "atk": 20, "def": 5}

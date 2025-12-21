@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 005
+# ☁️ API ARCHITECT
 # Goal: Update Price
 
 items = [

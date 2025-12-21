@@ -1,4 +1,4 @@
-# 📊 GRAPH MAKER: CASE 008
+# 📊 GRAPH MAKER
 # Goal: Prepare the data
 
 # 1. Create a list of numbers (1-10)

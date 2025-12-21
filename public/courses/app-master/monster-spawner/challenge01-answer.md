@@ -1,10 +1,12 @@
-### One way to solve it:
+### Solution
 
 ```python
-for i in range(1, 4):
-    name = "Bot " + str(i)
-    b = Minion(name)
-    army.append(b)
+class Ghost:
+    def __init__(self, name):
+        self.name = name
+        print("Spawned:", self.name)
 
-print(army)
+for i in range(5):
+    n = "Ghost " + str(i)
+    Ghost(n)
 ```

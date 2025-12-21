@@ -1,4 +1,4 @@
-# 🎒 INVENTORY MASTER: CASE 005
+# 🎒 INVENTORY MASTER
 # Goal: Build the inventory
 
 # 1. Create a list of item dictionaries

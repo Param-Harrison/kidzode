@@ -1,22 +1,25 @@
 # State Machines 🚦
 
-A Traffic Light changes state.
-Red -> Green -> Red.
-We can Model this!
+Objects change their behavior based on "State".
+A Traffic Light is a **State Machine**.
+States: "Red" -> "Green" -> "Yellow" -> "Red".
 
-### The Logic
+### The Code
 ```python
-def change(self):
-    if self.color == "Red":
-        self.color = "Green"
-    else:
-        self.color = "Red"
+class Light:
+    state = "Red"
+    
+    def change(self):
+        if self.state == "Red":
+            self.state = "Green"
+        elif self.state == "Green":
+            self.state = "Yellow"
 ```
 
 ### Your Goal
-1. Define `Light` with `color="Red"`.
-2. Add `change_color(self)`.
-3. Create light. Print Color. Change Color. Print Color.
+1. Define `Switch` with `state = "Off"`.
+2. `toggle()`: If Off, become On. If On, become Off.
+3. Call toggle 3 times and print state each time.
 
-### Achievement
-🚦 **Engineer**: You controlled the flow of traffic!
+### Practical Use
+Video game characters have states too: `Idle`, `Run`, `Jump`, `Dead`.

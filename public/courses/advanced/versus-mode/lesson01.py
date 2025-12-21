@@ -1,4 +1,4 @@
-# ⚔️ VERSUS MODE: CASE 007
+# ⚔️ VERSUS MODE
 # Goal: Create two fighters
 
 # 1. Create player1

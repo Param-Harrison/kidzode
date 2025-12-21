@@ -1,14 +1,15 @@
 # Hints for Transfer Funds
 
 ## 🟢 Hint 1
-It's two steps:
-```python
-bob.get(50)
-alice.put(50)
-```
+Method args:
+`def transfer(self, target, amount):`
 
 ## 🟡 Hint 2
-Make sure to use the correct variable names.
+Logic:
+`self.balance -= amount`
+`target.balance += amount` (You can modify other objects!)
 
 ## 🟠 Hint 3
-Values are integers.
+Creation:
+`a1 = Bank(100)`
+`a2 = Bank(0)`

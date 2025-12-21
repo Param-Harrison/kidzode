@@ -1,12 +1,9 @@
 # ---- YOUR CHALLENGE ----
+
 import random
 
-class Troll:
-    def __init__(self):
-        self.hp = random.randint(10, 100)
-
-group = []
-# 1. Spawn 5 trolls
-# 2. Find highest HP
+# 1. Beast Class
+# 2. Loop to Create
+# 3. Loop to Finder max
 
 # Write your code below!

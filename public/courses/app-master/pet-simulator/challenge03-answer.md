@@ -1,24 +1,20 @@
-### One way to solve it:
+### Solution
 
 ```python
 class Pet:
-    def __init__(self):
-        self.e = 10
-    
-    def feed(self):
-        self.e += 5
-        print("Yum! Energy:", self.e)
+    fun = 0
+    energy = 100
     
     def play(self):
-        self.e -= 5
-        print("Fun! Energy:", self.e)
+        self.fun += 20
+        self.energy -= 10
+        print("Wheee!")
 
 p = Pet()
+p.play()
+p.play()
+p.play()
 
-while True:
-    cmd = input("Cmd: ")
-    if cmd == "feed":
-        p.feed()
-    elif cmd == "play":
-        p.play()
+print("Fun:", p.fun)
+print("Energy:", p.energy)
 ```

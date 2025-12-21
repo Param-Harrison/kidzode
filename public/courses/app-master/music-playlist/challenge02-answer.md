@@ -1,9 +1,23 @@
-### One way to solve it:
+### Solution
 
 ```python
-def delete(self, target):
-    for s in self.list:
-        if s.title == target:
-            self.list.remove(s)
-            break
+class Song:
+    def __init__(self, title):
+        self.title = title
+
+class Playlist:
+    songs = []
+    
+    def remove(self, title):
+        for s in self.songs:
+            if s.title == title:
+                self.songs.remove(s)
+                break
+
+p = Playlist()
+p.songs.append(Song("A"))
+p.songs.append(Song("B"))
+
+p.remove("A")
+print(len(p.songs)) # Should be 1
 ```

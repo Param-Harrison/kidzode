@@ -1,20 +1,13 @@
 # Hints for Critical Hit
 
 ## 🟢 Hint 1
-Roll:
-```python
-roll = random.randint(1, 10)
-```
+Import:
+`import random`
 
 ## 🟡 Hint 2
 Check:
-```python
-if roll > 8:
-    dmg = 20
-```
+`if random.randint(1, 10) == 10:`
 
 ## 🟠 Hint 3
-Apply:
-```python
-target.hit(dmg)
-```
+Double it:
+`amt = self.strength * 2` inside the if-block.

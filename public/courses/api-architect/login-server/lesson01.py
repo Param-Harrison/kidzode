@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 002
+# ☁️ API ARCHITECT
 # Goal: Create User Storage
 
 # 1. Create a dictionary of users and passwords

@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 006
+# ☁️ API ARCHITECT
 # Goal: Create Social Feed
 
 # 1. Define posts

@@ -1,14 +1,13 @@
-# CHALLENGE 2: Energy Meter 🔋
+# CHALLENGE 2: Sleepy Pet
 
-Pets get tired!
-We need a **State** that changes.
+When a pet sleeps, Energy goes UP.
+But... don't let it go over 100! (Max energy).
 
 ### Your Task:
-1. In `__init__`, set `self.energy = 10`.
-2. Add a method `play(self)`.
-3. Inside `play`, subtract 5 from energy (`self.energy -= 5`).
-4. Print "Played! Energy is [energy]".
-5. Create pet and call `play()` twice.
+1. `Pet` with `energy = 80`.
+2. `sleep(self)`: adds 50 to energy.
+3. If energy > 100, set it to 100.
+4. Test it.
 
-### Achievement:
-You implemented mutable state! ⚡
+### Practical Use
+Refilling health bars at a save point usually caps at the maximum value.

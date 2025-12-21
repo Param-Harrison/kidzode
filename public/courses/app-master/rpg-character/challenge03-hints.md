@@ -1,13 +1,13 @@
 # Hints for Battle Simulator
 
 ## 🟢 Hint 1
-The `target` argument IS another Fighter object.
+Init:
+`self.power = power`.
 
 ## 🟡 Hint 2
-So you can access `target.hp`.
+Instances:
+`f1 = Fighter(10)`.
 
 ## 🟠 Hint 3
-Decrease it:
-```python
-target.hp -= 10
-```
+Comparison:
+You are comparing properties `f1.power` vs `f2.power`, NOT the objects `f1` vs `f2`.

@@ -1,15 +1,15 @@
-### One way to solve it:
+### Solution
 
 ```python
-class Box:
-    def __init__(self, hp): self.hp = hp
-    
-    def hit(self, other):
-        other.hp -= 1
+class Fighter:
+    def __init__(self, power):
+        self.power = power
 
-b1 = Box(10)
-b2 = Box(10)
+f1 = Fighter(10)
+f2 = Fighter(8)
 
-b1.hit(b2)
-print(b2.hp)
+if f1.power > f2.power:
+    print("F1 Wins")
+else:
+    print("F2 Wins")
 ```

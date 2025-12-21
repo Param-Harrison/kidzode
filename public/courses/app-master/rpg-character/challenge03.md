@@ -1,15 +1,13 @@
-# CHALLENGE 3: Battle Simulator ⚔️
+# CHALLENGE 3: Battle Simulator
 
-One object interacts with another!
-Pass an object AS An argument.
+Compare stats between two objects.
+If h1.power > h2.power, h1 wins.
 
 ### Your Task:
-1. `Hero` has `name` and `hp`.
-2. `attack(self, enemy)` method.
-3. Inside: `enemy.hp -= 10`.
-4. Create `h1` and `h2`.
-5. Call `h1.attack(h2)`.
-6. Print `h2.hp`.
+1. `class Fighter` with `__init__(self, power)`.
+2. Create `f1` (Power 10).
+3. Create `f2` (Power 8).
+4. Evaluate: `if f1.power > f2.power` print "F1 Wins". Else "F2 Wins".
 
-### Achievement:
-You built an interaction engine! 💥
+### Practical Use
+This is the core logic of every combat system ever made.

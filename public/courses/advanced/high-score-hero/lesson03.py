@@ -1,4 +1,4 @@
-# 🏆 HIGH SCORE HERO: CASE 004
+# 🏆 HIGH SCORE HERO
 # Goal: Calculate Team Total
 
 scores = [100, 200, 300]

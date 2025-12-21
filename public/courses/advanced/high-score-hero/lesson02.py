@@ -1,4 +1,4 @@
-# 🏆 HIGH SCORE HERO: CASE 004
+# 🏆 HIGH SCORE HERO
 # Goal: Find the winner
 
 # 1. Create a big list of scores

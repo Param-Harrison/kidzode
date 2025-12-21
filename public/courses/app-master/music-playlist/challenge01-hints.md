@@ -1,10 +1,13 @@
 # Hints for Duration Total
 
 ## 🟢 Hint 1
-Create sum variable: `total = 0`.
+Song Class:
+`def __init__(self, dur): self.duration = dur`
 
 ## 🟡 Hint 2
-Loop over self data: `for c in self.clips:`.
+Looping:
+`for song in self.songs:`
 
 ## 🟠 Hint 3
-Access object property: `total += c.time`.
+Accumulator:
+`total += song.duration`

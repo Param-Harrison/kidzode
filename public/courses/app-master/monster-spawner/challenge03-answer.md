@@ -1,8 +1,17 @@
-### One way to solve it:
+### Solution
 
 ```python
-for r in nest:
-    r.hp -= 10
-    if r.hp <= 0:
-        print("Rat defeated!")
+class Alien:
+    hp = 10
+
+swarm = []
+for i in range(5):
+    swarm.append(Alien())
+
+print("BOMB DROPPED!")
+
+for a in swarm:
+    a.hp -= 5
+
+print("Alien 1 HP:", swarm[0].hp)
 ```

@@ -1,17 +1,7 @@
 # ---- YOUR CHALLENGE ----
-class Pet:
-    def __init__(self):
-        self.energy = 50
-    
-    # 1. Add feed() and play() methods
-    pass
 
-p = Pet()
-
-while True:
-    action = input("Command (feed/play): ")
-    # 2. Check input and call method
-    
-    # 3. Break if "quit" (optional)
+# 1. Fun 0, Energy 100
+# 2. Play (+20 fun, -10 energy)
+# 3. Call 3 times
 
 # Write your code below!

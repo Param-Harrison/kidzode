@@ -1,17 +1,13 @@
 # Hints for Overdraft Protection
 
 ## 🟢 Hint 1
-Comparison:
-```python
-if price <= self.limit:
-```
+Check first:
+`if amount > self.balance: return False`
 
 ## 🟡 Hint 2
-Subtract AND return:
-```python
-self.limit -= price
-return True
-```
+Deduct later:
+If checks pass, `self.balance -= amount`.
 
 ## 🟠 Hint 3
-Otherwise just `return False`.
+Return True at end:
+To signal success.

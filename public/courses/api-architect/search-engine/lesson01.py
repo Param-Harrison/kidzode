@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 007
+# ☁️ API ARCHITECT
 # Goal: Create Search Index
 
 # 1. Define where keywords are found

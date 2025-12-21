@@ -1,18 +1,25 @@
 # Moving Objects 🚗
 
-Cars move forward.
-We track their position.
+Simulation requires **Coordinate Systems**.
+We track `x` and `y` positions.
+`move()` adds speed to `x`.
 
-### The Logic
+### The Code
 ```python
-def move(self):
-    self.pos += 1
+class Car:
+    def __init__(self):
+        self.x = 0
+        self.speed = 5
+    
+    def move(self):
+        self.x += self.speed
 ```
 
 ### Your Goal
-1. Define `Car` with `position = 0`.
-2. Add `drive(self)`. Increases pos by 10.
-3. Create car. Call drive twice. Print pos.
+1. Define `Rocket` with `y = 0`.
+2. Add `fly()` method: `y` increases by 10.
+3. Call fly twice.
+4. Print `Rocket height: [y]`.
 
-### Achievement
-🚗 **Driver**: You set things in motion!
+### Practical Use
+Every object on your screen has an (x, y) position that updates 60 times a second.

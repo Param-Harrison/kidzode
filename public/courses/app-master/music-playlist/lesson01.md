@@ -1,22 +1,23 @@
 # Song Objects 🎵
 
-First, let's define what a Song is.
-It has a `title` and `artist`.
+A playlist isn't just a list of strings "Song.mp3".
+It is a list of Song OBJECTS (Title, Artist, Duration).
 
-### The Setup
+### The Code
 ```python
 class Song:
-    def __init__(self, t, a):
-        self.title = t
-        self.artist = a
+    def __init__(self, title, artist):
+        self.title = title
+        self.artist = artist
+
+s = Song("Hello", "Adele")
 ```
 
 ### Your Goal
-1. Define `class Song`.
-2. Init takes `title` and `artist`.
-3. Create `s1 = Song("Happy", "Pharrell")`.
-4. Create `s2 = Song("Roar", "Katy")`.
-5. Print `s1.title`.
+1. Define class `Track` with `title` and `duration`.
+2. Create `t1` ("Happy", 3).
+3. Create `t2` ("Sad", 4).
+4. Print the title of t1.
 
-### Achievement
-🎵 **Composer**: You digitized music!
+### Practical Use
+Spotify stores massive amounts of metadata (Album Art, Year, Genre) for every song file.

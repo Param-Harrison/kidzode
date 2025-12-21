@@ -1,13 +1,14 @@
-# CHALLENGE 1: Roll Call 📢
+# CHALLENGE 1: Roll Call
 
-Is a student present?
-Check the list of objects.
+List all students in a classroom.
+Loop through the list of objects and print their names.
 
 ### Your Task:
-1. `Classroom` has `check(self, name)`.
-2. Loop through `self.students`.
-3. If `s.name == name`, return True.
-4. Add "Tom". Check for "Tom" (True) and "Jerry" (False).
+1. `class Student(name)`.
+2. `class Classroom` with list `students`.
+3. Add method `roll_call()`.
+4. It should loop and print each student's name.
+5. Setup room, add 2 students, run roll_call.
 
-### Achievement:
-You performed a lookup logic! 🔍
+### Practical Use
+Generating reports (Payroll, Attendance, Inventory) loops through containment hierarchies.

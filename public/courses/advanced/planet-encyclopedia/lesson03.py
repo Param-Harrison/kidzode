@@ -1,4 +1,4 @@
-# 🪐 PLANET ENCYCLOPEDIA: CASE 003
+# 🪐 PLANET ENCYCLOPEDIA
 # Goal: Scan the galaxy
 
 galaxy = [

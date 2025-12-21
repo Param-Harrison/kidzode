@@ -1,21 +1,17 @@
-# 🏗️ APP MASTER: CASE 006
-# Goal: PvP Interaction
+# Project: Battle Arena
+# Goal: Interaction
 
 class Boxer:
-    def __init__(self, name):
+    def __init__(self, name, power):
         self.name = name
-        self.hp = 10
+        self.power = power
+        self.hp = 50
     
-    def get_hit(self):
-        self.hp -= 1
-        print(self.name, "got hit!")
+    def punch(self, target):
+        target.hp -= self.power
 
-    def punch(self, other_boxer):
-        print(self.name, "swings!")
-        other_boxer.get_hit()
-
-b1 = Boxer("Rocky")
-b2 = Boxer("Apollo")
+b1 = Boxer("Rocky", 10)
+b2 = Boxer("Ivan", 15)
 
 b1.punch(b2)
-print("Apollo HP:", b2.hp)
+print("Ivan HP:", b2.hp)

@@ -1,19 +1,11 @@
-# 🏗️ APP MASTER: CASE 005
-# Goal: Play Queue
+# Project: Music Playlist
+# Goal: Tracking Index
 
-class Queue:
-    def __init__(self):
-        self.videos = ["Vid A", "Vid B"]
-    
-    def play(self):
-        # 1. Get and remove first item
-        if len(self.videos) > 0:
-            v = self.videos.pop(0)
-            print("Watching:", v)
-        else:
-            print("Queue empty!")
+queue = ["Song 1", "Song 2", "Song 3"]
+idx = 0
 
-q = Queue()
-q.play()
-q.play()
-q.play()
+print("Now Playing:", queue[idx])
+
+# Skip
+idx += 1
+print("Now Playing:", queue[idx])

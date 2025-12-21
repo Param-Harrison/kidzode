@@ -1,4 +1,4 @@
-# 📊 GRAPH MAKER: CASE 008
+# 📊 GRAPH MAKER
 # Goal: Draw a single bar
 
 val = 7

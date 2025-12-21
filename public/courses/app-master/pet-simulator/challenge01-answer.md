@@ -1,11 +1,15 @@
-### One way to solve it:
+### Solution
 
 ```python
 class Pet:
-    def __init__(self, n, s):
-        self.name = n
-        self.species = s
+    hunger = 50
+    
+    def eat(self):
+        print("Yum!")
+        self.hunger -= 10
 
-my_pet = Pet("Perry", "Platypus")
-print(my_pet.name, "is a", my_pet.species)
+p = Pet()
+print("Hunger:", p.hunger)
+p.eat()
+print("Hunger:", p.hunger)
 ```

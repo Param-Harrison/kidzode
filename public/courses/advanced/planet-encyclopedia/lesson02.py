@@ -1,4 +1,4 @@
-# 🪐 PLANET ENCYCLOPEDIA: CASE 003
+# 🪐 PLANET ENCYCLOPEDIA
 # Goal: Build a Galaxy Database
 
 # 1. Create a list of dictionaries

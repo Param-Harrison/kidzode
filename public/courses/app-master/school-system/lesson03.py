@@ -1,18 +1,14 @@
-# 🏗️ APP MASTER: CASE 007
-# Goal: Loop Nested Objects
+# Project: School System
+# Goal: Drilling Down
 
-class Cat:
-    def __init__(self, n): self.name = n
+class Engine:
+    hp = 500
 
-class House:
+class Car:
     def __init__(self):
-        self.pets = [Cat("Kitty"), Cat("Luna")]
-    
-    def call_pets(self):
-        # 1. Loop through self.pets
-        for p in self.pets:
-            # 2. Access property of inner object
-            print("Here", p.name)
+        self.engine = Engine()
 
-h = House()
-h.call_pets()
+my_car = Car()
+
+# Access Engine INSIDE Car
+print("Horsepower:", my_car.engine.hp)

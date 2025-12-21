@@ -1,13 +1,13 @@
 # Hints for Custom Names
 
 ## 🟢 Hint 1
-Combine string and number:
-```python
-n = "Minion " + str(i)
-```
+Variable `i`:
+The loop variable (`for i in...`) counts for you.
 
 ## 🟡 Hint 2
-Pass `n` to constructor.
+String Conversion:
+`"Ghost " + str(i)`
 
 ## 🟠 Hint 3
-Print the whole list at the end. (We added `__repr__` so it prints nicely!).
+Creation:
+`g = Ghost(name_string)`

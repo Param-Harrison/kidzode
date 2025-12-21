@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 008
+# ☁️ API ARCHITECT
 # Goal: Auto-ID Generation
 
 db = [{"id": 1}, {"id": 2}, {"id": 3}]

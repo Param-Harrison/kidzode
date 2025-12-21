@@ -1,11 +1,13 @@
-# 🏗️ APP MASTER: CASE 001
+# Project: Pet Simulator
 # Goal: Methods
 
-class Car:
-    def honk(self):
-        print("Beep Beep! 🚗")
+class Dog:
+    def bark(self):
+        print("Woof Woof!")
 
-my_car = Car()
+    def sleep(self):
+        print("Zzz...")
 
-# 1. Call the method
-my_car.honk()
+rex = Dog()
+rex.bark()
+rex.sleep()

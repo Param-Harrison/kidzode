@@ -1,8 +1,16 @@
-### One way to solve it:
+### Solution
 
 ```python
-def heal(self):
-    self.hp += 20
-    if self.hp > 100:
-        self.hp = 100
+class Mage:
+    hp = 50
+    
+    def heal(self):
+        self.hp += 20
+        print("Casting Heal!")
+
+m = Mage()
+m.hp -= 30
+print("HP:", m.hp)
+m.heal()
+print("HP:", m.hp)
 ```

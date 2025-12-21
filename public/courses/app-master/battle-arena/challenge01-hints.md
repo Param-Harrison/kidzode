@@ -1,14 +1,13 @@
 # Hints for Healing
 
 ## 🟢 Hint 1
-Addition:
-```python
-self.hp += 20
-```
+Method:
+`def heal(self):`
 
 ## 🟡 Hint 2
-Cap logic:
-```python
-if self.hp > 100:
-    self.hp = 100
-```
+Math:
+`self.hp += 20`
+
+## 🟠 Hint 3
+Call order:
+Damage first, then Heal, then Print.

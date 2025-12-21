@@ -1,4 +1,4 @@
-# 😃 EMOJI ANALYZER: CASE 002
+# 😃 EMOJI ANALYZER
 # Goal: Treat text as data
 
 # 1. Create a message

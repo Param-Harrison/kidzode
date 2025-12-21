@@ -1,13 +1,14 @@
-# CHALLENGE 1: Custom Pet 🦕
+# CHALLENGE 1: Feeding Time
 
-Make a unique pet with a type.
-"Rex the Dinosaur" or "Nemo the Fish".
+Make the pet eat!
+Eating should decrease hunger.
+Use `self.hunger` to access internal state.
 
 ### Your Task:
-1. Define `class Pet`.
-2. `__init__` should take `name` and `species`.
-3. Store them in `self.name` and `self.species`.
-4. Create a pet and print: "[name] is a [species]".
+1. Define `Pet` class with `hunger = 50`.
+2. Add method `eat(self)`.
+3. Inside, `self.hunger -= 10`.
+4. Create pet, print hunger, call `eat()`, print hunger.
 
-### Achievement:
-You mastered object properties! 🏷️
+### Practical Use
+This allows items (Potions, Food) to affect player stats in games.

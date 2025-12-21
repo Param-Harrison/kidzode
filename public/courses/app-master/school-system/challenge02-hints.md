@@ -1,10 +1,13 @@
 # Hints for Find Student
 
 ## 🟢 Hint 1
-Almost same as last challenge.
+Comparison:
+`if s.name == name:`
 
 ## 🟡 Hint 2
-But return `m` (the object) instead of True.
+Return early:
+`return True` if found.
 
 ## 🟠 Hint 3
-This lets you edit the object outside the class!
+Return late:
+`return False` outside the loop.

@@ -1,20 +1,19 @@
-# 🏗️ APP MASTER: CASE 007
-# Goal: Add Object to List
+# Project: School System
+# Goal: Adding Objects
 
 class Book:
     def __init__(self, title):
         self.title = title
-    def __repr__(self): return self.title
 
 class Library:
     def __init__(self):
-        self.shelf = []
+        self.shelves = []
     
-    def stock(self, book_obj):
-        self.shelf.append(book_obj)
+    def stock(self, book):
+        self.shelves.append(book)
 
-lib = Library()
-b1 = Book("Harry Potter")
+city_lib = Library()
+city_lib.stock(Book("Harry Potter"))
+city_lib.stock(Book("The Hobbit"))
 
-lib.stock(b1)
-print(lib.shelf)
+print("Books:", len(city_lib.shelves))

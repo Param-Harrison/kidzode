@@ -1,18 +1,9 @@
 # ---- YOUR CHALLENGE ----
+
 import random
 
-class Deck:
-    def __init__(self):
-        self.cards = ["Ace", "King", "Queen"]
-    
-    def mix(self):
-        # 1. Use random.shuffle on the list
-        pass
-
-d = Deck()
-print("Before:", d.cards)
-
-# 2. Mix
-# 3. Print After
+# 1. Define Class
+# 2. Add numbers
+# 3. Shuffle
 
 # Write your code below!

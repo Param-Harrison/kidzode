@@ -1,23 +1,23 @@
 # Return Values ↩️
 
-Methods can give answers back.
-This is useful for validation.
-`return True` if successful, `False` if failed.
+Sometimes methods need to give back an answer.
+"Did the transaction work?"
+Return `True` or `False`.
 
-### The Logic
+### The Code
 ```python
-def pay(self, cost):
-    if self.money >= cost:
+def buy(self, cost):
+    if cost <= self.money:
         self.money -= cost
-        return True
-    return False
+        return True # Success
+    return False # Failed
 ```
 
 ### Your Goal
-1. Define `Account`, `bal = 20`.
-2. `pay(self, cost)` returns True/False.
-3. Call `result = acc.pay(50)`.
-4. Print "Success?" and `result`.
+1. `class Register`.
+2. `scan(price)` returns price * 1.1 (Tax).
+3. Call `total = r.scan(100)`.
+4. Print total (110.0).
 
-### Achievement
-↩️ **Cashier**: You validated the purchase!
+### Practical Use
+APIs return status codes (200 OK, 404 Error) to let the caller know what happened.

@@ -1,21 +1,26 @@
 # Adding Sub-Objects ➕
 
-We don't just add strings. We add Objects!
-`c.add_student( Student("Sam") )`
+We don't just add strings. We add full Objects.
+`school.add_room(Room("Math"))`.
 
-### The Logic
+### The Code
 ```python
-def add(self, student):
-    self.students.append(student)
+class Room:
+    def __init__(self, name):
+        self.name = name
+
+class School:
+    rooms = []
+    def add(self, room_obj):
+        self.rooms.append(room_obj)
 ```
 
 ### Your Goal
-1. Define `class Student` with `name`.
-2. Define `class Classroom`. Add `add(self, st)`.
-3. Create Room "Math".
-4. Create Student "Alex".
-5. Add Alex to Math.
-6. Print students list.
+1. `class Student` with name.
+2. `class Team` with `members = []`. `join(student)` method.
+3. Create Team "Tigers".
+4. Add Student "Leo". Add Student "Max".
+5. Print total members.
 
-### Achievement
-➕ **Registrar**: You enrolled a student!
+### Practical Use
+Shopping Carts contain Products. Libraries contain Books.

@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 001
+# ☁️ API ARCHITECT
 # Goal: Access nested data
 
 player = {

@@ -1,15 +1,14 @@
-# CHALLENGE 3: School Census 📊
+# CHALLENGE 3: School Census
 
-The School contains Classrooms.
-Each Classroom contains Students.
-Count EVERYONE.
+Count ALL students in the WHOLE school.
+Loop through Rooms, then sum their students.
 
 ### Your Task:
-1. `School` has list of `Classroom` objects.
-2. `Classroom` has list of `Student` objects.
-3. `school.total_students()` loop through rooms.
-4. Add `len(room.students)` to total.
-5. Create School, 2 Rooms, 3 Students total. Print count.
+1. `class School` with `rooms = []`.
+2. `class Room` with `students = []` (list of strings is fine).
+3. `School.count_all()` loop through rooms, add `len(room.students)` to total.
+4. Room 1 has 2 kids. Room 2 has 3 kids.
+5. Assert total is 5.
 
-### Achievement:
-You mastered the Hierarchy! 👑
+### Practical Use
+Aggregating data from sub-components is crucial for dashboards and analytics.

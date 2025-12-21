@@ -1,20 +1,16 @@
-# 🏗️ APP MASTER: CASE 008
-# Goal: System Integration
+# Project: Traffic Sim
+# Goal: The Simulation Loop
 
-class Gate:
-    def __init__(self): self.open = True
+class Raindrop:
+    y = 100
+    def fall(self):
+        self.y -= 10
 
-class Sheep:
-    def __init__(self): self.loc = 0
-    def run(self): self.loc += 1
+drops = [Raindrop(), Raindrop()]
 
-g = Gate()
-s = Sheep()
+# Simulation Step
+print("Rain falling...")
+for d in drops:
+    d.fall()
 
-# Simulation Loop
-for time in range(3):
-    if g.open:
-        s.run()
-        print("Sheep moved to", s.loc)
-    else:
-        print("Gate closed!")
+print("Drop 1 Height:", drops[0].y)

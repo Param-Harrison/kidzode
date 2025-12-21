@@ -1,4 +1,4 @@
-# 🪐 PLANET ENCYCLOPEDIA: CASE 003
+# 🪐 PLANET ENCYCLOPEDIA
 # Goal: Create a detailed record
 
 # 1. Create a dictionary for Earth

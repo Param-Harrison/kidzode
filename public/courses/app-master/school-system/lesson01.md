@@ -1,22 +1,27 @@
 # Containment Logic 🏫
 
-Objects can be inside objects!
-School -> Classrooms -> Students.
-This is called **Containment**.
+An object can **contain** other objects.
+A `School` has a list of `Classrooms`.
+A `Classroom` has a list of `Students`.
+This is called "Composition".
 
-### The Setup
+### The Code
 ```python
 class Classroom:
-    def __init__(self, room_num):
-        self.room = room_num
+    def __init__(self, name):
+        self.name = name
         self.students = []
+
+class School:
+    def __init__(self):
+        self.rooms = []
 ```
 
 ### Your Goal
-1. Define `class Classroom`.
-2. Init takes `name`. Create empty `self.students`.
-3. Create `c = Classroom("Science")`.
-4. Print `c.name` and `c.students`.
+1. Define `Box`. Init `self.toys = []`.
+2. Create `b = Box()`.
+3. Append "Car" to `b.toys`.
+4. Print `b.toys`.
 
-### Achievement
-🏫 **Principal**: You laid the foundation!
+### Practical Use
+A `Folder` contains `Files`. A `Window` contains `Buttons`. This hierarchy is everywhere.

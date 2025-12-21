@@ -1,14 +1,13 @@
-# CHALLENGE 1: Hero Party 🛡️
+# CHALLENGE 1: Hero Party
 
-Let's organize our team.
-Objects can be stored in **Lists**!
+Create a team of heroes.
+Use `__init__` to give them different levels.
 
 ### Your Task:
-1. Define `Hero` class (with name).
-2. Create an empty `party = []`.
-3. Create 3 heroes: "A", "B", "C".
-4. `.append()` them to the list.
-5. Loop through list and call `print()` on each.
+1. `class Hero` with `__init__(self, name, level)`.
+2. Create `h1` ("Knight", 10).
+3. Create `h2` ("Mage", 5).
+4. Print "[Name] is Level [Level]" for both.
 
-### Achievement:
-You managed a group of objects! ⚔️
+### Practical Use
+Character selection screens load data exactly like this.

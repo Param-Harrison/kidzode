@@ -1,18 +1,17 @@
-# 🏗️ APP MASTER: CASE 008
-# Goal: State Changes
+# Project: Traffic Sim
+# Goal: State Machine
 
-class Switch:
-    def __init__(self):
-        self.is_on = False
+class Door:
+    is_open = False
     
     def toggle(self):
-        if self.is_on:
-            self.is_on = False
-            print("OFF")
+        if self.is_open:
+            self.is_open = False
+            print("Closing door.")
         else:
-            self.is_on = True
-            print("ON")
+            self.is_open = True
+            print("Opening door.")
 
-s = Switch()
-s.toggle()
-s.toggle()
+d = Door()
+d.toggle()
+d.toggle()

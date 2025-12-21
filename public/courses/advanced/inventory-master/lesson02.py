@@ -1,4 +1,4 @@
-# 🎒 INVENTORY MASTER: CASE 005
+# 🎒 INVENTORY MASTER
 # Goal: Search for food
 
 backpack = [

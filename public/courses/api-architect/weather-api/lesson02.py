@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 004
+# ☁️ API ARCHITECT
 # Goal: Dig Deep
 
 api_response = {

@@ -1,4 +1,4 @@
-# 🎬 MOVIE MATCHER: CASE 006
+# 🎬 MOVIE MATCHER
 # Goal: Create the database
 
 # 1. Create a list of movies

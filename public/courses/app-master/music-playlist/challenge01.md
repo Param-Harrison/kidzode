@@ -1,14 +1,14 @@
-# CHALLENGE 1: Duration Total ⏱️
+# CHALLENGE 1: Duration Total
 
-How long is the album?
-Loop through songs and sum their seconds.
+Calculate how long the playlist is.
+Loop through all songs and sum their `duration`.
 
 ### Your Task:
-1. `Song` has `seconds`.
-2. `Playlist` has `get_total(self)`.
-3. Loop through `self.songs`. Add `s.seconds` to total.
-4. Return total.
-5. Add 2 songs (100s, 200s). Print total.
+1. `class Song` has `duration`.
+2. `class Playlist` has list of songs.
+3. Add `total_time()` method to Payload.
+4. It returns sum of all song durations.
+5. Add 2 songs (lengths 3 and 4). Verify total is 7.
 
-### Achievement:
-You calculated runtime data! 🧮
+### Practical Use
+Media players always show "Total Time: 45:12".

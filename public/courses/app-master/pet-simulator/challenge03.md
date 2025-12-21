@@ -1,14 +1,13 @@
-# CHALLENGE 3: Game Loop 🎮
+# CHALLENGE 3: Playful Mood
 
-Let's make it interactive.
-Feed or Play with your pet!
+Playing affects TWO variables.
+Fun goes UP, but Energy goes DOWN.
 
 ### Your Task:
-1. Define `Pet` with `energy`. `feed()` adds 5, `play()` removes 5.
-2. In the main code (outside class), loop `while True`.
-3. Ask input "feed or play?".
-4. Call the matching method based on input.
-5. Print current energy.
+1. `Pet` with `fun = 0` and `energy = 100`.
+2. `play(self)`: fun +20, energy -10.
+3. Call it 3 times.
+4. Print final stats.
 
-### Achievement:
-You built a full Object-Oriented Game! 🕹️
+### Practical Use
+Game mechanics are about balancing tradeoffs (e.g., Sprinting makes you faster but uses stamina).

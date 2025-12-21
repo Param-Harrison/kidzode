@@ -1,10 +1,12 @@
-# 🏗️ APP MASTER: CASE 007
-# Goal: Nested Objects
+# Project: School System
+# Goal: Nested Lists
 
-class Garage:
+class Backpack:
     def __init__(self):
-        # 1. A place to store Car objects
-        self.cars = []
+        self.items = []
 
-g = Garage()
-print("Garage created using", g.cars)
+b = Backpack()
+b.items.append("Pencil")
+b.items.append("Book")
+
+print("Backpack contains:", b.items)

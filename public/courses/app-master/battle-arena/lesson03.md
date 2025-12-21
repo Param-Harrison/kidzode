@@ -1,19 +1,21 @@
 # Interaction Logic 🥊
 
-Now one object calls a method ON another object.
-`attacker.attack(victim)`
+Now make them fight!
+`attack(self, target)` tells `target` to `take_damage`.
+One object calling another object's method.
 
-### The Logic
+### The Code
 ```python
 def attack(self, target):
-    target.take_damage(10)
+    print(self.name, "attacks", target.name)
+    target.take_damage(self.strength)
 ```
 
 ### Your Goal
-1. Define `Fighter` with `take_damage(amount)`.
-2. Add `punch(self, enemy)`.
-3. `punch` should call `enemy.take_damage(5)`.
-4. Create 2 fighters. Make P1 punch P2.
+1. `class Fighter` with name, hp, str.
+2. Methods `attack(target)` and `take_damage(amount)`.
+3. `f1` (str 10) attacks `f2` (hp 50).
+4. Print f2.hp (should be 40).
 
-### Achievement
-🥊 **Sparring Partner**: You connected two objects!
+### Practical Use
+The entire internet works this way: Your Browser (Object A) sends a Request to a Server (Object B).

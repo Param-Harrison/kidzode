@@ -1,4 +1,4 @@
-# 🎬 MOVIE MATCHER: CASE 006
+# 🎬 MOVIE MATCHER
 # Goal: Find the BEST movies
 
 movies = [

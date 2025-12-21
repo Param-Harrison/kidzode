@@ -1,14 +1,14 @@
-# CHALLENGE 2: Critical Hit ⚡
+# CHALLENGE 2: Critical Hit
 
-Sometimes attacks do double damage!
-Use random chance.
+Small chance to do DOUBLE damage.
+Use `random.randint`.
 
 ### Your Task:
-1. `attack(self, target)` method.
-2. random number 1-10.
-3. If num > 8, damage is 20 (Critical!).
-4. Else, damage is 10.
-5. Print "CRITICAL STRIKE!" if it happens.
+1. `attack(target)` method.
+2. Roll dice (1-10).
+3. If dice == 10: damage = strength * 2. Print "CRITICAL!".
+4. Else: damage = strength.
+5. Apply damage to target.
 
-### Achievement:
-You added RNG mechanics! 🎲
+### Practical Use
+Randomness (RNG) keeps games exciting and unpredictable.

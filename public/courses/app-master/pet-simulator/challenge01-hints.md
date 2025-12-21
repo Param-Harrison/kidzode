@@ -1,20 +1,15 @@
-# Hints for Custom Pet
+# Hints for Feeding Time
 
 ## 🟢 Hint 1
-Constructor Signature:
+Defining the method:
 ```python
-def __init__(self, name, species):
+def eat(self):
 ```
 
 ## 🟡 Hint 2
-Save data to self:
-```python
-self.name = name
-self.species = species
-```
+Changing variables:
+`self.hunger = self.hunger - 10`.
 
 ## 🟠 Hint 3
-Create instance:
-```python
-p = Pet("Rex", "Dino")
-```
+Calling it:
+Don't use `self` when calling! Just `my_pet.eat()`.

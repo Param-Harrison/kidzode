@@ -1,10 +1,22 @@
-### One way to solve it:
+### Solution
 
 ```python
-while w1.hp > 0 and w2.hp > 0:
-    w1.attack(w2)
-    if w2.hp > 0:
-        w2.attack(w1)
+class Fighter:
+    def __init__(self, name, hp, power):
+        self.name = name
+        self.hp = hp
+        self.power = power
+    
+    def attack(self, target):
+        target.hp -= self.power
+
+f1 = Fighter("A", 100, 10)
+f2 = Fighter("B", 80, 12)
+
+while f1.hp > 0 and f2.hp > 0:
+    f1.attack(f2)
+    f2.attack(f1)
+    print("Clash!")
 
 print("Game Over")
 ```

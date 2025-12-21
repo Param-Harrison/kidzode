@@ -1,13 +1,14 @@
-# CHALLENGE 1: Healing 💊
+# CHALLENGE 1: Healing
 
-Fighters need items!
-Add a method to heal HP.
+Add a `heal()` method.
+It should increase `hp`.
+But max HP cap is optional for now.
 
 ### Your Task:
-1. `heal(self)` method.
-2. Increases HP by 20.
-3. Don't go over 100! (`if self.hp > 100: self.hp = 100`).
-4. Damage a fighter, then heal them. Print HP.
+1. `class Mage` with `hp=50`.
+2. `heal(self)` adds 20 to hp.
+3. Mage takes 30 damage. Then heals.
+4. Print final hp.
 
-### Achievement:
-You implemented health packs! ➕
+### Practical Use
+The "Healer" class in games often just reverses the math of the "Warrior" class.

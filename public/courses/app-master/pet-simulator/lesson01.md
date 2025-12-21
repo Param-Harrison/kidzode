@@ -1,22 +1,24 @@
 # The Blueprint (Class) 🏗️
 
-A **Class** is a blueprint.
-It tells Python how to build an object.
-It's like a plan for a house.
+Object Oriented Programming (OOP) lets us create our own Types.
+A **Class** is a Blueprint (Template).
+An **Object** is the real thing built from that blueprint.
 
-### The Syntax
-We use the keyword `class` and `Capitalize` the name.
-
+### The Code
 ```python
 class Robot:
-    pass # Empty blueprint
+    name = "Bot"
+
+# Build one!
+my_bot = Robot()
+print(my_bot.name)
 ```
 
 ### Your Goal
-1. Define a class named `Pet`.
-2. Inside, put `pass`.
-3. Create an object `my_pet = Pet()`.
-4. Print `my_pet`.
+1. Define class `Dog`.
+2. Inside, set variable `sound = "Woof"`.
+3. Create `my_dog = Dog()`.
+4. Print `my_dog.sound`.
 
-### Achievement
-🏗️ **Architect**: You designed your first software object!
+### Practical Use
+Every element in a video game (Player, Enemy, Bullet) is an Object built from a Class.

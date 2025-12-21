@@ -1,14 +1,13 @@
-# CHALLENGE 3: Shuffle Mode 🔀
+# CHALLENGE 3: Shuffle Mode
 
-Shake it up!
-Randomize the order.
+Randomize the order!
+Use `random.shuffle()`.
 
 ### Your Task:
 1. `import random`.
-2. `Playlist` has `shuffle(self)`.
-3. Use `random.shuffle(self.songs)`.
-4. Add 3 songs: "A", "B", "C".
-5. Shuffle and print.
+2. `class Playlist` with `shuffle()`.
+3. Calls `random.shuffle(self.songs)`.
+4. Add 3 numbers [1, 2, 3]. Shuffle. Print list.
 
-### Achievement:
-You implemented randomness! 🎲
+### Practical Use
+"Shuffle" is one of the most strictly algorithmic features in music players.

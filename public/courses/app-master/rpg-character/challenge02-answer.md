@@ -1,14 +1,18 @@
-### One way to solve it:
+### Solution
 
 ```python
-class Hero:
-    def __init__(self):
-        self.lvl = 1
+class Role:
+    def __init__(self, name):
+        self.name = name
+        self.level = 1
     
-    def train(self):
-        self.lvl += 1
-        print("Level Up!", self.lvl)
+    def levelup(self):
+        self.level += 1
 
-h = Hero()
-h.train()
+r = Role("Sniper")
+r.levelup()
+r.levelup()
+r.levelup()
+
+print("Final Level:", r.level)
 ```

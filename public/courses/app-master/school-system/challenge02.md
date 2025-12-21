@@ -1,15 +1,14 @@
-# CHALLENGE 2: Find Student 🕵️
+# CHALLENGE 2: Find Student
 
-Get the actual Student object by name.
-So we can modify it!
+Search for a student by name.
+Return "Found" or "Not Found".
 
 ### Your Task:
-1. `get_student(self, name)` returns the object.
-2. If not found, `return None`.
-3. Add "Ben".
-4. `s = room.get_student("Ben")`.
-5. `s.name = "Benjamin"`.
-6. Print the updated list.
+1. `class Classroom` with `find(name)` method.
+2. Loop through `self.students`.
+3. If `s.name == name`, return True.
+4. If loop finishes, return False.
+5. Add "Jim". Search for "Jim" (True) and "Pam" (False).
 
-### Achievement:
-You implemented Object Retrieval! 🎣
+### Practical Use
+Searching is "O(n)" complexity (checking every item). Smart databases use indexes, but keeping it simple is fine for now!

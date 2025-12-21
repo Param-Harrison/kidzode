@@ -1,4 +1,4 @@
-# ⚔️ VERSUS MODE: CASE 007
+# ⚔️ VERSUS MODE
 # Goal: Increase stats
 
 player = {"name": "Wizard", "atk": 50}

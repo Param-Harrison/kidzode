@@ -1,25 +1,24 @@
-# The System Loop 🏙️
+# The System Loop 🌍
 
-The City updates everything every second.
-Light checks color. Car checks Light.
+The "World" controls time.
+It has a list of objects.
+It calls `update()` on every object, every tick.
 
-### The Logic
+### The Code
 ```python
-light = Light()
-car = Car()
-
-for i in range(5):
-    if light.color == "Green":
-        car.drive()
-    light.change()
+class World:
+    cars = []
+    
+    def tick(self):
+        for c in self.cars:
+            c.move()
 ```
 
 ### Your Goal
-1. Define `Light` (starts Green) and `Car` (pos 0).
-2. Loop 3 times.
-3. Check `if light.color == "Green": car.drive()`.
-4. `else: print("Stop")`.
-5. Print car position each time.
+1. `class Clock` with `time`.
+2. `class World` with `clocks = []`.
+3. `tick()` loops through clocks and calls `tick()`.
+4. Create world, add 2 clocks, run `world.tick()`.
 
-### Achievement
-🏙️ **Mayor**: You built a functioning city!
+### Practical Use
+Physics engines run a `tick()` function that updates gravity and collisions for thousands of objects at once.

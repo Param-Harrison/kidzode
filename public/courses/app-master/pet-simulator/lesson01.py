@@ -1,12 +1,11 @@
-# 🏗️ APP MASTER: CASE 001
+# Project: Pet Simulator
 # Goal: Define a Class
 
-# 1. Create the Blueprint
-class Dog:
-    pass
+class Cat:
+    # This variable belongs to the cat
+    color = "Orange"
 
-# 2. Build the Object (Instance)
-buddy = Dog()
+# Create a new Cat object
+garfield = Cat()
 
-# 3. Inspect it
-print("Created:", buddy)
+print("Cat Color:", garfield.color)

@@ -1,14 +1,14 @@
-# CHALLENGE 3: Area Damage 💥
+# CHALLENGE 3: Area Damage
 
-Fireball!
-Damage ALL enemies at once.
+The Player uses a bomb!
+Damage EVERY enemy in the list.
 
 ### Your Task:
-1. Spawn 3 enemies with `hp = 10`.
-2. Loop through them.
-3. `enemy.hp -= 5`.
-4. Check `if enemy.hp <= 0` print "Defeated!".
-5. Print all final HP.
+1. `class Alien` with `hp = 10`.
+2. List `swarm` with 5 Aliens.
+3. Loop through swarm.
+4. Reduce `hp` by 5 for each.
+5. Print first alien's `hp` (should be 5).
 
-### Achievement:
-You implemented Splash Damage! 🌊
+### Practical Use
+AOE (Area of Effect) attacks in RPGs loop through all nearby targets and apply damage.

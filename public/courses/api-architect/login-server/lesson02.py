@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 002
+# ☁️ API ARCHITECT
 # Goal: Verify Password
 
 users = {"neo": "matrix"}

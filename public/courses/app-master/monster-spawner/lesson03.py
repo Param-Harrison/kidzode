@@ -1,12 +1,12 @@
-# 🏗️ APP MASTER: CASE 003
-# Goal: Mass Control
+# Project: Monster Spawner
+# Goal: Tracking Objects
 
-class Bee:
-    def buzz(self):
-        print("Bzzz...")
+class Rat:
+    pass # Empty class
 
-hive = [Bee(), Bee(), Bee()]
+rats = []
 
-# 1. Make them all buzz
-for b in hive:
-    b.buzz()
+for i in range(5):
+    rats.append(Rat())
+
+print("Total Rats:", len(rats))

@@ -1,20 +1,25 @@
 # Random Varieties 🎲
 
-Not all enemies are the same.
-We can use `random` to mix stats.
+Not all enemies are identical.
+Use `random` to give them different levels or types.
 
-### The Setup
+### The Code
 ```python
 import random
-self.hp = random.randint(10, 50)
+
+class Orc:
+    def __init__(self):
+        self.level = random.randint(1, 10)
+
+o = Orc()
+print(o.level)
 ```
 
 ### Your Goal
 1. Import random.
-2. Define `class Orc`.
-3. In Init, set `hp` to random number 1-100.
-4. Spawn 3 Orcs.
-5. Print each one's HP.
+2. Define `Slime` with `self.color`.
+3. Select color from `["Green", "Blue", "Red"]`.
+4. Spawn 3 slimes and print their colors.
 
-### Achievement
-🎲 **Game Designer**: You added procedural generation!
+### Practical Use
+This is how "Procedural Generation" works in games like Minecraft.

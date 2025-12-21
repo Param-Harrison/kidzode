@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 007
+# ☁️ API ARCHITECT
 # Goal: Tokenize (Split) Strings
 
 sentence = "The quick brown fox"

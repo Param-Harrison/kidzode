@@ -1,20 +1,11 @@
-# 🏗️ APP MASTER: CASE 004
-# Goal: Return Status
+# Project: Bank System
+# Goal: Returning Data
 
-class TicketMachine:
-    def __init__(self):
-        self.tickets = 5
-    
-    def buy(self):
-        if self.tickets > 0:
-            self.tickets -= 1
-            return True
-        else:
-            return False
+class Calculator:
+    def add_tax(self, price):
+        return price + (price * 0.2)
 
-tm = TicketMachine()
+calc = Calculator()
+final_price = calc.add_tax(100)
 
-# 1. Capture the return value
-is_success = tm.buy()
-
-print("Did I get a ticket?", is_success)
+print("Final Price:", final_price)

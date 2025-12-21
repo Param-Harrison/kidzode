@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 008
+# ☁️ API ARCHITECT
 # Goal: Setup Cloud DB
 
 # 1. Define lists of users

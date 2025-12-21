@@ -1,9 +1,18 @@
-### One way to solve it:
+### Solution
 
 ```python
-def swipe(self, amount):
-    if self.bal >= amount:
-        self.bal -= amount
-        return True
-    return False
+class Account:
+    bal = 50
+    
+    def withdraw(self, amt):
+        if amt > self.bal:
+            return False
+        else:
+            self.bal -= amt
+            return True
+
+a = Account()
+print(a.withdraw(100)) # False
+print(a.withdraw(20))  # True
+print("Remaining:", a.bal)
 ```

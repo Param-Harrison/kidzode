@@ -1,4 +1,4 @@
-# ☁️ API ARCHITECT: CASE 003
+# ☁️ API ARCHITECT
 # Goal: Keyword Detection
 
 message = "Where can I buy a ticket?"

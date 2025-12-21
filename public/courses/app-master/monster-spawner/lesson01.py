@@ -1,15 +1,10 @@
-# 🏗️ APP MASTER: CASE 003
-# Goal: Spawn Enemies
+# Project: Monster Spawner
+# Goal: The Loop
 
-class Slime:
-    pass
+class Goblin:
+    def __init__(self):
+        print("A goblin appears!")
 
-field = []
-
-# 1. Spawn 3 slimes
+# Spawn 3 goblins
 for i in range(3):
-    print("Spawning slime", i)
-    s = Slime()
-    field.append(s)
-
-print("Total Slimes:", len(field))
+    Goblin()

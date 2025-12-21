@@ -1,15 +1,12 @@
-# 🏗️ APP MASTER: CASE 002
-# Goal: Pretty Print
+# Project: RPG Creator
+# Goal: Pretty Printing
 
-class Item:
-    def __init__(self, name):
-        self.name = name
-    
-    # 1. Add __str__ method
+class Badge:
+    def __init__(self, title):
+        self.title = title
+
     def __str__(self):
-        return "Item: " + self.name
+        return "[" + self.title + "]"
 
-sword = Item("Excalibur")
-
-# 2. Print the object directly
-print(sword)
+b = Badge("Officer")
+print(b)
