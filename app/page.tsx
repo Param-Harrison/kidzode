@@ -19,7 +19,6 @@ export default function Home() {
 
         <div className="container mx-auto px-4 flex flex-col items-center text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-secondary px-4 py-1.5 border-[2px] border-foreground shadow-[4px_4px_0px_0px_currentColor] mb-8 font-bold uppercase tracking-widest transform -rotate-1 text-xs">
-            <Zap className="w-4 h-4 fill-primary text-primary" />
             Empowering Young Minds
           </div>
           
@@ -35,7 +34,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm justify-center">
              <Link href="/courses" className="w-full">
-              <NeoButton className="w-full bg-secondary text-foreground px-8 py-6 text-lg h-auto shadow-[6px_6px_0px_0px_currentColor] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] flex items-center justify-center gap-3 border-[3px] border-foreground transition-all">
+              <NeoButton className="w-full bg-secondary text-foreground px-8 py-6 text-lg h-auto shadow-[6px_6px_0px_0px_currentColor] hover:bg-secondary hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] flex items-center justify-center gap-3 border-[3px] border-foreground transition-all">
                 <Terminal className="w-5 h-5" />
                 Start Coding Journey
               </NeoButton>

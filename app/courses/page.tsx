@@ -1,10 +1,9 @@
 import { Navbar } from "@/components/navbar"
-import { CourseCard } from "@/components/course-card"
 import { Footer } from "@/components/footer"
 import { courses } from "@/lib/courses-data"
 import { TechGrid } from "@/components/ui/neobrutalism/tech-grid"
 import Link from "next/link"
-import { ArrowRight, CheckCircle, Terminal } from "lucide-react"
+import { CheckCircle, Terminal } from "lucide-react"
 import { NeoButton } from "@/components/ui/neobrutalism/neo-button"
 
 export default function CoursesPage() {
@@ -93,13 +92,17 @@ export default function CoursesPage() {
      <section className="bg-secondary/10 border-t-[3px] border-foreground py-20 relative overflow-hidden mt-12">
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-black uppercase font-lexend mb-6 leading-tight">
-            Not sure where to start?
+            Incremental Learning
           </h2>
           <p className="text-xl font-bold mb-10 max-w-2xl mx-auto leading-relaxed text-muted-foreground">
-             Our adaptive curriculum adjusts to your child's pace. Start with the basics and we'll guide them up toward mastery.
+            Learn one concept at a time and build on it.  
           </p>
           <div className="inline-flex gap-4">
-               <NeoButton neoVariant="secondary" className="px-8 py-4 border-[3px] border-foreground shadow-[4px_4px_0px_0px_currentColor]">View Syllabus</NeoButton>
+            <Link href="/courses/foundation">
+              <NeoButton neoVariant="secondary" className="px-8 py-8 border-[3px] border-foreground shadow-[4px_4px_0px_0px_currentColor]">
+                Start Learning
+              </NeoButton>
+            </Link>
           </div>
         </div>
       </section>
