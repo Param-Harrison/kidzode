@@ -215,19 +215,19 @@ export function CourseLessonsList({ bookId, book, onProgressLoaded }: CourseLess
 
   if (book.projects) {
     return (
-      <div className="space-y-32 py-16 relative">
+      <div className="space-y-24 md:space-y-32 py-8 md:py-16 relative">
         {book.projects.map((project, projectIndex) => (
           <div key={project.id} className="relative">
             {/* Zone Marker / Header */}
-            <div className="flex justify-center mb-24 sticky top-24 z-[30]">
-               <div className="bg-white border-[3px] border-black px-8 py-6 rounded-[2.5rem] shadow-[8px_8px_0px_0px_#000] text-center max-w-2xl mx-auto backdrop-blur-md transition-all hover:scale-[1.02] hover:shadow-[10px_10px_0px_0px_#000]">
-                  <div className="inline-block bg-blue-100 text-blue-700 text-xs font-black uppercase px-3 py-1 rounded-full border border-blue-200 mb-3">
+            <div className="flex justify-start md:justify-center mb-16 md:mb-24 sticky top-16 md:top-24 z-[30] px-4 md:px-0 ml-2 md:ml-0">
+               <div className="bg-white border-[3px] border-black px-5 py-4 md:px-8 md:py-6 rounded-[2rem] md:rounded-[2.5rem] shadow-[6px_6px_0px_0px_#000] md:shadow-[8px_8px_0px_0px_#000] text-left md:text-center max-w-2xl backdrop-blur-md transition-all hover:scale-[1.02] hover:shadow-[10px_10px_0px_0px_#000]">
+                  <div className="inline-block bg-blue-100 text-blue-700 text-[10px] md:text-xs font-black uppercase px-2 py-0.5 md:px-3 md:py-1 rounded-full border border-blue-200 mb-2 md:mb-3">
                     Project {projectIndex + 1}
                   </div>
-                  <h2 className="text-3xl md:text-5xl font-black font-lexend uppercase tracking-tight mb-3 text-black leading-tight">
+                  <h2 className="text-2xl md:text-5xl font-black font-lexend uppercase tracking-tight mb-2 md:mb-3 text-black leading-tight">
                     {project.name}
                   </h2>
-                  <p className="text-sm md:text-base font-bold text-slate-500 leading-relaxed max-w-lg mx-auto italic">
+                  <p className="text-xs md:text-base font-bold text-slate-500 leading-relaxed max-w-lg italic">
                     {project.description}
                   </p>
                </div>

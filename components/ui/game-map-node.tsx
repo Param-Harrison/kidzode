@@ -25,20 +25,20 @@ export function GameMapNode({ lesson, index, status, position, bookId, isLast }:
   
   return (
     <div className={cn(
-      "relative flex items-center w-full mb-20 md:mb-24", 
-      isLeft ? "flex-row-reverse" : "flex-row"
+      "relative flex items-center w-full mb-12 md:mb-24 px-2 md:px-0", 
+      isLeft ? "md:flex-row-reverse" : "flex-row"
     )}>
       
       {/* Connector Line - Dashed path feel */}
       {!isLast && (
-        <div className="absolute left-1/2 -translate-x-1/2 top-16 bottom-[-130px] w-0 border-l-[4px] border-dashed border-black/30 z-0" />
+        <div className="absolute left-[44px] md:left-1/2 -translate-x-1/2 top-16 bottom-[-100px] md:bottom-[-130px] w-0 border-l-[4px] border-dashed border-black/30 z-0" />
       )}
 
       {/* Interactive Hub */}
       <div className="flex-1 hidden md:block" />
       
       {/* Node Circle */}
-      <div className="relative z-10 flex items-center shrink-0 mx-auto group">
+      <div className="relative z-10 flex items-center shrink-0 ml-1 md:ml-0 md:mx-auto group">
         <Link href={status === 'locked' ? '#' : `/courses/${bookId}/lessons/${lesson.id}`} 
           className={cn(
             "relative",
@@ -73,7 +73,7 @@ export function GameMapNode({ lesson, index, status, position, bookId, isLast }:
       {/* Info Card */}
       <div className={cn(
         "flex-1 flex", 
-        isLeft ? "justify-end pr-6 md:pr-16" : "justify-start pl-6 md:pl-16"
+        isLeft ? "justify-start pl-6 md:justify-end md:pr-16 md:pl-0" : "justify-start pl-6 md:pl-16"
       )}>
         <Link href={status === 'locked' ? '#' : `/courses/${bookId}/lessons/${lesson.id}`} className={cn(
             "block w-full max-w-sm transition-all duration-300",
@@ -87,7 +87,7 @@ export function GameMapNode({ lesson, index, status, position, bookId, isLast }:
           )}>
             {/* Connector Arm with Dot */}
             <div className={cn(
-              "absolute top-1/2 -translate-y-1/2 w-6 md:w-16 h-[2px] bg-black/20 z-[-1]",
+              "absolute top-1/2 -translate-y-1/2 w-6 md:w-16 h-[2px] bg-black/20 z-[-1] hidden md:block",
               isLeft ? "-right-6 md:-right-16" : "-left-6 md:-left-16",
               status === 'active' && "bg-black/40 h-[3px]"
             )} />
