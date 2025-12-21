@@ -1,7 +1,7 @@
-## Welcome to Rocket Countdown! 🚀
+# Welcome to Rocket Countdown! 🚀
 3... 2... 1... BLAST OFF! We're going to build a countdown timer for a space mission.
 
-# Counting with Range 🔢
+## Counting with Range 🔢
 
 The `range()` function is very powerful. It can generate a sequence of numbers for our loops.
 

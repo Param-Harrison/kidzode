@@ -1,7 +1,7 @@
-## Welcome to Music Playlist! 🎶
+# Welcome to Music Playlist! 🎶
 Turn up the volume! Let's build a smart music player that can organize your favorite tracks and play them in the perfect order!
 
-# Song Objects 🎵
+## Song Objects 🎵
 
 A playlist isn't just a list of strings "Song.mp3".
 It is a list of Song OBJECTS (Title, Artist, Duration).

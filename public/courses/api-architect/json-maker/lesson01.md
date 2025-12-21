@@ -1,7 +1,7 @@
-## Welcome to JSON Maker! 📄
+# Welcome to JSON Maker! 📄
 In the world of the internet, JSON is the universal language that computers use to talk to each other. Let's learn how to write it like a pro!
 
-# What is JSON? 📄
+## What is JSON? 📄
 
 Computers use **JSON** (JavaScript Object Notation) to talk to each other.
 It looks EXACTLY like a Python Dictionary!

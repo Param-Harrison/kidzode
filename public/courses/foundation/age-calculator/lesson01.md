@@ -1,7 +1,7 @@
-## Welcome to Age Calculator! 🎂
+# Welcome to Age Calculator! 🎂
 Ever wondered how old you'll be on Mars or in the year 2050? Let's build a tool to find out!
 
-# Asking Questions ❓
+## Asking Questions ❓
 
 What if we want the computer to ask us something? We use the `input()` command!
 

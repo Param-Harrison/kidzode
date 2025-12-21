@@ -1,7 +1,7 @@
-## Welcome to School System! 🏫
+# Welcome to School System! 🏫
 Ready to run your own academy? We're going to build a master manager to track classrooms, students, and everything in between!
 
-# Containment Logic 🏫
+## Containment Logic 🏫
 
 An object can **contain** other objects.
 A `School` has a list of `Classrooms`.

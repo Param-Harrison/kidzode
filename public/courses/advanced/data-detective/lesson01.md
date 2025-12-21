@@ -1,7 +1,7 @@
-## Welcome to Data Detective! 🕵️‍♂️
+# Welcome to Data Detective! 🕵️‍♂️
 A crime has been committed, and the only way to solve it is to follow the digital footprints. Let's learn how to organize clues and unmask the culprit!
 
-# The Suspect List 📋
+## The Suspect List 📋
 
 Welcome, Data Scientist! 🕵️‍♂️
 

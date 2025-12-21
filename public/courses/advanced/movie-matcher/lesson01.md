@@ -1,7 +1,7 @@
-## Welcome to Movie Matcher! 🎬
+# Welcome to Movie Matcher! 🎬
 Stuck on what to watch? We're going to build a recommendation engine just like Netflix to help you find the perfect movie for your mood!
 
-# The Movie Database 🎬
+## The Movie Database 🎬
 
 Netflix uses data to know what you like.
 To build our own app, we need a list of movies with details.

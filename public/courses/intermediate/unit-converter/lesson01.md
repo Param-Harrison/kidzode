@@ -1,7 +1,7 @@
-## Welcome to Unit Converter! 🏎️
+# Welcome to Unit Converter! 📏
 Whether you're a scientist or an explorer, you'll often need to swap units. Let's build a universal math engine for lengths, weights, and more!
 
-# The Conversion Logic ⚙️
+## The Conversion Science 🧪
 
 Engineers often need to change data from one format to another. We can build specific functions that do this math for us!
 

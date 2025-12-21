@@ -1,7 +1,7 @@
-## Welcome to Chatbot API! 🤖
+# Welcome to Chatbot API! 🤖
 Want to build your own digital assistant like Siri or Alexa? Let's learn how to make computers understand and respond to human messages!
 
-# The Request 📨
+## The Request 📨
 
 Computers talk in **Requests** and **Responses**.
 A Request is just a message sent to the server.

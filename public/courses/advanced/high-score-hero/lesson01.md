@@ -1,7 +1,7 @@
-## Welcome to High Score Hero! 🏆
+# Welcome to High Score Hero! 🏆
 Who is the ultimate champion? Let's build a pro-level scoreboard that can find the winners and analyze game stats like a real data scientist!
 
-# The Scoreboard 🏆
+## The Scoreboard 🏆
 
 To find a winner, we need a list of numbers.
 In Data Science, this is called a **Numerical Dataset**.

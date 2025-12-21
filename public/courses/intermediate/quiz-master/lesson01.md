@@ -1,7 +1,7 @@
-## Welcome to Quiz Master! 🧠
+# Welcome to Quiz Master! 🧠
 Think you know everything? Let's build a challenging quiz game to test your friends and family on any topic!
 
-# The Quiz Bank 🏦
+## The Quiz Bank 🏦
 
 To build a professional quiz, we need a way to store our questions and answers. We can use a **List of Dictionaries**.
 

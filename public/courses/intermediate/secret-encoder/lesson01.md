@@ -1,4 +1,4 @@
-## Welcome to Secret Encoder! 🤫
+# Welcome to Secret Encoder! 🕵️‍♂️
 Want to send hidden messages to your friends? We're going to build a spy tool that turns normal text into secret codes!
 
 # Character Secrets 🤫

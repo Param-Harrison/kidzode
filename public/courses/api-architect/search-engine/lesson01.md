@@ -1,7 +1,7 @@
-## Welcome to Search Engine! 🔍
+# Welcome to Search Engine! 🔍
 Looking for a needle in a digital haystack? We're going to build a high-speed index like Google to find information in a flash!
 
-# The Word Index 📖
+## The Word Index 📖
 
 Search engines don't read every page every time.
 They cheat! They use an **Index**.

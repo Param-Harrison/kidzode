@@ -1,7 +1,7 @@
-## Welcome to RPG Character! 🧙‍♂️
+# Welcome to RPG Character! 🧙‍♂️
 From humble beginnings to legendary heroes, we're going to build a character system that tracks the growth and stats of your favorite adventurers!
 
-# Multiple Instances 👯
+## Multiple Instances 👯
 
 The power of OOP is creating MANY objects from ONE class.
 Each object has its own memory.

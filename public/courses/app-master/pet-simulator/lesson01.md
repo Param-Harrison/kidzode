@@ -1,7 +1,7 @@
-## Welcome to Pet Simulator! 🐶
+# Welcome to Pet Simulator! 🐶
 Ready to adopt a digital friend? We're going to build a simulator where you can create, care for, and play with your very own digital pets!
 
-# The Blueprint (Class) 🏗️
+## The Blueprint (Class) 🏗️
 
 Object Oriented Programming (OOP) lets us create our own Types.
 A **Class** is a Blueprint (Template).

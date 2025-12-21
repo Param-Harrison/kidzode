@@ -1,7 +1,7 @@
-## Welcome to Shopping List! 📝
+# Welcome to Shopping List! 📝
 Preparing for a party or a trip to the moon? Let's build a smart list to track everything you need.
 
-# Adding to the List 🛒
+## Adding to the List 🛒
 
 We know how to create a list, but how do we add more items to it while the program is running? We use `.append()`.
 

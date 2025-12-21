@@ -1,7 +1,7 @@
-## Welcome to Monster Spawner! 👾
+# Welcome to Monster Spawner! 👾
 A wave of danger is approaching! Let's learn how game engines create hundreds of enemies in the blink of an eye to challenge any player!
 
-# The Spawner Loop 🔄
+## The Spawner Loop 🔄
 
 Creating 100 enemies one by one is boring.
 Use a loop!
