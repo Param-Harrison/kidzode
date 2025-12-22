@@ -9,28 +9,28 @@
       "description": "Create your own digital pet! Learn about Classes and Objects by giving your pet life, hunger, and happiness.",
       "lessons": [
         {
-          "id": "app-01-01",
+          "id": "the-blueprint-class",
           "name": "The Blueprint (Class)",
           "guide": "pet-simulator/lesson01.md",
           "py": "pet-simulator/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "app-01-02",
+          "id": "birth-the-init",
           "name": "Birth (The Init)",
           "guide": "pet-simulator/lesson02.md",
           "py": "pet-simulator/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "app-01-03",
+          "id": "actions-methods",
           "name": "Actions (Methods)",
           "guide": "pet-simulator/lesson03.md",
           "py": "pet-simulator/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "app-01-04",
+          "id": "challenge-1-custom-pet",
           "name": "CHALLENGE 1: Custom Pet",
           "guide": "pet-simulator/challenge01.md",
           "py": "pet-simulator/challenge01.py",
@@ -39,7 +39,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-01-05",
+          "id": "challenge-2-energy-meter",
           "name": "CHALLENGE 2: Energy Meter",
           "guide": "pet-simulator/challenge02.md",
           "py": "pet-simulator/challenge02.py",
@@ -48,7 +48,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-01-06",
+          "id": "challenge-3-game-loop",
           "name": "CHALLENGE 3: Game Loop",
           "guide": "pet-simulator/challenge03.md",
           "py": "pet-simulator/challenge03.py",
@@ -64,28 +64,28 @@
       "description": "Mass production! Use your class Blueprint to create an army of unique Heroes with different stats.",
       "lessons": [
         {
-          "id": "app-02-01",
+          "id": "multiple-instances",
           "name": "Multiple Instances",
           "guide": "rpg-character/lesson01.md",
           "py": "rpg-character/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "app-02-02",
+          "id": "different-stats",
           "name": "Different Stats",
           "guide": "rpg-character/lesson02.md",
           "py": "rpg-character/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "app-02-03",
+          "id": "the-string-method",
           "name": "The String Method",
           "guide": "rpg-character/lesson03.md",
           "py": "rpg-character/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "app-02-04",
+          "id": "challenge-1-hero-party",
           "name": "CHALLENGE 1: Hero Party",
           "guide": "rpg-character/challenge01.md",
           "py": "rpg-character/challenge01.py",
@@ -94,7 +94,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-02-05",
+          "id": "challenge-2-level-up",
           "name": "CHALLENGE 2: Level Up",
           "guide": "rpg-character/challenge02.md",
           "py": "rpg-character/challenge02.py",
@@ -103,7 +103,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-02-06",
+          "id": "challenge-3-battle-simulator",
           "name": "CHALLENGE 3: Battle Simulator",
           "guide": "rpg-character/challenge03.md",
           "py": "rpg-character/challenge03.py",
@@ -119,28 +119,28 @@
       "description": "Game Design 101: Use a loop to automatically create hundreds of enemies. Just like a real video game!",
       "lessons": [
         {
-          "id": "app-03-01",
+          "id": "the-spawner-loop",
           "name": "The Spawner Loop",
           "guide": "monster-spawner/lesson01.md",
           "py": "monster-spawner/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "app-03-02",
+          "id": "random-varieties",
           "name": "Random Varieties",
           "guide": "monster-spawner/lesson02.md",
           "py": "monster-spawner/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "app-03-03",
+          "id": "managing-the-horde",
           "name": "Managing the Horde",
           "guide": "monster-spawner/lesson03.md",
           "py": "monster-spawner/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "app-03-04",
+          "id": "challenge-1-custom-names",
           "name": "CHALLENGE 1: Custom Names",
           "guide": "monster-spawner/challenge01.md",
           "py": "monster-spawner/challenge01.py",
@@ -149,7 +149,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-03-05",
+          "id": "challenge-2-strongest-enemy",
           "name": "CHALLENGE 2: Strongest Enemy",
           "guide": "monster-spawner/challenge02.md",
           "py": "monster-spawner/challenge02.py",
@@ -158,7 +158,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-03-06",
+          "id": "challenge-3-area-damage",
           "name": "CHALLENGE 3: Area Damage",
           "guide": "monster-spawner/challenge03.md",
           "py": "monster-spawner/challenge03.py",
@@ -174,28 +174,28 @@
       "description": "Secure your money! Build methods to Deposit, Withdraw, and Transfer funds between accounts.",
       "lessons": [
         {
-          "id": "app-04-01",
+          "id": "deposit-method",
           "name": "Deposit Method",
           "guide": "bank-system/lesson01.md",
           "py": "bank-system/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "app-04-02",
+          "id": "withdraw-logic",
           "name": "Withdraw Logic",
           "guide": "bank-system/lesson02.md",
           "py": "bank-system/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "app-04-03",
+          "id": "return-values",
           "name": "Return Values",
           "guide": "bank-system/lesson03.md",
           "py": "bank-system/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "app-04-04",
+          "id": "challenge-1-transfer-funds",
           "name": "CHALLENGE 1: Transfer Funds",
           "guide": "bank-system/challenge01.md",
           "py": "bank-system/challenge01.py",
@@ -204,7 +204,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-04-05",
+          "id": "challenge-2-overdraft-protection",
           "name": "CHALLENGE 2: Overdraft Protection",
           "guide": "bank-system/challenge02.md",
           "py": "bank-system/challenge02.py",
@@ -213,7 +213,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-04-06",
+          "id": "challenge-3-activity-log",
           "name": "CHALLENGE 3: Activity Log",
           "guide": "bank-system/challenge03.md",
           "py": "bank-system/challenge03.py",
@@ -229,28 +229,28 @@
       "description": "DJ mode ON! Create a system to manage songs. Add favorites, shuffle the list, and play the next track.",
       "lessons": [
         {
-          "id": "app-05-01",
+          "id": "song-objects",
           "name": "Song Objects",
           "guide": "music-playlist/lesson01.md",
           "py": "music-playlist/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "app-05-02",
+          "id": "the-playlist-class",
           "name": "The Playlist Class",
           "guide": "music-playlist/lesson02.md",
           "py": "music-playlist/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "app-05-03",
+          "id": "play-next",
           "name": "Play Next",
           "guide": "music-playlist/lesson03.md",
           "py": "music-playlist/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "app-05-04",
+          "id": "challenge-1-duration-total",
           "name": "CHALLENGE 1: Duration Total",
           "guide": "music-playlist/challenge01.md",
           "py": "music-playlist/challenge01.py",
@@ -259,7 +259,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-05-05",
+          "id": "challenge-2-remove-song",
           "name": "CHALLENGE 2: Remove Song",
           "guide": "music-playlist/challenge02.md",
           "py": "music-playlist/challenge02.py",
@@ -268,7 +268,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-05-06",
+          "id": "challenge-3-shuffle-mode",
           "name": "CHALLENGE 3: Shuffle Mode",
           "guide": "music-playlist/challenge03.md",
           "py": "music-playlist/challenge03.py",
@@ -284,28 +284,28 @@
       "description": "Fight! Build an arena where Fighters attack, heal, and use special abilities against each other.",
       "lessons": [
         {
-          "id": "app-06-01",
+          "id": "the-fighter-class",
           "name": "The Fighter Class",
           "guide": "battle-arena/lesson01.md",
           "py": "battle-arena/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "app-06-02",
+          "id": "taking-damage",
           "name": "Taking Damage",
           "guide": "battle-arena/lesson02.md",
           "py": "battle-arena/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "app-06-03",
+          "id": "interaction-logic",
           "name": "Interaction Logic",
           "guide": "battle-arena/lesson03.md",
           "py": "battle-arena/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "app-06-04",
+          "id": "challenge-1-healing",
           "name": "CHALLENGE 1: Healing",
           "guide": "battle-arena/challenge01.md",
           "py": "battle-arena/challenge01.py",
@@ -314,7 +314,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-06-05",
+          "id": "challenge-2-critical-hit",
           "name": "CHALLENGE 2: Critical Hit",
           "guide": "battle-arena/challenge02.md",
           "py": "battle-arena/challenge02.py",
@@ -323,7 +323,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-06-06",
+          "id": "challenge-3-fight-to-death",
           "name": "CHALLENGE 3: Fight to Death",
           "guide": "battle-arena/challenge03.md",
           "py": "battle-arena/challenge03.py",
@@ -339,28 +339,28 @@
       "description": "Get organized! Build a School that manages Classrooms, which in turn manage Students. A hierarchy of objects!",
       "lessons": [
         {
-          "id": "app-07-01",
+          "id": "containment-logic",
           "name": "Containment Logic",
           "guide": "school-system/lesson01.md",
           "py": "school-system/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "app-07-02",
+          "id": "adding-sub-objects",
           "name": "Adding Sub-Objects",
           "guide": "school-system/lesson02.md",
           "py": "school-system/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "app-07-03",
+          "id": "nested-methods",
           "name": "Nested Methods",
           "guide": "school-system/lesson03.md",
           "py": "school-system/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "app-07-04",
+          "id": "challenge-1-roll-call",
           "name": "CHALLENGE 1: Roll Call",
           "guide": "school-system/challenge01.md",
           "py": "school-system/challenge01.py",
@@ -369,7 +369,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-07-05",
+          "id": "challenge-2-find-student",
           "name": "CHALLENGE 2: Find Student",
           "guide": "school-system/challenge02.md",
           "py": "school-system/challenge02.py",
@@ -378,7 +378,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-07-06",
+          "id": "challenge-3-school-census",
           "name": "CHALLENGE 3: School Census",
           "guide": "school-system/challenge03.md",
           "py": "school-system/challenge03.py",
@@ -394,28 +394,28 @@
       "description": "The Final Exam! Build a smart city where cars stop at red lights and go on green. A full System Simulation.",
       "lessons": [
         {
-          "id": "app-08-01",
+          "id": "state-machines",
           "name": "State Machines",
           "guide": "traffic-simulator/lesson01.md",
           "py": "traffic-simulator/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "app-08-02",
+          "id": "moving-objects",
           "name": "Moving Objects",
           "guide": "traffic-simulator/lesson02.md",
           "py": "traffic-simulator/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "app-08-03",
+          "id": "the-system-loop",
           "name": "The System Loop",
           "guide": "traffic-simulator/lesson03.md",
           "py": "traffic-simulator/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "app-08-04",
+          "id": "challenge-1-fast-cars",
           "name": "CHALLENGE 1: Fast Cars",
           "guide": "traffic-simulator/challenge01.md",
           "py": "traffic-simulator/challenge01.py",
@@ -424,7 +424,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-08-05",
+          "id": "challenge-2-smart-light",
           "name": "CHALLENGE 2: Smart Light",
           "guide": "traffic-simulator/challenge02.md",
           "py": "traffic-simulator/challenge02.py",
@@ -433,7 +433,7 @@
           "type": "challenge"
         },
         {
-          "id": "app-08-06",
+          "id": "challenge-3-crash-detection",
           "name": "CHALLENGE 3: Crash Detection",
           "guide": "traffic-simulator/challenge03.md",
           "py": "traffic-simulator/challenge03.py",

@@ -9,28 +9,28 @@
       "description": "Start your journey by writing your very first lines of Python! Learn how to make the computer talk and do simple math.",
       "lessons": [
         {
-          "id": "fc-01-01",
+          "id": "hello-world",
           "name": "Hello World!",
           "guide": "my-first-code/lesson01.md",
           "py": "my-first-code/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "fc-01-02",
+          "id": "talking-to-the-computer",
           "name": "Talking to the Computer",
           "guide": "my-first-code/lesson02.md",
           "py": "my-first-code/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "fc-01-03",
+          "id": "the-computer-calculator",
           "name": "The Computer Calculator",
           "guide": "my-first-code/lesson03.md",
           "py": "my-first-code/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "fc-01-04",
+          "id": "challenge-your-message",
           "name": "CHALLENGE: Your Message",
           "guide": "my-first-code/challenge01.md",
           "py": "my-first-code/challenge01.py",
@@ -39,7 +39,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-01-05",
+          "id": "challenge-2-math-whiz",
           "name": "CHALLENGE 2: Math Whiz",
           "guide": "my-first-code/challenge02.md",
           "py": "my-first-code/challenge02.py",
@@ -48,7 +48,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-01-06",
+          "id": "challenge-3-personal-assistant",
           "name": "CHALLENGE 3: Personal Assistant",
           "guide": "my-first-code/challenge03.md",
           "py": "my-first-code/challenge03.py",
@@ -64,28 +64,28 @@
       "description": "Create your own cool name tags! Learn how to combine text and variables to make awesome designs.",
       "lessons": [
         {
-          "id": "fc-02-01",
+          "id": "design-your-tag",
           "name": "Design Your Tag",
           "guide": "name-tag-maker/lesson01.md",
           "py": "name-tag-maker/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "fc-02-02",
+          "id": "the-name-variable",
           "name": "The Name Variable",
           "guide": "name-tag-maker/lesson02.md",
           "py": "name-tag-maker/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "fc-02-03",
+          "id": "adding-symbols",
           "name": "Adding Symbols",
           "guide": "name-tag-maker/lesson03.md",
           "py": "name-tag-maker/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "fc-02-04",
+          "id": "challenge-super-name-tag",
           "name": "CHALLENGE: Super Name Tag",
           "guide": "name-tag-maker/challenge01.md",
           "py": "name-tag-maker/challenge01.py",
@@ -94,7 +94,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-02-05",
+          "id": "challenge-2-logo-designer",
           "name": "CHALLENGE 2: Logo Designer",
           "guide": "name-tag-maker/challenge02.md",
           "py": "name-tag-maker/challenge02.py",
@@ -103,7 +103,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-02-06",
+          "id": "challenge-3-digital-greeting",
           "name": "CHALLENGE 3: Digital Greeting",
           "guide": "name-tag-maker/challenge03.md",
           "py": "name-tag-maker/challenge03.py",
@@ -119,28 +119,28 @@
       "description": "How old will you be in the year 2050? Use Python's math powers to travel through time and calculate ages!",
       "lessons": [
         {
-          "id": "fc-03-01",
+          "id": "asking-questions",
           "name": "Asking Questions",
           "guide": "age-calculator/lesson01.md",
           "py": "age-calculator/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "fc-03-02",
+          "id": "text-vs-numbers",
           "name": "Text vs Numbers",
           "guide": "age-calculator/lesson02.md",
           "py": "age-calculator/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "fc-03-03",
+          "id": "time-travel-math",
           "name": "Time Travel Math",
           "guide": "age-calculator/lesson03.md",
           "py": "age-calculator/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "fc-03-04",
+          "id": "challenge-days-old",
           "name": "CHALLENGE: Days Old",
           "guide": "age-calculator/challenge01.md",
           "py": "age-calculator/challenge01.py",
@@ -149,7 +149,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-03-05",
+          "id": "challenge-2-birthday-countdown",
           "name": "CHALLENGE 2: Birthday Countdown",
           "guide": "age-calculator/challenge02.md",
           "py": "age-calculator/challenge02.py",
@@ -158,7 +158,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-03-06",
+          "id": "challenge-3-life-in-months",
           "name": "CHALLENGE 3: Life in Months",
           "guide": "age-calculator/challenge03.md",
           "py": "age-calculator/challenge03.py",
@@ -174,28 +174,28 @@
       "description": "Can't decide? Let Python decide for you! Build a magic ball that answers all your yes/no questions.",
       "lessons": [
         {
-          "id": "fc-04-01",
+          "id": "the-secret-library",
           "name": "The Secret Library",
           "guide": "magic-8-ball/lesson01.md",
           "py": "magic-8-ball/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "fc-04-02",
+          "id": "list-of-answers",
           "name": "List of Answers",
           "guide": "magic-8-ball/lesson02.md",
           "py": "magic-8-ball/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "fc-04-03",
+          "id": "picking-randomly",
           "name": "Picking Randomly",
           "guide": "magic-8-ball/lesson03.md",
           "py": "magic-8-ball/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "fc-04-04",
+          "id": "challenge-your-fortunes",
           "name": "CHALLENGE: Your Fortunes",
           "guide": "magic-8-ball/challenge01.md",
           "py": "magic-8-ball/challenge01.py",
@@ -204,7 +204,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-04-05",
+          "id": "challenge-2-color-picker",
           "name": "CHALLENGE 2: Color Picker",
           "guide": "magic-8-ball/challenge02.md",
           "py": "magic-8-ball/challenge02.py",
@@ -213,7 +213,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-04-06",
+          "id": "challenge-3-adventure-decider",
           "name": "CHALLENGE 3: Adventure Decider",
           "guide": "magic-8-ball/challenge03.md",
           "py": "magic-8-ball/challenge03.py",
@@ -229,28 +229,28 @@
       "description": "Draw with code! Use loops to repeat your favorite emojis and create awesome patterns.",
       "lessons": [
         {
-          "id": "fc-05-01",
+          "id": "emoji-power",
           "name": "Emoji Power",
           "guide": "emoji-art/lesson01.md",
           "py": "emoji-art/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "fc-05-02",
+          "id": "repeat-machine",
           "name": "Repeat Machine",
           "guide": "emoji-art/lesson02.md",
           "py": "emoji-art/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "fc-05-03",
+          "id": "looping-lines",
           "name": "Looping Lines",
           "guide": "emoji-art/lesson03.md",
           "py": "emoji-art/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "fc-05-04",
+          "id": "challenge-emoji-pyramid",
           "name": "CHALLENGE: Emoji Pyramid",
           "guide": "emoji-art/challenge01.md",
           "py": "emoji-art/challenge01.py",
@@ -259,7 +259,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-05-05",
+          "id": "challenge-2-emoji-border",
           "name": "CHALLENGE 2: Emoji Border",
           "guide": "emoji-art/challenge02.md",
           "py": "emoji-art/challenge02.py",
@@ -268,7 +268,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-05-06",
+          "id": "challenge-3-multi-shape-art",
           "name": "CHALLENGE 3: Multi-Shape Art",
           "guide": "emoji-art/challenge03.md",
           "py": "emoji-art/challenge03.py",
@@ -284,28 +284,28 @@
       "description": "Discover your secret identitiy! Create a tool that mixes cool words to give you a unique superhero name.",
       "lessons": [
         {
-          "id": "fc-06-01",
+          "id": "super-parts",
           "name": "Super Parts",
           "guide": "superhero-generator/lesson01.md",
           "py": "superhero-generator/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "fc-06-02",
+          "id": "mixing-the-superpowers",
           "name": "Mixing the Superpowers",
           "guide": "superhero-generator/lesson02.md",
           "py": "superhero-generator/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "fc-06-03",
+          "id": "the-final-identity",
           "name": "The Final Identity",
           "guide": "superhero-generator/lesson03.md",
           "py": "superhero-generator/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "fc-06-04",
+          "id": "challenge-super-identity",
           "name": "CHALLENGE: Super Identity",
           "guide": "superhero-generator/challenge01.md",
           "py": "superhero-generator/challenge01.py",
@@ -314,7 +314,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-06-05",
+          "id": "challenge-2-power-up",
           "name": "CHALLENGE 2: Power Up!",
           "guide": "superhero-generator/challenge02.md",
           "py": "superhero-generator/challenge02.py",
@@ -323,7 +323,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-06-06",
+          "id": "challenge-3-hero-team",
           "name": "CHALLENGE 3: Hero Team",
           "guide": "superhero-generator/challenge03.md",
           "py": "superhero-generator/challenge03.py",
@@ -339,28 +339,28 @@
       "description": "Never forget your toys! Learn how to add, count, and see all items in your digital shopping list.",
       "lessons": [
         {
-          "id": "fc-07-01",
+          "id": "adding-to-the-list",
           "name": "Adding to the List",
           "guide": "shopping-list/lesson01.md",
           "py": "shopping-list/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "fc-07-02",
+          "id": "checking-the-count",
           "name": "Checking the Count",
           "guide": "shopping-list/lesson02.md",
           "py": "shopping-list/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "fc-07-03",
+          "id": "reading-the-list",
           "name": "Reading the List",
           "guide": "shopping-list/lesson03.md",
           "py": "shopping-list/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "fc-07-04",
+          "id": "challenge-party-invitations",
           "name": "CHALLENGE: Party Invitations",
           "guide": "shopping-list/challenge01.md",
           "py": "shopping-list/challenge01.py",
@@ -369,7 +369,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-07-05",
+          "id": "challenge-2-wish-list",
           "name": "CHALLENGE 2: Wish List",
           "guide": "shopping-list/challenge02.md",
           "py": "shopping-list/challenge02.py",
@@ -378,7 +378,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-07-06",
+          "id": "challenge-3-item-search",
           "name": "CHALLENGE 3: Item Search",
           "guide": "shopping-list/challenge03.md",
           "py": "shopping-list/challenge03.py",
@@ -394,28 +394,28 @@
       "description": "3... 2... 1... Blast off! Build a rocket launch timer that waits for each second to pass.",
       "lessons": [
         {
-          "id": "fc-08-01",
+          "id": "counting-with-range",
           "name": "Counting with Range",
           "guide": "rocket-countdown/lesson01.md",
           "py": "rocket-countdown/lesson01.py",
           "type": "lesson"
         },
         {
-          "id": "fc-08-02",
+          "id": "counting-backwards",
           "name": "Counting Backwards",
           "guide": "rocket-countdown/lesson02.md",
           "py": "rocket-countdown/lesson02.py",
           "type": "lesson"
         },
         {
-          "id": "fc-08-03",
+          "id": "wait-for-it",
           "name": "Wait for It...",
           "guide": "rocket-countdown/lesson03.md",
           "py": "rocket-countdown/lesson03.py",
           "type": "lesson"
         },
         {
-          "id": "fc-08-04",
+          "id": "challenge-custom-countdown",
           "name": "CHALLENGE: Custom Countdown",
           "guide": "rocket-countdown/challenge01.md",
           "py": "rocket-countdown/challenge01.py",
@@ -424,7 +424,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-08-05",
+          "id": "challenge-2-alarm-clock",
           "name": "CHALLENGE 2: Alarm Clock",
           "guide": "rocket-countdown/challenge02.md",
           "py": "rocket-countdown/challenge02.py",
@@ -433,7 +433,7 @@
           "type": "challenge"
         },
         {
-          "id": "fc-08-06",
+          "id": "challenge-3-race-timer",
           "name": "CHALLENGE 3: Race Timer",
           "guide": "rocket-countdown/challenge03.md",
           "py": "rocket-countdown/challenge03.py",
