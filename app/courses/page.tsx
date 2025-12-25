@@ -5,10 +5,43 @@ import { TechGrid } from "@/components/ui/neobrutalism/tech-grid"
 import Link from "next/link"
 import { CheckCircle, Terminal } from "lucide-react"
 import { NeoButton } from "@/components/ui/neobrutalism/neo-button"
+import { generateSEO } from "@/lib/seo"
+import { generateWebPageJsonLd, generateCourseListJsonLd, generateBreadcrumbJsonLd } from "@/lib/json-ld"
+
+export const metadata = generateSEO({
+  title: "Python Courses for Kids",
+  description: "Explore our outcome-driven Python curriculum designed for young minds. From basics to advanced projects, learn to code with fun interactive lessons.",
+  url: "/courses",
+  keywords: ["Python courses", "coding curriculum", "kids programming classes", "learn Python step by step"],
+});
 
 export default function CoursesPage() {
+  const webPageJsonLd = generateWebPageJsonLd(
+    "Python Courses for Kids",
+    "Explore our outcome-driven Python curriculum designed for young minds.",
+    "/courses",
+    "CollectionPage"
+  );
+  const courseListJsonLd = generateCourseListJsonLd(courses);
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Courses", url: "/courses" },
+  ]);
+
   return (
     <div className="flex flex-col min-h-screen font-epilogue">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseListJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar />
       <main className="flex-1">
         {/* Premium Header with similar punch to Home */}

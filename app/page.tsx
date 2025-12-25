@@ -7,10 +7,26 @@ import Link from "next/link"
 import { CheckCircle, XCircle, Zap, Terminal, ShieldAlert, ArrowRight } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { courses } from "@/lib/courses-data"
+import { generateWebPageJsonLd, generateCourseListJsonLd } from "@/lib/json-ld"
 
 export default function Home() {
+  const webPageJsonLd = generateWebPageJsonLd(
+    "Kidzode - Python for Kids",
+    "Master Python with fun, interactive lessons designed for young minds. Transform screen time into learning time.",
+    "/"
+  );
+  const courseListJsonLd = generateCourseListJsonLd(courses);
+
   return (
     <main className="min-h-screen flex flex-col bg-background font-epilogue">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseListJsonLd) }}
+      />
       <Navbar />
       
       {/* Premium Hero Section - High Conversion Copy */}
