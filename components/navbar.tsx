@@ -4,7 +4,7 @@ import Link from "next/link"
 import { NeoButton } from "@/components/ui/neobrutalism/neo-button"
 import { Logo } from "@/components/logo"
 import { useAuth } from "@/hooks/useAuth"
-import { Loader2, User, LogOut, Menu, X } from "lucide-react"
+import { Loader2, User, LogOut, Menu, X, Github } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 
@@ -34,13 +34,15 @@ export function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b-[2px] border-foreground bg-background">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 relative">
         <div className="text-xl">
           <Logo />
         </div>
 
-        {/* Desktop Menu - Elegant Left Alignment */}
-        <div className="hidden md:flex items-center gap-6 flex-1 ml-10">
+
+
+        {/* Centered Desktop Menu */}
+        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           <Link href="/courses" className={`font-bold transition-all decoration-2 underline-offset-4 ${
             isActive("/courses") 
               ? "underline decoration-foreground" 
@@ -48,10 +50,20 @@ export function Navbar() {
           }`}>
             Courses
           </Link>
+          <a
+            href="https://github.com/Param-Harrison/kidzode"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold transition-all decoration-2 underline-offset-4 hover:underline decoration-foreground flex items-center gap-2"
+          >
+            <Github className="w-6 h-6" />
+            Open Source
+          </a>
         </div>
-
       {/* Desktop Auth */}
-        <div className="hidden md:flex items-center gap-4">
+      {/* Desktop Navigation & Auth */}
+        <div className="hidden md:flex items-center gap-6">
+
           {isAuthenticated && user ? (
             <>
               {/* User menu */}
@@ -109,6 +121,10 @@ export function Navbar() {
             </>
           ) : (
             <>
+              <a href="https://github.com/Param-Harrison/kidzode" target="_blank" rel="noopener noreferrer" className="font-bold text-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <Github className="w-5 h-5" />
+                Open Source
+              </a>
               <Link href="/login" className="font-bold text-lg" onClick={() => setIsOpen(false)}>
                 Sign In
               </Link>

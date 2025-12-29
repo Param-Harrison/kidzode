@@ -14,6 +14,7 @@ export function Footer() {
         </div>
         
         <div className="flex gap-8 font-bold text-sm">
+          <a href="https://github.com/Param-Harrison/kidzode" target="_blank" rel="noopener noreferrer" className="hover:underline decoration-2 underline-offset-4">GitHub (Open Source)</a>
           <a href="https://x.com/learnwithparam" target="_blank" rel="noopener noreferrer" className="hover:underline decoration-2 underline-offset-4">X (Twitter)</a>
           <a href="https://www.linkedin.com/in/paramanantham/" target="_blank" rel="noopener noreferrer" className="hover:underline decoration-2 underline-offset-4">LinkedIn</a>
         </div>

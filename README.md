@@ -32,10 +32,7 @@ We use a `Makefile` to simplify common development tasks.
 3. **Run Everything (Docker)**: `make dev`
 
 ## 📜 License & Usage
-Kidzode is released under a **Custom Educational License**. 
-- **Free for Education**: Schools and teachers can use it for free to empower students.
-- **Strictly Non-Commercial**: Reselling, commercial deployment, or copying the UI/Code for profit is strictly prohibited.
-See the [LICENSE](LICENSE) file for full details.
+Kidzode is released under a [GNU General Public License v3.0](LICENSE).
 
 ## 🤝 Contributing
 We welcome contributors who share our vision of free, logic-based education for kids. Check out [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
