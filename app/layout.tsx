@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Viewport } from 'next';
 import { Lexend_Mega, Epilogue } from 'next/font/google';
+import Analytics from '@/components/Analytics';
 import { defaultMetadata } from '@/lib/seo';
 import { generateOrganizationJsonLd, generateWebSiteJsonLd } from '@/lib/json-ld';
 
@@ -53,6 +54,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
+        <Analytics />
         {children}
       </body>
     </html>
