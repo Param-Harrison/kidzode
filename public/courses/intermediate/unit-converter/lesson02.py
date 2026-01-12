@@ -1,10 +1,24 @@
-def inches_to_cm(inches):
-    return inches * 2.54
+# ========================================
+# 📏 LESSON 2: Length & Weight
+# ========================================
 
-def kg_to_lbs(kg):
-    return kg * 2.204
+# Length converters
+def cm_to_inches(cm):
+    return cm / 2.54
 
-print(f"6 inches = {inches_to_cm(6)} cm")
-print(f"5 kg = {kg_to_lbs(5)} lbs")
+def meters_to_feet(m):
+    return m * 3.281
 
-# TRY THIS: Write a lbs_to_kg function! (Hint: Divide by 2.204)
+# Weight converters
+def kg_to_pounds(kg):
+    return kg * 2.205
+
+# Test them!
+print("150 cm =", cm_to_inches(150), "inches")
+print("2 meters =", meters_to_feet(2), "feet")
+print("70 kg =", kg_to_pounds(70), "pounds")
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add a pounds_to_kg function!
+# ----------------------------------------

@@ -1,6 +1,13 @@
-# ---- YOUR CHALLENGE ----
-# 1. Ask for a word
-# 2. Loop through each letter
-# 3. Print the number code (ord) for each one
+# ========================================
+# 🔢 CHALLENGE 2: Number Encoder
+# ========================================
 
-# Write your code below!
+# Step 1: Get the word
+word = input("Enter a word: ")
+
+# Step 2: Loop through each letter
+for letter in word:
+    # Step 3: Get the secret number
+    code = ord(letter)
+    # Step 4: Print it
+    print(letter, "=", code)

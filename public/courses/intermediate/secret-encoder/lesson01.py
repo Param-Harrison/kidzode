@@ -1,11 +1,23 @@
-# Find the number for a letter
-code = ord("A")
-print("The code for A is:")
+# ========================================
+# 🤫 LESSON 1: Character Secrets
+# ========================================
+
+# ord() turns a letter into its secret number
+letter = "A"
+code = ord(letter)
+print("The letter A is secretly:")
 print(code)
 
-# Find the letter for a number
-letter = chr(66)
-print("The letter for 66 is:")
-print(letter)
+print("")
 
-# TRY THIS: Find the code for your first initial!
+# chr() turns a number back into a letter
+number = 66
+letter_b = chr(number)
+print("The number 66 is secretly:")
+print(letter_b)
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Find the code for your first initial!
+# Example: print(ord("M"))
+# ----------------------------------------

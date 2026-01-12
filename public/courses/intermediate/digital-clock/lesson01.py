@@ -1,13 +1,23 @@
-import datetime
+# ========================================
+# ⏰ LESSON 1: The Perfect Format
+# ========================================
+
+from datetime import datetime
 
 # Get the current time
-now = datetime.datetime.now()
+now = datetime.now()
 
-# Format it: %H is Hour, %M is Minute, %S is Second
-# %p is AM/PM
-readable_time = now.strftime("%I:%M:%S %p")
+# Show individual parts
+print("Hour:", now.hour)
+print("Minute:", now.minute)
+print("Second:", now.second)
 
-print("The current system time is:")
-print(readable_time)
+# Format it nicely like a clock
+time_string = now.strftime("%H:%M:%S")
+print("")
+print("Current time:", time_string)
 
-# TRY THIS: Change %I to %H to see 24-hour time!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Run it again after a few seconds!
+# ----------------------------------------

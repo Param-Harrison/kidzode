@@ -1,16 +1,26 @@
+# ========================================
+# ➰ LESSON 2: Building the Password
+# ========================================
+
 import random
 
+# Our character bank
 chars = "abcdefgh123456!@#$"
+
+# Start with an empty password
 password = ""
 
-# Loop 8 times for an 8-character password
-for i in range(8):
-    # Pick one random character
+# Pick 8 random characters, one at a time
+for count in range(8):
+    # Pick one random character from our bank
     char = random.choice(chars)
-    # Add it to our password string
+    # Add it to the password
     password = password + char
 
-print("Generated sequence:")
+print("Your password:")
 print(password)
 
-# TRY THIS: Change the number 8 to make the password longer!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change range(8) to range(12) for a longer password!
+# ----------------------------------------

@@ -1,14 +1,23 @@
-# Create a dictionary
+# ========================================
+# 🗺️ LESSON 1: The Data Map
+# ========================================
+
+# A dictionary stores key:value pairs
+# Like a contact list: name → phone number
 weather = {
     "London": "Rainy",
-    "New York": "Sunny",
-    "Tokyo": "Cloudy"
+    "Tokyo": "Sunny",
+    "Paris": "Cloudy"
 }
 
-# Look up a value
+# Look up weather by city name
 city = "London"
-status = weather[city]
+print(city + " weather:", weather[city])
 
-print(f"The weather in {city} is {status}.")
+city = "Tokyo"
+print(city + " weather:", weather[city])
 
-# TRY THIS: Add your own city to the weather dictionary!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add "New York": "Windy" to the dictionary!
+# ----------------------------------------

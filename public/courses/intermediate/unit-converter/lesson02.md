@@ -1,11 +1,35 @@
-# Length & Weight ⚖️
+# Length & Weight 📏
 
-Let's build a library of functions for different units. We'll use more parameters and return values.
+## Quick Reminder
+You learned to create conversion functions with `return`. Now let's add more conversions!
 
-### Instructions:
-1. `inches_to_cm(inches)` multiplying by 2.54.
-2. `kg_to_lbs(kg)` multiplying by 2.204.
-3. Run the code to see multi-unit conversion!
+## Your Mission
+Build a collection of useful converters for length and weight.
 
-### Achievement:
-You've created a "Library" of functions! 📚
+## Length Converters
+```python
+def cm_to_inches(cm):
+    return cm / 2.54
+
+def meters_to_feet(m):
+    return m * 3.281
+```
+
+## Weight Converters
+```python
+def kg_to_pounds(kg):
+    return kg * 2.205
+
+def pounds_to_kg(lb):
+    return lb / 2.205
+```
+
+## Try It!
+1. Run the code
+2. Try converting your height!
+3. Try converting your weight!
+
+## What You Learned
+✅ Each conversion gets its own function
+✅ Some use multiply, some use divide
+✅ Build a library of converters!

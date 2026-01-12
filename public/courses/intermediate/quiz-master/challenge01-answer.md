@@ -1,37 +1,19 @@
-### One way to solve it:
+# Answer: Super Quiz ✅
 
 ```python
 quiz = [
-    {
-        "q": "What is the biggest planet?",
-        "options": ["A) Earth", "B) Jupiter", "C) Mars"],
-        "a": "B"
-    },
-    {
-        "q": "Which is the smallest?",
-        "options": ["A) Pluto", "B) Mercury", "C) Moon"],
-        "a": "B"
-    }
+    {"question": "What is 2 + 2?", "answer": "4"},
+    {"question": "Capital of France?", "answer": "paris"}
 ]
 
 score = 0
-wrong = 0
 
-for item in quiz:
-    print("\n" + item["q"])
-    for opt in item["options"]:
-        print(opt)
-    
-    ans = input("Your choice: ").upper()
-    
-    if ans == item["a"]:
-        print("🌟 SHINING STAR! 🌟")
-        score += 1
-    else:
-        print("☄️ IMPACT! Wrong answer.")
-        wrong += 1
+for q in quiz:
+    print(q["question"])
+    answer = input("Your answer: ")
+    if answer.lower() == q["answer"].lower():
+        print("Correct!")
+        score = score + 1
 
-print(f"\nQUIZ OVER!")
-print(f"Correct: {score}")
-print(f"Wrong:   {wrong}")
+print("Score:", score, "/", len(quiz))
 ```

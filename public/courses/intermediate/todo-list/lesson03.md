@@ -1,11 +1,41 @@
 # Adding and Removing 📝
 
-Now let's actually store tasks in a list and use our menu to manage them.
+## Quick Reminder
+You built a menu loop with choices. Now let's actually manage tasks!
 
-### Instructions:
-1. We use `.append()` to add tasks.
-2. We use a for loop to view tasks.
-3. Run the code and manage your list!
+## Your Mission
+Time to put it all together! We'll:
+1. Store tasks in a list
+2. Add tasks with `.append()`
+3. View tasks with a loop
+4. Clear all tasks with `.clear()`
 
-### Achievement:
-You've engineered a data management system! 📊
+## The Full Pattern
+```python
+tasks = []  # Empty list to start
+
+while True:
+    # Show menu
+    # Get choice
+    if choice == "1":
+        new_task = input("What task? ")
+        tasks.append(new_task)
+    elif choice == "2":
+        for task in tasks:
+            print("- " + task)
+```
+
+## Try It!
+1. Run the code
+2. Add a few tasks
+3. View your tasks
+4. Try clearing them all!
+
+## What You Learned
+✅ Store tasks in a list
+✅ `.append()` adds new items
+✅ Loop through to show all tasks
+✅ `.clear()` removes everything
+
+## Achievement Unlocked! 🏆
+You built a working task manager app!

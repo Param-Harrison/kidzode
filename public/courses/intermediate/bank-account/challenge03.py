@@ -1,9 +1,25 @@
-# ---- YOUR CHALLENGE ----
-balance = 100
-limit = 50
+# ========================================
+# 🎯 CHALLENGE 3: Daily Limit
+# ========================================
 
-# 1. Define withdraw(amount)
-# 2. Check if amount is > limit OR amount > balance
-# 3. Print success or failure
+balance = 500
+withdrawn_today = 0
+daily_limit = 100
 
-# Write your code below!
+def limited_withdraw(amount):
+    global balance, withdrawn_today
+    
+    # Check if this would exceed daily limit
+    if withdrawn_today + amount > daily_limit:
+        print("❌ Would exceed daily limit of $" + str(daily_limit))
+    elif amount > balance:
+        print("❌ Not enough money!")
+    else:
+        balance = balance - amount
+        withdrawn_today = withdrawn_today + amount
+        print("✅ Withdrew $" + str(amount))
+
+limited_withdraw(50)   # Should work
+limited_withdraw(60)   # Should fail (would be $110 total)
+limited_withdraw(40)   # Should work (exactly $100 total)
+print("Total withdrawn today: $" + str(withdrawn_today))

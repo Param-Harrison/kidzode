@@ -1,12 +1,17 @@
-# CHALLENGE 2: Hint System 💡
+# Challenge 2: Random Quiz 🎲
 
-A good quiz helps the player! Let's add a hint option.
+## Your Mission
+Shuffle the questions so they're in random order!
 
-### Your Task:
-1. Create a question dictionary that includes a `"hint"` key.
-2. Ask the question.
-3. If the user types "HINT", show the hint and ask again.
-4. If they answer correctly, print "Correct!".
+## Your Task
+1. Create your quiz list
+2. Use `random.shuffle(quiz)` to mix them up
+3. Then run the quiz!
 
-### Achievement:
-You've built a user assistance feature! 🆘
+**Hint:**
+```python
+import random
+random.shuffle(quiz)
+```
+
+Mix it up! 🎲

@@ -1,18 +1,16 @@
-### One way to solve it:
+# Answer: Average Temperature ✅
 
 ```python
-temps = {
-    "Rome": 22,
-    "Paris": 19,
-    "London": 15
+cities = {
+    "London": {"temp": 15, "status": "Rainy"},
+    "Tokyo": {"temp": 28, "status": "Sunny"},
+    "Paris": {"temp": 20, "status": "Cloudy"}
 }
 
 total = 0
-print("Analyzing data...")
+for city in cities:
+    total = total + cities[city]["temp"]
 
-for t in temps.values():
-    total += t
-
-avg = total / len(temps)
-print("Average Temperature:", avg)
+average = total / len(cities)
+print("Average temperature:", str(average) + "°C")
 ```

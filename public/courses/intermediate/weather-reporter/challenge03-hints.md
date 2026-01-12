@@ -1,17 +1,18 @@
-# Hints for Weather Average
+# Hints for Challenge 3: Average Temperature 💡
 
-## 🟢 Hint 1
-Create a `total = 0` variable before the loop.
-
-## 🟡 Hint 2
-Loop through values:
+### Hint 1: Loop through dictionary
 ```python
-for temp in data.values():
-    total += temp
+for city in cities:
 ```
 
-## 🟠 Hint 3
-Average formula:
+### Hint 2: Add up temps
 ```python
-avg = total / len(data)
+total = total + cities[city]["temp"]
 ```
+
+### Hint 3: Calculate average
+```python
+average = total / len(cities)
+```
+
+Do the math! 📊

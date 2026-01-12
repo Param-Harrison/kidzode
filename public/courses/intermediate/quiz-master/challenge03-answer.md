@@ -1,23 +1,17 @@
-### One way to solve it:
+# Answer: Quiz with Pass/Fail ✅
 
 ```python
-import random
+quiz = [{"question": "...", "answer": "..."}]
 
-quiz = [
-    {"q": "2 + 2?", "a": "4"},
-    {"q": "Capital of France?", "a": "Paris"},
-    {"q": "Opposite of Up?", "a": "Down"}
-]
+score = 0
+for q in quiz:
+    print(q["question"])
+    answer = input("Answer: ")
+    if answer.lower() == q["answer"].lower():
+        score = score + 1
 
-random.shuffle(quiz)
-print("--- RANDOM QUIZ TIME ---")
-
-for item in quiz:
-    print("Question:", item["q"])
-    guess = input("Answer: ")
-    if guess == item["a"]:
-        print("Correct!")
-    else:
-        print("Wrong.")
-    print("-")
+if score >= 3:
+    print("PASSED! 🎉")
+else:
+    print("Try again! 📚")
 ```

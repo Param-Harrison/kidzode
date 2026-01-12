@@ -1,15 +1,22 @@
-import datetime
+# ========================================
+# 🔴 LESSON 2: Live Time
+# ========================================
+
 import time
+from datetime import datetime
 
-print("Starting Digital Clock... (Press Ctrl+C to stop)")
+print("Starting live clock... (press Stop to exit)")
+print("")
 
+# Loop forever, updating every second
 while True:
-    now = datetime.datetime.now()
-    readable_time = now.strftime("%I:%M:%S %p")
-    
-    print(readable_time)
-    
-    # Wait for 1 second
-    time.sleep(1)
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    print("Time:", current_time)
+    time.sleep(1)  # Wait 1 second
 
-# Note: This will print a new line every second!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change time.sleep(1) to time.sleep(0.5)
+# for faster updates!
+# ----------------------------------------

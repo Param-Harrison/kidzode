@@ -1,18 +1,13 @@
-# Hints for Hint System
+# Hints for Challenge 2: Random Quiz 💡
 
-## 🟢 Hint 1
-Use a `while` loop so you can ask again if they pick hint:
+### Hint 1: Import random
 ```python
-while True:
-    ans = input(...)
+import random
 ```
 
-## 🟡 Hint 2
-Check if they want a hint:
+### Hint 2: Shuffle the list
 ```python
-if ans == "HINT":
-    print(q["hint"])
+random.shuffle(quiz)
 ```
 
-## 🟠 Hint 3
-Break the loop when they get it right!
+Mix it up! 🎲

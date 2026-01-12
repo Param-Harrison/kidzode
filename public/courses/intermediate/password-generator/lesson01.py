@@ -1,7 +1,22 @@
-# Every character we can use for a password
-chars = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+# ========================================
+# 🏦 LESSON 1: The Character Bank
+# ========================================
 
-print("Available characters:")
+# Our bank of all possible characters for passwords:
+# - lowercase letters
+# - numbers
+# - symbols
+chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
+
+print("Our character bank:")
 print(chars)
 
-# TRY THIS: Add uppercase letters (A-Z) to the string!
+print("")
+print("Total characters available:")
+print(len(chars))
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add UPPERCASE letters to make it even stronger!
+# chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*"
+# ----------------------------------------

@@ -1,14 +1,7 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-import datetime as dt
-
-now = dt.datetime.now()
-
-print("--- TODAYS DATE ---")
-# Using f-strings makes it easy!
-print(f"{now.year}-{now.month}-{now.day}")
-
-# Bonus:
-print(now.strftime("%A, %B %d"))
+from datetime import datetime
+now = datetime.now()
+print("Date:", now.strftime("%B %d, %Y"))
+print("Time:", now.strftime("%H:%M"))
 ```

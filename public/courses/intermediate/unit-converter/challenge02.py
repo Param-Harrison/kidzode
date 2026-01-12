@@ -1,7 +1,4 @@
-# ---- YOUR CHALLENGE ----
-# 1. Define minutes_to_seconds
-# 2. Define hours_to_minutes
-# 3. Ask for hours
-# 4. Print both results
-
-# Write your code below!
+hours = float(input("Enter hours: "))
+minutes = hours * 60
+seconds = hours * 3600
+print(hours, "hours =", minutes, "minutes =", seconds, "seconds")

@@ -1,14 +1,28 @@
-def ask(q_text, correct_ans):
-    user_ans = input(q_text + " ")
-    if user_ans.lower() == correct_ans.lower():
+# ========================================
+# 🤔 LESSON 2: Asking Questions
+# ========================================
+
+quiz = [
+    {"question": "What color is the sky?", "answer": "blue"},
+    {"question": "What is 2 + 2?", "answer": "4"}
+]
+
+# Function to ask ONE question
+def ask_question(q):
+    print("")
+    print("Question:", q["question"])
+    user_answer = input("Your answer: ")
+    
+    # Make both lowercase for fair comparison
+    if user_answer.lower() == q["answer"].lower():
         print("✅ Correct!")
-        return True
     else:
-        print(f"❌ Wrong! The answer was {correct_ans}")
-        return False
+        print("❌ Wrong! The answer was:", q["answer"])
 
-# Use the function
-result = ask("Is Python a snake?", "yes")
-print(f"Win status: {result}")
+# Ask the first question
+ask_question(quiz[0])
 
-# TRY THIS: Use the ask function for a math question!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Call ask_question(quiz[1]) to ask the second question!
+# ----------------------------------------

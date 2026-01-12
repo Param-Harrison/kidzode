@@ -1,14 +1,25 @@
-# CHALLENGE: Interest Calculator 📈
+# Challenge: Interest Calculator 🏆
 
-Can you write a function that calculates how much interest your money should earn?
+## Your Mission
+Add a feature that calculates 5% interest on the balance!
 
-### Your Task:
-1. Create a function `add_interest(rate)`.
-2. The `rate` should be a decimal (like 0.05 for 5%).
-3. Calculate `interest = balance * rate`.
-4. Add the interest to your balance.
+## Your Task
+1. Create a function `add_interest()` 
+2. Calculate 5% of the balance (multiply by 0.05)
+3. Add it to the balance
+4. Print the new balance
 
-### Engineering Challenge:
-Can you make the function **RETURN** the interest amount so you can print specifically how much you earned?
+**Example:**
+```
+Balance: $100
+Adding 5% interest...
+New balance: $105
+```
 
-Good luck, Banker!
+## Hint
+```python
+interest = balance * 0.05
+balance = balance + interest
+```
+
+Watch your money grow! 📈

@@ -1,4 +1,4 @@
-### One way to solve it:
+# Answer: PIN Code Maker ✅
 
 ```python
 import random
@@ -6,9 +6,9 @@ import random
 numbers = "0123456789"
 pin = ""
 
-print("--- BANK SECURITY ---")
-for i in range(4):
-    pin += random.choice(numbers)
+for count in range(4):
+    digit = random.choice(numbers)
+    pin = pin + digit
 
 print("Your secure PIN is:", pin)
 ```

@@ -1,17 +1,15 @@
-### One way to solve it:
+# Answer: Interest Calculator ✅
 
 ```python
-balance = 1000
+balance = 100
 
-def add_interest(rate):
+def add_interest():
     global balance
-    earned = balance * rate
-    balance += earned
-    return earned
+    interest = balance * 0.05
+    balance = balance + interest
+    print("Interest added: $" + str(interest))
+    print("New balance: $" + str(balance))
 
-# Add 5% interest
-interest = add_interest(0.05)
-
-print(f"You earned ${interest} in interest!")
-print(f"New Balance: ${balance}")
+print("Balance: $" + str(balance))
+add_interest()
 ```

@@ -1,17 +1,21 @@
-# Hints for Priority Tasks
+# Hints for Challenge 2: Priority Tasks 💡
 
-## 🟢 Hint 1
-Your function needs two parameters:
+## Stuck? Here are some hints!
+
+### Hint 1: Ask for both
 ```python
-def add_priority(name, importance):
+task = input("What task? ")
+priority = input("Priority (High/Normal)? ")
 ```
 
-## 🟡 Hint 2
-Format the string before appending:
+### Hint 2: Combine them
 ```python
-full_task = "[" + importance + "] " + name
+full_task = "[" + priority.upper() + "] " + task
+```
+
+### Hint 3: Store the combined version
+```python
 tasks.append(full_task)
 ```
 
-## 🟠 Hint 3
-Try calling it like: `add_priority("Sleep", "High")`
+Prioritize! ⚡

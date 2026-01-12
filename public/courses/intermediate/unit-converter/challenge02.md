@@ -1,12 +1,12 @@
-# CHALLENGE 2: Time Units ⌚
+# Challenge 2: Time Converter ⏰
 
-Can you build a converter for time?
+## Your Mission
+Convert hours to minutes and seconds!
 
-### Your Task:
-1. Write a function `minutes_to_seconds(mins)`.
-2. Write a function `hours_to_minutes(hours)`.
-3. Ask the user for a number of hours.
-4. Convert it to minutes AND seconds, then print the result.
+## Your Task
+1. Ask for hours
+2. Calculate minutes (hours × 60)
+3. Calculate seconds (hours × 3600)
+4. Print both!
 
-### Achievement:
-You've engineered a multi-step conversion chain! ⛓️
+Time flies! ⏰

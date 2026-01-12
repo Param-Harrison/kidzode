@@ -1,18 +1,22 @@
-# Hints for Task Master Challenge
+# Hints for Challenge 1: Task Master 💡
 
-## 🟢 Hint 1
-To add priority, ask a second question:
+## Stuck? Here are some hints!
+
+### Hint 1: Start with empty list
 ```python
-task = input("Task? ")
-priority = input("Priority? ")
-full_task = f"[{priority}] {task}"
+tasks = []
 ```
 
-## 🟡 Hint 2
-To count tasks, use `len()`:
+### Hint 2: Use while True for the loop
 ```python
-print(f"You have {len(tasks)} tasks.")
+while True:
+    # Show menu and get choice
 ```
 
-## 🟠 Hint 3
-Put everything inside a `while True:` loop so it keeps running!
+### Hint 3: Add with append
+```python
+task = input("What task? ")
+tasks.append(task)
+```
+
+Stay organized! 📋

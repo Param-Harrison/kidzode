@@ -1,11 +1,35 @@
-# Cleaning the Console 🧹
+# The Date Display 📅
 
-Right now, our clock prints a new line every second. A real digital clock stays in one place. We can fix this using a special "carriage return" character: `\r`.
+## Quick Reminder
+You made a live clock! Now let's also show the date.
 
-### Instructions:
-1. Use `print(time_string, end="\r")`.
-2. The `end="\r"` tells Python to go back to the start of the *same line* instead of starting a new one.
-3. Run the code to see a smooth, single-line digital clock!
+## Your Mission
+Display both the time AND the date!
 
-### Achievement:
-You've learned how to manipulate the console for a better User Experience (UX)! 🎨
+## Date Formatting Codes
+| Code | Meaning | Example |
+|------|---------|---------|
+| %H | Hour (24h) | 14 |
+| %M | Minute | 30 |
+| %S | Second | 45 |
+| %Y | Year | 2024 |
+| %m | Month | 03 |
+| %d | Day | 15 |
+| %A | Day name | Friday |
+| %B | Month name | March |
+
+## Example
+```python
+now.strftime("%A, %B %d, %Y")
+# Shows: "Friday, March 15, 2024"
+```
+
+## Try It!
+1. Run the code
+2. See both date and time!
+3. Try different format codes!
+
+## What You Learned
+✅ Many format codes for dates
+✅ Mix them to create custom displays
+✅ You've built a complete clock app!

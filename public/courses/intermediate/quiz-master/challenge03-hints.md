@@ -1,17 +1,11 @@
-# Hints for Random Quiz
+# Hints for Challenge 3: Quiz with Pass/Fail 💡
 
-## 🟢 Hint 1
-Import random first!
-
-## 🟡 Hint 2
-Shuffle BEFORE the loop:
+### Hint 1: Check score at end
 ```python
-random.shuffle(questions)
+if score >= 3:
+    print("PASSED!")
+else:
+    print("Try again!")
 ```
 
-## 🟠 Hint 3
-Then your loop is normal:
-```python
-for q in questions:
-    print(q["q"])
-```
+Pass the test! 📝

@@ -1,16 +1,20 @@
-# Hints for Number Encoder
+# Hints for Challenge 2: Number Encoder 💡
 
-## 🟢 Hint 1
-Getting the word is easy: `word = input(...)`.
+## Stuck? Here are some hints!
 
-## 🟡 Hint 2
-Loop through letters:
+### Hint 1: Loop through the word
 ```python
 for letter in word:
 ```
 
-## 🟠 Hint 3
-Print the number code:
+### Hint 2: Get the number
 ```python
-print(ord(letter))
+code = ord(letter)
 ```
+
+### Hint 3: Print nicely
+```python
+print(letter, "=", code)
+```
+
+Reveal the numbers! 🔢

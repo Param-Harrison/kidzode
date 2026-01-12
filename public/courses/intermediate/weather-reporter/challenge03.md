@@ -1,12 +1,24 @@
-# CHALLENGE 3: Weather Average 📊
+# Challenge 3: Average Temperature 📊
 
-Can you calculate the average temperature from a list of cities?
+## Your Mission
+Calculate the average temperature across all cities!
 
-### Your Task:
-1. Create a dictionary with 3 cities and their temperatures.
-2. Use a loop to add up all the temperatures into a `total`.
-3. Divide the `total` by the number of cities (3) to find the average.
-4. Print: "Average Temp: [X] degrees".
+## Your Task
+1. Create cities with temperatures
+2. Loop through and add up all temps
+3. Divide by the number of cities
+4. Print the average!
 
-### Achievement:
-You've engineered a data analysis algorithm! 📉
+**Example:**
+```
+Average temperature: 21°C
+```
+
+## Hint
+```python
+total = 0
+for city in cities:
+    total = total + cities[city]["temp"]
+```
+
+Do the math! 📊

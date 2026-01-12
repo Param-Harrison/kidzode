@@ -1,13 +1,20 @@
-# CHALLENGE: Super Quiz 🏆
+# Challenge: Super Quiz 🏆
 
-Can you add multiple-choice options to your quiz?
+## Your Mission
+Create a 5-question quiz with scoring!
 
-### Your Task:
-1. Update your dictionary to include an `options` list (e.g., `["A", "B", "C"]`).
-2. Show the options to the user before they answer.
-3. Check if their answer matches the `correct` key.
+## Your Task
+1. Create a quiz list with 5 questions
+2. Loop through and ask each one
+3. Keep track of the score
+4. Show the final score
 
-### Engineering Challenge:
-Can you keep track of how many questions they got *wrong* as well?
+**Example:**
+```
+Question: What is 5 + 5?
+Your answer: 10
+✅ Correct!
+Final Score: 4/5
+```
 
-Good luck, Quiz Master!
+Quiz away! 🎯

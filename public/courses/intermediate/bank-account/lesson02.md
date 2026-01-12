@@ -1,11 +1,30 @@
 # Deposit & Withdraw 💸
 
-Now let's add functions that actually change the balance. We'll use **Parameters** to tell the function how much money we're moving.
+## Quick Reminder
+You created a shared `balance` variable. Now let's make functions that can CHANGE it!
 
-### Instructions:
-1. `deposit(amount)` takes an amount and adds it to the balance.
-2. We must use `global balance` to tell Python we're updating the main vault.
-3. Run the code to see your money grow!
+## Your Mission
+We need deposit (add money) and withdraw (take money) functions!
 
-### Achievement:
-You've learned how to pass information into functions! 📥
+## The global Keyword
+When a function wants to CHANGE a shared variable, it needs to say `global`:
+
+```python
+balance = 100
+
+def deposit(amount):
+    global balance   # I want to change the shared balance!
+    balance = balance + amount
+```
+
+Without `global`, Python would create a NEW variable inside the function instead of changing the shared one.
+
+## Try It!
+1. Run the code
+2. Watch the deposit and withdraw work
+3. Try adding your own deposit!
+
+## What You Learned
+✅ `global balance` lets you CHANGE the shared variable
+✅ Functions can take "parameters" like `amount`
+✅ `balance += 50` is shorthand for `balance = balance + 50`

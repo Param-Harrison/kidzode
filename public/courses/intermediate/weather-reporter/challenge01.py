@@ -1,11 +1,18 @@
-# ---- YOUR CHALLENGE ----
-cities = {
-    "New York": {"temp": 2, "status": "Snowing"},
-    "Miami": {"temp": 30, "status": "Sunny"},
-    "Seattle": {"temp": 10, "status": "Rainy"}
+# ========================================
+# 🏆 CHALLENGE 1: Global Weather
+# ========================================
+
+weather = {
+    "London": "Rainy",
+    "Tokyo": "Sunny",
+    "Paris": "Cloudy",
+    "Sydney": "Warm",
+    "New York": "Windy"
 }
 
-# 1. Loop through the cities
-# 2. Print a nice report for each one
+city = input("Enter city: ")
 
-# Write your code below!
+if city in weather:
+    print("Weather in", city + ":", weather[city])
+else:
+    print("Sorry,", city, "not found!")

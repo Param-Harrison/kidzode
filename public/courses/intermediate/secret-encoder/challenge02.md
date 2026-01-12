@@ -1,12 +1,21 @@
-# CHALLENGE 2: Number Encoder 🔢
+# Challenge 2: Number Encoder 🔢
 
-Spies sometimes use numbers instead of letters. Can you turn a word into a list of secret code numbers?
+## Your Mission
+Turn a word into a list of secret numbers!
 
-### Your Task:
-1. Ask the user for a `word`.
-2. Use a `for` loop to look at each letter.
-3. Use `ord(letter)` to find its secret number code.
-4. Print each number.
+## Your Task
+1. Ask: "Enter a word:"
+2. Loop through each letter
+3. Print the secret number for each letter
 
-### Achievement:
-You've learned how computers verify text as numbers! 🤖
+**Example output:**
+```
+Enter a word: HI
+H = 72
+I = 73
+```
+
+## Hint
+Use `ord(letter)` to get the number!
+
+Reveal the numbers! 🔢

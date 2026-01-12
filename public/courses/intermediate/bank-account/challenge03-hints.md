@@ -1,13 +1,19 @@
-# Hints for Daily Limit
+# Hints for Challenge 3: Daily Limit 💡
 
-## 🟢 Hint 1
-Use `or` to combine checks:
+### Hint 1: Track withdrawals
 ```python
-if amount > limit or amount > balance:
+withdrawn_today = 0
 ```
 
-## 🟡 Hint 2
-Make sure to `global balance` inside the function!
+### Hint 2: Check before withdrawing
+```python
+if withdrawn_today + amount > daily_limit:
+    print("Would exceed limit!")
+```
 
-## 🟠 Hint 3
-Test it with a small amount (like 10) and a big amount (like 60) to see if it works.
+### Hint 3: Update the tracker
+```python
+withdrawn_today = withdrawn_today + amount
+```
+
+Stay safe! 🛡️

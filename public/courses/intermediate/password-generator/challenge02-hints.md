@@ -1,17 +1,21 @@
-# Hints for PIN Code Maker
+# Hints for Challenge 2: PIN Code Maker 💡
 
-## 🟢 Hint 1
-Remember to `import random` at the top!
+## Stuck? Here are some hints!
 
-## 🟡 Hint 2
-Your loop should be simple:
+### Hint 1: Numbers only
 ```python
-for i in range(4):
-    # pick valid number
+numbers = "0123456789"
 ```
 
-## 🟠 Hint 3
-Add to the string using `+=`:
+### Hint 2: Loop 4 times
 ```python
-pin += random.choice(numbers)
+for count in range(4):
 ```
+
+### Hint 3: Pick and add
+```python
+digit = random.choice(numbers)
+pin = pin + digit
+```
+
+Secure those numbers! 🔐

@@ -1,18 +1,26 @@
-### One way to solve it:
+# Answer: Priority Tasks ✅
 
 ```python
 tasks = []
 
-def add_priority(task, level):
-    full_text = f"[{level}] {task}"
-    tasks.append(full_text)
-    print("Added:", full_text)
-
-print("--- TASK MANAGER ---")
-add_priority("Do homework", "HIGH")
-add_priority("Play games", "LOW")
-add_priority("Walk dog", "MEDIUM")
-
-print("\nFINAL LIST:")
-print(tasks)
+while True:
+    print("")
+    print("1. Add Task with Priority")
+    print("2. View Tasks")
+    print("3. Exit")
+    
+    choice = input("> ")
+    
+    if choice == "1":
+        task = input("What task? ")
+        priority = input("Priority (High/Normal)? ")
+        full_task = "[" + priority.upper() + "] " + task
+        tasks.append(full_task)
+        print("Added!")
+    elif choice == "2":
+        print("--- Your Tasks ---")
+        for task in tasks:
+            print("- " + task)
+    elif choice == "3":
+        break
 ```

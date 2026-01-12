@@ -1,17 +1,21 @@
-# Hints for Reverse Decoder
+# Hints for Challenge 3: Decoder Ring 💡
 
-## 🟢 Hint 1
-The loop is:
+## Stuck? Here are some hints!
+
+### Hint 1: Create the number list
 ```python
-for num in secret:
+codes = [72, 69, 76, 76, 79]
 ```
 
-## 🟡 Hint 2
-Convert and print:
+### Hint 2: Loop through the codes
 ```python
-letter = chr(num)
-print(letter, end="")
+for code in codes:
 ```
 
-## 🟠 Hint 3
-Use `end=""` in print so the letters appear on the same line!
+### Hint 3: Convert and build
+```python
+letter = chr(code)
+message = message + letter
+```
+
+Decode the mystery! 🕵️

@@ -1,11 +1,29 @@
-# Reusable Questions 🔄
+# Asking Questions 🤔
 
-Instead of writing `input()` for every question, let's write a **Function** that handles "asking" any question.
+## Quick Reminder
+You stored questions in a list of dictionaries. Now let's ask them!
 
-### Instructions:
-1. Our function `ask(question, correct_answer)` takes two parameters.
-2. It returns `True` if the user is right, and `False` if they are wrong.
-3. Run the code to see our engine in action!
+## Your Mission
+Create a function that takes a question, asks the user, and checks if they're right!
 
-### Achievement:
-You've engineered a "black box"—a function that does one job perfectly! 📦
+## The Pattern
+```python
+def ask_question(q):
+    print(q["question"])
+    user_answer = input("Your answer: ")
+    
+    if user_answer == q["answer"]:
+        print("Correct! ✅")
+    else:
+        print("Wrong! The answer was:", q["answer"])
+```
+
+## Try It!
+1. Run the code
+2. Answer the question
+3. See if you got it right!
+
+## What You Learned
+✅ Functions can take a dictionary as input
+✅ Check answers with `if` statements
+✅ Give feedback on right/wrong answers

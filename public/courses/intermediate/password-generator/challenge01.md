@@ -1,14 +1,21 @@
-# CHALLENGE: Super Secure 🏆
+# Challenge: Super Secure 🏆
 
-Can you create a tool that asks the user how long their password should be?
+## Your Mission
+Create a password generator that asks the user how long they want their password!
 
-### Your Task:
-1. Ask the user for the length (e.g., "Enter password length:").
-2. Convert that input to a number.
-3. Use a loop to pick characters.
-4. Print the final password!
+## Your Task
+1. Ask the user: "How many characters?"
+2. Turn their answer into a number using `int()`
+3. Use a loop to pick that many random characters
+4. Print the password!
 
-### Extra Engineering:
-Can you add a message that says "STRENGTH: STRONG" if the length is 10 or more?
+**Example output:**
+```
+How many characters? 10
+Your password is: a3#fG9!kp2
+```
 
-Good luck, Engineer!
+## Bonus
+Can you make it say "STRONG!" if the password is 10 or more characters?
+
+You've got this! 🔐

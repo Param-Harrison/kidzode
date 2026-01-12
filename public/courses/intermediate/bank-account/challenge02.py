@@ -1,9 +1,19 @@
-# ---- YOUR CHALLENGE ----
-my_balance = 100
-friend_balance = 0
+# ========================================
+# 💸 CHALLENGE 2: Transfer Money
+# ========================================
 
-# 1. Define transfer(amount)
-# 2. Use 'global' for both balances
-# 3. Move the money!
+savings = 500
+checking = 100
 
-# Write your code below!
+def transfer(amount):
+    global savings, checking
+    if amount > savings:
+        print("Not enough in savings!")
+    else:
+        savings = savings - amount
+        checking = checking + amount
+        print("Transferred $" + str(amount))
+
+print("Before: Savings $" + str(savings) + ", Checking $" + str(checking))
+transfer(200)
+print("After: Savings $" + str(savings) + ", Checking $" + str(checking))

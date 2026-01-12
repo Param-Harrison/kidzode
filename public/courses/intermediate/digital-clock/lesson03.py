@@ -1,15 +1,21 @@
-import datetime
-import time
+# ========================================
+# 📅 LESSON 3: The Date Display
+# ========================================
 
-print("Sleek Digital Clock ⌚")
-print("(Wait for it...)")
+from datetime import datetime
 
-while True:
-    now = datetime.datetime.now()
-    readable_time = now.strftime("%I:%M:%S %p")
-    
-    # end="\r" keeps the cursor on the same line
-    # flush=True makes sure the text updates immediately
-    print(f"Current Time: {readable_time}", end="\r", flush=True)
-    
-    time.sleep(1)
+now = datetime.now()
+
+# Time display
+time_string = now.strftime("%H:%M:%S")
+print("Time:", time_string)
+
+# Date display - different formats
+print("")
+print("Date (numbers):", now.strftime("%Y-%m-%d"))
+print("Date (words):", now.strftime("%A, %B %d, %Y"))
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Create your own custom format!
+# ----------------------------------------

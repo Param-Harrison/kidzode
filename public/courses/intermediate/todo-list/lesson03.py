@@ -1,25 +1,45 @@
+# ========================================
+# 📝 LESSON 3: Adding and Removing
+# ========================================
+
+# Our list of tasks (starts empty)
 tasks = []
 
+# Function to show all tasks
 def show_tasks():
-    print("\n--- YOUR TASKS ---")
+    print("")
+    print("--- YOUR TASKS ---")
     if len(tasks) == 0:
-        print("(List is empty)")
-    for t in tasks:
-        print("- " + t)
+        print("(No tasks yet!)")
+    else:
+        for task in tasks:
+            print("- " + task)
 
+# Main loop
 while True:
-    print("\n1. Add Task\n2. View Tasks\n3. Clear All\n4. Exit")
+    print("")
+    print("1. Add Task")
+    print("2. View Tasks")
+    print("3. Clear All")
+    print("4. Exit")
+    
     choice = input("> ")
-
+    
     if choice == "1":
         new_task = input("What do you need to do? ")
         tasks.append(new_task)
+        print("Added!")
     elif choice == "2":
         show_tasks()
     elif choice == "3":
         tasks.clear()
-        print("List cleared!")
+        print("All tasks cleared!")
     elif choice == "4":
+        print("Goodbye! ✅")
         break
 
-# TRY THIS: Add a "Remove Last" task using tasks.pop()!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add option "5" to remove the last task!
+# Use tasks.pop() to remove the last item!
+# ----------------------------------------

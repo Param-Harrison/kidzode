@@ -1,20 +1,21 @@
-# Hints for Password Challenge
+# Hints for Challenge 1: Super Secure 💡
 
-## 🟢 Hint 1
-Get the input and turn it into a number:
+## Stuck? Here are some hints!
+
+### Hint 1: Ask for length and convert
 ```python
-length = int(input("Length? "))
+length = int(input("How many characters? "))
 ```
 
-## 🟡 Hint 2
-Setup a loop that runs 'length' times:
+### Hint 2: Use length in your loop
 ```python
-for i in range(length):
+for count in range(length):
 ```
 
-## 🟠 Hint 3
-To check the strength, use `if`:
+### Hint 3: Check if it's strong
 ```python
 if length >= 10:
-    print("STRENGTH: STRONG")
+    print("STRONG!")
 ```
+
+You've got this! 🔐

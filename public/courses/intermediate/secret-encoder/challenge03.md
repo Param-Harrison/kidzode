@@ -1,12 +1,20 @@
-# CHALLENGE 3: Reverse Decoder ↩️
+# Challenge 3: Decoder Ring ↩️
 
-Can you write a program that takes secret numbers and turns them back into text?
+## Your Mission
+Turn secret numbers BACK into letters!
 
-### Your Task:
-1. Create a list of secret numbers (like `[72, 101, 108, 108, 111]`).
-2. Use a loop to check each number.
-3. Use `chr(number)` to turn it back into a letter.
-4. Print the secret message!
+## Your Task
+1. Create a list of secret numbers: `[72, 69, 76, 76, 79]`
+2. Loop through each number
+3. Turn each number into a letter with `chr()`
+4. Build and print the decoded word!
 
-### Achievement:
-You've built a decoder ring! 🕵️‍♀️
+**Example output:**
+```
+The secret message is: HELLO
+```
+
+## Hint
+Those numbers spell something... 🤔
+
+Decode the mystery! 🕵️

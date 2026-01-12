@@ -1,19 +1,33 @@
+# ========================================
+# 🔄 LESSON 2: The Main Menu Loop
+# ========================================
+
 def show_menu():
-    print("\n1. Hello\n2. Goodbye\n3. Exit")
+    print("")
+    print("1. Say Hello")
+    print("2. Say Goodbye")
+    print("3. Exit")
 
+# while True runs forever... until we break out!
 while True:
+    # Show the menu each time
     show_menu()
+    
+    # Get the user's choice
     choice = input("Pick a number: ")
-
+    
+    # Check what they picked
     if choice == "1":
-        print("Hello there!")
+        print("Hello there! 👋")
     elif choice == "2":
-        print("Goodbye for now!")
+        print("Goodbye for now! 👋")
     elif choice == "3":
         print("Exiting app...")
-        # break stops the loop immediately
-        break
+        break  # This stops the loop!
     else:
-        print("Invalid choice, try again!")
+        print("I don't understand. Try 1, 2, or 3.")
 
-# TRY THIS: Add a choice '4' that prints a joke!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add choice "4" that tells a joke!
+# ----------------------------------------

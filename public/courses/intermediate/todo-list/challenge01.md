@@ -1,10 +1,25 @@
-# CHALLENGE: The Task Master 🏆
+# Challenge: Task Master 🏆
 
-Can you add a priority system to your tasks?
+## Your Mission
+Build a simple to-do list that lets you add and view tasks!
 
-### Your Task:
-1. When adding a task, ask for a priority (Urgent or Normal).
-2. Store the task as `"(Urgent) Task Name"`.
-3. **Engineering Challenge:** Can you add a line that shows how many tasks are left to do?
+## Your Task
+1. Create an empty `tasks` list
+2. Use a `while True` loop with a menu
+3. Let users add tasks and view them
+4. Include an Exit option with `break`
 
-Good luck, Project Manager!
+**Example:**
+```
+1. Add Task
+2. View Tasks
+3. Exit
+> 1
+What task? Do homework
+Added!
+```
+
+## Hint
+Use the pattern from the lessons!
+
+Stay organized! 📋

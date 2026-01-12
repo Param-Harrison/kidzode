@@ -1,19 +1,22 @@
-# A list containing dictionaries
-quiz_data = [
-    {
-        "question": "What is 5 + 5?",
-        "answer": "10"
-    },
-    {
-        "question": "What color is the sky?",
-        "answer": "blue"
-    }
+# ========================================
+# 🎯 LESSON 1: The Quiz Bank
+# ========================================
+
+# A list of questions - each is a dictionary
+quiz = [
+    {"question": "What color is the sky?", "answer": "blue"},
+    {"question": "What is 2 + 2?", "answer": "4"},
+    {"question": "How many legs does a dog have?", "answer": "4"}
 ]
 
-# Get the first dictionary in the list
-first_q = quiz_data[0]
+# Look at the first question
+print("Question 1:", quiz[0]["question"])
+print("Answer:", quiz[0]["answer"])
 
-print("Question 1:")
-print(first_q["question"])
+print("")
+print("We have", len(quiz), "questions in total!")
 
-# TRY THIS: Print the answer to the second question!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add a new question to the quiz list!
+# ----------------------------------------

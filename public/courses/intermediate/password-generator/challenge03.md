@@ -1,12 +1,21 @@
-# CHALLENGE 3: Custom Password 🎛️
+# Challenge 3: Custom Password 🎛️
 
-Let the user decide how strong their password should be!
+## Your Mission
+Let the user decide BOTH the length AND what types of characters to include!
 
-### Your Task:
-1. Ask the user: "How long should the password be?".
-2. Turn it into a number.
-3. Use that number in your `range()` function for the loop.
-4. Generate a password of that exact length!
+## Your Task
+1. Ask: "How long should the password be?"
+2. Convert to a number
+3. Generate a password of that exact length
+4. Print the result
 
-### Achievement:
-You've built a flexible security tool that adapts to user needs! 🛡️
+**Example output:**
+```
+How long should the password be? 16
+Your custom password is: f7#k9a!2p4^b&m1x
+```
+
+## Bonus
+Ask if they want symbols included!
+
+Customize away! 🎛️

@@ -1,9 +1,13 @@
-# ---- YOUR CHALLENGE ----
-def lbs_to_kg(lbs):
-    return lbs * 0.45
+def c_to_f(c): return c * 1.8 + 32
+def f_to_c(f): return (f - 32) / 1.8
 
-# 1. Define convert_and_print(val, func)
-# 2. Call the function inside
-# 3. Test it with lbs_to_kg
+print("1. Celsius to Fahrenheit")
+print("2. Fahrenheit to Celsius")
+choice = input("Pick: ")
 
-# Write your code below!
+if choice == "1":
+    c = float(input("Enter Celsius: "))
+    print(c, "°C =", c_to_f(c), "°F")
+else:
+    f = float(input("Enter Fahrenheit: "))
+    print(f, "°F =", f_to_c(f), "°C")

@@ -1,9 +1,20 @@
-# ---- YOUR CHALLENGE ----
-message = input("Enter message: ")
-shift = int(input("Enter shift: "))
+# ========================================
+# 🏆 CHALLENGE 1: Secret Agent Encoder
+# ========================================
 
-# 1. Loop and encode
-# 2. Print result
-# 3. Bonus: Add 'decode' logic!
+# Step 1: Get the message
+message = input("Enter your secret message: ")
 
-# Write your code below!
+# Step 2: Get the shift
+shift = int(input("Enter the shift number: "))
+
+# Step 3: Encode each letter
+secret = ""
+for letter in message:
+    code = ord(letter)
+    new_code = code + shift
+    new_letter = chr(new_code)
+    secret = secret + new_letter
+
+# Step 4: Print the result
+print("Your secret message is:", secret)

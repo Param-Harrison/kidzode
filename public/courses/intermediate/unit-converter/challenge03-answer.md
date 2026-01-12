@@ -1,17 +1,14 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-def double_it(n):
-    return n * 2
+def c_to_f(c): return c * 1.8 + 32
+def f_to_c(f): return (f - 32) / 1.8
 
-def triple_it(n):
-    return n * 3
-
-def runner(number, action):
-    result = action(number)
-    print("Input:", number, "-> Result:", result)
-
-print("--- FUNCTION RUNNER ---")
-runner(10, double_it)
-runner(10, triple_it)
+print("1. C→F  2. F→C")
+choice = input("Pick: ")
+if choice == "1":
+    c = float(input("Celsius: "))
+    print(c, "°C =", c_to_f(c), "°F")
+else:
+    f = float(input("Fahrenheit: "))
+    print(f, "°F =", f_to_c(f), "°C")
 ```

@@ -1,10 +1,24 @@
-# ---- YOUR CHALLENGE ----
+# ========================================
+# 🏆 CHALLENGE 1: Super Secure
+# ========================================
+
 import random
 
-chars = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+# Character bank
+chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%"
 
-# 1. Ask for length
-# 2. Loop and generate password
-# 3. Print the result
+# Step 1: Ask for length
+length = int(input("How many characters? "))
 
-# Write your code below!
+# Step 2: Build the password
+password = ""
+for count in range(length):
+    char = random.choice(chars)
+    password = password + char
+
+# Step 3: Print it
+print("Your password is:", password)
+
+# Bonus: Check if it's strong
+if length >= 10:
+    print("STRONG! 💪")

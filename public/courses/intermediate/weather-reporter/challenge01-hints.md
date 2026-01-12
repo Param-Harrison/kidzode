@@ -1,17 +1,13 @@
-# Hints for Weather Challenge
+# Hints for Challenge 1: Global Weather 💡
 
-## 🟢 Hint 1
-To loop through a dictionary, use:
+### Hint 1: Create dictionary
 ```python
-for city, data in cities.items():
+weather = {"London": "Rainy", "Tokyo": "Sunny"}
 ```
 
-## 🟡 Hint 2
-`city` will be the name (like 'Miami') and `data` will be the sub-dictionary.
-
-## 🟠 Hint 3
-Access the sub-data like this:
+### Hint 2: Check if exists
 ```python
-t = data["temp"]
-s = data["status"]
+if city in weather:
 ```
+
+Report that weather! 🌤️

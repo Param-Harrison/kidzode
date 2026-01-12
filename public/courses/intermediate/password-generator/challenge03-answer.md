@@ -1,17 +1,15 @@
-### One way to solve it:
+# Answer: Custom Password ✅
 
 ```python
 import random
-import string
 
-chars = string.ascii_letters + string.digits + "!@#$%"
-password = ""
-
-print("--- SECURITY CENTER ---")
+chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
 length = int(input("How long should the password be? "))
 
-for i in range(length):
-    password += random.choice(chars)
+password = ""
+for count in range(length):
+    char = random.choice(chars)
+    password = password + char
 
-print("Generated Password:", password)
+print("Your custom password is:", password)
 ```

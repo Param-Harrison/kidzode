@@ -1,18 +1,5 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-def minutes_to_seconds(m):
-    return m * 60
-
-def hours_to_minutes(h):
-    return h * 60
-
-hours = int(input("How many hours? "))
-
-mins = hours_to_minutes(hours)
-secs = minutes_to_seconds(mins)
-
-print(hours, "hours is:")
-print(mins, "minutes")
-print(secs, "seconds")
+hours = float(input("Hours: "))
+print(hours, "hours =", hours*60, "minutes =", hours*3600, "seconds")
 ```

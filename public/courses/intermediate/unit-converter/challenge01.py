@@ -1,8 +1,8 @@
-# ---- YOUR CHALLENGE ----
+import random
 
-# 1. Define your conversion functions
-# 2. Ask user for their choice
-# 3. Get the value to convert
-# 4. Print the result nicely
+def km_to_miles(km):
+    return km * 0.621
 
-# Write your code below!
+km = float(input("Enter kilometers: "))
+miles = km_to_miles(km)
+print(str(km) + " km =", str(miles) + " miles")

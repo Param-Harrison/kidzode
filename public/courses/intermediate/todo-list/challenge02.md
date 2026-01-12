@@ -1,12 +1,25 @@
-# CHALLENGE 2: Priority Tasks ⚡
+# Challenge 2: Priority Tasks ⚡
 
-Some tasks are more important than others! Let's store tasks with a priority level.
+## Your Mission
+Add priority labels to your tasks!
 
-### Your Task:
-1. Create an empty list `tasks`.
-2. Write a function `add_priority(task, level)` that adds a string like "[HIGH] Clean room" to the list.
-3. Call your function a few times.
-4. Print the final list.
+## Your Task
+1. When adding a task, also ask for priority (High or Normal)
+2. Store it as "[HIGH] Task" or "[NORMAL] Task"
+3. Show the priority when viewing tasks
 
-### Achievement:
-You've added attributes to your data! 🏷️
+**Example:**
+```
+What task? Clean room
+Priority (High/Normal)? High
+Your Tasks:
+- [HIGH] Clean room
+```
+
+## Hint
+Combine the priority with the task using `+`:
+```python
+full_task = "[" + priority + "] " + task
+```
+
+Prioritize! ⚡

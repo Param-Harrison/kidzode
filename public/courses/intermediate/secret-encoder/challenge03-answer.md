@@ -1,15 +1,17 @@
-### One way to solve it:
+# Answer: Decoder Ring ✅
 
 ```python
-# Matches "Secret"
-secret_nums = [83, 101, 99, 114, 101, 116]
+codes = [72, 69, 76, 76, 79]
 
-print("Decoding message...")
+message = ""
+for code in codes:
+    letter = chr(code)
+    message = message + letter
 
-for n in secret_nums:
-    # Convert number to letter
-    char = chr(n)
-    print(char, end="")
+print("The secret message is:", message)
+```
 
-print("\n\nMission Complete.")
+**Output:**
+```
+The secret message is: HELLO
 ```

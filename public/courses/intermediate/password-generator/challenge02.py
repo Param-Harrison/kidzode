@@ -1,9 +1,18 @@
-# ---- YOUR CHALLENGE ----
+# ========================================
+# 🔢 CHALLENGE 2: PIN Code Maker
+# ========================================
+
 import random
 
-# 1. Create numbers string
-# 2. Create empty pin
-# 3. Loop 4 times to build the PIN
-# 4. Print the result
+# Only numbers for PINs
+numbers = "0123456789"
 
-# Write your code below!
+# Start empty
+pin = ""
+
+# Pick 4 random digits
+for count in range(4):
+    digit = random.choice(numbers)
+    pin = pin + digit
+
+print("Your secure PIN is:", pin)

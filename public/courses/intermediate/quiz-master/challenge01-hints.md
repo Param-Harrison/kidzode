@@ -1,18 +1,14 @@
-# Hints for Quiz Master Challenge
+# Hints for Challenge 1: Super Quiz 💡
 
-## 🟢 Hint 1
-Inside your loop, use another loop to show the options:
+### Hint 1: List of dictionaries
 ```python
-for opt in item["options"]:
-    print(opt)
+quiz = [{"question": "...", "answer": "..."}]
 ```
 
-## 🟡 Hint 2
-Compare the user's input to `item["a"]`.
-
-## 🟠 Hint 3
-To track wrong answers, you can do:
+### Hint 2: Track score
 ```python
-wrong = total - correct
+score = 0
+# Inside loop, if correct: score = score + 1
 ```
-or just create a `wrong_count = 0` variable and add to it in the `else` block.
+
+Quiz away! 🎯

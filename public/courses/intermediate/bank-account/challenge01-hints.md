@@ -1,13 +1,13 @@
-# Hints for Bank Challenge
+# Hints for Challenge 1: Interest Calculator 💡
 
-## 🟢 Hint 1
-Inside your function, don't forget `global balance`.
-
-## 🟡 Hint 2
-Calculate interest first:
+### Hint 1: Calculate interest
 ```python
-earned = balance * rate
+interest = balance * 0.05
 ```
 
-## 🟠 Hint 3
-Use `return earned` at the very end of your function so the main program can use that number.
+### Hint 2: Add it
+```python
+balance = balance + interest
+```
+
+Watch your money grow! 📈

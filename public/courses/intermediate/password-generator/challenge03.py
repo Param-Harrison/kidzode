@@ -1,11 +1,19 @@
-# ---- YOUR CHALLENGE ----
+# ========================================
+# 🎛️ CHALLENGE 3: Custom Password
+# ========================================
+
 import random
-import string
 
-chars = string.ascii_letters + string.digits + "!@#$%"
+# Character bank
+chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
 
-# 1. Ask user for length
-# 2. Use a loop with that length
-# 3. Build and print the password
+# Ask for length
+length = int(input("How long should the password be? "))
 
-# Write your code below!
+# Build the password
+password = ""
+for count in range(length):
+    char = random.choice(chars)
+    password = password + char
+
+print("Your custom password is:", password)

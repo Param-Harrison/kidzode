@@ -1,16 +1,18 @@
-# Hints for Custom Password Challenge
+# Hints for Challenge 3: Custom Password 💡
 
-## 🟢 Hint 1
-Get the length number:
+## Stuck? Here are some hints!
+
+### Hint 1: Ask and convert
 ```python
-length = int(input("Enter length: "))
+length = int(input("How long should the password be? "))
 ```
 
-## 🟡 Hint 2
-Use the variable in your loop:
+### Hint 2: Use the length in range
 ```python
-for i in range(length):
+for count in range(length):
 ```
 
-## 🟠 Hint 3
-You can combine letters, numbers, and symbols for extra strength!
+### Hint 3: Same pattern as before
+Pick a character and add it to the password!
+
+Customize away! 🎛️

@@ -1,21 +1,24 @@
+# ========================================
+# 🔍 LESSON 2: Inside the Dictionary
+# ========================================
+
+# Each city has its own dictionary with details
 cities = {
-    "London": {
-        "temp": 15,
-        "status": "Rainy"
-    },
-    "Sydney": {
-        "temp": 25,
-        "status": "Sunny"
-    }
+    "London": {"temp": 15, "status": "Rainy"},
+    "Tokyo": {"temp": 28, "status": "Sunny"},
+    "Paris": {"temp": 20, "status": "Cloudy"}
 }
 
-# Accessing nested data
-city = "Sydney"
-temp = cities[city]["temp"]
-sky = cities[city]["status"]
+# Get all info for London
+city = "London"
+info = cities[city]
+print(city + " info:", info)
 
-print(f"REPORT for {city}:")
-print(f"- Temperature: {temp}°C")
-print(f"- Sky: {sky}")
+# Get specific pieces
+print("Temperature:", cities[city]["temp"])
+print("Status:", cities[city]["status"])
 
-# TRY THIS: Add a 'wind' speed to the Sydney dictionary!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add "New York" with temp 22 and status "Windy"!
+# ----------------------------------------

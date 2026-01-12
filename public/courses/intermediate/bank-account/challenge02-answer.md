@@ -1,19 +1,19 @@
-### One way to solve it:
+# Answer: Transfer Money ✅
 
 ```python
-my_balance = 100
-friend_balance = 0
+savings = 500
+checking = 100
 
 def transfer(amount):
-    global my_balance, friend_balance
-    my_balance -= amount
-    friend_balance += amount
-    print(f"Sent ${amount}!")
+    global savings, checking
+    if amount > savings:
+        print("Not enough in savings!")
+    else:
+        savings = savings - amount
+        checking = checking + amount
+        print("Transferred $" + str(amount))
 
-print("--- MONEY MOVER ---")
-print(f"Me: ${my_balance} | Friend: ${friend_balance}")
-
-transfer(20)
-
-print(f"Me: ${my_balance} | Friend: ${friend_balance}")
+print("Before: Savings $" + str(savings) + ", Checking $" + str(checking))
+transfer(200)
+print("After: Savings $" + str(savings) + ", Checking $" + str(checking))
 ```

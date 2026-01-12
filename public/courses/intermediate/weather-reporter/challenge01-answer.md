@@ -1,18 +1,16 @@
-### One way to solve it:
+# Answer: Global Weather ✅
 
 ```python
-cities = {
-    "New York": {"temp": 2, "status": "Snowing"},
-    "Miami": {"temp": 30, "status": "Sunny"},
-    "Seattle": {"temp": 10, "status": "Rainy"}
+weather = {
+    "London": "Rainy",
+    "Tokyo": "Sunny",
+    "Paris": "Cloudy"
 }
 
-print("🌎 GLOBAL WEATHER REPORT 🌎")
-print("-" * 25)
+city = input("Enter city: ")
 
-for name, info in cities.items():
-    print(f"CITY: {name}")
-    print(f"TEMP: {info['temp']}°C")
-    print(f"SKY:  {info['status']}")
-    print("-" * 25)
+if city in weather:
+    print("Weather in", city + ":", weather[city])
+else:
+    print("Sorry,", city, "not found!")
 ```

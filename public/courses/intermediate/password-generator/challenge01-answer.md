@@ -1,22 +1,18 @@
-### One way to solve it:
+# Answer: Super Secure ✅
 
 ```python
 import random
 
-chars = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%"
+length = int(input("How many characters? "))
 
-length = int(input("How long should the password be? "))
 password = ""
+for count in range(length):
+    char = random.choice(chars)
+    password = password + char
 
-for i in range(length):
-    password += random.choice(chars)
+print("Your password is:", password)
 
-print(f"Your secure password is: {password}")
-
-if length >= 12:
-    print("Locked & Loaded! 🛡️")
-elif length >= 8:
-    print("Pretty secure! 🗝️")
-else:
-    print("Warning: Too short! ⚠️")
+if length >= 10:
+    print("STRONG! 💪")
 ```

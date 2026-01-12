@@ -1,22 +1,22 @@
-# Hints for Secret Agent Challenge
+# Hints for Challenge 1: Secret Agent Encoder 💡
 
-## 🟢 Hint 1
-Use an empty string to store the result:
+## Stuck? Here are some hints!
+
+### Hint 1: Get input
 ```python
-output = ""
+message = input("Enter your secret message: ")
+shift = int(input("Enter the shift number: "))
 ```
 
-## 🟡 Hint 2
-To decode, just reverse the math:
+### Hint 2: Loop through letters
 ```python
-new_code = code - shift
+for letter in message:
 ```
 
-## 🟠 Hint 3
-You can check if the user wants to decode like this:
+### Hint 3: Shift and add
 ```python
-choice = input("E or D? ")
-if choice == "D":
-    shift = -shift
+new_code = ord(letter) + shift
+secret = secret + chr(new_code)
 ```
-*(Multiplying shift by -1 turns adding into subtracting!)*
+
+You're a secret agent now! 🕵️

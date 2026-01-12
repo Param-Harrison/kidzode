@@ -1,15 +1,21 @@
-# Hints for Task Counter
+# Hints for Challenge 3: Task Counter 💡
 
-## 🟢 Hint 1
-Remember that `len(tasks)` gives you a number.
+## Stuck? Here are some hints!
 
-## 🟡 Hint 2
-Your function should look like this:
+### Hint 1: Create the function
 ```python
 def count_tasks():
-    num = len(tasks)
-    print("Total tasks:", num)
+    total = len(tasks)
+    print("You have", total, "tasks!")
 ```
 
-## 🟠 Hint 3
-Call this function whenever the user asks for a status update!
+### Hint 2: Add menu option
+Add "3. Count Tasks" to your menu!
+
+### Hint 3: Call the function
+```python
+elif choice == "3":
+    count_tasks()
+```
+
+Track your progress! 📊

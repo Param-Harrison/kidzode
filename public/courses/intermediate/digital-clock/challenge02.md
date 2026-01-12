@@ -1,12 +1,11 @@
-# CHALLENGE 2: Date Display 📅
+# Challenge 2: Date Display 📅
 
-Time is good, but what about the date?
+## Your Mission
+Show both date and time!
 
-### Your Task:
-1. Import `datetime` as `dt`.
-2. Get `now = dt.datetime.now()`.
-3. Print the date in this format: "YYYY-MM-DD".
-4. You can ask for `now.year`, `now.month`, and `now.day`.
+## Your Task
+1. Get current datetime
+2. Print date as "Month Day, Year"
+3. Print time as "Hour:Minute"
 
-### Achievement:
-You've built a calendar display! 🗓️
+What day is it? 📅

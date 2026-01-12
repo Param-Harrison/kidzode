@@ -1,16 +1,17 @@
-### One way to solve it:
+# Answer: Temperature Report ✅
 
 ```python
-city_data = {
-    "name": "Chicago",
-    "wind": 25,
-    "temp": 10
+cities = {
+    "London": {"temp": 15, "status": "Rainy"},
+    "Tokyo": {"temp": 28, "status": "Sunny"},
+    "Paris": {"temp": 20, "status": "Cloudy"}
 }
 
-print(f"Checking {city_data['name']}...")
+city = input("Enter city: ")
 
-if city_data["wind"] > 15:
-    print("🌬️ ALERT: High winds detected!")
+if city in cities:
+    info = cities[city]
+    print(city, "-", str(info["temp"]) + "°C,", info["status"])
 else:
-    print("Wind is calm.")
+    print("City not found!")
 ```

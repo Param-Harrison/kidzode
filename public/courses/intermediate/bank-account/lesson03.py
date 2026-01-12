@@ -1,14 +1,29 @@
+# ========================================
+# 🛑 LESSON 3: Safety Checks
+# ========================================
+
 balance = 50
 
-def smart_withdraw(amount):
+def safe_withdraw(amount):
     global balance
+    # Check if they have enough money FIRST
     if amount > balance:
         print("❌ ERROR: Not enough money!")
+        print("You only have $" + str(balance))
     else:
-        balance -= amount
-        print(f"✅ Success! Withdrew ${amount}")
+        balance = balance - amount
+        print("✅ Withdrew $" + str(amount))
 
-smart_withdraw(100) # This should fail
-smart_withdraw(20)  # This should work
+# Try to withdraw too much (should fail)
+safe_withdraw(100)
 
-print(f"Balance: ${balance}")
+# Try to withdraw a valid amount (should work)
+safe_withdraw(20)
+
+# Check final balance
+print("Balance: $" + str(balance))
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change starting balance to 200 and try again!
+# ----------------------------------------

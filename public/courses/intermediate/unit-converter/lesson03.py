@@ -1,10 +1,26 @@
-def c_to_f(c):
-    return (c * 1.8) + 32
+# ========================================
+# 🌡️ LESSON 3: Temperature Pro
+# ========================================
 
-temp_c = 0
-print(f"Freezing point: {temp_c}°C = {c_to_f(temp_c)}°F")
+def celsius_to_fahrenheit(c):
+    return c * 1.8 + 32
 
-temp_c = 100
-print(f"Boiling point: {temp_c}°C = {c_to_f(temp_c)}°F")
+def fahrenheit_to_celsius(f):
+    return (f - 32) / 1.8
 
-# TRY THIS: Write the reverse! f_to_c(f) = (f - 32) / 1.8
+# Test with known values
+print("Freezing point:")
+print("0°C =", celsius_to_fahrenheit(0), "°F")
+
+print("")
+print("Boiling point:")
+print("100°C =", celsius_to_fahrenheit(100), "°F")
+
+print("")
+print("Room temperature:")
+print("68°F =", fahrenheit_to_celsius(68), "°C")
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Convert today's temperature!
+# ----------------------------------------

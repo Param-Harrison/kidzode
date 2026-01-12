@@ -1,10 +1,6 @@
-# ---- YOUR CHALLENGE ----
 import time
-
-# 1. Wait for start input
-# 2. Get start time
-# 3. Wait for end input
-# 4. Get end time
-# 5. Calculate and print duration
-
-# Write your code below!
+seconds = int(input("Countdown from? "))
+for i in range(seconds, 0, -1):
+    print(i)
+    time.sleep(1)
+print("TIME'S UP! ⏰")

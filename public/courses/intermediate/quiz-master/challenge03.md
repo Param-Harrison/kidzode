@@ -1,11 +1,11 @@
-# CHALLENGE 3: Random Quiz 🎲
+# Challenge 3: Quiz with Pass/Fail 📝
 
-Let's make sure the quiz is different every time you play!
+## Your Mission
+Show if the user passed (3+ correct) or failed!
 
-### Your Task:
-1. Create a list of 3 different question dictionaries.
-2. Use `random.shuffle()` to mix up the list order.
-3. Loop through the shuffled list and ask each question.
+## Your Task
+1. Run the quiz and track score
+2. At the end, check if score >= 3
+3. Print "PASSED! 🎉" or "Try again! 📚"
 
-### Achievement:
-You've built a dynamic game engine! 🎰
+Pass the test! 📝

@@ -1,13 +1,29 @@
-# ---- YOUR CHALLENGE ----
-import random
+# ========================================
+# 📝 CHALLENGE 3: Quiz with Pass/Fail
+# ========================================
 
-questions = [
-    {"q": "Q1", "a": "A1"},
-    {"q": "Q2", "a": "A2"},
-    {"q": "Q3", "a": "A3"}
+quiz = [
+    {"question": "2 + 2?", "answer": "4"},
+    {"question": "Color of sky?", "answer": "blue"},
+    {"question": "Days in week?", "answer": "7"},
+    {"question": "3 * 3?", "answer": "9"},
+    {"question": "Capital of Japan?", "answer": "tokyo"}
 ]
 
-# 1. Shuffle the list
-# 2. Loop through and ask
+score = 0
 
-# Write your code below!
+for q in quiz:
+    print("")
+    print(q["question"])
+    answer = input("Answer: ")
+    if answer.lower() == q["answer"].lower():
+        score = score + 1
+
+print("")
+print("Score:", score, "/", len(quiz))
+
+# Check pass or fail
+if score >= 3:
+    print("PASSED! 🎉")
+else:
+    print("Try again! 📚")

@@ -1,17 +1,15 @@
-### One way to solve it:
+# Answer: Secret Agent Encoder ✅
 
 ```python
-msg = input("Enter message: ")
-shift = int(input("Enter shift: "))
-mode = input("Encode (E) or Decode (D)? ").upper()
+message = input("Enter your secret message: ")
+shift = int(input("Enter the shift number: "))
 
-if mode == "D":
-    shift = -shift
+secret = ""
+for letter in message:
+    code = ord(letter)
+    new_code = code + shift
+    new_letter = chr(new_code)
+    secret = secret + new_letter
 
-result = ""
-
-for char in msg:
-    result += chr(ord(char) + shift)
-
-print(f"Result: {result}")
+print("Your secret message is:", secret)
 ```

@@ -1,14 +1,23 @@
-# CHALLENGE: Full Secret Agent 🏆
+# Challenge: Secret Agent Encoder 🏆
 
-Can you build a tool that lets you choose to **ENCODE** or **DECODE**?
+## Your Mission
+Build a complete encoding tool! Ask for a message and a shift, then encode it.
 
-### Your Task:
-1. Ask the user for a message.
-2. Ask for a secret shift number.
-3. Encode the message.
-4. **Extra:** How would you *decode*? (Hint: Subtract the shift!)
+## Your Task
+1. Ask: "Enter your secret message:"
+2. Ask: "Enter the shift number:"
+3. Convert shift to a number with `int()`
+4. Encode each letter
+5. Print the secret message!
 
-### Engineering Goal:
-Try to use an `if` statement to let the user pick "E" for Encode and "D" for Decode.
+**Example output:**
+```
+Enter your secret message: HELLO
+Enter the shift number: 1
+Your secret message is: IFMMP
+```
 
-Good luck, Agent!
+## Hint
+Use a loop to go through each letter!
+
+You're a secret agent now! 🕵️

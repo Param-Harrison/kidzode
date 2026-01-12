@@ -1,23 +1,18 @@
-### One way to solve it:
+# Answer: Random Quiz ✅
 
 ```python
-q = {
-    "question": "What is the fastest animal?",
-    "answer": "Cheetah",
-    "hint": "It's a big cat with spots!"
-}
+import random
 
-print(q["question"])
-print("(Type HINT for a clue)")
+quiz = [{"question": "...", "answer": "..."}]
 
-while True:
-    guess = input("Answer: ")
-    
-    if guess == "HINT":
-        print("HINT:", q["hint"])
-    elif guess == q["answer"]:
-        print("✅ Correct!")
-        break
-    else:
-        print("❌ Try again!")
+random.shuffle(quiz)
+
+score = 0
+for q in quiz:
+    print(q["question"])
+    answer = input("Answer: ")
+    if answer.lower() == q["answer"].lower():
+        score = score + 1
+
+print("Score:", score)
 ```

@@ -1,12 +1,19 @@
-# ---- YOUR CHALLENGE ----
-data = {
-    "City A": 20,
-    "City B": 30,
-    "City C": 10
+# ========================================
+# 📊 CHALLENGE 3: Average Temperature
+# ========================================
+
+cities = {
+    "London": {"temp": 15, "status": "Rainy"},
+    "Tokyo": {"temp": 28, "status": "Sunny"},
+    "Paris": {"temp": 20, "status": "Cloudy"}
 }
 
-# 1. Loop to calculate total
-# 2. Divide by count to get average
-# 3. Print result
+# Add up all temperatures
+total = 0
+for city in cities:
+    total = total + cities[city]["temp"]
 
-# Write your code below!
+# Calculate average
+average = total / len(cities)
+
+print("Average temperature:", str(average) + "°C")

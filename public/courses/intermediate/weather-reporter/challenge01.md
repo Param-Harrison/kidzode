@@ -1,13 +1,21 @@
-# CHALLENGE: Global Weather 🏆
+# Challenge: Global Weather 🏆
 
-Can you build a report that shows the weather for ALL cities in your dictionary?
+## Your Mission
+Create a weather dictionary with 5 cities and let users look them up!
 
-### Your Task:
-1. Create a dictionary with at least 3 cities.
-2. Use a loop to look at each city.
-3. Print a clean report for each one.
+## Your Task
+1. Create a dictionary with 5 cities and their weather
+2. Ask user for a city name
+3. Look it up and show the weather
+4. Show error if not found
 
-### Engineering Challenge:
-Use `cities.items()` in your loop to get both the **name** and the **info** at the same time!
+**Example:**
+```
+Enter city: Tokyo
+Weather in Tokyo: Sunny
+```
 
-Good luck, Meteorologist!
+## Hint
+Use `if city in weather:` to check!
+
+Report that weather! 🌤️

@@ -1,13 +1,20 @@
-# CHALLENGE 2: PIN Code Maker 🔢
+# Challenge 2: PIN Code Maker 🔢
 
-Passwords are good, but some systems only use numbers! Let's build a 4-digit PIN generator.
+## Your Mission
+Some systems only use numbers (like ATM PINs). Create a 4-digit PIN generator!
 
-### Your Task:
-1. Create a variable `numbers = "0123456789"`.
-2. Create an empty `pin` string.
-3. Use a loop that runs 4 times.
-4. Pick a random number from your string and add it to `pin`.
-5. Print the result: "Your secure PIN is: [PIN]".
+## Your Task
+1. Create a number-only character bank: `"0123456789"`
+2. Start with an empty PIN
+3. Loop 4 times to pick 4 random digits
+4. Print the PIN
 
-### Achievement:
-You've engineered a numeric security tool! 🔐
+**Example output:**
+```
+Your secure PIN is: 7291
+```
+
+## Hint
+It's the same as passwords, but digits only!
+
+Secure those numbers! 🔐

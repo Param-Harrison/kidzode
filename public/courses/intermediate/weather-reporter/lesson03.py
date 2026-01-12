@@ -1,14 +1,25 @@
+# ========================================
+# 🔎 LESSON 3: City Lookup
+# ========================================
+
 cities = {
-    "Paris": {"temp": 18, "status": "Clear"},
-    "Berlin": {"temp": 12, "status": "Foggy"}
+    "London": {"temp": 15, "status": "Rainy"},
+    "Tokyo": {"temp": 28, "status": "Sunny"},
+    "Paris": {"temp": 20, "status": "Cloudy"}
 }
 
-name = input("Enter city name: ")
+# Ask for a city
+city = input("Enter a city: ")
 
-if name in cities:
-    info = cities[name]
-    print(f"Weather in {name}: {info['temp']}°C and {info['status']}")
+# Check if it exists BEFORE looking it up!
+if city in cities:
+    info = cities[city]
+    print("Temperature:", info["temp"], "°C")
+    print("Weather:", info["status"])
 else:
-    print(f"Sorry, we don't have data for {name} yet!")
+    print("Sorry,", city, "not found in our database!")
 
-# TRY THIS: Add 'Cairo' to the list so the search works!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Search for "Tokyo" (found) and "Mars" (not found)!
+# ----------------------------------------

@@ -1,16 +1,14 @@
-# Hints for Wind Speed
+# Hints for Challenge 2: Temperature Report 💡
 
-## 🟢 Hint 1
-Your dictionary checking needs to access the key:
+### Hint 1: Nested dictionary
 ```python
-speed = data["wind"]
+cities = {"Paris": {"temp": 20, "status": "Cloudy"}}
 ```
 
-## 🟡 Hint 2
-The check is a simple if:
+### Hint 2: Access nested value
 ```python
-if speed > 15:
+info = cities[city]
+print(info["temp"])
 ```
 
-## 🟠 Hint 3
-You can add `else: print("Calm breeze.")` for extra credit!
+What's the temp? 🌡️

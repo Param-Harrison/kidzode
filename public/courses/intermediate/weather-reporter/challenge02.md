@@ -1,12 +1,17 @@
-# CHALLENGE 2: Wind Speed 💨
+# Challenge 2: Temperature Report 🌡️
 
-Weather isn't just about sun and rain. Let's track wind speed too!
+## Your Mission
+Add temperatures to your weather dictionary!
 
-### Your Task:
-1. Create a `weather` dictionary for a city.
-2. Add a `wind` key with a number value (like 20).
-3. Check IF the wind is greater than 15.
-4. If it is, print "Windy Alert! 🌬️".
+## Your Task
+1. Create nested dictionaries with temp AND status
+2. Ask for a city
+3. Show both the temperature and weather status
 
-### Achievement:
-You've engineered a data-driven alert system! 🚨
+**Example:**
+```
+Enter city: Paris
+Paris - 20°C, Cloudy
+```
+
+What's the temp? 🌡️

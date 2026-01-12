@@ -1,8 +1,15 @@
-# ---- YOUR CHALLENGE ----
-balance = 1000
+# ========================================
+# 🏆 CHALLENGE 1: Interest Calculator
+# ========================================
 
-# 1. Create add_interest(rate) function
-# 2. Update balance with interest
-# 3. Return and print the interest earned
+balance = 100
 
-# Write your code below!
+def add_interest():
+    global balance
+    interest = balance * 0.05  # 5% interest
+    balance = balance + interest
+    print("Interest added: $" + str(interest))
+    print("New balance: $" + str(balance))
+
+print("Balance: $" + str(balance))
+add_interest()

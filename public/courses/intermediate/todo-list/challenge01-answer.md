@@ -1,23 +1,25 @@
-### One way to solve it:
+# Answer: Task Master ✅
 
 ```python
 tasks = []
 
 while True:
-    print(f"\n--- TASKS ({len(tasks)}) ---")
-    for t in tasks:
-        print(t)
+    print("")
+    print("1. Add Task")
+    print("2. View Tasks")
+    print("3. Exit")
     
-    print("\n1. Add Task\n2. Exit")
     choice = input("> ")
-
+    
     if choice == "1":
-        name = input("Task name: ")
-        urgent = input("Is it urgent? (y/n): ")
-        if urgent == "y":
-            tasks.append("🔴 URGENT: " + name)
-        else:
-            tasks.append("🟢 Normal: " + name)
+        task = input("What task? ")
+        tasks.append(task)
+        print("Added!")
     elif choice == "2":
+        print("--- Your Tasks ---")
+        for task in tasks:
+            print("- " + task)
+    elif choice == "3":
+        print("Goodbye!")
         break
 ```

@@ -1,21 +1,24 @@
-### One way to solve it:
+# Answer: Daily Limit ✅
 
 ```python
-balance = 100
-limit = 50
+balance = 500
+withdrawn_today = 0
+daily_limit = 100
 
-def withdraw(amount):
-    global balance
+def limited_withdraw(amount):
+    global balance, withdrawn_today
     
-    if amount > limit:
-        print("❌ Error: Over daily limit!")
+    if withdrawn_today + amount > daily_limit:
+        print("Would exceed daily limit!")
     elif amount > balance:
-        print("❌ Error: Not enough money!")
+        print("Not enough money!")
     else:
-        balance -= amount
-        print(f"✅ Withdrew ${amount}")
+        balance = balance - amount
+        withdrawn_today = withdrawn_today + amount
+        print("Withdrew $" + str(amount))
 
-print("--- ATM ---")
-withdraw(60)  # Too big
-withdraw(20)  # Okay!
+limited_withdraw(50)
+limited_withdraw(60)
+limited_withdraw(40)
+print("Total withdrawn: $" + str(withdrawn_today))
 ```

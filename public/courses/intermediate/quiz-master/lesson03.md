@@ -1,12 +1,32 @@
-# Final Scoreboard 🏆
+# The Scoreboard 📊
 
-Now let's loop through our whole quiz data and use a `score` variable to track points.
+## Quick Reminder
+You can ask questions and check answers. Now let's keep score!
 
-### Instructions:
-1. We start with `score = 0`.
-2. For each question dictionary, we run our `ask` function.
-3. If the function returns `True`, we add 1 to the score.
-4. Run the code for a full quiz experience!
+## Your Mission
+Track how many answers are correct and show the final score!
 
-### Achievement:
-You've built a complete interactive application from scratch! 🎮
+## The Pattern
+```python
+score = 0
+
+for q in quiz:
+    # If correct, add 1 to score
+    if correct:
+        score = score + 1
+
+print("Your score:", score, "/", len(quiz))
+```
+
+## Try It!
+1. Run the quiz
+2. Answer all questions
+3. See your final score!
+
+## What You Learned
+✅ Use a variable to track score
+✅ Add 1 when they get it right
+✅ Show score at the end
+
+## Achievement Unlocked! 🏆
+You built a complete quiz game!

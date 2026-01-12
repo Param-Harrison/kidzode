@@ -1,11 +1,9 @@
-### One way to solve it:
+# Answer: Number Encoder ✅
 
 ```python
-word = input("Enter a secret word: ")
-
-print("--- CONVERTING TO NUMBERS ---")
+word = input("Enter a word: ")
 
 for letter in word:
     code = ord(letter)
-    print(letter, "->", code)
+    print(letter, "=", code)
 ```
