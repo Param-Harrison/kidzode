@@ -1,16 +1,17 @@
-### One way to solve it:
+# Answer: Emoji Square ✅
 
 ```python
-star = "⭐"
-heart = "❤️"
+emoji = "⭐"
 
-# Draw stars
-for i in range(10):
-    print(star, end="")
-print()
+for row in range(5):
+    print(emoji * 5)
+```
 
-# Draw hearts
-for i in range(5):
-    print(heart, end="")
-print()
+**Output:**
+```
+⭐⭐⭐⭐⭐
+⭐⭐⭐⭐⭐
+⭐⭐⭐⭐⭐
+⭐⭐⭐⭐⭐
+⭐⭐⭐⭐⭐
 ```

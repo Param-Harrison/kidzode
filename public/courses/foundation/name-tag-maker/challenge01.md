@@ -1,11 +1,23 @@
-# CHALLENGE: Super Name Tag 🏆
+# Challenge: Super Name Tag 🏆
 
-Can you create a "Super" name tag that includes your name and your favorite color?
+## Your Mission
+Create the coolest name tag ever using your new skills!
 
-### Your Task:
-1. Create a variable `name`.
-2. Create a variable `color`.
-3. Print a tag that looks like this:
-   `*** ALEX (Blue) ***`
+## Your Task
+1. Create a variable called `name` with your name
+2. Create a variable called `hobby` with something you love (like "Gaming" or "Art")
+3. Print a name tag that shows both!
 
-Good luck!
+**Example output:**
+```
+=================
+  Name: Maya
+  Loves: Dancing
+=================
+```
+
+## Hint
+- Use `+` to join text: `"Name: " + name`
+- Or use commas: `print("Name:", name)`
+
+Show off your style! 🌟

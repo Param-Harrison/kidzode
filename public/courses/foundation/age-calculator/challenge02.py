@@ -1,7 +1,13 @@
-# ---- YOUR CHALLENGE ----
-# 1. Ask for current age
-# 2. Convert to number
-# 3. Calculate years until 100 (100 - age)
-# 4. Print the result
+# ========================================
+# 🐕 CHALLENGE 2: Dog Years
+# ========================================
 
-# Write your code below!
+# Step 1: Ask for age and turn into number
+age = int(input("How old are you? "))
+
+# Step 2: Calculate dog years (7 dog years per human year)
+dog_years = age * 7
+
+# Step 3: Print the result
+print("In dog years, you are:")
+print(dog_years)

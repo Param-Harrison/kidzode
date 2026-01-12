@@ -1,19 +1,18 @@
-# Hints for Your Message Challenge
+# Hints for Challenge 1: Your Message 💡
 
-## 🟢 Hint 1
-To create a variable, use:
+## Stuck? Here are some hints!
+
+### Hint 1: Creating the variable
+Remember, a variable is like a box. Put your food inside quotes:
 ```python
-food = "Sushi"
+food = "Pizza"
 ```
 
-## 🟡 Hint 2
-To print text and a variable together, use:
+### Hint 2: Printing
+Use `print()` twice — once for "I love" and once for your variable:
 ```python
-print("I love", food)
+print("I love")
+print(food)
 ```
 
-## 🟠 Hint 3
-For math, just use:
-```python
-print(10 * 10)
-```
+You've got this! 💪

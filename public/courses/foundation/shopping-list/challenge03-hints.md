@@ -1,17 +1,22 @@
-# Hints for Item Search Challenge
+# Hints for Challenge 3: Packing List 💡
 
-## 🟢 Hint 1
-Get the search term from the user:
+## Stuck? Here are some hints!
+
+### Hint 1: Create an empty suitcase
 ```python
-search = input("Search for: ")
+suitcase = []
 ```
 
-## 🟡 Hint 2
-The check should look like this:
+### Hint 2: Ask and add items
 ```python
-if search in items:
-    # found
+item1 = input("What do you want to pack? ")
+suitcase.append(item1)
 ```
 
-## 🟠 Hint 3
-Try typing the word exactly as it is in the list (Python cares about capitals!).
+### Hint 3: Print with a loop
+```python
+for item in suitcase:
+    print("- " + item)
+```
+
+Bon voyage! ✈️

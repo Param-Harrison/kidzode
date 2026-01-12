@@ -1,15 +1,16 @@
-### One way to solve it:
+# Answer: Villain Generator ✅
 
 ```python
 import random
 
-adjectives = ["Mega", "Sonic", "Quantum"]
-nouns = ["Falcon", "Storm", "Pulse"]
-titles = ["Guardian", "Defender", "Titan"]
+evil_words = ["Dark", "Evil", "Doom", "Shadow"]
+villains = ["Lord", "Master", "King", "Knight"]
 
-adj = random.choice(adjectives)
-noun = random.choice(nouns)
-title = random.choice(titles)
+evil = random.choice(evil_words)
+villain = random.choice(villains)
 
-print(f"Your full identity is: {adj} {noun} {title}")
+villain_name = f"{evil} {villain}"
+
+print("Your villain is:")
+print(villain_name)
 ```

@@ -1,13 +1,21 @@
-# Hints for Color Picker Challenge
+# Hints for Challenge 2: Color Picker 💡
 
-## 🟢 Hint 1
-Don't forget to `import random` at the very top of your code!
+## Stuck? Here are some hints!
 
-## 🟡 Hint 2
-Your list should look like this:
+### Hint 1: Create a colors list
 ```python
-colors = ["Neon Green", "Royal Blue", "Hot Pink"]
+colors = ["Red", "Blue", "Green", "Yellow", "Purple"]
 ```
 
-## 🟠 Hint 3
-Use `random.choice(colors)` to grab one item from the list.
+### Hint 2: Pick randomly
+```python
+todays_color = random.choice(colors)
+```
+
+### Hint 3: Print it!
+```python
+print("Today you should wear:")
+print(todays_color)
+```
+
+Style advice from Python! 👔

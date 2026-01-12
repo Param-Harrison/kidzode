@@ -1,7 +1,13 @@
-### One way to solve it:
+# Answer: Your Message ✅
 
 ```python
-fav_food = "Pizza"
-print("I love", fav_food)
-print(10 * 10)
+food = "Pizza"
+print("I love")
+print(food)
+```
+
+**Output:**
+```
+I love
+Pizza
 ```

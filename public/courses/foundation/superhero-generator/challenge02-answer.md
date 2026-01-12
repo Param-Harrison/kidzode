@@ -1,15 +1,16 @@
-### One way to solve it:
+# Answer: Pet Name Generator ✅
 
 ```python
 import random
 
-powers = ["Teleportation", "Ice Breath", "Healing", "Nature Control"]
-name = input("Enter your hero name: ")
+adjectives = ["Fluffy", "Super", "Speedy", "Mighty"]
+animals = ["Paws", "Whiskers", "Buddy", "Snout"]
 
-power = random.choice(powers)
+adj = random.choice(adjectives)
+animal = random.choice(animals)
 
-print("\n--- HERO DATA ---")
-print("NAME:", name)
-print("POWER:", power)
-print("-----------------")
+pet_name = f"{adj} {animal}"
+
+print("Your pet's superhero name is:")
+print(pet_name)
 ```

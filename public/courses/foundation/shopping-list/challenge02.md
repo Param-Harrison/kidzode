@@ -1,13 +1,25 @@
-# CHALLENGE 2: Wish List 🌟
+# Challenge 2: Wish List 🎁
 
-Instead of adding items one by one, let's use a loop to build a full wish list of 3 things!
+## Your Mission
+Create a birthday wish list and count the items!
 
-### Your Task:
-1. Create an empty list called `wish_list = []`.
-2. Use a `for` loop that runs 3 times.
-3. Inside the loop, ask the user: "What is your wish?".
-4. Append the answer to your list.
-5. Print the final list.
+## Your Task
+1. Create a list called `wishes` with 4 items you want
+2. Print "My wish list:"
+3. Use a loop to print each item
+4. Print how many items total using `len()`
 
-### Achievement:
-You've engineered a batch input system for lists! 📋
+**Example output:**
+```
+My wish list:
+- New bike
+- Video game
+- Art supplies
+- Books
+I want 4 things!
+```
+
+## Hint
+Use `len(wishes)` to count!
+
+Dream big! 🌟

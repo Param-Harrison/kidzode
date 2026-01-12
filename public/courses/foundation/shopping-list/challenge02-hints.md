@@ -1,17 +1,22 @@
-# Hints for Wish List Challenge
+# Hints for Challenge 2: Wish List 💡
 
-## 🟢 Hint 1
-Create the empty list before the loop:
+## Stuck? Here are some hints!
+
+### Hint 1: Create your wish list
 ```python
-wishes = []
+wishes = ["New bike", "Video game", "Art supplies", "Books"]
 ```
 
-## 🟡 Hint 2
-Inside the `for i in range(3):` loop, use `input()` to get the wish.
-
-## 🟠 Hint 3
-Add it to the list using `.append()`:
+### Hint 2: Print each with a loop
 ```python
-item = input("Wish: ")
-wishes.append(item)
+for wish in wishes:
+    print("- " + wish)
 ```
+
+### Hint 3: Count with len()
+```python
+total = len(wishes)
+print("I want", total, "things!")
+```
+
+Dream big! 🌟

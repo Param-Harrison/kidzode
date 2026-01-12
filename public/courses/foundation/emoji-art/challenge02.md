@@ -1,13 +1,24 @@
-# CHALLENGE 2: Emoji Border 🖼️
+# Challenge 2: Emoji Line 🎨
 
-Can you build a frame made of emojis around your name?
+## Your Mission
+Create a long line of your favorite emoji!
 
-### Your Task:
-1. Create a variable for your `name`.
-2. Create a variable for an `emoji`.
-3. Use a loop to print a top row of emojis.
-4. Print the emoji, then your name, then the emoji.
-5. Use another loop to print the bottom row of emojis.
+## Your Task
+1. Create a variable for your emoji
+2. Create a variable for how many (like 20)
+3. Print a row of that many emojis
 
-### Achievement:
-You've engineered a digital picture frame using loop logic! 🖼️
+**Example output:**
+```
+My emoji art:
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+```
+
+## Hint
+```python
+emoji = "🌟"
+count = 20
+print(emoji * count)
+```
+
+Make it beautiful! 🎨

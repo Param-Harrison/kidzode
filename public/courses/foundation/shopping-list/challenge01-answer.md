@@ -1,11 +1,18 @@
-### One way to solve it:
+# Answer: Party Invites ✅
 
 ```python
 friends = []
-friends.append("Leo")
 friends.append("Maya")
-friends.append("Zoe")
+friends.append("Leo")
+friends.append("Zara")
 
-for name in friends:
-    print(f"You are invited to my party, {name}!")
+for friend in friends:
+    print("You're invited, " + friend + "!")
+```
+
+**Output:**
+```
+You're invited, Maya!
+You're invited, Leo!
+You're invited, Zara!
 ```

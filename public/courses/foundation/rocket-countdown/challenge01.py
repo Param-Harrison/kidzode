@@ -1,9 +1,13 @@
-# ---- YOUR CHALLENGE ----
-import time
+# ========================================
+# 🏆 CHALLENGE 1: Custom Countdown
+# ========================================
 
-# 1. Ask for 'seconds'
-# 2. Convert to int
-# 3. Create a backward loop for the countdown
-# 4. Use time.sleep(1)
+# Step 1: Choose your starting number
+start = 10
 
-# Write your code below!
+# Step 2: Count down from start to 1
+for number in range(start, 0, -1):
+    print(number)
+
+# Step 3: Blast off!
+print("Blast off! 🚀")

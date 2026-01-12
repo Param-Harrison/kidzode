@@ -1,13 +1,31 @@
-# Welcome to Magic 8-Ball! 🎱
-Today you'll build a digital fortune teller that can answer any yes-or-no question. What does the future hold?
+# The Secret Toolbox 🧰
 
-## The Secret Library 📚
+## Your Mission
+Today you're building a Magic 8-Ball that answers questions! But first, you need a special power: **randomness**.
 
-Python has "Modules" which are like secret libraries of extra powers. To use random numbers, we need the `random` module.
+## What's a Toolbox?
+Python has extra powers stored in "toolboxes" (called **modules**). To use a power, you first open the toolbox with `import`.
 
-### Instructions:
-1. We use `import random` at the very top of our code.
-2. Run the code to see Python pick a random number between 1 and 10!
+```python
+import random
+```
 
-### Achievement:
-You've unlocked the power of randomness! 🎲
+This opens the `random` toolbox. Now you can pick random numbers!
+
+## Random Numbers
+Once you have the toolbox open, you can use `random.randint()`:
+```python
+number = random.randint(1, 10)
+```
+
+This picks a random number between 1 and 10. Every time you run it, you might get a different number!
+
+## Try It!
+1. Click **Run**
+2. See your lucky number!
+3. Run it again — did it change?
+
+## What You Learned
+✅ `import random` opens the randomness toolbox
+✅ `random.randint(1, 10)` picks a number from 1 to 10
+✅ Random means different every time! 🎲

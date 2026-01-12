@@ -1,17 +1,21 @@
-### One way to solve it:
+# Answer: Count Up Launch ✅
 
 ```python
 import time
 
-goal = int(input("Enter race goal: "))
-
-print("Getting ready...")
-time.sleep(1)
-
-for i in range(1, goal + 1):
-    print(i)
-    time.sleep(0.5)
+for number in range(1, 6):
+    print(number)
+    time.sleep(1)
 
 print("GO! 🏁")
-print("🏎️ 💨")
+```
+
+**Output:**
+```
+1
+2
+3
+4
+5
+GO! 🏁
 ```

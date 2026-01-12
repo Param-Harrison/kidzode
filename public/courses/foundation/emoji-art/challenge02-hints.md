@@ -1,18 +1,20 @@
-# Hints for Emoji Border Challenge
+# Hints for Challenge 2: Emoji Line 💡
 
-## 🟢 Hint 1
-Use a `for` loop to repeat the emoji:
+## Stuck? Here are some hints!
+
+### Hint 1: Choose your emoji
 ```python
-for i in range(10):
-    print(emoji, end="")
-print() # Add a newline after the loop
+emoji = "🌟"
 ```
 
-## 🟡 Hint 2
-The middle row should look like this:
+### Hint 2: Choose how many
 ```python
-print(emoji, name, emoji)
+count = 20
 ```
 
-## 🟠 Hint 3
-Try to make the top and bottom loops the exact same length so they line up!
+### Hint 3: Multiply and print!
+```python
+print(emoji * count)
+```
+
+Make it beautiful! 🎨

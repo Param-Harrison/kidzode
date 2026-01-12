@@ -1,13 +1,23 @@
+# ========================================
+# 🌪️ LESSON 2: Mixing the Superpowers
+# ========================================
+
+# Step 1: Open the random toolbox
 import random
 
-adjectives = ["Mega", "Sonic", "Quantum", "Shadow"]
-nouns = ["Falcon", "Storm", "Pulse", "Knight"]
+# Step 2: Create our word lists
+powers = ["Mega", "Sonic", "Quantum", "Shadow"]
+heroes = ["Falcon", "Storm", "Pulse", "Knight"]
 
-# Pick one from each
-first_part = random.choice(adjectives)
-second_part = random.choice(nouns)
+# Step 3: Pick one from each list
+power = random.choice(powers)
+hero = random.choice(heroes)
 
-print("First part:", first_part)
-print("Second part:", second_part)
+# Step 4: Show what we picked
+print("Power word:", power)
+print("Hero word:", hero)
 
-# TRY THIS: Run it 5 times and see if you get the same name!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Run it 5 times and see different combinations!
+# ----------------------------------------

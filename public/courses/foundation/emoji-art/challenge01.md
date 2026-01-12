@@ -1,16 +1,26 @@
-# CHALLENGE: Emoji Pyramid 🏆
+# Challenge: Emoji Triangle 🏆
 
-Can you create an "Emoji Pyramid" that grows and then shrinks?
+## Your Mission
+Create a triangle of emojis that grows from 1 to 5!
 
-### Your Task:
-1. Use a loop to grow from 1 to 5 emojis.
-2. Use another loop (or print statements) to shrink back down to 1.
+## Your Task
+1. Pick your favorite emoji
+2. Use a loop to print growing lines
+3. Line 1 should have 1 emoji, Line 2 should have 2, etc.
 
-Example:
-💠
-💠💠
-💠💠💠
-💠💠
-💠
+**Example output:**
+```
+💎
+💎💎
+💎💎💎
+💎💎💎💎
+💎💎💎💎💎
+```
 
-Go for it!
+## Hint
+```python
+for row in range(5):
+    print(emoji * (row + 1))
+```
+
+Build that triangle! 🔺

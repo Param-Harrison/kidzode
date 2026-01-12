@@ -1,13 +1,23 @@
-### One way to solve it:
+# Answer: Wish List ✅
 
 ```python
-print("--- WISH LIST BUILDER ---")
-wishes = []
+wishes = ["New bike", "Video game", "Art supplies", "Books"]
 
-for i in range(3):
-    item = input(f"Enter wish #{i+1}: ")
-    wishes.append(item)
+print("My wish list:")
 
-print("\nYour special wish list:")
-print(wishes)
+for wish in wishes:
+    print("- " + wish)
+
+total = len(wishes)
+print("I want", total, "things!")
+```
+
+**Output:**
+```
+My wish list:
+- New bike
+- Video game
+- Art supplies
+- Books
+I want 4 things!
 ```

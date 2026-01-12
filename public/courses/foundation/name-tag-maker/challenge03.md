@@ -1,18 +1,27 @@
-# CHALLENGE 3: Digital Greeting 💌
+# Challenge 3: Greeting Card 💌
 
-Can you use your name tag skills to build a digital greeting card?
+## Your Mission
+Create a digital greeting card for someone special!
 
-### Your Task:
-1. Create a variable for a `friend_name`.
-2. Create a variable for a `gift` (like "Lego" or "Cake").
-3. Print a greeting card that uses both variables and has a nice border.
-   Example:
-   ```
-   *********************
-   * To: Sam           *
-   * Enjoy your Lego!  *
-   *********************
-   ```
+## Your Task
+1. Create a variable `to_name` (who is this for?)
+2. Create a variable `from_name` (that's you!)
+3. Create a variable `message` (like "Happy Birthday!")
+4. Print a greeting card!
 
-### Achievement:
-You've engineered a digital gift that you can send to anyone! 🎁
+**Example output:**
+```
+***********************
+  To: Grandma
+  Happy Birthday!
+  From: Maya
+***********************
+```
+
+## Hint
+Use print() with commas:
+```python
+print("  To:", to_name)
+```
+
+Spread the joy! 💖

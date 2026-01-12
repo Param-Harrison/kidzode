@@ -1,19 +1,22 @@
-# Hints for Custom Countdown Challenge
+# Hints for Challenge 1: Custom Countdown 💡
 
-## 🟢 Hint 1
-Get the start number from the user:
+## Stuck? Here are some hints!
+
+### Hint 1: Create your start variable
 ```python
-start = int(input("Seconds? "))
+start = 10
 ```
 
-## 🟡 Hint 2
-Setup your backward loop:
+### Hint 2: Use range with the variable
 ```python
-for i in range(start, 0, -1):
+for number in range(start, 0, -1):
 ```
 
-## 🟠 Hint 3
-Don't forget the secret module at the top!
+### Hint 3: Print and end with blast off!
 ```python
-import time
+print(number)
+# After the loop:
+print("Blast off! 🚀")
 ```
+
+Customize your launch! 🚀

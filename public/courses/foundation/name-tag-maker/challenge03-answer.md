@@ -1,12 +1,22 @@
-### One way to solve it:
+# Answer: Greeting Card ✅
 
 ```python
-friend = "Oliver"
-gift = "Soccer Ball"
+to_name = "Grandma"
+from_name = "Maya"
+message = "Happy Birthday!"
 
-print("************************")
-print("* Happy Birthday!      *")
-print("* To:", friend, " " * (10 - len(friend)), "*")
-print("* Enjoy your", gift, "! *")
-print("************************")
+print("***********************")
+print("  To:", to_name)
+print(" ", message)
+print("  From:", from_name)
+print("***********************")
+```
+
+**Output:**
+```
+***********************
+  To: Grandma
+  Happy Birthday!
+  From: Maya
+***********************
 ```

@@ -1,19 +1,21 @@
-# Hints for Life in Months Challenge
+# Hints for Challenge 3: Months Old 💡
 
-## 🟢 Hint 1
-Get the input:
+## Stuck? Here are some hints!
+
+### Hint 1: Get the age as a number
 ```python
-age = int(input("How many years old are you? "))
+age = int(input("How old are you? "))
 ```
 
-## 🟡 Hint 2
-Do the multiplication:
+### Hint 2: Multiply by 12
 ```python
 months = age * 12
 ```
 
-## 🟠 Hint 3
-Print it all together:
+### Hint 3: Print it!
 ```python
-print("That's", months, "months!")
+print("You have lived this many months:")
+print(months)
 ```
+
+Time flies! 🕐

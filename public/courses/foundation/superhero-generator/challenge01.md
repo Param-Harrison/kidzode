@@ -1,12 +1,21 @@
-# CHALLENGE: Super Identity 🏆
+# Challenge: Villain Generator 🏆
 
-Can you add a THIRD part to the name generator?
+## Your Mission
+Every superhero needs a villain! Create a villain name generator!
 
-### Your Task:
-1. Create a third list called `titles` (e.g., "Warrior", "Defender", "Titan").
-2. Randomly pick a title.
-3. Use an f-string to combine all three parts.
+## Your Task
+1. Create a list called `evil_words` (like "Dark", "Evil", "Doom")
+2. Create a list called `villains` (like "Lord", "Master", "King")
+3. Pick one from each list randomly
+4. Combine them and print the villain name!
 
-Example: `Sonic Falcon Defender`
+**Example output:**
+```
+Your villain is:
+Dark Lord
+```
 
-Be creative!
+## Hint
+Use the same pattern as the superhero generator!
+
+Create your nemesis! 😈

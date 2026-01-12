@@ -1,5 +1,13 @@
-# ---- YOUR CHALLENGE ----
-# 1. Create 'name' and 'color' variables
-# 2. Print them together with stars around them
+# ========================================
+# 🏆 CHALLENGE 1: Super Name Tag
+# ========================================
 
-# Write your code below!
+# Step 1: Create your variables
+name = "Maya"
+hobby = "Dancing"
+
+# Step 2: Print your tag!
+print("=================")
+print("  Name:", name)
+print("  Loves:", hobby)
+print("=================")

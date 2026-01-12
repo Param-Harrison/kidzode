@@ -1,17 +1,18 @@
-# Hints for Digital Greeting Challenge
+# Hints for Challenge 3: Greeting Card 💡
 
-## 🟢 Hint 1
-Define your variables first:
+## Stuck? Here are some hints!
+
+### Hint 1: Create the variables
 ```python
-friend = "Maya"
-present = "Chocolate"
+to_name = "Grandma"
+from_name = "Maya"
+message = "Happy Birthday!"
 ```
 
-## 🟡 Hint 2
-Use `+` or commas to put the name in the sentence:
+### Hint 2: Print with borders and labels
 ```python
-print("* To:", friend, "*")
+print("***********************")
+print("  To:", to_name)
 ```
 
-## 🟠 Hint 3
-A long line of stars `*` makes a great top and bottom border!
+Spread the joy! 💖

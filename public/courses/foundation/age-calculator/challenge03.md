@@ -1,12 +1,24 @@
-# CHALLENGE 3: Life in Months 🌙
+# Challenge 3: Months Old 🗓️
 
-Do you know how many months you have been alive? Let's calculate it!
+## Your Mission
+How many months have you been alive? Let's calculate!
 
-### Your Task:
-1. Ask the user for their `age` in years.
-2. Turn it into a number.
-3. Multiple the age by 12 (since there are 12 months in a year).
-4. Print the answer: "You have been alive for [months] months!"
+## Your Task
+1. Ask: "How old are you?"
+2. Turn it into a number
+3. Multiply by 12 to get months
+4. Print the result!
 
-### Achievement:
-You've learned how to convert units of time using code! ⌚
+**Example output:**
+```
+How old are you? 10
+You have lived this many months:
+120
+```
+
+## Hint
+```python
+months = age * 12
+```
+
+Time flies! 🕐

@@ -1,14 +1,29 @@
-# Welcome to Superhero Generator! 🦸‍♂️
-What's your secret identity? We're going to build a tool that generates thousands of awesome superhero names!
+# Super Parts 🦸‍♀️
 
-## Super Parts 🦸‍♀️
+## Your Mission
+What's your secret identity? Today we'll build a generator that creates awesome superhero names!
 
-To make a superhero name, we need some super words! We'll use two lists to store different parts of the name.
+## The Plan
+A superhero name has two parts:
+1. A **power word** (like "Mega", "Shadow", "Electric")
+2. A **hero word** (like "Falcon", "Storm", "Knight")
 
-### Instructions:
-1. We created a list of "adjectives" (describing words).
-2. We created a list of "nouns" (naming words).
-3. Run the code to see our super word bank.
+Put them together: **Mega Falcon**, **Shadow Storm**, **Electric Knight**!
 
-### Achievement:
-You've organized your superpower bank! 🏦
+## Two Lists
+We need two lists — one for each part:
+
+```python
+powers = ["Mega", "Shadow", "Electric"]
+heroes = ["Falcon", "Storm", "Knight"]
+```
+
+## Try It!
+1. Run the code to see both lists
+2. Think about what combinations are possible
+3. Add your own words!
+
+## What You Learned
+✅ We can have multiple lists in one program
+✅ Each list holds one "category" of words
+✅ Soon we'll mix them randomly! 🎲

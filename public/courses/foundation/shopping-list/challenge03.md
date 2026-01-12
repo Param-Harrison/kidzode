@@ -1,12 +1,30 @@
-# CHALLENGE 3: Item Search 🔍
+# Challenge 3: Packing List ✈️
 
-Can you engineer a system that checks if something special is already in your list?
+## Your Mission
+Going on a trip! Build a packing list step by step!
 
-### Your Task:
-1. Create a list of 3 school supplies (like "Pen", "Eraser").
-2. Ask the user: "What item are you looking for?".
-3. Use an `if` statement to check if the item is `in` your list.
-4. Print: "Found it!" if it's there, or "Not here!" if it's missing.
+## Your Task
+1. Create an empty list called `suitcase`
+2. Ask the user for 3 items to pack (using `input()`)
+3. Add each item to the suitcase using `.append()`
+4. Print the final packing list using a loop
 
-### Achievement:
-You've built a search engine for your data! 🔎
+**Example:**
+```
+What do you want to pack? Shirt
+What do you want to pack? Pants
+What do you want to pack? Toothbrush
+
+Your suitcase contains:
+- Shirt
+- Pants
+- Toothbrush
+```
+
+## Hint
+```python
+item = input("What do you want to pack? ")
+suitcase.append(item)
+```
+
+Bon voyage! ✈️

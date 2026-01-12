@@ -1,11 +1,20 @@
-# ---- YOUR CHALLENGE ----
+# ========================================
+# 🏆 CHALLENGE 1: Villain Generator
+# ========================================
+
 import random
 
-adjectives = ["Mega", "Sonic", "Quantum"]
-nouns = ["Falcon", "Storm", "Pulse"]
+# Step 1: Create villain word lists
+evil_words = ["Dark", "Evil", "Doom", "Shadow"]
+villains = ["Lord", "Master", "King", "Knight"]
 
-# 1. Create a 'titles' list
-# 2. Pick a random title
-# 3. Combine adjective, noun, and title
+# Step 2: Pick randomly from each
+evil = random.choice(evil_words)
+villain = random.choice(villains)
 
-# Write your code below!
+# Step 3: Combine with f-string
+villain_name = f"{evil} {villain}"
+
+# Step 4: Print!
+print("Your villain is:")
+print(villain_name)

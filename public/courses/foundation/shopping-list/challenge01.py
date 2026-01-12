@@ -1,6 +1,15 @@
-# ---- YOUR CHALLENGE ----
-# 1. Create 'friends' list
-# 2. Add 3 names
-# 3. Loop and print invitations
+# ========================================
+# 🏆 CHALLENGE 1: Party Invites
+# ========================================
 
-# Write your code below!
+# Step 1: Create an empty friends list
+friends = []
+
+# Step 2: Add friends using append
+friends.append("Maya")
+friends.append("Leo")
+friends.append("Zara")
+
+# Step 3: Loop through and send invites!
+for friend in friends:
+    print("You're invited, " + friend + "!")

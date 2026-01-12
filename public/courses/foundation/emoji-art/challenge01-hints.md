@@ -1,12 +1,20 @@
-# Hints for Emoji Pyramid Challenge
+# Hints for Challenge 1: Emoji Triangle 💡
 
-## 🟢 Hint 1
-You can write 4 more `print` statements after the loop.
+## Stuck? Here are some hints!
 
-## 🟡 Hint 2
-To shrink the pyramid, use multiplication:
+### Hint 1: Choose your emoji
 ```python
-print("💠" * 4)
-print("💠" * 3)
-# ... etc
+emoji = "💎"
 ```
+
+### Hint 2: Use a loop with range
+```python
+for row in range(5):
+```
+
+### Hint 3: Multiply by (row + 1)
+```python
+print(emoji * (row + 1))
+```
+
+Build that triangle! 🔺

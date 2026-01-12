@@ -1,17 +1,22 @@
-# CHALLENGE 2: Logo Designer 🎨
+# Challenge 2: Logo Designer 🎨
 
-Can you engineer a simple logo for your name using code?
+## Your Mission
+Create a simple logo using text and symbols!
 
-### Your Task:
-1. Create a variable for your initial (like `first_initial = "P"`).
-2. Create a variable for a symbol (like `symbol = "#"`).
-3. Print a "logo" box like this:
-   ```
-   #####
-   # P #
-   #####
-   ```
-4. Use your variables so you can change the initial or the symbol easily!
+## Your Task
+1. Create a variable called `team_name` with a cool team name
+2. Use `+` to create a logo line with symbols on each side
+3. Print it!
 
-### Achievement:
-You've used code to create a personalized brand icon! 🏷️
+**Example output:**
+```
+*** THUNDER SQUAD ***
+```
+
+## Hint
+```python
+logo = "*** " + team_name + " ***"
+print(logo)
+```
+
+You're a designer now! 🎨

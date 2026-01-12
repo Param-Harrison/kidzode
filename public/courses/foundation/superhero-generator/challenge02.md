@@ -1,12 +1,20 @@
-# CHALLENGE 2: Power Up! ⚡
+# Challenge 2: Pet Name Generator 🐾
 
-Every superhero needs a superpower! Let's add one to your identity.
+## Your Mission
+Give your pet a silly superhero-style name!
 
-### Your Task:
-1. Create a list called `powers` (like "Invisibility", "Flight", etc.).
-2. Ask for the user's `name`.
-3. Use `random.choice()` to pick one superpower.
-4. Print the result: "[Name] has the power of [Power]!"
+## Your Task
+1. Create a list of `adjectives` (like "Fluffy", "Super", "Speedy")
+2. Create a list of `animals` (like "Paws", "Whiskers", "Buddy")
+3. Pick randomly and combine!
 
-### Achievement:
-You've engineered a character builder with random traits! 🦸
+**Example output:**
+```
+Your pet's superhero name is:
+Fluffy Paws
+```
+
+## Hint
+Same pattern, different words!
+
+Name that pet! 🐕

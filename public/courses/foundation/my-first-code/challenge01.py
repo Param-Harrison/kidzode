@@ -1,6 +1,13 @@
-# ---- YOUR CHALLENGE ----
-# 1. Create a variable for your favorite food
-# 2. Print "I love " and your variable
-# 3. Print the result of 10 * 10
+# ========================================
+# 🏆 CHALLENGE 1: Your Message
+# ========================================
 
-# Write your code below!
+# Step 1: Create a variable for your favorite food
+# (Change "Pizza" to your favorite food!)
+food = "Pizza"
+
+# Step 2: Print "I love"
+print("I love")
+
+# Step 3: Print your food variable
+print(food)

@@ -1,6 +1,15 @@
-# ---- YOUR CHALLENGE ----
-# 1. Create 'friend_name' variable
-# 2. Create 'gift' variable
-# 3. Print a greeting card with a border
+# ========================================
+# 💌 CHALLENGE 3: Greeting Card
+# ========================================
 
-# Write your code below!
+# Step 1: Create your variables
+to_name = "Grandma"
+from_name = "Maya"
+message = "Happy Birthday!"
+
+# Step 2: Print the card
+print("***********************")
+print("  To:", to_name)
+print(" ", message)
+print("  From:", from_name)
+print("***********************")

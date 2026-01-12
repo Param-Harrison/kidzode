@@ -1,5 +1,13 @@
-# range(5) starts at 0 and goes up to 4
-for i in range(5):
-    print(i)
+# ========================================
+# 🔢 LESSON 1: Counting with Range
+# ========================================
 
-# TRY THIS: Use range(11) to count to 10!
+# range(5) gives us: 0, 1, 2, 3, 4
+for number in range(5):
+    print(number)
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change range(5) to range(1, 6)
+# Now you'll get: 1, 2, 3, 4, 5
+# ----------------------------------------

@@ -1,8 +1,18 @@
-# Print a border of stars
+# ========================================
+# 🎨 LESSON 1: Design Your Tag
+# ========================================
+
+# Each print() shows one line
+# Together they make a design!
+
 print("********************")
 print("*                  *")
-print("*   YOUR TAG HERE  *")
+print("*   YOUR NAME HERE *")
 print("*                  *")
 print("********************")
 
-# TRY THIS: Change the stars * to dashes - or plus signs +
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change the stars * to different symbols!
+# Try: + or - or # or =
+# ----------------------------------------

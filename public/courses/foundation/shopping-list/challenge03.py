@@ -1,8 +1,22 @@
-# ---- YOUR CHALLENGE ----
-items = ["Pencil", "Backpack", "Notebook"]
+# ========================================
+# ✈️ CHALLENGE 3: Packing List
+# ========================================
 
-# 1. Ask the user what they are looking for
-# 2. Use an 'if' statement with 'in'
-# 3. Print the result
+# Step 1: Create an empty suitcase
+suitcase = []
 
-# Write your code below!
+# Step 2: Ask for 3 items and add them
+item1 = input("What do you want to pack? ")
+suitcase.append(item1)
+
+item2 = input("What do you want to pack? ")
+suitcase.append(item2)
+
+item3 = input("What do you want to pack? ")
+suitcase.append(item3)
+
+# Step 3: Print the packing list
+print("")
+print("Your suitcase contains:")
+for item in suitcase:
+    print("- " + item)

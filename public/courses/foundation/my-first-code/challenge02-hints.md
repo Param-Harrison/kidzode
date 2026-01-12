@@ -1,20 +1,22 @@
-# Hints for Math Whiz Challenge
+# Hints for Challenge 2: Math Whiz 💡
 
-## 🟢 Hint 1
-Create variables like this:
+## Stuck? Here are some hints!
+
+### Hint 1: Create the variables
 ```python
 cookies = 24
 friends = 6
 ```
 
-## 🟡 Hint 2
-To divide, use the `/` symbol:
+### Hint 2: Division uses /
 ```python
-per_friend = cookies / friends
+each = cookies / friends
 ```
 
-## 🟠 Hint 3
-Print it all together:
+### Hint 3: Print the result
 ```python
-print("Each friend gets", per_friend, "cookies!")
+print("Each friend gets:")
+print(each)
 ```
+
+Fair sharing! 🍪

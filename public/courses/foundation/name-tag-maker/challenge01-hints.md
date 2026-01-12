@@ -1,14 +1,22 @@
-# Hints for Super Name Tag Challenge
+# Hints for Challenge 1: Super Name Tag 💡
 
-## 🟢 Hint 1
-Create your variables first:
+## Stuck? Here are some hints!
+
+### Hint 1: Create the variables
 ```python
-name = "Alex"
-color = "Green"
+name = "Maya"
+hobby = "Dancing"
 ```
 
-## 🟡 Hint 2
-You can print them together using commas:
+### Hint 2: Print with labels
+You can use commas:
 ```python
-print("***", name, "(" + color + ")", "***")
+print("Name:", name)
 ```
+
+Or use `+`:
+```python
+print("Name: " + name)
+```
+
+Show off your style! 🌟

@@ -1,7 +1,13 @@
-# ---- YOUR CHALLENGE ----
-# 1. Create 'name' and 'emoji' variables
-# 2. Use a loop for the top row
-# 3. Print the middle name row
-# 4. Use a loop for the bottom row
+# ========================================
+# 🎨 CHALLENGE 2: Emoji Line
+# ========================================
 
-# Write your code below!
+# Step 1: Choose your emoji
+emoji = "🌟"
+
+# Step 2: Choose how many
+count = 20
+
+# Step 3: Print the line
+print("My emoji art:")
+print(emoji * count)

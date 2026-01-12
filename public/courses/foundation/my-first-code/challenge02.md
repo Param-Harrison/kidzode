@@ -1,12 +1,26 @@
-# CHALLENGE 2: Math Whiz 🧮
+# Challenge 2: Math Whiz 🧮
 
-Can you make Python solve a bigger math problem? 
+## Your Mission
+Can you use Python to solve a sharing problem?
 
-### Your Task:
-1. Create a variable called `cookies` and set it to 24.
-2. Create a variable called `friends` and set it to 6.
-3. Calculate how many cookies each friend gets (Division: `/`).
-4. Print the answer nicely!
+## Your Task
+You have 24 cookies and 6 friends. How many cookies does each friend get?
 
-### Achievement:
-You've used Python to solve a real-world sharing problem! 🍪
+1. Create a variable called `cookies` and set it to `24`
+2. Create a variable called `friends` and set it to `6`
+3. Create a variable called `each` that divides cookies by friends
+4. Print "Each friend gets:"
+5. Print the answer!
+
+**Example output:**
+```
+Each friend gets:
+4.0
+```
+
+## Hint
+Remember:
+- Division uses the `/` symbol
+- `each = cookies / friends`
+
+Fair sharing! 🍪

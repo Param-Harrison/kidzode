@@ -1,10 +1,12 @@
-### One way to solve it:
+# Answer: Logo Designer ✅
 
 ```python
-initial = "Z"
-symbol = "*"
+team_name = "THUNDER SQUAD"
+logo = "*** " + team_name + " ***"
+print(logo)
+```
 
-print(symbol * 5)
-print(symbol, initial, symbol)
-print(symbol * 5)
+**Output:**
+```
+*** THUNDER SQUAD ***
 ```

@@ -1,19 +1,15 @@
-### One way to solve it:
+# Answer: Emoji Line ✅
 
 ```python
-name = "KIDZODE"
-emoji = "⭐"
+emoji = "🌟"
+count = 20
 
-# Top row
-for i in range(10):
-    print(emoji, end="")
-print()
+print("My emoji art:")
+print(emoji * count)
+```
 
-# Middle row
-print(emoji, name, emoji)
-
-# Bottom row
-for i in range(10):
-    print(emoji, end="")
-print()
+**Output:**
+```
+My emoji art:
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
 ```

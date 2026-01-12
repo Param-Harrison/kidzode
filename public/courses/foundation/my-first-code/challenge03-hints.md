@@ -1,18 +1,22 @@
-# Hints for Personal Assistant Challenge
+# Hints for Challenge 3: Weather Report 💡
 
-## 🟢 Hint 1
-Define your variables:
+## Stuck? Here are some hints!
+
+### Hint 1: Create text variables with quotes
 ```python
-name = "Charlie"
-weather = "Cloudy"
-tasks = 5
+city = "Paris"
+weather = "Sunny"
 ```
 
-## 🟡 Hint 2
-You can use commas to print strings and variables together:
+### Hint 2: Numbers don't need quotes
 ```python
-print("Hello", name, "the weather is", weather)
+temperature = 25
 ```
 
-## 🟠 Hint 3
-Try to make it look like a real screen report with some `---` borders!
+### Hint 3: Print each with a label
+```python
+print("City:")
+print(city)
+```
+
+You're almost there! 🌤️

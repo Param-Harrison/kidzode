@@ -1,12 +1,24 @@
-# CHALLENGE 3: Race Timer 🏎️
+# Challenge 3: Count Up Launch 🏎️
 
-Races start with a count UP! Can you build a timer that counts from 1 to your target?
+## Your Mission
+Instead of counting DOWN, count UP!
 
-### Your Task:
-1. Ask the user: "What is the race goal?".
-2. Turn it into a number.
-3. Use a loop to count from 1 up to that number.
-4. After the loop, print "GO! 🏁"
+## Your Task
+1. Count UP from 1 to 5
+2. Wait 1 second between each number
+3. Print "GO!" at the end
 
-### Achievement:
-You've engineered a sequence builder that handles dynamic targets! 🏎️
+**What happens:**
+```
+1 (waits)
+2 (waits)
+3 (waits)
+4 (waits)
+5 (waits)
+GO! 🏁
+```
+
+## Hint
+For counting UP: `range(1, 6)` gives 1, 2, 3, 4, 5
+
+Ready, set, GO! 🏎️

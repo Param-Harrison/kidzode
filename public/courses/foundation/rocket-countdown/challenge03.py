@@ -1,8 +1,15 @@
-# ---- YOUR CHALLENGE ----
+# ========================================
+# 🏎️ CHALLENGE 3: Count Up Launch
+# ========================================
+
+# Step 1: Open the time toolbox
 import time
 
-# 1. Ask for race goal
-# 2. Count up from 1 to goal using a loop
-# 3. Print "GO!" at the end
+# Step 2: Count UP from 1 to 5
+for number in range(1, 6):
+    print(number)
+    # Step 3: Wait 1 second
+    time.sleep(1)
 
-# Write your code below!
+# Step 4: GO!
+print("GO! 🏁")

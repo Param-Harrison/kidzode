@@ -1,15 +1,25 @@
-### One way to solve it:
+# Answer: Custom Countdown ✅
 
 ```python
-import time
+start = 10
 
-seconds = int(input("How many seconds until launch? "))
+for number in range(start, 0, -1):
+    print(number)
 
-print("Countdown initiated...")
+print("Blast off! 🚀")
+```
 
-for i in range(seconds, 0, -1):
-    print(i, "...")
-    time.sleep(1)
-
-print("🚀 LIFT OFF! 🚀")
+**Output:**
+```
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Blast off! 🚀
 ```

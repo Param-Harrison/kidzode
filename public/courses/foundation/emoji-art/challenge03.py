@@ -1,7 +1,11 @@
-# ---- YOUR CHALLENGE ----
-# 1. Create two emoji variables
-# 2. Print a line of the first emoji
-# 3. Print a line of the second emoji
-# 4. Use loops for both!
+# ========================================
+# 🎮 CHALLENGE 3: Emoji Square
+# ========================================
 
-# Write your code below!
+# Step 1: Choose your emoji
+emoji = "⭐"
+
+# Step 2: Loop 5 times for 5 rows
+for row in range(5):
+    # Step 3: Each row has 5 emojis
+    print(emoji * 5)

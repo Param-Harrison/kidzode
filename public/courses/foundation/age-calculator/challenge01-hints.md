@@ -1,19 +1,21 @@
-# Hints for Days Old Challenge
+# Hints for Challenge 1: Days Old 💡
 
-## 🟢 Hint 1
-Use `input()` but don't forget to turn it into a number!
+## Stuck? Here are some hints!
+
+### Hint 1: Get the age as a number
 ```python
-age = int(input("Age? "))
+age = int(input("How old are you? "))
 ```
 
-## 🟡 Hint 2
-Multiply with `*`:
+### Hint 2: Multiply by 365
 ```python
 days = age * 365
 ```
 
-## 🟠 Hint 3
-Print the result:
+### Hint 3: Print it!
 ```python
+print("You are this many days old:")
 print(days)
 ```
+
+That's a lot of days! 🎉

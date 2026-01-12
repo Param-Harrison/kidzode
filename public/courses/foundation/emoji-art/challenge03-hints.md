@@ -1,19 +1,20 @@
-# Hints for Multi-Shape Art Challenge
+# Hints for Challenge 3: Emoji Square 💡
 
-## 🟢 Hint 1
-Create your two emojis:
+## Stuck? Here are some hints!
+
+### Hint 1: Choose your emoji
 ```python
-e1 = "🍕"
-e2 = "🍔"
+emoji = "⭐"
 ```
 
-## 🟡 Hint 2
-Each loop should have its own range number:
+### Hint 2: Loop 5 times
 ```python
-for i in range(10):
-    print(e1, end="")
-print() # Add this to start a new line for the next set!
+for row in range(5):
 ```
 
-## 🟠 Hint 3
-Try changing the `range()` numbers to see what happens to the art!
+### Hint 3: Each row has 5 emojis
+```python
+print(emoji * 5)
+```
+
+Perfect square! ⬜

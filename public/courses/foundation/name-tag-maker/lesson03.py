@@ -1,12 +1,24 @@
+# ========================================
+# ✨ LESSON 3: Adding Symbols
+# ========================================
+
+# Create variables for your name and title
 my_name = "Alex"
 title = "Code Wizard"
 
-# Use + to join strings
-# Note: " " adds a space between the words
+# Join them together using +
+# Notice: ": " has a space inside the quotes!
 full_tag = title + ": " + my_name
 
-print("====================")
-print("|                  |")
+# Build the tag
+print("===================")
+print("|                 |")
 print("|  ", full_tag, "  |")
-print("|                  |")
-print("====================")
+print("|                 |")
+print("===================")
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change the title to something cool like:
+# "Super Coder" or "Python Pro"
+# ----------------------------------------

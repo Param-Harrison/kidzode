@@ -1,19 +1,22 @@
-# Hints for Super Identity Challenge
+# Hints for Challenge 1: Villain Generator 💡
 
-## 🟢 Hint 1
-Create your third list:
+## Stuck? Here are some hints!
+
+### Hint 1: Create the word lists
 ```python
-titles = ["Guardian", "Destroyer", "Ace"]
+evil_words = ["Dark", "Evil", "Doom", "Shadow"]
+villains = ["Lord", "Master", "King", "Knight"]
 ```
 
-## 🟡 Hint 2
-Pick a random title:
+### Hint 2: Pick randomly from each
 ```python
-t = random.choice(titles)
+evil = random.choice(evil_words)
+villain = random.choice(villains)
 ```
 
-## 🟠 Hint 3
-Use an f-string to combine them all:
+### Hint 3: Combine with f-string
 ```python
-print(f"{adj} {noun} {t}")
+villain_name = f"{evil} {villain}"
 ```
+
+Create your nemesis! 😈

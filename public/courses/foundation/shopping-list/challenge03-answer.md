@@ -1,13 +1,19 @@
-### One way to solve it:
+# Answer: Packing List ✅
 
 ```python
-supplies = ["Pen", "Paper", "Tape"]
-print("School Supply Search...")
+suitcase = []
 
-find = input("What do you need? ")
+item1 = input("What do you want to pack? ")
+suitcase.append(item1)
 
-if find in supplies:
-    print("✅ Yes, we have that in the bag!")
-else:
-    print("❌ No, we need to buy that.")
+item2 = input("What do you want to pack? ")
+suitcase.append(item2)
+
+item3 = input("What do you want to pack? ")
+suitcase.append(item3)
+
+print("")
+print("Your suitcase contains:")
+for item in suitcase:
+    print("- " + item)
 ```

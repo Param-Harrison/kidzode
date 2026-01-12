@@ -1,10 +1,15 @@
-### One way to solve it:
+# Answer: Dog Years ✅
 
 ```python
-current_age = int(input("What is your age? "))
-years_left = 100 - current_age
+age = int(input("How old are you? "))
+dog_years = age * 7
 
-print("The Centennial Countdown...")
-print("In", years_left, "years, you will be 100!")
-print("Keep coding until then! 💻")
+print("In dog years, you are:")
+print(dog_years)
+```
+
+**Output (if age is 10):**
+```
+In dog years, you are:
+70
 ```

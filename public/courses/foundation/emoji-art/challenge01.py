@@ -1,9 +1,11 @@
-# ---- YOUR CHALLENGE ----
-# 1. Loop to grow to 5
-# 2. Add code to shrink back down
+# ========================================
+# 🏆 CHALLENGE 1: Emoji Triangle
+# ========================================
 
-# Write your code below!
-for i in range(5):
-    print("💠" * (i + 1))
+# Step 1: Choose your emoji
+emoji = "💎"
 
-# Now add more code below!
+# Step 2: Loop 5 times
+for row in range(5):
+    # Step 3: Print growing lines (row + 1 so we start at 1)
+    print(emoji * (row + 1))

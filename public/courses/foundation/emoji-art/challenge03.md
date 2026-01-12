@@ -1,12 +1,27 @@
-# CHALLENGE 3: Multi-Shape Art 🎨
+# Challenge 3: Emoji Square 🎮
 
-Can you engineer a program that draws two different shapes using two different emojis?
+## Your Mission
+Create a square of emojis!
 
-### Your Task:
-1. Create two emoji variables (like `star = "⭐"` and `heart = "❤️"`).
-2. Use a loop to print a line of 10 stars.
-3. Use another loop to print a line of 5 hearts.
-4. Try to make them alternate!
+## Your Task
+1. Pick an emoji
+2. Use a loop to print the SAME row 5 times
+3. Each row should have 5 emojis
 
-### Achievement:
-You've built an emoji pattern engine using multiple loop sequences! ⚙️
+**Example output:**
+```
+⭐⭐⭐⭐⭐
+⭐⭐⭐⭐⭐
+⭐⭐⭐⭐⭐
+⭐⭐⭐⭐⭐
+⭐⭐⭐⭐⭐
+```
+
+## Hint
+```python
+emoji = "⭐"
+for row in range(5):
+    print(emoji * 5)
+```
+
+Perfect square! ⬜

@@ -1,12 +1,22 @@
-# CHALLENGE 3: Adventure Decider 🗺️
+# Challenge 3: Snack Decider 🍿
 
-Can't decide what to do today? Build an adventure decider that picks from your favorite activities!
+## Your Mission
+What snack should you have? Let Python decide!
 
-### Your Task:
-1. Create a list of 3 activities (like "Go to the park", "Play video games", "Read a book").
-2. Import `random`.
-3. Pick one activity.
-4. Print a message: "The universe has decided! You should: [Activity]".
+## Your Task
+1. Create a list called `snacks` with your favorite snacks
+2. Ask "What snack are you craving?" (just for fun!)
+3. Pick a random snack
+4. Print "You should have:" and the snack!
 
-### Achievement:
-You've engineered a tool that solves the "I'm bored" problem! 🧗
+**Example output:**
+```
+What snack are you craving? chips
+You should have:
+Popcorn
+```
+
+## Hint
+The input is just for fun — you still pick randomly!
+
+Snack time! 🍿

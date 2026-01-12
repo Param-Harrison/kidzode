@@ -1,8 +1,15 @@
-# ---- YOUR CHALLENGE ----
+# ========================================
+# ⏱️ CHALLENGE 2: Slow Motion Timer
+# ========================================
+
+# Step 1: Open the time toolbox
 import time
 
-# 1. Ask for alarm seconds
-# 2. Count down using a loop and time.sleep(1)
-# 3. Print a loud "WAKE UP!!!!" at the end
+# Step 2: Count down from 5 to 1
+for number in range(5, 0, -1):
+    print(number)
+    # Step 3: Wait 1 second
+    time.sleep(1)
 
-# Write your code below!
+# Step 4: Announce finished!
+print("Time's up!")

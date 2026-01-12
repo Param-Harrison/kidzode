@@ -1,11 +1,22 @@
-# CHALLENGE: Your Message 🏆
+# Challenge: Your Message 🏆
 
-Time to show off what you've learned! Can you create a custom message using a variable and a math calculation?
+## Your Mission
+Time to use what you learned! Can you make your own message appear?
 
-### Your Task:
-1. Create a variable called `fav_food`.
-2. Give it a value like `"Pizza"`.
-3. Print a message saying "I love" followed by your favorite food variable.
-4. Calculate `10 * 10` and print the result.
+## Your Task
+1. Create a variable called `food` and put your favorite food inside
+2. Print the message "I love"
+3. Print your `food` variable
 
-Can you do it?
+**Example output:**
+```
+I love
+Pizza
+```
+
+## Hint
+Remember:
+- Variables are like boxes: `food = "Pizza"`
+- Use `print()` to show things
+
+You've got this! 💪

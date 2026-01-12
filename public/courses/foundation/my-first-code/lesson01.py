@@ -1,7 +1,12 @@
-# This is a comment! Python ignores it.
-# It helps us explain what the code does.
+# ========================================
+# 🚀 LESSON 1: Hello World!
+# ========================================
 
-# The print command shows text on the screen
+# This line makes the computer show a message
 print("Hello, World!")
 
-# TRY THIS: Change "World" to your name and run it again!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change "World" to your name!
+# Example: print("Hello, Maya!")
+# ----------------------------------------

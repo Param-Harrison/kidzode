@@ -1,12 +1,23 @@
-# Create a variable for your name
+# ========================================
+# 🏷️ LESSON 2: The Name Variable
+# ========================================
+
+# Create a box called my_name
+# Put your name inside it!
 my_name = "Alex"
 
+# Now let's build the tag
 print("********************")
 print("*                  *")
-# We use commas to print text and variables together
-print("*      ", my_name, "      *")
+
+# Use a comma to print text AND the variable together
+print("*     ", my_name, "     *")
+
 print("*                  *")
 print("********************")
 
-# TRY THIS: Change "Alex" to your name!
-# Tip: If your name is long, you might need to adjust the spaces.
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change "Alex" to your own name!
+# If your name is long, remove some spaces
+# ----------------------------------------

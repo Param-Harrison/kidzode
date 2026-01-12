@@ -1,10 +1,22 @@
-adjectives = ["Mega", "Sonic", "Quantum", "Shadow", "Electric"]
-nouns = ["Falcon", "Storm", "Pulse", "Knight", "Ghost"]
+# ========================================
+# 🦸‍♀️ LESSON 1: Super Parts
+# ========================================
 
-print("Our super adjectives:")
-print(adjectives)
+# List 1: Power words (describing words)
+powers = ["Mega", "Sonic", "Quantum", "Shadow", "Electric"]
 
-print("Our super nouns:")
-print(nouns)
+# List 2: Hero words (naming words)
+heroes = ["Falcon", "Storm", "Pulse", "Knight", "Ghost"]
 
-# TRY THIS: Add a few more words to each list!
+# Show both lists
+print("Power words:")
+print(powers)
+
+print("Hero words:")
+print(heroes)
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add your own power word to the first list!
+# Add your own hero word to the second list!
+# ----------------------------------------

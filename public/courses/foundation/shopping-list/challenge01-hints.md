@@ -1,20 +1,23 @@
-# Hints for Party Invitations Challenge
+# Hints for Challenge 1: Party Invites 💡
 
-## 🟢 Hint 1
-Create an empty list:
+## Stuck? Here are some hints!
+
+### Hint 1: Create empty list and add friends
 ```python
 friends = []
+friends.append("Maya")
+friends.append("Leo")
+friends.append("Zara")
 ```
 
-## 🟡 Hint 2
-Add names using `.append()`:
+### Hint 2: Loop through the list
 ```python
-friends.append("Sam")
+for friend in friends:
 ```
 
-## 🟠 Hint 3
-Loop through the list:
+### Hint 3: Print the invitation
 ```python
-for f in friends:
-    print(f"Invited: {f}")
+print("You're invited, " + friend + "!")
 ```
+
+Party time! 🎉

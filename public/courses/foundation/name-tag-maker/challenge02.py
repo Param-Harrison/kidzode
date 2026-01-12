@@ -1,6 +1,12 @@
-# ---- YOUR CHALLENGE ----
-# 1. Create 'initial' variable
-# 2. Create 'symbol' variable
-# 3. Print a logo box using your variables
+# ========================================
+# 🎨 CHALLENGE 2: Logo Designer
+# ========================================
 
-# Write your code below!
+# Step 1: Create your team name
+team_name = "THUNDER SQUAD"
+
+# Step 2: Build the logo with symbols on each side
+logo = "*** " + team_name + " ***"
+
+# Step 3: Print it!
+print(logo)

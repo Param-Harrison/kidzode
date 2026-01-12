@@ -1,21 +1,20 @@
-# Hints for Logo Designer Challenge
+# Hints for Challenge 2: Logo Designer 💡
 
-## 🟢 Hint 1
-Define your initial and symbol:
+## Stuck? Here are some hints!
+
+### Hint 1: Create the team name
 ```python
-initial = "A"
-s = "@"
+team_name = "THUNDER SQUAD"
 ```
 
-## 🟡 Hint 2
-The top and bottom lines can be made of symbols:
+### Hint 2: Use + to join
 ```python
-print(s + s + s + s + s)
+logo = "*** " + team_name + " ***"
 ```
 
-## 🟠 Hint 3
-The middle line should have the initial:
+### Hint 3: Print it!
 ```python
-print(s, initial, s)
+print(logo)
 ```
-*(Tip: Use spaces to make it look even!)*
+
+You're a designer now! 🎨

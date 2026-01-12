@@ -1,10 +1,20 @@
-# Hints for Adventure Decider Challenge
+# Hints for Challenge 3: Snack Decider 💡
 
-## 🟢 Hint 1
-Make a list using square brackets `[]`.
+## Stuck? Here are some hints!
 
-## 🟡 Hint 2
-Use `random.choice()` just like in the Magic 8-Ball project.
+### Hint 1: Create a snacks list
+```python
+snacks = ["Popcorn", "Chips", "Cookies", "Fruit"]
+```
 
-## 🟠 Hint 3
-Add an `input("Press Enter for your adventure...")` to make the result feel more dramatic!
+### Hint 2: Ask what they're craving (just for fun!)
+```python
+craving = input("What snack are you craving? ")
+```
+
+### Hint 3: Pick randomly anyway!
+```python
+choice = random.choice(snacks)
+```
+
+Snack time! 🍿

@@ -1,19 +1,20 @@
-# Hints for Your Fortunes Challenge
+# Hints for Challenge 1: Fortune Teller 💡
 
-## 🟢 Hint 1
-Start with the secret library:
+## Stuck? Here are some hints!
+
+### Hint 1: Import random
 ```python
 import random
 ```
 
-## 🟡 Hint 2
-Define your list of fortunes:
+### Hint 2: Create your fortunes list
 ```python
-fortunes = ["A", "B", "C"]
+fortunes = ["You will find a surprise!", "Something awesome is coming!"]
 ```
 
-## 🟠 Hint 3
-Print a random choice:
+### Hint 3: Pick randomly
 ```python
-print(random.choice(fortunes))
+my_fortune = random.choice(fortunes)
 ```
+
+What does the future hold? 🔮

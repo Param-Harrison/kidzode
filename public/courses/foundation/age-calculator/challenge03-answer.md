@@ -1,10 +1,15 @@
-### One way to solve it:
+# Answer: Months Old ✅
 
 ```python
-years = int(input("Enter your age in years: "))
-months = years * 12
+age = int(input("How old are you? "))
+months = age * 12
 
-print("--- The Month Machine ---")
-print("You are", years, "years old.")
-print("That means you have lived for at least", months, "months!")
+print("You have lived this many months:")
+print(months)
+```
+
+**Output (if age is 10):**
+```
+You have lived this many months:
+120
 ```

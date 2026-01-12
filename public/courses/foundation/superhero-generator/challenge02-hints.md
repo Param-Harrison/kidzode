@@ -1,19 +1,22 @@
-# Hints for Power Up Challenge
+# Hints for Challenge 2: Pet Name Generator 💡
 
-## 🟢 Hint 1
-Create your powers list:
+## Stuck? Here are some hints!
+
+### Hint 1: Create the word lists
 ```python
-powers = ["Super Strength", "Laser Eyes", "Speed"]
+adjectives = ["Fluffy", "Super", "Speedy", "Mighty"]
+animals = ["Paws", "Whiskers", "Buddy", "Snout"]
 ```
 
-## 🟡 Hint 2
-Get the name using `input()`:
+### Hint 2: Pick randomly from each
 ```python
-name = input("Enter your hero name: ")
+adj = random.choice(adjectives)
+animal = random.choice(animals)
 ```
 
-## 🟠 Hint 3
-Combine them in the final print:
+### Hint 3: Combine!
 ```python
-print(name, "has the power of", random.choice(powers))
+pet_name = f"{adj} {animal}"
 ```
+
+Name that pet! 🐕

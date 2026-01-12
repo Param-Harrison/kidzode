@@ -1,11 +1,21 @@
-# CHALLENGE 2: Color Picker 🎨
+# Challenge 2: Color Picker 🎨
 
-Can't decide what color to wear or paint? Let Python pick for you!
+## Your Mission
+Can't decide what color to wear? Let Python pick for you!
 
-### Your Task:
-1. Create a list called `colors` with at least 5 colors (like "Red", "Blue", etc.).
-2. Use `random.choice()` to pick one color.
-3. Print a message: "The lucky color of the day is... [Color]!"
+## Your Task
+1. Create a list called `colors` with 5 colors
+2. Pick one randomly
+3. Print "Today you should wear:"
+4. Print the color!
 
-### Achievement:
-You've built a random decision maker for colors! 🌈
+**Example output:**
+```
+Today you should wear:
+Blue
+```
+
+## Hint
+Use `random.choice()` on your colors list!
+
+Style advice from Python! 👔

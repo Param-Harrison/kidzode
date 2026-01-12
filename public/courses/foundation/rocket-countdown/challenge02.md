@@ -1,12 +1,24 @@
-# CHALLENGE 2: Alarm Clock ⏰
+# Challenge 2: Slow Motion Timer ⏱️
 
-Can you build an alarm that counts down to a loud wake-up call?
+## Your Mission
+Create a countdown that waits between numbers!
 
-### Your Task:
-1. Ask the user: "How many seconds until the alarm?".
-2. Turn it into a number.
-3. Use a loop to count down to 0.
-4. After the loop, print "WAKE UP" then multiply the symbol "!" 50 times!
+## Your Task
+1. Count down from 5 to 1
+2. Use `time.sleep()` to wait 1 second between each
+3. Print "Time's up!" at the end
 
-### Achievement:
-You've engineered a functional alarm system with a loud notification! 🔔
+**What happens:**
+```
+5 (waits 1 second)
+4 (waits 1 second)
+3 (waits 1 second)
+2 (waits 1 second)
+1 (waits 1 second)
+Time's up!
+```
+
+## Hint
+Don't forget `import time` at the top!
+
+Slow and steady! ⏱️

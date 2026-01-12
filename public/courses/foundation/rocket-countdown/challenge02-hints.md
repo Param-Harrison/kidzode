@@ -1,18 +1,21 @@
-# Hints for Alarm Clock Challenge
+# Hints for Challenge 2: Slow Motion Timer 💡
 
-## 🟢 Hint 1
-Getting the number: `secs = int(input(...))`.
+## Stuck? Here are some hints!
 
-## 🟡 Hint 2
-To count down from `secs` to 0:
+### Hint 1: Import time
 ```python
-for i in range(secs, -1, -1):
-    print(i)
-    time.sleep(1)
+import time
 ```
 
-## 🟠 Hint 3
-Loud symbols:
+### Hint 2: Count down from 5
 ```python
-print("WAKE UP" + "!" * 50)
+for number in range(5, 0, -1):
 ```
+
+### Hint 3: Wait between numbers
+```python
+print(number)
+time.sleep(1)
+```
+
+Slow and steady! ⏱️

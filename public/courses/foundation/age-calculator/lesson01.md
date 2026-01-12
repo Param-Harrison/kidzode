@@ -1,14 +1,29 @@
-# Welcome to Age Calculator! 🎂
-Ever wondered how old you'll be on Mars or in the year 2050? Let's build a tool to find out!
+# Asking Questions ❓
 
-## Asking Questions ❓
+## Your Mission
+What if we want the computer to ask YOU something? Let's learn how to have a conversation with Python!
 
-What if we want the computer to ask us something? We use the `input()` command!
+## The Magic Word: input()
+When you use `input()`, Python shows a question and **waits** for you to type an answer.
 
-### Instructions:
-1. Run the code.
-2. The computer will wait for you to type something in the black box (Terminal).
-3. Type your name and press **Enter**.
+```python
+name = input("What is your name? ")
+```
 
-### Achievement:
-You've learned how to give instructions to the computer while it's running! ⌨️
+This does two things:
+1. Shows "What is your name?" on the screen
+2. Waits for you to type, then saves your answer in the `name` box
+
+## Try It!
+1. Click **Run**
+2. Look at the bottom of the screen — Python is asking a question!
+3. Type your name and press **Enter**
+4. Watch Python greet you! 👋
+
+## What You Learned
+✅ `input()` asks a question and waits for an answer
+✅ The answer gets stored in a variable (a box)
+✅ You can then use that variable later
+
+## Coming Up Next
+We'll use `input()` to build a birthday calculator! 🎂

@@ -1,7 +1,19 @@
-### One way to solve it:
+# Answer: Super Name Tag ✅
 
 ```python
-name = "Alex"
-color = "Blue"
-print("***", name, "(" + color + ")", "***")
+name = "Maya"
+hobby = "Dancing"
+
+print("=================")
+print("  Name:", name)
+print("  Loves:", hobby)
+print("=================")
+```
+
+**Output:**
+```
+=================
+  Name: Maya
+  Loves: Dancing
+=================
 ```

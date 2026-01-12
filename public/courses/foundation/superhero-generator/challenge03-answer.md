@@ -1,18 +1,16 @@
-### One way to solve it:
+# Answer: Band Name Generator ✅
 
 ```python
 import random
 
-adjectives = ["Super", "Power", "Mega", "Shadow", "Crystal"]
-nouns = ["Tiger", "Phantom", "Bird", "Shield", "Blade"]
+first_words = ["The", "Super", "Mighty", "Electric"]
+second_words = ["Dragons", "Stars", "Legends", "Rockets"]
 
-print("--- ASSEMBLING THE TEAM ---")
+first = random.choice(first_words)
+second = random.choice(second_words)
 
-for i in range(3):
-    adj = random.choice(adjectives)
-    noun = random.choice(nouns)
-    print(f"Hero {i+1}: {adj} {noun}")
+band_name = f"{first} {second}"
 
-print("---------------------------")
-print("TEAM READY FOR ACTION!")
+print("Your band name is:")
+print(band_name)
 ```

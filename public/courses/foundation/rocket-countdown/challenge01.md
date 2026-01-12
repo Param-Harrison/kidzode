@@ -1,11 +1,26 @@
-# CHALLENGE: Custom Countdown 🏆
+# Challenge: Custom Countdown 🏆
 
-Can you create a countdown where the user chooses the starting number?
+## Your Mission
+Create your own countdown from any number!
 
-### Your Task:
-1. Ask the user: "How many seconds until launch?"
-2. Turn that input into a number.
-3. Use that number as the start for your `range()`.
-4. Add a `time.sleep(1)` inside the loop.
+## Your Task
+1. Create a variable `start` with a number (like 10)
+2. Use `range()` to count down from `start` to 1
+3. Add "Blast off!" at the end!
 
-Good luck, Flight Commander!
+**Example output (if start = 5):**
+```
+5
+4
+3
+2
+1
+Blast off!
+```
+
+## Hint
+```python
+for number in range(start, 0, -1):
+```
+
+Customize your launch! 🚀

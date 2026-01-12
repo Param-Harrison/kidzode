@@ -1,19 +1,21 @@
-# Hints for Year 100 Challenge
+# Hints for Challenge 2: Dog Years 💡
 
-## 🟢 Hint 1
-Use `input()` but wrap it in `int()`:
+## Stuck? Here are some hints!
+
+### Hint 1: Get the age as a number
 ```python
 age = int(input("How old are you? "))
 ```
 
-## 🟡 Hint 2
-Subtract from 100:
+### Hint 2: Multiply by 7
 ```python
-left = 100 - age
+dog_years = age * 7
 ```
 
-## 🟠 Hint 3
-Print it nicely:
+### Hint 3: Print it!
 ```python
-print("You have", left, "years to go!")
+print("In dog years, you are:")
+print(dog_years)
 ```
+
+Woof! 🐕

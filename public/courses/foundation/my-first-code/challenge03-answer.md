@@ -1,14 +1,26 @@
-### One way to solve it:
+# Answer: Weather Report ✅
 
 ```python
-user_name = "Leo"
-weather_today = "Snowy"
-todo_count = 3
+city = "Paris"
+weather = "Sunny"
+temperature = 25
 
-print("--- AI MORNING REPORT ---")
-print("Good morning,", user_name + "!")
-print("Weather:", weather_today)
-print("Tasks to do:", todo_count)
-print("--------------------------")
-print("Have a great day!")
+print("City:")
+print(city)
+
+print("Weather:")
+print(weather)
+
+print("Temperature:")
+print(temperature)
+```
+
+**Output:**
+```
+City:
+Paris
+Weather:
+Sunny
+Temperature:
+25
 ```

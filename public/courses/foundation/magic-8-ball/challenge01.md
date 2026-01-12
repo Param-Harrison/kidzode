@@ -1,10 +1,25 @@
-# CHALLENGE: Your Fortunes 🏆
+# Challenge: Fortune Teller 🏆
 
-Can you turn the Magic 8-Ball into a "Fortune Teller" that tells you what will happen tomorrow?
+## Your Mission
+Make your own fortune teller with custom messages!
 
-### Your Task:
-1. Create a list called `fortunes`.
-2. Add at least 5 funny fortunes (e.g., "You will find a giant cookie").
-3. Use `random.choice()` to pick one and print it.
+## Your Task
+1. Create a list called `fortunes` with 4 fun fortunes
+2. Pick a random fortune using `random.choice()`
+3. Print "Your fortune today is:"
+4. Print the fortune!
 
-Good luck, future-teller!
+**Example output:**
+```
+Your fortune today is:
+You will find a surprise!
+```
+
+## Hint
+```python
+import random
+fortunes = ["...", "...", "...", "..."]
+my_fortune = random.choice(fortunes)
+```
+
+What does the future hold? 🔮

@@ -1,13 +1,12 @@
-### One way to solve it:
+# Answer: Snack Decider ✅
 
 ```python
 import random
 
-activities = ["Hiking", "Pizza Party", "Movie Marathon", "Gaming", "Swimming"]
+snacks = ["Popcorn", "Chips", "Cookies", "Fruit", "Ice cream"]
+craving = input("What snack are you craving? ")
+choice = random.choice(snacks)
 
-print("--- ADVENTURE GENERATOR ---")
-input("Press ENTER to find your destiny...")
-
-pick = random.choice(activities)
-print("The universe has spoken! You should go for:", pick)
+print("You should have:")
+print(choice)
 ```

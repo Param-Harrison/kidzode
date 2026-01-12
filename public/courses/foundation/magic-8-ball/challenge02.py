@@ -1,8 +1,16 @@
-# ---- YOUR CHALLENGE ----
+# ========================================
+# 🎨 CHALLENGE 2: Color Picker
+# ========================================
+
+# Step 1: Open the random toolbox
 import random
 
-# 1. Create 'colors' list
-# 2. Use random.choice to pick one
-# 3. Print the lucky color
+# Step 2: Create a list of colors
+colors = ["Red", "Blue", "Green", "Yellow", "Purple"]
 
-# Write your code below!
+# Step 3: Pick a random color
+todays_color = random.choice(colors)
+
+# Step 4: Print the result
+print("Today you should wear:")
+print(todays_color)

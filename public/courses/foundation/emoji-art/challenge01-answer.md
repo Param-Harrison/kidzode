@@ -1,13 +1,17 @@
-### One way to solve it:
+# Answer: Emoji Triangle ✅
 
 ```python
-# Grow
-for i in range(5):
-    print("💠" * (i + 1))
+emoji = "💎"
 
-# Shrink
-print("💠" * 4)
-print("💠" * 3)
-print("💠" * 2)
-print("💠" * 1)
+for row in range(5):
+    print(emoji * (row + 1))
+```
+
+**Output:**
+```
+💎
+💎💎
+💎💎💎
+💎💎💎💎
+💎💎💎💎💎
 ```

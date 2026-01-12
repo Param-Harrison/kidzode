@@ -1,13 +1,16 @@
-### One way to solve it:
+# Answer: Math Whiz ✅
 
 ```python
 cookies = 24
 friends = 6
+each = cookies / friends
 
-per_friend = cookies / friends
+print("Each friend gets:")
+print(each)
+```
 
-print("--- Cookie Calculator ---")
-print("Total Cookies:", cookies)
-print("Total Friends:", friends)
-print("Each friend gets:", per_friend)
+**Output:**
+```
+Each friend gets:
+4.0
 ```

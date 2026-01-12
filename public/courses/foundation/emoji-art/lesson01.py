@@ -1,7 +1,15 @@
-# Multiply a string by a number
+# ========================================
+# ⚡ LESSON 1: Emoji Power
+# ========================================
+
+# Multiply text by a number to repeat it!
 print("⭐" * 10)
 
-# You can do it with any text
-print("Laugh! " * 3)
+# Works with words too!
+print("Go! " * 3)
 
-# TRY THIS: Change the number 10 to 50!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change the number 10 to something bigger!
+# Try different emojis: 🚀 ❤️ 🔥 🌈
+# ----------------------------------------

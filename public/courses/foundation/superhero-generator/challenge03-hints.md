@@ -1,21 +1,22 @@
-# Hints for Hero Team Challenge
+# Hints for Challenge 3: Band Name Generator 💡
 
-## 🟢 Hint 1
-The loop should look like this:
+## Stuck? Here are some hints!
+
+### Hint 1: Create the word lists
 ```python
-for i in range(3):
-    # code here
+first_words = ["The", "Super", "Mighty", "Electric"]
+second_words = ["Dragons", "Stars", "Legends", "Rockets"]
 ```
 
-## 🟡 Hint 2
-Inside the loop, do the picking:
+### Hint 2: Pick randomly from each
 ```python
-a = random.choice(adjectives)
-n = random.choice(nouns)
+first = random.choice(first_words)
+second = random.choice(second_words)
 ```
 
-## 🟠 Hint 3
-Print each hero with a number:
+### Hint 3: Combine!
 ```python
-print("Member", i+1, ":", a, n)
+band_name = f"{first} {second}"
 ```
+
+Rock on! 🎸

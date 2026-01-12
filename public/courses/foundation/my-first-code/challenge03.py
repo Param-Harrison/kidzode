@@ -1,6 +1,22 @@
-# ---- YOUR CHALLENGE ----
-# 1. Create variables for Name, Weather, and Tasks
-# 2. Print a nice morning report
-# 3. Use your variables!
+# ========================================
+# 🌤️ CHALLENGE 3: Weather Report
+# ========================================
 
-# Write your code below!
+# Step 1: Create a variable for your city
+city = "Paris"
+
+# Step 2: Create a variable for the weather
+weather = "Sunny"
+
+# Step 3: Create a variable for temperature (no quotes for numbers!)
+temperature = 25
+
+# Step 4: Print everything with labels
+print("City:")
+print(city)
+
+print("Weather:")
+print(weather)
+
+print("Temperature:")
+print(temperature)
