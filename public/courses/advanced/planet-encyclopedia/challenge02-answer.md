@@ -1,10 +1,8 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-mars = {"name": "Mars", "dist": 225}
-venus = {"name": "Venus", "dist": 100}
-
-trip = mars["dist"] + venus["dist"]
-
-print("Total Trip Distance:", trip, "million km")
+best = planets[0]
+for planet in planets:
+    if planet["moons"] > best["moons"]:
+        best = planet
+print("Winner:", best["name"])
 ```

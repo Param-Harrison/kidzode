@@ -1,17 +1,13 @@
-# CHALLENGE 2: Scaled Graph 📏
+# Challenge: Weather Tracker ☀️
 
-The numbers are too big! If we have 100, the bar will break the screen.
-We need to **Scale Down**.
+## Your Mission
+The local news needs a **Temperature Chart** for the week. 🌡️
 
-### The Math
-If we divide the value by 10, then `100` becomes `10` stars.
-Use integer division `//` to avoid decimals.
+## Your Task
+1. Look at the `temps` list (like `[22, 25, 19, 30, 28]`).
+2. Loop through the list.
+3. Instead of a solid block, use the degree symbol `*` to draw the bars.
+4. If a temperature is **above 28**, print "HOT!" next to the bar.
+5. Print: `"Weekly High: [Max Temp]"`
 
-### Your Task:
-1. Create `data = [50, 20, 80]`.
-2. Loop through data.
-3. Calculate `stars = num // 10`.
-4. Print the bar.
-
-### Achievement:
-You implemented data normalization! 📉
+**Hint:** Use `max(temps)` to find the high!

@@ -1,12 +1,17 @@
-# ---- YOUR CHALLENGE ----
-movies = [
-    {"title": "Epic Saga", "duration": 180},
-    {"title": "Quick Toon", "duration": 10},
-    {"title": "Normal Film", "duration": 100}
-]
+# ========================================
+# 🏆 CHALLENGE 2: Search Bar
+# ========================================
 
-# 1. Loop through movies
-# 2. Check IF duration < 90
-# 3. Print the title
+movies = ["Spider-Bot", "The Coding Cat", "Space Pizza", "Star Wars", "Super Panda"]
 
-# Write your code below!
+# What the user is typing in the search bar:
+search_text = "Star"
+
+# Your Mission: Find any movie where the search text is HIDDEN inside the title.
+
+# Step 1: Loop through the 'movies' list
+for title in :
+    # Step 2: Check if 'search_text' is IN the title
+    if :
+        # Step 3: If it matches, print "Found match: [title]"
+        print()

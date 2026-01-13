@@ -1,17 +1,16 @@
-# CHALLENGE 3: Trash Compactor 🗑️
+# Challenge: The Ultimate Deal 💰
 
-We are carrying too much junk.
-Keep everything that is NOT "Trash".
+## Your Mission
+A traveling merchant wants to buy your items! 🛒 But he only buys items that are **Rare** and cost **less than 50 gold**.
 
-### The NOT Operator
-In Python, `!=` means "Does not equal".
+## Your Task
+1. Look at the `merchant_list` (a list of dictionaries).
+2. Create a list called `sale_items`.
+3. Loop through the list.
+4. Use `if` with **`and`** to check two things:
+   - Is the item's type `"Rare"`?
+   - Is its price `< 50`?
+5. If both are True, add the item's name to your sale list.
+6. Print: `"Items to sell: [sale_items]"`
 
-### Your Task:
-1. Create a `bag` with "Trash" and "Treasure".
-2. Create `keep_bag = []`.
-3. Loop through.
-4. IF type `!=` "Trash", list append it.
-5. Print the clean bag.
-
-### Achievement:
-You performed a negative filter! ⛔
+**Pro Tip:** This is exactly how shopping filters on websites like Amazon work! 🛍️

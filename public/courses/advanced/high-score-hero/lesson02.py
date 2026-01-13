@@ -1,11 +1,23 @@
-# 🏆 HIGH SCORE HERO
-# Goal: Find the winner
+# ========================================
+# 🥇 LESSON 2: Who Won?
+# ========================================
 
-# 1. Create a big list of scores
-scores = [12, 54, 87, 23, 99, 11]
+players = ["Alice", "Bob", "Charlie"]
+scores = [85, 92, 78]
 
-# 2. Find the max value
-winner = max(scores)
+# Find highest score
+highest = max(scores)
 
-# 3. Print the result
-print("The Winner Is:", winner)
+# Find WHERE it is
+position = scores.index(highest)
+
+# Get the winner's name
+winner = players[position]
+
+print("Highest score:", highest)
+print("Winner:", winner, "🏆")
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change Charlie's score to 100 and see who wins!
+# ----------------------------------------

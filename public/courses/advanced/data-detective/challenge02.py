@@ -1,7 +1,15 @@
-# ---- YOUR CHALLENGE ----
-evidence = ["Fingerprint", "Hair", "Mud", "Ticket", "Photo"]
+# ========================================
+# 🏆 CHALLENGE 2: Case Files
+# ========================================
 
-# 1. Print the LAST item using [-1]
-# 2. Print the SECOND TO LAST item using [-2]
+# We found a folder full of mystery clues.
+clues = ["Red Hair", "Gold Watch", "Size 10 Shoe", "Smell of Coffee"]
 
-# Write your code below!
+# Your Mission: Count how many clues we have in total.
+
+# Step 1: Use the len() tool to find the length of the clues list
+# Step 2: Store the answer in a variable called 'clue_count'
+clue_count = 
+
+# Step 3: Print "Total clues found: " followed by your variable
+print("Total clues found:", clue_count)

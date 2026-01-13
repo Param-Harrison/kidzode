@@ -1,11 +1,20 @@
-# 😃 EMOJI ANALYZER
-# Goal: Treat text as data
+# ========================================
+# 📜 LESSON 1: Text is Data
+# ========================================
 
-# 1. Create a message
+# Text works like a list of letters!
 message = "Python is cool!"
 
-# 2. Print the first character
+# Get the first letter (position 0)
 print("First letter:", message[0])
 
-# 3. Print the total size of the data
-print("Total characters:", len(message))
+# Get the fifth letter (position 4)
+print("Fifth letter:", message[4])
+
+# Count all letters
+print("Total letters:", len(message))
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change the message and see what changes!
+# ----------------------------------------

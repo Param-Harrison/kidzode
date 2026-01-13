@@ -1,15 +1,21 @@
-# 🪐 PLANET ENCYCLOPEDIA
-# Goal: Create a detailed record
+# ========================================
+# 🪐 LESSON 1: Better Data
+# ========================================
 
-# 1. Create a dictionary for Earth
-earth = {
-    "name": "Earth",
-    "type": "Rocky",
-    "moons": 1
+# A dictionary stores labeled data
+mars = {
+    "name": "Mars",
+    "color": "Red",
+    "moons": 2,
+    "size": 6779
 }
 
-# 2. Print the data
-print("Planet Name:", earth["name"])
-print("Moons:", earth["moons"])
+# Get specific information
+print("Planet:", mars["name"])
+print("Color:", mars["color"])
+print("Number of moons:", mars["moons"])
 
-# 3. Can you print the Type?
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add "rings": False to the dictionary!
+# ----------------------------------------

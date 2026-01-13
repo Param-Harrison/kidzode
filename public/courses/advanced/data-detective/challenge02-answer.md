@@ -1,9 +1,9 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-evidence = ["Fingerprint", "Hair", "Mud", "Ticket", "Photo"]
-
-print("--- LATEST UPDATES ---")
-print("Most Recent:", evidence[-1])
-print("Previous:", evidence[-2])
+suspects = ["The Butler", "The Gardner", "The Chef"]
+clues = ["Footprint", "Fingerprint", "Note"]
+print("Suspects:", suspects)
+print("Clues:", clues)
+print("Total suspects:", len(suspects))
+print("Total clues:", len(clues))
 ```

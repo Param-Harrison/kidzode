@@ -1,13 +1,5 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-hero = {"hp": 50}
-damage = 10
-
-print("HP:", hero["hp"])
-print("Ouch! Took", damage, "damage.")
-
-hero["hp"] -= damage
-
-print("HP Remaining:", hero["hp"])
+filled = int(hp / max_hp * 10)
+print("[" + "█" * filled + "░" * (10 - filled) + "]")
 ```

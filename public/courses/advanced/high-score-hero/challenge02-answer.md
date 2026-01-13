@@ -1,12 +1,4 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-scores = [10, 20, 30]
-
-total = sum(scores)  # 60
-count = len(scores)  # 3
-
-avg = total / count  # 20.0
-
-print("Average Score:", avg)
+print("Average:", sum(scores) / len(scores))
 ```

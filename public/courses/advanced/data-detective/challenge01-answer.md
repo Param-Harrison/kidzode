@@ -1,9 +1,5 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-lineup = ["Prof. Plum", "Mrs. White", "Mr. Green", "Mrs. Peacock"]
-
-print("--- INTERVIEW LIST ---")
-print("First:", lineup[0])
-print("Last:", lineup[3])
+suspects = ["The Butler", "The Gardner", "The Chef", "The Driver"]
+print("The culprit is:", suspects[3])
 ```

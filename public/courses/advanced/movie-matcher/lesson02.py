@@ -1,17 +1,10 @@
-# 🎬 MOVIE MATCHER
-# Goal: Search by Genre
-
 movies = [
-    {"title": "Funny Dog", "genre": "Comedy"},
-    {"title": "Space Ship", "genre": "Sci-Fi"},
-    {"title": "Laughing Cow", "genre": "Comedy"}
+    {"title": "Toy Story", "genre": "Animation", "rating": 8.3},
+    {"title": "The Dark Knight", "genre": "Action", "rating": 9.0},
+    {"title": "Finding Nemo", "genre": "Animation", "rating": 8.1}
 ]
-
-# 1. Ask user for genre
-want = input("What genre do you like? ")
-
-# 2. Loop and search
-print(f"Searching for {want}...")
-for m in movies:
-    if m["genre"] == want:
-        print("Found:", m["title"])
+genre = input("What genre? ")
+print("Movies in", genre + ":")
+for movie in movies:
+    if movie["genre"] == genre:
+        print("-", movie["title"])

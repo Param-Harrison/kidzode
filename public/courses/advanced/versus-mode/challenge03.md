@@ -1,14 +1,16 @@
-# CHALLENGE 3: Battle Loop 🔁
+# Challenge: Level Up! 🆙
 
-Fights usually last until someone runs out of health.
-Let's loop until `hp` is 0!
+## Your Mission
+Your team just won a huge quest! 🥇 Every hero in your team gets a **Level Up** bonus.
 
-### Your Task:
-1. Create `hp = 100`.
-2. Create `damage = 25`.
-3. Use `while hp > 0:`.
-4. Inside the loop, subtract `damage` and print current health.
-5. Print "Game Over" after the loop.
+## Your Task
+1. Look at the `hero_team` (a list of dictionaries).
+2. Loop through every hero.
+3. For each hero:
+   - Add 20 to their `health`.
+   - Add 5 to their `attack`.
+   - Print: `"[Name] leveled up! Health: [H], Attack: [A]"`
+4. Use a `sum()` to calculate the **Total Attack Power** of the whole team after the level up.
+5. Print: `"Team Total Power: [Total]"`
 
-### Achievement:
-You simulated a complete game cycle! 🎮
+**Pro Tip:** This combines everything you've learned about lists, dictionaries, and loops! 🧠

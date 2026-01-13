@@ -1,20 +1,37 @@
-# Who Won? 🥇
+# Finding the Winner 🥇
 
-Looking at a huge list of numbers is hard.
-Let Python do the work!
+## Quick Reminder
+You learned how to find the `max()` and `min()` scores. But there's a problem... we know the *score* is 990, but we don't know *who* got it!
 
-### The Tool: max()
-The `max()` function scans a list and finds the **highest** number instantly.
+## Your Mission
+We need to connect the numbers to the names. It’s like finding a trophy on a shelf—you see the gold, but you need to read the nameplate!
+
+## The Index Trick
+Remember how every item in a list has a "Spot Number" (Index)? We can use the score to find its spot, and then use that spot to find the player.
 
 ```python
-best = max(scores)
-print(best)
+players = ["Zelda", "Mario", "Sonic", "Peach"]
+scores = [100, 500, 300, 200]
+
+# 1. Find the highest score
+top_score = max(scores)
+
+# 2. Find WHAT SPOT that score is in
+winner_spot = scores.index(top_score)
+
+# 3. Use that spot to find the name
+winner_name = players[winner_spot]
 ```
 
-### Your Goal
-1. Create a list of 5 scores.
-2. Use `max()` to find the winner.
-3. Print "High Score: [number]".
+## Try It!
+1. Look at the two lists: `players` and `scores`.
+2. Click **Run** to see the computer look up the winner.
+3. **Challenge:** Change Mario's score to `50`. Run the code. Who is the winner now?
 
-### Achievement
-🏅 **Champion Hunter**: You found the best value instantly!
+## What You Learned
+✅ **`.index()`** tells you the "Spot Number" of a specific piece of data.
+✅ You can "link" two lists together by using the same index for both.
+✅ This is how leaderboards in games like *Fortnite* or *Roblox* work!
+
+## Achievement Unlocked! 🏆
+**Talent Scout**: You successfully matched a high score to a player name! 🕵️‍♀️

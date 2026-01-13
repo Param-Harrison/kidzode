@@ -1,17 +1,6 @@
-# 🎒 INVENTORY MASTER
-# Goal: Search for food
-
-backpack = [
-    {"name": "Rock", "type": "Junk"},
-    {"name": "Apple", "type": "Food"},
-    {"name": "Stick", "type": "Junk"}
-]
-
-# 1. Loop through items
-print("Searching for snacks...")
-for item in backpack:
-    # 2. Check if type is Food
-    if item["type"] == "Food":
-        print("Found:", item["name"])
-
-print("Search complete.")
+inventory = ["Sword", "Shield", "Potion"]
+item = input("Check for item: ")
+if item in inventory:
+    print("✅ You have it!")
+else:
+    print("❌ Not in inventory")

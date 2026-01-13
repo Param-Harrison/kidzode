@@ -1,13 +1,22 @@
-# 🕵️‍♂️ DATA DETECTIVE
-# Goal: Access specific suspects
+# ========================================
+# 🔎 LESSON 3: Examining Evidence
+# ========================================
 
+# Our suspect list
 suspects = ["The Butler", "The Gardner", "The Chef"]
 
-# 1. Print the FIRST suspect (Index 0)
-print("Suspect 1:", suspects[0])
+# Access specific suspects by position
+# Remember: positions start at 0!
 
-# 2. Print the SECOND suspect (Index 1)
-print("Suspect 2:", suspects[1])
+print("Suspect at position 0:", suspects[0])  # First
+print("Suspect at position 1:", suspects[1])  # Second
+print("Suspect at position 2:", suspects[2])  # Third
 
-# 3. Print the THIRD suspect (Index 2)
-print("Suspect 3:", suspects[2])
+print("")
+print("The first suspect is:", suspects[0])
+print("The last suspect is:", suspects[2])
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change suspects[0] to suspects[1] and see who appears!
+# ----------------------------------------

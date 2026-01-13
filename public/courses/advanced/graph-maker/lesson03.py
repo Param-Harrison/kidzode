@@ -1,14 +1,13 @@
-# 📊 GRAPH MAKER
-# Goal: Draw the full chart
+labels = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+values = [5, 8, 3, 10, 6]
 
-# 1. Define data
-data = [3, 9, 5, 2, 7]
-
-print("--- VISUALIZING DATA ---")
-
-# 2. Loop through data
-for num in data:
-    # 3. Create bar
-    bar = "*" * num
-    # 4. Print it
-    print(bar)
+print("=" * 25)
+print("   📊 DAILY STEPS")
+print("=" * 25)
+for i in range(len(labels)):
+    bar = "█" * values[i]
+    print(labels[i] + ":", bar, values[i])
+print("=" * 25)
+print("Max:", max(values))
+print("Total:", sum(values))
+print("Avg:", sum(values) / len(values))

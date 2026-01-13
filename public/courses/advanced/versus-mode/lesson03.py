@@ -1,13 +1,9 @@
-# ⚔️ VERSUS MODE
-# Goal: Increase stats
+hero = {"name": "Hero", "hp": 100, "attack": 25}
 
-player = {"name": "Wizard", "atk": 50}
+def power_up(character):
+    character["attack"] = character["attack"] + 10
+    print(character["name"], "powered up! ATK is now", character["attack"])
 
-print("Current Attack:", player["atk"])
-
-# 1. Power up! Add 20 to attack
-print("You found a Magic Staff! 🪄")
-player["atk"] += 20
-
-# 2. Print result
-print("New Attack:", player["atk"])
+print("Before:", hero["attack"])
+power_up(hero)
+print("After:", hero["attack"])

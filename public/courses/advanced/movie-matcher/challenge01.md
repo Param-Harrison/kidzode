@@ -1,12 +1,13 @@
-# CHALLENGE 1: Kids Mode 👶
+# Challenge: Classic Movies 🎞️
 
-Parents want to know if a movie is safe for kids.
-Let's filter by rating!
+## Your Mission
+A user wants to watch a "Classic." In our vault, a classic is any movie made **before the year 2010**. 🕰️
 
-### Your Task:
-1. Create a list of movies with a `"rating"` (like "G", "PG-13", "R").
-2. Loop through the list.
-3. If the rating is "G" (General Audience), print the title.
+## Your Task
+1. Look at the `movie_vault` (each movie now has a `"year"` key).
+2. Create a list called `classics`.
+3. Loop through the vault.
+4. If the movie's year is **less than 2010**, add its title to the list.
+5. Print: `"Classic Discoveries: [classics]"`
 
-### Achievement:
-You've created a safety filter! 🛡️
+**Hint:** Use `if movie["year"] < 2010:`

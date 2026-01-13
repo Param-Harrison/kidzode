@@ -1,14 +1,20 @@
-# 🕵️‍♂️ DATA DETECTIVE
-# Goal: Count the evidence
+# ========================================
+# 🔢 LESSON 2: Counting Clues
+# ========================================
 
-# 1. Create a list of 'clues'
+# Our evidence list
 clues = ["Muddy Shoe", "Torn Ticket", "Lost Key", "Broken Glass"]
 
-# 2. Count the clues using len()
+# Count how many clues we have
 total = len(clues)
 
-# 3. Print the report
 print("--- EVIDENCE REPORT ---")
-print("Total Clues Found:", total)
+print("Clues we found:")
+print(clues)
+print("")
+print("Total clues:", total)
 
-# Try adding another clue to the list and run it again!
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add "Fingerprint" to the list and see the count change!
+# ----------------------------------------

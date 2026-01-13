@@ -1,12 +1,12 @@
-# CHALLENGE 1: Labelled Chart 🏷️
+# Challenge: Popularity Contest 🗳️
 
-A chart is useless if we don't know what it means!
-Let's add labels using a **List of Dictionaries**.
+## Your Mission
+We're voting for the favorite school lunch! 🍕 Burger has 12 votes, Pizza has 25 votes, and Tacos have 18 votes. Show us the results!
 
-### Your Task:
-1. Create a list: `stats = [{"name": "Mon", "val": 2}, {"name": "Tue", "val": 5}]`.
-2. Loop through the list.
-3. Print the name, a colon `:`, and then the bar `*`.
+## Your Task
+1. Create a dictionary called `votes` with the lunch names and their counts.
+2. Loop through the dictionary.
+3. For each item, print the name and a bar of "█" symbols.
+4. Print: `"The Winner is [Name]!"` at the bottom.
 
-### Achievement:
-You created a readable, professional graph! 📋
+**Goal:** Make the chart look clean and professional!

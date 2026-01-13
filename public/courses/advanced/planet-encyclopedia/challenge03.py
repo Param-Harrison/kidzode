@@ -1,12 +1,24 @@
-# ---- YOUR CHALLENGE ----
-galaxy = [
-    {"name": "X-1", "type": "Gas"},
-    {"name": "Earth 2.0", "type": "Habitable"},
-    {"name": "Magma", "type": "Hot"}
+# ========================================
+# 🏆 CHALLENGE 3: Alien Scanner
+# ========================================
+
+# The Galactic Database
+planets = [
+    {"name": "Mercury", "moons": 0},
+    {"name": "Earth", "moons": 1},
+    {"name": "Mars", "moons": 2},
+    {"name": "Jupiter", "moons": 79},
+    {"name": "Saturn", "moons": 82}
 ]
 
-# 1. Loop through galaxy
-# 2. Check IF type is "Habitable"
-# 3. Print success message
+# Your Mission: Filter for life! Any planet with more than 0 moons is a match.
 
-# Write your code below!
+# Step 1: Loop through the 'planets' list
+for planet in :
+    # Step 2: Check if the planet has more than 0 moons
+    if :
+        # Step 3: If yes, print "Potential life found on [name]!"
+        print()
+    else:
+        # Step 4: If no, print "No life detected on [name]."
+        print()

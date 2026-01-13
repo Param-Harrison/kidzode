@@ -1,17 +1,15 @@
-# CHALLENGE 3: Top 3 🏅
+# Challenge: Top 3 Rankings 🥉
 
-We need to sort the scores from highest to lowest.
-Python has a function called `sorted()`.
+## Your Mission
+The tournament is over! 🏁 We need to show the **Top 3 Scores** on the big screen. 
 
-### The Trick
-By default, Python sorts smallest to biggest.
-To reverse it, we say: `sorted(scores, reverse=True)`.
+## Your Task
+1. Use the `tournament_scores` list.
+2. Use `.sort()` to put them in order.
+3. Since `.sort()` puts the smallest first, the biggest will be at the **End**.
+4. Use **Negative Indexing** to print the last three items:
+   - `print("1st Place:", tournament_scores[-1])`
+   - `print("2nd Place:", tournament_scores[-2])`
+   - `print("3rd Place:", tournament_scores[-3])`
 
-### Your Task:
-1. Create a list of 5 scores (mixed up).
-2. Sort them using `sorted(scores, reverse=True)`.
-3. Print the sorted list.
-4. (Bonus) Print the Top 3 items using `[0]`, `[1]`, `[2]`.
-
-### Achievement:
-You've organized a chaotic dataset! 📂
+**Pro Tip:** Negative indexing is like counting backward from the end of the line! `-1` is always the very last item.

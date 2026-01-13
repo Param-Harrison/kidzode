@@ -1,16 +1,29 @@
-# 🪐 PLANET ENCYCLOPEDIA
-# Goal: Scan the galaxy
+# ========================================
+# 🔭 LESSON 3: Planet Finder
+# ========================================
 
-galaxy = [
-    {"name": "Mars", "type": "Rocky"},
-    {"name": "Jupiter", "type": "Gas Giant"},
-    {"name": "Saturn", "type": "Gas Giant"}
+planets = [
+    {"name": "Mercury", "moons": 0},
+    {"name": "Venus", "moons": 0},
+    {"name": "Earth", "moons": 1},
+    {"name": "Mars", "moons": 2}
 ]
 
-# 1. Loop through the galaxy list
-print("--- STARTING SCAN ---")
-for planet in galaxy:
-    # 2. Print the name of the current planet
-    print("Scanning:", planet["name"])
+def find_planet(search_name):
+    for planet in planets:
+        if planet["name"] == search_name:
+            return planet
+    return None
 
-print("--- SCAN COMPLETE ---")
+# Search for Mars
+result = find_planet("Mars")
+if result:
+    print("Found:", result["name"])
+    print("Moons:", result["moons"])
+else:
+    print("Planet not found!")
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Search for "Jupiter" (not in list!)
+# ----------------------------------------

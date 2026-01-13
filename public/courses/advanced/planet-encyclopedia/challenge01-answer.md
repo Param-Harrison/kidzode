@@ -1,11 +1,7 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-system = [
-    {"name": "Jupiter", "moons": 79},
-    {"name": "Saturn", "moons": 82}
-]
-
-print("Jupiter Moons:", system[0]["moons"])
-print("Saturn Moons:", system[1]["moons"])
+total = 0
+for planet in planets:
+    total = total + planet["moons"]
+print("Total moons:", total)
 ```

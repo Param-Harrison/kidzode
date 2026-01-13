@@ -1,16 +1,15 @@
-# CHALLENGE 2: Case Closed 💼
+# Challenge 2: Case Closed 📋
 
-As a Data Detective, you often need to see the most recent piece of evidence.
-To get the **last** item without counting, Python has a special trick!
+## Your Mission
+The Chief of Police needs a full report on the investigation! 🏢 You need to show all the suspects we've found AND all the clues we've collected, plus the total count for each.
 
-### The Trick: Negative Numbers
-- `[-1]` gives you the **last** item.
-- `[-2]` gives you the **second to last** item.
+## Your Task
+1. Create a list called `suspects` with at least 3 names.
+2. Create a list called `clues` with at least 3 items.
+3. Print: `"--- INVESTIGATION REPORT ---"`
+4. Use `len()` to print how many suspects we have.
+5. Use `len()` to print how many clues we found.
+6. Print both lists so the Chief can see the data!
 
-### Your Task:
-1. Create a list of 5 evidence items.
-2. Print the last item using `[-1]`.
-3. Print the second to last item using `[-2]`.
-
-### Achievement:
-You've learned the "Pro" way to access data! 🕴️
+## Fun Goal
+Try to make the report look professional, like a real digital detective's screen! 💻

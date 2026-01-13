@@ -1,13 +1,14 @@
-# CHALLENGE 1: Moon Counter 🌑
+# Challenge: Moon Counter 🌙
 
-Some planets have many moons, some have none.
-Let's analyze the moon data!
+## Your Mission
+A Galactic Council meeting is coming up! 👽 They need to know the **Total Number of Moons** in the entire galaxy. They've given you a list of planets, and it's your job to count 'em all up!
 
-### Your Task:
-1. Create a list called `system` with 2 planets.
-2. Make sure each planet has a `"moons"` number (e.g., 1, 79).
-3. Print the number of moons for the **first** planet.
-4. Print the number of moons for the **second** planet.
+## Your Task
+1. Look at the `planets` database. Each planet has a number of `"moons"`.
+2. Create a variable called `total_moons` and set it to `0`.
+3. Use a `for loop` to go through every planet.
+4. Add the number of moons from each planet to your total.
+5. Print: `"The Galaxy has a total of [number] moons!"`
 
-### Achievement:
-You've extracted specific data points from the system! 📍
+**Hint:** Inside the loop, you'll want to do something like:
+`total_moons = total_moons + planet["moons"]`

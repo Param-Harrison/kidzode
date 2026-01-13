@@ -1,22 +1,34 @@
-# Drawing Bars 🧱
+# The Weekly Report 📅
 
-How do we draw with text? We use symbols!
-In Python, we can multiply strings.
+## Quick Reminder
+You learned the "Rubber Stamp" trick to draw bars. Now, let's build a full report!
 
-### The Magic
-`"*" * 5` becomes `"*****"`.
+## Your Mission
+The CEO of "Kidzode Coffee" needs a chart showing how many cups were sold every day this week. We have a list of numbers, and we need to turn them into a row of bars.
+
+## Drawing the Rows
+We combine everything we've learned: **Lists**, **Loops**, and **String Multiplication**.
 
 ```python
-score = 3
-bar = "*" * score
-print(bar)
-# Prints: ***
+sales = [5, 8, 12, 4, 10]
+days = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+
+for i in range(len(sales)):
+    day_name = days[i]
+    count = sales[i]
+    bar = "█" * count
+    print(day_name, "|", bar)
 ```
 
-### Your Goal
-1. Create a variable `val = 8`.
-2. Create a bar using `"*"` multiplied by `val`.
-3. Print the bar.
+## Try It!
+1. Look at the `sales` and `days` lists.
+2. Click **Run** to see the weekly chart.
+3. **Challenge:** Change Wednesday's value to `20`. Look at that spike! 📈
 
-### Achievement
-🎨 **ASCII Artist**: You turned a number into a picture!
+## What You Learned
+✅ A **Chart** is just a loop that prints a new bar for every item in a list.
+✅ Using `range(len(list))` lets you pull data from two lists at the same time.
+✅ Adding labels (like "Mon |") makes your data much easier to read.
+
+## Achievement Unlocked! 🏆
+**Chart Champion**: You successfully visualized a whole week of data! 📊

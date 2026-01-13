@@ -1,14 +1,13 @@
-# CHALLENGE 2: Gold Calculator 💰
+# Challenge: Junk Removal 🚮
 
-Not all treasure is gold. Let's count the value!
-But wait... we only want to count the value of GEMS.
+## Your Mission
+Sir Codes-A-Lot's backpack is heavy! 🎒 We need to remove anything that contains the word **"Broken"**.
 
-### Your Task:
-1. Create a `loot` list. Items have `type` ("Gem" or "Trash") and `value` (number).
-2. Create `total_gold = 0`.
-3. Loop through loot.
-4. IF type is "Gem", add its value to `total_gold`.
-5. Print total.
+## Your Task
+1. Look at the `backpack` list.
+2. Create a new list called `shiny_inventory`.
+3. Loop through the backpack.
+4. If an item **does not** contain the word "Broken", add it to the new list.
+5. Print: `"Clean Inventory: [shiny_inventory]"`
 
-### Achievement:
-You combined Filtering and Math! ➕
+**Detective Tip:** Use `if "Broken" not in item:` to keep only the good stuff!

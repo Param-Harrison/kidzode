@@ -1,14 +1,13 @@
-# CHALLENGE 1: Weapon Rack ⚔️
+# Challenge: Quest Items 📜
 
-We need to organize the armory.
-Pull out all the weapons and put them on the rack!
+## Your Mission
+The King has requested 3 specific items for a royal quest: a **Crown**, a **Ring**, and a **Cape**. Do you have them in your storage? 🏰
 
-### Your Task:
-1. Create a `backpack` with "Weapon", "Food", and "Junk".
-2. Create an empty list `rack = []`.
-3. Loop through the backpack.
-4. If type is "Weapon", append it to `rack`.
-5. Print the rack.
+## Your Task
+1. Look at the `storage` list.
+2. Create a list called `missing_items`.
+3. Check for the `"Crown"`, `"Ring"`, and `"Cape"`.
+4. If an item is NOT in the storage, add it to `missing_items`.
+5. Print: `"You still need to find: [missing_items]"`
 
-### Achievement:
-You've automated your sorting process! 🤖
+**Hint:** You can use `if "Crown" not in storage:` to find what's missing!

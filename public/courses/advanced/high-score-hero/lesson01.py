@@ -1,9 +1,15 @@
-# 🏆 HIGH SCORE HERO
-# Goal: Build the scoreboard
+# ========================================
+# 🏆 LESSON 1: The Scoreboard
+# ========================================
 
-# 1. Create a list of 4 numbers
-scores = [100, 450, 230, 890]
+scores = [10, 50, 99, 25, 75]
 
-# 2. Print the data to check it
-print("--- RAW SCORES ---")
-print(scores)
+print("All scores:", scores)
+print("Highest:", max(scores))
+print("Lowest:", min(scores))
+print("Total:", sum(scores))
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add a new score and see the results change!
+# ----------------------------------------

@@ -1,13 +1,7 @@
-# 🎬 MOVIE MATCHER
-# Goal: Create the database
-
-# 1. Create a list of movies
 movies = [
-    {"title": "Frozen Planet", "genre": "Sci-Fi"},
-    {"title": "Funny Cat", "genre": "Comedy"},
-    {"title": "Super Hero", "genre": "Action"}
+    {"title": "Toy Story", "genre": "Animation", "rating": 8.3},
+    {"title": "The Dark Knight", "genre": "Action", "rating": 9.0},
+    {"title": "Finding Nemo", "genre": "Animation", "rating": 8.1}
 ]
-
-# 2. Print the library
-print("--- MOVIE DB ---")
-print(movies)
+for movie in movies:
+    print(movie["title"], "-", movie["genre"])

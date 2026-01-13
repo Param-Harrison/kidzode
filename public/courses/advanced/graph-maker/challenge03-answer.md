@@ -1,10 +1,7 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-data = [1, 3, 2, 4]
-
-print("--- STATUS ---")
-for x in data:
-    graph = "🟩" * x
-    print(graph)
+if v >= 7: char = "🟢"
+elif v >= 4: char = "🟡"
+else: char = "🔴"
+print(char * v)
 ```

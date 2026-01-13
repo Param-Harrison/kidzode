@@ -1,10 +1,7 @@
-# 📊 GRAPH MAKER
-# Goal: Draw a single bar
+labels = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+values = [5, 8, 3, 10, 6]
 
-val = 7
-
-# 1. Create a bar string
-bar = "[]" * val
-
-# 2. Print it
-print(val, ":", bar)
+print("📊 Weekly Data:")
+for i in range(len(labels)):
+    bar = "█" * values[i]
+    print(labels[i] + ":", bar, values[i])

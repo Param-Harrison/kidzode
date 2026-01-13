@@ -1,8 +1,15 @@
-# ---- YOUR CHALLENGE ----
-text = "I hate bugs! Bugs are bad."
+# ========================================
+# 🏆 CHALLENGE 2: Emoji Counter
+# ========================================
 
-# 1. Use .replace() to change "hate" to "love"
-# 2. Use .replace() to change "bad" to "good"
-# 3. Print the clean text
+# The computer detected a lot of noise, but we just need the emojis.
+raw_data = "---!!!---😊---??---😊---!!!!---😊---"
 
-# Write your code below!
+# Your Mission: Count how many happy faces are in the data.
+
+# Step 1: Use .count() to find all "😊" emojis
+# Step 2: Store it in a variable called 'happy_count'
+happy_count = 
+
+# Step 3: Print "Detected [count] happy faces!"
+print("Detected", happy_count, "happy faces!")

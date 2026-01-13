@@ -1,16 +1,12 @@
-# CHALLENGE 2: Average Score 📊
+# Challenge: Hall of Fame 🏛️
 
-The "Average" tells us how good the team is overall.
-To find it, we need two steps:
-1. Find the **Total** (`sum`).
-2. Divide by the **Count** (`len`).
+## Your Mission
+It's time to announce the **Player of the Month**! 🌟 You have a list of `player_names` and a list of `player_levels`. You need to find the name of the person at the highest level.
 
-### Your Task:
-1. Create a list of 3 scores.
-2. Calculate total using `sum()`.
-3. Calculate count using `len()`.
-4. Calculate average: `total / count`.
-5. Print it!
+## Your Task
+1. Find the `max()` level in the `player_levels` list.
+2. Use `.index()` to find which spot that level is in.
+3. Look up the name in `player_names` using that same spot number.
+4. Print: `"The Hall of Fame welcomes: [Name]!"`
 
-### Achievement:
-You calculated a Mean value! 🧠
+**Hint:** If the max level is in spot 2, the name will be `player_names[2]`.

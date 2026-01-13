@@ -1,12 +1,12 @@
-# CHALLENGE 2: Short Movie Night ⏱️
+# Challenge: Search Bar 🔍
 
-It's late on a school night. We need a short movie!
-Let's find movies that are under 90 minutes.
+## Your Mission
+Users don't always remember the full title. They might just type "Spider" or "Star." 🌟 We need a search bar that finds any movie where the search text is **hidden inside** the title.
 
-### Your Task:
-1. Create a list of movies with `"duration"` (minutes).
-2. Loop through the list.
-3. If duration is less than (`<`) 90, print "Short Movie: [Title]".
+## Your Task
+1. Use the `search_text` variable.
+2. Loop through your `movies` list.
+3. Check if the `search_text` is **in** the movie's title.
+4. If it is, print: `"Found match: [title]"`
 
-### Achievement:
-You're managing your time with code! ⌚
+**Pro Tip:** Remember the `in` shortcut from the Inventory project? It works on strings too! `if "Star" in "Star Wars":` is True.

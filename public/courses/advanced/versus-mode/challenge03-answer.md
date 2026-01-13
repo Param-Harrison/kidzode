@@ -1,15 +1,6 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-health = 60
-hit = 20
-
-print("Fight Start! HP:", health)
-
-while health > 0:
-    print("Taking hit...")
-    health -= hit
-    print("HP Left:", health)
-
-print("--- KNOCKOUT ---")
+while hero["hp"] > 0 and enemy["hp"] > 0:
+    enemy["hp"] -= hero["attack"]
+    hero["hp"] -= enemy["attack"]
 ```

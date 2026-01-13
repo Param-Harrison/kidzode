@@ -1,8 +1,4 @@
-# 📊 GRAPH MAKER
-# Goal: Prepare the data
-
-# 1. Create a list of numbers (1-10)
-data = [5, 2, 8, 3, 6]
-
-# 2. Print raw data
-print("Raw Data:", data)
+data = [5, 8, 3, 10, 6]
+print("📊 Bar Chart:")
+for value in data:
+    print("█" * value, value)

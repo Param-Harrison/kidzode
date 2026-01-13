@@ -1,8 +1,6 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-scores = [5, 2, 9, 1]
-
-worst = min(scores)
-print("The lowest score is:", worst)
+lowest = min(scores)
+position = scores.index(lowest)
+print("Last:", players[position])
 ```

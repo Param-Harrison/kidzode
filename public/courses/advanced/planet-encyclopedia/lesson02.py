@@ -1,14 +1,21 @@
-# 🪐 PLANET ENCYCLOPEDIA
-# Goal: Build a Galaxy Database
+# ========================================
+# 🌌 LESSON 2: The Galaxy Database
+# ========================================
 
-# 1. Create a list of dictionaries
+# A list of planet dictionaries - our database!
 planets = [
-    {"name": "Mercury", "temp": 167},
-    {"name": "Neptune", "temp": -200}
+    {"name": "Mercury", "moons": 0, "color": "Gray"},
+    {"name": "Venus", "moons": 0, "color": "Yellow"},
+    {"name": "Earth", "moons": 1, "color": "Blue"},
+    {"name": "Mars", "moons": 2, "color": "Red"}
 ]
 
-# 2. Print the first planet's name (Index 0)
-print("First Planet:", planets[0]["name"])
+# Print all planet names
+print("--- OUR PLANETS ---")
+for planet in planets:
+    print(planet["name"], "-", planet["color"])
 
-# 3. Print the second planet's temp (Index 1)
-print("Second Planet Temp:", planets[1]["temp"])
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add Jupiter to the list!
+# ----------------------------------------

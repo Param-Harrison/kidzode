@@ -1,13 +1,13 @@
-# CHALLENGE 2: Space Travel 🚀
+# Challenge 2: Space Travel 🚀
 
-We need to calculate fuel for our journey.
-Let's add up the distances between planets!
+## Your Mission
+The Galaxy's biggest tourist company wants to know which planet has the **Most Moons**. They want to take people there for a vacation! 🏝️
 
-### Your Task:
-1. Create two planets with a `"distance"` number (e.g., 100, 200).
-2. Create a variable `total_distance`.
-3. Add the distance of planet 1 and planet 2 together.
-4. Print the total.
+## Your Task
+1. Use your `planets` database.
+2. Create a variable called `best_planet` and set it to the first planet in the list.
+3. Use a `for loop` to check every other planet.
+4. If a planet has *more* moons than your `best_planet`, update the variable!
+5. Print: `"The best vacation spot is [name] with [moons] moons!"`
 
-### Achievement:
-You've used data to solve a real-world problem! ⛽
+**Detective Work:** This is called finding the **Maximum Value**. It's a very important skill in Data Science! 📈

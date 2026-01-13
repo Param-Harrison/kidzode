@@ -1,14 +1,5 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-fruit = [
-    {"n": "Apple", "c": 5},
-    {"n": "Banana", "c": 2},
-    {"n": "Orange", "c": 7}
-]
-
-for item in fruit:
-    count = item["c"]
-    name = item["n"]
-    print(name, ":", "*" * count)
+for i in range(len(labels)):
+    print(labels[i] + ":", "█" * values[i])
 ```

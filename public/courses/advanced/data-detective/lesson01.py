@@ -1,13 +1,21 @@
-# 🕵️‍♂️ DATA DETECTIVE
-# Goal: Create a list of suspects
+# ========================================
+# 🕵️‍♂️ LESSON 1: The Suspect List
+# ========================================
 
-# 1. Create a list called 'suspects' using [ ]
-#    Put 3 names inside (like "Fox", "Bear", "Cat")
+# A list is like a backpack - holds many items in one place!
+# We use square brackets [] to create a list
+
 suspects = ["The Fox", "The Bear", "The Cat"]
 
-# 2. Print the entire list to review the data
+# Print the entire list
 print("--- SUSPECT LIST ---")
 print(suspects)
 
-# 3. Can you print just the text "Case Open"?
-print("Case Open!")
+# Count how many suspects we have
+print("Total suspects:", len(suspects))
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add "The Owl" to the list and run again!
+# suspects = ["The Fox", "The Bear", "The Cat", "The Owl"]
+# ----------------------------------------

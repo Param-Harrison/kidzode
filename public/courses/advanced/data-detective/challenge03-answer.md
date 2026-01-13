@@ -1,12 +1,7 @@
-### One way to solve it:
-
+# Answer ✅
 ```python
-suspects = ["The Joker", "The Penguin", "Catwoman"]
-
-print("--- DAILY REPORT ---")
-
-for s in suspects:
-    print("Investigating:", s)
-
-print("--- END OF REPORT ---")
+evidence = []
+item = input("Found evidence: ")
+evidence.append(item)
+print("Evidence logged:", evidence)
 ```

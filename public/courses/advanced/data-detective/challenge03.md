@@ -1,12 +1,12 @@
-# CHALLENGE 3: Evidence Logger 🖨️
+# Challenge 3: Evidence Logger 📝
 
-A true Data Scientist needs to print a full report.
-Let's use a loop to print every single piece of evidence in order!
+## Your Mission
+New evidence is coming in every minute! 📞 We need a way to let other detectives type in a clue and have the computer **add it** to our backpack automatically.
 
-### Your Task:
-1. Create a list of 3 suspects.
-2. Use a `for` loop to go through the list.
-3. Inside the loop, print "Investigating: [Suspect Name]".
+## Your Task
+1. Start with a list called `evidence` that is empty: `evidence = []`
+2. Use `input()` to ask the user: `"What did you find?"`
+3. Use a new magic command: `evidence.append(new_item)` to add it to your list!
+4. Print the `evidence` list to show the new item is safely inside.
 
-### Achievement:
-You've built an automated data reporting tool! 📰
+**Pro Tip:** `append` means "add to the end." It's like dropping a new item into your backpack! 🎒

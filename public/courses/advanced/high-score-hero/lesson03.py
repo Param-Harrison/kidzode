@@ -1,10 +1,19 @@
-# 🏆 HIGH SCORE HERO
-# Goal: Calculate Team Total
+# ========================================
+# 👥 LESSON 3: Team Score
+# ========================================
 
-scores = [100, 200, 300]
+team_scores = [85, 92, 78, 88, 95]
 
-# 1. Add them all up using sum()
-total = sum(scores)
+total = sum(team_scores)
+count = len(team_scores)
+average = total / count
 
-# 2. Print result
-print("Team Total:", total)
+print("Team scores:", team_scores)
+print("Total:", total)
+print("Players:", count)
+print("Average:", average)
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Add more scores and see the average change!
+# ----------------------------------------

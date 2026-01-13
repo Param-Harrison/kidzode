@@ -1,13 +1,11 @@
-# ⚔️ VERSUS MODE
-# Goal: Check if a hit lands
+hero = {"name": "Hero", "hp": 100, "attack": 25}
+enemy = {"name": "Goblin", "hp": 50, "attack": 10}
 
-p1 = {"name": "Hero", "atk": 20, "def": 5}
-p2 = {"name": "Boss", "atk": 50, "def": 10}
+# Hero attacks!
+enemy["hp"] = enemy["hp"] - hero["attack"]
+print(hero["name"], "attacks for", hero["attack"], "damage!")
+print(enemy["name"], "has", enemy["hp"], "HP left!")
 
-print("Hero attacks Boss...")
-
-# 1. Check if p1 attack > p2 defense
-if p1["atk"] > p2["def"]:
-    print("KAPOW! A direct hit!")
-else:
-    print("Clang! The attack was blocked.")
+# Check if defeated
+if enemy["hp"] <= 0:
+    print(enemy["name"], "is defeated! 🎉")

@@ -1,13 +1,12 @@
-# CHALLENGE 2: Data Cleaner 🧹
+# Challenge 2: Data Cleaner 🧹
 
-Real data is often messy.
-Imagine your data has "bad" words that need to be fixed.
-Python strings have a `.replace()` method!
+## Your Mission
+Data is often messy! 😵 Sometimes people write in ALL CAPS or add weird spaces. A good Data Scientist always **cleans** their data before using it. 
 
-### Your Task:
-1. Create a variable `text = "I hate bugs!"`.
-2. Use `.replace("hate", "love")` to fix the data.
-3. Print the new, clean text.
+## Your Task
+1. Use `input()` to get a "messy" message from the user (tell them to use some big letters!).
+2. Create a new variable called `cleaned_message`.
+3. Use your `.lower()` skill to make the message all tiny letters.
+4. Print the result so the user can see their nice, clean data!
 
-### Achievement:
-You've built a data sanitization pipelne! 🛁
+**Why it matters:** Computers find it much easier to read "cleaned" data. You're making its life easier! 🤖

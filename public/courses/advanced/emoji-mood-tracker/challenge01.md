@@ -1,13 +1,12 @@
-# CHALLENGE 1: Word Counter 🔢
+# Challenge: Word Counter 🏆
 
-Data Scientists often need to know how long a text is.
-A quick trick to count words is to count the **spaces**!
+## Your Mission
+You've been hired by a famous author! ✍️ They just wrote a giant book and want to know how many times they used the word `"and"`. You need to build a tool that can count ANY word the user types in.
 
-### Your Task:
-1. Ask the user for a sentence.
-2. Count the number of spaces `" "`.
-3. Add 1 to that number (because the last word doesn't have a space after it).
-4. Print: "Word Count: [number]"
+## Your Task
+1. Look at the `message` variable. It's a long sentence.
+2. Use `input()` to ask the user: `"Which word should I count?"`
+3. Use `.count()` to find that word in the message.
+4. Print: `"I found the word [word] [number] times!"`
 
-### Achievement:
-You've engineered a feature extraction algorithm! ⛏️
+**Pro Tip:** Use `.lower()` on both the message and the input so the computer doesn't get confused by capital letters! 🔠

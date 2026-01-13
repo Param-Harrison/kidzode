@@ -1,17 +1,32 @@
-# 😃 EMOJI ANALYZER
-# Goal: Analyze the mood
+# ========================================
+# 🎭 LESSON 3: The Mood Score
+# ========================================
 
-message = "I am sad today 😢 but tomorrow will be better 😄"
+message = "I had a great day but I feel a bit sad"
+message = message.lower()
 
-# 1. Count happy and sad
-happy = message.count("😄")
-sad = message.count("😢")
+# Count happy words
+happy = message.count("happy") + message.count("great") + message.count("love")
 
-# 2. Compare the data
-print("--- MOOD REPORT ---")
-if happy > sad:
-    print("Result: POSITIVE VIBE")
-elif sad > happy:
-    print("Result: NEGATIVE VIBE")
+# Count sad words
+sad = message.count("sad") + message.count("bad") + message.count("angry")
+
+# Calculate score
+score = happy - sad
+
+print("Message:", message)
+print("Happy words:", happy)
+print("Sad words:", sad)
+print("Mood score:", score)
+
+if score > 0:
+    print("Overall mood: 😊 Happy!")
+elif score < 0:
+    print("Overall mood: 😢 Sad")
 else:
-    print("Result: NEUTRAL")
+    print("Overall mood: 😐 Neutral")
+
+# ----------------------------------------
+# 🎮 TRY THIS:
+# Change the message and see the mood change!
+# ----------------------------------------

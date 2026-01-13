@@ -1,14 +1,17 @@
-# CHALLENGE 3: Sentiment Analyzer 🤖
+# Challenge 3: Mood Analyzer 🎭
 
-Let's build the full tool!
-You will ask the user for a diary entry and tell them if it's a good day or bad day.
+## Your Mission
+It's time for the ultimate AI test! 🧪 You need to build a complete "Mood Analyzer 3000" that takes a message from a user and tells them exactly how they are feeling using Emojis.
 
-### Your Task:
-1. Ask the user: "How was your day?".
-2. Count `:)` (Happy) and `:(` (Sad).
-3. IF happy > sad: Print "Glad you had a good day!".
-4. ELIF sad > happy: Print "Hope tomorrow is better.".
-5. ELSE: Print "Sounds like a normal day.".
+## Your Task
+1. Get a message from the user using `input()`.
+2. Clean the data using `.lower()`.
+3. Count at least 3 happy words (like `"great"`, `"yes"`, `"awesome"`).
+4. Count at least 3 sad words (like `"bad"`, `"no"`, `"ugh"`).
+5. Calculate the `score` (Happy - Sad).
+6. Use `if`, `elif`, and `else` to print an emoji response!
 
-### Achievement:
-You've engineered a complete interactive AI tool! 🧠
+**Example:**
+- Score > 0? Print `"🥳 You sound awesome!"`
+- Score < 0? Print `"🥺 Is everything okay?"`
+- Score == 0? Print `"😐 Just a normal day!"`

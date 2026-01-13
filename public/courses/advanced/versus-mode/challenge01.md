@@ -1,13 +1,14 @@
-# CHALLENGE 1: Health Bar ❤️
+# Challenge: Hero Creator 🖌️
 
-When you get hit, you lose Health Points (HP).
-Let's simulate taking damage.
+## Your Mission
+Our game needs a "Character Creation" screen! 🎨 You need to build a dictionary from scratch based on what the player chooses.
 
-### Your Task:
-1. Create a player with 100 `hp`.
-2. Create a variable `damage = 15`.
-3. Subtract damage from hp using `-=`.
-4. Print the new hp.
+## Your Task
+1. Create a dictionary called `new_hero`.
+2. Ask the user for their name using `input()`.
+3. Set their `health` to 100.
+4. Set their `class` to "Warrior".
+5. Set their `strength` to a random number between 10 and 20.
+6. Print: `"Welcome, [name] the [class]! Your strength is [strength]."`
 
-### Achievement:
-You've implemented a damage calculation system! 💔
+**Hint:** Use `import random` and `random.randint(10, 20)` for the strength!
