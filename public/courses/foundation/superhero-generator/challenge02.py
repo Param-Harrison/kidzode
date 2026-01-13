@@ -1,20 +1,7 @@
-# ========================================
-# 🐾 CHALLENGE 2: Pet Name Generator
-# ========================================
+# ---- YOUR CHALLENGE ----
 
-import random
+# 1. Create a list of 3 adjectives
+# 2. Create a list of 3 nouns
+# 3. Pick one random item from each list
+# 4. Print them together (e.g. "The Mighty Tiger")
 
-# Step 1: Create pet word lists
-adjectives = ["Fluffy", "Super", "Speedy", "Mighty"]
-animals = ["Paws", "Whiskers", "Buddy", "Snout"]
-
-# Step 2: Pick randomly
-adj = random.choice(adjectives)
-animal = random.choice(animals)
-
-# Step 3: Combine!
-pet_name = f"{adj} {animal}"
-
-# Step 4: Print!
-print("Your pet's superhero name is:")
-print(pet_name)

@@ -1,22 +1,6 @@
-# ========================================
-# 🏆 CHALLENGE 3: Mood Score
-# ========================================
+# ---- YOUR CHALLENGE ----
 
-# The logs from today's mission:
-logs = "😊 😊 😭 😊 😭 😊 😊"
+# 1. Create a string of emoji logs
+# 2. Use .count() to find how many times an emoji appears
+# 3. Print the final count
 
-# Your Mission: Calculate the total mood score.
-# Happy faces (😊) = +1 point
-# Sad faces (😭) = -1 point
-
-# Step 1: Count the happy faces
-happy = 
-
-# Step 2: Count the sad faces
-sad = 
-
-# Step 3: Calculate the score (happy minus sad)
-mood_score = 
-
-# Step 4: Print the final mood score
-print("The final mood score is:", mood_score)

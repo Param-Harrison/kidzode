@@ -2,24 +2,11 @@
 # 🎲 CHALLENGE 2: Random Quiz
 # ========================================
 
-import random
+# Step 1: Set up the questions list
 
-quiz = [
-    {"question": "2 + 2?", "answer": "4"},
-    {"question": "Capital of UK?", "answer": "london"},
-    {"question": "Days in a week?", "answer": "7"}
-]
+# Step 2: Use random.shuffle to mix up the questions
 
-# Shuffle the questions!
-random.shuffle(quiz)
+# Step 3: Loop through, ask questions, and track score
 
-score = 0
+# Step 4: Print final result
 
-for q in quiz:
-    print("")
-    print(q["question"])
-    answer = input("Answer: ")
-    if answer.lower() == q["answer"].lower():
-        score = score + 1
-
-print("Score:", score, "/", len(quiz))

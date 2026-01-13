@@ -2,17 +2,11 @@
 # 🏆 CHALLENGE 1: Global Weather
 # ========================================
 
-weather = {
-    "London": "Rainy",
-    "Tokyo": "Sunny",
-    "Paris": "Cloudy",
-    "Sydney": "Warm",
-    "New York": "Windy"
-}
+# Step 1: Set up a dictionary with cities and their weather status
 
-city = input("Enter city: ")
+# Step 2: Ask the user for a city name
 
-if city in weather:
-    print("Weather in", city + ":", weather[city])
-else:
-    print("Sorry,", city, "not found!")
+# Step 3: Check if the city is in your dictionary
+
+# Step 4: Print the weather if found, or an error if not
+

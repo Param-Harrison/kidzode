@@ -1,15 +1,6 @@
-# ========================================
-# 🏆 CHALLENGE 2: Case Files
-# ========================================
+# ---- YOUR CHALLENGE ----
 
-# We found a folder full of mystery clues.
-clues = ["Red Hair", "Gold Watch", "Size 10 Shoe", "Smell of Coffee"]
+# 1. Create a list of 4 clues
+# 2. Remove the second clue from the list
+# 3. Print the final list
 
-# Your Mission: Count how many clues we have in total.
-
-# Step 1: Use the len() tool to find the length of the clues list
-# Step 2: Store the answer in a variable called 'clue_count'
-clue_count = 
-
-# Step 3: Print "Total clues found: " followed by your variable
-print("Total clues found:", clue_count)

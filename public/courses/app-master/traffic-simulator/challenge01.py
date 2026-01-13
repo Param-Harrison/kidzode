@@ -4,4 +4,3 @@
 # 2. Move method
 # 3. Race!
 
-# Write your code below!

@@ -2,17 +2,9 @@
 # 🔢 CHALLENGE 2: PIN Code Maker
 # ========================================
 
-import random
+# Step 1: Define a string of numbers 0-9
 
-# Only numbers for PINs
-numbers = "0123456789"
+# Step 2: Use a loop to pick 4 random digits
 
-# Start empty
-pin = ""
+# Step 3: Print the 4-digit PIN
 
-# Pick 4 random digits
-for count in range(4):
-    digit = random.choice(numbers)
-    pin = pin + digit
-
-print("Your secure PIN is:", pin)

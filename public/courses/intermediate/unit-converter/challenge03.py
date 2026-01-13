@@ -1,13 +1,10 @@
-def c_to_f(c): return c * 1.8 + 32
-def f_to_c(f): return (f - 32) / 1.8
+# ---- YOUR CHALLENGE ----
 
-print("1. Celsius to Fahrenheit")
-print("2. Fahrenheit to Celsius")
-choice = input("Pick: ")
+# Step 1: Create two functions: one for C to F, and one for F to C
 
-if choice == "1":
-    c = float(input("Enter Celsius: "))
-    print(c, "°C =", c_to_f(c), "°F")
-else:
-    f = float(input("Enter Fahrenheit: "))
-    print(f, "°F =", f_to_c(f), "°C")
+# Step 2: Ask the user which conversion they want to do
+
+# Step 3: Get the temperature input
+
+# Step 4: Perform the conversion and print the result
+

@@ -4,4 +4,3 @@
 # 2. Play (+20 fun, -10 energy)
 # 3. Call 3 times
 
-# Write your code below!

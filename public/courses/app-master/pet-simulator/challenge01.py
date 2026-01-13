@@ -1,11 +1,6 @@
 # ---- YOUR CHALLENGE ----
 
-class Pet:
-    hunger = 50
-    # Add eat method
+# 1. Create a Pet class
+# 2. Add an 'eat' method that decreases hunger
+# 3. Create an instance and check hunger
 
-# 1. Create pet
-# 2. Eat
-# 3. Check hunger
-
-# Write your code below!

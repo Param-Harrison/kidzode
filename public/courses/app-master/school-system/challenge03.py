@@ -4,4 +4,3 @@
 # 2. Rooms which hold Students
 # 3. Count total
 
-# Write your code below!

@@ -4,4 +4,3 @@
 # 2. While loop
 # 3. Game Over message
 
-# Write your code below!

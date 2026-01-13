@@ -1,6 +1,7 @@
-import time
-seconds = int(input("Countdown from? "))
-for i in range(seconds, 0, -1):
-    print(i)
-    time.sleep(1)
-print("TIME'S UP! ⏰")
+# ---- YOUR CHALLENGE ----
+
+# 1. Ask the user for a countdown start number (in seconds)
+# 2. Use a loop to count down from that number to 1
+# 3. Wait for 1 second between each count
+# 4. Print "TIME'S UP!" at the end
+

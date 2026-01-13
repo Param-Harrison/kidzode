@@ -2,28 +2,11 @@
 # 📝 CHALLENGE 3: Quiz with Pass/Fail
 # ========================================
 
-quiz = [
-    {"question": "2 + 2?", "answer": "4"},
-    {"question": "Color of sky?", "answer": "blue"},
-    {"question": "Days in week?", "answer": "7"},
-    {"question": "3 * 3?", "answer": "9"},
-    {"question": "Capital of Japan?", "answer": "tokyo"}
-]
+# Step 1: Create the quiz data
 
-score = 0
+# Step 2: Loop through and collect answers
 
-for q in quiz:
-    print("")
-    print(q["question"])
-    answer = input("Answer: ")
-    if answer.lower() == q["answer"].lower():
-        score = score + 1
+# Step 3: Print final score
 
-print("")
-print("Score:", score, "/", len(quiz))
+# Step 4: Use an if/else to print "PASSED! 🎉" if score >= 3, else "Try again! 📚"
 
-# Check pass or fail
-if score >= 3:
-    print("PASSED! 🎉")
-else:
-    print("Try again! 📚")

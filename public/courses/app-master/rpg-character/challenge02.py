@@ -4,4 +4,3 @@
 # 2. Create instance
 # 3. Level up loop
 
-# Write your code below!

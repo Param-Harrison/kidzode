@@ -2,18 +2,11 @@
 # 🎛️ CHALLENGE 3: Custom Password
 # ========================================
 
-import random
+# Step 1: Set up a characters bank
 
-# Character bank
-chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
+# Step 2: Ask for a custom length
 
-# Ask for length
-length = int(input("How long should the password be? "))
+# Step 3: Generate the password using random choices
 
-# Build the password
-password = ""
-for count in range(length):
-    char = random.choice(chars)
-    password = password + char
+# Step 4: Print the final result
 
-print("Your custom password is:", password)

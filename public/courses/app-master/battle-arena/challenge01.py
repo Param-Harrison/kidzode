@@ -4,4 +4,3 @@
 # 2. Heal method
 # 3. Simulate Damage -> Heal
 
-# Write your code below!

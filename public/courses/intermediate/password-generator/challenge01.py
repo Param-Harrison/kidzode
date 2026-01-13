@@ -2,23 +2,13 @@
 # 🏆 CHALLENGE 1: Super Secure
 # ========================================
 
-import random
+# Step 1: Define a string containing letters, numbers, and symbols
 
-# Character bank
-chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%"
+# Step 2: Ask the user for the desired password length
 
-# Step 1: Ask for length
-length = int(input("How many characters? "))
+# Step 3: Use a loop to pick random characters from your string
 
-# Step 2: Build the password
-password = ""
-for count in range(length):
-    char = random.choice(chars)
-    password = password + char
+# Step 4: Build and print the password
 
-# Step 3: Print it
-print("Your password is:", password)
+# Bonus: Print "STRONG! 💪" if length is 10 or more
 
-# Bonus: Check if it's strong
-if length >= 10:
-    print("STRONG! 💪")

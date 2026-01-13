@@ -4,4 +4,3 @@
 # 2. Transfer method
 # 3. Test
 
-# Write your code below!

@@ -2,18 +2,13 @@
 # 💸 CHALLENGE 2: Transfer Money
 # ========================================
 
-savings = 500
-checking = 100
+# Step 1: Set savings to 500 and checking to 100
 
-def transfer(amount):
-    global savings, checking
-    if amount > savings:
-        print("Not enough in savings!")
-    else:
-        savings = savings - amount
-        checking = checking + amount
-        print("Transferred $" + str(amount))
+# Step 2: Define a transfer function with an amount parameter
 
-print("Before: Savings $" + str(savings) + ", Checking $" + str(checking))
-transfer(200)
-print("After: Savings $" + str(savings) + ", Checking $" + str(checking))
+# Step 3: Check if amount is greater than savings
+
+# Step 4: If yes, print an error. If no, update both balances.
+
+# Step 5: Test the transfer and print results
+

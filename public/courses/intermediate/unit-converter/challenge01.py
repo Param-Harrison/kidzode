@@ -1,8 +1,9 @@
-import random
+# ---- YOUR CHALLENGE ----
 
-def km_to_miles(km):
-    return km * 0.621
+# Step 1: Define a function that converts kilometers to miles
+# (Hint: miles = km * 0.621)
 
-km = float(input("Enter kilometers: "))
-miles = km_to_miles(km)
-print(str(km) + " km =", str(miles) + " miles")
+# Step 2: Ask the user for a number of kilometers
+
+# Step 3: Call your function and print the result
+

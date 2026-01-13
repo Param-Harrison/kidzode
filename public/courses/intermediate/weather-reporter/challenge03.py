@@ -2,18 +2,11 @@
 # 📊 CHALLENGE 3: Average Temperature
 # ========================================
 
-cities = {
-    "London": {"temp": 15, "status": "Rainy"},
-    "Tokyo": {"temp": 28, "status": "Sunny"},
-    "Paris": {"temp": 20, "status": "Cloudy"}
-}
+# Step 1: Start with a dictionary of cities and temperatures
 
-# Add up all temperatures
-total = 0
-for city in cities:
-    total = total + cities[city]["temp"]
+# Step 2: Use a loop to calculate the total temperature sum
 
-# Calculate average
-average = total / len(cities)
+# Step 3: Calculate the average (total / number of cities)
 
-print("Average temperature:", str(average) + "°C")
+# Step 4: Print the final average
+

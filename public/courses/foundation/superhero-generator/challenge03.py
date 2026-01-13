@@ -1,20 +1,7 @@
-# ========================================
-# 🎸 CHALLENGE 3: Band Name Generator
-# ========================================
+# ---- YOUR CHALLENGE ----
 
-import random
+# 1. Create a list of 5 superpowers
+# 2. Ask the user how many powers they want
+# 3. Use a loop to pick that many random powers
+# 4. Print the final list
 
-# Step 1: Create band name word lists
-first_words = ["The", "Super", "Mighty", "Electric"]
-second_words = ["Dragons", "Stars", "Legends", "Rockets"]
-
-# Step 2: Pick randomly
-first = random.choice(first_words)
-second = random.choice(second_words)
-
-# Step 3: Combine!
-band_name = f"{first} {second}"
-
-# Step 4: Print!
-print("Your band name is:")
-print(band_name)

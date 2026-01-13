@@ -2,26 +2,17 @@
 # 🏆 CHALLENGE 1: Super Quiz
 # ========================================
 
-quiz = [
-    {"question": "What is 2 + 2?", "answer": "4"},
-    {"question": "Capital of France?", "answer": "paris"},
-    {"question": "What color is grass?", "answer": "green"},
-    {"question": "How many days in a week?", "answer": "7"},
-    {"question": "What animal says 'meow'?", "answer": "cat"}
-]
+# Step 1: Create a list of dictionaries with questions and answers
 
-score = 0
+# Step 2: Set initial score to 0
 
-for q in quiz:
-    print("")
-    print(q["question"])
-    answer = input("Your answer: ")
+# Step 3: Loop through the quiz
+
+    # Step 4: Ask the question and get user input
     
-    if answer.lower() == q["answer"].lower():
-        print("✅ Correct!")
-        score = score + 1
-    else:
-        print("❌ Wrong! Answer:", q["answer"])
+    # Step 5: Check if answer is correct (case-insensitive)
+    
+    # Step 6: Update score and print feedback
 
-print("")
-print("Final Score:", score, "/", len(quiz))
+# Step 7: Print the final score
+

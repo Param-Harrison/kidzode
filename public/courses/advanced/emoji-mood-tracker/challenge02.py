@@ -1,15 +1,6 @@
-# ========================================
-# 🏆 CHALLENGE 2: Emoji Counter
-# ========================================
+# ---- YOUR CHALLENGE ----
 
-# The computer detected a lot of noise, but we just need the emojis.
-raw_data = "---!!!---😊---??---😊---!!!!---😊---"
+# 1. Create a raw data string with emojis and noise
+# 2. Use .replace() to clean it up
+# 3. Print the clean version
 
-# Your Mission: Count how many happy faces are in the data.
-
-# Step 1: Use .count() to find all "😊" emojis
-# Step 2: Store it in a variable called 'happy_count'
-happy_count = 
-
-# Step 3: Print "Detected [count] happy faces!"
-print("Detected", happy_count, "happy faces!")

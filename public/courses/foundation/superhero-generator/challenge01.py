@@ -1,20 +1,6 @@
-# ========================================
-# 🏆 CHALLENGE 1: Villain Generator
-# ========================================
+# ---- YOUR CHALLENGE ----
 
-import random
+# 1. Create a list of 3 superhero names
+# 2. Pick a random name from the list
+# 3. Print the result
 
-# Step 1: Create villain word lists
-evil_words = ["Dark", "Evil", "Doom", "Shadow"]
-villains = ["Lord", "Master", "King", "Knight"]
-
-# Step 2: Pick randomly from each
-evil = random.choice(evil_words)
-villain = random.choice(villains)
-
-# Step 3: Combine with f-string
-villain_name = f"{evil} {villain}"
-
-# Step 4: Print!
-print("Your villain is:")
-print(villain_name)

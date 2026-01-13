@@ -4,4 +4,3 @@
 # 2. Light with color
 # 3. Logic check
 
-# Write your code below!

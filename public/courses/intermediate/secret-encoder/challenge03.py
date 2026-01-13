@@ -2,14 +2,9 @@
 # ↩️ CHALLENGE 3: Decoder Ring
 # ========================================
 
-# Step 1: Secret numbers
-codes = [72, 69, 76, 76, 79]
+# Step 1: Start with a list of secret numbers
 
-# Step 2: Decode each number
-message = ""
-for code in codes:
-    letter = chr(code)
-    message = message + letter
+# Step 2: Loop through and decode each number into a letter
 
-# Step 3: Print the result
-print("The secret message is:", message)
+# Step 3: Print the hidden message
+

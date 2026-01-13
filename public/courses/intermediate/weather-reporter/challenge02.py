@@ -2,16 +2,9 @@
 # 🌡️ CHALLENGE 2: Temperature Report
 # ========================================
 
-cities = {
-    "London": {"temp": 15, "status": "Rainy"},
-    "Tokyo": {"temp": 28, "status": "Sunny"},
-    "Paris": {"temp": 20, "status": "Cloudy"}
-}
+# Step 1: Create a dictionary of dictionaries (city -> {temp, status})
 
-city = input("Enter city: ")
+# Step 2: Get city input from user
 
-if city in cities:
-    info = cities[city]
-    print(city, "-", str(info["temp"]) + "°C,", info["status"])
-else:
-    print("City not found!")
+# Step 3: Look up the city and print both its temperature and status
+

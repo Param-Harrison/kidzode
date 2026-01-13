@@ -2,14 +2,9 @@
 # 🏆 CHALLENGE 1: Interest Calculator
 # ========================================
 
-balance = 100
+# Step 1: Set initial balance to 100
 
-def add_interest():
-    global balance
-    interest = balance * 0.05  # 5% interest
-    balance = balance + interest
-    print("Interest added: $" + str(interest))
-    print("New balance: $" + str(balance))
+# Step 2: Define a function to add 5% interest
 
-print("Balance: $" + str(balance))
-add_interest()
+# Step 3: Print the new balance
+

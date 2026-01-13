@@ -4,4 +4,3 @@
 # 2. Sleep method (add 50)
 # 3. Cap at 100
 
-# Write your code below!
